@@ -1,4 +1,4 @@
-import { FooterStyled, ContactStyled } from './styled';
+import { FooterStyled, ContactStyled, InfoStyled } from './styled';
 import logo from '../../../assets/images/Logo-Small.svg';
 import heart from '../../../assets/images/Vector.svg';
 
@@ -6,6 +6,10 @@ const Footer = () => {
   return (
     <FooterStyled>
       <section>
+        <aside>
+          <p>&lt;AND DANCE&gt;</p>
+        </aside>
+
         <h2>VAMOS CONVERSAR</h2>
 
         <ContactStyled>
@@ -23,19 +27,18 @@ const Footer = () => {
           <p>talentos@l2code.com.br</p>
         </ContactStyled>
       </section>
-      <aside>
-        <p>&lt;AND DANCE&gt;</p>
-      </aside>
       <footer>
-        <section>
+        <InfoStyled>
           <p>Abraçamos os talentos do mundo</p>
           <p>Somos uma empresa que trabalha 100% remoto</p>
-        </section>
-        <img src={logo} alt="L2 Code" />
-        <section>
+        </InfoStyled>
+        <InfoStyled>
+          <img src={logo} alt="L2 Code" />
+        </InfoStyled>
+        <InfoStyled>
           <p>Feito com <img src={heart} alt="Coração" /> L2code</p>
           <p>Copyright © Todos os direitos reservados</p>
-        </section>
+        </InfoStyled>
       </footer>
     </FooterStyled>
   );
