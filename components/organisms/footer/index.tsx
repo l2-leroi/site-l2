@@ -10,8 +10,8 @@ import {
   CopyrightStyled,
   InfoStyled,
   PhraseStyled,
-  ImageStyled
 } from './styled';
+import Image from 'next/image';
 import logo from '../../../assets/images/Logo-Small.svg';
 import heart from '../../../assets/images/Vector.svg';
 
@@ -48,11 +48,11 @@ const Footer = () => {
         </InfoStyled>
 
         <InfoStyled>
-          <ImageStyled src={logo} alt="L2 Code" />
+          <Image src={logo} alt="L2 Code" />
         </InfoStyled>
         
         <InfoStyled>
-          <PhraseStyled>Feito com <ImageStyled src={heart} alt="Coração" /> L2code</PhraseStyled>
+          <PhraseStyled>Feito com <Image src={heart} alt="Coração" /> L2code</PhraseStyled>
           <PhraseStyled>Copyright © Todos os direitos reservados</PhraseStyled>
         </InfoStyled>
       </CopyrightStyled>

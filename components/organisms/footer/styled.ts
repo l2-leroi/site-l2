@@ -87,5 +87,3 @@ export const PhraseStyled = styled.p`
     margin-bottom: 9px;
   }
 `;
-
-export const ImageStyled = styled.img``;
