@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { colors } from '../../../styles/colors';
 
 export const FooterStyled = styled.section`
-  color: #F2F3F4;
-  background-color: #5900CC;
+  color: ${colors.gray};
+  background-color: ${colors.purple};
   clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
   height: 1156px;
   width: 100%;
@@ -52,7 +53,7 @@ export const SubtitleStyled = styled.h3`
   margin-bottom: 19px;
 `;
 
-export const ContactInfoStyled = styled.p`
+export const ContactInfoStyled = styled.a`
   font-family: 'Neue Machina', sans-serif;
   font-size: 40px;
   line-height: 48px;
@@ -81,6 +82,8 @@ export const InfoStyled = styled.section`
     text-align: end;
   }
 `;
+
+export const LinkStyled = styled.a``;
 
 export const PhraseStyled = styled.p`
   &:first-child {

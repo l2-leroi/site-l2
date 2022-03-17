@@ -9,6 +9,7 @@ import {
   ContactInfoStyled, 
   CopyrightStyled,
   InfoStyled,
+  LinkStyled,
   PhraseStyled,
 } from './styled';
 import Image from 'next/image';
@@ -27,17 +28,17 @@ const Footer = () => {
 
         <ContactStyled>
           <SubtitleStyled>nosso whatsapp</SubtitleStyled>
-          <ContactInfoStyled>+55 51 99693.9336</ContactInfoStyled>
+          <ContactInfoStyled href="tel: +5551996939336">+55 51 99693.9336</ContactInfoStyled>
         </ContactStyled>
 
         <ContactStyled>
           <SubtitleStyled>nosso e-mail</SubtitleStyled>
-          <ContactInfoStyled>contato@l2code.com.br</ContactInfoStyled>
+          <ContactInfoStyled href="mailto: contato@l2code.com.br">contato@l2code.com.br</ContactInfoStyled>
         </ContactStyled>
 
         <ContactStyled>
           <SubtitleStyled>entre no time</SubtitleStyled>
-          <ContactInfoStyled>talentos@l2code.com.br</ContactInfoStyled>
+          <ContactInfoStyled href="mailto: talentos@l2code.com.br">talentos@l2code.com.br</ContactInfoStyled>
         </ContactStyled>
       </ContentStyled>
       
@@ -48,7 +49,9 @@ const Footer = () => {
         </InfoStyled>
 
         <InfoStyled>
-          <Image src={logo} alt="L2 Code" />
+          <LinkStyled href="/">
+            <Image src={logo} alt="L2 Code" />
+          </LinkStyled>
         </InfoStyled>
         
         <InfoStyled>
