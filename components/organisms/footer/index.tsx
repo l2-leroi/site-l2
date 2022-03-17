@@ -3,10 +3,7 @@ import {
   ContentStyled, 
   AsideStyled, 
   ParagraphStyled, 
-  TitleStyled, 
-  ContactStyled, 
-  SubtitleStyled, 
-  ContactInfoStyled, 
+  TitleStyled,  
   CopyrightStyled,
   InfoStyled,
   LinkStyled,
@@ -15,8 +12,15 @@ import {
 import Image from 'next/image';
 import logo from '../../../assets/images/Logo-Small.svg';
 import heart from '../../../assets/images/Vector.svg';
+import LinkFooter from '../../molecules/LinkFooter/index'
 
 const Footer = () => {
+  const contacts = [
+    {title:"nosso whatsapp", contact:"+55 51 99693.9336", link:"tel:+5551996939336"},
+    {title:"nosso e-mail", contact:"contato@l2code.com.br", link:"mailto:contato@l2code.com.br"},
+    {title:"entre no time", contact:"talentos@l2code.com.br", link:"mailto:talentos@l2code.com.br"}
+  ];
+
   return (
     <FooterStyled>
       <ContentStyled>
@@ -26,20 +30,10 @@ const Footer = () => {
 
         <TitleStyled>VAMOS CONVERSAR</TitleStyled>
 
-        <ContactStyled>
-          <SubtitleStyled>nosso whatsapp</SubtitleStyled>
-          <ContactInfoStyled href="tel: +5551996939336">+55 51 99693.9336</ContactInfoStyled>
-        </ContactStyled>
-
-        <ContactStyled>
-          <SubtitleStyled>nosso e-mail</SubtitleStyled>
-          <ContactInfoStyled href="mailto: contato@l2code.com.br">contato@l2code.com.br</ContactInfoStyled>
-        </ContactStyled>
-
-        <ContactStyled>
-          <SubtitleStyled>entre no time</SubtitleStyled>
-          <ContactInfoStyled href="mailto: talentos@l2code.com.br">talentos@l2code.com.br</ContactInfoStyled>
-        </ContactStyled>
+        {contacts.map((c) => (
+          <LinkFooter key={c.title} title={c.title} contact={c.contact} link={c.link} />
+        ))}
+        
       </ContentStyled>
       
       <CopyrightStyled>
