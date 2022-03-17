@@ -1,45 +1,61 @@
-import { FooterStyled, ContactStyled, InfoStyled } from './styled';
+import { 
+  FooterStyled, 
+  ContentStyled, 
+  AsideStyled, 
+  ParagraphStyled, 
+  TitleStyled, 
+  ContactStyled, 
+  SubtitleStyled, 
+  ContactInfoStyled, 
+  CopyrightStyled,
+  InfoStyled,
+  PhraseStyled,
+  ImageStyled
+} from './styled';
 import logo from '../../../assets/images/Logo-Small.svg';
 import heart from '../../../assets/images/Vector.svg';
 
 const Footer = () => {
   return (
     <FooterStyled>
-      <section>
-        <aside>
-          <p>&lt;AND DANCE&gt;</p>
-        </aside>
+      <ContentStyled>
+        <AsideStyled>
+          <ParagraphStyled>&lt;AND DANCE&gt;</ParagraphStyled>
+        </AsideStyled>
 
-        <h2>VAMOS CONVERSAR</h2>
+        <TitleStyled>VAMOS CONVERSAR</TitleStyled>
 
         <ContactStyled>
-          <h3>nosso whatsapp</h3>
-          <p>+55 51 99693.9336</p>
+          <SubtitleStyled>nosso whatsapp</SubtitleStyled>
+          <ContactInfoStyled>+55 51 99693.9336</ContactInfoStyled>
         </ContactStyled>
 
         <ContactStyled>
-          <h3>nosso e-mail</h3>
-          <p>contato@l2code.com.br</p>
+          <SubtitleStyled>nosso e-mail</SubtitleStyled>
+          <ContactInfoStyled>contato@l2code.com.br</ContactInfoStyled>
         </ContactStyled>
 
         <ContactStyled>
-          <h3>entre no time</h3>
-          <p>talentos@l2code.com.br</p>
+          <SubtitleStyled>entre no time</SubtitleStyled>
+          <ContactInfoStyled>talentos@l2code.com.br</ContactInfoStyled>
         </ContactStyled>
-      </section>
-      <footer>
+      </ContentStyled>
+      
+      <CopyrightStyled>
         <InfoStyled>
-          <p>Abraçamos os talentos do mundo</p>
-          <p>Somos uma empresa que trabalha 100% remoto</p>
+          <PhraseStyled>Abraçamos os talentos do mundo</PhraseStyled>
+          <PhraseStyled>Somos uma empresa que trabalha 100% remoto</PhraseStyled>
         </InfoStyled>
+
         <InfoStyled>
-          <img src={logo} alt="L2 Code" />
+          <ImageStyled src={logo} alt="L2 Code" />
         </InfoStyled>
+        
         <InfoStyled>
-          <p>Feito com <img src={heart} alt="Coração" /> L2code</p>
-          <p>Copyright © Todos os direitos reservados</p>
+          <PhraseStyled>Feito com <ImageStyled src={heart} alt="Coração" /> L2code</PhraseStyled>
+          <PhraseStyled>Copyright © Todos os direitos reservados</PhraseStyled>
         </InfoStyled>
-      </footer>
+      </CopyrightStyled>
     </FooterStyled>
   );
 };

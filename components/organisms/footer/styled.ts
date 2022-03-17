@@ -7,59 +7,64 @@ export const FooterStyled = styled.section`
   height: 1156px;
   width: 100%;
   padding: 360.5px 28px 60.5px;
+`;
 
-  >section {
-    width: 515px;
-    position: relative;
+export const ContentStyled = styled.section`
+  width: 515px;
+  position: relative;
+`;
 
-    h2 {
-      font-family: 'Neue Machina', sans-serif;
-      font-size: 64px;
-      line-height: 57.6px;
-      font-weight: 800;
-      margin-bottom: 91px;
-    }
+export const AsideStyled = styled.aside`
+  position: absolute;
+  width: 100%;
+  left: 674px;
+  top: 95px;
+`;
 
-    aside { 
-      font-family: 'Circular Air Pro', sans-serif;
-      font-size: 16px;
-      line-height: 22.4px;
-      position: absolute;
-      width: 100%;
-      left: 674px;
-      top: 95px;
-    }
-  }
+export const ParagraphStyled = styled.p`
+  font-family: 'Circular Air Pro', sans-serif;
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 400;
+`;
 
-  footer {
-    margin-top: 92px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-  }
+export const TitleStyled = styled.h2`
+  font-family: 'Neue Machina', sans-serif;
+  font-size: 64px;
+  line-height: 57.6px;
+  font-weight: 800;
+  margin-bottom: 91px;
 `;
 
 export const ContactStyled = styled.section`
   margin-bottom: 40px;
+
   &:last-child {
     margin-bottom: 0px;
   }
+`;
 
-  h3 {
-    font-family: 'Circular Air Pro', sans-serif;
-    font-size: 24px;
-    line-height: 33.6px;
-    font-weight: 400;
-    margin-bottom: 19px;
-  }
+export const SubtitleStyled = styled.h3`
+  font-family: 'Circular Air Pro', sans-serif;
+  font-size: 24px;
+  line-height: 33.6px;
+  font-weight: 400;
+  margin-bottom: 19px;
+`;
 
-  p {
-    font-family: 'Neue Machina', sans-serif;
-    font-size: 40px;
-    line-height: 48px;
-    font-weight: 800;
-  }
+export const ContactInfoStyled = styled.p`
+  font-family: 'Neue Machina', sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 800;
+`;
+
+export const CopyrightStyled = styled.footer`
+  margin-top: 92px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const InfoStyled = styled.section`
@@ -75,11 +80,12 @@ export const InfoStyled = styled.section`
   &:last-child {
     text-align: end;
   }
-
-  p {
-    &:first-child {
-      margin-bottom: 9px;
-    }
-  }
-  
 `;
+
+export const PhraseStyled = styled.p`
+  &:first-child {
+    margin-bottom: 9px;
+  }
+`;
+
+export const ImageStyled = styled.img``;
