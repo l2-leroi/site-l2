@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
-export const ContentStyled = styled.section`
+export const ContentStyled = styled.ul`
+  list-style-type: none;
   margin-bottom: 40px;
 
   &:last-child {
     margin-bottom: 0px;
   }
 `;
+
+export const ItemStyled = styled.li``;
 
 export const TitleStyled = styled.h3`
   font-family: 'Circular Air Pro', sans-serif;

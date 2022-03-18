@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
-export const FooterStyled = styled.section`
+export const FooterStyled = styled.footer`
   color: ${colors.gray};
   background-color: ${colors.purple};
   clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);

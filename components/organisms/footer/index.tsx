@@ -12,7 +12,7 @@ import {
 import Image from 'next/image';
 import logo from '../../../assets/images/Logo-Small.svg';
 import heart from '../../../assets/images/Vector.svg';
-import LinkFooter from '../../molecules/LinkFooter/index'
+import ContactList from '../../molecules/ContactList/index'
 
 const Footer = () => {
   const contacts = [
@@ -27,13 +27,8 @@ const Footer = () => {
         <AsideStyled>
           <ParagraphStyled>&lt;AND DANCE&gt;</ParagraphStyled>
         </AsideStyled>
-
         <TitleStyled>VAMOS CONVERSAR</TitleStyled>
-
-        {contacts.map((c) => (
-          <LinkFooter key={c.title} title={c.title} contact={c.contact} link={c.link} />
-        ))}
-        
+        <ContactList contacts={contacts}/>  
       </ContentStyled>
       
       <CopyrightStyled>
