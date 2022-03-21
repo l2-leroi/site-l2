@@ -1,15 +1,29 @@
 import { ContentStyled, ItemStyled, TitleStyled, ContactStyled } from './styled';
 
-function ContactList({contacts}) {
+interface Contact {
+  title: string,
+  contact: string,
+  link: string,
+}
+
+interface ContactProps {
+  contacts: Contact[];
+}
+
+function ContactList(props: ContactProps) {
   return (
-    contacts.map((c) => (
-      <ContentStyled key={c.title}>
-        <ItemStyled>
-          <TitleStyled>{c.title}</TitleStyled>
-          <ContactStyled href={c.link}>{c.contact}</ContactStyled>
-        </ItemStyled>
-      </ContentStyled>
-    ))  
+    <>
+      {
+        props.contacts.map((c) => (
+          <ContentStyled key={c.title}>
+            <ItemStyled>
+              <TitleStyled>{c.title}</TitleStyled>
+              <ContactStyled href={c.link}>{c.contact}</ContactStyled>
+            </ItemStyled>
+          </ContentStyled>
+        ))
+      }
+    </>
   );
 };
 
