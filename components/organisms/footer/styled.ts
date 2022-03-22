@@ -5,9 +5,9 @@ export const FooterStyled = styled.footer`
   color: ${colors.gray};
   background-color: ${colors.purple};
   clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
-  height: 1156px;
+  height: 1156px; 
   width: 100%;
-  padding: 360.5px 28px 60.5px;
+  padding: 36.05rem 2.8rem 6.05rem;
 `;
 
 export const ContentStyled = styled.section`
@@ -24,21 +24,21 @@ export const AsideStyled = styled.aside`
 
 export const ParagraphStyled = styled.p`
   font-family: 'Circular Air Pro', sans-serif;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 22.4px;
   font-weight: 400;
 `;
 
 export const TitleStyled = styled.h2`
   font-family: 'Neue Machina', sans-serif;
-  font-size: 64px;
+  font-size: 6.4rem;
   line-height: 57.6px;
   font-weight: 800;
-  margin-bottom: 91px;
+  margin-bottom: 9.1rem;
 `;
 
 export const CopyrightStyled = styled.footer`
-  margin-top: 92px;
+  margin-top: 9.2rem;
   display: flex;
   text-align: center;
   align-items: center;
@@ -47,7 +47,7 @@ export const CopyrightStyled = styled.footer`
 
 export const InfoStyled = styled.section`
   font-family: 'Circular Air Pro', sans-serif;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 22.4px;
   font-weight: 400;
 
@@ -64,6 +64,6 @@ export const LinkStyled = styled.a``;
 
 export const PhraseStyled = styled.p`
   &:first-child {
-    margin-bottom: 9px;
+    margin-bottom: .9rem;
   }
 `;
