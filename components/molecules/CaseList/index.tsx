@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { ButtonStyled, CaseNumberStyled, CaseStyled, ContentStyled, ListStyled, InfoStyled, LinkStyled, TitleStyled, ButtonContentStyled } from "./styled";
-import { ArrowIcon } from "../../../assets/icons/arrowIcon";
+import { CaseNumberStyled, CaseStyled, ContentStyled, ListStyled, InfoStyled, LinkStyled, TitleStyled, ButtonContentStyled } from "./styled";
+import Button from "../../atoms/Button";
+import { colors } from "../../../styles/colors";
 
 interface Case { 
   number: string,
@@ -38,10 +39,7 @@ function CaseList(props: CaseProps) {
         props.linkBtn && 
           (
             <ButtonContentStyled>
-              <LinkStyled href={props.linkBtn}>
-                <ButtonStyled>VEJA TODOS OS CASES</ButtonStyled>  
-                <ButtonStyled> <ArrowIcon /> </ButtonStyled>
-              </LinkStyled>
+              <Button linkBtn={props.linkBtn} borderColor={`${colors.green}`} />
             </ButtonContentStyled>
           )          
       }
