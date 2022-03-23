@@ -41,7 +41,7 @@ export const DivOurServices = styled.div`
 export const OutSourcing = styled.div`
   position: absolute;
   padding-top:30px;
-  bottom: 0px;
+  bottom: 80px;
   width: 1899px;
   p {
     font-weight: 800;

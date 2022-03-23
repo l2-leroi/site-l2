@@ -8,8 +8,11 @@ import OurServices from '../components/organisms/ourServices';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-
-     <OurServices/>
+      <GlobalStyle />
+      <Header />
+      <OurServices/>
+      <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
