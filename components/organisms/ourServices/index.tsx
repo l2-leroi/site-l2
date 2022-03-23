@@ -9,9 +9,12 @@ import {
 import seta from '../../../assets/images/seta.svg';
 
 export default function OurServices() {
-    const letreiro = document.getElementById('letreiro');
-
-    animate(letreiro);
+    if (typeof window === 'object') {
+        const letreiro = document.getElementById('letreiro');
+        animate(letreiro);
+    }
+ 
+    
   
     function animate(element: HTMLElement) {
       let elementWidth = element.offsetWidth;
@@ -20,11 +23,10 @@ export default function OurServices() {
       
       setInterval(() => {
         element.style.marginLeft = --flag + 'px';
-  
         if (elementWidth == -flag) {
           flag = parentWidth;
         }
-      }, 10);
+      }, 11);
     }
   return (
     <Container>
