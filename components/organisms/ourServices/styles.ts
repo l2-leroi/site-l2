@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 10vh;
+  margin-bottom:10vh;
 `;
 
 export const DivOurServices = styled.div`
@@ -23,6 +25,7 @@ export const DivOurServices = styled.div`
     letter-spacing: -0.04em;
     color: #f2f3f4;
     margin-bottom: 24px;
+    font-family: 'Neue Machina';
   }
   p {
     font-weight: 400;
@@ -38,8 +41,7 @@ export const DivOurServices = styled.div`
 export const OutSourcing = styled.div`
   position: absolute;
   bottom: 80px;
-
-  width: 1699px;
+  width: 1899px;
   p {
     font-weight: 800;
     font-size: 40px;
@@ -48,6 +50,7 @@ export const OutSourcing = styled.div`
     letter-spacing: -0.02em;
     color: #8e9195;
     width: 100%;
+    font-family: 'Neue Machina';
   }
 `;
 
