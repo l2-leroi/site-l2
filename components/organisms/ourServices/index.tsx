@@ -9,6 +9,23 @@ import {
 import seta from '../../../assets/images/seta.svg';
 
 export default function OurServices() {
+    const letreiro = document.getElementById('letreiro');
+
+    animate(letreiro);
+  
+    function animate(element: HTMLElement) {
+      let elementWidth = element.offsetWidth;
+      let parentWidth = element.parentElement.offsetWidth;
+      let flag = 0; 
+      
+      setInterval(() => {
+        element.style.marginLeft = --flag + 'px';
+  
+        if (elementWidth == -flag) {
+          flag = parentWidth;
+        }
+      }, 10);
+    }
   return (
     <Container>
       <DivOurServices>
@@ -25,9 +42,10 @@ export default function OurServices() {
           <button>NOSSOS SERVIÇOS</button>
           <Image src={seta} alt="seta" />
         </ButtonServices>
+        
       </DivOurServices>
       <OutSourcing>
-        <p>
+        <p id="letreiro">
           Outsourcing Consultivo · Ideação · Design · Atendimento à Start-up ·
           Consultora em TI
         </p>
