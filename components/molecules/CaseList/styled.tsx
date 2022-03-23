@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
-export const ContentStyled = styled.section``;
+export const ContentStyled = styled.section`
+  display: flex;
+  flex-direction: column;  
+`;
 
 export const ListStyled = styled.section`
   display: inline-flex;
@@ -47,15 +50,17 @@ export const InfoStyled = styled.p`
 `;
 
 export const LinkStyled = styled.a`
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
   cursor: pointer;
 `;
 
 export const ButtonContentStyled = styled.section`
-  float: right;
-  margin: 8rem 5rem 0 0;
+  margin: 8rem 4rem 0 0;
 `;
 
-export const ButtonStyled = styled.button`
+export const ButtonStyled = styled.div`
   width: 50px;
   height: 50px;
   border: 2px solid ${colors.green};
@@ -65,9 +70,12 @@ export const ButtonStyled = styled.button`
   font-size: 2.4rem;
   line-height: 3.36rem;
   margin-right: .8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:first-child {
-    width: 320px;
-    padding: 0 1.6rem;
+    width: auto;
+    padding: .8rem 1.6rem;
   }
 `;

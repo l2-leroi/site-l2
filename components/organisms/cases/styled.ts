@@ -5,7 +5,7 @@ export const ContentStyled = styled.section`
   color: ${colors.black};
   background-color: ${colors.strong_gray};
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-  height: 2700px;
+  height: 2675px;
   padding: 10rem 2.8rem 37rem;
   position: relative;
 `;
