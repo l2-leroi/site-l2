@@ -7,7 +7,7 @@ export default function OutSourcing() {
   return (
    <>
          <ContainerOutSourcing>
-        <p id="letreiro">
+        <p>
           Outsourcing Consultivo · Ideação · Design · Atendimento à Start-up ·
           Consultora em TI
         </p>
