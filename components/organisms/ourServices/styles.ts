@@ -52,6 +52,16 @@ export const OutSourcing = styled.div`
     color: #8e9195;
     width: 100%;
     font-family: 'Neue Machina';
+    transform: translateX(100%);
+    animation: moving 25s linear infinite;
+  }
+  @keyframes moving{
+    0%{
+      transform: translateX(100%);
+    }
+    0%{
+      transform: translateX(-100%);
+    }
   }
 `;
 

@@ -9,23 +9,7 @@ import {
 import seta from '../../../assets/images/seta.svg';
 
 export default function OurServices() {
-    if (typeof window === 'object') {
-        const letreiro = document.getElementById('letreiro');
-        animate(letreiro);
-    }
-  
-    function animate(element: HTMLElement) {
-      let elementWidth = element.offsetWidth;
-      let parentWidth = element.parentElement.offsetWidth;
-      let flag = 0; 
-      
-      setInterval(() => {
-        element.style.marginLeft = ++flag + 'px';
-        if (elementWidth == -flag) {
-          flag = parentWidth;
-        }
-      }, 10);
-    }
+
   return (
     <Container>
       <DivOurServices>
