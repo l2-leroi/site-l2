@@ -3,10 +3,10 @@ import Image from 'next/image';
 import {
   Container,
   DivOurServices,
-  OutSourcing,
   ButtonServices,
 } from './styles';
 import seta from '../../../assets/images/seta.svg';
+import OutSourcing from '../../letreiro';
 
 export default function OurServices() {
 
@@ -26,14 +26,8 @@ export default function OurServices() {
           <button>NOSSOS SERVIÇOS</button>
           <Image src={seta} alt="seta" />
         </ButtonServices>
-        
+        <OutSourcing/>
       </DivOurServices>
-      <OutSourcing>
-        <p id="letreiro">
-          Outsourcing Consultivo · Ideação · Design · Atendimento à Start-up ·
-          Consultora em TI
-        </p>
-      </OutSourcing>
     </Container>
   );
 }
