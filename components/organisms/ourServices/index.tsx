@@ -6,7 +6,7 @@ import {
   ButtonServices,
 } from './styles';
 import seta from '../../../assets/images/seta.svg';
-import OutSourcing from '../../letreiro';
+import OutSourcing from '../../atomo/letreiro';
 
 export default function OurServices() {
 
