@@ -8,6 +8,7 @@ import {
   InfoStyled,
   LinkStyled,
   PhraseStyled,
+  IconStyled,
 } from './styled';
 import Image from 'next/image';
 import logo from '../../../assets/images/Logo-Small.svg';
@@ -44,7 +45,7 @@ const Footer = () => {
         </InfoStyled>
 
         <InfoStyled>
-          <PhraseStyled>Feito com <HeartIcon /> L2code</PhraseStyled>
+          <PhraseStyled>Feito com <IconStyled> <HeartIcon /> </IconStyled> L2code</PhraseStyled>
           <PhraseStyled>Copyright © Todos os direitos reservados</PhraseStyled>
         </InfoStyled>
       </CopyrightStyled>
