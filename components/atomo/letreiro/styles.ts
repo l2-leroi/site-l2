@@ -20,6 +20,16 @@ export const ParagraphOutSourcingStyled = styled.p`
   letter-spacing: -0.02em;
   color: #8e9195;
   font-family: 'Neue Machina';
+  transform: translateX(100%);
+  animation: moving 20s linear infinite;
+  @keyframes moving {
+    0% {
+      transform: translateX(100%);
+    }
+    0% {
+      transform: translateX(-100%);
+    }
+  }
 
   @media (max-width: 1000px) {
     font-size: 20px;
