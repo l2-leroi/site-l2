@@ -7,6 +7,7 @@ import OurServices from '../components/organisms/ourServices';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
+    
     <>
       <GlobalStyle />
       <Header />
