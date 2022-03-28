@@ -5,27 +5,18 @@ export const OurCustomersStyled = styled.section`
   background-color: #fff;
   width: 100%;
   overflow: hidden;
-  // transform: skewY(30deg);
+  position: relative;
 `;
 
-export const Teste = styled.section`
-  // background-color: #fff;
-  width: 100%;
-  transform: skewY(17deg);
-  background-color: ${colors.black};
-  padding: 100px 0px;
-`;
-
-export const BlackLineStyled = styled.section`
+export const BlackLineStyled = styled.div`
   color: ${colors.gray};
-  // background-color: ${colors.black};
-  // clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
-  transform: skewY(-17deg);
-  // background: -webkit-linear-gradient(73deg, ${colors.black} 67%, #fff 0%);
-  // background: linear-gradient(20deg, ${colors.black} 60%, transparent 30%);
+  background-color: ${colors.black};
+  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
   z-index: 1;
   width: 100%;
   padding: 13px 28px;
+  padding: 36.05rem 2.8rem 6.05rem;
+  overflow: hidden;
 `;
 
 export const HeaderStyled = styled.hgroup`
@@ -58,20 +49,23 @@ export const ContentStyled = styled.section`
   position: relative;
 `;
 
-export const SignStyled = styled.div`
+export const SignStyled = styled.span`
   font-family: 'Neue Machina', sans-serif;
   font-style: normal;
   font-size: 2.5rem;
   line-height: 200%;
   font-weight: 800;
   letter-spacing: -0.02em;
-  // transform: rotate(17.76deg);
+  transform: rotate(16.5deg);
   text-align: center;
   color: ${colors.darkgray};
   overflow: hidden;
   padding-left: 30px;
   width: 100%;
   max-height: 40px;
+  position: absolute;
+  bottom: -180px;
+  z-index: 99;
 `;
 
 export const SpinningAnimation = keyframes`
@@ -85,8 +79,8 @@ export const SpinningAnimation = keyframes`
 
 export const SpinningIconStyled = styled.div`
   position: absolute;
-  top: 0px;
-  right: 40px;
+  top: 125px;
+  right: 0px;
   z-index: 99;  
   overflow-x: hidden;
   animation: ${SpinningAnimation} 5s linear infinite;

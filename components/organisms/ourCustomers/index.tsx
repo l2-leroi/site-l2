@@ -7,7 +7,6 @@ import {
   SignStyled,
   SpinningIconStyled,
   BlackLineStyled,
-  Teste,
 } from './styled';
 
 import { AsideStyled, ParagraphStyled } from '../footer/styled';
@@ -45,12 +44,10 @@ const OurCustomers = () => {
 
   return (
     <OurCustomersStyled>
-      <Teste>
+      <SpinningIconStyled>
+        <Image src={Enfeite} alt="L2 Code" />
+      </SpinningIconStyled>
       <BlackLineStyled>
-          <SpinningIconStyled>
-            <Image src={Enfeite} alt="L2 Code" />
-          </SpinningIconStyled>
-
         <ContentStyled>
           <AsideStyled>
             <ParagraphStyled>&lt;30+CLIENTES&gt;</ParagraphStyled>
@@ -66,13 +63,13 @@ const OurCustomers = () => {
 
         <CustomersList customers={customers} />
 
-          <SignStyled>
+          
+      </BlackLineStyled>
+      <SignStyled>
             Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista ·
             Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista ·
             Adoraríamos ter você nessa lista ·
-          </SignStyled>
-      </BlackLineStyled>
-      </Teste>
+      </SignStyled>
     </OurCustomersStyled>
   );
 };
