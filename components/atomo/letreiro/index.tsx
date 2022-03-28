@@ -1,17 +1,13 @@
-import React from 'react'
-import {
-    ContainerOutSourcing,
-  } from './styles';
+import React from 'react';
+import { SectionOutSourcingStyled, ParagraphOutSourcingStyled } from './styles';
 
 export default function OutSourcing() {
   return (
-   <>
-         <ContainerOutSourcing>
-        <p id="letreiro">
-          Outsourcing Consultivo · Ideação · Design · Atendimento à Start-up ·
-          Consultora em TI
-        </p>
-      </ContainerOutSourcing>
-   </>
-  )
+    <SectionOutSourcingStyled>
+      <ParagraphOutSourcingStyled>
+        Outsourcing Consultivo · Ideação · Design · Atendimento à Start-up ·
+        Consultora em TI
+      </ParagraphOutSourcingStyled>
+    </SectionOutSourcingStyled>
+  );
 }
