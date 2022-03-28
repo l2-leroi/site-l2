@@ -54,6 +54,10 @@ export const DivButtonServicesStyled = styled.div`
 `;
 
 export const ButtonServicesStyled = styled.button`
+::selection{
+    background: #5900cc;
+    color: #F2F3F4;
+}
   width: 241px;
   height: 50px;
   font-size: 24px;

@@ -8,6 +8,10 @@ export const SectionOutSourcingStyled = styled.section`
 `;
 
 export const ParagraphOutSourcingStyled = styled.p`
+::selection{
+    background: #5900cc;
+    color: #F2F3F4;
+}
   font-weight: 800;
   font-size: 40px;
   line-height: 120%;
