@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 export const SectionOutSourcingStyled = styled.section`
   position: absolute;
-  padding-top: 30px;
+  padding-top: 83px;
   bottom: 80px;
   width: 1899px;
 `;
 
 export const ParagraphOutSourcingStyled = styled.p`
+
 ::selection{
     background: #5900cc;
     color: #F2F3F4;

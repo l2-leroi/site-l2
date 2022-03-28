@@ -8,7 +8,6 @@ export const SectionStyled = styled.section`
 `;
 
 export const DivOurServicesStyled = styled.div`
-  padding-top: 80px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -19,6 +18,8 @@ export const DivOurServicesStyled = styled.div`
 `;
 
 export const HeadingStyled = styled.p`
+  margin-bottom: 0;
+  margin-top: 80px;
   ::selection {
     background: #5900cc;
   }
@@ -45,32 +46,31 @@ export const ParagraphServicesStyled = styled.p`
   color: #f2f3f4;
   font-family: 'Circular Air Pro';
   width: 464px;
+  margin-bottom: 40px;
 `;
 
 export const DivButtonServicesStyled = styled.div`
   display: flex;
   text-align: center;
-  margin-top: 48px;
+  padding-bottom: 71px;
 `;
 
 export const ButtonServicesStyled = styled.button`
-::selection{
+  ::selection {
     background: #5900cc;
-    color: #F2F3F4;
-}
+    color: #f2f3f4;
+  }
   width: 241px;
   height: 50px;
   font-size: 24px;
   background: #20bd9d;
   border: 2px solid #20bd9d;
-  box-sizing: border-box;
   border-radius: 24px;
   letter-spacing: -0.04em;
   color: #171b21;
   margin-right: 8px;
   display: flex;
-  justify-content:center ;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   font-family: 'Circular Air Pro';
-  padding-top:8px;
 `;
