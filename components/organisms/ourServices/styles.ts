@@ -52,7 +52,6 @@ export const ParagraphServicesStyled = styled.p`
 export const DivButtonServicesStyled = styled.div`
   display: flex;
   text-align: center;
-  padding-bottom: 71px;
 `;
 
 export const ButtonServicesStyled = styled.button`
