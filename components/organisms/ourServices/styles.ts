@@ -102,12 +102,3 @@ export const ButtonServicesStyled = styled.button`
   }
 `;
 
-export const DivOutSourcing = styled.div`
-position:relative ;
-width: 150%;
-top:11vw;
-@media (max-width: 600px) {
-   top:25vw;
-   width: 200%;
-  }
-`;
