@@ -15,6 +15,10 @@ export const DivOurServicesStyled = styled.div`
   border-radius: 8px;
   width: 1200px;
   height: 611px;
+  @media (max-width: 500px) {
+    width: 336px;
+    height: 442px;
+  }
 `;
 
 export const HeadingStyled = styled.p`
@@ -32,6 +36,12 @@ export const HeadingStyled = styled.p`
   margin-bottom: 24px;
   font-family: 'Neue Machina';
   width: 464px;
+  @media (max-width: 500px) {
+    font-size: 32px;
+    width: 200px;
+    margin-top:40px;
+    margin-bottom: 0;
+  }
 `;
 
 export const ParagraphServicesStyled = styled.p`
@@ -47,11 +57,23 @@ export const ParagraphServicesStyled = styled.p`
   font-family: 'Circular Air Pro';
   width: 464px;
   margin-bottom: 40px;
+  @media (max-width: 500px) {
+    width: 160px;
+    font-size: 12px;
+    line-height: 17px;
+    margin-top:20px;
+  }
 `;
 
 export const DivButtonServicesStyled = styled.div`
   display: flex;
   text-align: center;
+  align-items: center;
+  @media (max-width: 500px) {
+    img{
+      width: 32px !important;
+    }
+  }
 `;
 
 export const ButtonServicesStyled = styled.button`
@@ -72,4 +94,10 @@ export const ButtonServicesStyled = styled.button`
   justify-content: center;
   align-items: center;
   font-family: 'Circular Air Pro';
+  @media (max-width: 500px) {
+    width: 166px;
+    height: 32px;
+    font-size: 12px;
+    font-weight: 400;
+  }
 `;

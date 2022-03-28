@@ -25,7 +25,7 @@ export default function OurServices() {
           <ButtonServicesStyled>NOSSOS SERVIÇOS</ButtonServicesStyled>
           <Image src={seta} alt="seta" />
         </DivButtonServicesStyled>
-        <OutSourcing />
+    
       </DivOurServicesStyled>
     </SectionStyled>
   );
