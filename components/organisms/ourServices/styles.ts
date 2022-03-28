@@ -18,7 +18,10 @@ export const DivOurServicesStyled = styled.div`
   height: 611px;
 `;
 
-export const HeadingStyled = styled.div`
+export const HeadingStyled = styled.p`
+  ::selection {
+    background: #5900cc;
+  }
   font-weight: 800;
   font-size: 64px;
   line-height: 90%;
@@ -30,7 +33,10 @@ export const HeadingStyled = styled.div`
   width: 464px;
 `;
 
-export const ParagraphServicesStyled = styled.div`
+export const ParagraphServicesStyled = styled.p`
+  ::selection {
+    background: #5900cc;
+  }
   font-weight: 400;
   font-size: 24px;
   line-height: 34px;
@@ -47,7 +53,7 @@ export const DivButtonServicesStyled = styled.div`
   margin-top: 48px;
 `;
 
-export const ButtonServicesStyled = styled.div`
+export const ButtonServicesStyled = styled.button`
   width: 241px;
   height: 50px;
   font-size: 24px;

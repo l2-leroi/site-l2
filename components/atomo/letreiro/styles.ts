@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const SectionOutSourcingStyled = styled.section`
   position: absolute;
   padding-top: 30px;
@@ -8,7 +7,7 @@ export const SectionOutSourcingStyled = styled.section`
   width: 1899px;
 `;
 
-export const ParagraphOutSourcingStyled = styled.div`
+export const ParagraphOutSourcingStyled = styled.p`
   font-weight: 800;
   font-size: 40px;
   line-height: 120%;
