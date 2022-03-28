@@ -39,7 +39,7 @@ export const HeadingStyled = styled.p`
   @media (max-width: 500px) {
     font-size: 32px;
     width: 200px;
-    margin-top:40px;
+    margin-top: 40px;
     margin-bottom: 0;
   }
 `;
@@ -61,7 +61,7 @@ export const ParagraphServicesStyled = styled.p`
     width: 160px;
     font-size: 12px;
     line-height: 17px;
-    margin-top:20px;
+    margin-top: 20px;
   }
 `;
 
@@ -70,7 +70,7 @@ export const DivButtonServicesStyled = styled.div`
   text-align: center;
   align-items: center;
   @media (max-width: 500px) {
-    img{
+    img {
       width: 32px !important;
     }
   }
@@ -99,5 +99,15 @@ export const ButtonServicesStyled = styled.button`
     height: 32px;
     font-size: 12px;
     font-weight: 400;
+  }
+`;
+
+export const DivOutSourcing = styled.div`
+position:relative ;
+width: 150%;
+top:11vw;
+@media (max-width: 600px) {
+   top:25vw;
+   width: 200%;
   }
 `;
