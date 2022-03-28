@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
-export const SectionOutSourcingStyled = styled.div`
+export const SectionOutSourcingStyled = styled.section`
   position: absolute;
   padding-top: 30px;
   bottom: 80px;

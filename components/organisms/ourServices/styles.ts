@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SectionStyled = styled.div`
+export const SectionStyled = styled.section`
   display: flex;
   justify-content: center;
   margin-top: 10vh;
