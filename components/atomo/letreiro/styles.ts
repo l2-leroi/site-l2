@@ -1,13 +1,26 @@
 import styled from 'styled-components';
 
 export const SectionOutSourcingStyled = styled.section`
-  overflow: hidden;
+ overflow: hidden;
   position: absolute;
-  padding-top: 83px;
-  bottom: 4vw;
+  transform: translateY(30rem);
+  @media (max-width: 500px) {
+    transform: translateY(20rem);
+  }
 `;
 
 export const ParagraphOutSourcingStyled = styled.p`
+  transform: translateX(100%);
+  animation: moving 20s linear infinite;
+  animation-duration: 20s;
+  @keyframes moving {
+    0% {
+      transform: translateX(90%);
+    }
+    0% {
+      transform: translateX(-100%);
+    }
+  }
   width: 150%;
   ::selection {
     background: #5900cc;
@@ -20,18 +33,11 @@ export const ParagraphOutSourcingStyled = styled.p`
   letter-spacing: -0.02em;
   color: #8e9195;
   font-family: 'Neue Machina';
-  transform: translateX(100%);
-  animation: moving 20s linear infinite;
-  @keyframes moving {
-    0% {
-      transform: translateX(100%);
-    }
-    0% {
-      transform: translateX(-100%);
-    }
-  }
 
   @media (max-width: 1000px) {
     font-size: 20px;
+  }
+  @media (max-width: 500px) {
+    width: 300%;
   }
 `;

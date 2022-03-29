@@ -5,6 +5,7 @@ export const SectionStyled = styled.section`
   justify-content: center;
   margin-top: 10vh;
   margin-bottom: 10vh;
+  
 `;
 
 export const DivOurServicesStyled = styled.div`
@@ -20,6 +21,12 @@ export const DivOurServicesStyled = styled.div`
     height: 442px;
   }
 `;
+
+export const DivTest = styled.div`
+
+  
+`;
+
 
 export const HeadingStyled = styled.p`
   margin-bottom: 0;
