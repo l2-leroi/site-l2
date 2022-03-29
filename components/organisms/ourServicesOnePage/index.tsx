@@ -71,7 +71,7 @@ export default function OurServicesOnePage() {
           </DivItemStyled>
 
           <DivItemStyled>
-            <Image src={rectl2} alt="L2 Code" />
+            <Image src={rectl2} alt="L2 Code" layout='responsive'/>
           </DivItemStyled>
         </DivServiceItemsStyled>
       </ContentOnePageStyled>
