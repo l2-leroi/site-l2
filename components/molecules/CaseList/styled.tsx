@@ -13,6 +13,9 @@ export const ListStyled = styled.section`
 export const CaseStyled = styled.article`
   width: 464px;
   height: 1008px;
+  opacity: 0;
+  transition: .8s;
+  transform: translate3d(0, 200px, 0);
 
   &:nth-child(2) {
     margin: 30rem 3.2rem 0;
@@ -21,6 +24,12 @@ export const CaseStyled = styled.article`
   &:nth-child(3) {
     margin-top: 60rem;
   }
+
+  &.animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
 `;
 
 export const CaseNumberStyled = styled.h3`

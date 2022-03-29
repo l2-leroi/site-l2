@@ -2,6 +2,7 @@ import Image from "next/image";
 import { CaseNumberStyled, CaseStyled, ContentStyled, ListStyled, InfoStyled, LinkStyled, TitleStyled, ButtonContentStyled } from "./styled";
 import Button from "../../atoms/Button";
 import { colors } from "../../../styles/colors";
+import { useEffect } from "react";
 
 interface Case { 
   number: string,
@@ -18,12 +19,33 @@ interface CaseProps {
 }
 
 function CaseList(props: CaseProps) {
+  useEffect(() => {
+    const target = document.querySelectorAll<HTMLElement>('[data-anime]');
+
+    function animeScroll() {
+      const windowTop = window.pageYOffset + (window.innerHeight * 0.6);
+      target.forEach((element) => {
+        if(windowTop > element.offsetTop) {
+          element.classList.add('animate');
+        }
+      })
+    }
+
+    animeScroll();
+
+    if(target.length) {
+      window.addEventListener('scroll', () => {
+        animeScroll();
+      })
+    }
+  }, [])
+
   return (
     <ContentStyled>
       <ListStyled>
         {
           props.cases.map((c) => (
-            <CaseStyled key={c.title}>
+            <CaseStyled key={c.title} data-anime="animate">
               <CaseNumberStyled>Case {c.number}</CaseNumberStyled>
               <TitleStyled>{c.title}</TitleStyled>
               <InfoStyled>{c.info}</InfoStyled>
