@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
+import Image from "next/image";
 
 export const ContentStyled = styled.section`
   display: flex;
@@ -59,7 +60,18 @@ export const InfoStyled = styled.p`
 `;
 
 export const LinkStyled = styled.a`
+  position: relative;
+`;
+
+export const ImageStyled = styled(Image)`
   cursor: pointer;
+  position: absolute;
+  border-radius: 8px;
+  transition: .5s;
+
+  &.transparent {
+    opacity: 0;
+  }
 `;
 
 export const ButtonContentStyled = styled.section`

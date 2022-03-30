@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { CaseNumberStyled, CaseStyled, ContentStyled, ListStyled, InfoStyled, LinkStyled, TitleStyled, ButtonContentStyled } from "./styled";
+import { CaseNumberStyled, CaseStyled, ContentStyled, ListStyled, InfoStyled, LinkStyled, TitleStyled, ButtonContentStyled, ImageStyled } from "./styled";
 import Button from "../../atoms/Button";
 import { colors } from "../../../styles/colors";
 import { useEffect } from "react";
@@ -11,6 +10,7 @@ interface Case {
   image: string,
   alt: string,
   link: string,
+  hover: string[],
 }
 
 interface CaseProps { 
@@ -31,13 +31,22 @@ function CaseList(props: CaseProps) {
       })
     }
 
-    animeScroll();
+    //animeScroll();
 
     if(target.length) {
       window.addEventListener('scroll', () => {
         animeScroll();
       })
     }
+
+    // anime hover
+    const cover = document.querySelector<HTMLElement>('.cover');
+    cover.addEventListener('mouseover', () => {
+        cover.classList.add('transparent');
+    })
+    cover.addEventListener('mouseout', () => {
+      cover.classList.remove('transparent');
+  })
   }, [])
 
   return (
@@ -49,8 +58,13 @@ function CaseList(props: CaseProps) {
               <CaseNumberStyled>Case {c.number}</CaseNumberStyled>
               <TitleStyled>{c.title}</TitleStyled>
               <InfoStyled>{c.info}</InfoStyled>
-              <LinkStyled href={c.link}>
-                <Image src={c.image} alt={c.alt} />
+              <LinkStyled>            
+                { 
+                  c.hover.forEach((e) => {
+                    <ImageStyled src={e} alt={c.alt} width={464} height={700} />
+                  })
+                }
+                <ImageStyled src={c.image} alt={c.alt} width={464} height={700} className="cover"/>
               </LinkStyled>
             </CaseStyled>
           ))
