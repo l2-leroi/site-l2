@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { colors } from '../../../styles/colors';
 import Image from "next/image";
 
@@ -59,19 +59,11 @@ export const InfoStyled = styled.p`
   width: 345px;
 `;
 
-export const LinkStyled = styled.a`
-  position: relative;
-`;
+export const LinkStyled = styled.a``;
 
 export const ImageStyled = styled(Image)`
   cursor: pointer;
-  position: absolute;
   border-radius: 8px;
-  transition: .5s;
-
-  &.transparent {
-    opacity: 0;
-  }
 `;
 
 export const ButtonContentStyled = styled.section`

@@ -1,7 +1,7 @@
 import { CaseNumberStyled, CaseStyled, ContentStyled, ListStyled, InfoStyled, LinkStyled, TitleStyled, ButtonContentStyled, ImageStyled } from "./styled";
 import Button from "../../atoms/Button";
 import { colors } from "../../../styles/colors";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 interface Case { 
   number: string,
@@ -31,23 +31,28 @@ function CaseList(props: CaseProps) {
       })
     }
 
-    //animeScroll();
+    animeScroll();
 
     if(target.length) {
       window.addEventListener('scroll', () => {
         animeScroll();
       })
     }
-
-    // anime hover
-    const cover = document.querySelector<HTMLElement>('.cover');
-    cover.addEventListener('mouseover', () => {
-        cover.classList.add('transparent');
-    })
-    cover.addEventListener('mouseout', () => {
-      cover.classList.remove('transparent');
-  })
   }, [])
+
+  const [isHover, setIsHover] = useState(false);
+  const [srcImage, setSrcImage] = useState("");
+  const [images, setImages] = useState([]);
+
+  function animeHover(isHover: boolean) {
+    setIsHover(isHover);
+    while(isHover) {
+      for(let i = 0; i < images.length; i++) {
+        setSrcImage(images[i]);
+        console.log(srcImage);
+      }
+    }
+  }  
 
   return (
     <ContentStyled>
@@ -58,13 +63,22 @@ function CaseList(props: CaseProps) {
               <CaseNumberStyled>Case {c.number}</CaseNumberStyled>
               <TitleStyled>{c.title}</TitleStyled>
               <InfoStyled>{c.info}</InfoStyled>
-              <LinkStyled>            
-                { 
-                  c.hover.forEach((e) => {
-                    <ImageStyled src={e} alt={c.alt} width={464} height={700} />
-                  })
-                }
-                <ImageStyled src={c.image} alt={c.alt} width={464} height={700} className="cover"/>
+              <LinkStyled>     
+                <ImageStyled 
+                  src={isHover ? srcImage : c.image} 
+                  alt={c.alt} 
+                  width={464} 
+                  height={700} 
+                  onMouseEnter={() => {
+                    setImages(c.hover);
+                    animeHover(true);
+                    console.log('entrada');
+                  }}
+                  onMouseLeave={() => {
+                    animeHover(false); 
+                    console.log('saida');
+                  }}
+                />
               </LinkStyled>
             </CaseStyled>
           ))
