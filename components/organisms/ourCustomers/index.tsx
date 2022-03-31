@@ -24,9 +24,10 @@ import NoVerdeLogo from '../../../assets/images/OurCustomers/no-verde-logo.svg';
 import DigitalBusinessLogo from '../../../assets/images/OurCustomers/digital-business-logo.svg';
 import FundacredLogo from '../../../assets/images/OurCustomers/fundacred-logo.svg';
 
-import Enfeite from '../../../assets/images/OurCustomers/enfeite-giratorio.svg';
+import Spinner from '../../../assets/images/OurCustomers/enfeite-giratorio.svg';
 
 import CustomersList from '../../molecules/CustomersList/index';
+import React from 'react';
 
 const OurCustomers = () => {
   const customers = [
@@ -42,12 +43,42 @@ const OurCustomers = () => {
     { alt: 'Fundacred Logo', src: FundacredLogo },
   ];
 
+
+  React.useEffect(()=> {
+    window.addEventListener("scroll", handleScroll);
+  });
+ 
+  const handleScroll = (event) => {
+    const halfWindow = window.innerHeight * 0.8;
+    const blackLine = document.querySelector(".blackLine") as HTMLElement;
+    const spinner = document.querySelector(".spinner") as HTMLElement;
+
+    const blackLineTop = blackLine.getBoundingClientRect().top
+
+    const isVisible = (blackLineTop - halfWindow) < 0;
+
+    const inclination = (halfWindow - blackLineTop)/10
+    const internalPadding = (halfWindow - blackLineTop);
+    const spinnerMargin = (inclination * 11) - (spinner.offsetHeight/2);
+
+
+    if(isVisible && inclination <= 60 && internalPadding <= 576){
+
+      if(inclination >= 0){
+        spinner.style.top = `${spinnerMargin}px`;
+      }
+      
+      blackLine.style.clipPath = `polygon(0 0, 100% ${inclination}%, 100% 100%, 0% 100%)`;
+      blackLine.style.paddingTop = `${internalPadding}px`;      
+    }
+  }
+
   return (
     <OurCustomersStyled>
-      <SpinningIconStyled>
-        <Image src={Enfeite} alt="L2 Code" />
+      <SpinningIconStyled className='spinner'>
+        <Image src={Spinner} alt="L2 Code" />
       </SpinningIconStyled>
-      <BlackLineStyled>
+      <BlackLineStyled className='blackLine'>
         <ContentStyled>
           <AsideStyled>
             <ParagraphStyled>&lt;30+CLIENTES&gt;</ParagraphStyled>

@@ -79,7 +79,6 @@ export const SpinningAnimation = keyframes`
 
 export const SpinningIconStyled = styled.div`
   position: absolute;
-  top: 125px;
   right: 0px;
   z-index: 99;  
   overflow-x: hidden;
