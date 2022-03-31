@@ -102,7 +102,7 @@ export const ButtonServicesStyled = styled.button`
   align-items: center;
   font-family: 'Circular Air Pro';
   @media (max-width: 500px) {
-    width: 166px;
+    width: 126px;
     height: 32px;
     font-size: 12px;
     font-weight: 400;

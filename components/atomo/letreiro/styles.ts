@@ -10,12 +10,9 @@ export const SectionOutSourcingStyled = styled.section`
 `;
 
 export const ParagraphOutSourcingStyled = styled.p`
-  transform: translateX(100%);
-  animation: moving 20s linear infinite;
-  animation-duration: 20s;
-  width: 150%;
   font-weight: 800;
   font-size: 40px;
+  padding-left: 22px;
   line-height: 120%;
   text-align: center;
   letter-spacing: -0.02em;
@@ -25,18 +22,7 @@ export const ParagraphOutSourcingStyled = styled.p`
     background: #5900cc;
     color: #f2f3f4;
   }
-  @keyframes moving {
-    0% {
-      transform: translateX(90%);
-    }
-    0% {
-      transform: translateX(-100%);
-    }
-  }
-  @media (max-width: 1000px) {
-    font-size: 20px;
-  }
   @media (max-width: 500px) {
-    width: 300%;
+    font-size: 20px;
   }
 `;
