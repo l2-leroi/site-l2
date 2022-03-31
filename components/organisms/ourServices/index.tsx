@@ -7,7 +7,6 @@ import {
   HeadingStyled,
   ParagraphServicesStyled,
   ButtonServicesStyled,
-  DivTest
 } from './styles';
 import seta from '../../../assets/images/seta.svg';
 import OutSourcing from '../../atomo/letreiro';
@@ -28,9 +27,6 @@ export default function OurServices() {
         </DivButtonServicesStyled>
         
       </DivOurServicesStyled>
-      <DivTest>
-     
-        </DivTest>
         <OutSourcing />
     </SectionStyled>
     

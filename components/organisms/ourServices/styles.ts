@@ -22,12 +22,6 @@ export const DivOurServicesStyled = styled.div`
   }
 `;
 
-export const DivTest = styled.div`
-
-  
-`;
-
-
 export const HeadingStyled = styled.p`
   margin-bottom: 0;
   margin-top: 80px;
