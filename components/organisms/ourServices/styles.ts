@@ -1,18 +1,18 @@
 import styled from 'styled-components';
+import { colors } from '../../../styles/colors';
 
 export const SectionStyled = styled.section`
   display: flex;
   justify-content: center;
   margin-top: 10vh;
   margin-bottom: 10vh;
-  
 `;
 
 export const DivOurServicesStyled = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: #171b21;
+  background: ${colors.black};
   border-radius: 8px;
   width: 1200px;
   height: 611px;
@@ -26,14 +26,14 @@ export const HeadingStyled = styled.p`
   margin-bottom: 0;
   margin-top: 80px;
   ::selection {
-    background: #5900cc;
+    background: ${colors.purple};
   }
   font-weight: 800;
   font-size: 64px;
   line-height: 90%;
   text-align: center;
   letter-spacing: -0.04em;
-  color: #f2f3f4;
+  color: ${colors.gray};
   margin-bottom: 24px;
   font-family: 'Neue Machina';
   width: 464px;
@@ -47,14 +47,14 @@ export const HeadingStyled = styled.p`
 
 export const ParagraphServicesStyled = styled.p`
   ::selection {
-    background: #5900cc;
+    background: ${colors.purple};
   }
   font-weight: 400;
   font-size: 24px;
   line-height: 34px;
   text-align: center;
   letter-spacing: -0.04em;
-  color: #f2f3f4;
+  color: ${colors.gray};
   font-family: 'Circular Air Pro';
   width: 464px;
   margin-bottom: 40px;
@@ -79,17 +79,17 @@ export const DivButtonServicesStyled = styled.div`
 
 export const ButtonServicesStyled = styled.button`
   ::selection {
-    background: #5900cc;
-    color: #f2f3f4;
+    background: ${colors.purple};
+    color: ${colors.gray};
   }
   width: 241px;
   height: 50px;
   font-size: 24px;
-  background: #20bd9d;
-  border: 2px solid #20bd9d;
+  color: ${colors.green};
+  border: 2px solid  ${colors.green};
   border-radius: 24px;
   letter-spacing: -0.04em;
-  color: #171b21;
+  color: ${colors.black};
   margin-right: 8px;
   display: flex;
   justify-content: center;

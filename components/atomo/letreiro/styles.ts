@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../../styles/colors';
 
 export const SectionOutSourcingStyled = styled.section`
   overflow: hidden;
@@ -19,8 +20,8 @@ export const ParagraphOutSourcingStyled = styled.p`
   color: #8e9195;
   font-family: 'Neue Machina';
   ::selection {
-    background: #5900cc;
-    color: #f2f3f4;
+    background: ${colors.purple};
+    color: ${colors.gray};
   }
   @media (max-width: 500px) {
     font-size: 20px;
