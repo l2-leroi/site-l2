@@ -85,8 +85,8 @@ export const ButtonServicesStyled = styled.button`
   width: 241px;
   height: 50px;
   font-size: 24px;
-  color: ${colors.green};
-  border: 2px solid  ${colors.green};
+  background: ${colors.green};
+  border: 2px solid ${colors.green};
   border-radius: 24px;
   letter-spacing: -0.04em;
   color: ${colors.black};
