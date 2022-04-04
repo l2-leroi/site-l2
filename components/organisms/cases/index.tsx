@@ -2,9 +2,24 @@ import { AsideStyled, ContentStyled, ParagraphStyled, PhraseStyled, TitleStyled 
 import CaseList from "../../molecules/CaseList";
 
 const Cases = () => {
-  const memoriesUpHover = ["/memories-up-1.jpg", "/memories-up-2.jpg", "/memories-up-3.jpg", "/memories-up-4.jpg"];
-  const maisAcessoHover = [""];
-  const toParadoHover = [""];
+  const memoriesUpHover = [
+    "/memories-up-1.jpg", 
+    "/memories-up-2.jpg", 
+    "/memories-up-3.jpg", 
+    "/memories-up-4.jpg"
+  ];
+  const maisAcessoHover = [
+    "/mais-acesso-1.jpg", 
+    "/mais-acesso-2.jpg", 
+    "/mais-acesso-3.jpg", 
+    "/mais-acesso-4.jpg"
+  ];
+  const toParadoHover = [
+    "/to-parado-1.jpg", 
+    "/to-parado-2.jpg", 
+    "/to-parado-3.jpg", 
+    "/to-parado-4.jpg"
+  ];
 
   const cases = [
     { 

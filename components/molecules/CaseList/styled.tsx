@@ -59,11 +59,29 @@ export const InfoStyled = styled.p`
   width: 345px;
 `;
 
-export const LinkStyled = styled.a``;
+export const LinkStyled = styled.a`
+  position: relative;
+`;
 
-export const ImageStyled = styled(Image)`
+export const DivStyled = styled.div`
+  width: 464px;
+  height: 700px;
+  position: absolute;
+  z-index: 1;
   cursor: pointer;
+`;
+
+export const ImageStyled = styled.img`
   border-radius: 8px;
+  position: absolute;
+  
+  &.imageBlock {
+    display: block;
+  }
+
+  &.imageNone {
+    display: none;
+  }
 `;
 
 export const ButtonContentStyled = styled.section`

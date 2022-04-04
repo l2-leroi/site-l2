@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors } from '../../../styles/colors';
 
 interface ButtonProps { 
-  bColor?: string;
+  borderColor?: string;
   bgColor?: string;
 }
 
@@ -16,7 +16,7 @@ export const LinkStyled = styled.a`
 export const ButtonStyled = styled.div<ButtonProps>`
   width: 50px;
   height: 50px;
-  border: 2px solid ${props => props.bColor ? `${props.bColor}` : `${colors.green}`};
+  border: 2px solid ${props => props.borderColor ? props.borderColor : colors.green};
   background-color: ${props => props.bgColor ? props.bgColor : "none"};
   border-radius: 24px;
   font-family: 'Circular Air Pro', sans-serif;

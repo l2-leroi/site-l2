@@ -1,7 +1,7 @@
-import { CaseNumberStyled, CaseStyled, ContentStyled, ListStyled, InfoStyled, LinkStyled, TitleStyled, ButtonContentStyled, ImageStyled } from "./styled";
+import { CaseNumberStyled, CaseStyled, ContentStyled, ListStyled, InfoStyled, LinkStyled, TitleStyled, ButtonContentStyled, ImageStyled, DivStyled } from "./styled";
 import Button from "../../atoms/Button";
 import { colors } from "../../../styles/colors";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 interface Case { 
   number: string,
@@ -19,6 +19,9 @@ interface CaseProps {
 }
 
 function CaseList(props: CaseProps) {
+
+  // anime scroll 
+
   useEffect(() => {
     const target = document.querySelectorAll<HTMLElement>('[data-anime]');
 
@@ -40,45 +43,66 @@ function CaseList(props: CaseProps) {
     }
   }, [])
 
-  const [isHover, setIsHover] = useState(false);
-  const [srcImage, setSrcImage] = useState("");
-  const [images, setImages] = useState([]);
+  // anime hover
 
-  function animeHover(isHover: boolean) {
-    setIsHover(isHover);
-    while(isHover) {
-      for(let i = 0; i < images.length; i++) {
-        setSrcImage(images[i]);
-        console.log(srcImage);
+  const interval = useRef(null);
+  var currentImage = '';
+
+  const initInterval = (images: string[]) => {
+    interval.current = setInterval(() => {
+      const index = (currentImage != '') ? images.indexOf(currentImage) : 0;    
+      if(index == (images.length-1)) {
+        currentImage = images[0];
       }
-    }
-  }  
+      else { 
+        currentImage = images[index+1];
+      }
+      console.log(currentImage);
+    }, 400)
+  };
+
+  const cancelInterval = () => {
+    clearInterval(interval.current);
+    interval.current = null;
+  };
 
   return (
     <ContentStyled>
       <ListStyled>
         {
-          props.cases.map((c) => (
-            <CaseStyled key={c.title} data-anime="animate">
-              <CaseNumberStyled>Case {c.number}</CaseNumberStyled>
-              <TitleStyled>{c.title}</TitleStyled>
-              <InfoStyled>{c.info}</InfoStyled>
-              <LinkStyled>     
-                <ImageStyled 
-                  src={isHover ? srcImage : c.image} 
-                  alt={c.alt} 
-                  width={464} 
-                  height={700} 
-                  onMouseEnter={() => {
-                    setImages(c.hover);
-                    animeHover(true);
-                    console.log('entrada');
+          props.cases.map((itemCase) => (
+            <CaseStyled key={itemCase.title} data-anime="animate">
+              <CaseNumberStyled>Case {itemCase.number}</CaseNumberStyled>
+              <TitleStyled>{itemCase.title}</TitleStyled>
+              <InfoStyled>{itemCase.info}</InfoStyled>
+              <LinkStyled> 
+                <DivStyled
+                  onMouseEnter={() => {        
+                    initInterval(itemCase.hover);              
                   }}
                   onMouseLeave={() => {
-                    animeHover(false); 
-                    console.log('saida');
+                    cancelInterval(); 
                   }}
                 />
+                <ImageStyled 
+                  src={itemCase.image} 
+                  alt={itemCase.alt} 
+                  width={464} 
+                  height={700} 
+                />
+              {
+                itemCase.hover.map((imageHover => (  
+                  <ImageStyled key={imageHover}
+                    src={imageHover} 
+                    alt={itemCase.alt} 
+                    width={464} 
+                    height={700} 
+                    className={
+                      ((currentImage == imageHover) ? "imageBlock" : "imageNone")
+                    }
+                  />
+                ))) 
+              }
               </LinkStyled>
             </CaseStyled>
           ))
@@ -89,7 +113,7 @@ function CaseList(props: CaseProps) {
         props.linkBtn && 
           (
             <ButtonContentStyled>
-              <Button linkBtn={props.linkBtn} borderColor={`${colors.green}`} />
+              <Button linkBtn={props.linkBtn} borderColor={colors.green} />
             </ButtonContentStyled>
           )          
       }

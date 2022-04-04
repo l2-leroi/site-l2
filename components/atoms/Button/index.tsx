@@ -10,7 +10,7 @@ interface ButtonProps {
 function Button(props: ButtonProps) {
   return(
     <LinkStyled href={props.linkBtn}>
-      <ButtonStyled bColor={props.borderColor}>VEJA TODOS OS CASES</ButtonStyled>  
+      <ButtonStyled borderColor={props.borderColor}>VEJA TODOS OS CASES</ButtonStyled>  
       <ButtonStyled> <ArrowIcon /> </ButtonStyled>
     </LinkStyled>
   );
