@@ -6,6 +6,7 @@ export const OurCustomersStyled = styled.section`
   width: 100%;
   overflow: hidden;
   position: relative;
+  padding-top: 300px;
 `;
 
 export const BlackLineStyled = styled.div`
@@ -17,6 +18,16 @@ export const BlackLineStyled = styled.div`
   padding: 13px 28px;
   padding: 36.05rem 2.8rem 6.05rem;
   overflow: hidden;
+`;
+
+export const PurpleLineStyled = styled.div`
+  color: ${colors.gray};
+  background-color: ${colors.purple};
+  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 50px;
 `;
 
 export const HeaderStyled = styled.hgroup`
@@ -56,7 +67,6 @@ export const SignStyled = styled.span`
   line-height: 200%;
   font-weight: 800;
   letter-spacing: -0.02em;
-  transform: rotate(16.5deg);
   text-align: center;
   color: ${colors.darkgray};
   overflow: hidden;
@@ -64,8 +74,9 @@ export const SignStyled = styled.span`
   width: 100%;
   max-height: 40px;
   position: absolute;
-  bottom: -180px;
+  top: -20px;
   z-index: 99;
+  margin-top: -20px
 `;
 
 export const SpinningAnimation = keyframes`
@@ -83,4 +94,11 @@ export const SpinningIconStyled = styled.div`
   z-index: 99;  
   overflow-x: hidden;
   animation: ${SpinningAnimation} 5s linear infinite;
+`;
+
+export const SignContainerStyled = styled.div`
+  background-color: ${colors.black};
+  padding-top: 40px;
+  margin-top: -2px;
+  position: relative;
 `;

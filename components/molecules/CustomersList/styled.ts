@@ -16,8 +16,9 @@ export const ListStyled = styled.ul`
     right: 0;
     padding: 50px;
     background: ${colors.black};
-    width: 6px;
-    height: 200px;
+    width: 15%;
+    height: 80%;
+    z-index: 7;
   }
 `;
 
@@ -34,11 +35,16 @@ export const ContentStyled = styled.li`
   min-width: 80px;
   position: relative;
 
+  span {
+    z-index: 8;
+  }
+
   &::after {
     content: "+";
     position: absolute;
     bottom: -6px;
     right: -3px;
+    z-index: 6;
   }
 
   &::before {
@@ -46,6 +52,7 @@ export const ContentStyled = styled.li`
     position: absolute;
     top: -8px;
     right: -3px;
+    z-index: 6;
   }
 `;
 

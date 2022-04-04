@@ -4,10 +4,9 @@ import { colors } from '../../../styles/colors';
 export const FooterStyled = styled.footer`
   color: ${colors.gray};
   background-color: ${colors.purple};
-  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
   height: 1156px; 
   width: 100%;
-  padding: 36.05rem 2.8rem 6.05rem;
+  padding: 0 2.8rem 6.05rem;
 `;
 
 export const ContentStyled = styled.section`

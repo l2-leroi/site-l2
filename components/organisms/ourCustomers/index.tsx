@@ -7,6 +7,8 @@ import {
   SignStyled,
   SpinningIconStyled,
   BlackLineStyled,
+  PurpleLineStyled,
+  SignContainerStyled,
 } from './styled';
 
 import { AsideStyled, ParagraphStyled } from '../footer/styled';
@@ -28,6 +30,7 @@ import Spinner from '../../../assets/images/OurCustomers/enfeite-giratorio.svg';
 
 import CustomersList from '../../molecules/CustomersList/index';
 import React from 'react';
+import { sign } from 'crypto';
 
 const OurCustomers = () => {
   const customers = [
@@ -49,28 +52,50 @@ const OurCustomers = () => {
   });
  
   const handleScroll = (event) => {
-    const halfWindow = window.innerHeight * 0.8;
+    console.log(event);
     const blackLine = document.querySelector(".blackLine") as HTMLElement;
+    const purpleLine = document.querySelector(".purpleLine") as HTMLElement;
     const spinner = document.querySelector(".spinner") as HTMLElement;
+    const sign = document.querySelector(".sign") as HTMLElement;
+
+    const halfWindow = window.innerHeight * 0.8;
+    const halfWindowPurple = window.innerHeight * 0.9;
 
     const blackLineTop = blackLine.getBoundingClientRect().top
+    const purpleLineTop = purpleLine.getBoundingClientRect().top
 
-    const isVisible = (blackLineTop - halfWindow) < 0;
+    const isBlackVisible = (blackLineTop - halfWindow) < 0;
+    const isPurpleVisible = (purpleLineTop - halfWindowPurple) < 0;
 
-    const inclination = (halfWindow - blackLineTop)/10
-    const internalPadding = (halfWindow - blackLineTop);
-    const spinnerMargin = (inclination * 11) - (spinner.offsetHeight/2);
+    const inclinationBlack = (halfWindow - blackLineTop)/10
+    const internalPaddingBlack = (halfWindow - blackLineTop);
+    const spinnerMargin = (inclinationBlack * 11) - (spinner.offsetHeight/2) + 300;
+
+    const inclinationPurple = (halfWindow - purpleLineTop)/10
+    const internalPaddingPurple = (halfWindow - purpleLineTop);
 
 
-    if(isVisible && inclination <= 60 && internalPadding <= 576){
+    if(isBlackVisible && inclinationBlack <= 60 && internalPaddingBlack <= 576){
 
-      if(inclination >= 0){
+      if(inclinationBlack >= 0){
         spinner.style.top = `${spinnerMargin}px`;
       }
       
-      blackLine.style.clipPath = `polygon(0 0, 100% ${inclination}%, 100% 100%, 0% 100%)`;
-      blackLine.style.paddingTop = `${internalPadding}px`;      
+      blackLine.style.clipPath = `polygon(0 0, 100% ${inclinationBlack}%, 100% 100%, 0% 100%)`;
+      blackLine.style.paddingTop = `${internalPaddingBlack}px`;      
     }
+
+    if(isPurpleVisible && inclinationPurple <= 60 && internalPaddingPurple <= 376){
+
+      if(inclinationPurple >= 0){
+        sign.style.transform = `rotate(${inclinationPurple/7}deg)`;
+        sign.style.top = `${inclinationPurple * 2}px`;
+      }
+      
+      purpleLine.style.clipPath = `polygon(0 0, 100% ${inclinationPurple}%, 100% 100%, 0% 100%)`;
+      purpleLine.style.paddingTop = `${internalPaddingPurple}px`;      
+    }
+
   }
 
   return (
@@ -96,11 +121,16 @@ const OurCustomers = () => {
 
           
       </BlackLineStyled>
-      <SignStyled>
-            Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista ·
-            Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista ·
-            Adoraríamos ter você nessa lista ·
-      </SignStyled>
+      <SignContainerStyled>
+        <SignStyled className='sign'>
+                Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista ·
+                Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista ·
+                Adoraríamos ter você nessa lista ·
+          </SignStyled>
+        <PurpleLineStyled className='purpleLine'>
+          
+        </PurpleLineStyled>
+      </SignContainerStyled>
     </OurCustomersStyled>
   );
 };
