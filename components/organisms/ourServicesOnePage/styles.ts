@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../../styles/colors';
 
 export const SectionOnePageStyled = styled.section`
   display: flex;
@@ -8,7 +9,7 @@ export const SectionOnePageStyled = styled.section`
 `;
 
 export const ContentOnePageStyled = styled.div`
-  background: #171b21;
+  background:${colors.black};
   border-radius: 8px;
   width: 1220px;
   display: flex;
@@ -35,7 +36,7 @@ export const DivServicesStyled = styled.div`
 
 export const HeadingStyled = styled.p`
   ::selection {
-    background: #5900cc;
+    background: ${colors.purple};
   }
   width: 464px;
   font-family: 'Neue Machina';
@@ -43,7 +44,7 @@ export const HeadingStyled = styled.p`
   font-size: 64px;
   line-height: 58px;
   letter-spacing: -0.04em;
-  color: #f2f3f4;
+  color:${colors.gray};
   margin: 0;
   @media (max-width: 760px) {
     font-size: 32px;
@@ -55,7 +56,7 @@ export const HeadingStyled = styled.p`
 
 export const ParagraphServicesStyled = styled.p`
   ::selection {
-    background: #5900cc;
+    background:${colors.purple};
   }
   width: 464px;
   font-family: 'Circular Air Pro';
@@ -63,7 +64,7 @@ export const ParagraphServicesStyled = styled.p`
   font-size: 24px;
   line-height: 34px;
   letter-spacing: -0.04em;
-  color: #f2f3f4;
+  color:${colors.gray};
   padding-top: 24px;
   margin: 0;
   @media (max-width: 760px) {
@@ -94,8 +95,8 @@ export const DivItemStyled = styled.div`
 `;
 export const HeadingItemStyled = styled.p`
   ::selection {
-    background: #5900cc;
-    color: #f2f3f4;
+    background:${colors.purple};
+    color:${colors.gray};
   }
   font-family: 'Neue Machina';
   font-weight: 800;
@@ -116,8 +117,8 @@ export const HeadingItemStyled = styled.p`
 `;
 export const ParagraphItemStyled = styled.p`
   ::selection {
-    background: #5900cc;
-    color: #f2f3f4;
+    background:${colors.purple};
+    color:${colors.gray};
   }
   font-family: 'Circular Air Pro';
   font-weight: 400;
