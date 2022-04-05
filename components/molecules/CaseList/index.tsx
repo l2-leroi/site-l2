@@ -1,7 +1,7 @@
-import { CaseNumberStyled, CaseStyled, ContentStyled, ListStyled, InfoStyled, LinkStyled, TitleStyled, ButtonContentStyled, ImageStyled, DivStyled } from "./styled";
+import { CaseNumberStyled, CaseStyled, ContentStyled, ListStyled, InfoStyled, LinkStyled, TitleStyled, ButtonContentStyled, ImageStyled } from "./styled";
 import Button from "../../atoms/Button";
 import { colors } from "../../../styles/colors";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface Case { 
   number: string,
@@ -47,23 +47,26 @@ function CaseList(props: CaseProps) {
 
   const interval = useRef(null);
   var currentImage = '';
+  const [actualImage, setActualImage] = useState('');
 
   const initInterval = (images: string[]) => {
     interval.current = setInterval(() => {
       const index = (currentImage != '') ? images.indexOf(currentImage) : 0;    
       if(index == (images.length-1)) {
         currentImage = images[0];
+        setActualImage(currentImage);
       }
       else { 
         currentImage = images[index+1];
+        setActualImage(currentImage);
       }
-      console.log(currentImage);
-    }, 400)
+    }, 100)
   };
 
-  const cancelInterval = () => {
+  const cancelInterval = (images: string) => {
     clearInterval(interval.current);
     interval.current = null;
+    setActualImage(images);
   };
 
   return (
@@ -75,15 +78,14 @@ function CaseList(props: CaseProps) {
               <CaseNumberStyled>Case {itemCase.number}</CaseNumberStyled>
               <TitleStyled>{itemCase.title}</TitleStyled>
               <InfoStyled>{itemCase.info}</InfoStyled>
-              <LinkStyled> 
-                <DivStyled
-                  onMouseEnter={() => {        
-                    initInterval(itemCase.hover);              
-                  }}
-                  onMouseLeave={() => {
-                    cancelInterval(); 
-                  }}
-                />
+              <LinkStyled
+                onMouseEnter={() => {        
+                  initInterval(itemCase.hover);              
+                }}
+                onMouseLeave={() => {
+                  cancelInterval(itemCase.image); 
+                }}
+              > 
                 <ImageStyled 
                   src={itemCase.image} 
                   alt={itemCase.alt} 
@@ -98,7 +100,7 @@ function CaseList(props: CaseProps) {
                     width={464} 
                     height={700} 
                     className={
-                      ((currentImage == imageHover) ? "imageBlock" : "imageNone")
+                      ((actualImage == imageHover) ? "imageBlock" : "imageNone")
                     }
                   />
                 ))) 

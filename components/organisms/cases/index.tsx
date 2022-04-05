@@ -1,5 +1,6 @@
-import { AsideStyled, ContentStyled, ParagraphStyled, PhraseStyled, TitleStyled } from "./styled";
+import { AsideStyled, ContainerStyled, ContentStyled, ParagraphStyled, PhraseStyled, Teste, TitleStyled } from "./styled";
 import CaseList from "../../molecules/CaseList";
+import React from "react";
 
 const Cases = () => {
   const memoriesUpHover = [
@@ -52,14 +53,16 @@ const Cases = () => {
   ];
 
   return (
-    <ContentStyled>
-      <AsideStyled>
-        <ParagraphStyled>&lt;LA CREAM&gt;</ParagraphStyled>
-      </AsideStyled>
-      <TitleStyled>NOSSOS CASES SELECIONADOS</TitleStyled>
-      <PhraseStyled>Fazemos muito bem porque nos preocupamos com qualidade, estética e, acima de tudo, com resultados.</PhraseStyled>
-      <CaseList cases={cases} linkBtn="#4" />
-    </ContentStyled>
+    <ContainerStyled>
+      <ContentStyled>
+        <AsideStyled>
+          <ParagraphStyled>&lt;LA CREAM&gt;</ParagraphStyled>
+        </AsideStyled>
+        <TitleStyled>NOSSOS CASES SELECIONADOS</TitleStyled>
+        <PhraseStyled>Fazemos muito bem porque nos preocupamos com qualidade, estética e, acima de tudo, com resultados.</PhraseStyled>
+        <CaseList cases={cases} linkBtn="#4" />
+      </ContentStyled>
+    </ContainerStyled>
   );
 };
 export default Cases;

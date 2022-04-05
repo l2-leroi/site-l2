@@ -1,6 +1,5 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
-import Image from "next/image";
 
 export const ContentStyled = styled.section`
   display: flex;
@@ -30,7 +29,6 @@ export const CaseStyled = styled.article`
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
-
 `;
 
 export const CaseNumberStyled = styled.h3`
@@ -60,14 +58,6 @@ export const InfoStyled = styled.p`
 `;
 
 export const LinkStyled = styled.a`
-  position: relative;
-`;
-
-export const DivStyled = styled.div`
-  width: 464px;
-  height: 700px;
-  position: absolute;
-  z-index: 1;
   cursor: pointer;
 `;
 

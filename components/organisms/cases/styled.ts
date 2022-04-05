@@ -1,12 +1,19 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
-export const ContentStyled = styled.section`
+export const ContainerStyled = styled.div`
   color: ${colors.black};
   background-color: ${colors.strong_gray};
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
   padding: 10rem 2.8rem 40rem;
+`;
+
+export const ContentStyled = styled.section`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 1500px;
+  margin: 0 auto;
 `;
 
 export const AsideStyled = styled.aside`
@@ -20,6 +27,12 @@ export const ParagraphStyled = styled.p`
   font-size: 1.6rem;
   line-height: 22.4px;
   font-weight: 400;
+`;
+
+export const Teste = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 `;
 
 export const TitleStyled = styled.h2`
