@@ -3,7 +3,6 @@ import {
   Container,
   DivLogo,
   DivLine,
-  DivScroll,
   DivMenu,
   TextMenu,
   DivText,
@@ -13,21 +12,24 @@ import {
   ParagraphLanguage,
   ParagraphOne,
   ParagraphTwo,
-  ElementScroll,
 } from './styles';
 import Image from 'next/image';
 import logo from '../../../assets/images/logoMenu.svg';
 import x from '../../../assets/images/closeMenu.svg';
+import Scroll from '../../molecules/Scroll';
 
 export default function Menu() {
-    const element = document.getElementById('home')
-    element.innerText = "< Home >"
-    element.style.color = "#20BD9D"
+  const items = [
+    { title: 'Home', link: 'https://www.google.com.br/' },
+    { title: 'Cases', link: 'https://www.google.com.br/' },
+    { title: 'Serviços', link: 'https://www.google.com.br/' },
+    { title: 'Contato', link: 'https://www.google.com.br/' },
+  ];
+
   return (
-      
     <Container>
       <DivLogo>
-        <Image src={logo} alt="L2"/>
+        <Image src={logo} alt="L2" />
 
         <DivContact>
           <ParagraphOne>entre no time</ParagraphOne>
@@ -36,17 +38,7 @@ export default function Menu() {
         </DivContact>
       </DivLogo>
 
-      <DivScroll>
-        <ElementScroll id="home">Home</ElementScroll>
-        <ElementScroll>Sobre</ElementScroll>
-        <ElementScroll>Cases</ElementScroll>
-        <ElementScroll>Serviços</ElementScroll>
-        <ElementScroll>Pessoas</ElementScroll>
-        <ElementScroll>Carreira</ElementScroll>
-        <ElementScroll>Contato</ElementScroll>
-
-        
-      </DivScroll>
+      <Scroll items={items} />
 
       <DivMenu>
         <DivTextMenu>

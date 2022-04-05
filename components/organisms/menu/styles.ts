@@ -33,17 +33,7 @@ export const DivLine = styled.div`
   margin-right: 24px;
   margin-left: 24px;
 `;
-export const DivScroll = styled.div`
-margin-top:56px;
-display:flex ;
-flex-direction:column ;
-animation: scroll 10s linear 1s infinite;
-  @keyframes scroll {
-    100% {
-      top: -560px;
-    } 
-  }
-`;
+
 export const DivMenu = styled.div`
   display: flex;
   flex-direction: column;
@@ -93,17 +83,4 @@ export const ParagraphTwo = styled.p`
   letter-spacing: -0.04em;
   color: #f2f3f4;
   margin-right: 28px;
-`;
-
-export const ElementScroll = styled.span`
-height: 80px;
-margin-bottom: 56px;
-  font-family: 'Neue Machina';
-  font-weight: 800;
-  font-size: 80px;
-  line-height: 80px;
-  text-align: center;
-  letter-spacing: -0.06em;
-  color: #f2f3f4;
-  width: 110%;
 `;
