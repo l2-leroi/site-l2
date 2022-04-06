@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+export const Teste = styled.section``;
 export const Container = styled.section`
   background: #171b21;
   display: flex;
@@ -17,8 +17,13 @@ export const DivLogo = styled.div`
 export const DivTextMenu = styled.div`
   display: flex;
   justify-content: flex-end;
+  align-items:center ;
   margin-right: 28px;
   margin-top: 33px;
+`;
+
+export const ButtonClose = styled.div`
+  cursor: pointer;
 `;
 export const DivText = styled.div``;
 

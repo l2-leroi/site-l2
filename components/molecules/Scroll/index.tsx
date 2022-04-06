@@ -1,33 +1,59 @@
-import React, { useState } from 'react';
+import React, { Component } from "react";
+import Slider from "react-slick";
+import { ContainerScroll, DivElement, ElementScroll } from "./styles";
 
-import { ContainerScroll, ElementScroll, DivElement } from './styles';
 
-interface Elements {
-  title: string;
-  link: string;
-}
-
-interface ItemsProps {
-  items: Elements[];
-}
-
-function createMarkup() {
-  return { __html: '&lt;{i.title}&gt;' };
-}
-
-function Scroll(props: ItemsProps) {
-  const [clones, setClones] = useState([]);
-  return (
-    <>
+export default class VerticalSwipeToSlide extends Component {
+  
+  render() {
+    const settings = {
+      dots: false,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      vertical: true,
+      verticalSwiping: true,
+      swipeToSlide: true,
+      beforeChange: function(currentSlide, nextSlide) {
+        console.log("before change", currentSlide, nextSlide);
+      },
+      afterChange: function(currentSlide) {
+        console.log("after change", currentSlide);
+      }
+      
+    };
+     
+      return (
       <ContainerScroll>
+        
+        <Slider {...settings}>
         <DivElement>
-          {props.items.map((i) => (
-            <ElementScroll href={i.link}>{i.title}</ElementScroll>
-          ))}
-        </DivElement>
-      </ContainerScroll>
-    </>
-  );
-}
+            <ElementScroll>Home</ElementScroll>
+          </DivElement>
+          <DivElement>
+            <ElementScroll>Cases</ElementScroll>
+          </DivElement>
+          <DivElement>
+            <ElementScroll>Serviços</ElementScroll>
+          </DivElement>
+          <DivElement>
+            <ElementScroll>Contato</ElementScroll>
+          </DivElement>
 
-export default Scroll;
+          <DivElement>
+            <ElementScroll>Home</ElementScroll>
+          </DivElement>
+          <DivElement>
+            <ElementScroll>Cases</ElementScroll>
+          </DivElement>
+          <DivElement>
+            <ElementScroll>Serviços</ElementScroll>
+          </DivElement>
+          <DivElement>
+            <ElementScroll>Contato</ElementScroll>
+          </DivElement>
+        </Slider>
+      </ContainerScroll>
+    );
+  }
+}

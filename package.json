@@ -12,12 +12,14 @@
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-slick": "^0.28.1",
     "sass": "^1.49.9",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@types/node": "17.0.21",
     "@types/react": "17.0.39",
+    "@types/react-slick": "^0.23.8",
     "@types/styled-components": "^5.1.9",
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
