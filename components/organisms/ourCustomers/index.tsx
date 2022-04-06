@@ -9,9 +9,10 @@ import {
   BlackLineStyled,
   PurpleLineStyled,
   SignContainerStyled,
+  AsideStyled,
+  ParagraphStyled,
+  CustomersContainer
 } from './styled';
-
-import { AsideStyled, ParagraphStyled } from '../footer/styled';
 
 import Image from 'next/image';
 
@@ -30,7 +31,6 @@ import Spinner from '../../../assets/images/OurCustomers/enfeite-giratorio.svg';
 
 import CustomersList from '../../molecules/CustomersList/index';
 import React from 'react';
-import { sign } from 'crypto';
 
 const OurCustomers = () => {
   const customers = [
@@ -46,56 +46,56 @@ const OurCustomers = () => {
     { alt: 'Fundacred Logo', src: FundacredLogo },
   ];
 
+  const lines = [
+    {
+      element: "blackLine",
+      halfWindow: 0.8,
+      secondaryElement: "spinner",
+    },
+
+    {
+      element: "purpleLine",
+      halfWindow: 0.9,
+      secondaryElement: "sign",
+    }
+  ]
 
   React.useEffect(()=> {
     window.addEventListener("scroll", handleScroll);
   });
  
-  const handleScroll = (event) => {
-    console.log(event);
-    const blackLine = document.querySelector(".blackLine") as HTMLElement;
-    const purpleLine = document.querySelector(".purpleLine") as HTMLElement;
-    const spinner = document.querySelector(".spinner") as HTMLElement;
-    const sign = document.querySelector(".sign") as HTMLElement;
+  const handleScroll = () => {
 
-    const halfWindow = window.innerHeight * 0.8;
-    const halfWindowPurple = window.innerHeight * 0.9;
+    lines.forEach(lineObj => {
+      const line = document.querySelector(`.${lineObj.element}`) as HTMLElement;
+      const secondaryElement = document.querySelector(`.${lineObj.secondaryElement}`) as HTMLElement;
+      const halfWindow = window.innerHeight * lineObj.halfWindow;
+      const lineTop = line.getBoundingClientRect().top;
+      const inclination = (halfWindow - lineTop)/10;
+      const internalPadding = (halfWindow - lineTop);
+      const isVisible = (lineTop - halfWindow) < 0;
+      let secondaryElementTop;
 
-    const blackLineTop = blackLine.getBoundingClientRect().top
-    const purpleLineTop = purpleLine.getBoundingClientRect().top
-
-    const isBlackVisible = (blackLineTop - halfWindow) < 0;
-    const isPurpleVisible = (purpleLineTop - halfWindowPurple) < 0;
-
-    const inclinationBlack = (halfWindow - blackLineTop)/10
-    const internalPaddingBlack = (halfWindow - blackLineTop);
-    const spinnerMargin = (inclinationBlack * 11) - (spinner.offsetHeight/2) + 300;
-
-    const inclinationPurple = (halfWindow - purpleLineTop)/10
-    const internalPaddingPurple = (halfWindow - purpleLineTop);
-
-
-    if(isBlackVisible && inclinationBlack <= 60 && internalPaddingBlack <= 576){
-
-      if(inclinationBlack >= 0){
-        spinner.style.top = `${spinnerMargin}px`;
+      if(lineObj.secondaryElement === "spinner"){
+        secondaryElementTop = (inclination * 11) - (secondaryElement.offsetHeight/2) + 300;
+      }else if(lineObj.secondaryElement === "sign"){
+        secondaryElementTop = inclination * 2;
       }
-      
-      blackLine.style.clipPath = `polygon(0 0, 100% ${inclinationBlack}%, 100% 100%, 0% 100%)`;
-      blackLine.style.paddingTop = `${internalPaddingBlack}px`;      
-    }
 
-    if(isPurpleVisible && inclinationPurple <= 60 && internalPaddingPurple <= 376){
+      if(isVisible && inclination <= 60 && internalPadding <= 576){
+        if(inclination >= 0){
+          secondaryElement.style.top = `${secondaryElementTop}px`;
 
-      if(inclinationPurple >= 0){
-        sign.style.transform = `rotate(${inclinationPurple/7}deg)`;
-        sign.style.top = `${inclinationPurple * 2}px`;
+          if(lineObj.secondaryElement === "sign"){
+            secondaryElement.style.transform = `rotate(${inclination/7}deg)`;
+          }
+
+        }
+
+        line.style.clipPath = `polygon(0 0, 100% ${inclination}%, 100% 100%, 0% 100%)`;
+        line.style.paddingTop = `${internalPadding}px`;     
       }
-      
-      purpleLine.style.clipPath = `polygon(0 0, 100% ${inclinationPurple}%, 100% 100%, 0% 100%)`;
-      purpleLine.style.paddingTop = `${internalPaddingPurple}px`;      
-    }
-
+    });
   }
 
   return (
@@ -105,9 +105,6 @@ const OurCustomers = () => {
       </SpinningIconStyled>
       <BlackLineStyled className='blackLine'>
         <ContentStyled>
-          <AsideStyled>
-            <ParagraphStyled>&lt;30+CLIENTES&gt;</ParagraphStyled>
-          </AsideStyled>
           <HeaderStyled>
             <TitleStyled>ALGUNS DE NOSSOS CLIENTES</TitleStyled>
             <SubtitleStyled>
@@ -115,9 +112,15 @@ const OurCustomers = () => {
               de inovação.
             </SubtitleStyled>
           </HeaderStyled>
+          <AsideStyled>
+            <ParagraphStyled>&lt;30+ CLIENTES&gt;</ParagraphStyled>
+          </AsideStyled>
+          
         </ContentStyled>
 
-        <CustomersList customers={customers} />
+        <CustomersContainer>
+          <CustomersList customers={customers}/>
+        </CustomersContainer>
 
           
       </BlackLineStyled>
