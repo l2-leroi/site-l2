@@ -27,8 +27,7 @@ export interface Props {
 
 const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
   return (
-    <div style={{ display: openMenu ? 'block' : 'none' }}>
-      <div>
+    <Teste style={{ display: openMenu ? 'block' : 'none' }}>
       <Container>
         <DivLogo>
           <Image src={logo} alt="L2" />
@@ -63,8 +62,7 @@ const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
           </DivContact>
         </DivMenu>
       </Container>
-      </div>
-    </div>
+    </Teste>
   );
 };
 

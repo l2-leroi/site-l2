@@ -1,9 +1,12 @@
 import styled from 'styled-components';
-export const Teste = styled.section``;
-export const Container = styled.section`
+export const Teste = styled.section`
+height:100% ;
+`;
+export const Container = styled.div`
   background: #171b21;
   display: flex;
   justify-content: space-between;
+height: 100vh;
 `;
 export const DivLogo = styled.div`
   padding-left: 28px;

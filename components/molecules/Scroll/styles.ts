@@ -1,17 +1,15 @@
 import styled from 'styled-components';
 
 export const ContainerScroll = styled.div`
-overflow:hidden ;
-width: 100%;
+  overflow: hidden;
+  width: 100%;
 `;
 
-export const ElementScroll = styled.a`
-
-`;
+export const ElementScroll = styled.a``;
 
 export const DivElement = styled.div`
-margin-bottom: 56px;
-height: 80px;
+  padding-bottom: 4vw;
+  height: 80px;
   margin-bottom: 56px;
   font-family: 'Neue Machina';
   font-weight: 800;
@@ -22,4 +20,8 @@ height: 80px;
   color: #f2f3f4;
   width: 110%;
   text-decoration: none;
+
+  .home{
+    color:#20BD9D;
+  }
 `;

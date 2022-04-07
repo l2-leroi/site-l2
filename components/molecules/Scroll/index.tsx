@@ -1,10 +1,19 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
-import { ContainerScroll, DivElement, ElementScroll } from "./styles";
+import React, { Component } from 'react';
+import Slider from 'react-slick';
+import { ContainerScroll, DivElement, ElementScroll } from './styles';
 
+/*beforeChange: function(currentSlide, nextSlide) {
+  console.log("before change", currentSlide, nextSlide);
+},
+afterChange: function(currentSlide) {
+  console.log("after change", currentSlide);
+}*/
+
+function createMarkup() {
+  return { __html: '&lt; Home &gt;' };
+}
 
 export default class VerticalSwipeToSlide extends Component {
-  
   render() {
     const settings = {
       dots: false,
@@ -14,21 +23,14 @@ export default class VerticalSwipeToSlide extends Component {
       vertical: true,
       verticalSwiping: true,
       swipeToSlide: true,
-      beforeChange: function(currentSlide, nextSlide) {
-        console.log("before change", currentSlide, nextSlide);
-      },
-      afterChange: function(currentSlide) {
-        console.log("after change", currentSlide);
-      }
-      
+      arrows:false,
     };
-     
-      return (
+
+    return (
       <ContainerScroll>
-        
         <Slider {...settings}>
-        <DivElement>
-            <ElementScroll>Home</ElementScroll>
+          <DivElement>
+            <ElementScroll className="home">&lt; Home &gt;</ElementScroll>
           </DivElement>
           <DivElement>
             <ElementScroll>Cases</ElementScroll>
@@ -41,7 +43,7 @@ export default class VerticalSwipeToSlide extends Component {
           </DivElement>
 
           <DivElement>
-            <ElementScroll>Home</ElementScroll>
+            <ElementScroll className="home">&lt; Home &gt;</ElementScroll>
           </DivElement>
           <DivElement>
             <ElementScroll>Cases</ElementScroll>
