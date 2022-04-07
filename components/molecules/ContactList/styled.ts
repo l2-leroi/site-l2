@@ -15,16 +15,20 @@ export const ItemStyled = styled.li`
 export const TitleStyled = styled.h3`
   font-family: 'Circular Air Pro', sans-serif;
   font-size: 2.4rem;
-  line-height: 33.6px;
+  line-height: 3.36rem;
   font-weight: 400;
   letter-spacing: -0.04em;
-  margin-bottom: 1.4rem;
+  margin-bottom: 19px;
+
+  @media (max-width: 800px) {
+    margin-bottom: 16px;
+  }
 `;
 
 export const ContactStyled = styled.a`
   font-family: 'Neue Machina', sans-serif;
   font-size: 4rem;
-  line-height: 48px;
+  line-height: 4.8rem;
   letter-spacing: -0.02em;
   font-weight: 800;
 `;
