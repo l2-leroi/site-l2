@@ -25,13 +25,22 @@ export interface Props {
   closeMenu: (value: boolean) => void;
 }
 
+function createMarkup() {
+  return { __html: '&lt; eeee &gt;' };
+}
+
 const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
   const elements = [
-    { title: "Home", link: "" },
+    { title: "Home", link: "https://www.google.com.br/" },
     { title: "Cases", link: "" },
     { title: "Serviços", link: "" },
     { title: "Contato", link: "" },
   ];
+
+  if (elements[0].link == 'https://www.google.com.br/'){
+    elements[0].title = '< Home >'
+  }
+  console.log()
   return (
     <Teste style={{ display: openMenu ? 'block' : 'none' }}>
       <Container>

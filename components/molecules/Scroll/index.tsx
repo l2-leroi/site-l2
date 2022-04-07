@@ -18,9 +18,6 @@ interface ItemsProps {
   elements: Item[];
 }
 
-function createMarkup() {
-  return { __html: '&lt; Home &gt;' };
-}
 
 function Scroll(props: ItemsProps) {
   const settings = {
@@ -35,7 +32,6 @@ function Scroll(props: ItemsProps) {
     speed: 400,
   };
 
-
   return (
     <ContainerScroll>
       <Slider {...settings}>
@@ -45,7 +41,7 @@ function Scroll(props: ItemsProps) {
           </DivElement>
         ))}
 
-{props.elements.map((e) => (
+        {props.elements.map((e) => (
           <DivElement>
             <ElementScroll href={e.link}>{e.title}</ElementScroll>
           </DivElement>

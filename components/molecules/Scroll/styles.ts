@@ -20,7 +20,4 @@ export const ElementScroll = styled.a`
 
 export const DivElement = styled.div`
   padding-bottom: 5vw;
-  .home {
-    color: #20bd9d;
-  }
 `;
