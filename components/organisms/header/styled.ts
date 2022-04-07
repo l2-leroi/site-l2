@@ -97,7 +97,7 @@ export const FooterContentStyled = styled.div`
     position: relative;
     align-self: flex-end;
     box-sizing: border-box;
-    padding 56px 0px 28px 0px ;
+    padding 28px 0px;
 `;
 
 export const SocialMediaStyled = styled.ul`
