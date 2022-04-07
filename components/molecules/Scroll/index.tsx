@@ -37,13 +37,13 @@ function Scroll(props: ItemsProps) {
       <Slider {...settings}>
         {props.elements.map((e) => (
           <DivElement>
-            <ElementScroll href={e.link}>{e.title}</ElementScroll>
+            <ElementScroll>{e.title}</ElementScroll>
           </DivElement>
         ))}
 
         {props.elements.map((e) => (
           <DivElement>
-            <ElementScroll href={e.link}>{e.title}</ElementScroll>
+            <ElementScroll>{e.title}</ElementScroll>
           </DivElement>
         ))}
       </Slider>

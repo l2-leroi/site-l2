@@ -10,8 +10,8 @@ export const ContainerScroll = styled.div`
 export const ElementScroll = styled.a`
   font-family: 'Neue Machina';
   font-weight: 800;
-  font-size: 7vw;
-  line-height: 100px;
+  font-size: 5vw;
+  line-height: 110px;
   letter-spacing: -0.06em;
   color: #f2f3f4;
   width: 110%;

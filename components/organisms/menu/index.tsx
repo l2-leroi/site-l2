@@ -37,6 +37,7 @@ const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
     { title: "Contato", link: "" },
   ];
 
+  
   if (elements[0].link == 'https://www.google.com.br/'){
     elements[0].title = '< Home >'
   }

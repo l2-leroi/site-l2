@@ -24,4 +24,19 @@ export const NavButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+`;
+export const DivText = styled.div``;
+
+export const TextMenu = styled.p`
+  font-family: 'Circular Air Pro';
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #171b21;
+  padding-left: 8px;
 `;

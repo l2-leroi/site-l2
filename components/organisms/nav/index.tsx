@@ -1,4 +1,4 @@
-import { NavStyled, NavContent, NavItem, NavButton } from './styles';
+import { NavStyled, NavContent, NavItem, NavButton, DivText,TextMenu } from './styles';
 import Image from 'next/image';
 import L2Logo from '../../../assets/images/logoNav.svg';
 import MenuIcon from '../../../assets/images/Menu-Icon.svg';
@@ -19,6 +19,10 @@ export default function Nav() {
           <NavItem>
             <NavButton onClick={() => setClick(true)}>
               <Image src={MenuIcon} alt="L2 Code" />
+              <DivText>
+              <TextMenu>ME</TextMenu>
+              <TextMenu>NU</TextMenu>
+            </DivText>
             </NavButton>
           </NavItem>
         </NavContent>
