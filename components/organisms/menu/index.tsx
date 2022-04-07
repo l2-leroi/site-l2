@@ -26,6 +26,12 @@ export interface Props {
 }
 
 const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
+  const elements = [
+    { title: "Home", link: "" },
+    { title: "Cases", link: "" },
+    { title: "Serviços", link: "" },
+    { title: "Contato", link: "" },
+  ];
   return (
     <Teste style={{ display: openMenu ? 'block' : 'none' }}>
       <Container>
@@ -39,7 +45,7 @@ const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
           </DivContact>
         </DivLogo>
 
-        <Scroll />
+        <Scroll elements={elements}/>
 
         <DivMenu>
           <DivTextMenu>
