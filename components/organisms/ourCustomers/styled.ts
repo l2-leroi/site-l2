@@ -46,8 +46,7 @@ export const HeaderStyled = styled.hgroup`
 export const TitleStyled = styled.h2`
   font-family: 'Neue Machina', sans-serif;
   font-style: normal;
-  font-size: 64px;
-  //4em
+  font-size: 6.4rem;
   line-height: 90%;
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -55,8 +54,7 @@ export const TitleStyled = styled.h2`
   
   @media(max-width: 800px){
     max-width: 264px;
-    font-size: 32px;
-    //2em
+    font-size: 3.2rem;
     margin-bottom: 16px;
   }
 `;
@@ -66,14 +64,12 @@ export const SubtitleStyled = styled.h3`
   max-width: 464px;
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  //1.5em
+  font-size: 2.4rem;
   line-height: 140%;
   letter-spacing: -0.04em;
 
   @media(max-width: 760px){
-    font-size: 12px;
-    //0.75em
+    font-size: 1.2rem;
     line-height: 140%;
     max-width: 160px;
   }
@@ -86,24 +82,20 @@ export const AsideStyled = styled.aside`
 
 export const ParagraphStyled = styled.p`
   font-family: 'Circular Air Pro', sans-serif;
-  font-size: 16px;
   font-family: 'Circular Air Pro';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  //1em
+  font-size: 1.6rem;
   line-height: 140%;
   letter-spacing: -0.02em;
   
   @media(max-width: 800px){
-    font-size: 12px;
-    //0.75em
+    font-size: 1.2rem;
     max-width: 61px;
   }
 
   @media(max-width: 414px){
-    font-size: 10px;
-    //0.625em
+    font-size: 1rem;
     max-width: 61px;
   }
 `;
@@ -143,8 +135,7 @@ export const SignStyled = styled.span`
   margin-top: -20px
 
   @media(max-width: 800px){
-    font-size: 20px;
-    //1.25em
+    font-size: 2rem;
     line-height: 120%;
   }
 `;
