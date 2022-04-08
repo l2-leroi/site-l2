@@ -14,36 +14,22 @@ import {
   CustomersContainer
 } from './styled';
 
-import Image from 'next/image';
-
-import ToParadoLogo from '../../../assets/images/OurCustomers/to-parado-logo.svg';
-import PhiLogo from '../../../assets/images/OurCustomers/phi-logo.svg';
-import BancoRCILogo from '../../../assets/images/OurCustomers/banco-rci-logo.svg';
-import SescLogo from '../../../assets/images/OurCustomers/sesc-logo.svg';
-import TalentDreamsLogo from '../../../assets/images/OurCustomers/talent-dreams-logo.svg';
-import AnotaAiLogo from '../../../assets/images/OurCustomers/anotai-logo.svg';
-import MemoriesUpLogo from '../../../assets/images/OurCustomers/memories-up-logo.svg';
-import NoVerdeLogo from '../../../assets/images/OurCustomers/no-verde-logo.svg';
-import DigitalBusinessLogo from '../../../assets/images/OurCustomers/digital-business-logo.svg';
-import FundacredLogo from '../../../assets/images/OurCustomers/fundacred-logo.svg';
-
-import Spinner from '../../../assets/images/OurCustomers/enfeite-giratorio.svg';
-
 import CustomersList from '../../molecules/CustomersList/index';
+import Spinner from '../../molecules/Spinner/index';
 import React from 'react';
 
 const OurCustomers = () => {
   const customers = [
-    { alt: 'Tô Parado Logo', src: ToParadoLogo },
-    { alt: 'Phi Logo', src: PhiLogo },
-    { alt: 'Banco RCI Brasil Logo', src: BancoRCILogo },
-    { alt: 'Sesc Logo', src: SescLogo },
-    { alt: 'Talent Dreams Logo', src: TalentDreamsLogo },
-    { alt: 'Anota Aí Logo', src: AnotaAiLogo },
-    { alt: 'Memories Up Logo', src: MemoriesUpLogo },
-    { alt: 'No Verde Logo', src: NoVerdeLogo },
-    { alt: 'Digital Business Logo', src: DigitalBusinessLogo },
-    { alt: 'Fundacred Logo', src: FundacredLogo },
+    { alt: 'Tô Parado Logo', src: "./images/to-parado-logo.svg" },
+    { alt: 'Phi Logo', src: './images/phi-logo.svg' },
+    { alt: 'Banco RCI Brasil Logo', src: './images/banco-rci-logo.svg' },
+    { alt: 'Sesc Logo', src: './images/sesc-logo.svg' },
+    { alt: 'Talent Dreams Logo', src: './images/talent-dreams-logo.svg' },
+    { alt: 'Anota Aí Logo', src: './images/anotai-logo.svg' },
+    { alt: 'Memories Up Logo', src: './images/memories-up-logo.svg' },
+    { alt: 'No Verde Logo', src: './images/no-verde-logo.svg' },
+    { alt: 'Digital Business Logo', src: './images/digital-business-logo.svg' },
+    { alt: 'Fundacred Logo', src: './images/fundacred-logo.svg' },
   ];
 
   const lines = [
@@ -100,8 +86,9 @@ const OurCustomers = () => {
 
   return (
     <OurCustomersStyled>
+      
       <SpinningIconStyled className='spinner'>
-        <Image src={Spinner} alt="L2 Code" />
+        <Spinner spinnerPosition={{top: "0px", left: "0px", bottom: "0px", right: "0px"}} />
       </SpinningIconStyled>
       <BlackLineStyled className='blackLine'>
         <ContentStyled>
