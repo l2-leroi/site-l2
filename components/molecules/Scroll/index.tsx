@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import Slider from 'react-slick';
 import { ContainerScroll, DivElement, ElementScroll } from './styles';
 
-/*beforeChange: function(currentSlide, nextSlide) {
-  console.log("before change", currentSlide, nextSlide);
-},
-afterChange: function(currentSlide) {
-  console.log("after change", currentSlide);
-}*/
 
 interface Item {
   title: string;
@@ -20,20 +14,38 @@ interface ItemsProps {
 
 
 function Scroll(props: ItemsProps) {
+
+
+  
+  React.useEffect(()=> {
+    window.addEventListener("scroll", handleScroll);
+  });
+ 
+  const handleScroll = () => {
+  }
+
   const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    vertical: true,
     verticalSwiping: true,
     swipeToSlide: true,
-    arrows: true,
+    arrows: false,
+    vertical: true,
     speed: 400,
+     beforeChange: function(currentSlide, nextSlide) {
+      console.log("before change", currentSlide, nextSlide);
+    },
+    afterChange: function(currentSlide) {
+      console.log("after change", currentSlide);
+    }
   };
 
+
+
   return (
-    <ContainerScroll>
+    <ContainerScroll onChange={handleScroll => this.slider.slickPrev()}>
       <Slider {...settings}>
         {props.elements.map((e) => (
           <DivElement>

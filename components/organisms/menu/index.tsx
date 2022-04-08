@@ -29,6 +29,8 @@ function createMarkup() {
   return { __html: '&lt; eeee &gt;' };
 }
 
+
+
 const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
   const elements = [
     { title: "Home", link: "https://www.google.com.br/" },
@@ -37,6 +39,9 @@ const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
     { title: "Contato", link: "" },
   ];
 
+  const mystyle = {
+    color: "#20BD9D"
+  };
   
   if (elements[0].link == 'https://www.google.com.br/'){
     elements[0].title = '< Home >'

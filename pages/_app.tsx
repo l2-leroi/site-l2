@@ -9,6 +9,7 @@ import Nav from '../components/organisms/nav';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+    <GlobalStyle/>
       <Nav/>
     </>
   );

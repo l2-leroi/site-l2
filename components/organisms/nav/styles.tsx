@@ -8,6 +8,7 @@ export const NavContent = styled.ul`
   margin: 0;
   display: flex;
   justify-content: space-between;
+
 `;
 
 export const NavItem = styled.li`
@@ -18,6 +19,16 @@ export const NavItem = styled.li`
   letter-spacing: -0.02em;
   font-weight: 700;
   color: ${colors.black};
+  @media (max-width: 500px) {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  
+  img{
+    @media (max-width: 500px) {
+      width:43px !important;
+  }
+  }
 `;
 
 export const NavButton = styled.button`
@@ -26,6 +37,11 @@ export const NavButton = styled.button`
   cursor: pointer;
   display: flex;
   align-items: center;
+  img{
+    @media (max-width: 500px) {
+      width:20px !important;
+  }
+  }
 `;
 export const DivText = styled.div``;
 
@@ -39,4 +55,7 @@ export const TextMenu = styled.p`
   letter-spacing: -0.02em;
   color: #171b21;
   padding-left: 8px;
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;

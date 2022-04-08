@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 export const ContainerScroll = styled.div`
   overflow: hidden;
-  width: 100%;
-  
+  width: 28%; 
   text-align: center;
 `;
 
@@ -14,7 +13,7 @@ export const ElementScroll = styled.a`
   line-height: 110px;
   letter-spacing: -0.06em;
   color: #f2f3f4;
-  width: 110%;
+  width: 100%;
   text-decoration: none;
 `;
 
