@@ -67,3 +67,6 @@ export const ContentStyled = styled.li`
   }
 `;
 
+export const ImageStyled = styled.img`
+
+`;

@@ -1,4 +1,4 @@
-import { ContentStyled, ListStyled } from './styled';
+import { ContentStyled, ListStyled, ImageStyled } from './styled';
 import Image from 'next/image';
 
 interface Customer {
@@ -17,10 +17,9 @@ function CustomersList(props: CustomerProps) {
       {
         props.customers.map((customer) => (
             <ContentStyled key={customer.alt}>
-                <Image src={customer.src} alt={customer.alt} />
+                <ImageStyled src={customer.src} alt={customer.alt} />
             </ContentStyled>
-        ))
-        
+        )) 
       }
       </ListStyled>
     </>
