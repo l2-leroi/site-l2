@@ -5,7 +5,7 @@ export const FooterStyled = styled.footer`
   color: ${colors.gray};
   background-color: ${colors.purple};
   clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
-  height: 1156px; 
+  height: 1156px;
   width: 100%;
   padding: 36.05rem 2.8rem 6.05rem;
 `;
@@ -54,7 +54,7 @@ export const InfoStyled = styled.section`
   &:first-child {
     text-align: start;
   }
-  
+
   &:last-child {
     text-align: end;
   }
@@ -64,6 +64,8 @@ export const LinkStyled = styled.a``;
 
 export const PhraseStyled = styled.p`
   &:first-child {
-    margin-bottom: .9rem;
+    margin-bottom: 0.9rem;
   }
 `;
+
+export const ImageStyled = styled.img``;
