@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { HeartIcon } from '../../../assets/icons/heartIcon';
 import { colors } from '../../../styles/colors';
 
 export const FooterStyled = styled.footer`
@@ -8,6 +7,18 @@ export const FooterStyled = styled.footer`
   clip-path: polygon(0 0, 100% 41.6%, 100% 100%, 0% 100%);
   width: 100%;
   padding: 35.5rem 2.8rem 6.05rem;
+
+  @media (min-width: 2560px) {
+    clip-path: polygon(0 0, 100% 57%, 100% 100%, 0% 100%);
+  }
+
+  @media (min-width: 1920px) {
+    clip-path: polygon(0 0, 100% 49%, 100% 100%, 0% 100%);
+  }
+
+  @media (max-width: 800px) {
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+  }
 `;
 
 export const ContainerStyled = styled.div`
@@ -37,7 +48,7 @@ export const AsideStyled = styled.aside`
     margin-left: 70px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 376px) {
     margin-left: 39px;
   }
 `;
@@ -86,12 +97,30 @@ export const InfoStyled = styled.div`
     }
   }
   
-  &:last-child {
+  &.align-end {
     text-align: end;
     width: 339px;
 
     @media (max-width: 800px) {
       width: 160px;
+    }
+  }
+
+  &.mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 800px) {
+    &.desktop {
+      display: none;
+    }
+  }
+
+  @media (min-width: 801px) {
+    &.mobile {
+      display: none;
     }
   }
 `;
@@ -102,7 +131,7 @@ export const ImageStyled = styled.img`
   @media (max-width: 800px) {
     width: 58px;
     height: 20px;
-    margin-top: 118px;
+    margin-top: 80px;
   }
 `;
 

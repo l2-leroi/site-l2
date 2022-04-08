@@ -43,17 +43,23 @@ const Footer = () => {
             <PhraseStyled>Somos uma empresa que trabalha 100% remoto</PhraseStyled>
           </InfoStyled>
 
-          <InfoStyled>
+          <InfoStyled className="desktop">
             <LinkStyled href="/">
               <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
             </LinkStyled>
           </InfoStyled>
 
-          <InfoStyled>
+          <InfoStyled className="align-end">
             <PhraseStyled>Feito com <IconStyled> <HeartIcon/> </IconStyled> L2code</PhraseStyled>
             <PhraseStyled>Copyright © Todos os direitos reservados</PhraseStyled>
           </InfoStyled>
         </CopyrightStyled>
+
+        <InfoStyled className="mobile">
+            <LinkStyled href="/">
+              <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
+            </LinkStyled>
+          </InfoStyled>
       </ContainerStyled>
     </FooterStyled>
   );
