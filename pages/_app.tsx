@@ -5,7 +5,6 @@ import OurServicesOnePage from '../components/organisms/ourServicesOnePage';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    
     <>
 
       <OurServicesOnePage/>

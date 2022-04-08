@@ -17,16 +17,18 @@ export default function OurServices() {
       <DivOurServicesStyled>
         <HeadingStyled>NOSSOS SERVIÇOS</HeadingStyled>
         <ParagraphServicesStyled>
-          Melhoramos a experiência dos produtos e
-          serviços de nossos clientes, com foco em resultados para seus negócio.
+          Melhoramos a experiência dos produtos e serviços de nossos clientes,
+          com foco em resultados para seus negócio.
         </ParagraphServicesStyled>
 
         <DivButtonServicesStyled>
           <ButtonServicesStyled>NOSSOS SERVIÇOS</ButtonServicesStyled>
           <Image src={seta} alt="seta" />
         </DivButtonServicesStyled>
-        <OutSourcing />
+        
       </DivOurServicesStyled>
+        <OutSourcing />
     </SectionStyled>
+    
   );
 }
