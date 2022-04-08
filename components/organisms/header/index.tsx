@@ -9,7 +9,7 @@ import {
   TitleStyled,
   SubtitleStyled,
   TitleComplementStyled,
-  LanguageItemSyled,
+  LanguageItemStyled,
   SocialMediaTitleStyled,
   SocialMediaItemStyled,
   ImageStyled,
@@ -53,9 +53,9 @@ const Header = () => {
     const header = document.querySelector(".header");
     interval.current = setInterval(() => {
       const index = currentImage !== '' ? backgroundList.findIndex(
-              (background) => background.image === currentImage,
-            )
-          : 0;
+        (background) => background.image === currentImage,
+      )
+        : 0;
       if (index === backgroundList.length - 1) {
         currentImage = backgroundList[0].image;
         currentText = backgroundList[0].text;
@@ -84,15 +84,15 @@ const Header = () => {
   return (
     <HeaderStyled className='header'>
       {backgroundList.map((background) => (
-            <ImageStyled
-              key={background.image}
-              src={background.image}
-              alt={background.text}
-              className={
-                actualImage == background.image ? 'activeImage' : 'noneImage'
-              }
-            />
-          ))}
+        <ImageStyled
+          key={background.image}
+          src={background.image}
+          alt={background.text}
+          className={
+            actualImage == background.image ? 'activeImage' : 'noneImage'
+          }
+        />
+      ))}
 
       <MainContentStyled>
         <MainTextStyled>
@@ -107,7 +107,6 @@ const Header = () => {
           >
             {actualText}
           </TitleStyled>
-          
 
           <TitleComplementStyled>
             Criamos produtos digitais e experiências online que as pessoas
@@ -116,8 +115,8 @@ const Header = () => {
         </MainTextStyled>
 
         <LanguageStyled>
-          <LanguageItemSyled>PT</LanguageItemSyled>
-          <LanguageItemSyled>EN</LanguageItemSyled>
+          <LanguageItemStyled>PT</LanguageItemStyled>
+          <LanguageItemStyled>EN</LanguageItemStyled>
         </LanguageStyled>
       </MainContentStyled>
 
@@ -131,8 +130,22 @@ const Header = () => {
 
         <ArrowSpinnerContainerStyled>
           <ArrowSpinnerComponentStyled>
-            <ImageArrowSpinnerStyled src='./images/Arrow-Spinner.png' alt="Tem mais coisa aqui em baixo" className='absolute'/>
-            <ImageArrowSpinnerStyled src='./images/Arrow.png' alt="Seta" />
+            <ImageArrowSpinnerStyled
+              src={interval.current == null ?
+                './images/Arrow-Spinner.png' :
+                './images/Arrow-Spinner-White.png'
+              }
+              alt="Tem mais coisa aqui em baixo"
+              className='animate'
+            />
+            <ImageArrowSpinnerStyled
+              src={interval.current == null ?
+                './images/Arrow.png' :
+                './images/Arrow-White.png'
+              }
+              alt="Seta"
+              className='absolute'
+            />
           </ArrowSpinnerComponentStyled>
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>

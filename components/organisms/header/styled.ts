@@ -8,6 +8,9 @@ export const HeaderStyled = styled.header`
     flex-wrap: wrap;
     z-index: 50;
     position: relative;
+    padding: 0px 28px;
+    background-color: ${colors.strong_gray}; 
+    overflow: hidden;
 
     &.white{
         color: white;
@@ -17,7 +20,6 @@ export const HeaderStyled = styled.header`
 export const MainContentStyled = styled.div`
     width: 100%;
     display: flex;
-    padding: 0px 28px;
     box-sizing: border-box;
     align-self: center;
     z-index: 50;
@@ -41,6 +43,11 @@ export const TitleStyled = styled.h1`
     letter-spacing: -0.04em;
     margin: 0 auto;
     cursor: pointer;
+
+    @media (max-width: 800px) {
+        font-size: 64px;
+        margin: 16px 0;
+    }
     
 `;
 
@@ -49,12 +56,15 @@ export const SubtitleStyled = styled.h2`
     font-family: 'Neue Machina';
     font-style: normal;
     font-weight: 800;
-    font-size: 40px;
+    font-size: 4rem;
     line-height: 120%;
     text-align: center;
     letter-spacing: -0.02em;
     margin: 0 auto;
-    
+
+    @media (max-width: 800px) {
+        margin-top: 50px;
+    } 
 `;
 
 export const TitleComplementStyled = styled.h3`
@@ -62,13 +72,16 @@ export const TitleComplementStyled = styled.h3`
     font-family: 'Circular Air Pro';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 2.4rem;
     line-height: 140%;
     text-align: center;
     letter-spacing: -0.04em;
     max-width: 464px;
     margin: 0 auto;
-    
+
+    @media (max-width: 800px) {
+        width: 212px;
+    }  
 `;
 
 export const LanguageStyled = styled.ul`
@@ -78,9 +91,13 @@ export const LanguageStyled = styled.ul`
     position: absolute;
     right: 28px;
     
+    @media (max-width: 800px) {
+        top: 27px;
+        right: 24px;
+    }
 `;
 
-export const LanguageItemSyled = styled.li`
+export const LanguageItemStyled = styled.li`
     font-family: 'Circular Air Pro';
     font-style: normal;
     font-weight: 400;
@@ -88,16 +105,43 @@ export const LanguageItemSyled = styled.li`
     line-height: 140%;
     text-align: right;
     letter-spacing: -0.02em;
-    
+
+    @media (max-width: 800px) {
+        font-size: 10px;
+
+        &:first-child {
+            margin-bottom: 32px;
+        }
+    }  
 `;
 
 export const FooterContentStyled = styled.div`
     width: 100%;
     display: flex;
-    position: relative;
     align-self: flex-end;
     box-sizing: border-box;
-    padding 28px 0px;
+    margin-bottom: 34px;
+
+    @media (min-width: 2560px) {
+        margin-bottom: 123px;
+    }
+
+    @media (max-width: 800px) {
+        align-self: center;
+        margin-bottom: 80px;
+    }
+
+    @media (max-width: 416px) {
+        margin-bottom: 34px;
+    }
+
+    @media (max-width: 375px) {
+        margin-bottom: 80px;
+    }
+
+    @media (max-width: 361px) {
+        margin-bottom: 0px;
+    }
 `;
 
 export const SocialMediaStyled = styled.ul`
@@ -109,10 +153,9 @@ export const SocialMediaStyled = styled.ul`
     justify-content: center;
 `;
 
-export const SocialMediaTitleStyled = styled.li`
-    
+export const SocialMediaTitleStyled = styled.li`  
     margin-right: 120px;
-    margin-left: 24px;
+    margin-left: 1.2rem;
     position: relative;
     font-family: 'Circular Air Pro';
     font-style: normal;
@@ -121,6 +164,10 @@ export const SocialMediaTitleStyled = styled.li`
     line-height: 140%;
     letter-spacing: -0.02em;
 
+    @media (max-width: 800px) {
+        font-size: 10px;
+        margin-right: 57px;
+    }
 
     &:after {
         content: "";
@@ -129,19 +176,27 @@ export const SocialMediaTitleStyled = styled.li`
         background-color: ${colors.lightGray};
         position: absolute;
         top: 50%;
-        margin: 0px 24px;
+        margin: 0px 2.4rem;
 
+        @media (max-width: 800px) {
+            width: 39px;
+        }
     }
 `;
 
 export const SocialMediaItemStyled = styled.li`
-    margin: 0px 12px;
+    margin: 0px 1.2rem;
     font-family: 'Circular Air Pro';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 140%;
     letter-spacing: -0.02em;
+    z-index: 50;
+
+    @media (max-width: 800px) {
+        font-size: 10px;
+    }
 `;
 
 export const ArrowSpinnerContainerStyled = styled.div`
@@ -149,13 +204,24 @@ export const ArrowSpinnerContainerStyled = styled.div`
     justify-self: flex-end;
     position: absolute;
     right: 10%;
+    margin-top: 60px;
+
+    @media (max-width: 800px) {
+        right: 0;
+        bottom: -45px;
+        justify-self: center;
+        width: 100%;
+    }
+
+    @media (min-width: 2560px) {
+        right: 703px;
+    }
 `;
 
 export const ArrowSpinnerComponentStyled = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 `;
 
 export const SpinningAnimation = keyframes`
@@ -168,11 +234,26 @@ export const SpinningAnimation = keyframes`
 `;
 
 export const ImageArrowSpinnerStyled = styled.img`
-
     &.absolute {
         position: absolute;
-        animation: ${SpinningAnimation} 27s linear infinite;
+        margin: 0 auto;
+    }
 
+    &.animate {
+        animation: ${SpinningAnimation} 27s linear infinite;
+        
+    }
+
+    @media (max-width: 800px) {
+        &:first-child {
+            width: 113px;
+            height: 113px;
+        }
+
+        &:last-child {
+            width: 12px;
+            height: 12px;
+        }
     }
 `;
 
@@ -189,7 +270,5 @@ export const ImageStyled = styled.img`
 
     &.activeImage {
         display: block;
-    }
-    
+    }    
 `;
-
