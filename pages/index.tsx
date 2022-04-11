@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
+import Header from '../components/organisms/header'
 
 const Home: NextPage = () => {
   return (
-    <div>
-      L2 Code
-    </div>
+    <>
+      <Header />
+    </>
   )
 }
 

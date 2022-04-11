@@ -16,7 +16,6 @@ import {
 } from './styled';
 
 import { useRef, useState } from 'react';
-
 import ScrollCircle from '../../atoms/ScrollCircle/index';
 
 const Header = () => {

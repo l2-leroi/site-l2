@@ -204,7 +204,7 @@ export const ImageStyled = styled.img`
     position: absolute;
     z-index: 0;
     height: 100vh;
-    width: 100%;
+    width: auto;
 
     &.noneImage {
         display: none;
