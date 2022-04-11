@@ -9,7 +9,7 @@ export const SectionStyled = styled.section`
     padding-right: 15rem;
     padding-left: 2.8rem;
     padding-bottom: 60rem;
-    clip-path: polygon(0 0,100% 0,100% 100%,0 82%);
+    clip-path: polygon(0 0,100% 0,100% 100%,0 70%);
     margin-top: -0.1rem;
     align-items: center;
 `;
