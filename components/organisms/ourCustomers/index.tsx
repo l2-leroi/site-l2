@@ -15,7 +15,7 @@ import {
 } from './styled';
 
 import CustomersList from '../../molecules/CustomersList/index';
-import Spinner from '../../molecules/Spinner/index';
+import Spinner from '../../atoms/Spinner/index';
 import React from 'react';
 
 const OurCustomers = () => {
