@@ -199,6 +199,22 @@ export const SocialMediaItemStyled = styled.li`
     }
 `;
 
+export const ImageStyled = styled.img`
+    display: none;  
+    position: absolute;
+    z-index: 0;
+    height: 100vh;
+    width: 100%;
+
+    &.noneImage {
+        display: none;
+    }
+
+    &.activeImage {
+        display: block;
+    }    
+`;
+
 export const ArrowSpinnerContainerStyled = styled.div`
     align-self: center;
     justify-self: flex-end;
@@ -216,59 +232,4 @@ export const ArrowSpinnerContainerStyled = styled.div`
     @media (min-width: 2560px) {
         right: 703px;
     }
-`;
-
-export const ArrowSpinnerComponentStyled = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`;
-
-export const SpinningAnimation = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-`;
-
-export const ImageArrowSpinnerStyled = styled.img`
-    &.absolute {
-        position: absolute;
-        margin: 0 auto;
-    }
-
-    &.animate {
-        animation: ${SpinningAnimation} 27s linear infinite;
-        
-    }
-
-    @media (max-width: 800px) {
-        &:first-child {
-            width: 113px;
-            height: 113px;
-        }
-
-        &:last-child {
-            width: 12px;
-            height: 12px;
-        }
-    }
-`;
-
-export const ImageStyled = styled.img`
-    display: none;  
-    position: absolute;
-    z-index: 0;
-    height: 100vh;
-    width: 100%;
-
-    &.noneImage {
-        display: none;
-    }
-
-    &.activeImage {
-        display: block;
-    }    
 `;

@@ -13,11 +13,11 @@ import {
   SocialMediaTitleStyled,
   SocialMediaItemStyled,
   ImageStyled,
-  ArrowSpinnerComponentStyled,
-  ImageArrowSpinnerStyled,
 } from './styled';
 
 import { useRef, useState } from 'react';
+
+import ScrollCircle from '../../atoms/ScrollCircle/index';
 
 const Header = () => {
   const backgroundList = [
@@ -46,6 +46,7 @@ const Header = () => {
   const interval = useRef(null);
   let currentImage = '';
   const [actualImage, setActualImage] = useState('');
+  const [whiteCircle, setWhiteCircle] = useState(false);
   let currentText = '';
   const [actualText, setActualText] = useState('CODE');
 
@@ -69,12 +70,14 @@ const Header = () => {
         setActualText(backgroundList[index + 1].text);
       }
       header.classList.add("white");
+      setWhiteCircle(true);
     }, 150);
   };
 
   const exitInterval = (backgroundList) => {
     const header = document.querySelector(".header");
     header.classList.remove("white");
+    setWhiteCircle(false);
     clearInterval(interval.current);
     interval.current = null;
     setActualImage(backgroundList);
@@ -129,24 +132,7 @@ const Header = () => {
         </SocialMediaStyled>
 
         <ArrowSpinnerContainerStyled>
-          <ArrowSpinnerComponentStyled>
-            <ImageArrowSpinnerStyled
-              src={interval.current == null ?
-                './images/Arrow-Spinner.png' :
-                './images/Arrow-Spinner-White.png'
-              }
-              alt="Tem mais coisa aqui em baixo"
-              className='animate'
-            />
-            <ImageArrowSpinnerStyled
-              src={interval.current == null ?
-                './images/Arrow.png' :
-                './images/Arrow-White.png'
-              }
-              alt="Seta"
-              className='absolute'
-            />
-          </ArrowSpinnerComponentStyled>
+            <ScrollCircle image={whiteCircle}/>
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
     </HeaderStyled>
