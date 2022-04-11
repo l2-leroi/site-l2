@@ -19,9 +19,11 @@ interface CaseProps {
 }
 
 function CaseList(props: CaseProps) {
+  const interval = useRef(null);
+  var currentImage = '';
+  const [actualImage, setActualImage] = useState('');
 
   // anime scroll 
-
   useEffect(() => {
     const target = document.querySelectorAll<HTMLElement>('[data-anime]');
 
@@ -44,11 +46,6 @@ function CaseList(props: CaseProps) {
   }, [])
 
   // anime hover
-
-  const interval = useRef(null);
-  var currentImage = '';
-  const [actualImage, setActualImage] = useState('');
-
   const initInterval = (images: string[]) => {
     interval.current = setInterval(() => {
       const index = (currentImage != '') ? images.indexOf(currentImage) : 0;    
@@ -60,13 +57,13 @@ function CaseList(props: CaseProps) {
         currentImage = images[index+1];
         setActualImage(currentImage);
       }
-    }, 100)
+    }, 150)
   };
 
-  const cancelInterval = (images: string) => {
+  const cancelInterval = (image: string) => {
     clearInterval(interval.current);
     interval.current = null;
-    setActualImage(images);
+    setActualImage(image);
   };
 
   return (
@@ -79,7 +76,7 @@ function CaseList(props: CaseProps) {
               <TitleStyled>{itemCase.title}</TitleStyled>
               <InfoStyled>{itemCase.info}</InfoStyled>
               <LinkStyled
-                onMouseEnter={() => {        
+                onMouseEnter={() => {     
                   initInterval(itemCase.hover);              
                 }}
                 onMouseLeave={() => {

@@ -11,11 +11,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <GlobalStyle />
       <Header />
+      <OurServicesOnePage/>
       <Cases />
       <Component {...pageProps} />
-      <Footer />
-
-      <OurServicesOnePage/>
+      {/* <Footer /> */}
     </>
   );
 }

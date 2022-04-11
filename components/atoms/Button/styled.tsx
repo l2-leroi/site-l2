@@ -30,6 +30,11 @@ export const ButtonStyled = styled.div<ButtonProps>`
 
   &:first-child {
     width: auto;
-    padding: .8rem 1.6rem;
+    padding: 0px 16px;
+  }
+
+  @media (max-width: 800px) {
+    width: 32px;
+    height: 32px;
   }
 `;

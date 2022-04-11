@@ -1,4 +1,4 @@
-import { AsideStyled, ContainerStyled, ContentStyled, ParagraphStyled, PhraseStyled, Teste, TitleStyled } from "./styled";
+import { AsideStyled, ContainerStyled, ContentStyled, DivStyled, ParagraphStyled, PhraseStyled, TitleStyled } from "./styled";
 import CaseList from "../../molecules/CaseList";
 import React from "react";
 
@@ -55,10 +55,12 @@ const Cases = () => {
   return (
     <ContainerStyled>
       <ContentStyled>
-        <AsideStyled>
-          <ParagraphStyled>&lt;LA CREAM&gt;</ParagraphStyled>
-        </AsideStyled>
-        <TitleStyled>NOSSOS CASES SELECIONADOS</TitleStyled>
+        <DivStyled>
+          <TitleStyled>NOSSOS CASES SELECIONADOS</TitleStyled>
+          <AsideStyled>
+            <ParagraphStyled>&lt;LA CREAM&gt;</ParagraphStyled>
+          </AsideStyled>
+        </DivStyled>
         <PhraseStyled>Fazemos muito bem porque nos preocupamos com qualidade, estética e, acima de tudo, com resultados.</PhraseStyled>
         <CaseList cases={cases} linkBtn="#4" />
       </ContentStyled>
