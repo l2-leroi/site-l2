@@ -11,7 +11,8 @@ import RegistrationDate from '../../atoms/registrations-date';
 interface Date{
     title: string;
     date: string;
-    expireDate: boolean
+    expireDate: boolean;
+    id: number;
 }
 
 interface Props{
@@ -26,7 +27,7 @@ const RegistrationDiv = ({dates,applyButton} : Props) =>{
                 {
                     dates.map((d) => (
                         <DateStyled>
-                        <RegistrationDate title={d.title} date={d.date} expireDate={d.expireDate} />
+                        <RegistrationDate key={d.id} title={d.title} date={d.date} expireDate={d.expireDate} />
                         </DateStyled>
                     ))
                 }
