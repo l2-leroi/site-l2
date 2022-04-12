@@ -4,6 +4,7 @@ import { colors } from '../../../styles/colors';
 export const ContentStyled = styled.section`
   display: flex;
   flex-direction: column;  
+  overflow: hidden;
 `;
 
 export const ListStyled = styled.section`
@@ -11,7 +12,7 @@ export const ListStyled = styled.section`
 `;
 
 export const CaseStyled = styled.article`
-  width: 464px;
+  width: 100%;
   height: 1008px;
   opacity: 0;
   transition: .8s;
@@ -28,23 +29,47 @@ export const CaseStyled = styled.article`
   &.animate {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  
+  @media (max-width: 1350px) {
+    height: 850px;
+  }
+  
+  @media (max-width: 1155px) {
+    height: 800px;
+  }
+
+  @media (max-width: 800px) {
+    height: 546px;
+  }
+
+  @media (max-width: 600px) {
+    height: 420px;
+  }
+
+  @media (max-width: 408px) {
+    height: 265px;
   }
 `;
 
 export const CaseNumberStyled = styled.h3`
   font-family: 'Circular Air Pro', sans-serif;
   weight: 400;
-  font-size: 1.6rem;
+  font-size: 16px;
   line-height: 22.4px;
-  padding-bottom: 3.2rem;
+  padding: 0 0 3.2rem 10px;
   border-bottom: 1px solid ${colors.dark_gray};
+
+  @media (max-width: 800px) {
+    font-size: 10px;
+    line-height: 14px;
+  }
 `;
 
 export const TitleStyled = styled.h4`
   font-family: 'Neue Machina', sans-serif;
   weight: 800;
   font-size: 4rem;
-  line-height: 48px;
+  line-height: 4.8rem;
   padding: 4.4rem 0 2.8rem 0;
 `;
 
@@ -52,9 +77,13 @@ export const InfoStyled = styled.p`
   font-family: 'Circular Air Pro', sans-serif;
   weight: 400;
   font-size: 2.4rem;
-  line-height: 33.6px;
+  line-height: 3.36rem;
   padding-bottom: 3.2rem;
   width: 345px;
+
+  @media (max-width: 800px) {
+    width: 175px;
+  }
 `;
 
 export const LinkStyled = styled.a`
@@ -62,6 +91,8 @@ export const LinkStyled = styled.a`
 `;
 
 export const ImageStyled = styled.img`
+  width: 100%;
+  height: auto;
   border-radius: 8px;
   position: absolute;
   
@@ -75,5 +106,9 @@ export const ImageStyled = styled.img`
 `;
 
 export const ButtonContentStyled = styled.section`
-  margin: 8rem 4rem 0 0;
+  margin: 80px 40px 0 0;
+
+  @media (max-width: 800px) {
+    margin-top: 28px;
+  }
 `;

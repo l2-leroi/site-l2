@@ -14,7 +14,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Nav/>
       <GlobalStyle />
       <Header />
-      <Cases />
       <Component {...pageProps} />
       <Footer />
       <OurServicesOnePage/>

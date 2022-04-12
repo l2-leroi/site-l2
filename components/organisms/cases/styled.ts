@@ -16,10 +16,25 @@ export const ContentStyled = styled.section`
   margin: 0 auto;
 `;
 
+export const DivStyled = styled.div`
+  display: flex;
+  align-items: end;
+  margin-bottom: 3.6rem;
+`;
+
 export const AsideStyled = styled.aside`
-  position: absolute;
-  left: 765px;
-  top: 200px;
+  margin-bottom: -8px;
+  margin-left: 25px;
+
+  @media (max-width: 800px) {
+    margin-left: 5px;
+  }
+  @media (min-width: 400px) {
+    margin-left: 60px;
+  }
+  @media (max-width: 400px) {
+    margin-left: 19px;
+  }
 `;
 
 export const ParagraphStyled = styled.p`
@@ -29,27 +44,33 @@ export const ParagraphStyled = styled.p`
   font-weight: 400;
 `;
 
-export const Teste = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-`;
-
 export const TitleStyled = styled.h2`
   font-family: 'Neue Machina', sans-serif;
   font-size: 6.4rem;
   line-height: 57.6px;
   font-weight: 800;
-  margin-bottom: 3.6rem;
-  width: 716px;
+  width: 712px;
+
+  @media (max-width: 800px) {
+    width: 278px;
+    line-height: 28.8px;
+  }
+
+  @media (max-width: 414px) {
+    width: 264px;
+    line-height: 28.8px;
+  }
 `;
 
 export const PhraseStyled = styled.p`
   font-family: 'Circular Air Pro', sans-serif;
   weight: 400;
   font-size: 2.4rem;
-  line-height: 33.6px;
+  line-height: 3.36rem;
   width: 502px;
   margin-bottom: 8rem;
-  text-align: justify;
+
+  @media (max-width: 800px) {
+    width: 175px;
+  }
 `;
