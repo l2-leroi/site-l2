@@ -17,7 +17,7 @@ function Scroll(props: ItemsProps) {
   });
 
   const handleScroll = () => {
-    console.log('ola')
+    console.log('ola');
   };
 
   const settings = {
@@ -35,13 +35,13 @@ function Scroll(props: ItemsProps) {
     <ContainerScroll onChange={(handleScroll) => this.slider.slickPrev()}>
       <Slider {...settings}>
         {props.elements.map((e) => (
-          <DivElement>
+          <DivElement key={e.title}>
             <ElementScroll>{e.title}</ElementScroll>
           </DivElement>
         ))}
-    
+
         {props.elements.map((e) => (
-          <DivElement>
+          <DivElement key={e.title}>
             <ElementScroll>{e.title}</ElementScroll>
           </DivElement>
         ))}
