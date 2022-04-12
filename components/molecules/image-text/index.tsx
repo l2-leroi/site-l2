@@ -1,9 +1,8 @@
 import { 
     ImageStyled,
-    Text
+    Text,
+    Image
 } from './styled';
-
-import Image from 'next/image';
 
 const ImageText = (props) =>{
     return(

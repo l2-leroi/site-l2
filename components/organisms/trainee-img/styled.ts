@@ -12,13 +12,22 @@ export const SectionStyled = styled.section`
     clip-path: polygon(0 0,100% 0,100% 100%,0 70%);
     margin-top: -0.1rem;
     align-items: center;
+    justify-content: center;
+`;
+
+export const DivStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const SpanStyled = styled.span`
+    margin-top: 7rem;
 `;
 
 export const TextStyled = styled.div`
     display: flex;
     flex-direction: column;
     margin-left: 15rem;
-    width: 36%;
 `;
 
 export const Title = styled.h4`

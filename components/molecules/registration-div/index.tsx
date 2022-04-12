@@ -26,8 +26,8 @@ const RegistrationDiv = ({dates,applyButton} : Props) =>{
             <ContentStyled>
                 {
                     dates.map((d) => (
-                        <DateStyled>
-                        <RegistrationDate key={d.id} title={d.title} date={d.date} expireDate={d.expireDate} />
+                        <DateStyled key={d.id}>
+                        <RegistrationDate  title={d.title} date={d.date} expireDate={d.expireDate} />
                         </DateStyled>
                     ))
                 }

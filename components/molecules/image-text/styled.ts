@@ -8,6 +8,10 @@ export const ImageStyled = styled.div`
     width: fit-content;
 `;
 
+export const Image = styled.img`
+    
+`;
+
 export const Text = styled.p`
     font-family: 'Circular Air Pro';
     font-style: normal;

@@ -29,3 +29,7 @@ export const Button = styled.button`
     background-color: ${colors.green};
     cursor: pointer;
 `;
+
+export const ArrowIcon = styled.img`
+
+`;

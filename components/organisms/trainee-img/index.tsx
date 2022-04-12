@@ -5,17 +5,24 @@ import {
     Paragraph,
     Subtitle,
     ListItem,
-    List
+    List,
+    DivStyled,
+    SpanStyled
 } from './styled';
 
 import ImageText from '../../molecules/image-text';
-import traineeImages from '../../../assets/images/trainee-image.png';
 import ApplyButton from '../../atoms/apply-button';
+import ScrollCircle from '../../atoms/ScrollCircle';
 
 const TraineeImg = () =>{
     return(
         <SectionStyled>
-            <ImageText src={traineeImages} text={'Ultima turma de Trainess chamados.'}/>
+            <DivStyled>
+                <ImageText src={'./images/trainee-image.png'} text={'Ultima turma de Trainees chamados.'}/>
+                <SpanStyled>
+                    <ScrollCircle image={true} />
+                </SpanStyled>
+            </DivStyled>
             <TextStyled>
                 <Title> Sobre o programa de Trainee </Title>
                 <Paragraph> Você vai trabalhar num time de TI excepcional e vai ter treinamento durante 12 meses. O foco é ampliar seus conhecimentos em diferentes tecnologias, assim você descobre o que realmente gosta e a gente direciona seu potencial para gerar o máximo de impacto.

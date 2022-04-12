@@ -1,11 +1,9 @@
 import { 
     Div,
     Button,
-    Arrow
+    Arrow,
+    ArrowIcon
 } from './styled';
-
-import Image from 'next/image';
-import arrowRight from '../../../assets/images/arrow-right.svg'; 
 
 interface Props{
   applyButton: string;
@@ -18,7 +16,7 @@ const ApplyButton = ({applyButton} : Props) => {
             {applyButton}
         </Button>
         <Arrow>
-            <Image src={arrowRight}/>
+            <ArrowIcon src={'./images/arrow-right.svg'}/>
         </Arrow>
     </Div>
 
