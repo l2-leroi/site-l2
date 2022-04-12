@@ -12,13 +12,25 @@ import {
 import Image from 'next/image';
 import logo from '../../../assets/images/Logo-Small.svg';
 import { HeartIcon } from '../../../assets/icons/heartIcon';
-import ContactList from '../../molecules/ContactList/index'
+import ContactList from '../../molecules/ContactList/index';
 
 const Footer = () => {
   const contacts = [
-    { title: "nosso whatsapp", contact: "+55 51 99693.9336", link: "tel:+5551996939336" },
-    { title: "nosso e-mail", contact: "contato@l2code.com.br", link: "mailto:contato@l2code.com.br" },
-    { title: "entre no time", contact: "talentos@l2code.com.br", link: "mailto:talentos@l2code.com.br" }
+    {
+      title: 'nosso whatsapp',
+      contact: '+55 51 99693.9336',
+      link: 'tel:+5551996939336',
+    },
+    {
+      title: 'nosso e-mail',
+      contact: 'contato@l2code.com.br',
+      link: 'mailto:contato@l2code.com.br',
+    },
+    {
+      title: 'entre no time',
+      contact: 'talentos@l2code.com.br',
+      link: 'mailto:talentos@l2code.com.br',
+    },
   ];
 
   return (
@@ -34,7 +46,9 @@ const Footer = () => {
       <CopyrightStyled>
         <InfoStyled>
           <PhraseStyled>Abraçamos os talentos do mundo</PhraseStyled>
-          <PhraseStyled>Somos uma empresa que trabalha 100% remoto</PhraseStyled>
+          <PhraseStyled>
+            Somos uma empresa que trabalha 100% remoto
+          </PhraseStyled>
         </InfoStyled>
 
         <InfoStyled>
@@ -44,7 +58,9 @@ const Footer = () => {
         </InfoStyled>
 
         <InfoStyled>
-          <PhraseStyled>Feito com <HeartIcon /> L2code</PhraseStyled>
+          <PhraseStyled>
+            Feito com <HeartIcon /> L2code
+          </PhraseStyled>
           <PhraseStyled>Copyright © Todos os direitos reservados</PhraseStyled>
         </InfoStyled>
       </CopyrightStyled>

@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
-import Header from '../components/organisms/header'
+import Cases from '../components/organisms/cases'
 
 const Home: NextPage = () => {
   return (
     <>
-      <Header />
+      <Cases />
     </>
   )
 }
