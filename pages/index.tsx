@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
+import Cases from '../components/organisms/cases'
 
 const Home: NextPage = () => {
   return (
-    <div>
-      L2 Code
-    </div>
+    <>
+      <Cases />
+    </>
   )
 }
 
