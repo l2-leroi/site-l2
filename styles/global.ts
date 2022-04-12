@@ -4,6 +4,10 @@ export const GlobalStyle = createGlobalStyle`
 
   :root {
     font-size: 62.5%; // 10px
+
+    @media (max-width: 800px) {
+      font-size: 31.25%;
+    }
   }
 
   html,
