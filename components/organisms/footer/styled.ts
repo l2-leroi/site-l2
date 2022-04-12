@@ -160,3 +160,9 @@ export const IconStyled = styled.span`
   margin: 0 8px 0 9px;
   vertical-align: middle;
 `;
+
+    margin-bottom: 0.9rem;
+  }
+`;
+
+export const ImageStyled = styled.img``;

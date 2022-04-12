@@ -19,9 +19,21 @@ import React from 'react';
 
 const Footer = () => {
   const contacts = [
-    { title: "nosso whatsapp", contact: "+55 51 99693.9336", link: "tel:+5551996939336" },
-    { title: "nosso e-mail", contact: "contato@l2code.com.br", link: "mailto:contato@l2code.com.br" },
-    { title: "entre no time", contact: "talentos@l2code.com.br", link: "mailto:talentos@l2code.com.br" }
+    {
+      title: 'nosso whatsapp',
+      contact: '+55 51 99693.9336',
+      link: 'tel:+5551996939336',
+    },
+    {
+      title: 'nosso e-mail',
+      contact: 'contato@l2code.com.br',
+      link: 'mailto:contato@l2code.com.br',
+    },
+    {
+      title: 'entre no time',
+      contact: 'talentos@l2code.com.br',
+      link: 'mailto:talentos@l2code.com.br',
+    },
   ];
 
   return (
