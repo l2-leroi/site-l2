@@ -2,7 +2,10 @@ import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const NavStyled = styled.nav`
-position:fixed ;
+  position: fixed;
+  width: 100%;
+  z-index: 60;
+  background-color: ${colors.strong_gray};
 `;
 
 export const NavContent = styled.ul`
