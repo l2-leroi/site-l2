@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
-import { ElementScroll, InfiniteScrollContainer } from './styles';
+import { ElementScrollStyled, InfiniteScrollContainerStyled } from './styles';
 import Link from 'next/link';
 
 /*
@@ -50,7 +50,7 @@ export default function Scroll() {
   };
 
   return (
-    <InfiniteScrollContainer
+    <InfiniteScrollContainerStyled
       dataLength={items.length}
       next={fetchData}
       hasMore={true}
@@ -58,8 +58,8 @@ export default function Scroll() {
       height="100vh"
     >
       {items.map((item) => {
-        return <ElementScroll key={`${item}-${uuid()}`}>{item}</ElementScroll>;
+        return <ElementScrollStyled key={`${item}-${uuid()}`}>{item}</ElementScrollStyled>;
       })}
-    </InfiniteScrollContainer>
+    </InfiniteScrollContainerStyled>
   );
 }

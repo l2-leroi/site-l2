@@ -8,14 +8,14 @@ export const NavStyled = styled.nav`
   background-color: ${colors.strong_gray};
 `;
 
-export const NavContent = styled.ul`
+export const NavContentStyled = styled.ul`
   padding: 43px 32px 43px 28px;
   margin: 0;
   display: flex;
   justify-content: space-between;
 `;
 
-export const NavItem = styled.li`
+export const NavItemStyled = styled.li`
   list-style-type: none;
   font-family: 'Circular Air Pro';
   font-size: 16px;
@@ -35,7 +35,7 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavButton = styled.button`
+export const NavButtonStyled = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -47,9 +47,9 @@ export const NavButton = styled.button`
     }
   }
 `;
-export const DivText = styled.div``;
+export const DivTextStyled = styled.div``;
 
-export const TextMenu = styled.p`
+export const TextMenuStyled = styled.p`
   font-family: 'Circular Air Pro';
   margin: 0;
   font-weight: 700;

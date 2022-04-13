@@ -2,21 +2,20 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
-
-export const InfiniteScrollContainer = styled(InfiniteScroll)`
- display:flex ;
- flex-direction: column;
- overflow-x: none;
- ::-webkit-scrollbar {
+export const InfiniteScrollContainerStyled = styled(InfiniteScroll)`
+  display: flex;
+  flex-direction: column;
+  overflow-x: none;
+  ::-webkit-scrollbar {
     display: none;
-}
+  }
 
-@media (max-width: 700px) {
-      margin-top: 30px;
+  @media (max-width: 700px) {
+    margin-top: 30px;
   }
 `;
 
-export const ElementScroll = styled.a`
+export const ElementScrollStyled = styled.a`
   text-align: center;
   font-family: 'Neue Machina';
   font-weight: 800;
@@ -29,15 +28,10 @@ export const ElementScroll = styled.a`
   cursor: pointer;
   text-decoration: none;
   @media (max-width: 600px) {
-    padding-bottom:15vw;
+    padding-bottom: 15vw;
   }
   @media (max-width: 1024px) {
     font-size: 5vw;
     line-height: 9.5vw;
   }
-`;
-
-export const DivElement = styled.div`
-  padding-bottom: 5vw;
-  
 `;
