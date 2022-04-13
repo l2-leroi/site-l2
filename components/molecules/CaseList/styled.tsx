@@ -12,8 +12,8 @@ export const ListStyled = styled.section`
 `;
 
 export const CaseStyled = styled.article`
-  width: 100%;
-  height: 1008px;
+  width: 464px;
+  height: 1088px;
   opacity: 0;
   transition: .8s;
   transform: translate3d(0, 200px, 0);
@@ -29,25 +29,28 @@ export const CaseStyled = styled.article`
   &.animate {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
   
   @media (max-width: 1350px) {
-    height: 850px;
+    height: 930px;
+    width: 415px;
   }
   
   @media (max-width: 1155px) {
-    height: 800px;
+    height: 880px;
   }
 
   @media (max-width: 800px) {
-    height: 546px;
+    width: 248px;
+    height: 565px;
   }
 
   @media (max-width: 600px) {
-    height: 420px;
+    height: 440px;
   }
 
-  @media (max-width: 408px) {
-    height: 265px;
+  @media (max-width: 540px) {
+    height: 400px;
   }
 `;
 
@@ -106,9 +109,9 @@ export const ImageStyled = styled.img`
 `;
 
 export const ButtonContentStyled = styled.section`
-  margin: 80px 40px 0 0;
+  margin-right: 40px;
 
-  @media (max-width: 800px) {
-    margin-top: 28px;
+  @media (max-width: 1366px) {
+    margin-right: 0px;
   }
 `;

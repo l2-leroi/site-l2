@@ -56,7 +56,7 @@ export const TitleStyled = styled.h2`
     line-height: 28.8px;
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 415px) {
     width: 264px;
     line-height: 28.8px;
   }

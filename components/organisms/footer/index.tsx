@@ -10,7 +10,7 @@ import {
   PhraseStyled,
 } from './styled';
 import Image from 'next/image';
-import logo from '../../../assets/images/Logo-Small.svg';
+//import logo from '../../../assets/images/Logo-Small.svg';
 import { HeartIcon } from '../../../assets/icons/heartIcon';
 import ContactList from '../../molecules/ContactList/index';
 
@@ -53,7 +53,7 @@ const Footer = () => {
 
         <InfoStyled>
           <LinkStyled href="/">
-            <Image src={logo} alt="L2 Code" />
+            {/* <Image src={logo} alt="L2 Code" /> */}
           </LinkStyled>
         </InfoStyled>
 

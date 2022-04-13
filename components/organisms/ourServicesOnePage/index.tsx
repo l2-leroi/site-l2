@@ -13,7 +13,7 @@ import {
   ParagraphItemStyled,
 } from './styles';
 
-import rectl2 from '../../../assets/images/RectangleL2.svg';
+//import rectl2 from '../../../assets/images/RectangleL2.svg';
 
 export default function OurServicesOnePage() {
   return (
@@ -71,7 +71,7 @@ export default function OurServicesOnePage() {
           </DivItemStyled>
 
           <DivItemStyled>
-            <Image src={rectl2} alt="L2 Code" layout='responsive'/>
+            {/* <Image src={rectl2} alt="L2 Code" layout='responsive'/> */}
           </DivItemStyled>
         </DivServiceItemsStyled>
       </ContentOnePageStyled>
