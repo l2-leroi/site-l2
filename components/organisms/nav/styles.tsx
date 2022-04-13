@@ -8,7 +8,6 @@ export const NavContent = styled.ul`
   margin: 0;
   display: flex;
   justify-content: space-between;
-
 `;
 
 export const NavItem = styled.li`
@@ -23,11 +22,11 @@ export const NavItem = styled.li`
     font-size: 10px;
     line-height: 14px;
   }
-  
-  img{
+
+  img {
     @media (max-width: 500px) {
-      width:43px !important;
-  }
+      width: 43px !important;
+    }
   }
 `;
 
@@ -37,10 +36,10 @@ export const NavButton = styled.button`
   cursor: pointer;
   display: flex;
   align-items: center;
-  img{
+  img {
     @media (max-width: 500px) {
-      width:20px !important;
-  }
+      width: 20px !important;
+    }
   }
 `;
 export const DivText = styled.div``;
@@ -59,3 +58,5 @@ export const TextMenu = styled.p`
     display: none;
   }
 `;
+
+export const ImageStyled = styled.img``;
