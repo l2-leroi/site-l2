@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
-import Router from 'next/router';
-
 
 export const Teste = styled.section`
   position: fixed;
@@ -55,7 +53,7 @@ export const DivText = styled.div`
 export const DivLanguage = styled.div`
   margin-right: 28px;
   @media (max-width: 750px) {
-   margin-top:50px;
+    margin-top: 50px;
   }
 `;
 export const DivLine = styled.div`
@@ -74,13 +72,12 @@ export const DivMenu = styled.div`
   @media (max-width: 750px) {
     justify-content: flex-start;
   }
- 
 `;
 
 export const DivContact = styled.div`
   display: flex;
   align-items: center;
-  margin-right:0.6vw;
+  margin-right: 0.6vw;
   @media (max-width: 750px) {
     transform: rotate(90deg);
     width: 10%;
@@ -115,7 +112,6 @@ export const ParagraphLanguage = styled.p`
     font-size: 10px;
     line-height: 27px;
   }
- 
 `;
 export const ParagraphOne = styled.p`
   font-family: 'Circular Air Pro';

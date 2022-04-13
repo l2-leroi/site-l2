@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { ElementScrollStyled, InfiniteScrollContainerStyled } from './styles';
-import Link from 'next/link';
 
 /*
 const element = document.getElementById('home')
