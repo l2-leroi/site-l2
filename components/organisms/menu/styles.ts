@@ -1,12 +1,24 @@
 import styled from 'styled-components';
+import { colors } from '../../../styles/colors';
+import Router from 'next/router';
+
+
 export const Teste = styled.section`
-  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 100vh;
+  background: ${colors.black};
 `;
 export const Container = styled.div`
-  background: #171b21;
   display: flex;
   justify-content: space-between;
-  height: 100vh;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 export const DivLogo = styled.div`
   padding-left: 28px;
@@ -15,9 +27,10 @@ export const DivLogo = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: baseline;
-  @media (max-width: 930px) {
-    height: 450px;
-    width: 10%;
+  @media (max-width: 500px) {
+    img {
+      display: none !important;
+    }
   }
 `;
 
@@ -25,7 +38,7 @@ export const DivTextMenu = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 28px;
+  margin-right: 8px;
   margin-top: 33px;
 `;
 
@@ -41,12 +54,15 @@ export const DivText = styled.div`
 
 export const DivLanguage = styled.div`
   margin-right: 28px;
+  @media (max-width: 750px) {
+   margin-top:50px;
+  }
 `;
 export const DivLine = styled.div`
   width: 84px;
   height: 0;
-  border: 1px solid #f2f3f4;
-  background-color: #f2f3f4;
+  border: 1px solid ${colors.gray};
+  background-color: ${colors.gray};
   margin-right: 24px;
   margin-left: 24px;
 `;
@@ -55,19 +71,22 @@ export const DivMenu = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media (max-width: 930px) {
-    width: 10%;
-    height: 450px;
+  @media (max-width: 750px) {
+    justify-content: flex-start;
   }
+ 
 `;
 
 export const DivContact = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 28px;
-  @media (max-width: 930px) {
+  margin-right:0.6vw;
+  @media (max-width: 750px) {
     transform: rotate(90deg);
-    width: 200%;
+    width: 10%;
+    position: absolute;
+    bottom: 26rem;
+    margin-right: 20px;
   }
 `;
 export const TextMenu = styled.p`
@@ -77,7 +96,7 @@ export const TextMenu = styled.p`
   line-height: 19px;
   font-family: 'Circular Air Pro';
   letter-spacing: -0.04em;
-  color: #f2f3f4;
+  color: ${colors.gray};
   margin: 0;
 `;
 
@@ -89,13 +108,14 @@ export const ParagraphLanguage = styled.p`
   font-size: 16px;
   line-height: 22px;
   letter-spacing: -0.02em;
-  color: #f2f3f4;
+  color: ${colors.gray};
   text-align: right;
 
   @media (max-width: 930px) {
     font-size: 10px;
     line-height: 27px;
   }
+ 
 `;
 export const ParagraphOne = styled.p`
   font-family: 'Circular Air Pro';
@@ -103,7 +123,7 @@ export const ParagraphOne = styled.p`
   font-size: 16px;
   line-height: 22px;
   letter-spacing: -0.02em;
-  color: #f2f3f4;
+  color: ${colors.gray};
 
   @media (max-width: 930px) {
     font-size: 12px;
@@ -117,7 +137,7 @@ export const ParagraphTwo = styled.p`
   font-size: 16px;
   line-height: 22px;
   letter-spacing: -0.04em;
-  color: #f2f3f4;
+  color: ${colors.gray};
 
   @media (max-width: 930px) {
     font-size: 12px;

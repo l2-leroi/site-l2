@@ -10,14 +10,11 @@ import OurServicesOnePage from '../components/organisms/ourServicesOnePage';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-    <GlobalStyle/>
-      <Nav/>
       <GlobalStyle />
-      <Header />
-      <Cases />
+      <Nav />
       <Component {...pageProps} />
-      <Footer />
-      <OurServicesOnePage/>
+      <Header />
+      <Footer/>
     </>
   );
 }
