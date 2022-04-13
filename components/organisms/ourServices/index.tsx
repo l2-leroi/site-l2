@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import {
   SectionStyled,
   DivOurServicesStyled,
@@ -7,6 +6,7 @@ import {
   HeadingStyled,
   ParagraphServicesStyled,
   ButtonServicesStyled,
+  ImageStyled,
 } from './styles';
 import seta from '../../../assets/images/seta.svg';
 import OutSourcing from '../../atomo/letreiro';
@@ -23,7 +23,7 @@ export default function OurServices() {
 
         <DivButtonServicesStyled>
           <ButtonServicesStyled>NOSSOS SERVIÇOS</ButtonServicesStyled>
-          <Image src={seta} alt="seta" />
+          <ImageStyled src={seta} alt="seta" />
         </DivButtonServicesStyled>
       </DivOurServicesStyled>
       <OutSourcing />
