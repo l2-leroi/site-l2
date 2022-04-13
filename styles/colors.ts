@@ -5,4 +5,5 @@ export const colors = {
   strong_gray: '#E5E5E5',
   dark_gray: '#8E9195',
   purple: '#5900CC',
+  lightGray: '#8E9195',
 };

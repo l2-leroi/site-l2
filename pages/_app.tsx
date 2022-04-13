@@ -11,7 +11,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
+<<<<<<< HEAD
       <Nav />
+=======
+      <Header />
+>>>>>>> cd9bb73702971cbb0469824b8f064c4ba4f53708
       <Component {...pageProps} />
       <Header />
       <Footer/>
