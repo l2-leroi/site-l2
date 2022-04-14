@@ -64,7 +64,7 @@ export const TitleStyled = styled.h2`
 
 export const PhraseStyled = styled.p`
   font-family: 'Circular Air Pro', sans-serif;
-  weight: 400;
+  font-weight: 400;
   font-size: 2.4rem;
   line-height: 3.36rem;
   width: 502px;

@@ -8,11 +8,13 @@ import {
   TitleStyled,
   ButtonContentStyled,
   ImageStyled,
+  SliderStyled,
 } from './styled';
 import Button from '../../atoms/Button';
 import { colors } from '../../../styles/colors';
 import { useEffect, useRef, useState } from 'react';
-import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface Case {
   number: string;
@@ -36,12 +38,21 @@ function CaseList(props: CaseProps) {
 
   // anime slider
   const settings = {
-    dots: false,
     infinite: false,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    swipeToSlide: true,
+    swipeToSlide: false,
     speed: 400,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          swipeToSlide: true,
+        }
+      },
+    ]
   };
 
   // anime scroll 
@@ -85,8 +96,8 @@ function CaseList(props: CaseProps) {
 
   return (
     <ContentStyled>
-      <Slider {...settings}>
-        <ListStyled>
+      <ListStyled>
+        <SliderStyled {...settings}>
           {
             props.cases.map((itemCase) => (
               <CaseStyled key={itemCase.title} data-anime="animate">
@@ -118,11 +129,10 @@ function CaseList(props: CaseProps) {
                   }
                 </LinkStyled>
               </CaseStyled>
-
             ))
           }
-        </ListStyled>
-      </Slider>
+        </SliderStyled>
+      </ListStyled>
 
       {props.linkBtn && (
         <ButtonContentStyled>

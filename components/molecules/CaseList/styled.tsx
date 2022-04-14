@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
+import Slider from "react-slick";
 
 export const ContentStyled = styled.section`
   display: flex;
@@ -7,56 +8,86 @@ export const ContentStyled = styled.section`
   overflow: hidden;
 `;
 
-export const ListStyled = styled.section`
-  display: inline-flex;
-`;
+export const ListStyled = styled.section``;
 
 export const CaseStyled = styled.article`
-  width: 464px;
-  height: 1088px;
   opacity: 0;
   transition: .8s;
   transform: translate3d(0, 200px, 0);
-
-  &:nth-child(2) {
-    margin: 30rem 3.2rem 0;
-  }
-
-  &:nth-child(3) {
-    margin-top: 60rem;
-  }
 
   &.animate {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
-  
-  @media (max-width: 1350px) {
-    height: 930px;
-    width: 415px;
-  }
-  
-  @media (max-width: 1155px) {
-    height: 880px;
+`;
+
+export const SliderStyled = styled(Slider)`
+  .slick-track {
+    display: flex;
+    flex-wrap: nowrap;
   }
 
-  @media (max-width: 800px) {
-    width: 248px;
-    height: 565px;
+  .slick-current {
+    margin-top: 0px !important;
+    transition: .5s;
   }
 
-  @media (max-width: 600px) {
-    height: 440px;
+  .slick-active:not(.slick-current) {
+    &:last-child{
+      margin: 80px 0 !important;
+      transition: .5s;
+    }
   }
 
-  @media (max-width: 540px) {
-    height: 400px;
+  .slick-slide {
+    width: 464px !important;
+    height: 1088px !important;
+
+    &:nth-child(2) {
+      margin: 300px 3.2rem 0;
+
+      @media (max-width: 800px) {
+        margin-top: 80px;
+        transition: .5s;
+      }
+    }
+
+    &:nth-child(3) {
+      margin-top: 600px;
+
+      @media (max-width: 800px) {
+        margin-top: 160px;
+        transition: .5s;
+      }
+    }
+    
+    @media (max-width: 1350px) {
+      height: 930px !important;
+      width: 415px !important;
+    }
+    
+    @media (max-width: 1155px) {
+      height: 880px !important;
+    }
+
+    @media (max-width: 800px) {
+      width: 248px !important;
+      height: 565px !important;
+    }
+
+    @media (max-width: 600px) {
+      height: 440px !important;
+    }
+
+    @media (max-width: 540px) {
+      height: 400px !important;
+    }
   }
 `;
 
 export const CaseNumberStyled = styled.h3`
   font-family: 'Circular Air Pro', sans-serif;
-  weight: 400;
+  font-weight: 400;
   font-size: 16px;
   line-height: 22.4px;
   padding: 0 0 3.2rem 10px;
@@ -70,7 +101,7 @@ export const CaseNumberStyled = styled.h3`
 
 export const TitleStyled = styled.h4`
   font-family: 'Neue Machina', sans-serif;
-  weight: 800;
+  font-weight: 800;
   font-size: 4rem;
   line-height: 4.8rem;
   padding: 4.4rem 0 2.8rem 0;
@@ -78,7 +109,7 @@ export const TitleStyled = styled.h4`
 
 export const InfoStyled = styled.p`
   font-family: 'Circular Air Pro', sans-serif;
-  weight: 400;
+  font-weight: 400;
   font-size: 2.4rem;
   line-height: 3.36rem;
   padding-bottom: 3.2rem;
