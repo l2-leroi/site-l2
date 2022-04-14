@@ -9,7 +9,7 @@ export const ImageStyled = styled.div`
 `;
 
 export const Image = styled.img`
-    
+    border-radius:1.6rem;
 `;
 
 export const Text = styled.p`

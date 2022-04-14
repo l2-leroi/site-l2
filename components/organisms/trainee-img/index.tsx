@@ -18,7 +18,7 @@ const TraineeImg = () =>{
     return(
         <SectionStyled>
             <DivStyled>
-                <ImageText src={'./images/trainee-image.png'} text={'Ultima turma de Trainees chamados.'}/>
+                <ImageText src={'./images/trainee-image.jpg'} text={'Ultima turma de Trainees chamados.'}/>
                 <SpanStyled>
                     <ScrollCircle image={true} />
                 </SpanStyled>
