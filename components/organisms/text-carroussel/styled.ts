@@ -9,7 +9,8 @@ export const SectionStyled = styled.section`
 
 export const DivStyled = styled.div`
     margin-top: 8rem;
-    margin-left: 52rem; 
+    display:flex;
+    flex-direction: column;
 `;
 
 export const Title = styled.h4`
@@ -19,6 +20,8 @@ export const Title = styled.h4`
     font-size: 4rem;
     line-height: 120%;
     letter-spacing: -0.02em;
+    align-self: center;
+    width: 46rem;
 `;
 
 export const Paragraph = styled.p`
@@ -29,4 +32,6 @@ export const Paragraph = styled.p`
     line-height: 140%;
     letter-spacing: -0.04em;
     margin: 4rem 0;
+    width: 46rem;
+    align-self: center;
 `;
