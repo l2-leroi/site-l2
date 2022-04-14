@@ -33,9 +33,11 @@ export const SliderStyled = styled(Slider)`
   }
 
   .slick-active:not(.slick-current) {
-    &:last-child{
+    @media(max-width: 600px) {
+      &:last-child{
       margin: 80px 0 !important;
       transition: .5s;
+      }
     }
   }
 

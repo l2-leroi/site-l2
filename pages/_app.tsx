@@ -5,13 +5,15 @@ import Footer from '../components/organisms/footer';
 import Header from '../components/organisms/header/index';
 import OurServicesOnePage from '../components/organisms/ourServicesOnePage';
 import CaseList from '../components/molecules/CaseList';
+import Nav from '../components/organisms/nav';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
+      <Nav />
+      <GlobalStyle />
       <Header />
-      <OurServicesOnePage/>
       <Component {...pageProps} />
       {/* <Footer /> */}
     </>

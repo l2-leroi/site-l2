@@ -1,6 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
-
+import rectl2 from './images/RectangleL2.svg';
 import {
   SectionOnePageStyled,
   ContentOnePageStyled,
@@ -11,9 +10,8 @@ import {
   DivItemStyled,
   HeadingItemStyled,
   ParagraphItemStyled,
+  ImageStyled,
 } from './styles';
-
-//import rectl2 from '../../../assets/images/RectangleL2.svg';
 
 export default function OurServicesOnePage() {
   return (
@@ -71,7 +69,7 @@ export default function OurServicesOnePage() {
           </DivItemStyled>
 
           <DivItemStyled>
-            {/* <Image src={rectl2} alt="L2 Code" layout='responsive'/> */}
+            <ImageStyled src="./images/RectangleL2.svg" alt="L2 Code" />
           </DivItemStyled>
         </DivServiceItemsStyled>
       </ContentOnePageStyled>
