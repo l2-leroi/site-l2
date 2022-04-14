@@ -10,7 +10,7 @@ element.style.color = "#20BD9D"
 
 export default function Scroll() {
   const baseItems = [
-    '< Home >',
+    'Home',
     'Sobre',
     'Cases',
     'Serviços',

@@ -5,7 +5,6 @@ export const NavStyled = styled.nav`
   position: fixed;
   width: 100%;
   z-index: 60;
-  background-color: ${colors.strong_gray};
 `;
 
 export const NavContentStyled = styled.ul`
