@@ -62,3 +62,5 @@ export const TextMenuStyled = styled.p`
     display: none;
   }
 `;
+
+export const ImageStyled = styled.img``;

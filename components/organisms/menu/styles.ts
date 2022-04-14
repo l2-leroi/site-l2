@@ -140,3 +140,5 @@ export const ParagraphTwo = styled.p`
     line-height: 17px;
   }
 `;
+
+export const ImageStyled = styled.img``;
