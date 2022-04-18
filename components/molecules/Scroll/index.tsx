@@ -1,53 +1,64 @@
-import React, { Component } from 'react';
-import Slider from 'react-slick';
-import { ContainerScroll, DivElement, ElementScroll } from './styles';
+import { useState } from 'react';
+import { v4 as uuid } from 'uuid';
+import { ElementScrollStyled, InfiniteScrollContainerStyled } from './styles';
 
-interface Item {
-  title: string;
-  link: string;
-}
+/*
+const element = document.getElementById('home')
+element.innerText = "< Home >"
+element.style.color = "#20BD9D"
+*/
 
-interface ItemsProps {
-  elements: Item[];
-}
+export default function Scroll() {
+  const baseItems = [
+    'Home',
+    'Sobre',
+    'Cases',
+    'Serviços',
+    'Pessoas',
+    'Carreira',
+    'Contato',
+  ];
 
-function Scroll(props: ItemsProps) {
-  React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-  });
+  const baseUrl = [
+    './',
+    './about',
+    './cases',
+    './services',
+    './pessoas',
+    './carreira',
+    './contato',
+  ];
+  baseItems[0]
+  function createMarkup() {
+    for (let i = 0; i < baseItems.length; i++) {
+      const element = baseItems[i];
+      const url = baseUrl[i];
 
-  const handleScroll = () => {
-    console.log('ola');
-  };
+      if (baseUrl[i] == './') {
+        console.log(baseItems[i]);
+        console.log('funcionando');
+      }
+    }
+  }
+  console.log(createMarkup());
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    verticalSwiping: true,
-    swipeToSlide: true,
-    vertical: true,
-    speed: 400,
+  const [items, setItems] = useState([...baseItems, ...baseItems]);
+
+  const fetchData = () => {
+    setItems([...items, ...baseItems]);
   };
 
   return (
-    <ContainerScroll onChange={(handleScroll) => this.slider.slickPrev()}>
-      <Slider {...settings}>
-        {props.elements.map((e) => (
-          <DivElement key={e.title}>
-            <ElementScroll>{e.title}</ElementScroll>
-          </DivElement>
-        ))}
-
-        {props.elements.map((e) => (
-          <DivElement key={e.title}>
-            <ElementScroll>{e.title}</ElementScroll>
-          </DivElement>
-        ))}
-      </Slider>
-    </ContainerScroll>
+    <InfiniteScrollContainerStyled
+      dataLength={items.length}
+      next={fetchData}
+      hasMore={true}
+      loader={null}
+      height="100vh"
+    >
+      {items.map((item) => {
+        return <ElementScrollStyled key={`${item}-${uuid()}`}>{item}</ElementScrollStyled>;
+      })}
+    </InfiniteScrollContainerStyled>
   );
 }
-
-export default Scroll;

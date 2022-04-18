@@ -1,12 +1,12 @@
 import {
   NavStyled,
-  NavContent,
-  NavItem,
-  NavButton,
-  DivText,
-  TextMenu,
-  ImageStyled,
+  NavContentStyled,
+  NavItemStyled,
+  NavButtonStyled,
+  DivTextStyled,
+  TextMenuStyled,
 } from './styles';
+import Image from 'next/image';
 import L2Logo from '../../../assets/images/logoNav.svg';
 import MenuIcon from '../../../assets/images/Menu-Icon.svg';
 import React, { useState } from 'react';
@@ -17,22 +17,22 @@ export default function Nav() {
   return (
     <>
       <Menu openMenu={MenuClick} closeMenu={() => setClick(!MenuClick)} />
-      <NavStyled style={{ display: MenuClick ? 'none' : 'block' }}>
-        <NavContent>
-          <NavItem>
-            <ImageStyled src={L2Logo} alt="L2 Code" />
-          </NavItem>
-          <NavItem>contato@l2code.com.br</NavItem>
-          <NavItem>
-            <NavButton onClick={() => setClick(true)}>
-              <ImageStyled src={MenuIcon} alt="L2 Code" />
-              <DivText>
-                <TextMenu>ME</TextMenu>
-                <TextMenu>NU</TextMenu>
-              </DivText>
-            </NavButton>
-          </NavItem>
-        </NavContent>
+      <NavStyled>
+        <NavContentStyled>
+          <NavItemStyled>
+            <Image src={L2Logo} alt="L2 Code" />
+          </NavItemStyled>
+          <NavItemStyled>contato@l2code.com.br</NavItemStyled>
+          <NavItemStyled>
+            <NavButtonStyled onClick={() => setClick(true)}>
+              <Image src={MenuIcon} alt="L2 Code" />
+              <DivTextStyled>
+                <TextMenuStyled>ME</TextMenuStyled>
+                <TextMenuStyled>NU</TextMenuStyled>
+              </DivTextStyled>
+            </NavButtonStyled>
+          </NavItemStyled>
+        </NavContentStyled>
       </NavStyled>
     </>
   );

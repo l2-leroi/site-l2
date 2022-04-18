@@ -1,16 +1,20 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
-export const NavStyled = styled.nav``;
+export const NavStyled = styled.nav`
+  position: fixed;
+  width: 100%;
+  z-index: 60;
+`;
 
-export const NavContent = styled.ul`
+export const NavContentStyled = styled.ul`
   padding: 43px 32px 43px 28px;
   margin: 0;
   display: flex;
   justify-content: space-between;
 `;
 
-export const NavItem = styled.li`
+export const NavItemStyled = styled.li`
   list-style-type: none;
   font-family: 'Circular Air Pro';
   font-size: 16px;
@@ -30,7 +34,7 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavButton = styled.button`
+export const NavButtonStyled = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -42,9 +46,9 @@ export const NavButton = styled.button`
     }
   }
 `;
-export const DivText = styled.div``;
+export const DivTextStyled = styled.div``;
 
-export const TextMenu = styled.p`
+export const TextMenuStyled = styled.p`
   font-family: 'Circular Air Pro';
   margin: 0;
   font-weight: 700;
@@ -52,7 +56,7 @@ export const TextMenu = styled.p`
   line-height: 22px;
   text-align: center;
   letter-spacing: -0.02em;
-  color: #171b21;
+  color: ${colors.black};
   padding-left: 8px;
   @media (max-width: 500px) {
     display: none;

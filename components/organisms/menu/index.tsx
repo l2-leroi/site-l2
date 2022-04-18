@@ -14,43 +14,26 @@ import {
   ParagraphTwo,
   Teste,
   ButtonClose,
-  ImageStyled,
 } from './styles';
+import Image from 'next/image';
 import logo from '../../../assets/images/logoMenu.svg';
 import x from '../../../assets/images/closeMenu.svg';
 import Scroll from '../../molecules/Scroll';
+
+
 
 export interface Props {
   openMenu: boolean;
   closeMenu: (value: boolean) => void;
 }
 
-function createMarkup() {
-  return { __html: '&lt; eeee &gt;' };
-}
-
 const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
-  const elements = [
-    { title: 'Home', link: 'https://www.google.com.br/' },
-    { title: 'Cases', link: '' },
-    { title: 'Serviços', link: '' },
-    { title: 'Contato', link: '' },
-  ];
-
-  const mystyle = {
-    color: '#20BD9D',
-  };
-
-  if (elements[0].link == 'https://www.google.com.br/') {
-    elements[0].title = '< Home >';
-  }
-  console.log();
   return (
     <Teste style={{ display: openMenu ? 'block' : 'none' }}>
       <Container>
         <DivLogo>
-          <ImageStyled src={logo} alt="L2" />
-
+          <Image src={logo} alt="L2" />
+  
           <DivContact>
             <ParagraphOne>entre no time</ParagraphOne>
             <DivLine></DivLine>
@@ -58,12 +41,12 @@ const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
           </DivContact>
         </DivLogo>
 
-        <Scroll elements={elements} />
+        <Scroll />
 
         <DivMenu>
           <DivTextMenu>
             <ButtonClose onClick={() => closeMenu(false)}>
-              <ImageStyled src={x} alt="X" />
+              <Image src={x} alt="X" />
             </ButtonClose>
             <DivText>
               <TextMenu>ME</TextMenu>

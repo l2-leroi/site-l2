@@ -10,7 +10,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <GlobalStyle />
       <Nav />
-      <GlobalStyle />
       <Header />
       <Component {...pageProps} />
       <Footer />
