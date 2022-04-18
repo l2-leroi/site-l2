@@ -48,29 +48,36 @@ const Header = () => {
   const [whiteCircle, setWhiteCircle] = useState(false);
   let currentText = '';
   const [actualText, setActualText] = useState('CODE');
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [startTouch, setStartTouch] = useState(new Date());
 
   const initInterval = (backgroundList) => {
-    const header = document.querySelector(".header");
-    interval.current = setInterval(() => {
-      const index = currentImage !== '' ? backgroundList.findIndex(
-        (background) => background.image === currentImage,
-      )
-        : 0;
-      if (index === backgroundList.length - 1) {
-        currentImage = backgroundList[0].image;
-        currentText = backgroundList[0].text;
-        setActualImage(currentImage);
-        setActualText(currentText);
-      } else {
-        currentImage = backgroundList[index + 1].image;
-        setActualImage(backgroundList[index + 1].image);
-
-        currentText = backgroundList[index + 1].text;
-        setActualText(backgroundList[index + 1].text);
-      }
-      header.classList.add("white");
-      setWhiteCircle(true);
-    }, 150);
+    if(!isAnimating){
+      setStartTouch(new Date());
+      setIsAnimating(true);
+      interval.current = null;
+      const header = document.querySelector(".header");
+      interval.current = setInterval(() => {
+        const index = currentImage !== '' ? backgroundList.findIndex(
+          (background) => background.image === currentImage,
+        )
+          : 0;
+        if (index === backgroundList.length - 1) {
+          currentImage = backgroundList[0].image;
+          currentText = backgroundList[0].text;
+          setActualImage(currentImage);
+          setActualText(currentText);
+        } else {
+          currentImage = backgroundList[index + 1].image;
+          setActualImage(backgroundList[index + 1].image);
+  
+          currentText = backgroundList[index + 1].text;
+          setActualText(backgroundList[index + 1].text);
+        }
+        header.classList.add("white");
+        setWhiteCircle(true);
+      }, 150);
+    }
   };
 
   const exitInterval = (backgroundList) => {
@@ -81,6 +88,7 @@ const Header = () => {
     interval.current = null;
     setActualImage(backgroundList);
     setActualText('CODE');
+    setIsAnimating(false);
   };
 
   return (
@@ -100,11 +108,21 @@ const Header = () => {
         <MainTextStyled>
           <SubtitleStyled>Love to</SubtitleStyled>
           <TitleStyled
-            onMouseEnter={() => {
+            onTouchStart={(e)=>{
+              interval.current = null;
               initInterval(backgroundList);
             }}
-            onMouseLeave={() => {
-              exitInterval(backgroundList);
+            
+            onTouchEnd={(event)=>{
+              const endTouch = new Date();
+              let difference = Math.floor(endTouch.getTime() - startTouch.getTime());
+              if(difference < 715){
+                  setTimeout(()=>{
+                    exitInterval(backgroundList);
+                },(750 - difference))
+              }else {
+                exitInterval(backgroundList);
+              }
             }}
           >
             {actualText}

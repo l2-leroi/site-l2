@@ -43,6 +43,13 @@ export const TitleStyled = styled.h1`
     letter-spacing: -0.04em;
     margin: 0 auto;
     cursor: pointer;
+    user-select: none;
+    -webkit-touch-callout:none; /* iOS Safari */
+    -webkit-user-select:none;   /* Chrome/Safari/Opera */
+    -khtml-user-select:none;    /* Konqueror */
+    -moz-user-select:none;      /* Firefox */
+    -ms-user-select:none;       /* Internet Explorer/Edge */
+    -webkit-tap-highlight-color: transparent;
 
     @media (max-width: 800px) {
         font-size: 64px;
