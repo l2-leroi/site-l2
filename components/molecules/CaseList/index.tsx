@@ -32,7 +32,7 @@ function CaseList(props: CaseProps) {
   const interval = useRef(null);
   var currentImage = '';
   const [actualImage, setActualImage] = useState('');
-  // anime scroll 
+  // anime scroll
 
   useEffect(() => {
     const target = document.querySelectorAll<HTMLElement>('[data-anime]');
@@ -66,7 +66,7 @@ function CaseList(props: CaseProps) {
         currentImage = images[index + 1];
         setActualImage(currentImage);
       }
-    }, 150)
+    }, 150);
   };
 
   const cancelInterval = (image: string) => {
@@ -78,27 +78,26 @@ function CaseList(props: CaseProps) {
   return (
     <ContentStyled>
       <ListStyled>
-        {
-          props.cases.map((itemCase) => (
-            <CaseStyled key={itemCase.title} data-anime="animate">
-              <CaseNumberStyled>Case {itemCase.number}</CaseNumberStyled>
-              <TitleStyled>{itemCase.title}</TitleStyled>
-              <InfoStyled>{itemCase.info}</InfoStyled>
-              <LinkStyled
-                onMouseEnter={() => {     
-                  initInterval(itemCase.hover);              
-                }}
-                onMouseLeave={() => {
-                  cancelInterval(itemCase.image); 
-                }}
-              > 
-                <ImageStyled 
-                  src={itemCase.image} 
-                  alt={itemCase.alt} 
-                  width={464} 
-                  height={700} 
-                />
-              ))}
+        {props.cases.map((itemCase) => (
+          <CaseStyled key={itemCase.title} data-anime="animate">
+            <CaseNumberStyled>Case {itemCase.number}</CaseNumberStyled>
+            <TitleStyled>{itemCase.title}</TitleStyled>
+            <InfoStyled>{itemCase.info}</InfoStyled>
+            <LinkStyled
+              onMouseEnter={() => {
+                initInterval(itemCase.hover);
+              }}
+              onMouseLeave={() => {
+                cancelInterval(itemCase.image);
+              }}
+            >
+              <ImageStyled
+                src={itemCase.image}
+                alt={itemCase.alt}
+                width={464}
+                height={700}
+              />
+              ))
             </LinkStyled>
           </CaseStyled>
         ))}

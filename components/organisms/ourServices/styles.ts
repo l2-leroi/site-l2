@@ -86,7 +86,7 @@ export const ButtonServicesStyled = styled.button`
   height: 50px;
   font-size: 24px;
   color: ${colors.green};
-  border: 2px solid  ${colors.green};
+  border: 2px solid ${colors.green};
   border-radius: 24px;
   letter-spacing: -0.04em;
   color: ${colors.black};
@@ -103,3 +103,4 @@ export const ButtonServicesStyled = styled.button`
   }
 `;
 
+export const ImageStyled = styled.img``;
