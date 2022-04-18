@@ -10,11 +10,13 @@ interface Card{
     authorImg: string;
     authorName: string;
     author: boolean;
+    className: string;
 }
 
-const CardCarroussel = ({comment,authorImg,authorName,author} : Card) => {
+
+const CardCarroussel = ({comment,authorImg,authorName,author,className} : Card) => {
     return(
-        <DivStyled>
+        <DivStyled className={className}>
             {comment && <TextArea> {comment} </TextArea>}
             {author && 
                 <AuthorArea>

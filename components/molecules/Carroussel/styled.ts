@@ -4,6 +4,11 @@ import { colors } from '../../../styles/colors';
 export const DivStyled = styled.div`
     margin-left: 4rem;
     max-width: 95%;
+    .card-fade{
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 1s, opacity 1s linear;
+    }
 `;
 
 export const ArrowRightStyled = styled.div`

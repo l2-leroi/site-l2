@@ -60,10 +60,10 @@ const TextCarroussel = () => {
                     Valorizamos pessoas
                 </Title>
                 <Paragraph>
-                Ter empatia é uma ótima prática de trabalho. Todos estamos em constante aprendizado e buscamos crescer juntos.
+                    Ter empatia é uma ótima prática de trabalho. Todos estamos em constante aprendizado e buscamos crescer juntos.
                 </Paragraph>
-                <Paragraph>
-                O que dizem os Lcoders:
+                <Paragraph className='paragrafoCarrossel'>
+                    O que dizem os Lcoders:
                 </Paragraph>
             </DivStyled>
             <div>
