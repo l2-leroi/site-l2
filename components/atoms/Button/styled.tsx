@@ -20,7 +20,7 @@ export const ButtonStyled = styled.div<ButtonProps>`
   background-color: ${props => props.bgColor ? props.bgColor : "none"};
   border-radius: 24px;
   font-family: 'Circular Air Pro', sans-serif;
-  weight: 400;
+  font-weight: 400;
   font-size: 2.4rem;
   line-height: 3.36rem;
   margin-right: .8rem;

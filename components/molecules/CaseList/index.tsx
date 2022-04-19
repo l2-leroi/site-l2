@@ -39,7 +39,7 @@ function CaseList(props: CaseProps) {
   // anime slider
   const settings = {
     infinite: false,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     swipeToSlide: false,
     speed: 400,
@@ -131,6 +131,7 @@ function CaseList(props: CaseProps) {
               </CaseStyled>
             ))
           }
+          <div></div>
         </SliderStyled>
       </ListStyled>
 
