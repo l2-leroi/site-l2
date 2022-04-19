@@ -14,11 +14,9 @@ export const LinkStyled = styled.a`
 `;
 
 export const ButtonStyled = styled.div<ButtonProps>`
-  width: 50px;
-  height: 50px;
   border: 2px solid ${props => props.borderColor ? props.borderColor : colors.green};
   background-color: ${props => props.bgColor ? props.bgColor : "none"};
-  border-radius: 24px;
+  border-radius: 50%;
   font-family: 'Circular Air Pro', sans-serif;
   weight: 400;
   font-size: 2.4rem;
@@ -27,14 +25,19 @@ export const ButtonStyled = styled.div<ButtonProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem 1rem;
 
   &:first-child {
     width: auto;
-    padding: 0px 16px;
+    padding: 0.75rem 1.6rem;
+    border-radius: 2.4rem; 
   }
 
   @media (max-width: 800px) {
-    width: 32px;
-    height: 32px;
+    font-size: 1.2rem;
+    svg{
+      height: 1.2rem;
+      width: 1.2rem;
+    }
   }
 `;
