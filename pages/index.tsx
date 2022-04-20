@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Cases from '../components/organisms/cases';
 
+
 const Home: NextPage = () => {
   return (
     <>
@@ -10,3 +11,4 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+

@@ -14,7 +14,8 @@ export const ParagraphOutSourcingStyled = styled.p`
   font-weight: 800;
   font-size: 40px;
   padding-left: 22px;
-  line-height: 120%;
+
+  padding-top: 200px;
   text-align: center;
   letter-spacing: -0.02em;
   color: #8e9195;
@@ -22,10 +23,15 @@ export const ParagraphOutSourcingStyled = styled.p`
   ::selection {
     background: ${colors.purple};
     color: ${colors.gray};
+  }
   @media (max-width: 500px) {
     font-size: 20px;
   }
   @media (max-width: 500px) {
     font-size: 20px;
+  }
+
+@media (max-width: 800px) {
+  padding-top: 290px;
   }
 `;
