@@ -11,6 +11,7 @@ export const ContentStyled = styled.section`
 export const ListStyled = styled.section``;
 
 export const CaseStyled = styled.article`
+  height: 1005px;
   opacity: 0;
   transition: .8s;
   transform: translate3d(0, 200px, 0);
@@ -19,12 +20,44 @@ export const CaseStyled = styled.article`
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
+
+  @media (max-width: 1350px) {
+    height: 940px !important;
+  }
+  
+  @media (max-width: 1155px) {
+    height: 920px !important;
+  }
+
+  @media (max-width: 800px) {
+    height: 520px !important;
+  }
 `;
 
 export const SliderStyled = styled(Slider)`
   .slick-track {
     display: flex;
     flex-wrap: nowrap;
+
+    @media (max-width: 600px) {
+      height: 690px !important;
+    }
+
+    @media (max-width: 550px) {
+      height: 630px !important;
+    }
+
+    @media (max-width: 500px) {
+      height: 620px !important;
+    }
+
+    @media (max-width: 430px) {
+      height: 580px !important;
+    }
+
+    @media (max-width: 390px) {
+      height: 550px !important;
+    }
   }
 
   .slick-current {
@@ -32,7 +65,8 @@ export const SliderStyled = styled(Slider)`
   }
 
   .slick-active.slick-current +div {
-    margin: 80px 0px;
+    margin-top: 80px;
+    margin-bottom: 30px;
   }
 
   .slick-active +div {
@@ -42,7 +76,6 @@ export const SliderStyled = styled(Slider)`
   .slick-slide {
     margin-top: 0px;
     width: 464px !important;
-    height: 1060px;
     margin: 0 1.6rem;
     transition: .5s;
 
@@ -70,7 +103,7 @@ export const SliderStyled = styled(Slider)`
 
     &:last-of-type {
       width: 100px !important;
-      margin: 0px 0px 80px;
+      margin: 0px;
 
       @media (min-width: 600px) {
         width: 0px !important;
@@ -78,28 +111,16 @@ export const SliderStyled = styled(Slider)`
     }
     
     @media (max-width: 1350px) {
-      height: 960px !important;
       width: 415px !important;
-    }
-    
-    @media (max-width: 1155px) {
-      height: 900px !important;
     }
 
     @media (max-width: 800px) {
       width: 248px !important;
-      height: 565px !important;
-    }
-
-    @media (max-width: 600px) {
-      height: 440px !important;
-    }
-
-    @media (max-width: 540px) {
-      height: 420px !important;
     }
   }
 `;
+
+export const GhostStyled = styled.div``;
 
 export const CaseNumberStyled = styled.h3`
   font-family: 'Circular Air Pro', sans-serif;
@@ -156,9 +177,16 @@ export const ImageStyled = styled.img`
 `;
 
 export const ButtonContentStyled = styled.section`
-  margin-right: 40px;
+  position: absolute;
+  bottom: -110px;
+  right: 40px;
 
   @media (max-width: 1366px) {
-    margin-right: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  @media (max-width: 799px) {
+    bottom: -60px;
   }
 `;

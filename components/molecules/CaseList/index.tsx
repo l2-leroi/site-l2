@@ -9,6 +9,7 @@ import {
   ButtonContentStyled,
   ImageStyled,
   SliderStyled,
+  GhostStyled,
 } from './styled';
 import Button from '../../atoms/Button';
 import { colors } from '../../../styles/colors';
@@ -131,7 +132,7 @@ function CaseList(props: CaseProps) {
               </CaseStyled>
             ))
           }
-          <div></div>
+          <GhostStyled></GhostStyled>
         </SliderStyled>
       </ListStyled>
 
