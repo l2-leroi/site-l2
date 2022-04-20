@@ -8,7 +8,7 @@ import {
   ButtonServicesStyled,
   ImageStyled,
 } from './styles';
-import seta from '../../../assets/images/seta.svg';
+// import seta from '../../../assets/images/seta.svg';
 import OutSourcing from '../../atoms/letreiro';
 
 export default function OurServices() {
@@ -23,7 +23,7 @@ export default function OurServices() {
 
         <DivButtonServicesStyled>
           <ButtonServicesStyled>NOSSOS SERVIÇOS</ButtonServicesStyled>
-          <ImageStyled src={seta} alt="seta" />
+          {/* <ImageStyled src={seta} alt="seta" /> */}
         </DivButtonServicesStyled>
       </DivOurServicesStyled>
       <OutSourcing />

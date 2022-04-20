@@ -16,8 +16,8 @@ import {
   ButtonClose,
 } from './styles';
 import Image from 'next/image';
-import logo from '../../../assets/images/logoMenu.svg';
-import x from '../../../assets/images/closeMenu.svg';
+// import logo from '../../../assets/images/logoMenu.svg';
+// import x from '../../../assets/images/closeMenu.svg';
 import Scroll from '../../molecules/Scroll';
 
 
@@ -32,7 +32,7 @@ const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
     <Teste style={{ display: openMenu ? 'block' : 'none' }}>
       <Container>
         <DivLogo>
-          <Image src={logo} alt="L2" />
+          {/* <Image src={logo} alt="L2" /> */}
   
           <DivContact>
             <ParagraphOne>entre no time</ParagraphOne>
@@ -46,7 +46,7 @@ const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
         <DivMenu>
           <DivTextMenu>
             <ButtonClose onClick={() => closeMenu(false)}>
-              <Image src={x} alt="X" />
+              {/* <Image src={x} alt="X" /> */}
             </ButtonClose>
             <DivText>
               <TextMenu>ME</TextMenu>
