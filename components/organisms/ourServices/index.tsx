@@ -9,7 +9,7 @@ import {
   ButtonServicesStyled,
 } from './styles';
 import seta from '../../../assets/images/seta.svg';
-import OutSourcing from '../../atomo/letreiro';
+import OutSourcing from '../../atoms/letreiro';
 
 export default function OurServices() {
   return (

@@ -1,11 +1,12 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
+import OurServices from '../components/organisms/ourServices';
 
 const Home: NextPage = () => {
   return (
-    <div>
-      L2 Code
-    </div>
-  )
-}
+    <>
+      <OurServices />
+    </>
+  );
+};
 
-export default Home
+export default Home;

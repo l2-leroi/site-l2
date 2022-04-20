@@ -1,13 +1,13 @@
 import { GlobalStyle } from '../styles/global';
 import '../styles/fonts.css';
 import type { AppProps } from 'next/app';
-import OurServicesOnePage from '../components/organisms/ourServicesOnePage';
+import OurServices from '../components/organisms/ourServices';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
 
-      <OurServicesOnePage/>
+      <OurServices/>
 
     </>
   );
