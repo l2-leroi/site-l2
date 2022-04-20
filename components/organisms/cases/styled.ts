@@ -74,3 +74,18 @@ export const PhraseStyled = styled.p`
     width: 175px;
   }
 `;
+
+export const ScrollArrow = styled.div`
+  position: absolute;
+  right: 14.8rem;
+  bottom: -7rem;
+  @media (max-width: 800px) {
+    bottom: -8.99rem;
+    right: 0.05rem;
+    width: 100%;
+  }
+
+  @media (min-width: 2560px) {
+      right: 703px;
+  }
+`;
