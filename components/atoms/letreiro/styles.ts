@@ -22,6 +22,8 @@ export const ParagraphOutSourcingStyled = styled.p`
   ::selection {
     background: ${colors.purple};
     color: ${colors.gray};
+  @media (max-width: 500px) {
+    font-size: 20px;
   }
   @media (max-width: 500px) {
     font-size: 20px;
