@@ -11,12 +11,12 @@ jobs:
     - uses: actions/checkout@v2.1.0
       with:
         node-version: 12
+    - run: npm install -g yarn
+    - run: yarn install --frozen-lockfile
+    - run: yarn run build
       env:
         AWS_EC2_METADATA_DISABLED: true
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
-    - run: npm install -g yarn
-    - run: yarn install --frozen-lockfile
-    - run: yarn run build
     - run: aws s3 sync ./out s3://site-l2code
