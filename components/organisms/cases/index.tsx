@@ -1,6 +1,7 @@
-import { AsideStyled, ContainerStyled, ContentStyled, DivStyled, ParagraphStyled, PhraseStyled, TitleStyled } from "./styled";
+import { AsideStyled, ContainerStyled, ContentStyled, DivStyled, ParagraphStyled, PhraseStyled, TitleStyled, ScrollArrow} from "./styled";
 import CaseList from "../../molecules/CaseList";
 import React from "react";
+import ScrollCircle from "../../atoms/ScrollCircle";
 
 const Cases = () => {
   const memoriesUpHover = [
@@ -54,6 +55,9 @@ const Cases = () => {
 
   return (
     <ContainerStyled>
+      <ScrollArrow className="SpinnerCircle2">
+        <ScrollCircle image={null}/>
+      </ScrollArrow>
       <ContentStyled>
         <DivStyled>
           <TitleStyled>NOSSOS CASES SELECIONADOS</TitleStyled>
