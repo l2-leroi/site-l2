@@ -30,7 +30,7 @@ export const CaseStyled = styled.article`
   }
 
   @media (max-width: 800px) {
-    height: 520px !important;
+    height: 530px !important;
   }
 `;
 
@@ -173,20 +173,5 @@ export const ImageStyled = styled.img`
 
   &.imageNone {
     display: none;
-  }
-`;
-
-export const ButtonContentStyled = styled.section`
-  position: absolute;
-  bottom: -110px;
-  right: 40px;
-
-  @media (max-width: 1366px) {
-    right: 0px;
-    bottom: 0px;
-  }
-
-  @media (max-width: 799px) {
-    bottom: -60px;
   }
 `;

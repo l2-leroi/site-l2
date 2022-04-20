@@ -6,13 +6,10 @@ import {
   InfoStyled,
   LinkStyled,
   TitleStyled,
-  ButtonContentStyled,
   ImageStyled,
   SliderStyled,
   GhostStyled,
 } from './styled';
-import Button from '../../atoms/Button';
-import { colors } from '../../../styles/colors';
 import { useEffect, useRef, useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -29,7 +26,6 @@ interface Case {
 
 interface CaseProps {
   cases: Case[];
-  linkBtn?: string;
 }
 
 function CaseList(props: CaseProps) {
@@ -62,7 +58,8 @@ function CaseList(props: CaseProps) {
     function animeScroll() {
       const windowTop = window.pageYOffset + window.innerHeight * 0.6;
       target.forEach((element) => {
-        if (windowTop > element.offsetTop) {
+        const position = element.getBoundingClientRect();
+        if (windowTop > position.top) {
           element.classList.add('animate');
         }
       });
@@ -135,12 +132,6 @@ function CaseList(props: CaseProps) {
           <GhostStyled></GhostStyled>
         </SliderStyled>
       </ListStyled>
-
-      {props.linkBtn && (
-        <ButtonContentStyled>
-          <Button linkBtn={props.linkBtn} borderColor={colors.green} />
-        </ButtonContentStyled>
-      )}
     </ContentStyled>
   );
 }

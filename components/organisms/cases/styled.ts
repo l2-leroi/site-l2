@@ -16,7 +16,7 @@ export const ContainerStyled = styled.div`
   }
 
   @media (max-width: 800px) {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 87%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
   }
 `;
 
