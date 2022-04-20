@@ -7,9 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./site-l2
     steps:
     - uses: aws-actions/configure-aws-credentials@v1
       with:
