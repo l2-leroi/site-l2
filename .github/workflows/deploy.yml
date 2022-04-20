@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: aws-actions/configure-aws-credentials@v1
+    - uses: ./
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -16,7 +16,5 @@ jobs:
         node-version: 12
     - run: npm install -g yarn
     - run: yarn install --frozen-lockfile
-    - run: |
-        cd site-l2/site-l2
-        yarn run build
+    - run: yarn run build
     - run: aws s3 sync ./out s3://[site-l2code]
