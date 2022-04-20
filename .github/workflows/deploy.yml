@@ -17,4 +17,4 @@ jobs:
     - run: npm install -g yarn
     - run: yarn install --frozen-lockfile
     - run: yarn run build
-    - run: aws s3 sync ./out s3://site-l2code
+    - run: aws s3 sync ./out s3://[site-l2code]
