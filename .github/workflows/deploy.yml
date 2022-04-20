@@ -8,14 +8,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.0
-      with:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_EC2_METADATA_DISABLED: true
-        aws-region: us-east-1
-        node-version: 12
-    - run: npm install -g yarn
-    - run: yarn install --frozen-lockfile
-    - run: yarn run build
-    - run: aws s3 sync ./out s3://site-l2code
+      - uses: actions/checkout@v2.1.0
+        with:
+          node-version: 12
+      - run: npm install -g yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn run build
+      - name: 'Sync to AWS'
+        env:
+          AWS_ACCESS_KEY_ID: '${{ secrets.AWS_ACCESS_KEY_ID }}'
+          AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_SECRET_ACCESS_KEY }}'
+          AWS_DEFAULT_REGION: 'us-west-2'
+      - run: aws s3 sync ./out s3://site-l2code
