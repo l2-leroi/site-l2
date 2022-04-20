@@ -216,11 +216,9 @@ export const ImageStyled = styled.img`
 `;
 
 export const ArrowSpinnerContainerStyled = styled.div`
-    align-self: center;
-    justify-self: flex-end;
     position: absolute;
-    right: 10%;
-    margin-top: 60px;
+    right: 148px;
+    bottom: -70px;
 
     @media (max-width: 800px) {
         right: 0;
