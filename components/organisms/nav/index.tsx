@@ -11,13 +11,15 @@ import Image from 'next/image';
 // import MenuIcon from '../../../assets/images/Menu-Icon.svg';
 import React, { useState } from 'react';
 import Menu from '../menu';
+import { BannerAnimationContext } from '../../../contexts/BannerAnimationContext';
 
 export default function Nav() {
   const [MenuClick, setClick] = useState(false);
+  const {isBannerAnimating, setIsBannerAnimating} = React.useContext(BannerAnimationContext);
   return (
     <>
       <Menu openMenu={MenuClick} closeMenu={() => setClick(!MenuClick)} />
-      <NavStyled>
+      <NavStyled style={{backgroundColor: isBannerAnimating? 'transparent' : 'blue'}}>
         <NavContentStyled>
           <NavItemStyled>
             {/* <Image src={L2Logo} alt="L2 Code" /> */}

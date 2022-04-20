@@ -14,9 +14,9 @@ import {
   SocialMediaItemStyled,
   ImageStyled,
 } from './styled';
-
-import { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import ScrollCircle from '../../atoms/ScrollCircle/index';
+import { BannerAnimationContext } from '../../../contexts/BannerAnimationContext';
 
 const Header = () => {
   const backgroundList = [
@@ -41,6 +41,7 @@ const Header = () => {
       text: 'THINK',
     },
   ];
+  const {isBannerAnimating, setIsBannerAnimating} = React.useContext(BannerAnimationContext);
 
   const interval = useRef(null);
   let currentImage = '';
@@ -50,6 +51,8 @@ const Header = () => {
   const [actualText, setActualText] = useState('CODE');
 
   const initInterval = (backgroundList) => {
+    setIsBannerAnimating(true);
+    console.log(isBannerAnimating);
     const header = document.querySelector(".header");
     interval.current = setInterval(() => {
       const index = currentImage !== '' ? backgroundList.findIndex(
