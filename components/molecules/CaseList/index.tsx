@@ -6,12 +6,13 @@ import {
   InfoStyled,
   LinkStyled,
   TitleStyled,
-  ButtonContentStyled,
   ImageStyled,
+  SliderStyled,
+  GhostStyled,
 } from './styled';
-import Button from '../../atoms/Button';
-import { colors } from '../../../styles/colors';
 import { useEffect, useRef, useState } from 'react';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface Case {
   number: string;
@@ -25,29 +26,45 @@ interface Case {
 
 interface CaseProps {
   cases: Case[];
-  linkBtn?: string;
 }
 
 function CaseList(props: CaseProps) {
   const interval = useRef(null);
   var currentImage = '';
   const [actualImage, setActualImage] = useState('');
-  // anime scroll
 
+  // anime slider
+  const settings = {
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    swipeToSlide: false,
+    speed: 400,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          swipeToSlide: true,
+        }
+      },
+    ]
+  };
+
+  // anime scroll 
   useEffect(() => {
     const target = document.querySelectorAll<HTMLElement>('[data-anime]');
-
     function animeScroll() {
       const windowTop = window.pageYOffset + window.innerHeight * 0.6;
       target.forEach((element) => {
-        if (windowTop > element.offsetTop) {
+        const position = element.getBoundingClientRect();
+        if (windowTop > position.top) {
           element.classList.add('animate');
         }
       });
     }
-
     animeScroll();
-
     if (target.length) {
       window.addEventListener('scroll', () => {
         animeScroll();
@@ -78,36 +95,43 @@ function CaseList(props: CaseProps) {
   return (
     <ContentStyled>
       <ListStyled>
-        {props.cases.map((itemCase) => (
-          <CaseStyled key={itemCase.title} data-anime="animate">
-            <CaseNumberStyled>Case {itemCase.number}</CaseNumberStyled>
-            <TitleStyled>{itemCase.title}</TitleStyled>
-            <InfoStyled>{itemCase.info}</InfoStyled>
-            <LinkStyled
-              onMouseEnter={() => {
-                initInterval(itemCase.hover);
-              }}
-              onMouseLeave={() => {
-                cancelInterval(itemCase.image);
-              }}
-            >
-              <ImageStyled
-                src={itemCase.image}
-                alt={itemCase.alt}
-                width={464}
-                height={700}
-              />
-              ))
-            </LinkStyled>
-          </CaseStyled>
-        ))}
+        <SliderStyled {...settings}>
+          {
+            props.cases.map((itemCase) => (
+              <CaseStyled key={itemCase.title} data-anime="animate">
+                <CaseNumberStyled>Case {itemCase.number}</CaseNumberStyled>
+                <TitleStyled>{itemCase.title}</TitleStyled>
+                <InfoStyled>{itemCase.info}</InfoStyled>
+                <LinkStyled
+                  onMouseEnter={() => {
+                    initInterval(itemCase.hover);
+                  }}
+                  onMouseLeave={() => {
+                    cancelInterval(itemCase.image);
+                  }}
+                >
+                  <ImageStyled
+                    src={itemCase.image}
+                    alt={itemCase.alt}
+                  />
+                  {
+                    itemCase.hover.map((imageHover => (
+                      <ImageStyled key={imageHover}
+                        src={imageHover}
+                        alt={itemCase.alt}
+                        className={
+                          ((actualImage == imageHover) ? "imageBlock" : "imageNone")
+                        }
+                      />
+                    )))
+                  }
+                </LinkStyled>
+              </CaseStyled>
+            ))
+          }
+          <GhostStyled></GhostStyled>
+        </SliderStyled>
       </ListStyled>
-
-      {props.linkBtn && (
-        <ButtonContentStyled>
-          <Button linkBtn={props.linkBtn} borderColor={colors.green} />
-        </ButtonContentStyled>
-      )}
     </ContentStyled>
   );
 }

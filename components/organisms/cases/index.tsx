@@ -66,7 +66,7 @@ const Cases = () => {
           </AsideStyled>
         </DivStyled>
         <PhraseStyled>Fazemos muito bem porque nos preocupamos com qualidade, estética e, acima de tudo, com resultados.</PhraseStyled>
-        <CaseList cases={cases} linkBtn="#4" />
+        <CaseList cases={cases} />
       </ContentStyled>
     </ContainerStyled>
   );
