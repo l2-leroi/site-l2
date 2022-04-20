@@ -14,9 +14,9 @@ jobs:
     - run: npm install -g yarn
     - run: yarn install --frozen-lockfile
     - run: yarn run build
+    - name: 'Sync to AWS'
       env:
-        AWS_EC2_METADATA_DISABLED: true
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
     - run: aws s3 sync ./out s3://site-l2code
