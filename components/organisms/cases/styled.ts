@@ -77,11 +77,11 @@ export const PhraseStyled = styled.p`
 
 export const ScrollArrow = styled.div`
   position: absolute;
-  right: 14.8rem;
-  bottom: -7rem;
+  right: 148px;
+  bottom: -70px;
   @media (max-width: 800px) {
-    bottom: -8.99rem;
-    right: 0.05rem;
+    bottom: -45px;
+    right: 0.5px;
     width: 100%;
   }
 

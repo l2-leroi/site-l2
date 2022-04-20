@@ -217,8 +217,8 @@ export const ImageStyled = styled.img`
 
 export const ArrowSpinnerContainerStyled = styled.div`
     position: absolute;
-    right: 14.8rem;
-    bottom: -7rem;
+    right: 148px;
+    bottom: -70px;
 
     @media (max-width: 800px) {
         right: 0;
