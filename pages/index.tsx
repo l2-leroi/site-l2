@@ -1,11 +1,12 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
+import Cases from '../components/organisms/cases';
 
 const Home: NextPage = () => {
   return (
-    <div>
-      L2 Code
-    </div>
-  )
-}
+    <>
+      <Cases />
+    </>
+  );
+};
 
-export default Home
+export default Home;
