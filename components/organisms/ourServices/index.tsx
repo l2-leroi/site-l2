@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import {
   SectionStyled,
   DivOurServicesStyled,
@@ -23,7 +22,7 @@ export default function OurServices() {
 
         <DivButtonServicesStyled>
           <ButtonServicesStyled>NOSSOS SERVIÇOS</ButtonServicesStyled>
-          <Image src={seta} alt="seta" />
+          <img src={seta} alt="seta" />
         </DivButtonServicesStyled>
         
       </DivOurServicesStyled>
