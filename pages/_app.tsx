@@ -5,7 +5,7 @@ import OurServices from '../components/organisms/ourServices';
 import Footer from '../components/organisms/footer';
 import Header from '../components/organisms/header/index';
 import OurServicesOnePage from '../components/organisms/ourServicesOnePage';
-import Nav from '../components/organisms/nav';
+import Nav from '../components/organisms/navOnePage';
 
 
 function MyApp({ Component, pageProps }: AppProps) {

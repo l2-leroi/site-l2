@@ -11,6 +11,7 @@ export const HeaderStyled = styled.header`
     padding: 0px 28px;
     background-color: ${colors.strong_gray}; 
     overflow: hidden;
+    
 
     &.white{
         color: white;
@@ -23,6 +24,8 @@ export const MainContentStyled = styled.div`
     box-sizing: border-box;
     align-self: center;
     z-index: 50;
+    padding-top: 30px;
+    box-sizing: border-box;
 `;
 
 export const MainTextStyled = styled.hgroup`
