@@ -6,13 +6,19 @@ import {
   HeadingStyled,
   ParagraphServicesStyled,
   ButtonServicesStyled,
+  ScrollArrow,
 } from './styles';
 import seta from '../../../assets/images/seta.svg';
 import OutSourcing from '../../atoms/letreiro';
+import ScrollCircle from "../../atoms/ScrollCircle";
 
 export default function OurServices() {
   return (
     <SectionStyled>
+      <ScrollArrow className="SpinnerCircle2">
+        <ScrollCircle image={null}/>
+      </ScrollArrow>
+
       <DivOurServicesStyled>
         <HeadingStyled>NOSSOS SERVIÇOS</HeadingStyled>
         <ParagraphServicesStyled>

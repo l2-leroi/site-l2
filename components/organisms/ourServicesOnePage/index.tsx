@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollCircle from "../../atoms/ScrollCircle";
 import {
   SectionOnePageStyled,
   ContentOnePageStyled,
@@ -10,12 +11,17 @@ import {
   HeadingItemStyled,
   ParagraphItemStyled,
   ImageStyled,
+  ScrollArrow,
   GroupItemStyled,
 } from './styles';
 
 export default function OurServicesOnePage() {
   return (
     <SectionOnePageStyled>
+      <ScrollArrow className="SpinnerCircle2">
+        <ScrollCircle image={null}/>
+      </ScrollArrow>
+      
       <ContentOnePageStyled>
         <DivServicesStyled>
           <HeadingStyled>NOSSOS SERVIÇOS</HeadingStyled>
