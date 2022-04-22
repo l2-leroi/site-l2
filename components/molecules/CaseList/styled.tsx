@@ -11,7 +11,7 @@ export const ContentStyled = styled.section`
 export const ListStyled = styled.section``;
 
 export const CaseStyled = styled.article`
-  height: 1005px;
+  height: 1010px;
   opacity: 0;
   transition: .8s;
   transform: translate3d(0, 200px, 0);
@@ -22,15 +22,15 @@ export const CaseStyled = styled.article`
   }
 
   @media (max-width: 1350px) {
-    height: 940px !important;
+    height: 940px;
   }
   
   @media (max-width: 1155px) {
-    height: 920px !important;
+    height: 920px;
   }
 
   @media (max-width: 800px) {
-    height: 530px !important;
+    height: 530px;
   }
 `;
 
@@ -40,37 +40,38 @@ export const SliderStyled = styled(Slider)`
     flex-wrap: nowrap;
 
     @media (max-width: 600px) {
-      height: 690px !important;
+      height: 740px;
     }
 
     @media (max-width: 550px) {
-      height: 630px !important;
+      height: 700px;
     }
 
     @media (max-width: 500px) {
-      height: 620px !important;
+      height: 665px;
     }
 
     @media (max-width: 430px) {
-      height: 580px !important;
+      height: 610px;
     }
 
     @media (max-width: 390px) {
-      height: 550px !important;
+      height: 590px;
     }
   }
 
-  .slick-current {
-    margin-top: 0px;
-  }
+  @media (max-width: 800px) {
+    .slick-current {
+      margin-top: 0px;
+    }
 
-  .slick-active.slick-current +div {
-    margin-top: 80px;
-    margin-bottom: 30px;
-  }
+    .slick-active.slick-current +div {
+      margin-top: 80px;
+    }
 
-  .slick-active +div {
-    margin-top: 160px;
+    .slick-active +div {
+      margin-top: 160px;
+    }
   }
 
   .slick-slide {
@@ -81,10 +82,10 @@ export const SliderStyled = styled(Slider)`
 
     @media (min-width: 801px) {
       &:nth-child(2) {
-        margin-top: 300px !important;
+        margin-top: 300px;
       } 
       &:nth-child(3) {
-        margin-top: 600px !important;
+        margin-top: 600px;
       }
     } 
 
@@ -93,7 +94,7 @@ export const SliderStyled = styled(Slider)`
         margin-top: 80px;
       } 
       &:nth-child(3) {
-        margin-top: 160px !important;
+        margin-top: 160px;
       }
     } 
 
@@ -102,7 +103,7 @@ export const SliderStyled = styled(Slider)`
     }
 
     &:last-of-type {
-      width: 100px !important;
+      width: 100px;
       margin: 0px;
 
       @media (min-width: 600px) {
@@ -111,11 +112,11 @@ export const SliderStyled = styled(Slider)`
     }
     
     @media (max-width: 1350px) {
-      width: 415px !important;
+      width: 415px;
     }
 
     @media (max-width: 800px) {
-      width: 248px !important;
+      width: 248px;
     }
   }
 `;
