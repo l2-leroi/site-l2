@@ -40,8 +40,25 @@ export const BlackLineStyled = styled.div`
   padding-top: 418px;
   padding-bottom: 600px;
 
-  @media(max-width: 800px){
-    padding: 0px 12px;
+  // @media(max-width: 800px){
+  //   padding: 0px 12px;
+  // }
+
+  @media (min-width: 2560px) {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 77%);
+  }
+
+  @media (min-width: 1920px) {
+    clip-path: polygon(0 0, 100% 28%, 100% 100%, 0 76%);
+  }
+
+  @media (max-width: 800px) {
+    clip-path: polygon(0 0, 100% 12%, 100% 100%, 0 88%);
+    padding: 200px 12px;
+  }
+
+  @media (max-width: 600px) {
+    padding-right: 0px;
   }
 `;
 
@@ -174,11 +191,12 @@ export const SpinningIconStyled = styled.div`
   right: 0px;
   z-index: 99;  
   overflow-x: hidden;
-  top: 255px;
+  top: 20rem;
   animation: ${SpinningAnimation} 5s linear infinite;
 
   @media(max-width: 800px){
     max-width: 248px;
+    top: -10px;
   }
 
   @media(max-width: 414px){
