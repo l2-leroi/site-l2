@@ -3,7 +3,7 @@ import '../styles/fonts.css';
 import type { AppProps } from 'next/app';
 import Footer from '../components/organisms/footer';
 import Header from '../components/organisms/header/index';
-import Nav from '../components/organisms/nav';
+import Nav from '../components/organisms/navOnePage';
 
 
 function MyApp({ Component, pageProps }: AppProps) {
