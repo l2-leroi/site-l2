@@ -17,7 +17,7 @@ export default function Nav() {
   return (
     <>
       <Menu openMenu={MenuClick} closeMenu={() => setClick(!MenuClick)} />
-      <NavStyled>
+      <NavStyled className="nav">
         <NavContentStyled>
           <NavItemStyled>
             {/* <Image src={L2Logo} alt="L2 Code" /> */}
