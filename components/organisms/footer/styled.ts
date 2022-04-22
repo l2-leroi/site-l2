@@ -160,5 +160,3 @@ export const IconStyled = styled.span`
   margin: 0 8px 0 9px;
   vertical-align: middle;
 `;
-
-
