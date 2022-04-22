@@ -45,7 +45,7 @@ const Cases = () => {
     { 
       number: "03", 
       title: "Tô Parado", 
-      info: "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira", 
+      info: "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira.", 
       image: "./images/capa-to-parado.jpg", 
       alt: "Capa Tô Parado", 
       link: "#3", 

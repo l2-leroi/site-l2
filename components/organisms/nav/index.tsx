@@ -9,18 +9,40 @@ import {
   TextMenuStyled,
   ImageStyled
 } from './styles';
-// import L2Logo from './images/L2Code-Logo.png';
+// import L2Logo from '../../../assets/images/logoNav.svg';
 // import MenuIcon from '../../../assets/images/Menu-Icon.svg';
 import React, { useEffect, useState } from 'react';
 
 export default function Nav() {
+
+  const handleWhite = () =>{
+    const observer = new MutationObserver(handleMutation);
+
+    const observerTarget = document.querySelector('.nav')
+    observer.observe(observerTarget,{attributes: true})
+  }
+
+  const handleMutation = (mutation) => {
+    if(mutation[0].target.classList.contains('white')){
+      document.querySelector(".navImage").setAttribute('src', "./images/L2Code-Logo-White.png")
+    }
+    else{
+      document.querySelector(".navImage").setAttribute('src', "./images/L2Code-Logo.png");
+    }
+  }
+
+  useEffect(()=> {
+    handleWhite();
+  }, [])
+
+  
 
   return (
     <>
       <NavStyled className="nav">
         <NavContentStyled className="navList">
           <NavItemStyled>
-            <ImageStyled src="./images/L2Code-Logo.png" alt="L2 Code" />
+            <ImageStyled className="navImage" src="./images/L2Code-Logo.png" alt="L2 Code" />
           </NavItemStyled>
           
           <NavItemStyled>
