@@ -4,24 +4,25 @@ import { colors } from '../../../styles/colors';
 export const ContainerStyled = styled.div`
   color: ${colors.black};
   background-color: ${colors.strong_gray};
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-  padding: 10rem 2.8rem 48rem;
+  // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  // padding: 10rem 2.8rem 48rem;
+  padding: 10rem 2.8rem 10rem;  
 
-  @media (min-width: 2560px) {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 77%);
-  }
+  // @media (min-width: 2560px) {
+  //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 77%);
+  // }
 
-  @media (min-width: 1920px) {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);
-  }
+  // @media (min-width: 1920px) {
+  //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);
+  // }
 
-  @media (max-width: 800px) {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
-  }
+  // @media (max-width: 800px) {
+  //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
+  // }
 
-  @media (max-width: 600px) {
-    padding-right: 0px;
-  }
+  // @media (max-width: 600px) {
+  //   padding-right: 0px;
+  // }
 `;
 
 export const ContentStyled = styled.section`
