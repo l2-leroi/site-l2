@@ -1,12 +1,12 @@
 import type { NextPage } from 'next';
 import Cases from '../components/organisms/cases';
-import OurCustomers from '../components/organisms/ourCustomers';
+import OurCustomersTemp from '../components/organisms/ourCustomersTemp';
 
 const Home: NextPage = () => {
   return (
     <>
       <Cases />
-      <OurCustomers />
+      <OurCustomersTemp />
     </>
   );
 };

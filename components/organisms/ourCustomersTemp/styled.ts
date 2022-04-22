@@ -6,33 +6,26 @@ export const OurCustomersStyled = styled.section`
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding-top: 300px;
+  padding-bottom: 250px;
 `;
 
 export const BlackLineStyled = styled.div`
   color: ${colors.gray};
   background-color: ${colors.black};
-  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
+  //clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 75%);
   z-index: 1;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr minmax(280px, 1456px) 1fr;
   padding: 0px 28px;
   overflow: hidden;
+  padding-top: 418px;
+  padding-bottom: 600px;
 
   @media(max-width: 800px){
     padding: 0px 12px;
   }
-`;
-
-export const PurpleLineStyled = styled.div`
-  color: ${colors.gray};
-  background-color: ${colors.purple};
-  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
-  z-index: 1;
-  width: 100%;
-  overflow: hidden;
-  padding-top: 50px;
 `;
 
 export const HeaderStyled = styled.hgroup`
@@ -140,7 +133,8 @@ export const SignStyled = styled.span`
   position: absolute;
   top: -20px;
   z-index: 99;
-  margin-top: -20px
+  margin-top: -20px;
+  transform: rotate(17.76deg);
 
   @media(max-width: 800px){
     font-size: 20px;
@@ -163,6 +157,7 @@ export const SpinningIconStyled = styled.div`
   right: 0px;
   z-index: 99;  
   overflow-x: hidden;
+  top: 255px;
   animation: ${SpinningAnimation} 5s linear infinite;
 
   @media(max-width: 800px){
@@ -179,6 +174,7 @@ export const SignContainerStyled = styled.div`
   padding-top: 40px;
   margin-top: -2px;
   position: relative;
+  
 `;
 
 export const CustomersContainer = styled.div`
