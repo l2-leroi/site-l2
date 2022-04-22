@@ -52,6 +52,7 @@ const OurCustomersTemp = () => {
         <img src={Spinner} alt="L2 Code" />
       </SpinningIconStyled>
       <TopGreyBackgroundStyled />
+      <BottomPurpleBackgroundStyled />
       <BlackLineStyled>
         <ContentStyled>
           <HeaderStyled>
@@ -78,7 +79,6 @@ const OurCustomersTemp = () => {
             </SignStyled>
         </SignContainerStyled>
       </BlackLineStyled>
-      <BottomPurpleBackgroundStyled />
     </OurCustomersStyled>
   );
 };
