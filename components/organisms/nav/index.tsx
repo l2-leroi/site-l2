@@ -6,7 +6,6 @@ import {
   DivTextStyled,
   TextMenuStyled,
 } from './styles';
-import Image from 'next/image';
 // import L2Logo from '../../../assets/images/logoNav.svg';
 // import MenuIcon from '../../../assets/images/Menu-Icon.svg';
 import React, { useState } from 'react';
@@ -17,7 +16,7 @@ export default function Nav() {
   return (
     <>
       <Menu openMenu={MenuClick} closeMenu={() => setClick(!MenuClick)} />
-      <NavStyled>
+      <NavStyled className="nav">
         <NavContentStyled>
           <NavItemStyled>
             {/* <Image src={L2Logo} alt="L2 Code" /> */}

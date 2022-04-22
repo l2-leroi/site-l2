@@ -45,7 +45,7 @@ const Cases = () => {
     { 
       number: "03", 
       title: "Tô Parado", 
-      info: "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira", 
+      info: "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira.", 
       image: "./images/capa-to-parado.jpg", 
       alt: "Capa Tô Parado", 
       link: "#3", 
@@ -66,7 +66,7 @@ const Cases = () => {
           </AsideStyled>
         </DivStyled>
         <PhraseStyled>Fazemos muito bem porque nos preocupamos com qualidade, estética e, acima de tudo, com resultados.</PhraseStyled>
-        <CaseList cases={cases} linkBtn="#4" />
+        <CaseList cases={cases} />
       </ContentStyled>
     </ContainerStyled>
   );

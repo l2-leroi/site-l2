@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
+import Slider from "react-slick";
 
 export const ContentStyled = styled.section`
   display: flex;
@@ -7,53 +8,124 @@ export const ContentStyled = styled.section`
   overflow: hidden;
 `;
 
-export const ListStyled = styled.section`
-  display: inline-flex;
-`;
+export const ListStyled = styled.section``;
 
 export const CaseStyled = styled.article`
-  width: 100%;
-  height: 1008px;
+  height: 1010px;
   opacity: 0;
   transition: .8s;
   transform: translate3d(0, 200px, 0);
 
-  &:nth-child(2) {
-    margin: 30rem 3.2rem 0;
-  }
-
-  &:nth-child(3) {
-    margin-top: 60rem;
-  }
-
   &.animate {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-  
+  }
+
   @media (max-width: 1350px) {
-    height: 850px;
+    height: 940px;
   }
   
   @media (max-width: 1155px) {
-    height: 800px;
+    height: 920px;
   }
 
   @media (max-width: 800px) {
-    height: 546px;
-  }
-
-  @media (max-width: 600px) {
-    height: 420px;
-  }
-
-  @media (max-width: 408px) {
-    height: 265px;
+    height: 530px;
   }
 `;
 
+export const SliderStyled = styled(Slider)`
+  .slick-track {
+    display: flex;
+    flex-wrap: nowrap;
+
+    @media (max-width: 600px) {
+      height: 740px;
+    }
+
+    @media (max-width: 550px) {
+      height: 700px;
+    }
+
+    @media (max-width: 500px) {
+      height: 665px;
+    }
+
+    @media (max-width: 430px) {
+      height: 610px;
+    }
+
+    @media (max-width: 390px) {
+      height: 590px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .slick-current {
+      margin-top: 0px;
+    }
+
+    .slick-active.slick-current +div {
+      margin-top: 80px;
+    }
+
+    .slick-active +div {
+      margin-top: 160px;
+    }
+  }
+
+  .slick-slide {
+    margin-top: 0px;
+    width: 464px !important;
+    margin: 0 1.6rem;
+    transition: .5s;
+
+    @media (min-width: 801px) {
+      &:nth-child(2) {
+        margin-top: 300px;
+      } 
+      &:nth-child(3) {
+        margin-top: 600px;
+      }
+    } 
+
+    @media (min-width: 600px) and (max-width: 800px) {
+      &:nth-child(2) {
+        margin-top: 80px;
+      } 
+      &:nth-child(3) {
+        margin-top: 160px;
+      }
+    } 
+
+    &:first-of-type {
+      margin-left: 0px;
+    }
+
+    &:last-of-type {
+      width: 100px;
+      margin: 0px;
+
+      @media (min-width: 600px) {
+        width: 0px !important;
+      }
+    }
+    
+    @media (max-width: 1350px) {
+      width: 415px;
+    }
+
+    @media (max-width: 800px) {
+      width: 248px;
+    }
+  }
+`;
+
+export const GhostStyled = styled.div``;
+
 export const CaseNumberStyled = styled.h3`
   font-family: 'Circular Air Pro', sans-serif;
-  weight: 400;
+  font-weight: 400;
   font-size: 16px;
   line-height: 22.4px;
   padding: 0 0 3.2rem 10px;
@@ -67,7 +139,7 @@ export const CaseNumberStyled = styled.h3`
 
 export const TitleStyled = styled.h4`
   font-family: 'Neue Machina', sans-serif;
-  weight: 800;
+  font-weight: 800;
   font-size: 4rem;
   line-height: 4.8rem;
   padding: 4.4rem 0 2.8rem 0;
@@ -75,7 +147,7 @@ export const TitleStyled = styled.h4`
 
 export const InfoStyled = styled.p`
   font-family: 'Circular Air Pro', sans-serif;
-  weight: 400;
+  font-weight: 400;
   font-size: 2.4rem;
   line-height: 3.36rem;
   padding-bottom: 3.2rem;
@@ -102,13 +174,5 @@ export const ImageStyled = styled.img`
 
   &.imageNone {
     display: none;
-  }
-`;
-
-export const ButtonContentStyled = styled.section`
-  margin: 80px 40px 0 0;
-
-  @media (max-width: 800px) {
-    margin-top: 28px;
   }
 `;
