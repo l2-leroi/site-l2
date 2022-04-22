@@ -15,25 +15,23 @@ import {
   CustomersContainer
 } from './styled';
 
-import Image from 'next/image';
-
-import ToParadoLogo from '../../../assets/images/OurCustomers/to-parado-logo.svg';
-import PhiLogo from '../../../assets/images/OurCustomers/phi-logo.svg';
-import BancoRCILogo from '../../../assets/images/OurCustomers/banco-rci-logo.svg';
-import SescLogo from '../../../assets/images/OurCustomers/sesc-logo.svg';
-import TalentDreamsLogo from '../../../assets/images/OurCustomers/talent-dreams-logo.svg';
-import AnotaAiLogo from '../../../assets/images/OurCustomers/anotai-logo.svg';
-import MemoriesUpLogo from '../../../assets/images/OurCustomers/memories-up-logo.svg';
-import NoVerdeLogo from '../../../assets/images/OurCustomers/no-verde-logo.svg';
-import DigitalBusinessLogo from '../../../assets/images/OurCustomers/digital-business-logo.svg';
-import FundacredLogo from '../../../assets/images/OurCustomers/fundacred-logo.svg';
-
-import Spinner from '../../../assets/images/OurCustomers/enfeite-giratorio.svg';
-
 import CustomersList from '../../molecules/CustomersList/index';
 import React from 'react';
 
 const OurCustomersTemp = () => {
+  const ToParadoLogo = './images/OurCustomers/to-parado-logo.svg';
+  const PhiLogo = './images/OurCustomers/phi-logo.svg';
+  const BancoRCILogo = './images/OurCustomers/banco-rci-logo.svg';
+  const SescLogo = './images/OurCustomers/sesc-logo.svg';
+  const TalentDreamsLogo = './images/OurCustomers/talent-dreams-logo.svg';
+  const AnotaAiLogo = './images/OurCustomers/anotai-logo.svg';
+  const MemoriesUpLogo = './images/OurCustomers/memories-up-logo.svg';
+  const NoVerdeLogo = './images/OurCustomers/no-verde-logo.svg';
+  const DigitalBusinessLogo = './images/OurCustomers/digital-business-logo.svg';
+  const FundacredLogo = './images/OurCustomers/fundacred-logo.svg';
+
+  const Spinner = './images/OurCustomers/enfeite-giratorio.svg';
+
   const customers = [
     { alt: 'Tô Parado Logo', src: ToParadoLogo },
     { alt: 'Phi Logo', src: PhiLogo },
@@ -51,7 +49,7 @@ const OurCustomersTemp = () => {
   return (
     <OurCustomersStyled>
       <SpinningIconStyled className='spinner'>
-        <Image src={Spinner} alt="L2 Code" />
+        <img src={Spinner} alt="L2 Code" />
       </SpinningIconStyled>
       <TopGreyBackgroundStyled />
       <BlackLineStyled>
