@@ -15,7 +15,6 @@ import {
   Teste,
   ButtonClose,
 } from './styles';
-import Image from 'next/image';
 // import logo from '../../../assets/images/logoMenu.svg';
 // import x from '../../../assets/images/closeMenu.svg';
 import Scroll from '../../molecules/Scroll';
