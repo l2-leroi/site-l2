@@ -20,7 +20,7 @@ export const TopGreyBackgroundStyled = styled.div`
 
 export const BottomPurpleBackgroundStyled = styled.div`
   background-color: ${colors.purple};
-  z-index: -1;
+  z-index: 0;
   height: 500px;
   position: absolute;
   bottom: 0;
