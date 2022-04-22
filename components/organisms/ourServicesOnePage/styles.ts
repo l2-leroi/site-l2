@@ -16,6 +16,21 @@ export const SectionOnePageStyled = styled.section`
   }
 `;
 
+export const ScrollArrow = styled.div`
+  position: absolute;
+  right: 148px;
+  bottom: -70px;
+  @media (max-width: 800px) {
+    bottom: -45px;
+    right: 0.5px;
+    width: 100%;
+  }
+
+  @media (min-width: 2560px) {
+    right: 703px;
+  }
+`;
+
 export const ContentOnePageStyled = styled.div`
   background: ${colors.black};
   border-radius: 8px;
