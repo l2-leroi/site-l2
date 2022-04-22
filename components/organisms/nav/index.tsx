@@ -6,7 +6,6 @@ import {
   DivTextStyled,
   TextMenuStyled,
 } from './styles';
-import Image from 'next/image';
 // import L2Logo from '../../../assets/images/logoNav.svg';
 // import MenuIcon from '../../../assets/images/Menu-Icon.svg';
 import React, { useState } from 'react';
