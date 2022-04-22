@@ -5,6 +5,17 @@ export const NavStyled = styled.nav`
   position: fixed;
   width: 100%;
   z-index: 60;
+  color: ${colors.black};
+  background-color: ${colors.strong_gray};
+
+  &.white {
+    background-color: transparent;
+    color: white;
+  }
+
+  &.white p{
+    color: white;
+  }
 `;
 
 export const NavContentStyled = styled.ul`
@@ -21,7 +32,6 @@ export const NavItemStyled = styled.li`
   line-height: 22px;
   letter-spacing: -0.02em;
   font-weight: 700;
-  color: ${colors.black};
   @media (max-width: 500px) {
     font-size: 10px;
     line-height: 14px;
@@ -56,7 +66,6 @@ export const TextMenuStyled = styled.p`
   line-height: 22px;
   text-align: center;
   letter-spacing: -0.02em;
-  color: ${colors.black};
   padding-left: 8px;
   @media (max-width: 500px) {
     display: none;

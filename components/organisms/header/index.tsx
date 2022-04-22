@@ -14,8 +14,7 @@ import {
   SocialMediaItemStyled,
   ImageStyled,
 } from './styled';
-
-import { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import ScrollCircle from '../../atoms/ScrollCircle/index';
 
 const Header = () => {
@@ -41,6 +40,7 @@ const Header = () => {
       text: 'THINK',
     },
   ];
+  const [isBannerAnimating, setIsBannerAnimating] = useState(false);
 
   const interval = useRef(null);
   let currentImage = '';
@@ -50,7 +50,11 @@ const Header = () => {
   const [actualText, setActualText] = useState('CODE');
 
   const initInterval = (backgroundList) => {
+    setIsBannerAnimating(true);
+    console.log(isBannerAnimating);
     const header = document.querySelector(".header");
+    const nav = document.querySelector(".nav");
+    
     interval.current = setInterval(() => {
       const index = currentImage !== '' ? backgroundList.findIndex(
         (background) => background.image === currentImage,
@@ -69,18 +73,22 @@ const Header = () => {
         setActualText(backgroundList[index + 1].text);
       }
       header.classList.add("white");
+      nav.classList.add("white");
       setWhiteCircle(true);
     }, 150);
   };
 
   const exitInterval = (backgroundList) => {
     const header = document.querySelector(".header");
+    const nav = document.querySelector(".nav");
     header.classList.remove("white");
+    nav.classList.remove("white");
     setWhiteCircle(false);
     clearInterval(interval.current);
     interval.current = null;
     setActualImage(backgroundList);
     setActualText('CODE');
+    document.body.classList.remove("white");
   };
 
   return (
