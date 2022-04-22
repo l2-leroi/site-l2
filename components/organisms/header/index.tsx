@@ -14,7 +14,7 @@ import {
   SocialMediaItemStyled,
   ImageStyled,
 } from './styled';
-import React, { useContext, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import ScrollCircle from '../../atoms/ScrollCircle/index';
 
 const Header = () => {
