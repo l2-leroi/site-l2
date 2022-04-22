@@ -2,18 +2,35 @@ import styled, { keyframes } from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const OurCustomersStyled = styled.section`
-  background-color: #fff;
+  background-color: transparent;
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding-bottom: 250px;
+  // padding-bottom: 250px;
+`;
+
+export const TopGreyBackgroundStyled = styled.div`
+  background-color: ${colors.strong_gray};
+  z-index: 0;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+`;
+
+export const BottomPurpleBackgroundStyled = styled.div`
+  background-color: ${colors.purple};
+  z-index: -1;
+  height: 500px;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
 `;
 
 export const BlackLineStyled = styled.div`
   color: ${colors.gray};
   background-color: ${colors.black};
-  //clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
-  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 75%);
+  clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 75%);
   z-index: 1;
   width: 100%;
   display: grid;
@@ -29,7 +46,7 @@ export const BlackLineStyled = styled.div`
 `;
 
 export const HeaderStyled = styled.hgroup`
-  max-width: 780px;
+  max-width: 680px;
 
   @media(max-width: 800px){
     max-width: 336px;
@@ -125,7 +142,7 @@ export const SignStyled = styled.span`
   font-weight: 800;
   letter-spacing: -0.02em;
   text-align: center;
-  color: ${colors.darkgray};
+  color: ${colors.dark_gray};
   overflow: hidden;
   padding-left: 30px;
   width: 100%;

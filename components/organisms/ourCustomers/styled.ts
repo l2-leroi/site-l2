@@ -132,7 +132,7 @@ export const SignStyled = styled.span`
   font-weight: 800;
   letter-spacing: -0.02em;
   text-align: center;
-  color: ${colors.darkgray};
+  color: ${colors.dark_gray};
   overflow: hidden;
   padding-left: 30px;
   width: 100%;

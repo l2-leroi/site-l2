@@ -6,6 +6,8 @@ import {
   ContentStyled,
   SignStyled,
   SpinningIconStyled,
+  TopGreyBackgroundStyled,
+  BottomPurpleBackgroundStyled,
   BlackLineStyled,
   SignContainerStyled,
   AsideStyled,
@@ -51,7 +53,8 @@ const OurCustomersTemp = () => {
       <SpinningIconStyled className='spinner'>
         <Image src={Spinner} alt="L2 Code" />
       </SpinningIconStyled>
-      <BlackLineStyled className='blackLine'>
+      <TopGreyBackgroundStyled />
+      <BlackLineStyled>
         <ContentStyled>
           <HeaderStyled>
             <TitleStyled>ALGUNS DE NOSSOS CLIENTES</TitleStyled>
@@ -69,16 +72,15 @@ const OurCustomersTemp = () => {
         <CustomersContainer>
           <CustomersList customers={customers}/>
         </CustomersContainer>
-
-          
-      <SignContainerStyled>
-        <SignStyled className='sign'>
-                Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista ·
-                Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista ·
-                Adoraríamos ter você nessa lista ·
-          </SignStyled>
-      </SignContainerStyled>
+        <SignContainerStyled>
+          <SignStyled className='sign'>
+                  Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista ·
+                  Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista ·
+                  Adoraríamos ter você nessa lista ·
+            </SignStyled>
+        </SignContainerStyled>
       </BlackLineStyled>
+      <BottomPurpleBackgroundStyled />
     </OurCustomersStyled>
   );
 };

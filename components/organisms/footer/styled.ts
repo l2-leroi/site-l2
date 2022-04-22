@@ -4,21 +4,21 @@ import { colors } from '../../../styles/colors';
 export const FooterStyled = styled.footer`
   color: ${colors.gray};
   background-color: ${colors.purple};
-  clip-path: polygon(0 0, 100% 41.6%, 100% 100%, 0% 100%);
+  // clip-path: polygon(0 0, 100% 41.6%, 100% 100%, 0% 100%);
   width: 100%;
-  padding: 35.5rem 2.8rem 6.05rem;
+  padding: 0rem 2.8rem 6.05rem;
 
-  @media (min-width: 2560px) {
-    clip-path: polygon(0 0, 100% 57%, 100% 100%, 0% 100%);
-  }
+  // @media (min-width: 2560px) {
+  //   clip-path: polygon(0 0, 100% 57%, 100% 100%, 0% 100%);
+  // }
 
-  @media (min-width: 1920px) {
-    clip-path: polygon(0 0, 100% 49%, 100% 100%, 0% 100%);
-  }
+  // @media (min-width: 1920px) {
+  //   clip-path: polygon(0 0, 100% 49%, 100% 100%, 0% 100%);
+  // }
 
-  @media (max-width: 800px) {
-    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
-  }
+  // @media (max-width: 800px) {
+  //   clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+  // }
 `;
 
 export const ContainerStyled = styled.div`
