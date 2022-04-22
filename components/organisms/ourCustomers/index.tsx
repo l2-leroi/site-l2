@@ -7,7 +7,6 @@ import {
   SignStyled,
   SpinningIconStyled,
   BlackLineStyled,
-  PurpleLineStyled,
   SignContainerStyled,
   AsideStyled,
   ParagraphStyled,
@@ -46,58 +45,7 @@ const OurCustomers = () => {
     { alt: 'Fundacred Logo', src: FundacredLogo },
   ];
 
-  const lines = [
-    {
-      element: "blackLine",
-      halfWindow: 0.8,
-      secondaryElement: "spinner",
-    },
-
-    {
-      element: "purpleLine",
-      halfWindow: 0.9,
-      secondaryElement: "sign",
-    }
-  ]
-
-  React.useEffect(()=> {
-    window.addEventListener("scroll", handleScroll);
-  });
- 
-  const handleScroll = () => {
-
-    lines.forEach(lineObj => {
-      const line = document.querySelector(`.${lineObj.element}`) as HTMLElement;
-      const secondaryElement = document.querySelector(`.${lineObj.secondaryElement}`) as HTMLElement;
-      const halfWindow = window.innerHeight * lineObj.halfWindow;
-      const lineTop = line.getBoundingClientRect().top;
-      const inclination = (halfWindow - lineTop)/10;
-      const internalPadding = (halfWindow - lineTop);
-      const isVisible = (lineTop - halfWindow) < 0;
-      let secondaryElementTop;
-
-      if(lineObj.secondaryElement === "spinner"){
-        secondaryElementTop = (inclination * 11) - (secondaryElement.offsetHeight/2) + 300;
-      }else if(lineObj.secondaryElement === "sign"){
-        secondaryElementTop = inclination * 2;
-      }
-
-      if(isVisible && inclination <= 60 && internalPadding <= 576){
-        if(inclination >= 0){
-          secondaryElement.style.top = `${secondaryElementTop}px`;
-
-          if(lineObj.secondaryElement === "sign"){
-            secondaryElement.style.transform = `rotate(${inclination/7}deg)`;
-          }
-
-        }
-
-        line.style.clipPath = `polygon(0 0, 100% ${inclination}%, 100% 100%, 0% 100%)`;
-        line.style.paddingTop = `${internalPadding}px`;     
-      }
-    });
-  }
-
+  
   return (
     <OurCustomersStyled>
       <SpinningIconStyled className='spinner'>
@@ -123,17 +71,14 @@ const OurCustomers = () => {
         </CustomersContainer>
 
           
-      </BlackLineStyled>
       <SignContainerStyled>
         <SignStyled className='sign'>
                 Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista ·
                 Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista ·
                 Adoraríamos ter você nessa lista ·
           </SignStyled>
-        <PurpleLineStyled className='purpleLine'>
-          
-        </PurpleLineStyled>
       </SignContainerStyled>
+      </BlackLineStyled>
     </OurCustomersStyled>
   );
 };
