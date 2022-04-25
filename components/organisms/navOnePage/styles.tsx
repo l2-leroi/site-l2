@@ -19,9 +19,11 @@ position: absolute;
 
   &.smallFixed{
     position: fixed;
+    transition: all 0.5s;
     
     ul.navList {
       padding: 25px 28px;
+      transition: all 0.4s;
     }
   }
 `;
@@ -48,6 +50,13 @@ export const NavItemStyled = styled.li`
       @media (max-width: 980px) {
         min-width: 43px;
       }
+  }
+
+  &:nth-of-type(2){
+    @media (max-width: 880px) {
+      display: none;
+      height: 0px;
+    }
   }
 
   @media (max-width: 500px) {
@@ -86,10 +95,6 @@ export const NavLinkStyled = styled.li`
   @media (max-width: 500px) {
     font-size: 10px;
     line-height: 14px;
-  }
-
-  @media (max-width: 880px) {
-    display: none;
   }
 `;
 

@@ -31,8 +31,34 @@ export default function Nav() {
     }
   }
 
+  let lastScrollTop = 0;
+
+  const handleScroll = () => {
+    const bannerText = document.querySelector(".bannerText") as HTMLElement;
+    const bannerTextTop = bannerText.getBoundingClientRect().top;
+
+    const nav = document.querySelector('.nav')
+
+    if( screen.width <= 880 ) {
+      if (bannerTextTop > lastScrollTop){
+        nav.classList.add("smallFixed");
+      }
+      else{
+        nav.classList.remove("smallFixed");
+      }
+      lastScrollTop = bannerTextTop;
+    }
+    else{
+      bannerTextTop < 0? 
+      nav.classList.add("smallFixed") :
+      nav.classList.remove("smallFixed");
+    }
+  }
+
+
   useEffect(()=> {
     handleWhite();
+    addEventListener("scroll", handleScroll);
   }, [])
 
   
