@@ -98,7 +98,7 @@ export const SubtitleStyled = styled.h3`
   line-height: 140%;
   letter-spacing: -0.04em;
 
-  @media(max-width: 760px){
+  @media(max-width: 800px){
     font-size: 12px;
     //0.75em
     line-height: 140%;
@@ -132,6 +132,7 @@ export const ParagraphStyled = styled.p`
     font-size: 10px;
     //0.625em
     max-width: 61px;
+    margin-right: 12px;
   }
 `;
 

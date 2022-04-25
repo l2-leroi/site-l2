@@ -48,9 +48,6 @@ const OurCustomersTemp = () => {
   
   return (
     <OurCustomersStyled>
-      <SpinningIconStyled className='spinner'>
-        <img src={Spinner} alt="L2 Code" />
-      </SpinningIconStyled>
       <TopGreyBackgroundStyled />
       <BottomPurpleBackgroundStyled />
       <BlackLineStyled>
