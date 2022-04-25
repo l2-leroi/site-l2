@@ -14,11 +14,14 @@ export const ListStyled = styled.ul`
     top: -5;
     margin-top: -10px;
     right: -5px;
-    padding: 50px;
+    padding: 50px 0;
     background: ${colors.black};
-    width: 5%;
+    width: 2%;
     height: 80%;
     z-index: 7;
+    @media (max-width: 800px){
+      width: 5%;
+    }
   }
 
   @media(max-width: 800px){
@@ -28,6 +31,8 @@ export const ListStyled = styled.ul`
       height: 90%;
     }
   }
+
+  
 `;
 
 export const ContentStyled = styled.li`
@@ -44,6 +49,8 @@ export const ContentStyled = styled.li`
   min-width: 80px;
   position: relative;
 
+  
+
   span {
     z-index: 8;
   }
@@ -55,6 +62,7 @@ export const ContentStyled = styled.li`
     right: -3px;
     z-index: 6;
     font-size 20px;
+    
   }
 
   &::before {
@@ -64,6 +72,16 @@ export const ContentStyled = styled.li`
     right: -3px;
     z-index: 6;
     font-size 20px;
+    
+  }
+
+  img{
+    @media (max-width: 1025px){
+      max-width: 150px;
+    }
+    @media (max-width: 430px){
+      max-width: 100px;
+    }
   }
 `;
 
