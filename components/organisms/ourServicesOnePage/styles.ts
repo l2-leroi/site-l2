@@ -5,14 +5,14 @@ export const SectionOnePageStyled = styled.section`
   display: flex;
   justify-content: center;
   background-color: ${colors.strong_gray};
-  padding: 120px 152px 10rem;
+  padding: 120px 152px 10rem; 
+  @media (max-width: 1024px) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
   @media (max-width: 650px) {
     padding-left: 60px;
     padding-right: 60px;
-  }
-  @media (max-width: 800px) {
-    padding-left: 12px;
-    padding-right: 12px;
   }
 `;
 
@@ -130,6 +130,10 @@ export const DivItemStyled = styled.div`
     &:nth-child(5) {
       order: 5;
     }
+  }
+
+  @media (max-width: 450px) {
+    margin-right: 70px;
   }
 `;
 
