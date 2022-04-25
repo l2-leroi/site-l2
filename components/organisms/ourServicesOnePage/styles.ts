@@ -10,7 +10,7 @@ export const SectionOnePageStyled = styled.section`
     padding-left: 60px;
     padding-right: 60px;
   }
-  @media (max-width: 450px) {
+  @media (max-width: 800px) {
     padding-left: 12px;
     padding-right: 12px;
   }
@@ -35,16 +35,15 @@ export const ContentOnePageStyled = styled.div`
   background: ${colors.black};
   border-radius: 8px;
   width: 1220px;
-  padding: 90px 124px;
+  padding: 90px 124px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   @media (max-width: 800px) {
-    width: 100%;
-    padding: 40px 16px 0px;
+    padding-bottom: 50px
   }
   @media (max-width: 650px) {
-    padding: 40px 16px;
+    padding: 40px 16px 0px;
   }
 `;
 
@@ -91,28 +90,15 @@ export const ParagraphServicesStyled = styled.p`
   }
   @media (max-width: 650px) {
     width: 160px;
+    padding-top: 20px;
   }
 `;
 
 export const DivServiceItemsStyled = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  
-  @media (max-width: 650px) {
-    justify-content: center;
-    margin: 0 auto;
-  }
-`;
-
-export const GroupItemStyled = styled.div`
-  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-
-  @media (max-width: 650px) {
-    display: block;
-  }
 `;
 
 export const DivItemStyled = styled.div`
@@ -120,8 +106,30 @@ export const DivItemStyled = styled.div`
   @media (max-width: 800px) {
     width: 170px;
   }
+  @media (min-width: 750px) and (max-width: 800px) {
+    width: 170px;
+    &:nth-child(odd) {
+      margin-right: 110px;
+    }
+  }
   @media (max-width: 650px) {
     width: 230px;
+    margin-right: 170px;
+    &:nth-child(1) {
+      order: 1;
+    }
+    &:nth-child(2) {
+      order: 4;
+    }
+    &:nth-child(3) {
+      order: 2;
+    }
+    &:nth-child(4) {
+      order: 3;
+    }
+    &:nth-child(5) {
+      order: 5;
+    }
   }
 `;
 
@@ -135,11 +143,12 @@ export const HeadingItemStyled = styled.h3`
   font-size: 4rem;
   line-height: 4.8rem;
   letter-spacing: -0.02em;
-  color: #8e9195;
+  color: ${colors.gray};
   padding-bottom: 24px;
   margin: 0;
   @media (max-width: 650px) {
     width: 304px;
+    padding-bottom: 16px;
   }
 `;
 
@@ -153,9 +162,9 @@ export const ParagraphItemStyled = styled.p`
   font-size: 2.4rem;
   line-height: 3.4rem;
   letter-spacing: -0.04em;
-  color: #8e9195;
+  color: ${colors.dark_gray};
   margin-top: 0;
-  margin-bottom: 80px;
+  margin-bottom: 8rem;
 `;
 
 export const ImageStyled = styled.img`
