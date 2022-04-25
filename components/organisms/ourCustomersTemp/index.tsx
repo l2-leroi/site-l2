@@ -68,13 +68,6 @@ const OurCustomersTemp = () => {
         <CustomersContainer>
           <CustomersList customers={customers}/>
         </CustomersContainer>
-        <SignContainerStyled>
-          <SignStyled className='sign'>
-                  Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista ·
-                  Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista ·
-                  Adoraríamos ter você nessa lista ·
-            </SignStyled>
-        </SignContainerStyled>
       </BlackLineStyled>
     </OurCustomersStyled>
   );
