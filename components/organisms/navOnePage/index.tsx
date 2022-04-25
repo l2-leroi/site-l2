@@ -8,12 +8,12 @@ import {
   DivTextStyled,
   TextMenuStyled,
   ImageStyled
-} from './styles';
+} from "./styled";
 // import L2Logo from '../../../assets/images/logoNav.svg';
 // import MenuIcon from '../../../assets/images/Menu-Icon.svg';
 import React, { useEffect, useState } from 'react';
 
-export default function Nav() {
+export default function NavOnePage() {
 
   const handleWhite = () =>{
     const observer = new MutationObserver(handleMutation);

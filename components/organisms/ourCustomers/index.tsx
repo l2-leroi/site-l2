@@ -12,7 +12,7 @@ import {
   AsideStyled,
   ParagraphStyled,
   CustomersContainer
-} from './styled';
+} from "./styled";
 
 import Image from 'next/image';
 

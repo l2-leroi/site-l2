@@ -13,7 +13,7 @@ import {
   SocialMediaTitleStyled,
   SocialMediaItemStyled,
   ImageStyled,
-} from './styled';
+} from "./styled";
 import React, { useRef, useState } from 'react';
 import ScrollCircle from '../../atoms/ScrollCircle/index';
 

@@ -14,7 +14,7 @@ import {
   ParagraphTwo,
   Teste,
   ButtonClose,
-} from './styles';
+} from "./styled";
 // import logo from '../../../assets/images/logoMenu.svg';
 // import x from '../../../assets/images/closeMenu.svg';
 import Scroll from '../../molecules/Scroll';

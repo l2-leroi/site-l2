@@ -13,7 +13,7 @@ import {
   AsideStyled,
   ParagraphStyled,
   CustomersContainer
-} from './styled';
+} from "./styled";
 
 import CustomersList from '../../molecules/CustomersList/index';
 import React from 'react';
