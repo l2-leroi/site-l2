@@ -75,8 +75,8 @@ export const SliderStyled = styled(Slider)`
   }
 
   .slick-slide {
+    width: 464px;
     margin-top: 0px;
-    width: 464px !important;
     margin: 0 1.6rem;
     transition: .5s;
 
@@ -107,7 +107,7 @@ export const SliderStyled = styled(Slider)`
       margin: 0px;
 
       @media (min-width: 600px) {
-        width: 0px !important;
+        width: 0px;
       }
     }
     
