@@ -12,7 +12,6 @@ import {
   ParagraphItemStyled,
   ImageStyled,
   ScrollArrow,
-  GroupItemStyled,
 } from './styles';
 
 export default function OurServicesOnePage() {
@@ -32,7 +31,6 @@ export default function OurServicesOnePage() {
         </DivServicesStyled>
 
         <DivServiceItemsStyled>
-          <GroupItemStyled>
             <DivItemStyled>
               <HeadingItemStyled>Outsourcing Consultivo</HeadingItemStyled>
               <ParagraphItemStyled>
@@ -50,9 +48,7 @@ export default function OurServicesOnePage() {
                 rentável.
               </ParagraphItemStyled>
             </DivItemStyled>
-          </GroupItemStyled>
 
-          <GroupItemStyled>
             <DivItemStyled>
               <HeadingItemStyled>Ideação</HeadingItemStyled>
               <ParagraphItemStyled>
@@ -68,9 +64,7 @@ export default function OurServicesOnePage() {
                 aliado aos objetivos do seu negócio.
               </ParagraphItemStyled>
             </DivItemStyled>
-          </GroupItemStyled>
 
-          <GroupItemStyled>
             <DivItemStyled>
               <HeadingItemStyled>Consultoria em TI</HeadingItemStyled>
               <ParagraphItemStyled>
@@ -82,7 +76,6 @@ export default function OurServicesOnePage() {
             <DivItemStyled>
               <ImageStyled src="./images/RectangleL2.svg" alt="L2 Code" />
             </DivItemStyled>
-          </GroupItemStyled>
         </DivServiceItemsStyled>
       </ContentOnePageStyled>
     </SectionOnePageStyled>

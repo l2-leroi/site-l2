@@ -40,6 +40,7 @@ function CaseList(props: CaseProps) {
     slidesToScroll: 1,
     swipeToSlide: false,
     speed: 400,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 600,
