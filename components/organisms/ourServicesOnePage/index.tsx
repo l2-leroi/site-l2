@@ -12,7 +12,7 @@ import {
   ParagraphItemStyled,
   ImageStyled,
   ScrollArrow,
-} from './styles';
+} from "./styled";
 
 export default function OurServicesOnePage() {
   return (

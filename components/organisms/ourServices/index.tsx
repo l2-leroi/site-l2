@@ -7,9 +7,9 @@ import {
   ParagraphServicesStyled,
   ButtonServicesStyled,
   ScrollArrow,
-} from './styles';
-import seta from '../../../assets/images/seta.svg';
-import OutSourcing from '../../atoms/letreiro';
+} from "./styled";
+import seta from '../../.../../atoms/OutSourcing.svg';
+import OutSourcing from '../../atoms/OutSourcing';
 import ScrollCircle from "../../atoms/ScrollCircle";
 
 export default function OurServices() {

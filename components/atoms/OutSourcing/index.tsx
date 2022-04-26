@@ -1,5 +1,5 @@
 import React from 'react';
-import { SectionOutSourcingStyled, ParagraphOutSourcingStyled } from './styles';
+import { SectionOutSourcingStyled, ParagraphOutSourcingStyled } from './styled';
 import Marquee from 'react-fast-marquee';
 
 export default function OutSourcing() {
