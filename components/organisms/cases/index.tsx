@@ -53,7 +53,7 @@ const Cases = () => {
   ];
 
   return (
-    <ContainerStyled>
+    <ContainerStyled id="cases">
       <ContentStyled>
         <DivStyled>
           <TitleStyled>NOSSOS CASES SELECIONADOS</TitleStyled>
