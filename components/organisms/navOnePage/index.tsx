@@ -12,6 +12,7 @@ import {
 // import L2Logo from '../../../assets/images/logoNav.svg';
 // import MenuIcon from '../../../assets/images/Menu-Icon.svg';
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link'
 
 export default function Nav() {
 
@@ -59,12 +60,14 @@ export default function Nav() {
   useEffect(()=> {
     handleWhite();
     addEventListener("scroll", handleScroll);
+    document.querySelector('html').style.scrollBehavior = "smooth";
   }, [])
 
   
 
   return (
     <>
+    
       <NavStyled className="nav">
         <NavContentStyled className="navList">
           <NavItemStyled>
@@ -73,11 +76,19 @@ export default function Nav() {
           
           <NavItemStyled>
             <NavLinkListStyled>
-                <NavLinkStyled>Serviços</NavLinkStyled>
+            <Link href="#services">
+              <NavLinkStyled>Serviços</NavLinkStyled>
+            </Link>
+            <Link href="#cases">
                 <NavLinkStyled>Cases</NavLinkStyled>
+            </Link>
+            <Link href="#customers">
                 <NavLinkStyled>Clientes</NavLinkStyled>
+            </Link>
+            <Link href="#contact">
                 <NavLinkStyled>Contato</NavLinkStyled>
-            </NavLinkListStyled>
+            </Link>
+          </NavLinkListStyled>
             
           </NavItemStyled>
           <NavItemStyled>contato@l2code.com.br</NavItemStyled>

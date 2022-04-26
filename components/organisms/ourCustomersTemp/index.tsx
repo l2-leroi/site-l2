@@ -47,7 +47,7 @@ const OurCustomersTemp = () => {
 
   
   return (
-    <OurCustomersStyled>
+    <OurCustomersStyled id="customers">
       <SpinningIconStyled className='spinner'>
         <img src={Spinner} alt="L2 Code" />
       </SpinningIconStyled>

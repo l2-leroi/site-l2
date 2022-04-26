@@ -17,7 +17,7 @@ import {
 
 export default function OurServicesOnePage() {
   return (
-    <SectionOnePageStyled>
+    <SectionOnePageStyled id="services">
       <ScrollArrow className="SpinnerCircle2">
         <ScrollCircle image={null}/>
       </ScrollArrow>
