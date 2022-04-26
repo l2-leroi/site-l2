@@ -2,15 +2,13 @@ import React from 'react';
 import {
   SectionStyled,
   DivOurServicesStyled,
-  DivButtonServicesStyled,
   HeadingStyled,
   ParagraphServicesStyled,
-  ButtonServicesStyled,
   ScrollArrow,
 } from './styles';
-import seta from '../../../assets/images/seta.svg';
 import OutSourcing from '../../atoms/letreiro';
 import ScrollCircle from "../../atoms/ScrollCircle";
+import Button from '../../atoms/Button';
 
 export default function OurServices() {
   return (
@@ -25,14 +23,9 @@ export default function OurServices() {
           Melhoramos a experiência dos produtos e serviços de nossos clientes,
           com foco em resultados para seus negócio.
         </ParagraphServicesStyled>
-
-        <DivButtonServicesStyled>
-          <ButtonServicesStyled>NOSSOS SERVIÇOS</ButtonServicesStyled>
-          <img src={seta} alt="seta" />
-        </DivButtonServicesStyled>
-        
+        <Button backgroundColor="green" linkBtn="#"></Button>       
       </DivOurServicesStyled>
-        <OutSourcing />
+      <OutSourcing />
     </SectionStyled>
     
   );
