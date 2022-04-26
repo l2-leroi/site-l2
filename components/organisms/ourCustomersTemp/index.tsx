@@ -47,7 +47,7 @@ const OurCustomersTemp = () => {
 
   
   return (
-    <OurCustomersStyled>
+    <OurCustomersStyled id="customers">
       <TopGreyBackgroundStyled />
       <BottomPurpleBackgroundStyled />
       <BlackLineStyled>

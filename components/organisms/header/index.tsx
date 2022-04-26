@@ -118,7 +118,7 @@ const Header = () => {
             {actualText}
           </TitleStyled>
 
-          <TitleComplementStyled>
+          <TitleComplementStyled className='bannerText'>
             Criamos produtos digitais e experiências online que as pessoas
             adoram
           </TitleComplementStyled>

@@ -57,10 +57,11 @@ function CaseList(props: CaseProps) {
   useEffect(() => {
     const target = document.querySelectorAll<HTMLElement>('[data-anime]');
     function animeScroll() {
-      const windowTop = window.pageYOffset + window.innerHeight * 0.6;
+      const windowTop = window.pageYOffset + window.innerHeight * 0.7;
       target.forEach((element) => {
         const position = element.getBoundingClientRect();
-        if (windowTop > position.top) {
+        const positionAbsolute = position.top + window.scrollY;
+        if (windowTop > positionAbsolute) {
           element.classList.add('animate');
         }
       });

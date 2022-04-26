@@ -37,7 +37,7 @@ const Footer = () => {
   ];
 
   return (
-    <FooterStyled>
+    <FooterStyled id="contact">
       <ContainerStyled>
         <ContentStyled>
           <DivStyled>

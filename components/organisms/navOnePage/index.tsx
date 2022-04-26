@@ -12,6 +12,7 @@ import {
 // import L2Logo from '../../../assets/images/logoNav.svg';
 // import MenuIcon from '../../../assets/images/Menu-Icon.svg';
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link'
 
 export default function NavOnePage() {
 
@@ -31,14 +32,42 @@ export default function NavOnePage() {
     }
   }
 
+  let lastScrollTop = 0;
+
+  const handleScroll = () => {
+    const bannerText = document.querySelector(".bannerText") as HTMLElement;
+    const bannerTextTop = bannerText.getBoundingClientRect().top;
+
+    const nav = document.querySelector('.nav')
+
+    if( screen.width <= 880 ) {
+      if (bannerTextTop > lastScrollTop){
+        nav.classList.add("smallFixed");
+      }
+      else{
+        nav.classList.remove("smallFixed");
+      }
+      lastScrollTop = bannerTextTop;
+    }
+    else{
+      bannerTextTop < 0? 
+      nav.classList.add("smallFixed") :
+      nav.classList.remove("smallFixed");
+    }
+  }
+
+
   useEffect(()=> {
     handleWhite();
+    addEventListener("scroll", handleScroll);
+    document.querySelector('html').style.scrollBehavior = "smooth";
   }, [])
 
   
 
   return (
     <>
+    
       <NavStyled className="nav">
         <NavContentStyled className="navList">
           <NavItemStyled>
@@ -47,11 +76,19 @@ export default function NavOnePage() {
           
           <NavItemStyled>
             <NavLinkListStyled>
-                <NavLinkStyled>Serviços</NavLinkStyled>
+            <Link href="#services">
+              <NavLinkStyled>Serviços</NavLinkStyled>
+            </Link>
+            <Link href="#cases">
                 <NavLinkStyled>Cases</NavLinkStyled>
+            </Link>
+            <Link href="#customers">
                 <NavLinkStyled>Clientes</NavLinkStyled>
+            </Link>
+            <Link href="#contact">
                 <NavLinkStyled>Contato</NavLinkStyled>
-            </NavLinkListStyled>
+            </Link>
+          </NavLinkListStyled>
             
           </NavItemStyled>
           <NavItemStyled>contato@l2code.com.br</NavItemStyled>
