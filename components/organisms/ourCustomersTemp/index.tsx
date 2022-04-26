@@ -30,7 +30,7 @@ const OurCustomersTemp = () => {
   const DigitalBusinessLogo = './images/OurCustomers/digital-business-logo.svg';
   const FundacredLogo = './images/OurCustomers/fundacred-logo.svg';
 
-  const Spinner = './images/OurCustomers/enfeite-giratorio.svg';
+  const spinner = './images/OurCustomers/enfeite-giratorio.svg';
 
   const customers = [
     { alt: 'Tô Parado Logo', src: ToParadoLogo },
