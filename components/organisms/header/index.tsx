@@ -13,7 +13,7 @@ import {
   SocialMediaTitleStyled,
   SocialMediaItemStyled,
   ImageStyled,
-} from './styled';
+} from "./styled";
 import React, { useRef, useState } from 'react';
 import ScrollCircle from '../../atoms/ScrollCircle/index';
 
@@ -73,7 +73,7 @@ const Header = () => {
         setActualText(backgroundList[index + 1].text);
       }
       header.classList.add("white");
-      nav.classList.add("white");
+      nav?.classList.add("white");
       setWhiteCircle(true);
     }, 150);
   };
@@ -82,7 +82,7 @@ const Header = () => {
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
     header.classList.remove("white");
-    nav.classList.remove("white");
+    nav?.classList.remove("white");
     setWhiteCircle(false);
     clearInterval(interval.current);
     interval.current = null;
@@ -118,7 +118,7 @@ const Header = () => {
             {actualText}
           </TitleStyled>
 
-          <TitleComplementStyled>
+          <TitleComplementStyled className='bannerText'>
             Criamos produtos digitais e experiências online que as pessoas
             adoram
           </TitleComplementStyled>

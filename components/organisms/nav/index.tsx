@@ -5,11 +5,11 @@ import {
   NavButtonStyled,
   DivTextStyled,
   TextMenuStyled,
-} from './styles';
+} from "./styled";
 // import L2Logo from '../../../assets/images/logoNav.svg';
 // import MenuIcon from '../../../assets/images/Menu-Icon.svg';
 import React, { useState } from 'react';
-import Menu from '../menu';
+import Menu from "../Menu/index";
 
 export default function Nav() {
   const [MenuClick, setClick] = useState(false);

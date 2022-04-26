@@ -13,7 +13,7 @@ import {
   AsideStyled,
   ParagraphStyled,
   CustomersContainer
-} from './styled';
+} from "./styled";
 
 import CustomersList from '../../molecules/CustomersList/index';
 import React from 'react';
@@ -30,8 +30,6 @@ const OurCustomersTemp = () => {
   const DigitalBusinessLogo = './images/OurCustomers/digital-business-logo.svg';
   const FundacredLogo = './images/OurCustomers/fundacred-logo.svg';
 
-  const Spinner = './images/OurCustomers/enfeite-giratorio.svg';
-
   const customers = [
     { alt: 'Tô Parado Logo', src: ToParadoLogo },
     { alt: 'Phi Logo', src: PhiLogo },
@@ -47,7 +45,7 @@ const OurCustomersTemp = () => {
 
   
   return (
-    <OurCustomersStyled>
+    <OurCustomersStyled id="customers">
       <TopGreyBackgroundStyled />
       <BottomPurpleBackgroundStyled />
       <BlackLineStyled>

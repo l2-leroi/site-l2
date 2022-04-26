@@ -5,8 +5,8 @@ import {
   HeadingStyled,
   ParagraphServicesStyled,
   ScrollArrow,
-} from './styles';
-import OutSourcing from '../../atoms/letreiro';
+} from "./styled";
+import OutSourcing from '../../atoms/OutSourcing';
 import ScrollCircle from "../../atoms/ScrollCircle";
 import Button from '../../atoms/Button';
 
@@ -23,9 +23,9 @@ export default function OurServices() {
           Melhoramos a experiência dos produtos e serviços de nossos clientes,
           com foco em resultados para seus negócio.
         </ParagraphServicesStyled>
-        <Button backgroundColor="green" linkBtn="#"></Button>       
+        <Button backgroundColor="green" linkBtn="#"></Button>  
       </DivOurServicesStyled>
-      <OutSourcing />
+      <OutSourcing /> 
     </SectionStyled>
     
   );

@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
-import Cases from '../components/organisms/Cases';
-import OurCustomersTemp from '../components/organisms/ourCustomersTemp';
+import Cases from '../components/organisms/Cases/index';
+// import OurCustomersTemp from '../components/organisms/OurCustomersTemp/index';
 import OurServices from '../components/organisms/OurServices';
-import OurServicesOnePage from '../components/organisms/OurServicesOnePage';
+import OurServicesOnePage from '../components/organisms/OurServicesOnePage/index';
 
 
 const Home: NextPage = () => {
@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       {/* <OurServicesOnePage /> */}
       <OurServices />
       <Cases />
-      <OurCustomersTemp />
+      {/* <OurCustomersTemp /> */}
     </>
   );
 };

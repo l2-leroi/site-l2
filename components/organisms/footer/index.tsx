@@ -12,7 +12,7 @@ import {
   ImageStyled,
   ContainerStyled,
   DivStyled,
-} from './styled';
+} from "./styled";
 import { HeartIcon } from '../../../assets/icons/heartIcon';
 import ContactList from '../../molecules/ContactList/index'
 import React from 'react';
@@ -37,7 +37,7 @@ const Footer = () => {
   ];
 
   return (
-    <FooterStyled>
+    <FooterStyled id="contact">
       <ContainerStyled>
         <ContentStyled>
           <DivStyled>

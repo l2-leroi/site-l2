@@ -4,10 +4,12 @@ import { colors } from '../../../styles/colors';
 export const SectionStyled = styled.section`
   display: flex;
   justify-content: center;
-  padding: 130px 238px 100px;
+  margin: 130px 0 100px;
+  padding: 0 238px;
+  position: relative;
 
   @media (max-width: 1920px) {
-    padding-top: 140px;
+    margin-top: 140px;
     padding-left: 186px;
     padding-right: 186px;
   }
@@ -28,23 +30,25 @@ export const SectionStyled = styled.section`
   }
 
   @media (max-width: 800px) {
-    padding: 130px 12px 30px;
+    margin: 130px 0 30px;
+    padding: 0 12px;
   }
 `;
 
 export const ScrollArrow = styled.div`
   position: absolute;
   right: 148px;
-  bottom: -70px;
+  top: -240px;
 
   @media (max-width: 800px) {
-    bottom: -45px;
+    top: -198px;
     right: 0.5px;
     width: 100%;
   }
 
   @media (min-width: 2560px) {
-      right: 703px;
+    top: -230px;
+    right: 703px;
   }
 `;
 
@@ -54,36 +58,12 @@ export const DivOurServicesStyled = styled.div`
   flex-direction: column;
   background: ${colors.black};
   border-radius: 8px;
-  padding: 80px 541px 208px;
-
-  @media (max-width: 1536px) {
-    padding-left: 382px;
-    padding-right: 382px;
-  }
-
-  @media (max-width: 1512px) {
-    padding-left: 372px;
-    padding-right: 372px;
-  }
-
-  @media (max-width: 1366px) {
-    padding-left: 311px;
-    padding-right: 311px;
-  }
-
-  @media (max-width: 800px) {
-    padding: 40px 256px 104px;
-  }
-
-  @media (max-width: 414px) {
-    padding-left: 71px;
-    padding-right: 71px;
-  }
+  width: 100%;
+  padding-top: 8rem;
+  padding-bottom: 20.8rem;
 `;
 
-export const ContentStyled = styled.div`
-  
-`;
+export const ContentStyled = styled.div``;
 
 export const HeadingStyled = styled.h2`
   ::selection {

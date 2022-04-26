@@ -140,7 +140,7 @@ export const SignStyled = styled.span`
   position: absolute;
   top: -20px;
   z-index: 99;
-  margin-top: -20px
+  margin-top: -20px;
 
   @media(max-width: 800px){
     font-size: 20px;
