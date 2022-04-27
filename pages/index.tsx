@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Cases from '../components/organisms/Cases';
 import OurServicesOnePage from '../components/organisms/OurServicesOnePage';
-import OurCustomers from '../components/organisms/OurCustomers_';
+import OurCustomers from '../components/organisms/OurCustomers';
 
 const Home: NextPage = () => {
   return (
