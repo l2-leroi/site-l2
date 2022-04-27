@@ -3,7 +3,6 @@ import{
 } from './style'
 
 import React, { Children } from 'react';
-import OurCustomers from '../../organisms/ourCustomers';
 
 interface Props{
   classe: String;
