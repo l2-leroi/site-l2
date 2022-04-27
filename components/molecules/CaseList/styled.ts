@@ -38,6 +38,7 @@ export const SliderStyled = styled(Slider)`
   .slick-track {
     display: flex;
     flex-wrap: nowrap;
+    user-select: text;
 
     @media (max-width: 600px) {
       height: 740px;
@@ -130,6 +131,10 @@ export const CaseNumberStyled = styled.h3`
   line-height: 22.4px;
   padding: 0 0 3.2rem 10px;
   border-bottom: 1px solid ${colors.dark_gray};
+  ::selection {
+    background: ${colors.purple};
+    color: ${colors.gray};
+  }
 
   @media (max-width: 800px) {
     font-size: 10px;
@@ -143,6 +148,10 @@ export const TitleStyled = styled.h4`
   font-size: 4rem;
   line-height: 4.8rem;
   padding: 4.4rem 0 2.8rem 0;
+  ::selection {
+    background: ${colors.purple};
+    color: ${colors.gray};
+  }
 `;
 
 export const InfoStyled = styled.p`
@@ -152,6 +161,10 @@ export const InfoStyled = styled.p`
   line-height: 3.36rem;
   padding-bottom: 3.2rem;
   width: 345px;
+  ::selection {
+    background: ${colors.purple};
+    color: ${colors.gray};
+  }
 
   @media (max-width: 800px) {
     width: 175px;
