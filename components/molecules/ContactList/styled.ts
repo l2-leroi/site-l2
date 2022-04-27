@@ -36,4 +36,8 @@ export const ContactStyled = styled.a`
   line-height: 4.8rem;
   letter-spacing: -0.02em;
   font-weight: 800;
+
+  &:hover {
+    color: ${colors.green};
+  }
 `;

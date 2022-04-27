@@ -133,8 +133,8 @@ const Header = () => {
       <FooterContentStyled>
         <SocialMediaStyled>
           <SocialMediaTitleStyled>Siga-nos</SocialMediaTitleStyled>
-          <SocialMediaItemStyled>In</SocialMediaItemStyled>
-          <SocialMediaItemStyled>IG</SocialMediaItemStyled>
+          <SocialMediaItemStyled href="https://www.linkedin.com/company/l2code-dev/" target="_blank">In</SocialMediaItemStyled>
+          <SocialMediaItemStyled href="https://www.instagram.com/l2code.com.br/" target="_blank">IG</SocialMediaItemStyled>
         </SocialMediaStyled>
 
         <ArrowSpinnerContainerStyled>

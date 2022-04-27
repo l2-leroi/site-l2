@@ -6,4 +6,5 @@ export const colors = {
   dark_gray: '#8E9195',
   purple: '#5900CC',
   lightGray: '#8E9195',
+  secondary1: '#27E5BF',
 };
