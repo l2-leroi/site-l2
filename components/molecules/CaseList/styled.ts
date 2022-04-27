@@ -128,6 +128,7 @@ export const CaseNumberStyled = styled.h3`
   font-weight: 400;
   font-size: 16px;
   line-height: 22.4px;
+  letter-spacing: -0.02em;
   padding: 0 0 3.2rem 10px;
   border-bottom: 1px solid ${colors.dark_gray};
 
@@ -142,6 +143,7 @@ export const TitleStyled = styled.h4`
   font-weight: 800;
   font-size: 4rem;
   line-height: 4.8rem;
+  letter-spacing: -0.02em;
   padding: 4.4rem 0 2.8rem 0;
 `;
 
@@ -150,6 +152,7 @@ export const InfoStyled = styled.p`
   font-weight: 400;
   font-size: 2.4rem;
   line-height: 3.36rem;
+  letter-spacing: -0.04em;
   padding-bottom: 3.2rem;
   width: 345px;
 

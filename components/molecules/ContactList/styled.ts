@@ -32,8 +32,3 @@ export const ContactStyled = styled.a`
   letter-spacing: -0.02em;
   font-weight: 800;
 `;
-
-
-
-
-
