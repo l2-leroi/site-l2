@@ -5,13 +5,18 @@ interface ButtonProps {
   linkBtn: string;
   borderColor?: string;
   backgroundColor?: string;
+  text: string;
 }
 
-function Button(props: ButtonProps) {
+const Button = ({linkBtn,borderColor,backgroundColor,text}: ButtonProps) => {
   return(
-    <LinkStyled href={props.linkBtn}>
-      <ButtonStyled borderColor={props.borderColor}>VEJA TODOS OS CASES</ButtonStyled>  
-      <ButtonStyled> <ArrowIcon /> </ButtonStyled>
+    <LinkStyled href={linkBtn}>
+      <ButtonStyled bgColor={backgroundColor} borderColor={borderColor}>
+        {text}
+      </ButtonStyled>  
+      <ButtonStyled bgColor={backgroundColor} borderColor={borderColor}> 
+        <ArrowIcon /> 
+      </ButtonStyled>
     </LinkStyled>
   );
 };
