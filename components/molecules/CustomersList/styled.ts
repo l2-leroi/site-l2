@@ -49,7 +49,7 @@ export const ContentStyled = styled.li`
   min-width: 80px;
   position: relative;
 
-  
+  user-select: none;
 
   span {
     z-index: 8;
@@ -61,7 +61,7 @@ export const ContentStyled = styled.li`
     bottom: -6px;
     right: -3px;
     z-index: 6;
-    font-size 20px;
+    font-size: 20px;
     
   }
 
@@ -71,7 +71,7 @@ export const ContentStyled = styled.li`
     top: -21px;
     right: -3px;
     z-index: 6;
-    font-size 20px;
+    font-size: 20px;
     
   }
 

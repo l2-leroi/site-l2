@@ -16,7 +16,6 @@ function CustomersList(props: CustomerProps) {
       {
         props.customers.map((customer) => (
             <ContentStyled key={customer.alt}>
-                {console.log(customer.src)}
                 <img src={customer.src} alt={customer.alt} />
             </ContentStyled>
         ))
