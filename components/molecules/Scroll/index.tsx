@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
-import { ElementScrollStyled, InfiniteScrollContainerStyled } from './styles';
+import { ElementScrollStyled, InfiniteScrollContainerStyled } from './styled';
 
 /*
 const element = document.getElementById('home')
