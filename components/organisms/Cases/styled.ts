@@ -3,7 +3,7 @@ import { colors } from '../../../styles/colors';
 
 export const ContainerStyled = styled.div`
   color: ${colors.black};
-  background-color: ${colors.strong_gray};
+  background-color: ${colors.gray};
   // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   // padding: 10rem 2.8rem 48rem;
   padding: 10rem 2.8rem 10rem;  
