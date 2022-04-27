@@ -16,6 +16,8 @@ import {
 import { HeartIcon } from '../../../assets/icons/heartIcon';
 import ContactList from '../../molecules/ContactList/index'
 import React from 'react';
+import LineAnimation from '../../atoms/LineAnimation';
+import { colors } from '../../../styles/colors';
 
 const Footer = () => {
   const contacts = [
@@ -37,43 +39,45 @@ const Footer = () => {
   ];
 
   return (
+      <LineAnimation classe={'purpleLine'} backgroundColor={colors.purple}>
     <FooterStyled>
-      <ContainerStyled>
-        <ContentStyled>
-          <DivStyled>
-            <TitleStyled>VAMOS CONVERSAR</TitleStyled>
-            <AsideStyled>
-              <ParagraphStyled>&lt;AND DANCE&gt;</ParagraphStyled>
-            </AsideStyled>
-          </DivStyled>
-          <ContactList contacts={contacts} />
-        </ContentStyled>
+        <ContainerStyled>
+          <ContentStyled>
+            <DivStyled>
+              <TitleStyled>VAMOS CONVERSAR</TitleStyled>
+              <AsideStyled>
+                <ParagraphStyled>&lt;AND DANCE&gt;</ParagraphStyled>
+              </AsideStyled>
+            </DivStyled>
+            <ContactList contacts={contacts} />
+          </ContentStyled>
 
-        <CopyrightStyled>
-          <InfoStyled>
-            <PhraseStyled>Abraçamos os talentos do mundo</PhraseStyled>
-            <PhraseStyled>Somos uma empresa que trabalha 100% remoto</PhraseStyled>
-          </InfoStyled>
+          <CopyrightStyled>
+            <InfoStyled>
+              <PhraseStyled>Abraçamos os talentos do mundo</PhraseStyled>
+              <PhraseStyled>Somos uma empresa que trabalha 100% remoto</PhraseStyled>
+            </InfoStyled>
 
-          <InfoStyled className="desktop">
-            <LinkStyled href="/">
-              <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
-            </LinkStyled>
-          </InfoStyled>
+            <InfoStyled className="desktop">
+              <LinkStyled href="/">
+                <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
+              </LinkStyled>
+            </InfoStyled>
 
-          <InfoStyled className="align-end">
-            <PhraseStyled>Feito com <IconStyled> <HeartIcon/> </IconStyled> L2code</PhraseStyled>
-            <PhraseStyled>Copyright © Todos os direitos reservados</PhraseStyled>
-          </InfoStyled>
-        </CopyrightStyled>
+            <InfoStyled className="align-end">
+              <PhraseStyled>Feito com <IconStyled> <HeartIcon/> </IconStyled> L2code</PhraseStyled>
+              <PhraseStyled>Copyright © Todos os direitos reservados</PhraseStyled>
+            </InfoStyled>
+          </CopyrightStyled>
 
-        <InfoStyled className="mobile">
-            <LinkStyled href="/">
-              <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
-            </LinkStyled>
-          </InfoStyled>
-      </ContainerStyled>
+          <InfoStyled className="mobile">
+              <LinkStyled href="/">
+                <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
+              </LinkStyled>
+            </InfoStyled>
+        </ContainerStyled>
     </FooterStyled>
+      </LineAnimation>
   );
 };
 
