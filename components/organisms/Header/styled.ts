@@ -1,4 +1,4 @@
-import styled, { keyframes }  from 'styled-components';
+import styled  from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const HeaderStyled = styled.header`
@@ -9,10 +9,9 @@ export const HeaderStyled = styled.header`
     z-index: 50;
     position: relative;
     padding: 0px 28px;
-    background-color: ${colors.strong_gray}; 
+    background-color: ${colors.gray}; 
     overflow: hidden;
     
-
     &.white{
         color: white;
     }
@@ -21,18 +20,16 @@ export const HeaderStyled = styled.header`
 export const MainContentStyled = styled.div`
     width: 100%;
     display: flex;
-    box-sizing: border-box;
     align-self: center;
     z-index: 50;
-    padding-top: 30px;
-    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const MainTextStyled = styled.hgroup`
     align-self: center;
     margin: 0 auto;
     text-align: center;
-    box-sizing: border-box;
 `;
 
 export const TitleStyled = styled.h1`
@@ -44,12 +41,15 @@ export const TitleStyled = styled.h1`
     line-height: 100%;
     text-align: center;
     letter-spacing: -0.04em;
-    margin: 0 auto;
+    margin: 0 auto 10px;
     cursor: pointer;
+    ::selection {
+        background: ${colors.purple};
+        color: ${colors.gray};
+    }
 
     @media (max-width: 800px) {
         font-size: 64px;
-        margin: 16px 0;
     }
     
 `;
@@ -64,9 +64,13 @@ export const SubtitleStyled = styled.h2`
     text-align: center;
     letter-spacing: -0.02em;
     margin: 0 auto;
+    ::selection {
+        background: ${colors.purple};
+        color: ${colors.gray};
+    }
 
     @media (max-width: 800px) {
-        margin-top: 50px;
+        margin-top: 120px;
     } 
 `;
 
@@ -81,6 +85,10 @@ export const TitleComplementStyled = styled.h3`
     letter-spacing: -0.04em;
     max-width: 464px;
     margin: 0 auto;
+    ::selection {
+        background: ${colors.purple};
+        color: ${colors.gray};
+    }
 
     @media (max-width: 800px) {
         width: 212px;
@@ -108,6 +116,10 @@ export const LanguageItemStyled = styled.li`
     line-height: 140%;
     text-align: right;
     letter-spacing: -0.02em;
+    ::selection {
+        background: ${colors.purple};
+        color: ${colors.gray};
+    }
 
     @media (max-width: 800px) {
         font-size: 10px;
@@ -122,14 +134,11 @@ export const FooterContentStyled = styled.div`
     width: 100%;
     display: flex;
     align-self: flex-end;
+    position: absolute;
     box-sizing: border-box;
-    margin-bottom: 34px;
-
-    @media (min-width: 2560px) {
-        margin-bottom: 123px;
-    }
 
     @media (max-width: 800px) {
+        position: static;
         align-self: center;
         margin-bottom: 80px;
     }
@@ -154,6 +163,8 @@ export const SocialMediaStyled = styled.ul`
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    bottom: 30px;
 `;
 
 export const SocialMediaTitleStyled = styled.li`  
@@ -166,6 +177,10 @@ export const SocialMediaTitleStyled = styled.li`
     font-size: 16px;
     line-height: 140%;
     letter-spacing: -0.02em;
+    ::selection {
+        background: ${colors.purple};
+        color: ${colors.gray};
+    }
 
     @media (max-width: 800px) {
         font-size: 10px;
@@ -196,6 +211,10 @@ export const SocialMediaItemStyled = styled.li`
     line-height: 140%;
     letter-spacing: -0.02em;
     z-index: 50;
+    ::selection {
+        background: ${colors.purple};
+        color: ${colors.gray};
+    }
 
     @media (max-width: 800px) {
         font-size: 10px;

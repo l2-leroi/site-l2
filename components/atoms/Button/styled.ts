@@ -20,24 +20,23 @@ export const ButtonStyled = styled.div<ButtonProps>`
   font-family: 'Circular Air Pro', sans-serif;
   font-weight: 400;
   font-size: 2.4rem;
-  line-height: 3.36rem;
-  margin-right: .8rem;
+  margin-right: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 10px 10px;
 
   &:first-child {
     width: auto;
-    padding: 0.75rem 1.6rem;
-    border-radius: 2.4rem; 
+    padding: 8px 16px;
+    border-radius: 24px; 
   }
 
   @media (max-width: 800px) {
     font-size: 1.2rem;
     svg{
-      height: 1.2rem;
-      width: 1.2rem;
+      height: 12px;
+      width: 12px;
     }
   }
 `;

@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const NavStyled = styled.nav`
-position: absolute;
+  position: absolute;
   width: 100%;
   z-index: 60;
   color: ${colors.black};
-  background-color: ${colors.strong_gray};
+  background-color: ${colors.gray};
 
   &.white {
     background-color: transparent;
@@ -43,7 +43,10 @@ export const NavItemStyled = styled.li`
   letter-spacing: -0.02em;
   font-weight: 700;
   min-width: 173px;
-  
+  ::selection {
+    background: ${colors.purple};
+    color: ${colors.gray};
+  }
   
   
   &:first-of-type{
@@ -87,6 +90,10 @@ export const NavLinkStyled = styled.li`
   font-weight: 700;
   padding: 0px 40px;
   cursor: pointer;
+  ::selection {
+    background: ${colors.purple};
+    color: ${colors.gray};
+  }
 
   &:hover {
     color: ${colors.green};

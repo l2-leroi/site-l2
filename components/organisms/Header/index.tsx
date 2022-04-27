@@ -134,8 +134,7 @@ const Header = () => {
         <SocialMediaStyled>
           <SocialMediaTitleStyled>Siga-nos</SocialMediaTitleStyled>
           <SocialMediaItemStyled>In</SocialMediaItemStyled>
-          <SocialMediaItemStyled>Fb</SocialMediaItemStyled>
-          <SocialMediaItemStyled>Tw</SocialMediaItemStyled>
+          <SocialMediaItemStyled>IG</SocialMediaItemStyled>
         </SocialMediaStyled>
 
         <ArrowSpinnerContainerStyled>

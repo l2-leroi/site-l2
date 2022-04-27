@@ -4,7 +4,6 @@ import Cases from '../components/organisms/Cases/index';
 import OurServices from '../components/organisms/OurServices';
 import OurServicesOnePage from '../components/organisms/OurServicesOnePage/index';
 
-
 const Home: NextPage = () => {
   return (
     <>
@@ -17,4 +16,3 @@ const Home: NextPage = () => {
 };
 
 export default Home;
-
