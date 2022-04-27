@@ -91,7 +91,7 @@ export const LanguageStyled = styled.ul`
     right: 28px;
     
     @media (max-width: 800px) {
-        top: 27px;
+        top: 100px;
         right: 24px;
     }
 `;
@@ -104,6 +104,10 @@ export const LanguageItemStyled = styled.li`
     line-height: 140%;
     text-align: right;
     letter-spacing: -0.02em;
+
+    &:first-child {
+        margin-bottom: 8px;
+    }
 
     @media (max-width: 800px) {
         font-size: 10px;
