@@ -4,22 +4,51 @@ import { colors } from '../../../styles/colors';
 export const SectionStyled = styled.section`
   display: flex;
   justify-content: center;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin: 130px 0 100px;
+  padding: 0 238px;
+  position: relative;
+
+  @media (max-width: 1920px) {
+    margin-top: 140px;
+    padding-left: 186px;
+    padding-right: 186px;
+  }
+
+  @media (max-width: 1536px) {
+    padding-left: 154px;
+    padding-right: 154px;
+  }
+
+  @media (max-width: 1512px) {
+    padding-left: 152px;
+    padding-right: 152px;
+  }
+
+  @media (max-width: 1366px) {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+
+  @media (max-width: 800px) {
+    margin: 130px 0 30px;
+    padding: 0 12px;
+  }
 `;
 
 export const ScrollArrow = styled.div`
   position: absolute;
   right: 148px;
-  bottom: -70px;
+  top: -240px;
+
   @media (max-width: 800px) {
-    bottom: -45px;
+    top: -198px;
     right: 0.5px;
     width: 100%;
   }
 
   @media (min-width: 2560px) {
-      right: 703px;
+    top: -230px;
+    right: 703px;
   }
 `;
 
@@ -29,34 +58,30 @@ export const DivOurServicesStyled = styled.div`
   flex-direction: column;
   background: ${colors.black};
   border-radius: 8px;
-  width: 1200px;
-  height: 611px;
-  @media (max-width: 500px) {
-    width: 336px;
-    height: 442px;
-  }
+  width: 100%;
+  padding-top: 8rem;
+  padding-bottom: 20.8rem;
 `;
 
-export const HeadingStyled = styled.p`
-  margin-bottom: 0;
-  margin-top: 80px;
+export const ContentStyled = styled.div``;
+
+export const HeadingStyled = styled.h2`
   ::selection {
     background: ${colors.purple};
   }
   font-weight: 800;
-  font-size: 64px;
-  line-height: 90%;
+  font-size: 6.4rem;
+  line-height: 5.76rem;
   text-align: center;
   letter-spacing: -0.04em;
   color: ${colors.gray};
   margin-bottom: 24px;
   font-family: 'Neue Machina';
   width: 464px;
-  @media (max-width: 500px) {
-    font-size: 32px;
-    width: 200px;
-    margin-top: 40px;
-    margin-bottom: 0;
+
+  @media (max-width: 800px) {
+    width: 264px;
+    margin-bottom: 20px;
   }
 `;
 
@@ -65,56 +90,16 @@ export const ParagraphServicesStyled = styled.p`
     background: ${colors.purple};
   }
   font-weight: 400;
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 2.4rem;
+  line-height: 3.4rem;
   text-align: center;
   letter-spacing: -0.04em;
   color: ${colors.gray};
   font-family: 'Circular Air Pro';
   width: 464px;
   margin-bottom: 40px;
-  @media (max-width: 500px) {
+
+  @media (max-width: 800px) {
     width: 160px;
-    font-size: 12px;
-    line-height: 17px;
-    margin-top: 20px;
   }
 `;
-
-export const DivButtonServicesStyled = styled.div`
-  display: flex;
-  text-align: center;
-  align-items: center;
-  @media (max-width: 500px) {
-    img {
-      width: 32px !important;
-    }
-  }
-`;
-
-export const ButtonServicesStyled = styled.button`
-  ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
-  }
-  width: 241px;
-  height: 50px;
-  font-size: 24px;
-  background: ${colors.green};
-  border: 2px solid ${colors.green};
-  border-radius: 24px;
-  letter-spacing: -0.04em;
-  color: ${colors.black};
-  margin-right: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Circular Air Pro';
-  @media (max-width: 500px) {
-    width: 126px;
-    height: 32px;
-    font-size: 12px;
-    font-weight: 400;
-  }
-`;
-
