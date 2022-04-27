@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../../styles/colors';
 
 export const ContentStyled = styled.ul`
   list-style-type: none;
@@ -19,6 +20,10 @@ export const TitleStyled = styled.h3`
   font-weight: 400;
   letter-spacing: -0.04em;
   margin-bottom: 19px;
+  ::selection {
+    background: ${colors.green};
+    color: ${colors.black};
+  }
 
   @media (max-width: 800px) {
     margin-bottom: 16px;
@@ -31,6 +36,10 @@ export const ContactStyled = styled.a`
   line-height: 4.8rem;
   letter-spacing: -0.02em;
   font-weight: 800;
+  ::selection {
+    background: ${colors.green};
+    color: ${colors.black};
+  }
 `;
 
 
