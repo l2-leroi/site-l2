@@ -9,7 +9,7 @@ export const HeaderStyled = styled.header`
     z-index: 50;
     position: relative;
     padding: 0px 28px;
-    background-color: ${colors.strong_gray}; 
+    background-color: ${colors.gray}; 
     overflow: hidden;
     
     &.white{
