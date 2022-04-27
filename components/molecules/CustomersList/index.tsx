@@ -19,8 +19,7 @@ function CustomersList(props: CustomerProps) {
                 {console.log(customer.src)}
                 <img src={customer.src} alt={customer.alt} />
             </ContentStyled>
-        ))
-        
+        )) 
       }
       </ListStyled>
     </>
