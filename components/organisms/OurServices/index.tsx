@@ -9,6 +9,7 @@ import {
 import OutSourcing from '../../atoms/OutSourcing';
 import ScrollCircle from "../../atoms/ScrollCircle";
 import Button from '../../atoms/Button';
+import { colors } from '../../../styles/colors';
 
 export default function OurServices() {
   return (
@@ -23,7 +24,7 @@ export default function OurServices() {
           Melhoramos a experiência dos produtos e serviços de nossos clientes,
           com foco em resultados para seus negócio.
         </ParagraphServicesStyled>
-        <Button backgroundColor="green" linkBtn="#"></Button>  
+        <Button linkBtn="#" backgroundColor={`${colors.green}`} text="VEJA NOSSOS SERVIÇOS"></Button>  
       </DivOurServicesStyled>
       <OutSourcing /> 
     </SectionStyled>
