@@ -9,7 +9,7 @@ import {
 // import L2Logo from '../../../assets/images/logoNav.svg';
 // import MenuIcon from '../../../assets/images/Menu-Icon.svg';
 import React, { useState } from 'react';
-import Menu from "../Menu/index";
+import Menu from "../Menu_/index";
 
 export default function Nav() {
   const [MenuClick, setClick] = useState(false);
