@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const NavStyled = styled.nav`
-position: absolute;
+  position: absolute;
   width: 100%;
   z-index: 60;
   color: ${colors.black};
