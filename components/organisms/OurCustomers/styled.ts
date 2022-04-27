@@ -134,6 +134,15 @@ export const SignStyled = styled.span`
   }
 `;
 
+export const SpinningAnimation = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+
 export const SpinningIconStyled = styled.div`
   position: absolute;
   right: 0px;
