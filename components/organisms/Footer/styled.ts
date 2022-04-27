@@ -59,6 +59,10 @@ export const ParagraphStyled = styled.p`
   line-height: 22.4px;
   font-weight: 400;
   letter-spacing: -0.02em;
+  ::selection {
+    background: ${colors.green};
+    color: ${colors.black};
+  }
 `;
 
 export const TitleStyled = styled.h2`
@@ -68,6 +72,10 @@ export const TitleStyled = styled.h2`
   font-weight: 800;
   letter-spacing: -0.04em;
   width: 404px;
+  ::selection {
+    background: ${colors.green};
+    color: ${colors.black};
+  }
 
   @media (max-width: 800px) {
     width: 264px;
@@ -141,6 +149,10 @@ export const PhraseStyled = styled.p`
   line-height: 22.4px;
   font-weight: 400;
   letter-spacing: -0.02em;
+  ::selection {
+    background: ${colors.green};
+    color: ${colors.black};
+  }
 
   @media (max-width: 800px) {
     font-size: 10px;
