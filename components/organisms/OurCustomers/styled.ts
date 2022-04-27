@@ -2,68 +2,41 @@ import styled, { keyframes } from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const OurCustomersStyled = styled.section`
-  background-color: transparent;
+  background-color: #fff;
   width: 100%;
   overflow: hidden;
   position: relative;
-  // padding-bottom: 250px;
-`;
-
-export const TopGreyBackgroundStyled = styled.div`
-  background-color: ${colors.strong_gray};
-  z-index: 0;
-  height: 500px;
-  position: absolute;
-  top: 0;
-  width: 100vw;
-`;
-
-export const BottomPurpleBackgroundStyled = styled.div`
-  background-color: ${colors.purple};
-  z-index: 0;
-  height: 500px;
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
+  padding-top: 300px;
 `;
 
 export const BlackLineStyled = styled.div`
   color: ${colors.gray};
   background-color: ${colors.black};
-  clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 75%);
+  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
   z-index: 1;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr minmax(280px, 1456px) 1fr;
   padding: 0px 28px;
   overflow: hidden;
-  padding-top: 418px;
-  padding-bottom: 600px;
 
-  // @media(max-width: 800px){
-  //   padding: 0px 12px;
-  // }
-
-  @media (min-width: 2560px) {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 77%);
-  }
-
-  @media (min-width: 1920px) {
-    clip-path: polygon(0 0, 100% 28%, 100% 100%, 0 76%);
-  }
-
-  @media (max-width: 800px) {
-    clip-path: polygon(0 0, 100% 12%, 100% 100%, 0 88%);
-    padding: 200px 12px;
-  }
-
-  @media (max-width: 600px) {
-    padding-right: 0px;
+  @media(max-width: 800px){
+    padding: 0px 12px;
   }
 `;
 
+export const PurpleLineStyled = styled.div`
+  color: ${colors.gray};
+  background-color: ${colors.purple};
+  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 50px;
+`;
+
 export const HeaderStyled = styled.hgroup`
-  max-width: 680px;
+  max-width: 780px;
 
   @media(max-width: 800px){
     max-width: 336px;
@@ -79,6 +52,9 @@ export const TitleStyled = styled.h2`
   font-weight: 800;
   letter-spacing: -0.04em;
   margin-bottom: 40px;
+  ::selection {
+    background: ${colors.purple};
+  }
   
   @media(max-width: 800px){
     max-width: 264px;
@@ -97,8 +73,11 @@ export const SubtitleStyled = styled.h3`
   //1.5em
   line-height: 140%;
   letter-spacing: -0.04em;
+  ::selection {
+    background: ${colors.purple};
+  }
 
-  @media(max-width: 800px){
+  @media(max-width: 760px){
     font-size: 12px;
     //0.75em
     line-height: 140%;
@@ -121,6 +100,9 @@ export const ParagraphStyled = styled.p`
   //1em
   line-height: 140%;
   letter-spacing: -0.02em;
+  ::selection {
+    background: ${colors.purple};
+  }
   
   @media(max-width: 800px){
     font-size: 12px;
@@ -132,7 +114,6 @@ export const ParagraphStyled = styled.p`
     font-size: 10px;
     //0.625em
     max-width: 61px;
-    margin-right: 12px;
   }
 `;
 
@@ -169,7 +150,6 @@ export const SignStyled = styled.span`
   top: -20px;
   z-index: 99;
   margin-top: -20px;
-  transform: rotate(17.76deg);
 
   @media(max-width: 800px){
     font-size: 20px;
@@ -192,12 +172,10 @@ export const SpinningIconStyled = styled.div`
   right: 0px;
   z-index: 99;  
   overflow-x: hidden;
-  top: 20rem;
   animation: ${SpinningAnimation} 5s linear infinite;
 
   @media(max-width: 800px){
     max-width: 248px;
-    top: -10px;
   }
 
   @media(max-width: 414px){
@@ -210,7 +188,6 @@ export const SignContainerStyled = styled.div`
   padding-top: 40px;
   margin-top: -2px;
   position: relative;
-  
 `;
 
 export const CustomersContainer = styled.div`
