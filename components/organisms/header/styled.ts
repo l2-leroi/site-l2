@@ -46,6 +46,10 @@ export const TitleStyled = styled.h1`
     letter-spacing: -0.04em;
     margin: 0 auto;
     cursor: pointer;
+    ::selection {
+        background: ${colors.purple};
+        color: ${colors.gray};
+    }
 
     @media (max-width: 800px) {
         font-size: 64px;
@@ -64,6 +68,10 @@ export const SubtitleStyled = styled.h2`
     text-align: center;
     letter-spacing: -0.02em;
     margin: 0 auto;
+    ::selection {
+        background: ${colors.purple};
+        color: ${colors.gray};
+    }
 
     @media (max-width: 800px) {
         margin-top: 50px;
@@ -81,6 +89,10 @@ export const TitleComplementStyled = styled.h3`
     letter-spacing: -0.04em;
     max-width: 464px;
     margin: 0 auto;
+    ::selection {
+        background: ${colors.purple};
+        color: ${colors.gray};
+    }
 
     @media (max-width: 800px) {
         width: 212px;
@@ -108,6 +120,10 @@ export const LanguageItemStyled = styled.li`
     line-height: 140%;
     text-align: right;
     letter-spacing: -0.02em;
+    ::selection {
+        background: ${colors.purple};
+        color: ${colors.gray};
+    }
 
     @media (max-width: 800px) {
         font-size: 10px;
@@ -166,6 +182,10 @@ export const SocialMediaTitleStyled = styled.li`
     font-size: 16px;
     line-height: 140%;
     letter-spacing: -0.02em;
+    ::selection {
+        background: ${colors.purple};
+        color: ${colors.gray};
+    }
 
     @media (max-width: 800px) {
         font-size: 10px;
@@ -196,6 +216,10 @@ export const SocialMediaItemStyled = styled.li`
     line-height: 140%;
     letter-spacing: -0.02em;
     z-index: 50;
+    ::selection {
+        background: ${colors.purple};
+        color: ${colors.gray};
+    }
 
     @media (max-width: 800px) {
         font-size: 10px;

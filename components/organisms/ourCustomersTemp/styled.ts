@@ -79,6 +79,9 @@ export const TitleStyled = styled.h2`
   font-weight: 800;
   letter-spacing: -0.04em;
   margin-bottom: 40px;
+  ::selection {
+    background: ${colors.purple};
+  }
   
   @media(max-width: 800px){
     max-width: 264px;
@@ -97,6 +100,9 @@ export const SubtitleStyled = styled.h3`
   //1.5em
   line-height: 140%;
   letter-spacing: -0.04em;
+  ::selection {
+    background: ${colors.purple};
+  }
 
   @media(max-width: 800px){
     font-size: 12px;
@@ -121,6 +127,9 @@ export const ParagraphStyled = styled.p`
   //1em
   line-height: 140%;
   letter-spacing: -0.02em;
+  ::selection {
+    background: ${colors.purple};
+  }
   
   @media(max-width: 800px){
     font-size: 12px;
