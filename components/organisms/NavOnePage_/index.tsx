@@ -25,10 +25,10 @@ export default function NavOnePage() {
 
   const handleMutation = (mutation) => {
     if(mutation[0].target.classList.contains('white')){
-      document.querySelector(".navImage").setAttribute('src', "./images/L2Code-Logo-White.png")
+      document.querySelector(".navImage").setAttribute('src', "./images/L2Code-Logo-White.svg")
     }
     else{
-      document.querySelector(".navImage").setAttribute('src', "./images/L2Code-Logo.png");
+      document.querySelector(".navImage").setAttribute('src', "./images/L2Code-Logo.svg");
     }
   }
 
