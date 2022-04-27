@@ -10,7 +10,7 @@ export const OurCustomersStyled = styled.section`
 `;
 
 export const TopGreyBackgroundStyled = styled.div`
-  background-color: ${colors.strong_gray};
+  background-color: ${colors.gray};
   z-index: 0;
   height: 500px;
   position: absolute;

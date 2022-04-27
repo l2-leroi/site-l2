@@ -4,7 +4,7 @@ import { colors } from '../../../styles/colors';
 export const SectionOnePageStyled = styled.section`
   display: flex;
   justify-content: center;
-  background-color: ${colors.strong_gray};
+  background-color: ${colors.gray};
   padding: 120px 152px 10rem; 
   @media (max-width: 1024px) {
     padding-left: 12px;
