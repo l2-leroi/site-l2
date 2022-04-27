@@ -154,7 +154,7 @@ export const SpinningAnimation = keyframes`
 export const SpinningIconStyled = styled.div`
   position: absolute;
   right: 0px;
-  z-index: 99;  
+  z-index: 59;  
   overflow-x: hidden;
   animation: ${SpinningAnimation} 5s linear infinite;
 
