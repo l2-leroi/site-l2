@@ -36,13 +36,4 @@ export const ContactStyled = styled.a`
   line-height: 4.8rem;
   letter-spacing: -0.02em;
   font-weight: 800;
-  ::selection {
-    background: ${colors.green};
-    color: ${colors.black};
-  }
 `;
-
-
-
-
-
