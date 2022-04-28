@@ -37,8 +37,7 @@ export const ContactStyled = styled.a`
   letter-spacing: -0.02em;
   font-weight: 800;
 
-  ::selection {
-    background: ${colors.green};
-    color: ${colors.black};
+  &:hover {
+    color: ${colors.green};
   }
 `;

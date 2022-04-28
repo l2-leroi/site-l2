@@ -212,7 +212,7 @@ export const SocialMediaTitleStyled = styled.li`
     }
 `;
 
-export const SocialMediaItemStyled = styled.li`
+export const SocialMediaItemStyled = styled.a`
     margin: 0px 1.2rem;
     font-family: 'Circular Air Pro';
     font-style: normal;
@@ -221,6 +221,8 @@ export const SocialMediaItemStyled = styled.li`
     line-height: 140%;
     letter-spacing: -0.02em;
     z-index: 50;
+    cursor: pointer;
+
     ::selection {
         background: ${colors.purple};
         color: ${colors.gray};
@@ -228,6 +230,10 @@ export const SocialMediaItemStyled = styled.li`
 
     @media (max-width: 800px) {
         font-size: 10px;
+    }
+
+    &:hover {
+        color: ${colors.green};
     }
 `;
 
