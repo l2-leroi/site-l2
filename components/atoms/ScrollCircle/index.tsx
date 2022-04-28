@@ -9,8 +9,8 @@ function ScrollCircle(props: imageProps) {
           <ArrowSpinnerComponentStyled>
             <ImageArrowSpinnerStyled
               src={props.image ?
-                './images/Arrow-Spinner-White.png' :
-                './images/Arrow-Spinner.png'
+                './images/Arrow-Spinner-White.svg' :
+                './images/Arrow-Spinner.svg'
               
               }
               alt="Tem mais coisa aqui em baixo"
@@ -18,8 +18,8 @@ function ScrollCircle(props: imageProps) {
             />
             <ImageArrowSpinnerStyled
               src={props.image ?
-                './images/Arrow-White.png' : 
-                './images/Arrow.png'
+                './images/Arrow-White.svg' : 
+                './images/Arrow.svg'
                 
               }
               alt="Seta"

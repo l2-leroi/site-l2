@@ -24,6 +24,7 @@ export const MainContentStyled = styled.div`
     z-index: 50;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 `;
 
 export const MainTextStyled = styled.hgroup`
@@ -96,15 +97,20 @@ export const TitleComplementStyled = styled.h3`
 `;
 
 export const LanguageStyled = styled.ul`
-    align-self: center;
-    justify-self: flex-end;
     list-style: none;
     position: absolute;
     right: 28px;
     
     @media (max-width: 800px) {
-        top: 27px;
+        top: 100px;
         right: 24px;
+    }
+
+    @media (max-width: 500px) {
+        position: static;
+        display: inline-flex;
+        margin-top: 32px;
+        gap: 16px;
     }
 `;
 
@@ -119,6 +125,10 @@ export const LanguageItemStyled = styled.li`
     ::selection {
         background: ${colors.purple};
         color: ${colors.gray};
+    }
+
+    &:first-child {
+        margin-bottom: 8px;
     }
 
     @media (max-width: 800px) {
@@ -142,7 +152,7 @@ export const FooterContentStyled = styled.div`
         align-self: center;
         margin-bottom: 80px;
     }
-
+    
     @media (max-width: 416px) {
         margin-bottom: 34px;
     }
