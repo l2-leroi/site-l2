@@ -41,8 +41,7 @@ const Header = () => {
     },
   ];
   const [isBannerAnimating, setIsBannerAnimating] = useState(false);
-  let splashPage = false;
-
+  let counterLoops = 0;
   const interval = useRef(null);
   let currentImage = '';
   const [actualImage, setActualImage] = useState('');
@@ -52,7 +51,6 @@ const Header = () => {
 
   const animeSplashPage = () => {
     const target = document.querySelectorAll<HTMLElement>('.anime');
-    splashPage = false;
     target.forEach((element) => {
       element.classList.add('animate');
     });
@@ -61,7 +59,6 @@ const Header = () => {
   useEffect(() => {
     if(window.innerWidth < 500) {
       window.addEventListener('touchmove', () => {
-        splashPage = true;
         initInterval(backgroundList);
       });
     }
@@ -77,14 +74,11 @@ const Header = () => {
       )
         : 0;
       if (index === backgroundList.length - 1) {
-        if(splashPage) {
-          exitInterval(backgroundList); 
-        } else {
-          currentImage = backgroundList[0].image;
-          currentText = backgroundList[0].text;
-          setActualImage(currentImage);
-          setActualText(currentText);
-        }
+        counterLoops++;
+        currentImage = backgroundList[0].image;
+        currentText = backgroundList[0].text;
+        setActualImage(currentImage);
+        setActualText(currentText);
       } else {
         currentImage = backgroundList[index + 1].image;
         setActualImage(backgroundList[index + 1].image);
@@ -97,7 +91,7 @@ const Header = () => {
       setWhiteCircle(true);
     }, 150);
   };
-
+  console.log(counterLoops);
   const exitInterval = (backgroundList) => {
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
@@ -109,9 +103,6 @@ const Header = () => {
     setActualImage(backgroundList);
     setActualText('CODE');
     document.body.classList.remove("white");
-    if(splashPage) {
-      animeSplashPage();
-    }
   };
 
   return (
@@ -145,7 +136,10 @@ const Header = () => {
               }
             }}
             onTouchEnd={() => {
-              exitInterval(backgroundList);
+              if(counterLoops >= 1) {
+                exitInterval(backgroundList);
+                animeSplashPage();
+              }
             }}
           >
             {actualText}

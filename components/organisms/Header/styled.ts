@@ -43,12 +43,10 @@ export const TitleStyled = styled.h1`
     letter-spacing: -0.04em;
     margin: 0 auto 10px;
     cursor: pointer;
-    ::selection {
-        background: transparent;
-    }
 
     @media (max-width: 800px) {
         font-size: 64px;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
     }
     
 `;
