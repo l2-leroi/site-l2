@@ -14,5 +14,3 @@ const Home: NextPage = () => {
 };
 
 export default Home;
-
-//Teste de PR
