@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html,
-  body, body * {
+  body{
     font-family: Helvetica, Arial, sans-serif;
     // 22/04/2022 -> adição do background para correção da linha branca
     background-color: ${colors.gray};
