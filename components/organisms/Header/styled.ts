@@ -44,8 +44,7 @@ export const TitleStyled = styled.h1`
     margin: 0 auto 10px;
     cursor: pointer;
     ::selection {
-        background: ${colors.purple};
-        color: ${colors.gray};
+        background: transparent;
     }
 
     @media (max-width: 800px) {
@@ -106,6 +105,14 @@ export const LanguageStyled = styled.ul`
         top: 27px;
         right: 24px;
     }
+
+    @media (max-width: 500px) {
+        display: none;
+
+        .animate {
+            display: block;
+        }
+    }
 `;
 
 export const LanguageItemStyled = styled.li`
@@ -165,6 +172,14 @@ export const SocialMediaStyled = styled.ul`
     justify-content: center;
     position: relative;
     bottom: 30px;
+
+    @media (max-width: 500px) {
+        display: none;
+
+        .animate {
+            display: flex;
+        }
+    }
 `;
 
 export const SocialMediaTitleStyled = styled.li`  
@@ -251,5 +266,13 @@ export const ArrowSpinnerContainerStyled = styled.div`
 
     @media (min-width: 2560px) {
         right: 703px;
+    }
+
+    @media (max-width: 500px) {
+        display: none;
+
+        .animate {
+            display: block;
+        }
     }
 `;

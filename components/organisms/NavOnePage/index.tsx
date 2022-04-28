@@ -4,14 +4,9 @@ import {
   NavItemStyled,
   NavLinkListStyled,
   NavLinkStyled,
-  NavButtonStyled,
-  DivTextStyled,
-  TextMenuStyled,
   ImageStyled
 } from "./styled";
-// import L2Logo from '../../../assets/images/logoNav.svg';
-// import MenuIcon from '../../../assets/images/Menu-Icon.svg';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link'
 
 export default function NavOnePage() {

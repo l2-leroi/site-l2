@@ -14,7 +14,7 @@ import {
   SocialMediaItemStyled,
   ImageStyled,
 } from "./styled";
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ScrollCircle from '../../atoms/ScrollCircle/index';
 
 const Header = () => {
@@ -41,6 +41,7 @@ const Header = () => {
     },
   ];
   const [isBannerAnimating, setIsBannerAnimating] = useState(false);
+  let splashPage = false;
 
   const interval = useRef(null);
   let currentImage = '';
@@ -49,22 +50,41 @@ const Header = () => {
   let currentText = '';
   const [actualText, setActualText] = useState('CODE');
 
+  const animeSplashPage = () => {
+    const target = document.querySelectorAll<HTMLElement>('.anime');
+    splashPage = false;
+    target.forEach((element) => {
+      element.classList.add('animate');
+    });
+  }
+
+  useEffect(() => {
+    if(window.innerWidth < 500) {
+      window.addEventListener('touchmove', () => {
+        splashPage = true;
+        initInterval(backgroundList);
+      });
+    }
+  }, []);
+
   const initInterval = (backgroundList) => {
     setIsBannerAnimating(true);
-    console.log(isBannerAnimating);
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
-    
     interval.current = setInterval(() => {
       const index = currentImage !== '' ? backgroundList.findIndex(
         (background) => background.image === currentImage,
       )
         : 0;
       if (index === backgroundList.length - 1) {
-        currentImage = backgroundList[0].image;
-        currentText = backgroundList[0].text;
-        setActualImage(currentImage);
-        setActualText(currentText);
+        if(splashPage) {
+          exitInterval(backgroundList); 
+        } else {
+          currentImage = backgroundList[0].image;
+          currentText = backgroundList[0].text;
+          setActualImage(currentImage);
+          setActualText(currentText);
+        }
       } else {
         currentImage = backgroundList[index + 1].image;
         setActualImage(backgroundList[index + 1].image);
@@ -89,6 +109,9 @@ const Header = () => {
     setActualImage(backgroundList);
     setActualText('CODE');
     document.body.classList.remove("white");
+    if(splashPage) {
+      animeSplashPage();
+    }
   };
 
   return (
@@ -109,9 +132,19 @@ const Header = () => {
           <SubtitleStyled>Love to</SubtitleStyled>
           <TitleStyled
             onMouseEnter={() => {
+              if(window.innerWidth > 500) {
+                initInterval(backgroundList);
+              }    
+            }}
+            onTouchStart={() => {
               initInterval(backgroundList);
             }}
             onMouseLeave={() => {
+              if(window.innerWidth > 500) {
+                exitInterval(backgroundList);
+              }
+            }}
+            onTouchEnd={() => {
               exitInterval(backgroundList);
             }}
           >
@@ -124,20 +157,20 @@ const Header = () => {
           </TitleComplementStyled>
         </MainTextStyled>
 
-        <LanguageStyled>
+        <LanguageStyled className='anime'>
           <LanguageItemStyled>PT</LanguageItemStyled>
           <LanguageItemStyled>EN</LanguageItemStyled>
         </LanguageStyled>
       </MainContentStyled>
 
       <FooterContentStyled>
-        <SocialMediaStyled>
+        <SocialMediaStyled className='anime'>
           <SocialMediaTitleStyled>Siga-nos</SocialMediaTitleStyled>
           <SocialMediaItemStyled>In</SocialMediaItemStyled>
           <SocialMediaItemStyled>IG</SocialMediaItemStyled>
         </SocialMediaStyled>
 
-        <ArrowSpinnerContainerStyled>
+        <ArrowSpinnerContainerStyled className='anime'>
             <ScrollCircle image={whiteCircle}/>
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
