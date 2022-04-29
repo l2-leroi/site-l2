@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { colors } from './colors';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -11,9 +12,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html,
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  body{
+    font-family: Helvetica, Arial, sans-serif;
+    // 22/04/2022 -> adição do background para correção da linha branca
+    background-color: ${colors.gray};
   }
 
   a {
