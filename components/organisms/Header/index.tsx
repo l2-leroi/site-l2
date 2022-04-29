@@ -41,7 +41,9 @@ const Header = () => {
     },
   ];
   const [isBannerAnimating, setIsBannerAnimating] = useState(false);
-  let counterLoops = 0;
+  const [counterLoop, setCounterLoop] = useState(0);
+  const [isTouchActive, setIsTouchActive] = useState(false)
+  const [counterOnInit, setCounterOnInit] = useState(0)
   const interval = useRef(null);
   let currentImage = '';
   const [actualImage, setActualImage] = useState('');
@@ -74,7 +76,7 @@ const Header = () => {
       )
         : 0;
       if (index === backgroundList.length - 1) {
-        counterLoops++;
+        setCounterLoop(counterLoop + 1);
         currentImage = backgroundList[0].image;
         currentText = backgroundList[0].text;
         setActualImage(currentImage);
@@ -91,7 +93,7 @@ const Header = () => {
       setWhiteCircle(true);
     }, 150);
   };
-  console.log(counterLoops);
+  
   const exitInterval = (backgroundList) => {
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
@@ -103,7 +105,14 @@ const Header = () => {
     setActualImage(backgroundList);
     setActualText('CODE');
     document.body.classList.remove("white");
+    setCounterLoop(0)
   };
+
+  useEffect(() => {
+    if(!isTouchActive && counterLoop > counterOnInit){
+      exitInterval(backgroundList);
+    }
+  }, [counterLoop])
 
   return (
     <HeaderStyled className='header'>
@@ -128,6 +137,8 @@ const Header = () => {
               }    
             }}
             onTouchStart={() => {
+              setIsTouchActive(true);
+              setCounterOnInit(counterLoop);
               initInterval(backgroundList);
             }}
             onMouseLeave={() => {
@@ -136,10 +147,13 @@ const Header = () => {
               }
             }}
             onTouchEnd={() => {
-              if(counterLoops >= 1) {
+              console.log(counterLoop)
+              if(counterLoop >= 1) {
+                console.log('entrou aqui')
                 exitInterval(backgroundList);
                 animeSplashPage();
               }
+              setIsTouchActive(false);
             }}
           >
             {actualText}
