@@ -75,7 +75,7 @@ const Header = () => {
       header.classList.add("white");
       nav?.classList.add("white");
       setWhiteCircle(true);
-    }, 150);
+    }, 300);
   };
 
   const exitInterval = (backgroundList) => {
