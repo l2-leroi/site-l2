@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { Heading } from '../../atoms/Typography/teste';
+import { Heading } from '../../atoms/Typography/types';
 
 class Teste extends Component {
   render() {
