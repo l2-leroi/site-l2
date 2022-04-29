@@ -4,6 +4,7 @@ import type { AppProps } from 'next/app';
 import Footer from '../components/organisms/Footer/index';
 import Header from '../components/organisms/Header/index';
 import Nav from '../components/organisms/NavOnePage/index';
+import Teste from '../components/organisms/Teste';
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Header />
       <Component {...pageProps} />
       <Footer />
+      <Teste/>
     </>
   );
 }
