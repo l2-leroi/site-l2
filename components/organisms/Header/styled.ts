@@ -24,6 +24,7 @@ export const MainContentStyled = styled.div`
     z-index: 50;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 `;
 
 export const MainTextStyled = styled.hgroup`
@@ -93,14 +94,12 @@ export const TitleComplementStyled = styled.h3`
 `;
 
 export const LanguageStyled = styled.ul`
-    align-self: center;
-    justify-self: flex-end;
     list-style: none;
     position: absolute;
     right: 28px;
     
     @media (max-width: 800px) {
-        top: 27px;
+        top: 100px;
         right: 24px;
     }
 
@@ -111,6 +110,10 @@ export const LanguageStyled = styled.ul`
             opacity: 1;
             transition: opacity .8s;
         }
+        position: static;
+        display: inline-flex;
+        margin-top: 32px;
+        gap: 16px;
     }
 `;
 
@@ -125,6 +128,10 @@ export const LanguageItemStyled = styled.li`
     ::selection {
         background: ${colors.purple};
         color: ${colors.gray};
+    }
+
+    &:first-child {
+        margin-bottom: 8px;
     }
 
     @media (max-width: 800px) {
@@ -148,7 +155,7 @@ export const FooterContentStyled = styled.div`
         align-self: center;
         margin-bottom: 80px;
     }
-
+    
     @media (max-width: 416px) {
         margin-bottom: 34px;
     }
@@ -217,7 +224,7 @@ export const SocialMediaTitleStyled = styled.li`
     }
 `;
 
-export const SocialMediaItemStyled = styled.li`
+export const SocialMediaItemStyled = styled.a`
     margin: 0px 1.2rem;
     font-family: 'Circular Air Pro';
     font-style: normal;
@@ -226,6 +233,8 @@ export const SocialMediaItemStyled = styled.li`
     line-height: 140%;
     letter-spacing: -0.02em;
     z-index: 50;
+    cursor: pointer;
+
     ::selection {
         background: ${colors.purple};
         color: ${colors.gray};
@@ -233,6 +242,10 @@ export const SocialMediaItemStyled = styled.li`
 
     @media (max-width: 800px) {
         font-size: 10px;
+    }
+
+    &:hover {
+        color: ${colors.green};
     }
 `;
 
@@ -242,6 +255,10 @@ export const ImageStyled = styled.img`
     z-index: 0;
     height: 100vh;
     width: auto;
+
+    @media (min-width: 2560px) {
+        width: 100%;
+    }
 
     &.noneImage {
         display: none;

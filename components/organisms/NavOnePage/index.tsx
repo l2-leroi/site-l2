@@ -20,10 +20,10 @@ export default function NavOnePage() {
 
   const handleMutation = (mutation) => {
     if(mutation[0].target.classList.contains('white')){
-      document.querySelector(".navImage").setAttribute('src', "./images/L2Code-Logo-White.png")
+      document.querySelector(".navImage").setAttribute('src', "./images/L2Code-Logo-White.svg")
     }
     else{
-      document.querySelector(".navImage").setAttribute('src', "./images/L2Code-Logo.png");
+      document.querySelector(".navImage").setAttribute('src', "./images/L2Code-Logo.svg");
     }
   }
 
@@ -66,7 +66,7 @@ export default function NavOnePage() {
       <NavStyled className="nav anime">
         <NavContentStyled className="navList">
           <NavItemStyled>
-            <ImageStyled className="navImage" src="./images/L2Code-Logo.png" alt="L2 Code" />
+            <ImageStyled className="navImage" src="./images/L2Code-Logo.svg" alt="L2 Code" />
           </NavItemStyled>
           
           <NavItemStyled>

@@ -72,30 +72,28 @@ const Header = () => {
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
     interval.current = setInterval(() => {
-      const index = currentImage != '' ? backgroundList.findIndex(
+      const index = currentImage !== '' ? (backgroundList.findIndex(
         (background) => background.image === currentImage,
-      )
-        : -1;
-        console.log(index);
+      ) + 1)
+        : 0;
       if (index === backgroundList.length - 1) {
         setCounterLoop(counterLoop + 1);
+      } else if (index === backgroundList.length) { 
         currentImage = backgroundList[0].image;
         currentText = backgroundList[0].text;
         setActualImage(currentImage);
         setActualText(currentText);
       } else {
-        currentImage = backgroundList[index+1].image;
+        currentImage = backgroundList[index].image;
         setActualImage(currentImage);
-        console.log(actualImage);
 
-        currentText = backgroundList[index+1].text;
+        currentText = backgroundList[index].text;
         setActualText(currentText);
-        console.log(actualText);
       }
       header.classList.add("white");
       nav?.classList.add("white");
       setWhiteCircle(true);
-    }, 150);
+    }, 300);
   };
   
   const exitInterval = (backgroundList) => {
@@ -177,8 +175,8 @@ const Header = () => {
       <FooterContentStyled>
         <SocialMediaStyled className='anime'>
           <SocialMediaTitleStyled>Siga-nos</SocialMediaTitleStyled>
-          <SocialMediaItemStyled>In</SocialMediaItemStyled>
-          <SocialMediaItemStyled>IG</SocialMediaItemStyled>
+          <SocialMediaItemStyled href="https://www.linkedin.com/company/l2code-dev/" target="_blank">In</SocialMediaItemStyled>
+          <SocialMediaItemStyled href="https://www.instagram.com/l2code.com.br/" target="_blank">IG</SocialMediaItemStyled>
         </SocialMediaStyled>
 
         <ArrowSpinnerContainerStyled className='anime'>
