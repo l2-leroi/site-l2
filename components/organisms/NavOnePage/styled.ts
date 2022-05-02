@@ -26,6 +26,14 @@ export const NavStyled = styled.nav`
       transition: all 0.4s;
     }
   }
+
+  @media (max-width: 500px) {
+    display: none;
+
+    .animate {
+      display: block;
+    }
+  }
 `;
 
 export const NavContentStyled = styled.ul`

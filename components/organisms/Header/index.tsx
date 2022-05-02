@@ -42,8 +42,8 @@ const Header = () => {
   ];
   const [isBannerAnimating, setIsBannerAnimating] = useState(false);
   const [counterLoop, setCounterLoop] = useState(0);
-  const [isTouchActive, setIsTouchActive] = useState(false)
-  const [counterOnInit, setCounterOnInit] = useState(0)
+  const [isTouchActive, setIsTouchActive] = useState(false);
+  const [counterOnInit, setCounterOnInit] = useState(0);
   const interval = useRef(null);
   let currentImage = '';
   const [actualImage, setActualImage] = useState('');
@@ -53,6 +53,7 @@ const Header = () => {
 
   const animeSplashPage = () => {
     const target = document.querySelectorAll<HTMLElement>('.anime');
+    console.log(target);
     target.forEach((element) => {
       element.classList.add('animate');
     });
@@ -74,7 +75,7 @@ const Header = () => {
       const index = currentImage !== '' ? backgroundList.findIndex(
         (background) => background.image === currentImage,
       )
-        : 0;
+        : -1;
       if (index === backgroundList.length - 1) {
         setCounterLoop(counterLoop + 1);
         currentImage = backgroundList[0].image;
@@ -105,12 +106,13 @@ const Header = () => {
     setActualImage(backgroundList);
     setActualText('CODE');
     document.body.classList.remove("white");
-    setCounterLoop(0)
+    setCounterLoop(0);
   };
 
   useEffect(() => {
-    if(!isTouchActive && counterLoop > counterOnInit){
+    if(window.innerWidth < 500 && !isTouchActive && counterLoop > counterOnInit){
       exitInterval(backgroundList);
+      animeSplashPage();
     }
   }, [counterLoop])
 
@@ -147,9 +149,9 @@ const Header = () => {
               }
             }}
             onTouchEnd={() => {
-              console.log(counterLoop)
+              console.log(counterLoop);
               if(counterLoop >= 1) {
-                console.log('entrou aqui')
+                console.log('entrou aqui');
                 exitInterval(backgroundList);
                 animeSplashPage();
               }
