@@ -105,10 +105,11 @@ export const LanguageStyled = styled.ul`
     }
 
     @media (max-width: 500px) {
-        display: none;
-
-        .animate {
-            display: block;
+        opacity: 0;
+        
+        &.animate {
+            opacity: 1;
+            transition: opacity .8s;
         }
     }
 `;
@@ -172,10 +173,11 @@ export const SocialMediaStyled = styled.ul`
     bottom: 30px;
 
     @media (max-width: 500px) {
-        display: none;
+        opacity: 0;
 
-        .animate {
-            display: flex;
+        &.animate {
+            opacity: 1;
+            transition: opacity .8s;
         }
     }
 `;
@@ -267,10 +269,11 @@ export const ArrowSpinnerContainerStyled = styled.div`
     }
 
     @media (max-width: 500px) {
-        display: none;
+        opacity: 0;
 
-        .animate {
-            display: block;
+        &.animate {
+            opacity: 1;
+            transition: opacity .8s;
         }
     }
 `;

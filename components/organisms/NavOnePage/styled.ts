@@ -28,10 +28,11 @@ export const NavStyled = styled.nav`
   }
 
   @media (max-width: 500px) {
-    display: none;
+    opacity: 0;
 
-    .animate {
-      display: block;
+    &.animate {
+      opacity: 1;
+      transition: opacity .8s;
     }
   }
 `;

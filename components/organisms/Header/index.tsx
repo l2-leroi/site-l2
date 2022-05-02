@@ -72,10 +72,11 @@ const Header = () => {
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
     interval.current = setInterval(() => {
-      const index = currentImage !== '' ? backgroundList.findIndex(
+      const index = currentImage != '' ? backgroundList.findIndex(
         (background) => background.image === currentImage,
       )
         : -1;
+        console.log(index);
       if (index === backgroundList.length - 1) {
         setCounterLoop(counterLoop + 1);
         currentImage = backgroundList[0].image;
@@ -83,11 +84,13 @@ const Header = () => {
         setActualImage(currentImage);
         setActualText(currentText);
       } else {
-        currentImage = backgroundList[index + 1].image;
-        setActualImage(backgroundList[index + 1].image);
+        currentImage = backgroundList[index+1].image;
+        setActualImage(currentImage);
+        console.log(actualImage);
 
-        currentText = backgroundList[index + 1].text;
-        setActualText(backgroundList[index + 1].text);
+        currentText = backgroundList[index+1].text;
+        setActualText(currentText);
+        console.log(actualText);
       }
       header.classList.add("white");
       nav?.classList.add("white");
@@ -149,9 +152,7 @@ const Header = () => {
               }
             }}
             onTouchEnd={() => {
-              console.log(counterLoop);
               if(counterLoop >= 1) {
-                console.log('entrou aqui');
                 exitInterval(backgroundList);
                 animeSplashPage();
               }
