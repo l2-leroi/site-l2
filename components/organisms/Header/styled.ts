@@ -244,6 +244,10 @@ export const ImageStyled = styled.img`
     height: 100vh;
     width: auto;
 
+    @media (min-width: 2560px) {
+        width: 100%;
+    }
+
     &.noneImage {
         display: none;
     }
