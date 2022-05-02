@@ -44,6 +44,8 @@ const Header = () => {
   const [counterLoop, setCounterLoop] = useState(0);
   const [isTouchActive, setIsTouchActive] = useState(false);
   const [counterOnInit, setCounterOnInit] = useState(0);
+  const [isTouchMove, setTouchMove] = useState(false);
+  const [splashPage, setSplashPage] = useState(false);
   const interval = useRef(null);
   let currentImage = '';
   const [actualImage, setActualImage] = useState('');
@@ -53,7 +55,6 @@ const Header = () => {
 
   const animeSplashPage = () => {
     const target = document.querySelectorAll<HTMLElement>('.anime');
-    console.log(target);
     target.forEach((element) => {
       element.classList.add('animate');
     });
@@ -62,6 +63,12 @@ const Header = () => {
   useEffect(() => {
     if(window.innerWidth < 500) {
       window.addEventListener('touchmove', () => {
+        setTouchMove(true);
+        initInterval(backgroundList);
+      });
+
+      window.addEventListener('scroll', () => {
+        setTouchMove(true);
         initInterval(backgroundList);
       });
     }
@@ -76,14 +83,27 @@ const Header = () => {
         (background) => background.image === currentImage,
       ) + 1)
         : 0;
-      if (index === backgroundList.length - 1) {
+
+      // mobile
+      if (window.innerWidth < 500 && index === backgroundList.length) {
         setCounterLoop(counterLoop + 1);
-      } else if (index === backgroundList.length) { 
+        if (splashPage) {
+          currentImage = backgroundList[0].image;
+          currentText = backgroundList[0].text;
+          setActualImage(currentImage);
+          setActualText(currentText);
+        }
+      } 
+
+      // desktop
+      else if (index === backgroundList.length) { 
         currentImage = backgroundList[0].image;
         currentText = backgroundList[0].text;
         setActualImage(currentImage);
         setActualText(currentText);
-      } else {
+      } 
+
+      else {
         currentImage = backgroundList[index].image;
         setActualImage(currentImage);
 
@@ -111,14 +131,37 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if(window.innerWidth < 500 && !isTouchActive && counterLoop > counterOnInit){
+    if(window.innerWidth < 500 && !isTouchActive && counterLoop > counterOnInit && !isTouchMove){
       exitInterval(backgroundList);
       animeSplashPage();
+      setSplashPage(true);
+    }
+    else if(window.innerWidth < 500 && !isTouchActive && counterLoop > counterOnInit && isTouchMove){
+      exitInterval(backgroundList);
+      animeSplashPage();
+      setSplashPage(true);
     }
   }, [counterLoop])
 
   return (
-    <HeaderStyled className='header'>
+    <HeaderStyled 
+      className='header'
+      // onTouchStart={() => {
+      //   if (splashPage === false) {
+      //     setIsTouchActive(true);
+      //     setCounterOnInit(counterLoop);
+      //     initInterval(backgroundList);
+      //   }
+      // }}
+      // onTouchEnd={() => {
+      //   if(counterLoop >= 1 && splashPage === false) {
+      //     exitInterval(backgroundList);
+      //   }
+      //   if (splashPage === false) {
+      //     setIsTouchActive(false);
+      //   }
+      // }}
+    >
       {backgroundList.map((background) => (
         <ImageStyled
           key={background.image}
@@ -150,9 +193,11 @@ const Header = () => {
               }
             }}
             onTouchEnd={() => {
-              if(counterLoop >= 1) {
+              if (splashPage === true) {
                 exitInterval(backgroundList);
-                animeSplashPage();
+              }
+              else if(counterLoop >= 1) {
+                exitInterval(backgroundList);
               }
               setIsTouchActive(false);
             }}
