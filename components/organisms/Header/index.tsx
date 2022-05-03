@@ -57,11 +57,15 @@ const Header = () => {
     target.forEach((element) => {
       element.classList.add('animate');
     });
-    document.body.style.overflow = null;
+    if(window.innerWidth < 500) {
+      document.body.style.overflow = null;
+    }
   }
 
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
+    if(window.innerWidth < 500) {
+      document.body.style.overflow = 'hidden';
+    }
   },[])
 
   const initInterval = (backgroundList) => {
