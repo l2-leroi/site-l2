@@ -44,7 +44,6 @@ const Header = () => {
   const [counterLoop, setCounterLoop] = useState(0);
   const [isTouchActive, setIsTouchActive] = useState(false);
   const [counterOnInit, setCounterOnInit] = useState(0);
-  const [isTouchMove, setTouchMove] = useState(false);
   const [splashPage, setSplashPage] = useState(false);
   const interval = useRef(null);
   let currentImage = '';
@@ -58,21 +57,12 @@ const Header = () => {
     target.forEach((element) => {
       element.classList.add('animate');
     });
+    document.body.style.overflow = null;
   }
 
   useEffect(() => {
-    if(window.innerWidth < 500 && !splashPage) {
-      window.addEventListener('touchmove', () => {
-        setTouchMove(true);
-        initInterval(backgroundList);
-      });
-
-      window.addEventListener('scroll', () => {
-        setTouchMove(true);
-        initInterval(backgroundList);
-      });
-    }
-  }, []);
+    document.body.style.overflow = 'hidden';
+  },[])
 
   const initInterval = (backgroundList) => {
     setIsBannerAnimating(true);
@@ -139,12 +129,12 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if(window.innerWidth < 500 && !isTouchActive && counterLoop > counterOnInit && !isTouchMove){
+    if(window.innerWidth < 500 && !isTouchActive && counterLoop > counterOnInit && !splashPage){
       exitInterval(backgroundList);
       animeSplashPage();
       setSplashPage(true);
     }
-    else if(window.innerWidth < 500 && !isTouchActive && counterLoop > counterOnInit && isTouchMove){
+    else if(window.innerWidth < 500 && !isTouchActive && counterLoop > counterOnInit && !splashPage){
       exitInterval(backgroundList);
       animeSplashPage();
       setSplashPage(true);
@@ -152,7 +142,22 @@ const Header = () => {
   }, [counterLoop])
 
   return (
-    <HeaderStyled className='header'>
+    <HeaderStyled 
+      className='header'
+      onTouchStart={() => {
+        if(!splashPage) {
+          setIsTouchActive(true);
+          setCounterOnInit(counterLoop);
+          initInterval(backgroundList);
+        }
+      }}
+      onTouchEnd={() => {
+        if(counterLoop >= 1 && !splashPage) {
+          exitInterval(backgroundList);
+        }
+        setIsTouchActive(false);
+      }}
+    >
       {backgroundList.map((background) => (
         <ImageStyled
           key={background.image}
@@ -174,8 +179,6 @@ const Header = () => {
               }    
             }}
             onTouchStart={() => {
-              setIsTouchActive(true);
-              setCounterOnInit(counterLoop);
               initInterval(backgroundList);
             }}
             onMouseLeave={() => {
@@ -184,13 +187,7 @@ const Header = () => {
               }
             }}
             onTouchEnd={() => {
-              if (splashPage === true) {
                 exitInterval(backgroundList);
-              }
-              else if(counterLoop >= 1) {
-                exitInterval(backgroundList);
-              }
-              setIsTouchActive(false);
             }}
           >
             {actualText}
