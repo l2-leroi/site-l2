@@ -19,11 +19,19 @@ export const NavStyled = styled.nav`
 
   &.smallFixed{
     position: fixed;
-    transition: all 0.5s;
     
     ul.navList {
       padding: 25px 28px;
-      transition: all 0.4s;
+      transition: padding 0.4s;
+    }
+  }
+
+  @media (max-width: 500px) {
+    opacity: 0;
+
+    &.animate {
+      opacity: 1;
+      transition: opacity .8s;
     }
   }
 `;
