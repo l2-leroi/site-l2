@@ -61,7 +61,7 @@ const Header = () => {
   }
 
   useEffect(() => {
-    if(window.innerWidth < 500) {
+    if(window.innerWidth < 500 && !splashPage) {
       window.addEventListener('touchmove', () => {
         setTouchMove(true);
         initInterval(backgroundList);
@@ -77,6 +77,7 @@ const Header = () => {
   const initInterval = (backgroundList) => {
     setIsBannerAnimating(true);
     const header = document.querySelector(".header");
+    const link = document.querySelectorAll(".link");
     const nav = document.querySelector(".nav");
     interval.current = setInterval(() => {
       const index = currentImage !== '' ? (backgroundList.findIndex(
@@ -112,6 +113,9 @@ const Header = () => {
       }
       header.classList.add("white");
       nav?.classList.add("white");
+      link.forEach((element) => {
+        element.classList.add('white');
+      });
       setWhiteCircle(true);
     }, 300);
   };
@@ -119,8 +123,12 @@ const Header = () => {
   const exitInterval = (backgroundList) => {
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
+    const link = document.querySelectorAll(".link");
     header.classList.remove("white");
     nav?.classList.remove("white");
+    link.forEach((element) => {
+      element.classList.remove('white');
+    });
     setWhiteCircle(false);
     clearInterval(interval.current);
     interval.current = null;
@@ -144,24 +152,7 @@ const Header = () => {
   }, [counterLoop])
 
   return (
-    <HeaderStyled 
-      className='header'
-      // onTouchStart={() => {
-      //   if (splashPage === false) {
-      //     setIsTouchActive(true);
-      //     setCounterOnInit(counterLoop);
-      //     initInterval(backgroundList);
-      //   }
-      // }}
-      // onTouchEnd={() => {
-      //   if(counterLoop >= 1 && splashPage === false) {
-      //     exitInterval(backgroundList);
-      //   }
-      //   if (splashPage === false) {
-      //     setIsTouchActive(false);
-      //   }
-      // }}
-    >
+    <HeaderStyled className='header'>
       {backgroundList.map((background) => (
         <ImageStyled
           key={background.image}
@@ -220,8 +211,8 @@ const Header = () => {
       <FooterContentStyled>
         <SocialMediaStyled className='anime'>
           <SocialMediaTitleStyled>Siga-nos</SocialMediaTitleStyled>
-          <SocialMediaItemStyled href="https://www.linkedin.com/company/l2code-dev/" target="_blank">In</SocialMediaItemStyled>
-          <SocialMediaItemStyled href="https://www.instagram.com/l2code.com.br/" target="_blank">IG</SocialMediaItemStyled>
+          <SocialMediaItemStyled className="link" href="https://www.linkedin.com/company/l2code-dev/" target="_blank">In</SocialMediaItemStyled>
+          <SocialMediaItemStyled className="link" href="https://www.instagram.com/l2code.com.br/" target="_blank">IG</SocialMediaItemStyled>
         </SocialMediaStyled>
 
         <ArrowSpinnerContainerStyled className='anime'>

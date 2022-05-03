@@ -235,6 +235,10 @@ export const SocialMediaItemStyled = styled.a`
     z-index: 50;
     cursor: pointer;
 
+    &.white{
+        color: white;
+    }
+
     ::selection {
         background: ${colors.purple};
         color: ${colors.gray};
