@@ -12,17 +12,16 @@ function ScrollCircle(props: imageProps) {
           <ArrowSpinnerComponentStyled>
             <ImageArrowSpinnerStyled
               src={props.isWhiteImage ?
-                './images/Arrow-Spinner-White.svg' :
-                './images/Arrow-Spinner.svg'
-              
+                props.whiteImage :
+                props.blackImage
               }
               alt={props.alt}
               className='animate'
             />
             <ImageArrowSpinnerStyled
               src={props.isWhiteImage ?
-                './images/Arrow-White.png' : 
-                './images/Arrow.png'
+                './images/Arrow-White.svg' : 
+                './images/Arrow.svg'
                 
               }
               alt="Seta"

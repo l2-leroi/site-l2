@@ -49,13 +49,19 @@ const Header = () => {
   const [whiteCircle, setWhiteCircle] = useState(false);
   const [actualText, setActualText] = useState('CODE');
   const [startTouch, setStartTouch] = useState(new Date());
+  let isTouch = false;
 
   const initInterval = (backgroundList) => {
     if(!isBannerAnimating){
-      setStartTouch(new Date());
+      if(isTouch === true){
+        setStartTouch(new Date());
+      }
+      
       setIsBannerAnimating(true);
-      interval.current = null;
       const header = document.querySelector(".header");
+      const nav = document.querySelector(".nav");
+
+      interval.current = null;
       interval.current = setInterval(() => {
         const index = currentImage !== '' ? backgroundList.findIndex(
           (background) => background.image === currentImage,
@@ -74,80 +80,49 @@ const Header = () => {
           setActualText(backgroundList[index + 1].text);
         }
         header.classList.add("white");
+        nav.classList.add("white");
         setWhiteCircle(true);
       }, 150);
     }
-    setIsBannerAnimating(true);
-    console.log(isBannerAnimating);
-    const header = document.querySelector(".header");
-    const nav = document.querySelector(".nav");
-    
-    interval.current = setInterval(() => {
-      const index = currentImage !== '' ? backgroundList.findIndex(
-        (background) => background.image === currentImage,
-      )
-        : 0;
-      if (index === backgroundList.length - 1) {
-        currentImage = backgroundList[0].image;
-        currentText = backgroundList[0].text;
-        setActualImage(currentImage);
-        setActualText(currentText);
-      } else {
-        currentImage = backgroundList[index + 1].image;
-        setActualImage(backgroundList[index + 1].image);
-
-        currentText = backgroundList[index + 1].text;
-        setActualText(backgroundList[index + 1].text);
-      }
-      header.classList.add("white");
-      nav?.classList.add("white");
-      setWhiteCircle(true);
-    }, 300);
   };
 
   const exitInterval = (backgroundList) => {
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
     header.classList.remove("white");
-    nav?.classList.remove("white");
+    nav.classList.remove("white");
     setWhiteCircle(false);
     clearInterval(interval.current);
     interval.current = null;
-    setActualImage(backgroundList);
+    setActualImage("");
     setActualText('CODE');
     setIsBannerAnimating(false);
-    document.body.classList.remove("white");
+    isTouch = false;
   };
 
   return (
-    <HeaderStyled className='header'>
-      {backgroundList.map((background) => (
-        <ImageStyled
-          key={background.image}
-          src={background.image}
-          alt={background.text}
-          className={
-            actualImage == background.image ? 'activeImage' : 'noneImage'
-          }
-        />
-      ))}
-
+    <HeaderStyled className='header' style={{backgroundImage: `url(${actualImage})`}}>
       <MainContentStyled>
         <MainTextStyled>
           <SubtitleStyled>Love to</SubtitleStyled>
           <TitleStyled
             onTouchStart={(e)=>{
+              isTouch = true;
               interval.current = null;
               initInterval(backgroundList);
             }}
 
             onMouseEnter={(e)=>{
-              interval.current = null;
-              initInterval(backgroundList);
+              if(window.innerWidth > 1024){
+                interval.current = null;
+                initInterval(backgroundList);
+              }
             }}
 
             onMouseLeave={(e)=>{
-              exitInterval(backgroundList);
+              if(window.innerWidth > 1024){
+                exitInterval(backgroundList);
+              }
             }}
             
             onTouchEnd={(event)=>{
@@ -185,7 +160,7 @@ const Header = () => {
         </SocialMediaStyled>
 
         <ArrowSpinnerContainerStyled>
-            <ScrollCircle isWhiteImage={whiteCircle} blackImage={"./images/Arrow-Spinner.png"} whiteImage={"./images/Arrow-Spinner-White.png"} alt={"Tem mais coisa aqui em baixo"}/>
+            <ScrollCircle isWhiteImage={whiteCircle} blackImage={"./images/Arrow-Spinner.svg"} whiteImage={"./images/Arrow-Spinner-White.svg"} alt={"Tem mais coisa aqui em baixo"}/>
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
     </HeaderStyled>
