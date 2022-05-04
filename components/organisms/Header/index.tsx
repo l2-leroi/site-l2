@@ -183,7 +183,9 @@ const Header = () => {
               }    
             }}
             onTouchStart={() => {
-              initInterval(backgroundList);
+              if(splashPage) {
+                initInterval(backgroundList);
+              }
             }}
             onMouseLeave={() => {
               if(window.innerWidth > 500) {
@@ -191,7 +193,9 @@ const Header = () => {
               }
             }}
             onTouchEnd={() => {
+              if(splashPage) {
                 exitInterval(backgroundList);
+              }
             }}
           >
             {actualText}
