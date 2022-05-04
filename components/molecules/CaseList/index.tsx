@@ -106,11 +106,21 @@ function CaseList(props: CaseProps) {
                 <InfoStyled>{itemCase.info}</InfoStyled>
                 <LinkStyled
                   onMouseEnter={() => {
-                    initInterval(itemCase.hover);
+                    if(window.innerWidth > 500) {
+                      initInterval(itemCase.hover);
+                    }
                   }}
                   onMouseLeave={() => {
-                    cancelInterval(itemCase.image);
+                    if(window.innerWidth > 500) {
+                      cancelInterval(itemCase.image);
+                    }
                   }}
+                  onTouchStart={() => {
+                    initInterval(itemCase.hover);
+                  }}
+                  onTouchEnd={() => {
+                    cancelInterval(itemCase.image);
+                }}
                 >
                   <ImageStyled
                     src={itemCase.image}
