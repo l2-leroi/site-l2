@@ -74,6 +74,15 @@ function CaseList(props: CaseProps) {
     }
   }, []);
 
+  useEffect(() => {
+    if(window.innerWidth < 500) {
+      const images = document.querySelectorAll<HTMLElement>('.images');
+      images.forEach((img) => {
+        img.addEventListener('contextmenu', (e) => {e.preventDefault()});
+      });
+    }
+  });
+
   // anime hover
   const initInterval = (images: string[]) => {
     interval.current = setInterval(() => {
@@ -122,7 +131,7 @@ function CaseList(props: CaseProps) {
                     cancelInterval(itemCase.image);
                 }}
                 >
-                  <ImageStyled
+                  <ImageStyled className="images"
                     src={itemCase.image}
                     alt={itemCase.alt}
                   />
