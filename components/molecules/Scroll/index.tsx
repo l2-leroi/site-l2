@@ -35,12 +35,12 @@ export default function Scroll() {
       const url = baseUrl[i];
 
       if (baseUrl[i] == './') {
-        console.log(baseItems[i]);
-        console.log('funcionando');
+        // console.log(baseItems[i]);
+        // console.log('funcionando');
       }
     }
   }
-  console.log(createMarkup());
+  // console.log(createMarkup());
 
   const [items, setItems] = useState([...baseItems, ...baseItems]);
 
