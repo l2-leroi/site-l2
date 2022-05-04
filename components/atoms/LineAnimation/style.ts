@@ -7,6 +7,6 @@ interface Props{
 
 export const Line = styled.div<Props>`
     clip-path: polygon(0 30%, 100% 30%, 100% 100%, 0 100%);
-    padding-top: 300px;
+    padding-top: 25%;
     background-color: ${props => props.bgColor};
 `;
