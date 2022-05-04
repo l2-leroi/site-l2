@@ -43,13 +43,11 @@ export const TitleStyled = styled.h1`
     text-align: center;
     letter-spacing: -0.04em;
     margin: 0 auto 10px;
-    cursor: pointer;
+    user-select: none;
 
     @media (max-width: 800px) {
         font-size: 64px;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
     }
-    
 `;
 
 export const SubtitleStyled = styled.h2`

@@ -65,6 +65,7 @@ const Header = () => {
   useEffect(() => {
     if(window.innerWidth < 500) {
       document.body.style.overflow = 'hidden';
+      document.querySelector<HTMLElement>('.title').addEventListener('contextmenu', (e) => {e.preventDefault()});
     }
   },[])
 
@@ -176,14 +177,16 @@ const Header = () => {
       <MainContentStyled>
         <MainTextStyled>
           <SubtitleStyled>Love to</SubtitleStyled>
-          <TitleStyled
+          <TitleStyled className="title"
             onMouseEnter={() => {
               if(window.innerWidth > 500) {
                 initInterval(backgroundList);
               }    
             }}
             onTouchStart={() => {
-              initInterval(backgroundList);
+              if(splashPage) {
+                initInterval(backgroundList);
+              }
             }}
             onMouseLeave={() => {
               if(window.innerWidth > 500) {
@@ -191,7 +194,9 @@ const Header = () => {
               }
             }}
             onTouchEnd={() => {
+              if(splashPage) {
                 exitInterval(backgroundList);
+              }
             }}
           >
             {actualText}
