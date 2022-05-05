@@ -74,6 +74,15 @@ function CaseList(props: CaseProps) {
     }
   }, []);
 
+  useEffect(() => {
+    if(window.innerWidth < 500) {
+      const images = document.querySelectorAll<HTMLElement>('.images');
+      images.forEach((img) => {
+        img.addEventListener('contextmenu', (e) => {e.preventDefault()});
+      });
+    }
+  });
+
   // anime hover
   const initInterval = (images: string[]) => {
     interval.current = setInterval(() => {
@@ -106,13 +115,23 @@ function CaseList(props: CaseProps) {
                 <InfoStyled>{itemCase.info}</InfoStyled>
                 <LinkStyled
                   onMouseEnter={() => {
-                    initInterval(itemCase.hover);
+                    if(window.innerWidth > 500) {
+                      initInterval(itemCase.hover);
+                    }
                   }}
                   onMouseLeave={() => {
-                    cancelInterval(itemCase.image);
+                    if(window.innerWidth > 500) {
+                      cancelInterval(itemCase.image);
+                    }
                   }}
+                  onTouchStart={() => {
+                    initInterval(itemCase.hover);
+                  }}
+                  onTouchEnd={() => {
+                    cancelInterval(itemCase.image);
+                }}
                 >
-                  <ImageStyled
+                  <ImageStyled className="images"
                     src={itemCase.image}
                     alt={itemCase.alt}
                   />
