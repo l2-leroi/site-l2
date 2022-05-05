@@ -28,6 +28,7 @@ export const ListStyled = styled.ul`
     grid-template-columns: repeat(2,1fr);
 
     &::after {
+      top: -20px;
       height: 90%;
     }
   }
