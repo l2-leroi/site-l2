@@ -40,10 +40,9 @@ const Header = () => {
       text: 'THINK',
     },
   ];
-  const [isBannerAnimating, setIsBannerAnimating] = useState(false);
   const [counterLoop, setCounterLoop] = useState(0);
+  // let isTouchActive = false;
   const [isTouchActive, setIsTouchActive] = useState(false);
-  const [counterOnInit, setCounterOnInit] = useState(0);
   const [splashPage, setSplashPage] = useState(false);
   const interval = useRef(null);
   let currentImage = '';
@@ -57,20 +56,19 @@ const Header = () => {
     target.forEach((element) => {
       element.classList.add('animate');
     });
-    if(window.innerWidth < 500) {
+    if (window.innerWidth < 500) {
       document.body.style.overflow = null;
     }
   }
 
   useEffect(() => {
-    if(window.innerWidth < 500) {
+    if (window.innerWidth < 500) {
       document.body.style.overflow = 'hidden';
-      document.querySelector<HTMLElement>('.title').addEventListener('contextmenu', (e) => {e.preventDefault()});
+      document.querySelector<HTMLElement>('.title').addEventListener('contextmenu', (e) => { e.preventDefault() });
     }
-  },[])
+  }, [])
 
   const initInterval = (backgroundList) => {
-    setIsBannerAnimating(true);
     const header = document.querySelector(".header");
     const link = document.querySelectorAll(".link");
     const nav = document.querySelector(".nav");
@@ -83,21 +81,21 @@ const Header = () => {
       // mobile
       if (window.innerWidth < 500 && index === backgroundList.length) {
         setCounterLoop(counterLoop + 1);
-        if (splashPage) {
+        if (splashPage || isTouchActive) {
           currentImage = backgroundList[0].image;
           currentText = backgroundList[0].text;
           setActualImage(currentImage);
           setActualText(currentText);
         }
-      } 
+      }
 
       // desktop
-      else if (index === backgroundList.length) { 
+      else if (index === backgroundList.length) {
         currentImage = backgroundList[0].image;
         currentText = backgroundList[0].text;
         setActualImage(currentImage);
         setActualText(currentText);
-      } 
+      }
 
       else {
         currentImage = backgroundList[index].image;
@@ -114,7 +112,7 @@ const Header = () => {
       setWhiteCircle(true);
     }, 300);
   };
-  
+
   const exitInterval = (backgroundList) => {
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
@@ -134,32 +132,23 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if(window.innerWidth < 500 && !isTouchActive && counterLoop > counterOnInit && !splashPage){
+    if (window.innerWidth < 500 && !isTouchActive && counterLoop >= 1 && !splashPage) {
       exitInterval(backgroundList);
       animeSplashPage();
       setSplashPage(true);
     }
-    else if(window.innerWidth < 500 && !isTouchActive && counterLoop > counterOnInit && !splashPage){
-      exitInterval(backgroundList);
-      animeSplashPage();
-      setSplashPage(true);
-    }
-  }, [counterLoop])
+  }, [isTouchActive, counterLoop])
 
   return (
-    <HeaderStyled 
+    <HeaderStyled
       className='header'
       onTouchStart={() => {
-        if(!splashPage) {
+        if (!splashPage) {
           setIsTouchActive(true);
-          setCounterOnInit(counterLoop);
           initInterval(backgroundList);
         }
       }}
       onTouchEnd={() => {
-        if(counterLoop >= 1 && !splashPage) {
-          exitInterval(backgroundList);
-        }
         setIsTouchActive(false);
       }}
     >
@@ -179,22 +168,22 @@ const Header = () => {
           <SubtitleStyled>Love to</SubtitleStyled>
           <TitleStyled className="title"
             onMouseEnter={() => {
-              if(window.innerWidth > 500) {
+              if (window.innerWidth > 500) {
                 initInterval(backgroundList);
-              }    
+              }
             }}
             onTouchStart={() => {
-              if(splashPage) {
+              if (splashPage) {
                 initInterval(backgroundList);
               }
             }}
             onMouseLeave={() => {
-              if(window.innerWidth > 500) {
+              if (window.innerWidth > 500) {
                 exitInterval(backgroundList);
               }
             }}
             onTouchEnd={() => {
-              if(splashPage) {
+              if (splashPage) {
                 exitInterval(backgroundList);
               }
             }}
@@ -222,7 +211,7 @@ const Header = () => {
         </SocialMediaStyled>
 
         <ArrowSpinnerContainerStyled className='anime'>
-            <ScrollCircle image={whiteCircle}/>
+          <ScrollCircle image={whiteCircle} />
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
     </HeaderStyled>
