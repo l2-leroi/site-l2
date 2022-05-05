@@ -47,10 +47,12 @@ const Header = () => {
   const [splashPage, setSplashPage] = useState(false);
   const interval = useRef(null);
   let currentImage = '';
+  let currentText = '';
   const [actualImage, setActualImage] = useState('');
   const [whiteCircle, setWhiteCircle] = useState(false);
-  let currentText = '';
   const [actualText, setActualText] = useState('CODE');
+  const [startTouch, setStartTouch] = useState(new Date());
+  let isTouch = false;
 
   const animeSplashPage = () => {
     const target = document.querySelectorAll<HTMLElement>('.anime');
@@ -127,7 +129,7 @@ const Header = () => {
     setWhiteCircle(false);
     clearInterval(interval.current);
     interval.current = null;
-    setActualImage(backgroundList);
+    setActualImage("");
     setActualText('CODE');
     document.body.classList.remove("white");
     setCounterLoop(0);
@@ -221,8 +223,8 @@ const Header = () => {
           <SocialMediaItemStyled className="link" href="https://www.instagram.com/l2code.com.br/" target="_blank">IG</SocialMediaItemStyled>
         </SocialMediaStyled>
 
-        <ArrowSpinnerContainerStyled className='anime'>
-            <ScrollCircle image={whiteCircle}/>
+        <ArrowSpinnerContainerStyled>
+            <ScrollCircle isWhiteImage={whiteCircle} blackImage={"./images/Arrow-Spinner.svg"} whiteImage={"./images/Arrow-Spinner-White.svg"} alt={"Tem mais coisa aqui em baixo"}/>
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
     </HeaderStyled>

@@ -18,6 +18,7 @@ import CustomersList from '../../molecules/CustomersList/index';
 import React from 'react';
 import LineAnimation from '../../atoms/LineAnimation';
 import { colors } from '../../../styles/colors';
+import ScrollCircle from '../../atoms/ScrollCircle';
 
 const OurCustomers = () => {
   const ToParadoLogo = './images/OurCustomers/to-parado-logo.svg';
