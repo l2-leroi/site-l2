@@ -4,15 +4,13 @@ import { colors } from '../../../styles/colors';
 export const SectionOnePageStyled = styled.section`
   display: flex;
   justify-content: center;
+  margin-top: 80px;
+  padding: 0px 152px;
+
   background-color: ${colors.gray};
-  padding: 120px 152px 10rem; 
-  @media (max-width: 1024px) {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-  @media (max-width: 650px) {
-    padding-left: 60px;
-    padding-right: 60px;
+
+  @media (max-width: 1366px) {
+    padding: 0px 12px;
   }
 `;
 
@@ -33,17 +31,15 @@ export const ScrollArrow = styled.div`
 
 export const ContentOnePageStyled = styled.div`
   background: ${colors.black};
+  padding: 124px 90px;
   border-radius: 8px;
-  width: 1220px;
-  padding: 90px 124px 10px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 800px) {
-    padding-bottom: 50px
-  }
-  @media (max-width: 650px) {
-    padding: 40px 16px 0px;
+
+  @media (max-width: 900px) {
+    padding: 40px 16px;
   }
 `;
 
@@ -59,7 +55,7 @@ export const HeadingStyled = styled.h2`
   ::selection {
     background: ${colors.purple};
   }
-  width: 464px;
+  max-width: 464px;
   font-family: 'Neue Machina';
   font-weight: 800;
   font-size: 6.4rem;
@@ -67,8 +63,9 @@ export const HeadingStyled = styled.h2`
   letter-spacing: -0.04em;
   color: ${colors.gray};
   margin: 0;
+
   @media (max-width: 800px) {
-    width: 264px;
+    max-width: 264px;
   }
 `;
 
@@ -76,7 +73,7 @@ export const ParagraphServicesStyled = styled.p`
   ::selection {
     background: ${colors.purple};
   }
-  width: 464px;
+  max-width: 464px;
   font-family: 'Circular Air Pro';
   font-weight: 400;
   font-size: 2.4rem;
@@ -85,10 +82,8 @@ export const ParagraphServicesStyled = styled.p`
   color: ${colors.gray};
   padding-top: 24px;
   margin: 0;
+
   @media (max-width: 800px) {
-    width: 210px;
-  }
-  @media (max-width: 650px) {
     width: 160px;
     padding-top: 20px;
   }
@@ -96,25 +91,42 @@ export const ParagraphServicesStyled = styled.p`
 
 export const DivServiceItemsStyled = styled.div`
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  align-self: stretch;
   justify-content: space-between;
+  max-width: 1018px;
+  margin: 0 auto;
+
+  @media (max-width: 800px) {
+    max-width: 1018px;
+  }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
 `;
 
 export const DivItemStyled = styled.div`
-  width: 340px;
+  max-width: 340px;
+
   @media (max-width: 800px) {
-    width: 170px;
+    max-width: 270px;
+    min-width: 270px;
   }
-  @media (min-width: 750px) and (max-width: 800px) {
-    width: 170px;
-    &:nth-child(odd) {
-      margin-right: 110px;
-    }
+
+  @media (max-width: 700px) {
+    max-width: 300px;
   }
-  @media (max-width: 650px) {
-    width: 230px;
-    margin-right: 170px;
+
+  @media (max-width: 600px) {
+    max-width: 160px;
+    min-width: 260px;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 384px;
+    min-width: 0px;
+
     &:nth-child(1) {
       order: 1;
     }
@@ -131,10 +143,6 @@ export const DivItemStyled = styled.div`
       order: 5;
     }
   }
-
-  @media (max-width: 450px) {
-    margin-right: 70px;
-  }
 `;
 
 export const HeadingItemStyled = styled.h3`
@@ -150,8 +158,12 @@ export const HeadingItemStyled = styled.h3`
   color: ${colors.gray};
   padding-bottom: 24px;
   margin: 0;
-  @media (max-width: 650px) {
-    width: 304px;
+
+  @media (max-width: 800px) {
+    padding-bottom: 16px;
+  }
+
+  @media (max-width: 800px) {
     padding-bottom: 16px;
   }
 `;
@@ -169,13 +181,38 @@ export const ParagraphItemStyled = styled.p`
   color: ${colors.dark_gray};
   margin-top: 0;
   margin-bottom: 8rem;
+
+   @media (max-width: 800px) {
+    max-width: 230px;
+
+    &.last-paragraph{
+      max-width: 144px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    max-width: 180px;
+
+    &.last-paragraph{
+      max-width: 180px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    max-width: 300px;
+
+    &.last-paragraph{
+      max-width: 300px;
+    }
+  }
 `;
 
 export const ImageStyled = styled.img`
   @media (max-width: 800px) {
-    width: 170px;
+    max-width: 164px;
   }
-  @media (max-width: 650px) {
+
+  @media (max-width: 576px) {
     display: none;
   }
 `;

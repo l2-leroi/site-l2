@@ -11,7 +11,8 @@ export const ListStyled = styled.ul`
   &::after {
     content: "";
     position: absolute;
-    top: -15px;
+    top: -5;
+    margin-top: -15px;
     right: -5px;
     padding: 50px 0;
     background: ${colors.black};
@@ -68,7 +69,7 @@ export const ContentStyled = styled.li`
   &::before {
     content: "+";
     position: absolute;
-    top: -21px;
+    top: -17px;
     right: -3px;
     z-index: 6;
     font-size: 20px;
