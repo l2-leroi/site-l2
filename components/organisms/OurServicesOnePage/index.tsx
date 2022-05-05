@@ -68,7 +68,7 @@ export default function OurServicesOnePage() {
 
             <DivItemStyled>
               <HeadingItemStyled>Consultoria em TI</HeadingItemStyled>
-              <ParagraphItemStyled>
+              <ParagraphItemStyled className='last-paragraph'>
                 Nosso Tech Lead Maicon Martins irá aconselhar você sobre as
                 melhores práticas que sua empresa pode usar na infraestrutura.
               </ParagraphItemStyled>

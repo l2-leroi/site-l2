@@ -50,24 +50,11 @@ export const TitleStyled = styled.h1`
     text-align: center;
     letter-spacing: -0.04em;
     margin: 0 auto 10px;
-    cursor: inherit;
     user-select: none;
-    -webkit-touch-callout:none; /* iOS Safari */
-    -webkit-user-select:none;   /* Chrome/Safari/Opera */
-    -khtml-user-select:none;    /* Konqueror */
-    -moz-user-select:none;      /* Firefox */
-    -ms-user-select:none;       /* Internet Explorer/Edge */
-    -webkit-tap-highlight-color: transparent;
-    
-    ::selection {
-        background: ${colors.purple};
-        color: ${colors.gray};
-    }
 
     @media (max-width: 800px) {
         font-size: 64px;
     }
-    
 `;
 
 export const SubtitleStyled = styled.h2`
@@ -123,6 +110,12 @@ export const LanguageStyled = styled.div`
     }
 
     @media (max-width: 500px) {
+        opacity: 0;
+        
+        &.animate {
+            opacity: 1;
+            transition: opacity .8s;
+        }
         position: static;
         display: inline-flex;
         margin-top: 32px;
@@ -198,6 +191,15 @@ export const SocialMediaStyled = styled.div`
     justify-content: center;
     position: relative;
     bottom: 30px;
+
+    @media (max-width: 500px) {
+        opacity: 0;
+
+        &.animate {
+            opacity: 1;
+            transition: opacity .8s;
+        }
+    }
 `;
 
 export const SocialMediaTitleStyled = styled.span`  
@@ -246,6 +248,10 @@ export const SocialMediaItemStyled = styled.a`
     z-index: 50;
     cursor: pointer;
 
+    &.white{
+        color: white;
+    }
+
     ::selection {
         background: ${colors.purple};
         color: ${colors.gray};
@@ -286,5 +292,14 @@ export const ArrowSpinnerContainerStyled = styled.div`
 
     @media (min-width: 2560px) {
         right: 703px;
+    }
+
+    @media (max-width: 500px) {
+        opacity: 0;
+
+        &.animate {
+            opacity: 1;
+            transition: opacity .8s;
+        }
     }
 `;
