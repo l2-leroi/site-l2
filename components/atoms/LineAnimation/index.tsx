@@ -21,7 +21,7 @@ const LineAnimation = ({children,classe,backgroundColor}) => {
         const movimento = 25 - ((blackLineMovimento-128)/10);
         const movimento2 = 25 + ((blackLineMovimento-128)/50);
         
-        console.log(movimento2)
+        // console.log(movimento2)
         if((movimento > 0) && (movimento2 < 30)){
           blackLine.style.clipPath = `polygon(0 ${movimento}%, 100% ${movimento2}%, 100% 100%, 0% 100%)`
         }

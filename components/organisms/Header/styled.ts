@@ -43,16 +43,11 @@ export const TitleStyled = styled.h1`
     text-align: center;
     letter-spacing: -0.04em;
     margin: 0 auto 10px;
-    cursor: pointer;
-    ::selection {
-        background: ${colors.purple};
-        color: ${colors.gray};
-    }
+    user-select: none;
 
     @media (max-width: 800px) {
         font-size: 64px;
     }
-    
 `;
 
 export const SubtitleStyled = styled.h2`
@@ -107,6 +102,12 @@ export const LanguageStyled = styled.ul`
     }
 
     @media (max-width: 500px) {
+        opacity: 0;
+        
+        &.animate {
+            opacity: 1;
+            transition: opacity .8s;
+        }
         position: static;
         display: inline-flex;
         margin-top: 32px;
@@ -175,6 +176,15 @@ export const SocialMediaStyled = styled.ul`
     justify-content: center;
     position: relative;
     bottom: 30px;
+
+    @media (max-width: 500px) {
+        opacity: 0;
+
+        &.animate {
+            opacity: 1;
+            transition: opacity .8s;
+        }
+    }
 `;
 
 export const SocialMediaTitleStyled = styled.li`  
@@ -223,6 +233,10 @@ export const SocialMediaItemStyled = styled.a`
     z-index: 50;
     cursor: pointer;
 
+    &.white{
+        color: white;
+    }
+
     ::selection {
         background: ${colors.purple};
         color: ${colors.gray};
@@ -243,6 +257,10 @@ export const ImageStyled = styled.img`
     z-index: 0;
     height: 100vh;
     width: auto;
+
+    @media (min-width: 2560px) {
+        width: 100%;
+    }
 
     &.noneImage {
         display: none;
@@ -267,5 +285,14 @@ export const ArrowSpinnerContainerStyled = styled.div`
 
     @media (min-width: 2560px) {
         right: 703px;
+    }
+
+    @media (max-width: 500px) {
+        opacity: 0;
+
+        &.animate {
+            opacity: 1;
+            transition: opacity .8s;
+        }
     }
 `;
