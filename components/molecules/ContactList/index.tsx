@@ -17,7 +17,7 @@ function ContactList(props: ContactProps) {
         props.contacts.map((c) => (      
           <ItemStyled key={c.title}>
             <TitleStyled>{c.title}</TitleStyled>
-            <ContactStyled href={c.link}>{c.contact}</ContactStyled>
+            <ContactStyled href={c.link} target="_blank">{c.contact}</ContactStyled>
           </ItemStyled>     
         ))
       }
