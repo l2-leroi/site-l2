@@ -276,15 +276,19 @@ export const ArrowSpinnerContainerStyled = styled.div`
     right: 148px;
     bottom: -70px;
 
+    @media (min-width: 2560px) {
+        right: 703px;
+    }
+
+    @media (max-width: 1365px) {
+        right: 70px;
+    }
+
     @media (max-width: 800px) {
         right: 0;
         bottom: -45px;
         justify-self: center;
         width: 100%;
-    }
-
-    @media (min-width: 2560px) {
-        right: 703px;
     }
 
     @media (max-width: 500px) {

@@ -80,6 +80,10 @@ export const TitleStyled = styled.h2`
     color: ${colors.gray};
   }
 
+  @media (max-width: 930px) {
+    width: 500px;
+  }
+
   @media (max-width: 800px) {
     width: 278px;
     line-height: 28.8px;
