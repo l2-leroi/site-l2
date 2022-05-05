@@ -11,8 +11,7 @@ export const ListStyled = styled.ul`
   &::after {
     content: "";
     position: absolute;
-    top: -5;
-    margin-top: -10px;
+    top: -15px;
     right: -5px;
     padding: 50px 0;
     background: ${colors.black};
@@ -28,6 +27,7 @@ export const ListStyled = styled.ul`
     grid-template-columns: repeat(2,1fr);
 
     &::after {
+      top: -20px;
       height: 90%;
     }
   }

@@ -31,7 +31,7 @@ const OurCustomers = () => {
   const DigitalBusinessLogo = './images/OurCustomers/digital-business-logo.svg';
   const FundacredLogo = './images/OurCustomers/fundacred-logo.svg';
   const Spinner = './images/OurCustomers/enfeite-giratorio.svg';
-
+  let spinnerMaxHeight = 0;
   const customers = [
     { alt: 'Tô Parado Logo', src: ToParadoLogo },
     { alt: 'Phi Logo', src: PhiLogo },
@@ -45,18 +45,64 @@ const OurCustomers = () => {
     { alt: 'Fundacred Logo', src: FundacredLogo },
   ];
 
+  const handleScroll = () => {
+    const spinner = document.querySelector('.spinner') as HTMLElement;
+    const blackLine = document.querySelector('.blackLine') as HTMLElement;
+    const hgroup = document.querySelector('.hgroup') as HTMLElement;
+
+    const blackLineMovimento = ( window.innerHeight * 0.8 - blackLine.getBoundingClientRect().top )-128
+
+    const hgroupHeight = hgroup.getBoundingClientRect().height;
+    const blackLinePadding = +getComputedStyle(blackLine).getPropertyValue("padding-top").replace("px", "")
+    const spinnerTop = +getComputedStyle(spinner).getPropertyValue("top").replace("px", "");
+    
+
+    if(spinner.getBoundingClientRect().height > spinnerMaxHeight){
+      spinnerMaxHeight = spinner.getBoundingClientRect().height 
+    }
+      
+    const soma = (blackLinePadding + hgroupHeight) - (spinnerMaxHeight * 0.5);
+      
+  
+    if(blackLineMovimento >= 0 && spinnerTop <= soma){
+      if(!((blackLineMovimento * 0.8) > soma)){
+        spinner.style.top = (blackLineMovimento * 0.8)+"px";
+      }
+    }
+  }
+
+  const spinnerBehindText = () => {
+    if(window.innerWidth < 1024){
+      const content = document.querySelector(".customersContent") as HTMLElement;
+      const blackLine = document.querySelector(".blackLine") as HTMLElement;
+      const sign = document.querySelector(".signCustomers") as HTMLElement;
+      const customers = document.querySelector(".customers") as HTMLElement;
+      
+      customers.insertBefore(content, sign);
+
+      blackLine.style.height = content.getBoundingClientRect().height + "px";
+      content.style.marginTop = (-(content.getBoundingClientRect().height - ((+getComputedStyle(blackLine).getPropertyValue("padding-top").replace("px", "") * 1.1))) +"px");
+    }
+  }
+
+  React.useEffect(()=> {
+    window.addEventListener("scroll", handleScroll);
+    spinnerBehindText();
+  });
+
+
   return (
     <>
-    <OurCustomersStyled id="customers">
+    <OurCustomersStyled id="customers" className='customers'>
         <SpinningIconStyled className='spinner'>
           <img src={Spinner} alt="L2 Code" />
         </SpinningIconStyled>
 
         <LineAnimation classe="blackLine" backgroundColor={colors.black}>
-
-          <BlackLineStyled>
+          
+          <BlackLineStyled className='customersContent'>
             <ContentStyled>
-              <HeaderStyled>
+              <HeaderStyled className='hgroup'>
                 <TitleStyled>ALGUNS DE NOSSOS CLIENTES</TitleStyled>
                 <SubtitleStyled>
                   Temos orgulho de fazer parceria com empresas e startups com fome
@@ -69,14 +115,14 @@ const OurCustomers = () => {
               
             </ContentStyled>
 
-            <CustomersContainer>
+            <CustomersContainer className='customersList'>
               <CustomersList customers={customers}/>
             </CustomersContainer>
           </BlackLineStyled>
-          
-        </LineAnimation>
 
-      <SignContainerStyled>
+          </LineAnimation>
+
+      <SignContainerStyled className='signCustomers'>
           <SignStyled className='sign'>
           </SignStyled>
       </SignContainerStyled>
