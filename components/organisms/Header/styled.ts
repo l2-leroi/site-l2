@@ -276,6 +276,14 @@ export const ImageStyled = styled.img`
     @media (min-width: 2560px) {
         width: 100%;
     }
+
+    &.noneImage {
+        display: none;
+    }
+
+    &.activeImage {
+        display: block;
+    }   
 `;
 
 export const ArrowSpinnerContainerStyled = styled.div`

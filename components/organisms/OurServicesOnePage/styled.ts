@@ -18,14 +18,12 @@ export const ScrollArrow = styled.div`
 position: absolute;
 right: 148px;
 bottom: -70px;
-top: -100px;
 
 @media (max-width: 800px) {
     right: 0;
     bottom: -45px;
     justify-self: center;
     width: 100%;
-    top: -68px;
 }
 
 @media (min-width: 2560px) {
