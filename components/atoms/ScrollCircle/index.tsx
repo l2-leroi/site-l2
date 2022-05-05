@@ -1,25 +1,23 @@
 import {ArrowSpinnerComponentStyled, ImageArrowSpinnerStyled} from './styled';
 
 interface imageProps {
-  isWhiteImage: boolean;
-  blackImage: string;
-  whiteImage: string;
-  alt: string;
+  image: boolean;
 }
 
 function ScrollCircle(props: imageProps) {
   return (
           <ArrowSpinnerComponentStyled>
             <ImageArrowSpinnerStyled
-              src={props.isWhiteImage ?
-                props.whiteImage :
-                props.blackImage
+              src={props.image ?
+                './images/Arrow-Spinner-White.svg' :
+                './images/Arrow-Spinner.svg'
+              
               }
-              alt={props.alt}
+              alt="Tem mais coisa aqui em baixo"
               className='animate'
             />
             <ImageArrowSpinnerStyled
-              src={props.isWhiteImage ?
+              src={props.image ?
                 './images/Arrow-White.svg' : 
                 './images/Arrow.svg'
                 

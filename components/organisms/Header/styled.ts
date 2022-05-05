@@ -11,16 +11,9 @@ export const HeaderStyled = styled.header`
     padding: 0px 28px;
     background-color: ${colors.gray}; 
     overflow: hidden;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     
     &.white{
-        color: white !important;
-
-        *{
-            color: white;
-        }
+        color: white;
     }
 `;
 
@@ -98,9 +91,8 @@ export const TitleComplementStyled = styled.h3`
     }  
 `;
 
-export const LanguageStyled = styled.div`
-    display: flex;
-    flex-direction: column;
+export const LanguageStyled = styled.ul`
+    list-style: none;
     position: absolute;
     right: 28px;
     
@@ -123,10 +115,7 @@ export const LanguageStyled = styled.div`
     }
 `;
 
-export const LanguageItemStyled = styled.button`
-    background: transparent;
-    cursor: pointer;
-    border: none;
+export const LanguageItemStyled = styled.li`
     font-family: 'Circular Air Pro';
     font-style: normal;
     font-weight: 400;
@@ -141,10 +130,6 @@ export const LanguageItemStyled = styled.button`
 
     &:first-child {
         margin-bottom: 8px;
-    }
-
-    &:hover {
-        color: ${colors.green};
     }
 
     @media (max-width: 800px) {
@@ -182,7 +167,7 @@ export const FooterContentStyled = styled.div`
     }
 `;
 
-export const SocialMediaStyled = styled.div`
+export const SocialMediaStyled = styled.ul`
     list-style: none;
     align-self: center;
     margin: 0 auto;
@@ -202,7 +187,7 @@ export const SocialMediaStyled = styled.div`
     }
 `;
 
-export const SocialMediaTitleStyled = styled.span`  
+export const SocialMediaTitleStyled = styled.li`  
     margin-right: 120px;
     margin-left: 1.2rem;
     position: relative;
@@ -283,7 +268,7 @@ export const ImageStyled = styled.img`
 
     &.activeImage {
         display: block;
-    }   
+    }    
 `;
 
 export const ArrowSpinnerContainerStyled = styled.div`
