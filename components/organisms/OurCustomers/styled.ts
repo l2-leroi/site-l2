@@ -32,6 +32,11 @@ export const HeaderStyled = styled.hgroup`
   max-width: 648px;
   z-index: 50;
 
+  @media(max-width: 1000px){
+    max-width: 400px;
+  }
+
+
   @media(max-width: 800px){
     max-width: 264px;
   }
@@ -83,6 +88,7 @@ export const AsideStyled = styled.aside`
   font-size: 1rem;
   line-height: 140%;
   letter-spacing: -0.02em;
+  z-index: 2;
 
   @media(max-width: 800px){
     max-width: 50px;
@@ -116,6 +122,7 @@ export const ContentStyled = styled.section`
     margin-bottom: 39px;
 
   }
+
 
   @media(max-width: 625px){
     padding-top: 60px;

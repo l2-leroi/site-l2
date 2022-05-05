@@ -71,8 +71,23 @@ const OurCustomers = () => {
     }
   }
 
+  const spinnerBehindText = () => {
+    if(window.innerWidth < 1024){
+      const content = document.querySelector(".customersContent") as HTMLElement;
+      const blackLine = document.querySelector(".blackLine") as HTMLElement;
+      const sign = document.querySelector(".signCustomers") as HTMLElement;
+      const customers = document.querySelector(".customers") as HTMLElement;
+      
+      customers.insertBefore(content, sign);
+
+      blackLine.style.height = content.getBoundingClientRect().height + "px";
+      content.style.marginTop = (-(content.getBoundingClientRect().height - ((+getComputedStyle(blackLine).getPropertyValue("padding-top").replace("px", "") * 1.1))) +"px");
+    }
+  }
+
   React.useEffect(()=> {
     window.addEventListener("scroll", handleScroll);
+    spinnerBehindText();
   });
 
 
@@ -85,10 +100,7 @@ const OurCustomers = () => {
 
         <LineAnimation classe="blackLine" backgroundColor={colors.black}>
           
-        
-        
-
-          <BlackLineStyled>
+          <BlackLineStyled className='customersContent'>
             <ContentStyled>
               <HeaderStyled className='hgroup'>
                 <TitleStyled>ALGUNS DE NOSSOS CLIENTES</TitleStyled>
@@ -110,7 +122,7 @@ const OurCustomers = () => {
 
           </LineAnimation>
 
-      <SignContainerStyled>
+      <SignContainerStyled className='signCustomers'>
           <SignStyled className='sign'>
           </SignStyled>
       </SignContainerStyled>
