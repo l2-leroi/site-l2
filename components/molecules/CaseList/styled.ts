@@ -26,7 +26,7 @@ export const CaseStyled = styled.article`
   }
   
   @media (max-width: 1155px) {
-    height: 920px;
+    height: 720px;
   }
 
   @media (max-width: 800px) {
@@ -116,6 +116,10 @@ export const SliderStyled = styled(Slider)`
       width: 415px;
     }
 
+    @media (max-width: 1160px) {
+      width: 340px;
+    }
+
     @media (max-width: 800px) {
       width: 248px;
     }
@@ -154,6 +158,10 @@ export const TitleStyled = styled.h4`
     background: ${colors.purple};
     color: ${colors.gray};
   }
+
+  @media (min-width: 800px) and (max-width: 1365px) {
+    font-size: 34px;
+  }
 `;
 
 export const InfoStyled = styled.p`
@@ -163,10 +171,14 @@ export const InfoStyled = styled.p`
   line-height: 3.36rem;
   letter-spacing: -0.04em;
   padding-bottom: 3.2rem;
-  width: 345px;
+  max-width: 345px;
   ::selection {
     background: ${colors.purple};
     color: ${colors.gray};
+  }
+
+  @media (min-width: 800px) and (max-width: 1365px) {
+    font-size: 22px;
   }
 
   @media (max-width: 800px) {
