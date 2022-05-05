@@ -26,7 +26,7 @@ export const CaseStyled = styled.article`
   }
   
   @media (max-width: 1155px) {
-    height: 720px;
+    height: 920px;
   }
 
   @media (max-width: 800px) {
