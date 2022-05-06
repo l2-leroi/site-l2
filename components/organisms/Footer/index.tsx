@@ -69,7 +69,8 @@ const Footer = () => {
 
           <InfoStyled className="mobile">
                 <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
-            </InfoStyled>
+          </InfoStyled>
+          
         </ContainerStyled>
     </FooterStyled>
     </LineAnimation>
