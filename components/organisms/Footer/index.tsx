@@ -6,7 +6,6 @@ import {
   TitleStyled,
   CopyrightStyled,
   InfoStyled,
-  LinkStyled,
   PhraseStyled,
   IconStyled,
   ImageStyled,
