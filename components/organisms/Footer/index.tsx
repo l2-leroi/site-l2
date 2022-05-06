@@ -59,9 +59,7 @@ const Footer = () => {
             </InfoStyled>
 
             <InfoStyled className="desktop">
-              <LinkStyled href="/">
                 <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
-              </LinkStyled>
             </InfoStyled>
 
             <InfoStyled className="align-end">
@@ -71,9 +69,7 @@ const Footer = () => {
           </CopyrightStyled>
 
           <InfoStyled className="mobile">
-              <LinkStyled href="/">
                 <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
-              </LinkStyled>
             </InfoStyled>
         </ContainerStyled>
     </FooterStyled>
