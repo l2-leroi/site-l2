@@ -15,7 +15,7 @@ export default function OurServices() {
   return (
     <SectionStyled>
       <ScrollArrow className="SpinnerCircle2">
-        <ScrollCircle image={null}/>
+        <ScrollCircle isWhiteImage={false} blackImage={"./images/Arrow-Spinner.svg"} whiteImage={"./images/Arrow-Spinner-White.svg"} alt={"Tem mais coisa aqui em baixo"}/>
       </ScrollArrow>
 
       <DivOurServicesStyled>
