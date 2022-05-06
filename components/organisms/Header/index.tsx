@@ -222,7 +222,7 @@ const Header = () => {
         </SocialMediaStyled>
 
         <ArrowSpinnerContainerStyled className='anime'>
-            <ScrollCircle image={whiteCircle}/>
+          <ScrollCircle isWhiteImage={whiteCircle} blackImage={"./images/Arrow-Spinner.svg"} whiteImage={"./images/Arrow-Spinner-White.svg"} alt={"Tem mais coisa aqui em baixo"}/>
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
     </HeaderStyled>
