@@ -137,7 +137,6 @@ export const InfoStyled = styled.div`
   }
 `;
 
-export const LinkStyled = styled.a``;
 
 export const ImageStyled = styled.img`
   @media (max-width: 800px) {
