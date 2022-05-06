@@ -24,7 +24,7 @@ const Footer = () => {
     {
       title: 'nosso whatsapp',
       contact: '+55 51 99693.9336',
-      link: 'https://web.whatsapp.com/send?phone=5551996939336',
+      link: 'https://api.whatsapp.com/send?phone=5551996939336',
     },
     {
       title: 'nosso e-mail',
