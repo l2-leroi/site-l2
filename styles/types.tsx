@@ -55,12 +55,12 @@ export const Heading = styled('h1').attrs<HeadingProps>(({ level }) => ({
   as: `h${level}`,
 }))<HeadingProps>`
   ${({
-    color = '',
-    size = '',
-    fontWeight = '',
-    lineHeight = '',
-    fontFamily = '',
-    letterSpacing = '',
+    color = 'black',
+    size = 'small',
+    fontWeight = 'wheight1',
+    lineHeight = 'small',
+    fontFamily = 'font2',
+    letterSpacing = 'space2',
   }) => css`
     font-size: ${theme.sizes[size]};
     color: ${theme.colors[color]};
