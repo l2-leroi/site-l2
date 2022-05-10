@@ -6,7 +6,6 @@ import {
   TitleStyled,
   CopyrightStyled,
   InfoStyled,
-  LinkStyled,
   PhraseStyled,
   IconStyled,
   ImageStyled,
@@ -24,7 +23,7 @@ const Footer = () => {
     {
       title: 'nosso whatsapp',
       contact: '+55 51 99693.9336',
-      link: 'tel:+5551996939336',
+      link: 'https://api.whatsapp.com/send?phone=5551996939336',
     },
     {
       title: 'nosso e-mail',
@@ -59,9 +58,7 @@ const Footer = () => {
             </InfoStyled>
 
             <InfoStyled className="desktop">
-              <LinkStyled href="/">
                 <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
-              </LinkStyled>
             </InfoStyled>
 
             <InfoStyled className="align-end">
@@ -71,10 +68,9 @@ const Footer = () => {
           </CopyrightStyled>
 
           <InfoStyled className="mobile">
-              <LinkStyled href="/">
                 <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
-              </LinkStyled>
-            </InfoStyled>
+          </InfoStyled>
+          
         </ContainerStyled>
     </FooterStyled>
     </LineAnimation>

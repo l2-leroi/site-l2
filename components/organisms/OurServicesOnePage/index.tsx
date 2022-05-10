@@ -18,7 +18,7 @@ export default function OurServicesOnePage() {
   return (
     <SectionOnePageStyled id="services">
       <ScrollArrow className="SpinnerCircle2">
-        <ScrollCircle image={null}/>
+        <ScrollCircle isWhiteImage={false} blackImage={"./images/Arrow-Spinner.svg"} whiteImage={"./images/Arrow-Spinner-White.svg"} alt={"Tem mais coisa aqui em baixo"}/>
       </ScrollArrow>
       
       <ContentOnePageStyled>
@@ -67,7 +67,7 @@ export default function OurServicesOnePage() {
 
             <DivItemStyled>
               <HeadingItemStyled>Consultoria em TI</HeadingItemStyled>
-              <ParagraphItemStyled>
+              <ParagraphItemStyled className='last-paragraph'>
                 Nosso Tech Lead Maicon Martins irá aconselhar você sobre as
                 melhores práticas que sua empresa pode usar na infraestrutura.
               </ParagraphItemStyled>

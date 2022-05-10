@@ -41,8 +41,8 @@ const Header = () => {
     },
   ];
   const [counterLoop, setCounterLoop] = useState(0);
-  // let isTouchActive = false;
-  const [isTouchActive, setIsTouchActive] = useState(false);
+  const [isInitInterval, setIsInitInterval] = useState(false);
+  const isTouchActive = useRef(false);
   const [splashPage, setSplashPage] = useState(false);
   const interval = useRef(null);
   let currentImage = '';
@@ -68,20 +68,19 @@ const Header = () => {
     }
   }, [])
 
-  const initInterval = (backgroundList) => {
-    const header = document.querySelector(".header");
-    const link = document.querySelectorAll(".link");
-    const nav = document.querySelector(".nav");
-    interval.current = setInterval(() => {
+  useEffect(() => {
+    function runAnimation() {
+      const header = document.querySelector(".header");
+      const link = document.querySelectorAll(".link");
+      const nav = document.querySelector(".nav");
       const index = currentImage !== '' ? (backgroundList.findIndex(
-        (background) => background.image === currentImage,
-      ) + 1)
+        (background) => background.image === currentImage) + 1)
         : 0;
 
       // mobile
       if (window.innerWidth < 500 && index === backgroundList.length) {
         setCounterLoop(counterLoop + 1);
-        if (splashPage || isTouchActive) {
+        if (isTouchActive.current || splashPage) {
           currentImage = backgroundList[0].image;
           currentText = backgroundList[0].text;
           setActualImage(currentImage);
@@ -110,8 +109,12 @@ const Header = () => {
         element.classList.add('white');
       });
       setWhiteCircle(true);
-    }, 300);
-  };
+    }
+
+    if(isInitInterval) {
+      interval.current = setInterval(runAnimation, 300);
+    }
+  },[isInitInterval])
 
   const exitInterval = (backgroundList) => {
     const header = document.querySelector(".header");
@@ -132,24 +135,25 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if (window.innerWidth < 500 && !isTouchActive && counterLoop >= 1 && !splashPage) {
+    if (window.innerWidth < 500 && !isTouchActive.current && counterLoop >= 1 && !splashPage) {
       exitInterval(backgroundList);
       animeSplashPage();
       setSplashPage(true);
     }
-  }, [isTouchActive, counterLoop])
+  }, [isTouchActive.current, counterLoop])
 
   return (
     <HeaderStyled
       className='header'
       onTouchStart={() => {
         if (!splashPage) {
-          setIsTouchActive(true);
-          initInterval(backgroundList);
+          isTouchActive.current = true;
+          setIsInitInterval(true);
         }
       }}
       onTouchEnd={() => {
-        setIsTouchActive(false);
+        setIsInitInterval(false);
+        isTouchActive.current = false;
       }}
     >
       {backgroundList.map((background) => (
@@ -169,23 +173,25 @@ const Header = () => {
           <TitleStyled className="title"
             onMouseEnter={() => {
               if (window.innerWidth > 500) {
-                initInterval(backgroundList);
+                setIsInitInterval(true);
               }
             }}
             onTouchStart={() => {
               if (splashPage) {
-                initInterval(backgroundList);
+                setIsInitInterval(true);
               }
             }}
             onMouseLeave={() => {
               if (window.innerWidth > 500) {
                 exitInterval(backgroundList);
               }
+              setIsInitInterval(false);
             }}
             onTouchEnd={() => {
               if (splashPage) {
                 exitInterval(backgroundList);
               }
+              setIsInitInterval(false);
             }}
           >
             {actualText}
@@ -211,7 +217,7 @@ const Header = () => {
         </SocialMediaStyled>
 
         <ArrowSpinnerContainerStyled className='anime'>
-          <ScrollCircle image={whiteCircle} />
+          <ScrollCircle isWhiteImage={whiteCircle} blackImage={"./images/Arrow-Spinner.svg"} whiteImage={"./images/Arrow-Spinner-White.svg"} alt={"Tem mais coisa aqui em baixo"}/>
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
     </HeaderStyled>

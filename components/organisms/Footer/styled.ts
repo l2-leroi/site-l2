@@ -77,6 +77,10 @@ export const TitleStyled = styled.h2`
     color: ${colors.black};
   }
 
+  @media (max-width: 930px) {
+    width: 300px;
+  }
+
   @media (max-width: 800px) {
     width: 264px;
     line-height: 28.8px;
@@ -133,7 +137,6 @@ export const InfoStyled = styled.div`
   }
 `;
 
-export const LinkStyled = styled.a``;
 
 export const ImageStyled = styled.img`
   @media (max-width: 800px) {
