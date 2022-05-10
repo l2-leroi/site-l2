@@ -46,8 +46,23 @@ export const TitleStyled = styled.h1`
     margin: 0 auto 10px;
     user-select: none;
 
+    @media (max-width: 1220px) {
+        font-size: 140px;
+    }
+
+    @media (max-width: 910px) {
+        font-size: 120px;
+    }
+
     @media (max-width: 800px) {
         font-size: 64px;
+    }
+
+    @media (max-width: 500px) {
+        &.textWrap {
+            max-width: 220px;
+            overflow-wrap: break-word;
+        } 
     }
 `;
 
@@ -64,6 +79,10 @@ export const SubtitleStyled = styled.h2`
     ::selection {
         background: ${colors.purple};
         color: ${colors.gray};
+    }
+
+    @media (min-width: 800px) and (max-width: 1220px) {
+        font-size: 34px;
     }
 
     @media (max-width: 800px) {

@@ -142,6 +142,15 @@ const Header = () => {
     }
   }, [isTouchActive.current, counterLoop])
 
+  useEffect(() => {
+    if(window.innerWidth < 500) {
+      const title = document.querySelectorAll<HTMLElement>('.title');
+      title.forEach((title) => {
+        title.addEventListener('contextmenu', (e) => {e.preventDefault()});
+      });
+    }
+  });
+
   return (
     <HeaderStyled
       className='header'
@@ -170,7 +179,9 @@ const Header = () => {
       <MainContentStyled>
         <MainTextStyled>
           <SubtitleStyled>Love to</SubtitleStyled>
-          <TitleStyled className="title"
+          <TitleStyled className={
+            actualText.length > 7 ? 'textWrap title' : 'title'
+          } 
             onMouseEnter={() => {
               if (window.innerWidth > 500) {
                 setIsInitInterval(true);
