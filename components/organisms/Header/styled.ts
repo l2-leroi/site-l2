@@ -31,6 +31,7 @@ export const MainTextStyled = styled.hgroup`
     align-self: center;
     margin: 0 auto;
     text-align: center;
+    width: 100%;
 `;
 
 export const TitleStyled = styled.h1`
@@ -99,7 +100,7 @@ export const LanguageStyled = styled.div`
     right: 28px;
     
     @media (max-width: 800px) {
-        top: 100px;
+        top: 110px;
         right: 24px;
     }
 
@@ -111,7 +112,7 @@ export const LanguageStyled = styled.div`
             transition: opacity .8s;
         }
         position: static;
-        display: inline-flex;
+        flex-direction: row;
         margin-top: 32px;
         gap: 16px;
     }
@@ -128,6 +129,11 @@ export const LanguageItemStyled = styled.button`
     line-height: 140%;
     text-align: right;
     letter-spacing: -0.02em;
+
+    &.white {
+        color: white;
+    }
+
     ::selection {
         background: ${colors.purple};
         color: ${colors.gray};
@@ -146,6 +152,12 @@ export const LanguageItemStyled = styled.button`
 
         &:first-child {
             margin-bottom: 32px;
+        }
+    }  
+
+    @media (max-width: 500px) {
+        &:first-child {
+            margin-bottom: 0px;
         }
     }  
 `;
@@ -241,10 +253,6 @@ export const SocialMediaItemStyled = styled.a`
     letter-spacing: -0.02em;
     z-index: 50;
     cursor: pointer;
-
-    &.white{
-        color: white;
-    }
 
     ::selection {
         background: ${colors.purple};

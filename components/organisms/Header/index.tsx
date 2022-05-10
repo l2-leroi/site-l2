@@ -204,8 +204,8 @@ const Header = () => {
         </MainTextStyled>
 
         <LanguageStyled className='anime'>
-          <LanguageItemStyled>PT</LanguageItemStyled>
-          <LanguageItemStyled>EN</LanguageItemStyled>
+          <LanguageItemStyled className="link">PT</LanguageItemStyled>
+          <LanguageItemStyled className="link">EN</LanguageItemStyled>
         </LanguageStyled>
       </MainContentStyled>
 
