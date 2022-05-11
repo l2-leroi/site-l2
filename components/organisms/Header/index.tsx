@@ -40,10 +40,9 @@ const Header = () => {
       text: 'THINK',
     },
   ];
-  const [isBannerAnimating, setIsBannerAnimating] = useState(false);
   const [counterLoop, setCounterLoop] = useState(0);
-  const [isTouchActive, setIsTouchActive] = useState(false);
-  const [counterOnInit, setCounterOnInit] = useState(0);
+  const [isInitInterval, setIsInitInterval] = useState(false);
+  const isTouchActive = useRef(false);
   const [splashPage, setSplashPage] = useState(false);
   const interval = useRef(null);
   let currentImage = '';
@@ -57,47 +56,45 @@ const Header = () => {
     target.forEach((element) => {
       element.classList.add('animate');
     });
-    if(window.innerWidth < 500) {
+    if (window.innerWidth < 500) {
       document.body.style.overflow = null;
     }
   }
 
   useEffect(() => {
-    if(window.innerWidth < 500) {
+    if (window.innerWidth < 500) {
       document.body.style.overflow = 'hidden';
-      document.querySelector<HTMLElement>('.title').addEventListener('contextmenu', (e) => {e.preventDefault()});
+      document.querySelector<HTMLElement>('.title').addEventListener('contextmenu', (e) => { e.preventDefault() });
     }
-  },[])
+  }, [])
 
-  const initInterval = (backgroundList) => {
-    setIsBannerAnimating(true);
-    const header = document.querySelector(".header");
-    const link = document.querySelectorAll(".link");
-    const nav = document.querySelector(".nav");
-    interval.current = setInterval(() => {
+  useEffect(() => {
+    function runAnimation() {
+      const header = document.querySelector(".header");
+      const link = document.querySelectorAll(".link");
+      const nav = document.querySelector(".nav");
       const index = currentImage !== '' ? (backgroundList.findIndex(
-        (background) => background.image === currentImage,
-      ) + 1)
+        (background) => background.image === currentImage) + 1)
         : 0;
 
       // mobile
       if (window.innerWidth < 500 && index === backgroundList.length) {
         setCounterLoop(counterLoop + 1);
-        if (splashPage) {
+        if (isTouchActive.current || splashPage) {
           currentImage = backgroundList[0].image;
           currentText = backgroundList[0].text;
           setActualImage(currentImage);
           setActualText(currentText);
         }
-      } 
+      }
 
       // desktop
-      else if (index === backgroundList.length) { 
+      else if (index === backgroundList.length) {
         currentImage = backgroundList[0].image;
         currentText = backgroundList[0].text;
         setActualImage(currentImage);
         setActualText(currentText);
-      } 
+      }
 
       else {
         currentImage = backgroundList[index].image;
@@ -112,9 +109,13 @@ const Header = () => {
         element.classList.add('white');
       });
       setWhiteCircle(true);
-    }, 300);
-  };
-  
+    }
+
+    if(isInitInterval) {
+      interval.current = setInterval(runAnimation, 300);
+    }
+  },[isInitInterval])
+
   const exitInterval = (backgroundList) => {
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
@@ -134,33 +135,34 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if(window.innerWidth < 500 && !isTouchActive && counterLoop > counterOnInit && !splashPage){
+    if (window.innerWidth < 500 && !isTouchActive.current && counterLoop >= 1 && !splashPage) {
       exitInterval(backgroundList);
       animeSplashPage();
       setSplashPage(true);
     }
-    else if(window.innerWidth < 500 && !isTouchActive && counterLoop > counterOnInit && !splashPage){
-      exitInterval(backgroundList);
-      animeSplashPage();
-      setSplashPage(true);
+  }, [isTouchActive.current, counterLoop])
+
+  useEffect(() => {
+    if(window.innerWidth < 500) {
+      const title = document.querySelectorAll<HTMLElement>('.title');
+      title.forEach((title) => {
+        title.addEventListener('contextmenu', (e) => {e.preventDefault()});
+      });
     }
-  }, [counterLoop])
+  });
 
   return (
-    <HeaderStyled 
+    <HeaderStyled
       className='header'
       onTouchStart={() => {
-        if(!splashPage) {
-          setIsTouchActive(true);
-          setCounterOnInit(counterLoop);
-          initInterval(backgroundList);
+        if (!splashPage) {
+          isTouchActive.current = true;
+          setIsInitInterval(true);
         }
       }}
       onTouchEnd={() => {
-        if(counterLoop >= 1 && !splashPage) {
-          exitInterval(backgroundList);
-        }
-        setIsTouchActive(false);
+        setIsInitInterval(false);
+        isTouchActive.current = false;
       }}
     >
       {backgroundList.map((background) => (
@@ -177,26 +179,30 @@ const Header = () => {
       <MainContentStyled>
         <MainTextStyled>
           <SubtitleStyled>Love to</SubtitleStyled>
-          <TitleStyled className="title"
+          <TitleStyled className={
+            actualText.length > 7 ? 'textWrap title' : 'title'
+          } 
             onMouseEnter={() => {
-              if(window.innerWidth > 500) {
-                initInterval(backgroundList);
-              }    
+              if (window.innerWidth > 500) {
+                setIsInitInterval(true);
+              }
             }}
             onTouchStart={() => {
-              if(splashPage) {
-                initInterval(backgroundList);
+              if (splashPage) {
+                setIsInitInterval(true);
               }
             }}
             onMouseLeave={() => {
-              if(window.innerWidth > 500) {
+              if (window.innerWidth > 500) {
                 exitInterval(backgroundList);
               }
+              setIsInitInterval(false);
             }}
             onTouchEnd={() => {
-              if(splashPage) {
+              if (splashPage) {
                 exitInterval(backgroundList);
               }
+              setIsInitInterval(false);
             }}
           >
             {actualText}
@@ -209,8 +215,8 @@ const Header = () => {
         </MainTextStyled>
 
         <LanguageStyled className='anime'>
-          <LanguageItemStyled>PT</LanguageItemStyled>
-          <LanguageItemStyled>EN</LanguageItemStyled>
+          <LanguageItemStyled className="link">PT</LanguageItemStyled>
+          <LanguageItemStyled className="link">EN</LanguageItemStyled>
         </LanguageStyled>
       </MainContentStyled>
 
