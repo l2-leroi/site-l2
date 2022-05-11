@@ -81,7 +81,7 @@ export const SubtitleStyled = styled.h2`
         color: ${colors.gray};
     }
 
-    @media (min-width: 800px) and (max-width: 1220px) {
+    @media (min-width: 801px) and (max-width: 1220px) {
         font-size: 34px;
     }
 
@@ -120,21 +120,20 @@ export const LanguageStyled = styled.div`
     right: 28px;
     
     @media (max-width: 800px) {
-        top: 110px;
-        right: 24px;
+        position: static;
+        flex-direction: row;
+        margin-top: 32px;
+        gap: 16px;
     }
 
     @media (max-width: 500px) {
         opacity: 0;
+        gap: 9px;
         
         &.animate {
             opacity: 1;
             transition: opacity .8s;
         }
-        position: static;
-        flex-direction: row;
-        margin-top: 32px;
-        gap: 16px;
     }
 `;
 
@@ -170,12 +169,6 @@ export const LanguageItemStyled = styled.button`
     @media (max-width: 800px) {
         font-size: 10px;
 
-        &:first-child {
-            margin-bottom: 32px;
-        }
-    }  
-
-    @media (max-width: 500px) {
         &:first-child {
             margin-bottom: 0px;
         }
