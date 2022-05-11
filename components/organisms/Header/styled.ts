@@ -59,7 +59,7 @@ export const SubtitleStyled = styled.h2`
     line-height: 120%;
     text-align: center;
     letter-spacing: -0.02em;
-    margin: 0 auto;
+    margin: 0 auto -10px;
     ::selection {
         background: ${colors.purple};
         color: ${colors.gray};
@@ -67,6 +67,7 @@ export const SubtitleStyled = styled.h2`
 
     @media (max-width: 800px) {
         margin-top: 120px;
+        margin-bottom: 0;
     } 
 `;
 
