@@ -44,6 +44,7 @@ const Header = () => {
   const [isInitInterval, setIsInitInterval] = useState(false);
   const isTouchActive = useRef(false);
   const [splashPage, setSplashPage] = useState(false);
+  const [isFirstTouch, setIsFirstTouch] = useState(false);
   const interval = useRef(null);
   let currentImage = '';
   const [actualImage, setActualImage] = useState('');
@@ -155,7 +156,8 @@ const Header = () => {
     <HeaderStyled
       className='header'
       onTouchStart={() => {
-        if (!splashPage) {
+        if (!splashPage && !isFirstTouch) {
+          setIsFirstTouch(true);
           isTouchActive.current = true;
           setIsInitInterval(true);
         }
