@@ -75,10 +75,10 @@ function CaseList(props: CaseProps) {
   }, []);
 
   useEffect(() => {
-    if(window.innerWidth < 500) {
+    if (window.innerWidth < 500) {
       const images = document.querySelectorAll<HTMLElement>('.images');
       images.forEach((img) => {
-        img.addEventListener('contextmenu', (e) => {e.preventDefault()});
+        img.addEventListener('contextmenu', (e) => { e.preventDefault() });
       });
     }
   });
@@ -115,12 +115,12 @@ function CaseList(props: CaseProps) {
                 <InfoStyled>{itemCase.info}</InfoStyled>
                 <LinkStyled className="images"
                   onMouseEnter={() => {
-                    if(window.innerWidth > 500) {
+                    if (window.innerWidth > 500) {
                       initInterval(itemCase.hover);
                     }
                   }}
                   onMouseLeave={() => {
-                    if(window.innerWidth > 500) {
+                    if (window.innerWidth > 500) {
                       cancelInterval(itemCase.image);
                     }
                   }}
@@ -129,7 +129,7 @@ function CaseList(props: CaseProps) {
                   }}
                   onTouchEnd={() => {
                     cancelInterval(itemCase.image);
-                }}
+                  }}
                 >
                   <ImageStyled className="images"
                     src={itemCase.image}
@@ -137,12 +137,12 @@ function CaseList(props: CaseProps) {
                   />
                   {
                     itemCase.hover.map((imageHover => (
-                      <ImageStyled className="images"
+                      <ImageStyled
                         key={imageHover}
                         src={imageHover}
                         alt={itemCase.alt}
                         className={
-                          ((actualImage == imageHover) ? "imageBlock" : "imageNone")
+                          ((actualImage == imageHover) ? "images imageBlock" : "images imageNone")
                         }
                       />
                     )))
