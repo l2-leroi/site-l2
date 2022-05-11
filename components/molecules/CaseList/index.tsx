@@ -113,7 +113,7 @@ function CaseList(props: CaseProps) {
                 <CaseNumberStyled>Case {itemCase.number}</CaseNumberStyled>
                 <TitleStyled>{itemCase.title}</TitleStyled>
                 <InfoStyled>{itemCase.info}</InfoStyled>
-                <LinkStyled
+                <LinkStyled className="images"
                   onMouseEnter={() => {
                     if(window.innerWidth > 500) {
                       initInterval(itemCase.hover);
@@ -137,7 +137,8 @@ function CaseList(props: CaseProps) {
                   />
                   {
                     itemCase.hover.map((imageHover => (
-                      <ImageStyled key={imageHover}
+                      <ImageStyled className="images"
+                        key={imageHover}
                         src={imageHover}
                         alt={itemCase.alt}
                         className={
