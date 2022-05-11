@@ -94,7 +94,7 @@ function CaseList(props: CaseProps) {
         currentImage = images[index + 1];
         setActualImage(currentImage);
       }
-    }, 300);
+    }, 200);
   };
 
   const cancelInterval = (image: string) => {

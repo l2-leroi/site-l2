@@ -112,7 +112,7 @@ const Header = () => {
         element.classList.add('white');
       });
       setWhiteCircle(true);
-    }, 300);
+    }, 200);
   };
   
   const exitInterval = (backgroundList) => {
