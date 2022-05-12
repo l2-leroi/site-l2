@@ -140,28 +140,6 @@ export const ContentStyled = styled.section`
   }
 `;
 
-export const SignStyled = styled.span`
-  font-family: 'Neue Machina', sans-serif;
-  font-style: normal;
-  font-size: 3rem;
-  line-height: 200%;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  text-align: center;
-  color: ${colors.dark_gray};
-  overflow: hidden;
-  padding-left: 30px;
-  width: 100%;
-  max-height: 40px;
-  position: absolute;
-  top: -10px;
-  z-index: 99;
-  margin-top: -20px;
-
-  @media(max-width: 800px){
-    line-height: 120%;
-  }
-`;
 
 export const SpinningAnimation = keyframes`
   0% {
@@ -182,44 +160,6 @@ export const SpinningIconStyled = styled.div`
   animation: ${SpinningAnimation} 5s linear infinite;
   max-width: 468px;
 
-  // @media(max-width: 1366px){
-  //   max-width: 380px;
-  //   top: 5.3%;
-  // }
-
-  // @media(max-width: 1126px){
-  //   max-width: 380px;
-  //   top: 4.2%;
-  // }
-
-  // @media(max-width: 1076px){
-  //   top: 3.4%;
-  // }
-
-  // @media(max-width: 954px){
-  //   top: 2.4%;
-  // }
-
-  // @media(max-width: 800px){
-  //   top: 2.8%;
-  // }
-
-  // @media(max-width: 600px){
-  //   top: 2.2%;
-  // }
-  
-  // @media(max-width: 440px){
-  //   top: 1.8%;
-  // }
-
-  // @media(max-width: 414px){
-  //   top: 3.6%;
-  // }
-
-  // @media(max-width: 300px){
-  //   top: 2.8%;
-  // }
-
   img{
 
     @media(max-width: 1366px){
@@ -237,11 +177,9 @@ export const SpinningIconStyled = styled.div`
 `;
 
 export const SignContainerStyled = styled.div`
-  background-color: ${colors.black};
-  padding-top: 40px;
-  margin-top: -2px;
-  position: relative;
-  color: ${colors.dark_gray}
+  color: ${colors.dark_gray};
+  top: 120px;
+  position: absolute;
 `;
 
 export const CustomersContainer = styled.div`
@@ -250,7 +188,9 @@ export const CustomersContainer = styled.div`
 `;
 
 export const BlackBg = styled.div`
+  margin-top: -5px;
   height: 400px;
+  padding-bottom: 50px;
   width:100%;
   background-color: ${colors.black};
   position: absolute;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const SectionOutSourcingStyled = styled.section`
-  position: absolute; 
+  // position: absolute; 
   bottom: 8rem;
 `;
 

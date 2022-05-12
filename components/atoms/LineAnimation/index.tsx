@@ -21,11 +21,11 @@ const LineAnimation = ({children,classe,backgroundColor}) => {
 
         let inclination = 25;
 
-        if((window.innerWidth > 600) && (window.innerWidth < 800)){
-          inclination = 15;
-        }else if(window.innerWidth <= 600){
-          inclination = 10;
-        }
+        // if((window.innerWidth > 600) && (window.innerWidth < 800)){
+        //   inclination = 15;
+        // }else if(window.innerWidth <= 600){
+        //   inclination = 10;
+        // }
 
 
         const movimento = inclination - ((blackLineMovimento-128)/10);
