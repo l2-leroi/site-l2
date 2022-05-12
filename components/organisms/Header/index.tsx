@@ -163,8 +163,10 @@ const Header = () => {
         }
       }}
       onTouchEnd={() => {
-        setIsInitInterval(false);
-        isTouchActive.current = false;
+        if (!splashPage) {
+          setIsInitInterval(false);
+          isTouchActive.current = false;
+        }
       }}
     >
       {backgroundList.map((background) => (
@@ -203,8 +205,8 @@ const Header = () => {
             onTouchEnd={() => {
               if (splashPage) {
                 exitInterval(backgroundList);
+                setIsInitInterval(false);
               }
-              setIsInitInterval(false);
             }}
           >
             {actualText}
