@@ -4,21 +4,9 @@ import { colors } from '../../../styles/colors';
 export const FooterStyled = styled.footer`
   color: ${colors.gray};
   background-color: ${colors.purple};
-  // clip-path: polygon(0 0, 100% 41.6%, 100% 100%, 0% 100%);
   width: 100%;
   padding: 0rem 2.8rem 6.05rem;
 
-  // @media (min-width: 2560px) {
-  //   clip-path: polygon(0 0, 100% 57%, 100% 100%, 0% 100%);
-  // }
-
-  // @media (min-width: 1920px) {
-  //   clip-path: polygon(0 0, 100% 49%, 100% 100%, 0% 100%);
-  // }
-
-  // @media (max-width: 800px) {
-  //   clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
-  // }
 `;
 
 export const ContainerStyled = styled.div`
@@ -77,6 +65,10 @@ export const TitleStyled = styled.h2`
     color: ${colors.black};
   }
 
+  @media (max-width: 930px) {
+    width: 300px;
+  }
+
   @media (max-width: 800px) {
     width: 264px;
     line-height: 28.8px;
@@ -133,7 +125,6 @@ export const InfoStyled = styled.div`
   }
 `;
 
-export const LinkStyled = styled.a``;
 
 export const ImageStyled = styled.img`
   @media (max-width: 800px) {

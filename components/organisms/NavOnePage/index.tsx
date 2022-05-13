@@ -4,14 +4,9 @@ import {
   NavItemStyled,
   NavLinkListStyled,
   NavLinkStyled,
-  NavButtonStyled,
-  DivTextStyled,
-  TextMenuStyled,
   ImageStyled
 } from "./styled";
-// import L2Logo from '../../../assets/images/logoNav.svg';
-// import MenuIcon from '../../../assets/images/Menu-Icon.svg';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link'
 //translation
 import { useTranslations } from 'next-intl'
@@ -71,7 +66,7 @@ export default function NavOnePage() {
   return (
     <>
     
-      <NavStyled className="nav">
+      <NavStyled className="nav anime">
         <NavContentStyled className="navList">
           <NavItemStyled>
             <ImageStyled className="navImage" src="./images/L2Code-Logo.svg" alt="L2 Code" />

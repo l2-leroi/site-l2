@@ -11,6 +11,10 @@ export const HeaderStyled = styled.header`
     padding: 0px 28px;
     background-color: ${colors.gray}; 
     overflow: hidden;
+
+    @media (max-width: 500px) {
+        user-select: none;
+    }
     
     &.white{
         color: white;
@@ -31,6 +35,7 @@ export const MainTextStyled = styled.hgroup`
     align-self: center;
     margin: 0 auto;
     text-align: center;
+    width: 100%;
 `;
 
 export const TitleStyled = styled.h1`
@@ -43,16 +48,26 @@ export const TitleStyled = styled.h1`
     text-align: center;
     letter-spacing: -0.04em;
     margin: 0 auto 10px;
-    cursor: pointer;
-    ::selection {
-        background: ${colors.purple};
-        color: ${colors.gray};
+    user-select: none;
+
+    @media (max-width: 1220px) {
+        font-size: 140px;
+    }
+
+    @media (max-width: 910px) {
+        font-size: 120px;
     }
 
     @media (max-width: 800px) {
         font-size: 64px;
     }
-    
+
+    @media (max-width: 500px) {
+        &.textWrap {
+            max-width: 220px;
+            overflow-wrap: break-word;
+        } 
+    }
 `;
 
 export const SubtitleStyled = styled.h2`
@@ -68,6 +83,10 @@ export const SubtitleStyled = styled.h2`
     ::selection {
         background: ${colors.purple};
         color: ${colors.gray};
+    }
+
+    @media (min-width: 800px) and (max-width: 1220px) {
+        font-size: 34px;
     }
 
     @media (max-width: 800px) {
@@ -96,25 +115,36 @@ export const TitleComplementStyled = styled.h3`
     }  
 `;
 
-export const LanguageStyled = styled.ul`
+export const LanguageStyled = styled.div`
+    display: flex;
+    flex-direction: column;
     list-style: none;
     position: absolute;
     right: 28px;
     
     @media (max-width: 800px) {
-        top: 100px;
+        top: 110px;
         right: 24px;
     }
 
     @media (max-width: 500px) {
+        opacity: 0;
+        
+        &.animate {
+            opacity: 1;
+            transition: opacity .8s;
+        }
         position: static;
-        display: inline-flex;
+        flex-direction: row;
         margin-top: 32px;
         gap: 16px;
     }
 `;
 
-export const LanguageItemStyled = styled.li`
+export const LanguageItemStyled = styled.button`
+    background: transparent;
+    cursor: pointer;
+    border: none;   
     font-family: 'Circular Air Pro';
     font-style: normal;
     font-weight: 400;
@@ -122,6 +152,11 @@ export const LanguageItemStyled = styled.li`
     line-height: 140%;
     text-align: right;
     letter-spacing: -0.02em;
+
+    &.white {
+        color: white;
+    }
+
     ::selection {
         background: ${colors.purple};
         color: ${colors.gray};
@@ -131,11 +166,21 @@ export const LanguageItemStyled = styled.li`
         margin-bottom: 8px;
     }
 
+    &:hover {
+        color: ${colors.green};
+    }
+
     @media (max-width: 800px) {
         font-size: 10px;
 
         &:first-child {
             margin-bottom: 32px;
+        }
+    }  
+
+    @media (max-width: 500px) {
+        &:first-child {
+            margin-bottom: 0px;
         }
     }  
 `;
@@ -166,7 +211,7 @@ export const FooterContentStyled = styled.div`
     }
 `;
 
-export const SocialMediaStyled = styled.ul`
+export const SocialMediaStyled = styled.div`
     list-style: none;
     align-self: center;
     margin: 0 auto;
@@ -175,9 +220,18 @@ export const SocialMediaStyled = styled.ul`
     justify-content: center;
     position: relative;
     bottom: 30px;
+
+    @media (max-width: 500px) {
+        opacity: 0;
+
+        &.animate {
+            opacity: 1;
+            transition: opacity .8s;
+        }
+    }
 `;
 
-export const SocialMediaTitleStyled = styled.li`  
+export const SocialMediaTitleStyled = styled.span`  
     margin-right: 120px;
     margin-left: 1.2rem;
     position: relative;
@@ -262,6 +316,14 @@ export const ArrowSpinnerContainerStyled = styled.div`
     right: 148px;
     bottom: -70px;
 
+    @media (min-width: 2560px) {
+        right: 703px;
+    }
+
+    @media (max-width: 1365px) {
+        right: 70px;
+    }
+
     @media (max-width: 800px) {
         right: 0;
         bottom: -45px;
@@ -269,7 +331,12 @@ export const ArrowSpinnerContainerStyled = styled.div`
         width: 100%;
     }
 
-    @media (min-width: 2560px) {
-        right: 703px;
+    @media (max-width: 500px) {
+        opacity: 0;
+
+        &.animate {
+            opacity: 1;
+            transition: opacity .8s;
+        }
     }
 `;
