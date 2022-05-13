@@ -16,8 +16,12 @@ import {
 } from "./styled";
 import React, { useRef, useState } from 'react';
 import ScrollCircle from '../../atoms/ScrollCircle/index';
+//translation
+import { useTranslations } from 'next-intl'
 
 const Header = () => {
+   //translation
+   const t= useTranslations('header');
   const backgroundList = [
     {
       image: './images/PROTOTYPE.jpg',
@@ -50,6 +54,7 @@ const Header = () => {
   const [actualText, setActualText] = useState('CODE');
 
   const initInterval = (backgroundList) => {
+    
     setIsBannerAnimating(true);
     console.log(isBannerAnimating);
     const header = document.querySelector(".header");
@@ -79,6 +84,7 @@ const Header = () => {
   };
 
   const exitInterval = (backgroundList) => {
+    
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
     header.classList.remove("white");
@@ -106,7 +112,7 @@ const Header = () => {
 
       <MainContentStyled>
         <MainTextStyled>
-          <SubtitleStyled>Love to</SubtitleStyled>
+          <SubtitleStyled>{t('loveTo')}</SubtitleStyled>
           <TitleStyled
             onMouseEnter={() => {
               initInterval(backgroundList);
@@ -119,20 +125,23 @@ const Header = () => {
           </TitleStyled>
 
           <TitleComplementStyled className='bannerText'>
-            Criamos produtos digitais e experiências online que as pessoas
-            adoram
+          {t('weCreate')}
           </TitleComplementStyled>
         </MainTextStyled>
 
         <LanguageStyled>
-          <LanguageItemStyled>PT</LanguageItemStyled>
-          <LanguageItemStyled>EN</LanguageItemStyled>
+          <LanguageItemStyled>
+            <a href="/">PT</a>
+          </LanguageItemStyled>
+          <LanguageItemStyled>
+            <a href="/en">EN</a>
+          </LanguageItemStyled>
         </LanguageStyled>
       </MainContentStyled>
 
       <FooterContentStyled>
         <SocialMediaStyled>
-          <SocialMediaTitleStyled>Siga-nos</SocialMediaTitleStyled>
+          <SocialMediaTitleStyled>{t('followUs')}</SocialMediaTitleStyled>
           <SocialMediaItemStyled href="https://www.linkedin.com/company/l2code-dev/" target="_blank">In</SocialMediaItemStyled>
           <SocialMediaItemStyled href="https://www.instagram.com/l2code.com.br/" target="_blank">IG</SocialMediaItemStyled>
         </SocialMediaStyled>

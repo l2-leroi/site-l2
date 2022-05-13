@@ -18,21 +18,25 @@ import ContactList from '../../molecules/ContactList/index'
 import React from 'react';
 import LineAnimation from '../../atoms/LineAnimation';
 import { colors } from '../../../styles/colors';
+//translation
+import { useTranslations } from 'next-intl'
 
 const Footer = () => {
+   //translation
+  const t= useTranslations('footer');
   const contacts = [
     {
-      title: 'nosso whatsapp',
+      title: t('ourWhatsapp'),
       contact: '+55 51 99693.9336',
       link: 'tel:+5551996939336',
     },
     {
-      title: 'nosso e-mail',
+      title: t('ourEmail'),
       contact: 'contato@l2code.com.br',
       link: 'mailto:contato@l2code.com.br',
     },
     {
-      title: 'entre no time',
+      title: t('bePart'),
       contact: 'talentos@l2code.com.br',
       link: 'mailto:talentos@l2code.com.br',
     },
@@ -44,7 +48,7 @@ const Footer = () => {
       <ContainerStyled>
         <ContentStyled>
           <DivStyled>
-            <TitleStyled>VAMOS CONVERSAR</TitleStyled>
+            <TitleStyled>{t('letsTalk')}</TitleStyled>
             <AsideStyled>
               <ParagraphStyled>&lt;AND DANCE&gt;</ParagraphStyled>
             </AsideStyled>
@@ -54,8 +58,8 @@ const Footer = () => {
 
           <CopyrightStyled>
             <InfoStyled>
-              <PhraseStyled>Abraçamos os talentos do mundo</PhraseStyled>
-              <PhraseStyled>Somos uma empresa que trabalha 100% remoto</PhraseStyled>
+              <PhraseStyled>{t('weEmbrace')}</PhraseStyled>
+              <PhraseStyled>{t('remoteWork')}</PhraseStyled>
             </InfoStyled>
 
             <InfoStyled className="desktop">
@@ -65,8 +69,8 @@ const Footer = () => {
             </InfoStyled>
 
             <InfoStyled className="align-end">
-              <PhraseStyled>Feito com <IconStyled> <HeartIcon/> </IconStyled> L2code</PhraseStyled>
-              <PhraseStyled>Copyright © Todos os direitos reservados</PhraseStyled>
+              <PhraseStyled>{t('madeWith')}<IconStyled> <HeartIcon/> </IconStyled> L2code</PhraseStyled>
+              <PhraseStyled>{t('copyright')}</PhraseStyled>
             </InfoStyled>
           </CopyrightStyled>
 

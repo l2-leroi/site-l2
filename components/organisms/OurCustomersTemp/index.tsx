@@ -17,8 +17,12 @@ import {
 
 import CustomersList from '../../molecules/CustomersList/index';
 import React from 'react';
+//translation
+import { useTranslations } from 'next-intl'
 
 const OurCustomersTemp = () => {
+   //translation
+   const t= useTranslations('customers');
   const ToParadoLogo = './images/OurCustomers/to-parado-logo.svg';
   const PhiLogo = './images/OurCustomers/phi-logo.svg';
   const BancoRCILogo = './images/OurCustomers/banco-rci-logo.svg';
@@ -51,10 +55,8 @@ const OurCustomersTemp = () => {
       <BlackLineStyled>
         <ContentStyled>
           <HeaderStyled>
-            <TitleStyled>ALGUNS DE NOSSOS CLIENTES</TitleStyled>
-            <SubtitleStyled>
-              Temos orgulho de fazer parceria com empresas e startups com fome
-              de inovação.
+            <TitleStyled>{t('someCustomers')}</TitleStyled>
+            <SubtitleStyled>{t('weArePround')}
             </SubtitleStyled>
           </HeaderStyled>
           <AsideStyled>

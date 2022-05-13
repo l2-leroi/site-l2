@@ -13,9 +13,12 @@ import {
 // import MenuIcon from '../../../assets/images/Menu-Icon.svg';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link'
+//translation
+import { useTranslations } from 'next-intl'
 
 export default function NavOnePage() {
-
+   //translation
+   const t= useTranslations('nav');
   const handleWhite = () =>{
     const observer = new MutationObserver(handleMutation);
 
@@ -77,16 +80,16 @@ export default function NavOnePage() {
           <NavItemStyled>
             <NavLinkListStyled>
             <Link href="#services">
-              <NavLinkStyled>Serviços</NavLinkStyled>
+              <NavLinkStyled>{t('navServices')}</NavLinkStyled>
             </Link>
             <Link href="#cases">
-                <NavLinkStyled>Cases</NavLinkStyled>
+                <NavLinkStyled>{t('navCases')}</NavLinkStyled>
             </Link>
             <Link href="#customers">
-                <NavLinkStyled>Clientes</NavLinkStyled>
+                <NavLinkStyled>{t('navCustomers')}</NavLinkStyled>
             </Link>
             <Link href="#contact">
-                <NavLinkStyled>Contato</NavLinkStyled>
+                <NavLinkStyled>{t('navContact')}</NavLinkStyled>
             </Link>
           </NavLinkListStyled>
             
