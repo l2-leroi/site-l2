@@ -123,20 +123,9 @@ export const ContentStyled = styled.section`
 
   }
 
-
-  @media(max-width: 625px){
-    padding-top: 60px;
-
-  }
-
   @media(max-width: 414px){
     margin-bottom: 36px;
-    margin-top: 100px;
     width: 100%;
-  }
-
-  @media(max-width: 375px){
-    margin-top: 120px;
   }
 `;
 
