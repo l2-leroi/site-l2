@@ -11,6 +11,10 @@ export const HeaderStyled = styled.header`
     padding: 0px 28px;
     background-color: ${colors.gray}; 
     overflow: hidden;
+
+    @media (max-width: 500px) {
+        user-select: none;
+    }
     
     &.white{
         color: white;
@@ -31,6 +35,7 @@ export const MainTextStyled = styled.hgroup`
     align-self: center;
     margin: 0 auto;
     text-align: center;
+    width: 100%;
 `;
 
 export const TitleStyled = styled.h1`
@@ -45,8 +50,23 @@ export const TitleStyled = styled.h1`
     margin: 0 auto 10px;
     user-select: none;
 
+    @media (max-width: 1220px) {
+        font-size: 140px;
+    }
+
+    @media (max-width: 910px) {
+        font-size: 120px;
+    }
+
     @media (max-width: 800px) {
         font-size: 64px;
+    }
+
+    @media (max-width: 500px) {
+        &.textWrap {
+            max-width: 220px;
+            overflow-wrap: break-word;
+        } 
     }
 `;
 
@@ -63,6 +83,10 @@ export const SubtitleStyled = styled.h2`
     ::selection {
         background: ${colors.purple};
         color: ${colors.gray};
+    }
+
+    @media (min-width: 800px) and (max-width: 1220px) {
+        font-size: 34px;
     }
 
     @media (max-width: 800px) {
@@ -99,7 +123,7 @@ export const LanguageStyled = styled.div`
     right: 28px;
     
     @media (max-width: 800px) {
-        top: 100px;
+        top: 110px;
         right: 24px;
     }
 
@@ -111,7 +135,7 @@ export const LanguageStyled = styled.div`
             transition: opacity .8s;
         }
         position: static;
-        display: inline-flex;
+        flex-direction: row;
         margin-top: 32px;
         gap: 16px;
     }
@@ -128,6 +152,11 @@ export const LanguageItemStyled = styled.button`
     line-height: 140%;
     text-align: right;
     letter-spacing: -0.02em;
+
+    &.white {
+        color: white;
+    }
+
     ::selection {
         background: ${colors.purple};
         color: ${colors.gray};
@@ -146,6 +175,12 @@ export const LanguageItemStyled = styled.button`
 
         &:first-child {
             margin-bottom: 32px;
+        }
+    }  
+
+    @media (max-width: 500px) {
+        &:first-child {
+            margin-bottom: 0px;
         }
     }  
 `;
@@ -241,10 +276,6 @@ export const SocialMediaItemStyled = styled.a`
     letter-spacing: -0.02em;
     z-index: 50;
     cursor: pointer;
-
-    &.white{
-        color: white;
-    }
 
     ::selection {
         background: ${colors.purple};
