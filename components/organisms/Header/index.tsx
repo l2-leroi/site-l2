@@ -22,6 +22,7 @@ import { useTranslations } from 'next-intl'
 const Header = () => {
    //translation
    const t= useTranslations('header');
+   const images= useTranslations('images')
   const backgroundList = [
     {
       image: './images/PROTOTYPE.jpg',
@@ -236,7 +237,8 @@ const Header = () => {
         </SocialMediaStyled>
 
         <ArrowSpinnerContainerStyled className='anime'>
-          <ScrollCircle isWhiteImage={whiteCircle} blackImage={"./images/Arrow-Spinner.svg"} whiteImage={"./images/Arrow-Spinner-White.svg"} alt={"Tem mais coisa aqui em baixo"}/>
+          <ScrollCircle isWhiteImage={whiteCircle} blackImage={`${images('spinner')}`}
+           whiteImage={`${images('whiteSpinner')}`} alt={"Tem mais coisa aqui em baixo"}/>
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
     </HeaderStyled>

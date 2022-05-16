@@ -16,10 +16,13 @@ import { useTranslations } from 'next-intl'
 export default function OurServices() {
    //translation
    const t= useTranslations('services');
+   const images= useTranslations('images')
   return (
     <SectionStyled>
       <ScrollArrow className="SpinnerCircle2">
-        <ScrollCircle isWhiteImage={false} blackImage={"./images/Arrow-Spinner.svg"} whiteImage={"./images/Arrow-Spinner-White.svg"} alt={"Tem mais coisa aqui em baixo"}/>
+        <ScrollCircle isWhiteImage={false} 
+        blackImage={`${images('spinner')}`}
+         whiteImage={`${images('whiteSpinner')}`}alt={"Tem mais coisa aqui em baixo"}/>
       </ScrollArrow>
 
       <DivOurServicesStyled>

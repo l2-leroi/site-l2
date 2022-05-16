@@ -1,4 +1,8 @@
 {
+  "images":{
+    "spinner": "./images/Arrow-Spinner.svg",
+    "whiteSpinner": "./images/Arrow-Spinner-White.svg"
+  },
   "cases":{
     "ourCases": "NOSSOS CASES SELECIONADOS",
     "weDoWell": "Fazemos muito bem porque nos preocupamos com qualidade, estética e, acima de tudo, com resultados.",

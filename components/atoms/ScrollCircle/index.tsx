@@ -10,13 +10,14 @@ interface imageProps {
 function ScrollCircle(props: imageProps) {
   return (
           <ArrowSpinnerComponentStyled>
+            {console.log(props.blackImage)}
             <ImageArrowSpinnerStyled
               src={props.isWhiteImage ?
                 props.whiteImage :
                 props.blackImage
               
               }
-              alt="Tem mais coisa aqui em baixo"
+              alt= {props.alt}
               className='animate'
             />
             <ImageArrowSpinnerStyled

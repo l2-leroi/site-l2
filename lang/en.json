@@ -1,4 +1,8 @@
 {
+  "images":{
+    "spinner": "./images/Arrow-Spinner-English.svg",
+    "whiteSpinner": "./images/Arrow-Spinner-English-White.svg"
+  },
   "cases":{
     "ourCases": "OUR SELECTED CASES",
     "weDoWell": "We do a great job because we care about quality, aesthetics and, most of all, results.",
@@ -24,7 +28,7 @@
   "header":{
     "loveTo": "Love to",
     "followUs": "Follow us",
-    "weCreate": "We create digital products and online experiences that people love"
+    "weCreate": "We create digital products and online experiences that people love"   
     },
 
   "menu":{
