@@ -56,10 +56,12 @@ export const TitleStyled = styled.h1`
 
     @media (max-width: 910px) {
         font-size: 120px;
+        margin-bottom: 20px;
     }
 
     @media (max-width: 800px) {
-        font-size: 64px;
+        font-size: 64px;   
+        margin-bottom: 13px;
     }
 
     @media (max-width: 500px) {
@@ -89,9 +91,13 @@ export const SubtitleStyled = styled.h2`
         font-size: 34px;
     }
 
+    @media (max-width: 910px) {
+        margin-bottom: 15px;
+    }
+
     @media (max-width: 800px) {
         margin-top: 120px;
-        margin-bottom: 0;
+        margin-bottom: 8px;
     } 
 `;
 
