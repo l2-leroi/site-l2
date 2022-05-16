@@ -44,6 +44,7 @@ const Header = () => {
   const [isInitInterval, setIsInitInterval] = useState(false);
   const isTouchActive = useRef(false);
   const [splashPage, setSplashPage] = useState(false);
+  const [isFirstTouch, setIsFirstTouch] = useState(false);
   const interval = useRef(null);
   let currentImage = '';
   const [actualImage, setActualImage] = useState('');
@@ -155,14 +156,17 @@ const Header = () => {
     <HeaderStyled
       className='header'
       onTouchStart={() => {
-        if (!splashPage) {
+        if (!splashPage && !isFirstTouch) {
+          setIsFirstTouch(true);
           isTouchActive.current = true;
           setIsInitInterval(true);
         }
       }}
       onTouchEnd={() => {
-        setIsInitInterval(false);
-        isTouchActive.current = false;
+        if (!splashPage) {
+          setIsInitInterval(false);
+          isTouchActive.current = false;
+        }
       }}
     >
       {backgroundList.map((background) => (
@@ -201,8 +205,8 @@ const Header = () => {
             onTouchEnd={() => {
               if (splashPage) {
                 exitInterval(backgroundList);
+                setIsInitInterval(false);
               }
-              setIsInitInterval(false);
             }}
           >
             {actualText}

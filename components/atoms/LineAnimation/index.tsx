@@ -24,7 +24,7 @@ const LineAnimation = ({children,classe,backgroundColor}) => {
         if((window.innerWidth > 600) && (window.innerWidth < 800)){
           inclination = 15;
         }else if(window.innerWidth <= 600){
-          inclination = 10;
+          inclination = 12;
         }
 
 
