@@ -57,15 +57,18 @@ const Header = () => {
     target.forEach((element) => {
       element.classList.add('animate');
     });
-    if (window.innerWidth < 500) {
+    if (window.innerWidth < 500 || window.innerHeight <= 414) {
       document.body.style.overflow = null;
     }
   }
 
   useEffect(() => {
-    if (window.innerWidth < 500) {
+    if (window.innerWidth < 500 || window.innerHeight <= 414) {
       document.body.style.overflow = 'hidden';
-      document.querySelector<HTMLElement>('.title').addEventListener('contextmenu', (e) => { e.preventDefault() });
+      const title = document.querySelectorAll<HTMLElement>('.title');
+      title.forEach((title) => {
+        title.addEventListener('contextmenu', (e) => {e.preventDefault()});
+      });
     }
   }, [])
 
@@ -79,7 +82,7 @@ const Header = () => {
         : 0;
 
       // mobile
-      if (window.innerWidth < 500 && index === backgroundList.length) {
+      if ((window.innerWidth < 500 || window.innerHeight <= 414) && index === backgroundList.length) {
         setCounterLoop(counterLoop + 1);
         if (isTouchActive.current || splashPage) {
           currentImage = backgroundList[0].image;
@@ -113,7 +116,7 @@ const Header = () => {
     }
 
     if(isInitInterval) {
-      interval.current = setInterval(runAnimation, 300);
+      interval.current = setInterval(runAnimation, 200);
     }
   },[isInitInterval])
 
@@ -136,21 +139,12 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if (window.innerWidth < 500 && !isTouchActive.current && counterLoop >= 1 && !splashPage) {
+    if ((window.innerWidth < 500 || window.innerHeight <= 414) && !isTouchActive.current && counterLoop >= 1 && !splashPage) {
       exitInterval(backgroundList);
       animeSplashPage();
       setSplashPage(true);
     }
   }, [isTouchActive.current, counterLoop])
-
-  useEffect(() => {
-    if(window.innerWidth < 500) {
-      const title = document.querySelectorAll<HTMLElement>('.title');
-      title.forEach((title) => {
-        title.addEventListener('contextmenu', (e) => {e.preventDefault()});
-      });
-    }
-  });
 
   return (
     <HeaderStyled
@@ -187,7 +181,7 @@ const Header = () => {
             actualText.length > 7 ? 'textWrap title' : 'title'
           } 
             onMouseEnter={() => {
-              if (window.innerWidth > 500) {
+              if (window.innerWidth > 500 && window.innerHeight > 414) {
                 setIsInitInterval(true);
               }
             }}
@@ -197,7 +191,7 @@ const Header = () => {
               }
             }}
             onMouseLeave={() => {
-              if (window.innerWidth > 500) {
+              if (window.innerWidth > 500 && window.innerHeight > 414) {
                 exitInterval(backgroundList);
               }
               setIsInitInterval(false);

@@ -75,10 +75,10 @@ function CaseList(props: CaseProps) {
   }, []);
 
   useEffect(() => {
-    if(window.innerWidth < 500) {
+    if (window.innerWidth < 500) {
       const images = document.querySelectorAll<HTMLElement>('.images');
       images.forEach((img) => {
-        img.addEventListener('contextmenu', (e) => {e.preventDefault()});
+        img.addEventListener('contextmenu', (e) => { e.preventDefault() });
       });
     }
   });
@@ -94,7 +94,7 @@ function CaseList(props: CaseProps) {
         currentImage = images[index + 1];
         setActualImage(currentImage);
       }
-    }, 300);
+    }, 200);
   };
 
   const cancelInterval = (image: string) => {
@@ -113,14 +113,14 @@ function CaseList(props: CaseProps) {
                 <CaseNumberStyled>Case {itemCase.number}</CaseNumberStyled>
                 <TitleStyled>{itemCase.title}</TitleStyled>
                 <InfoStyled>{itemCase.info}</InfoStyled>
-                <LinkStyled
+                <LinkStyled className="images"
                   onMouseEnter={() => {
-                    if(window.innerWidth > 500) {
+                    if (window.innerWidth > 500) {
                       initInterval(itemCase.hover);
                     }
                   }}
                   onMouseLeave={() => {
-                    if(window.innerWidth > 500) {
+                    if (window.innerWidth > 500) {
                       cancelInterval(itemCase.image);
                     }
                   }}
@@ -129,7 +129,7 @@ function CaseList(props: CaseProps) {
                   }}
                   onTouchEnd={() => {
                     cancelInterval(itemCase.image);
-                }}
+                  }}
                 >
                   <ImageStyled className="images"
                     src={itemCase.image}
@@ -137,11 +137,12 @@ function CaseList(props: CaseProps) {
                   />
                   {
                     itemCase.hover.map((imageHover => (
-                      <ImageStyled key={imageHover}
+                      <ImageStyled
+                        key={imageHover}
                         src={imageHover}
                         alt={itemCase.alt}
                         className={
-                          ((actualImage == imageHover) ? "imageBlock" : "imageNone")
+                          ((actualImage == imageHover) ? "images imageBlock" : "images imageNone")
                         }
                       />
                     )))
