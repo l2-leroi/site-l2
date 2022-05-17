@@ -8,10 +8,9 @@ import {
 } from "./styled";
 import React, { useEffect } from 'react';
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
 
 export default function NavOnePage() {
-  const t= useTranslations('nav');
+
   const handleWhite = () =>{
     const observer = new MutationObserver(handleMutation);
 
@@ -73,16 +72,16 @@ export default function NavOnePage() {
           <NavItemStyled>
             <NavLinkListStyled>
             <Link href="#services">
-              <NavLinkStyled>{t('navServices')}</NavLinkStyled>
+              <NavLinkStyled>Serviços</NavLinkStyled>
             </Link>
             <Link href="#cases">
-                <NavLinkStyled>{t('navCases')}</NavLinkStyled>
+                <NavLinkStyled>Cases</NavLinkStyled>
             </Link>
             <Link href="#customers">
-                <NavLinkStyled>{t('navCustomers')}</NavLinkStyled>
+                <NavLinkStyled>Clientes</NavLinkStyled>
             </Link>
             <Link href="#contact">
-                <NavLinkStyled>{t('navContact')}</NavLinkStyled>
+                <NavLinkStyled>Contato</NavLinkStyled>
             </Link>
           </NavLinkListStyled>
             

@@ -17,23 +17,21 @@ import ContactList from '../../molecules/ContactList/index'
 import React from 'react';
 import LineAnimation from '../../atoms/LineAnimation';
 import { colors } from '../../../styles/colors';
-import { useTranslations } from 'next-intl'
 
 const Footer = () => {
-  const t= useTranslations('footer');
   const contacts = [
     {
-      title: t('ourWhatsapp'),
+      title: 'nosso whatsapp',
       contact: '+55 51 99693.9336',
       link: 'https://api.whatsapp.com/send?phone=5551996939336',
     },
     {
-      title: t('ourEmail'),
+      title: 'nosso e-mail',
       contact: 'contato@l2code.com.br',
       link: 'mailto:contato@l2code.com.br',
     },
     {
-      title: t('bePart'),
+      title: 'entre no time',
       contact: 'talentos@l2code.com.br',
       link: 'mailto:talentos@l2code.com.br',
     },
@@ -45,7 +43,7 @@ const Footer = () => {
       <ContainerStyled>
         <ContentStyled>
           <DivStyled>
-            <TitleStyled>{t('letsTalk')}</TitleStyled>
+            <TitleStyled>VAMOS CONVERSAR</TitleStyled>
             <AsideStyled>
               <ParagraphStyled>&lt;AND DANCE&gt;</ParagraphStyled>
             </AsideStyled>
@@ -55,8 +53,8 @@ const Footer = () => {
 
           <CopyrightStyled>
             <InfoStyled>
-              <PhraseStyled>{t('weEmbrace')}</PhraseStyled>
-              <PhraseStyled>{t('remoteWork')}</PhraseStyled>
+              <PhraseStyled>Abraçamos os talentos do mundo</PhraseStyled>
+              <PhraseStyled>Somos uma empresa que trabalha 100% remoto</PhraseStyled>
             </InfoStyled>
 
             <InfoStyled className="desktop">
@@ -64,8 +62,8 @@ const Footer = () => {
             </InfoStyled>
 
             <InfoStyled className="align-end">
-              <PhraseStyled>{t('madeWith')}<IconStyled> <HeartIcon/> </IconStyled> L2code</PhraseStyled>
-              <PhraseStyled>{t('copyright')}</PhraseStyled>
+              <PhraseStyled>Feito com <IconStyled> <HeartIcon/> </IconStyled> L2code</PhraseStyled>
+              <PhraseStyled>Copyright © Todos os direitos reservados</PhraseStyled>
             </InfoStyled>
           </CopyrightStyled>
 

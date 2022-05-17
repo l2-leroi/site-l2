@@ -1,14 +1,8 @@
 import { AsideStyled, ContainerStyled, ContentStyled, DivStyled, ParagraphStyled, PhraseStyled, TitleStyled} from "./styled";
-import { useTranslations } from 'next-intl'
 import CaseList from "../../molecules/CaseList";
 import React from "react";
 
-
-
-
 const Cases = () => {
-  const t = useTranslations('cases');
-
   const memoriesUpHover = [
     "./images/memories-up-1.jpg", 
     "./images/memories-up-2.jpg", 
@@ -31,28 +25,28 @@ const Cases = () => {
   const cases = [
     { 
       number: "01", 
-      title: t('memoriesUp'), 
-      info: t('weHelp'), 
+      title: "Memories Up", 
+      info: "Ajudamos start-up americana a definir seu negócio e lançamos seu produto.", 
       image: "./images/capa-memories-up.jpg", 
-      alt: t('alt.coverMemoriesUp'), 
+      alt: "Capa Memories Up", 
       link: "#1", 
       hover: memoriesUpHover 
     },
     {   
       number: "02", 
-      title: t('moreAccess'), 
-      info: t('webApp'), 
+      title: "Mais Acesso", 
+      info: "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.", 
       image: "./images/capa-mais-acesso.jpg", 
-      alt: t('alt.coverMoreAccess'), 
+      alt: "Capa Mais Acesso", 
       link: "#2", 
       hover: maisAcessoHover 
     },
     { 
       number: "03", 
-      title: t('stopped'), 
-      info: t('providers'), 
+      title: "Tô Parado", 
+      info: "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira.", 
       image: "./images/capa-to-parado.jpg", 
-      alt: t('alt.coverStopped'), 
+      alt: "Capa Tô Parado", 
       link: "#3", 
       hover: toParadoHover 
     },
@@ -62,12 +56,12 @@ const Cases = () => {
     <ContainerStyled id="cases">
       <ContentStyled>
         <DivStyled>
-          <TitleStyled>{t('ourCases')}</TitleStyled>
+          <TitleStyled>NOSSOS CASES SELECIONADOS</TitleStyled>
           <AsideStyled>
             <ParagraphStyled>&lt;LA CREAM&gt;</ParagraphStyled>
           </AsideStyled>
         </DivStyled>
-        <PhraseStyled>{t('weDoWell')}</PhraseStyled>
+        <PhraseStyled>Fazemos muito bem porque nos preocupamos com qualidade, estética e, acima de tudo, com resultados.</PhraseStyled>
         <CaseList cases={cases} />
       </ContentStyled>
     </ContainerStyled>

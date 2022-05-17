@@ -18,7 +18,7 @@ import {
 // import logo from '../../../assets/images/logoMenu.svg';
 // import x from '../../../assets/images/closeMenu.svg';
 import Scroll from '../../molecules/Scroll';
-import { useTranslations } from 'next-intl'
+
 
 
 export interface Props {
@@ -27,7 +27,6 @@ export interface Props {
 }
 
 const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
-  const t= useTranslations('menu');
   return (
     <Teste style={{ display: openMenu ? 'block' : 'none' }}>
       <Container>
@@ -35,7 +34,7 @@ const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
           {/* <Image src={logo} alt="L2" /> */}
   
           <DivContact>
-            <ParagraphOne>{t('bePart')}</ParagraphOne>
+            <ParagraphOne>entre no time</ParagraphOne>
             <DivLine></DivLine>
             <ParagraphTwo>talentos@lecode.com.br</ParagraphTwo>
           </DivContact>
@@ -58,7 +57,7 @@ const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
             <ParagraphLanguage>EN</ParagraphLanguage>
           </DivLanguage>
           <DivContact>
-            <ParagraphOne>{t('ourWhatsapp')}</ParagraphOne>
+            <ParagraphOne>nosso whatsapp</ParagraphOne>
             <DivLine></DivLine>
             <ParagraphTwo>+55 51 99693.9336</ParagraphTwo>
           </DivContact>
