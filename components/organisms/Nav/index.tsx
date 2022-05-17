@@ -10,8 +10,10 @@ import {
 // import MenuIcon from '../../../assets/images/Menu-Icon.svg';
 import React, { useState } from 'react';
 import Menu from "../Menu/index";
+import { useTranslations } from 'next-intl'
 
 export default function Nav() {
+  const t= useTranslations('nav');
   const [MenuClick, setClick] = useState(false);
   return (
     <>

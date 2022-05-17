@@ -16,8 +16,11 @@ import {
 } from "./styled";
 import React, { useEffect, useRef, useState } from 'react';
 import ScrollCircle from '../../atoms/ScrollCircle/index';
+import { useTranslations } from 'next-intl'
 
 const Header = () => {
+  const t= useTranslations('header');
+  const tImages= useTranslations('images')
   const backgroundList = [
     {
       image: './images/PROTOTYPE.jpg',
@@ -121,6 +124,7 @@ const Header = () => {
   },[isInitInterval])
 
   const exitInterval = (backgroundList) => {
+    
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
     const link = document.querySelectorAll(".link");
@@ -176,7 +180,7 @@ const Header = () => {
 
       <MainContentStyled>
         <MainTextStyled>
-          <SubtitleStyled>Love to</SubtitleStyled>
+          <SubtitleStyled>{t('loveTo')}</SubtitleStyled>
           <TitleStyled className={
             actualText.length > 7 ? 'textWrap title' : 'title'
           } 
@@ -207,26 +211,26 @@ const Header = () => {
           </TitleStyled>
 
           <TitleComplementStyled className='bannerText'>
-            Criamos produtos digitais e experiências online que as pessoas
-            adoram
+          {t('weCreate')}
           </TitleComplementStyled>
         </MainTextStyled>
 
         <LanguageStyled className='anime'>
-          <LanguageItemStyled className="link">PT</LanguageItemStyled>
-          <LanguageItemStyled className="link">EN</LanguageItemStyled>
+          <LanguageItemStyled className="link"><a href="/">PT</a></LanguageItemStyled>
+          <LanguageItemStyled className="link"><a href="/en">EN</a></LanguageItemStyled>
         </LanguageStyled>
       </MainContentStyled>
 
       <FooterContentStyled>
         <SocialMediaStyled className='anime'>
-          <SocialMediaTitleStyled>Siga-nos</SocialMediaTitleStyled>
+          <SocialMediaTitleStyled>{t('followUs')}</SocialMediaTitleStyled>
           <SocialMediaItemStyled className="link" href="https://www.linkedin.com/company/l2code-dev/" target="_blank">In</SocialMediaItemStyled>
           <SocialMediaItemStyled className="link" href="https://www.instagram.com/l2code.com.br/" target="_blank">IG</SocialMediaItemStyled>
         </SocialMediaStyled>
 
         <ArrowSpinnerContainerStyled className='anime'>
-          <ScrollCircle isWhiteImage={whiteCircle} blackImage={"./images/Arrow-Spinner.svg"} whiteImage={"./images/Arrow-Spinner-White.svg"} alt={"Tem mais coisa aqui em baixo"}/>
+          <ScrollCircle isWhiteImage={whiteCircle} blackImage={`${tImages('spinner')}`}
+           whiteImage={`${tImages('whiteSpinner')}`} alt={`${t('alt.thereIsMore')}`}/>
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
     </HeaderStyled>

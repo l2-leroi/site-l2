@@ -16,7 +16,7 @@ function ScrollCircle(props: imageProps) {
                 props.blackImage
               
               }
-              alt="Tem mais coisa aqui em baixo"
+              alt= {props.alt}
               className='animate'
             />
             <ImageArrowSpinnerStyled
