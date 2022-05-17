@@ -11,7 +11,12 @@
     "moreAccess": "Mais Acesso", 
     "webApp": "A Webapp that facilitates getting student loans for young people all over Brazil.", 
     "stopped": "Tô Parado", 
-    "providers": "Service providers succeed in live with this app we created for a Brazilian start-up."
+    "providers": "Service providers succeed in live with this app we created for a Brazilian start-up.",
+    "alt":{
+      "coverMemoriesUp" : "Memories Up Cover",
+      "coverMoreAccess" : "Mais Acesso Cover",
+      "coverStopped" : "Tô Parado Cover"
+    }
      },
 
   "footer":{
@@ -28,7 +33,10 @@
   "header":{
     "loveTo": "Love to",
     "followUs": "Follow us",
-    "weCreate": "We create digital products and online experiences that people love"   
+    "weCreate": "We create digital products and online experiences that people love",
+    "alt":{
+       "thereIsMore" : "There's more down here" 
+    }   
     },
 
   "menu":{
@@ -46,7 +54,10 @@
 
   "customers":{
     "someCustomers":"SOME OF OUR COSTUMERS",
-    "weArePround": "We are pround of being partner with companies and start-ups that are hungry for innovation."
+    "weArePround": "We are pround of being partner with companies and start-ups that are hungry for innovation.",
+    "alt": {
+      "30Customers" : "30+ CUSTOMERS"
+    }
   },
   "services":{
     "ourServices":"OUR SERVICES",
@@ -62,7 +73,19 @@
     "uxuiDesign":"UX / UI Design",
     "weDesign":"We design a gorgeous and functional products for the users, allied with the goals of your business.",
     "consultingService":"IT consulting service",
-    "ourTechLead": "Our Teach Lead Maicon Martins will advise you about the best practices that your company can use in your infrastructure."
+    "ourTechLead": "Our Teach Lead Maicon Martins will advise you about the best practices that your company can use in your infrastructure.",
+    "alt":{
+       "thereIsMore" : "There's more down here" 
+    },
+    "text": {
+      "seeOurServices" : "SEE OUR SERVICES"
+    }   
+    },
+    "outSourcing":{
+      "outsourcing":"Outsourcing Advisory", "ideation":"Ideation",
+      "startupService":"Start-up Service",
+      "consultingService":"IT Consulting Service",
+      "design" : "Design"
     }
   }
   

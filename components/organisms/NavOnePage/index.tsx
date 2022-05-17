@@ -8,12 +8,10 @@ import {
 } from "./styled";
 import React, { useEffect } from 'react';
 import Link from 'next/link'
-//translation
 import { useTranslations } from 'next-intl'
 
 export default function NavOnePage() {
-   //translation
-   const t= useTranslations('nav');
+  const t= useTranslations('nav');
   const handleWhite = () =>{
     const observer = new MutationObserver(handleMutation);
 

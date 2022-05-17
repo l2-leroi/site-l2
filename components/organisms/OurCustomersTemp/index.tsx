@@ -14,15 +14,12 @@ import {
   ParagraphStyled,
   CustomersContainer
 } from "./styled";
-
 import CustomersList from '../../molecules/CustomersList/index';
 import React from 'react';
-//translation
 import { useTranslations } from 'next-intl'
 
 const OurCustomersTemp = () => {
-   //translation
-   const t= useTranslations('customers');
+  const t= useTranslations('customers');
   const ToParadoLogo = './images/OurCustomers/to-parado-logo.svg';
   const PhiLogo = './images/OurCustomers/phi-logo.svg';
   const BancoRCILogo = './images/OurCustomers/banco-rci-logo.svg';
@@ -60,7 +57,7 @@ const OurCustomersTemp = () => {
             </SubtitleStyled>
           </HeaderStyled>
           <AsideStyled>
-            <ParagraphStyled>&lt;30+ CLIENTES&gt;</ParagraphStyled>
+            <ParagraphStyled>&lt;{t('alt.30Customers')}&gt;</ParagraphStyled>
           </AsideStyled>
           
         </ContentStyled>

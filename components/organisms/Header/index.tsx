@@ -16,13 +16,11 @@ import {
 } from "./styled";
 import React, { useEffect, useRef, useState } from 'react';
 import ScrollCircle from '../../atoms/ScrollCircle/index';
-//translation
 import { useTranslations } from 'next-intl'
 
 const Header = () => {
-   //translation
-   const t= useTranslations('header');
-   const images= useTranslations('images')
+  const t= useTranslations('header');
+  const tImages= useTranslations('images')
   const backgroundList = [
     {
       image: './images/PROTOTYPE.jpg',
@@ -237,8 +235,8 @@ const Header = () => {
         </SocialMediaStyled>
 
         <ArrowSpinnerContainerStyled className='anime'>
-          <ScrollCircle isWhiteImage={whiteCircle} blackImage={`${images('spinner')}`}
-           whiteImage={`${images('whiteSpinner')}`} alt={"Tem mais coisa aqui em baixo"}/>
+          <ScrollCircle isWhiteImage={whiteCircle} blackImage={`${tImages('spinner')}`}
+           whiteImage={`${tImages('whiteSpinner')}`} alt={`${t('alt.thereIsMore')}`}/>
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
     </HeaderStyled>

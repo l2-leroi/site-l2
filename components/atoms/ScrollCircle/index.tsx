@@ -10,7 +10,6 @@ interface imageProps {
 function ScrollCircle(props: imageProps) {
   return (
           <ArrowSpinnerComponentStyled>
-            {console.log(props.blackImage)}
             <ImageArrowSpinnerStyled
               src={props.isWhiteImage ?
                 props.whiteImage :

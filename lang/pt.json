@@ -11,7 +11,12 @@
     "moreAccess": "Mais Acesso", 
     "webApp": "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.", 
     "stopped": "Tô Parado", 
-    "providers": "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira."
+    "providers": "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira.",
+      "alt":{
+        "coverMemoriesUp" : "Capa Memories Up",
+        "coverMoreAccess" : "Capa Mais Acesso",
+        "coverStopped" : "Capa Tô Parado"
+      }
      },
 
   "footer":{
@@ -28,7 +33,10 @@
   "header":{
     "loveTo": "Love to",
     "followUs": "Siga nos",
-    "weCreate": "Criamos produtos digitais e experiências online que as pessoas adoram"
+    "weCreate": "Criamos produtos digitais e experiências online que as pessoas adoram",
+    "alt":{
+       "thereIsMore" : "Tem mais coisa aqui em baixo" 
+    }
     },
 
   "menu":{
@@ -46,7 +54,10 @@
 
   "customers":{
     "someCustomers":"ALGUNS DE NOSSOS CLIENTES",
-    "weArePround": "Temos orgulho de fazer parceria com empresas e startups com fome de inovação."
+    "weArePround": "Temos orgulho de fazer parceria com empresas e startups com fome de inovação.",
+      "alt": {
+        "30Customers" : "30+ CLIENTES"
+      }
   },
   "services":{
     "ourServices":"NOSSOS SERVIÇOS",
@@ -61,7 +72,20 @@
     "uxuiDesign":"UX / UI Design",
     "weDesign":"Projetamos um produto encantador e funcional para os usuários, aliado aos objetivos do seu negócio.",
     "consultingService":"Consultoria em TI",
-    "ourTechLead": "Nosso Tech Lead Maicon Martins irá aconselhar você sobre as melhores práticas que sua empresa pode usar na infraestrutura."
+    "ourTechLead": "Nosso Tech Lead Maicon Martins irá aconselhar você sobre as melhores práticas que sua empresa pode usar na infraestrutura.",
+    "alt": {
+      "thereIsMore" : "Tem mais coisa aqui em baixo"
+    },
+    "text": {
+      "seeOurServices" : "VEJA NOSSOS SERVIÇOS"
+    }
+    },
+    "outSourcing":{
+      "outsourcing":"Outsourcing Consultivo", 
+      "ideation":"Ideação",
+      "startupService":"Atendimento à Startup",
+      "consultingService":"Consultoria em TI",
+      "design" : "Design"
     }
   }
   

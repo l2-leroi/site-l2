@@ -18,12 +18,10 @@ import React from 'react';
 import LineAnimation from '../../atoms/LineAnimation';
 import OutSourcing from '../../atoms/OutSourcing';
 import { colors } from '../../../styles/colors';
-//translation
 import { useTranslations } from 'next-intl'
 
 const OurCustomers = () => {
-   //translation
-   const t= useTranslations('customers');
+  const t= useTranslations('customers');
   const ToParadoLogo = './images/OurCustomers/to-parado-logo.svg';
   const PhiLogo = './images/OurCustomers/phi-logo.svg';
   const BancoRCILogo = './images/OurCustomers/banco-rci-logo.svg';
@@ -185,7 +183,7 @@ const OurCustomers = () => {
                 </SubtitleStyled>
               </HeaderStyled>
               <AsideStyled>
-                <ParagraphStyled>&lt;30+ CLIENTES&gt;</ParagraphStyled>
+                <ParagraphStyled>&lt;{t('alt.30Customers')}&gt;</ParagraphStyled>
               </AsideStyled>
             </ContentStyled>
 

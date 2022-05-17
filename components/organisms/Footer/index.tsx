@@ -17,11 +17,9 @@ import ContactList from '../../molecules/ContactList/index'
 import React from 'react';
 import LineAnimation from '../../atoms/LineAnimation';
 import { colors } from '../../../styles/colors';
-//translation
 import { useTranslations } from 'next-intl'
 
 const Footer = () => {
-   //translation
   const t= useTranslations('footer');
   const contacts = [
     {

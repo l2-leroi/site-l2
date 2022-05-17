@@ -18,7 +18,6 @@ import {
 // import logo from '../../../assets/images/logoMenu.svg';
 // import x from '../../../assets/images/closeMenu.svg';
 import Scroll from '../../molecules/Scroll';
-//translation
 import { useTranslations } from 'next-intl'
 
 
@@ -28,8 +27,7 @@ export interface Props {
 }
 
 const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
-   //translation
-   const t= useTranslations('menu');
+  const t= useTranslations('menu');
   return (
     <Teste style={{ display: openMenu ? 'block' : 'none' }}>
       <Container>

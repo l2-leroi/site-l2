@@ -20,10 +20,11 @@ import { useTranslations } from 'next-intl'
 export default function OurServicesOnePage() {
   //translation
   const t= useTranslations('services');
+  const images= useTranslations('images')
   return (
     <SectionOnePageStyled id="services">
       <ScrollArrow className="SpinnerCircle2">
-        <ScrollCircle isWhiteImage={false} blackImage={"./images/Arrow-Spinner.svg"} whiteImage={"./images/Arrow-Spinner-White.svg"} alt={"Tem mais coisa aqui em baixo"}/>
+        <ScrollCircle isWhiteImage={false} blackImage={`${images('spinner')}`} whiteImage={`${images('whiteSpinner')}`} alt={`${t('alt.thereIsMore')}`}/>
       </ScrollArrow>
       
       <ContentOnePageStyled>

@@ -1,13 +1,12 @@
 import { AsideStyled, ContainerStyled, ContentStyled, DivStyled, ParagraphStyled, PhraseStyled, TitleStyled} from "./styled";
+import { useTranslations } from 'next-intl'
 import CaseList from "../../molecules/CaseList";
 import React from "react";
-//translation
-import { useTranslations } from 'next-intl'
-import { t } from "i18next";
+
+
 
 
 const Cases = () => {
-  //translation
   const t = useTranslations('cases');
 
   const memoriesUpHover = [
@@ -35,7 +34,7 @@ const Cases = () => {
       title: t('memoriesUp'), 
       info: t('weHelp'), 
       image: "./images/capa-memories-up.jpg", 
-      alt: "Capa Memories Up", 
+      alt: t('alt.coverMemoriesUp'), 
       link: "#1", 
       hover: memoriesUpHover 
     },
@@ -44,7 +43,7 @@ const Cases = () => {
       title: t('moreAccess'), 
       info: t('webApp'), 
       image: "./images/capa-mais-acesso.jpg", 
-      alt: "Capa Mais Acesso", 
+      alt: t('alt.coverMoreAccess'), 
       link: "#2", 
       hover: maisAcessoHover 
     },
@@ -53,7 +52,7 @@ const Cases = () => {
       title: t('stopped'), 
       info: t('providers'), 
       image: "./images/capa-to-parado.jpg", 
-      alt: "Capa Tô Parado", 
+      alt: t('alt.coverStopped'), 
       link: "#3", 
       hover: toParadoHover 
     },
