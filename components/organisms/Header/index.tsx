@@ -87,7 +87,7 @@ const Header = () => {
       // mobile
       if ((window.innerWidth < 500 || window.innerHeight <= 414) && index === backgroundList.length) {
         setCounterLoop(counterLoop + 1);
-        if (isTouchActive.current || splashPage) {
+        if (isTouchActive.current) {
           currentImage = backgroundList[0].image;
           currentText = backgroundList[0].text;
           setActualImage(currentImage);
@@ -148,6 +148,9 @@ const Header = () => {
       animeSplashPage();
       setSplashPage(true);
     }
+    else if ((window.innerWidth < 500 || window.innerHeight <= 414) && !isTouchActive.current && counterLoop >= 1 && splashPage) {
+      exitInterval(backgroundList);
+    }
   }, [isTouchActive.current, counterLoop])
 
   return (
@@ -191,6 +194,7 @@ const Header = () => {
             }}
             onTouchStart={() => {
               if (splashPage) {
+                isTouchActive.current = true;
                 setIsInitInterval(true);
               }
             }}
@@ -202,7 +206,7 @@ const Header = () => {
             }}
             onTouchEnd={() => {
               if (splashPage) {
-                exitInterval(backgroundList);
+                isTouchActive.current = false;
                 setIsInitInterval(false);
               }
             }}
