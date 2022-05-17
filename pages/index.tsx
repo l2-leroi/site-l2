@@ -4,6 +4,7 @@ import OurServicesOnePage from '../components/organisms/OurServicesOnePage';
 import OurCustomers from '../components/organisms/OurCustomers';
 import { useEffect } from 'react';
 
+
 const Home: NextPage = () => {
   // make page refresh on top
   useEffect(() => {
@@ -26,3 +27,9 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export function getStaticProps({ locale }) {
+  return{
+    props:{messages: require(`../lang/${ locale }.json`)}
+  };
+}
