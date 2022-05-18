@@ -162,6 +162,7 @@ export const LanguageItemStyled = styled.button`
     line-height: 140%;
     text-align: right;
     letter-spacing: -0.02em;
+    display: none;
 
     &.white {
         color: white;
