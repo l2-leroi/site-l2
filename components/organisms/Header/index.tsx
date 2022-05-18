@@ -84,7 +84,7 @@ const Header = () => {
       // mobile
       if ((window.innerWidth < 500 || window.innerHeight <= 414) && index === backgroundList.length) {
         setCounterLoop(counterLoop + 1);
-        if (isTouchActive.current || splashPage) {
+        if (isTouchActive.current) {
           currentImage = backgroundList[0].image;
           currentText = backgroundList[0].text;
           setActualImage(currentImage);
@@ -121,6 +121,7 @@ const Header = () => {
   },[isInitInterval])
 
   const exitInterval = (backgroundList) => {
+    
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
     const link = document.querySelectorAll(".link");
@@ -143,6 +144,9 @@ const Header = () => {
       exitInterval(backgroundList);
       animeSplashPage();
       setSplashPage(true);
+    }
+    else if ((window.innerWidth < 500 || window.innerHeight <= 414) && !isTouchActive.current && counterLoop >= 1 && splashPage) {
+      exitInterval(backgroundList);
     }
   }, [isTouchActive.current, counterLoop])
 
@@ -176,7 +180,7 @@ const Header = () => {
 
       <MainContentStyled>
         <MainTextStyled>
-          <SubtitleStyled>Love to</SubtitleStyled>
+        <SubtitleStyled>Love to</SubtitleStyled>
           <TitleStyled className={
             actualText.length > 7 ? 'textWrap title' : 'title'
           } 
@@ -187,6 +191,7 @@ const Header = () => {
             }}
             onTouchStart={() => {
               if (splashPage) {
+                isTouchActive.current = true;
                 setIsInitInterval(true);
               }
             }}
@@ -198,7 +203,7 @@ const Header = () => {
             }}
             onTouchEnd={() => {
               if (splashPage) {
-                exitInterval(backgroundList);
+                isTouchActive.current = false;
                 setIsInitInterval(false);
               }
             }}
@@ -207,8 +212,8 @@ const Header = () => {
           </TitleStyled>
 
           <TitleComplementStyled className='bannerText'>
-            Criamos produtos digitais e experiências online que as pessoas
-            adoram
+          Criamos produtos digitais e experiências online que as pessoas
+          adoram
           </TitleComplementStyled>
         </MainTextStyled>
 
@@ -226,7 +231,7 @@ const Header = () => {
         </SocialMediaStyled>
 
         <ArrowSpinnerContainerStyled className='anime'>
-          <ScrollCircle isWhiteImage={whiteCircle} blackImage={"./images/Arrow-Spinner.svg"} whiteImage={"./images/Arrow-Spinner-White.svg"} alt={"Tem mais coisa aqui em baixo"}/>
+        <ScrollCircle isWhiteImage={whiteCircle} blackImage={"./images/Arrow-Spinner.svg"} whiteImage={"./images/Arrow-Spinner-White.svg"} alt={"Tem mais coisa aqui em baixo"}/>
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
     </HeaderStyled>

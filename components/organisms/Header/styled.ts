@@ -12,6 +12,10 @@ export const HeaderStyled = styled.header`
     background-color: ${colors.gray}; 
     overflow: hidden;
 
+    @media (max-width: 800px) {
+        height: 93vh;
+    }
+
     @media (max-width: 500px), (max-height: 415px) {
         user-select: none;
     }
