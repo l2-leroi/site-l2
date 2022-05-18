@@ -169,6 +169,7 @@ export const SignContainerStyled = styled.div`
   color: ${colors.dark_gray};
   top: 120px;
   position: absolute;
+  display: none;
 `;
 
 export const CustomersContainer = styled.div`

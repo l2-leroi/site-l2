@@ -67,18 +67,30 @@ const OurCustomers = () => {
     let defaultTopInRotation = 150;
     let morePadding = 0;
 
-    if (window.outerWidth < 1000 && window.outerWidth > 800) {
+    if (window.innerWidth > 800 && window.innerWidth < 1000) {
       morePadding = 38;
       rotationMovement = purpleLineMovement / 10;
-    } else if (window.outerWidth <= 800 && window.outerWidth > 400) {
-      purpleLinePaddingTop = purpleLinePaddingTop / 2.3;
-      defaultTopInRotation = 80;
-    } else if (window.outerWidth <= 400) {
+    } else if (window.innerWidth <= 800 && window.innerWidth > 750){
+      purpleLinePaddingTop = purpleLinePaddingTop / 2.6;
       defaultTopInRotation = 90;
-      morePadding = 36;
-    } else if (window.outerWidth <= 330) {
+      morePadding = 38;
+    }
+    else if (window.innerWidth <= 750 && window.innerWidth > 600){
+      purpleLinePaddingTop = purpleLinePaddingTop / 2.1;
+      defaultTopInRotation = 100;
+      morePadding = 20;
+    } else if (window.innerWidth <= 600 && window.innerWidth > 400){
+      purpleLinePaddingTop = purpleLinePaddingTop / 2.35;
       defaultTopInRotation = 80;
-      purpleLinePaddingTop = purpleLinePaddingTop / 2.8;
+      morePadding = 5;
+
+    }else if (window.innerWidth <= 400 && window.innerWidth > 330) {
+      defaultTopInRotation = 110;
+      morePadding = 36;
+    } else if (window.innerWidth <= 330) {
+      defaultTopInRotation = 70;
+      morePadding = 20;
+      purpleLinePaddingTop = purpleLinePaddingTop / 2.9;
     }
 
     const arcTangent = Math.atan(
@@ -92,7 +104,7 @@ const OurCustomers = () => {
       inclination + purpleLineMovement / 50 < inclination + 5
     ) {
       if (window.innerWidth <= 800) {
-        const padding = topInRotation - purpleLinePaddingTop * 0.1;
+        const padding = topInRotation - purpleLinePaddingTop * 0.25;
         sign.style.top = `${padding}px`;
       } else {
         sign.style.top = `${topInRotation}px`;
@@ -127,7 +139,13 @@ const OurCustomers = () => {
       spinnerMaxHeight = spinner.getBoundingClientRect().height;
     }
 
-    const soma = blackLinePadding + hgroupHeight - spinnerMaxHeight * 0.5;
+    let soma = blackLinePadding + hgroupHeight - spinnerMaxHeight * 0.5;
+
+    if(window.innerWidth <= 500 && window.innerWidth > 350){
+      soma = blackLinePadding + (hgroupHeight * 0.2) - spinnerMaxHeight * 0.5;
+    }else if(window.innerWidth <= 350){
+      soma = blackLinePadding - spinnerMaxHeight * 0.5;
+    }
 
     if (blackLineMovimento >= 0 && spinnerTop <= soma) {
       if (!(blackLineMovimento * 0.8 > soma)) {
@@ -137,7 +155,7 @@ const OurCustomers = () => {
   };
 
   const spinnerBehindText = () => {
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth < 1164) {
       const content = document.querySelector(
         '.customersContent',
       ) as HTMLElement;
