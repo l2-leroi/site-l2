@@ -6,7 +6,6 @@ export const SectionOnePageStyled = styled.section`
   justify-content: center;
   margin-top: 80px;
   padding: 0px 152px;
-
   background-color: ${colors.gray};
 
   @media (max-width: 1366px) {
@@ -46,9 +45,14 @@ export const ContentOnePageStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 52px;
 
   @media (max-width: 900px) {
     padding: 40px 16px;
+  }
+
+  @media (max-width: 800px) {
+    margin-top: 80px;
   }
 `;
 
