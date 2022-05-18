@@ -12,7 +12,7 @@ export const HeaderStyled = styled.header`
     background-color: ${colors.gray}; 
     overflow: hidden;
 
-    @media (max-width: 500px) {
+    @media (max-width: 500px), (max-height: 415px) {
         user-select: none;
     }
     
@@ -56,10 +56,12 @@ export const TitleStyled = styled.h1`
 
     @media (max-width: 910px) {
         font-size: 120px;
+        margin-bottom: 20px;
     }
 
     @media (max-width: 800px) {
-        font-size: 64px;
+        font-size: 64px;   
+        margin-bottom: 13px;
     }
 
     @media (max-width: 500px) {
@@ -79,18 +81,23 @@ export const SubtitleStyled = styled.h2`
     line-height: 120%;
     text-align: center;
     letter-spacing: -0.02em;
-    margin: 0 auto;
+    margin: 0 auto -10px;
     ::selection {
         background: ${colors.purple};
         color: ${colors.gray};
     }
 
-    @media (min-width: 800px) and (max-width: 1220px) {
+    @media (min-width: 801px) and (max-width: 1220px) {
         font-size: 34px;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 910px) {
+        margin-bottom: 15px;
+    }
+
+    @media (orientation: portrait) and (max-width: 800px) {
         margin-top: 120px;
+        margin-bottom: 8px;
     } 
 `;
 
@@ -122,22 +129,21 @@ export const LanguageStyled = styled.div`
     position: absolute;
     right: 28px;
     
-    @media (max-width: 800px) {
-        top: 110px;
-        right: 24px;
-    }
-
-    @media (max-width: 500px) {
-        opacity: 0;
-        
-        &.animate {
-            opacity: 1;
-            transition: opacity .8s;
-        }
+    @media (orientation: portrait) and (max-width: 800px) {
         position: static;
         flex-direction: row;
         margin-top: 32px;
         gap: 16px;
+    }
+
+    @media (max-height: 415px), (max-width: 500px) {
+        opacity: 0;
+        gap: 9px;
+    }
+
+    &.animate {
+        opacity: 1;
+        transition: opacity .8s;
     }
 `;
 
@@ -174,12 +180,6 @@ export const LanguageItemStyled = styled.button`
         font-size: 10px;
 
         &:first-child {
-            margin-bottom: 32px;
-        }
-    }  
-
-    @media (max-width: 500px) {
-        &:first-child {
             margin-bottom: 0px;
         }
     }  
@@ -192,7 +192,7 @@ export const FooterContentStyled = styled.div`
     position: absolute;
     box-sizing: border-box;
 
-    @media (max-width: 800px) {
+    @media (orientation: portrait) and (max-width: 800px) {
         position: static;
         align-self: center;
         margin-bottom: 80px;
@@ -221,13 +221,13 @@ export const SocialMediaStyled = styled.div`
     position: relative;
     bottom: 30px;
 
-    @media (max-width: 500px) {
+    @media (max-height: 415px), (max-width: 500px) {
         opacity: 0;
+    }
 
-        &.animate {
-            opacity: 1;
-            transition: opacity .8s;
-        }
+    &.animate {
+        opacity: 1;
+        transition: opacity .8s;
     }
 `;
 
@@ -324,19 +324,23 @@ export const ArrowSpinnerContainerStyled = styled.div`
         right: 70px;
     }
 
-    @media (max-width: 800px) {
+    @media (max-height: 415px) and (max-width: 800px) {
+        bottom: -45px;
+    }
+
+    @media (orientation: portrait) and (max-width: 800px) {
         right: 0;
         bottom: -45px;
         justify-self: center;
         width: 100%;
     }
 
-    @media (max-width: 500px) {
+    @media (max-height: 415px), (max-width: 500px) {
         opacity: 0;
+    }
 
-        &.animate {
-            opacity: 1;
-            transition: opacity .8s;
-        }
+    &.animate {
+        opacity: 1;
+        transition: opacity .8s;
     }
 `;

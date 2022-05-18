@@ -66,7 +66,9 @@ export default function NavOnePage() {
       <NavStyled className="nav anime">
         <NavContentStyled className="navList">
           <NavItemStyled>
-            <ImageStyled className="navImage" src="./images/L2Code-Logo.svg" alt="L2 Code" />
+            <Link href="/">
+              <ImageStyled className="navImage" src="./images/L2Code-Logo.svg" alt="L2 Code" />
+            </Link>
           </NavItemStyled>
           
           <NavItemStyled>

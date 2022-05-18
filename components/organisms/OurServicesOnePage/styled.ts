@@ -27,7 +27,11 @@ export const ScrollArrow = styled.div`
     right: 70px;
   }
 
-  @media (max-width: 800px) {
+  @media (orientation: landscape) and (max-width: 800px) {
+    bottom: -45px;
+  }
+
+  @media (orientation: portrait) and (max-width: 800px) {
     bottom: -45px;
     right: 0.5px;
     width: 100%;
