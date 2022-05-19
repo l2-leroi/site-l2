@@ -303,7 +303,7 @@ export const ImageStyled = styled.img`
     height: 100vh;
     width: auto;
 
-    @media (min-width: 2560px) {
+    @media (min-width: 2000px) {
         width: 100%;
     }
 
