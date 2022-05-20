@@ -1,34 +1,32 @@
-import i18next from 'i18next';
-import 'twin.macro';
-import { getAllLanguageSlugs, getLanguage } from '../../i18n';
+import type { NextPage } from 'next';
+import Cases from '../../components/organisms/Cases';
+import OurServicesOnePage from '../../components/organisms/OurServicesOnePage';
+import OurCustomers from '../../components/organisms/OurCustomers';
+import { useEffect } from 'react';
 
-export default function LangIndex({ language }) {
-  const { t } = i18next;
+const Home: NextPage = () => {
+
+  // make page refresh on top
+  useEffect(() => {
+    if (history.scrollRestoration) {
+      history.scrollRestoration = 'manual';
+    } else {
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      }
+    }
+
+  });
+
 
   return (
     <>
-      <h2>index.tsx</h2>
-      <div>
-        <p>{t('language')}</p> : <p>{t(language)}</p> <p>({language})</p>
-      </div>
-      <a>/{language}/test</a>
+      <OurServicesOnePage />
+      <Cases />
+      <OurCustomers />
     </>
   );
-}
+};
 
-export async function getStaticPaths() {
-  const paths = getAllLanguageSlugs();
-  return {
-    paths,
-    fallback: false,
-  };
-}
+export default Home;
 
-export async function getStaticProps({ params }) {
-  const language = getLanguage(params.lang);
-  return {
-    props: {
-      language,
-    },
-  };
-}

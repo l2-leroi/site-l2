@@ -8,8 +8,13 @@ import {
 } from "./styled";
 import React, { useEffect } from 'react';
 import Link from 'next/link'
-
+///
+import i18next from 'i18next';
+import { getAllLanguageSlugs, getLanguage } from '../../../i18n';
+import 'twin.macro';
+///
 export default function NavOnePage() {
+  const { t } = i18next;
 
   const handleWhite = () =>{
     const observer = new MutationObserver(handleMutation);
@@ -74,7 +79,7 @@ export default function NavOnePage() {
           <NavItemStyled>
             <NavLinkListStyled>
             <Link href="#services">
-              <NavLinkStyled>Serviços</NavLinkStyled>
+              <NavLinkStyled>{t('helloWorld')}</NavLinkStyled>
             </Link>
             <Link href="#cases">
                 <NavLinkStyled>Cases</NavLinkStyled>
@@ -93,4 +98,21 @@ export default function NavOnePage() {
       </NavStyled>
     </>
   );
+}
+
+export async function getStaticPaths() {
+  const paths = getAllLanguageSlugs();
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const language = getLanguage(params.lang);
+  return {
+    props: {
+      language,
+    },
+  };
 }

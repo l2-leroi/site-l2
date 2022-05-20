@@ -1,28 +1,15 @@
-import type { NextPage } from 'next';
-import Cases from '../components/organisms/Cases';
-import OurServicesOnePage from '../components/organisms/OurServicesOnePage';
-import OurCustomers from '../components/organisms/OurCustomers';
-import { useEffect } from 'react';
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+import i18next from 'i18next'
 
-const Home: NextPage = () => {
-  // make page refresh on top
+export default function Home() {
+  const router = useRouter()
+
   useEffect(() => {
-    if (history.scrollRestoration) {
-      history.scrollRestoration = 'manual';
-    } else {
-      window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-      }
+    if (router.pathname === '/') {
+      router.push('/' + i18next.language.substring(0, 2))
     }
-  });
+  })
 
-  return (
-    <>
-      <OurServicesOnePage />
-      <Cases />
-      <OurCustomers />
-    </>
-  );
-};
-
-export default Home;
+  return null
+}

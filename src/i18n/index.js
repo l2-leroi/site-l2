@@ -53,8 +53,8 @@ const detection = {
   lookupFromSubdomainIndex: 0,
 
   // Cache user language on
-  caches: ['localStorage', 'cookie'],
-  excludeCacheFor: ['cimode'], // languages to not persist (cookie, localStorage)
+   caches: ['localStorage', 'cookie'],
+   excludeCacheFor: ['cimode'], // languages to not persist (cookie, localStorage)
 
   // Optional set cookie options, reference: MDN Set-Cookie docs, https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
   cookieOptions: { path: '/', sameSite: 'strict' },

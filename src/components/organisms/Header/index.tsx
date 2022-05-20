@@ -16,6 +16,7 @@ import {
 } from "./styled";
 import React, { useEffect, useRef, useState } from 'react';
 import ScrollCircle from '../../atoms/ScrollCircle/index';
+import Link from "next/link";
 
 const Header = () => {
   const backgroundList = [
@@ -218,8 +219,12 @@ const Header = () => {
         </MainTextStyled>
 
         <LanguageStyled className='anime'>
-          <LanguageItemStyled className="link">PT</LanguageItemStyled>
-          <LanguageItemStyled className="link">EN</LanguageItemStyled>
+          <LanguageItemStyled className="link">
+            <Link href='/pt' locale='pt'>PT</Link>
+          </LanguageItemStyled>
+          <LanguageItemStyled className="link">
+          <Link href='/en' locale='en'>EN</Link>
+          </LanguageItemStyled>
         </LanguageStyled>
       </MainContentStyled>
 
