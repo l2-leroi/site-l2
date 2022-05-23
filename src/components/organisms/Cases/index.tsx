@@ -1,8 +1,10 @@
 import { AsideStyled, ContainerStyled, ContentStyled, DivStyled, ParagraphStyled, PhraseStyled, TitleStyled} from "./styled";
 import CaseList from "../../molecules/CaseList";
 import React from "react";
+import i18next from 'i18next';
 
 const Cases = () => {
+  const  {t}  = i18next;
   const memoriesUpHover = [
     "./images/memories-up-1.jpg", 
     "./images/memories-up-2.jpg", 
@@ -26,27 +28,27 @@ const Cases = () => {
     { 
       number: "01", 
       title: "Memories Up", 
-      info: "Ajudamos start-up americana a definir seu negócio e lançamos seu produto.", 
+      info: t('cases.weHelped'), 
       image: "./images/capa-memories-up.jpg", 
-      alt: "Capa Memories Up", 
+      alt: t('cases.alt.coverMemoriesUp'), 
       link: "#1", 
       hover: memoriesUpHover 
     },
     {   
       number: "02", 
       title: "Mais Acesso", 
-      info: "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.", 
+      info: t('cases.webApp'), 
       image: "./images/capa-mais-acesso.jpg", 
-      alt: "Capa Mais Acesso", 
+      alt: t('cases.alt.coverMoreAccess'), 
       link: "#2", 
       hover: maisAcessoHover 
     },
     { 
       number: "03", 
       title: "Tô Parado", 
-      info: "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira.", 
+      info: t('cases.providers'), 
       image: "./images/capa-to-parado.jpg", 
-      alt: "Capa Tô Parado", 
+      alt: t('cases.alt.ImStopped'), 
       link: "#3", 
       hover: toParadoHover 
     },
@@ -56,12 +58,12 @@ const Cases = () => {
     <ContainerStyled id="cases">
       <ContentStyled>
         <DivStyled>
-          <TitleStyled>NOSSOS CASES SELECIONADOS</TitleStyled>
+          <TitleStyled>{t('cases.ourCases')}</TitleStyled>
           <AsideStyled>
             <ParagraphStyled>&lt;LA CREAM&gt;</ParagraphStyled>
           </AsideStyled>
         </DivStyled>
-        <PhraseStyled>Fazemos muito bem porque nos preocupamos com qualidade, estética e, acima de tudo, com resultados.</PhraseStyled>
+        <PhraseStyled>{t('cases.weDoWell')}</PhraseStyled>
         <CaseList cases={cases} />
       </ContentStyled>
     </ContainerStyled>

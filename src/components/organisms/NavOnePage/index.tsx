@@ -8,13 +8,10 @@ import {
 } from "./styled";
 import React, { useEffect } from 'react';
 import Link from 'next/link'
-///
 import i18next from 'i18next';
-import { getAllLanguageSlugs, getLanguage } from '../../../i18n';
-import 'twin.macro';
-///
+
 export default function NavOnePage() {
-  const { t } = i18next;
+  const  {t}  = i18next;
 
   const handleWhite = () =>{
     const observer = new MutationObserver(handleMutation);
@@ -79,16 +76,16 @@ export default function NavOnePage() {
           <NavItemStyled>
             <NavLinkListStyled>
             <Link href="#services">
-              <NavLinkStyled>{t('helloWorld')}</NavLinkStyled>
+              <NavLinkStyled>{t('nav.services')}</NavLinkStyled>
             </Link>
             <Link href="#cases">
-                <NavLinkStyled>Cases</NavLinkStyled>
+                <NavLinkStyled>{t('nav.cases')}</NavLinkStyled>
             </Link>
             <Link href="#customers">
-                <NavLinkStyled>Clientes</NavLinkStyled>
+                <NavLinkStyled>{t('nav.customers')}</NavLinkStyled>
             </Link>
             <Link href="#contact">
-                <NavLinkStyled>Contato</NavLinkStyled>
+                <NavLinkStyled>{t('nav.contact')}</NavLinkStyled>
             </Link>
           </NavLinkListStyled>
             
@@ -100,19 +97,3 @@ export default function NavOnePage() {
   );
 }
 
-export async function getStaticPaths() {
-  const paths = getAllLanguageSlugs();
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
-  const language = getLanguage(params.lang);
-  return {
-    props: {
-      language,
-    },
-  };
-}

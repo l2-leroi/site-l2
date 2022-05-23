@@ -1,8 +1,88 @@
 {
-  "site": "Site",
-  "backTo": "Back to",
-  "helloWorld": "Hello world!",
-  "language": "Language",
-  "pt": "Portuguese",
-  "en": "English"
-}
+  "images":{
+    "spinner": "./images/Arrow-Spinner-English.svg",
+    "whiteSpinner": "./images/Arrow-Spinner-English-White.svg"
+  },
+  "cases":{
+    "ourCases": "OUR SELECTED CASES",
+    "weDoWell": "We do a great job because we care about quality, aesthetics and, most of all, results.",
+    "weHelped": "We helped this American start-up to define its business and released its product.", 
+    "webApp": "A Webapp that facilitates getting student loans for young people all over Brazil.", 
+    "providers": "Service providers succeed in live with this app we created for a Brazilian start-up.",
+      "alt":{
+        "coverMemoriesUp" : "Memories Up Cover",
+        "coverMoreAccess" : "Mais Acesso Cover",
+        "coverImStopped" : "Tô Parado Cover"
+    }
+     },
+
+  "footer":{
+    "letsTalk": "LET'S TALK",
+    "ourWhatsapp": "our whatsapp",
+    "ourEmail": "our e-mail",
+    "bePart": "be part of the team",
+    "weEmbrace": "We embrance the talents from the world.",
+    "weWork": "We work 100% remotely.",
+    "madeWith": "Made with",
+    "copyright": "Copyright © All rights reserved"
+    },
+
+  "header":{
+    "loveTo": "Love to",
+    "followUs": "Follow us",
+    "weCreate": "We create digital products and online experiences that people love",
+    "alt":{
+       "thereIsMore" : "There's more down here" 
+    }   
+    },
+
+  "menu":{
+    "ourWhatsapp": "our whatsapp",
+    "ourEmail": "our e-mail",
+    "bePart": "be part of the team"
+    },
+    
+  "nav":{
+    "services":"Services",
+    "cases":"Cases",
+    "customers":"Clients",
+    "contact":"Contact"
+    },
+
+  "customers":{
+    "someCustomers":"SOME OF OUR COSTUMERS",
+    "weAreProud": "We are proud to partner with companies and start-ups that are hungry for innovation.",
+    "alt": {
+      "30Customers" : "30+ CUSTOMERS"
+    }
+  },
+  "services":{
+    "ourServices":"OUR SERVICES",
+    "weImprove": "We improve the experiece of the products and services of our costumers, focusing on results for their businesses.",
+    "followUs": "Follow us",
+    "outsourcing":"Outsourcing Advisory",
+    "increase": "Increase your productive capacity ● Having our team with you, you add to your team professionals in love with work who have a divesity of skills.",
+    "startupService":"Start-up Service",
+    "uxuiTeam":"Our UX/UI and development team will help you to project and build your MVP from the scratch, “ensuring” a fast and profitable delivery.",
+    "ideation":"Ideation",
+    "coCreation" : "Co-creation with our multidisciplinary team in the design of your product and business strategies.",
+    "uxuiDesign":"UX / UI Design",
+    "weDesign":"We design a gorgeous and functional products for the users, allied with the goals of your business.",
+    "consultingService":"IT Consulting Service",
+    "ourTechLead": "Our Teach Lead Maicon Martins will advise you about the best practices that your company can use in your infrastructure.",
+    "alt":{
+       "thereIsMore" : "There's more down here" 
+    },
+    "text": {
+      "seeOurServices" : "SEE OUR SERVICES"
+    }   
+    },
+    "outSourcing":{
+      "outsourcing":"Outsourcing Advisory", 
+      "ideation":"Ideation",
+      "startupService":"Start-up Service",
+      "consultingService":"IT Consulting Service",
+      "design" : "Design"
+    }
+  }
+  

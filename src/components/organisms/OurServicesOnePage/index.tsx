@@ -13,63 +13,59 @@ import {
   ImageStyled,
   ScrollArrow,
 } from "./styled";
-
+import i18next from 'i18next';
 export default function OurServicesOnePage() {
+  const {t} = i18next
   return (
     <SectionOnePageStyled id="services">
       <ScrollArrow className="SpinnerCircle2">
-        <ScrollCircle isWhiteImage={false} blackImage={"./images/Arrow-Spinner.svg"} whiteImage={"./images/Arrow-Spinner-White.svg"} alt={"Tem mais coisa aqui em baixo"}/>
+        <ScrollCircle isWhiteImage={false} 
+        blackImage={`${t('images.spinner')}`} 
+        whiteImage={`${t('images.whiteSpinner')}`} 
+        alt={`${t('services.alt.thereIsMore')}`}/>
       </ScrollArrow>
       
       <ContentOnePageStyled>
         <DivServicesStyled>
-          <HeadingStyled>NOSSOS SERVIÇOS</HeadingStyled>
+          <HeadingStyled>{t('services.ourServices')}</HeadingStyled>
           <ParagraphServicesStyled>
-            Melhoramos a experiência dos produtos e serviços de nossos clientes,
-            com foco em resultados para seus negócio.
+            {t('services.weImprove')}
           </ParagraphServicesStyled>
         </DivServicesStyled>
 
         <DivServiceItemsStyled>
             <DivItemStyled>
-              <HeadingItemStyled>Outsourcing Consultivo</HeadingItemStyled>
+              <HeadingItemStyled>{t('services.outsourcing')}</HeadingItemStyled>
               <ParagraphItemStyled>
-                Aumente sua capacidade produtiva ● Com acesso a nossa equipe, você
-                agrega ao seu time profissionais apaixonados com competências
-                diversas.
+                {t('services.increase')}
               </ParagraphItemStyled>
             </DivItemStyled>
           
             <DivItemStyled>
-              <HeadingItemStyled>Atendimento à Startup</HeadingItemStyled>
+              <HeadingItemStyled>{t('services.startupService')}</HeadingItemStyled>
               <ParagraphItemStyled>
-                Nossa equipe de UX/UI e desenvolvimento irá projetar e construir
-                seu MVP a partir do zero, “garantindo” uma entrega rápida e
-                rentável.
+                {t('services.uxuiTeam')}
               </ParagraphItemStyled>
             </DivItemStyled>
 
             <DivItemStyled>
-              <HeadingItemStyled>Ideação</HeadingItemStyled>
+              <HeadingItemStyled>{t('services.ideation')}</HeadingItemStyled>
               <ParagraphItemStyled>
-                Co-criação com nosso time multidisciplinar na concepção do seu
-                produto e estratégias de negócio.
+                {t('services.coCreation')}
               </ParagraphItemStyled>
             </DivItemStyled>
 
             <DivItemStyled>
-              <HeadingItemStyled>UX / UI Design</HeadingItemStyled>
+              <HeadingItemStyled>{t('services.uxuiDesign')}</HeadingItemStyled>
               <ParagraphItemStyled>
-                Projetamos um produto encantador e funcional para os usuários,
-                aliado aos objetivos do seu negócio.
+                {t('services.weDesign')}
               </ParagraphItemStyled>
             </DivItemStyled>
 
             <DivItemStyled>
-              <HeadingItemStyled>Consultoria em TI</HeadingItemStyled>
+              <HeadingItemStyled>{t('services.consultingService')}</HeadingItemStyled>
               <ParagraphItemStyled className='last-paragraph'>
-                Nosso Tech Lead Maicon Martins irá aconselhar você sobre as
-                melhores práticas que sua empresa pode usar na infraestrutura.
+                {t('services.ourTechLead')}
               </ParagraphItemStyled>
             </DivItemStyled>
 

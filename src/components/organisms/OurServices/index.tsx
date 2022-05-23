@@ -10,8 +10,9 @@ import OutSourcing from '../../atoms/OutSourcing';
 import ScrollCircle from "../../atoms/ScrollCircle";
 import Button from '../../atoms/Button';
 import { colors } from '../../../styles/colors';
-
+import i18next from 'i18next';
 export default function OurServices() {
+  const {t} = i18next
   return (
     <SectionStyled>
       <ScrollArrow className="SpinnerCircle2">
@@ -19,12 +20,11 @@ export default function OurServices() {
       </ScrollArrow>
 
       <DivOurServicesStyled>
-        <HeadingStyled>NOSSOS SERVIÇOS</HeadingStyled>
+        <HeadingStyled>{t('services.ourServices')}</HeadingStyled>
         <ParagraphServicesStyled>
-          Melhoramos a experiência dos produtos e serviços de nossos clientes,
-          com foco em resultados para seus negócio.
+          {t('services.weImprove')}
         </ParagraphServicesStyled>
-        <Button linkBtn="#" backgroundColor={`${colors.green}`} text="VEJA NOSSOS SERVIÇOS"></Button>  
+        <Button linkBtn="#" backgroundColor={`${colors.green}`} text={`${t('services.text.seeOurServices')}`}></Button>  
       </DivOurServicesStyled>
       <OutSourcing /> 
     </SectionStyled>

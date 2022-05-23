@@ -17,8 +17,9 @@ import {
 import React, { useEffect, useRef, useState } from 'react';
 import ScrollCircle from '../../atoms/ScrollCircle/index';
 import Link from "next/link";
-
+import i18next from "i18next";
 const Header = () => {
+  const {t} = i18next
   const backgroundList = [
     {
       image: './images/PROTOTYPE.jpg',
@@ -213,30 +214,32 @@ const Header = () => {
           </TitleStyled>
 
           <TitleComplementStyled className='bannerText'>
-          Criamos produtos digitais e experiências online que as pessoas
-          adoram
+          {t('header.weCreate')}
           </TitleComplementStyled>
         </MainTextStyled>
 
         <LanguageStyled className='anime'>
           <LanguageItemStyled className="link">
-            <Link href='/pt' locale='pt'>PT</Link>
+            <Link href='/pt' locale='pt' scroll={false}>PT</Link>
           </LanguageItemStyled>
           <LanguageItemStyled className="link">
-          <Link href='/en' locale='en'>EN</Link>
+          <Link href='/en' locale='en' scroll={false}>EN</Link>
           </LanguageItemStyled>
         </LanguageStyled>
       </MainContentStyled>
 
       <FooterContentStyled>
         <SocialMediaStyled className='anime'>
-          <SocialMediaTitleStyled>Siga-nos</SocialMediaTitleStyled>
+          <SocialMediaTitleStyled>{t('header.followUs')}</SocialMediaTitleStyled>
           <SocialMediaItemStyled className="link" href="https://www.linkedin.com/company/l2code-dev/" target="_blank">In</SocialMediaItemStyled>
           <SocialMediaItemStyled className="link" href="https://www.instagram.com/l2code.com.br/" target="_blank">IG</SocialMediaItemStyled>
         </SocialMediaStyled>
 
         <ArrowSpinnerContainerStyled className='anime'>
-        <ScrollCircle isWhiteImage={whiteCircle} blackImage={"./images/Arrow-Spinner.svg"} whiteImage={"./images/Arrow-Spinner-White.svg"} alt={"Tem mais coisa aqui em baixo"}/>
+        <ScrollCircle isWhiteImage={whiteCircle} 
+        blackImage={`${t('images.spinner')}`} 
+        whiteImage={`${t('images.whiteSpinner')}`} 
+        alt={"Tem mais coisa aqui em baixo"}/>
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
     </HeaderStyled>
