@@ -72,7 +72,7 @@ export const TitleStyled = styled.h2`
   font-size: 6.4rem;
   line-height: 57.6px;
   font-weight: 800;
-  width: 712px;
+  width: 686px; 
   letter-spacing: -0.04em;
 
   ::selection {
