@@ -1,7 +1,10 @@
 {
   "images":{
     "spinner": "./images/Arrow-Spinner.svg",
-    "whiteSpinner": "./images/Arrow-Spinner-White.svg"
+    "whiteSpinner": "./images/Arrow-Spinner-White.svg",
+    "alt":{
+       "thereIsMore" : "Tem mais coisa aqui em baixo" 
+    }
   },
   "cases":{
     "ourCases": "NOSSOS CASES SELECIONADOS",
@@ -30,10 +33,7 @@
   "header":{
     "loveTo": "Love to",
     "followUs": "Siga nos",
-    "weCreate": "Criamos produtos digitais e experiências online que as pessoas adoram",
-    "alt":{
-       "thereIsMore" : "Tem mais coisa aqui em baixo" 
-    }
+    "weCreate": "Criamos produtos digitais e experiências online que as pessoas adoram"
     },
 
   "menu":{
@@ -70,9 +70,6 @@
     "weDesign":"Projetamos um produto encantador e funcional para os usuários, aliado aos objetivos do seu negócio.",
     "consultingService":"Consultoria em TI",
     "ourTechLead": "Nosso Tech Lead Maicon Martins irá aconselhar você sobre as melhores práticas que sua empresa pode usar na infraestrutura.",
-    "alt": {
-      "thereIsMore" : "Tem mais coisa aqui em baixo"
-    },
     "text": {
       "seeOurServices" : "VEJA NOSSOS SERVIÇOS"
     }

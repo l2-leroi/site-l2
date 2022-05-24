@@ -239,7 +239,7 @@ const Header = () => {
         <ScrollCircle isWhiteImage={whiteCircle} 
         blackImage={`${t('images.spinner')}`} 
         whiteImage={`${t('images.whiteSpinner')}`} 
-        alt={"Tem mais coisa aqui em baixo"}/>
+        alt={`${t('images.alt.thereIsMore')}`}/>
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
     </HeaderStyled>

@@ -22,7 +22,7 @@ export default function OurServicesOnePage() {
         <ScrollCircle isWhiteImage={false} 
         blackImage={`${t('images.spinner')}`} 
         whiteImage={`${t('images.whiteSpinner')}`} 
-        alt={`${t('services.alt.thereIsMore')}`}/>
+        alt={`${t('images.alt.thereIsMore')}`}/>
       </ScrollArrow>
       
       <ContentOnePageStyled>

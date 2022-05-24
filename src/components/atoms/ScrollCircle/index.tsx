@@ -1,5 +1,5 @@
 import {ArrowSpinnerComponentStyled, ImageArrowSpinnerStyled} from './styled';
-
+import i18next from "i18next";
 interface imageProps {
   isWhiteImage: boolean;
   blackImage: string;
@@ -8,6 +8,7 @@ interface imageProps {
 }
 
 function ScrollCircle(props: imageProps) {
+  const { t } = i18next
   return (
           <ArrowSpinnerComponentStyled>
             <ImageArrowSpinnerStyled
@@ -16,7 +17,7 @@ function ScrollCircle(props: imageProps) {
                 props.blackImage
               
               }
-              alt="Tem mais coisa aqui em baixo"
+              alt= {t('images.alt.thereIsMore')}
               className='animate'
             />
             <ImageArrowSpinnerStyled
