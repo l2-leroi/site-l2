@@ -177,8 +177,10 @@ export const LanguageItemStyled = styled.button`
         margin-bottom: 8px;
     }
 
-    &:hover {
-        color: ${colors.green};
+    @media (min-width: 500px) {
+        &:hover {
+            color: ${colors.green};
+        }
     }
 
     @media (max-width: 800px) {
