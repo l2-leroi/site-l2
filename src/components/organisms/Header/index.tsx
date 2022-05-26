@@ -53,6 +53,7 @@ const Header = () => {
   const [whiteCircle, setWhiteCircle] = useState(false);
   let currentText = '';
   const [actualText, setActualText] = useState('CODE');
+  const [viewHeight, setViewHeight] = useState(100);
 
   const animeSplashPage = () => {
     const target = document.querySelectorAll<HTMLElement>('.anime');
@@ -63,6 +64,11 @@ const Header = () => {
       document.body.style.overflow = null;
     }
   }
+
+  useEffect(() => {
+    const height = window.innerHeight;
+    setViewHeight(height);
+  })
 
   useEffect(() => {
     if (window.innerWidth < 500 || window.innerHeight <= 414) {
@@ -154,6 +160,7 @@ const Header = () => {
 
   return (
     <HeaderStyled
+      height={viewHeight}
       className='header'
       onTouchStart={() => {
         if (!splashPage && !isFirstTouch) {
