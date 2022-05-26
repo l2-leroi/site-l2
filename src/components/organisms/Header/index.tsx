@@ -230,7 +230,7 @@ const Header = () => {
             <Link href='/pt' locale='pt' scroll={false}>PT</Link>
           </LanguageItemStyled>
           <LanguageItemStyled className="link">
-          <Link href='/en' locale='en' scroll={false}>EN</Link>
+            <Link href='/en' locale='en' scroll={false}>EN</Link>
           </LanguageItemStyled>
         </LanguageStyled>
       </MainContentStyled>

@@ -167,9 +167,11 @@ export const LanguageItemStyled = styled.button`
         color: white;
     }
 
-    ::selection {
-        background: ${colors.purple};
-        color: ${colors.gray};
+    a{
+        ::selection {
+            background: ${colors.purple};
+            color: ${colors.gray};
+        }
     }
 
     &:first-child {
@@ -321,6 +323,7 @@ export const ArrowSpinnerContainerStyled = styled.div`
     position: absolute;
     right: 148px;
     bottom: -69.5px;
+    user-select: none;
 
     @media (min-width: 2560px) {
         right: 703px;

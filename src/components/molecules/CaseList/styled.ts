@@ -195,6 +195,7 @@ export const ImageStyled = styled.img`
   height: auto;
   border-radius: 8px;
   position: absolute;
+  user-select: none;
   
   &.imageBlock {
     display: block;
