@@ -19,9 +19,11 @@ const Home: NextPage = () => {
 
   return (
     <>
+
       <OurServicesOnePage />
       <Cases />
       <OurCustomers />
+      
     </>
   );
 };
