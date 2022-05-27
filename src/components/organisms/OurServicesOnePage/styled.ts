@@ -17,6 +17,7 @@ export const ScrollArrow = styled.div`
   position: absolute;
   right: 148px;
   bottom: -70px;
+  user-select: none;
 
   @media (min-width: 2560px) {
     right: 703px;
@@ -221,6 +222,8 @@ export const ParagraphItemStyled = styled.p`
 `;
 
 export const ImageStyled = styled.img`
+  user-select: none;
+
   @media (max-width: 800px) {
     max-width: 164px;
   }
