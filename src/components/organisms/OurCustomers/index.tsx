@@ -1,14 +1,11 @@
 import {
   OurCustomersStyled,
   HeaderStyled,
-  SubtitleStyled,
-  TitleStyled,
   ContentStyled,
   SpinningIconStyled,
   BlackLineStyled,
   SignContainerStyled,
   AsideStyled,
-  ParagraphStyled,
   CustomersContainer,
   BlackBg,
 } from './styled';
@@ -19,6 +16,7 @@ import LineAnimation from '../../atoms/LineAnimation';
 import OutSourcing from '../../atoms/OutSourcing';
 import { colors } from '../../../styles/colors';
 import i18next from 'i18next';
+import { Typography } from '../../../styles/typography';
 const OurCustomers = () => {
   const {t} = i18next
   const ToParadoLogo = './images/OurCustomers/to-parado-logo.svg';
@@ -192,15 +190,17 @@ const OurCustomers = () => {
 
         <LineAnimation classe="blackLine" backgroundColor={colors.black}>
           <BlackLineStyled className="customersContent">
+
             <ContentStyled>
+
               <HeaderStyled className="hgroup">
-                <TitleStyled>{t('customers.someCustomers')}</TitleStyled>
-                <SubtitleStyled>
-                  {t('customers.weAreProud')}
-                </SubtitleStyled>
+                <Typography color='gray' tag='h2' size="medium" fontFamily="font1" lineHeight="line90" fontWeight="weight3">{t('customers.someCustomers')}</Typography>
+
+                <Typography color='gray' tag="p">{t('customers.weAreProud')}</Typography>
               </HeaderStyled>
+
               <AsideStyled>
-                <ParagraphStyled>&lt;{t('customers.alt.30Customers')}&gt;</ParagraphStyled>
+                <Typography color='gray' tag='p' size="xxsmall" letterSpacing="space1">&lt;{t('customers.alt.30Customers')}&gt;</Typography>
               </AsideStyled>
             </ContentStyled>
 

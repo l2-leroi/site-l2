@@ -48,7 +48,11 @@ export const CaseStyled = styled.article`
   }
   
   p{
-    padding: 0 0 3.2rem 10px;
+    &:first-child{
+      padding-left:10px;
+    }
+    max-width: 345px;
+    padding-bottom: 3.2rem;
     ::selection {
       background: ${colors.purple};
       color: ${colors.gray};

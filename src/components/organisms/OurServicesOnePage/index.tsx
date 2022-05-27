@@ -25,46 +25,46 @@ export default function OurServicesOnePage() {
 
       <ContentOnePageStyled>
         <DivServicesStyled>
-          <Typography tag="h2" size='medium' fontWeight='weight3' fontFamily='font1' lineHeight='line90'>
+          <Typography color='gray' tag="h2" size='medium' fontWeight='weight3' fontFamily='font1' lineHeight='line90'>
             {t('services.ourServices')}
           </Typography>
-          <Typography tag="p">{t('services.weImprove')}</Typography>
+          <Typography color='gray' tag="p">{t('services.weImprove')}</Typography>
         </DivServicesStyled>
 
         <DivServiceItemsStyled>
           <DivItemStyled>
-            <Typography tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
+            <Typography color='gray' tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
               {t('services.outsourcing')}</Typography>
 
-            <Typography tag='p'> {t('services.increase')}</Typography>
+            <Typography color='dark_gray' tag='p'> {t('services.increase')}</Typography>
           </DivItemStyled>
 
           <DivItemStyled>
-            <Typography tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
+            <Typography color='gray' tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
             {t('services.startupService')}</Typography>
 
-            <Typography tag='p'>{t('services.uxuiTeam')}</Typography>
+            <Typography color='dark_gray' tag='p'>{t('services.uxuiTeam')}</Typography>
           </DivItemStyled>
 
           <DivItemStyled>
-            <Typography tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
+            <Typography color='gray' tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
             {t('services.ideation')}</Typography>
 
-            <Typography tag='p'>{t('services.coCreation')}</Typography>
+            <Typography color='dark_gray' tag='p'>{t('services.coCreation')}</Typography>
           </DivItemStyled>
 
           <DivItemStyled>
-            <Typography tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
+            <Typography color='gray' tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
             {t('services.uxuiDesign')}</Typography>
 
-            <Typography tag='p'>{t('services.weDesign')}</Typography>
+            <Typography color='dark_gray' tag='p'>{t('services.weDesign')}</Typography>
           </DivItemStyled>
 
           <DivItemStyled>
-            <Typography tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
+            <Typography color='gray' tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
             {t('services.consultingService')}</Typography>
 
-            <Typography tag='p'>{t('services.ourTechLead')}</Typography>
+            <Typography color='dark_gray' tag='p'>{t('services.ourTechLead')}</Typography>
           </DivItemStyled>
 
 

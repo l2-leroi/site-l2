@@ -114,7 +114,7 @@ function CaseList(props: CaseProps) {
 
                 <Typography tag='h3' fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1'>{itemCase.title}</Typography>
             
-                <Typography tag="p" > {itemCase.info}</Typography>
+                <Typography tag="p">{itemCase.info}</Typography>
 
 
                 <LinkStyled className="images"

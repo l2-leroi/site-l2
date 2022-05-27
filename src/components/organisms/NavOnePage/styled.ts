@@ -51,6 +51,11 @@ export const NavItemStyled = styled.li`
     &.white{
       color: white;
     }
+    @media (max-width: 500px) {
+      font-size: 10px;
+      line-height: 140%;
+      text-align: right;
+    }
   }
   ::selection {
     background: ${colors.purple};
@@ -70,11 +75,7 @@ export const NavItemStyled = styled.li`
     }
   }
 
-  @media (max-width: 500px) {
-    font-size: 10px;
-    line-height: 14px;
-    text-align: right;
-  }
+
 
   img {
     @media (max-width: 500px) {

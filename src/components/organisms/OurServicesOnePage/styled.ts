@@ -69,7 +69,6 @@ export const DivServicesStyled = styled.div`
       background: ${colors.purple};
     }
     max-width: 464px;
-    color: ${colors.gray};
     margin: 0;
   
     @media (max-width: 800px) {
@@ -78,11 +77,10 @@ export const DivServicesStyled = styled.div`
   
   }
   p{
+    max-width: 464px;
     ::selection {
       background: ${colors.purple};
     }
-    max-width: 464px;
-  
     color: ${colors.gray};
     padding-top: 24px;
     margin: 0;
@@ -152,9 +150,9 @@ export const DivItemStyled = styled.div`
   h3{
     ::selection {
       background: ${colors.purple};
-      color: ${colors.gray};
+
     }
-    color: ${colors.gray};
+
     padding-bottom: 24px;
     margin: 0;
   
@@ -169,7 +167,7 @@ export const DivItemStyled = styled.div`
   p{
     ::selection {
       background: ${colors.purple};
-      color: ${colors.gray};
+
     }
     color: ${colors.dark_gray};
     margin-top: 0;
