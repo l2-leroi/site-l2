@@ -90,15 +90,6 @@ export const SliderStyled = styled(Slider)`
       }
     } 
 
-    @media (min-width: 600px) and (max-width: 800px) {
-      &:nth-child(2) {
-        margin-top: 80px;
-      } 
-      &:nth-child(3) {
-        margin-top: 160px;
-      }
-    } 
-
     &:first-of-type {
       margin-left: 0px;
     }
