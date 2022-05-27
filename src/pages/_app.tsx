@@ -12,7 +12,6 @@ import { defaultLanguage, languages } from '../i18n'
 import { useRouter } from 'next/router'
 import Head from 'next/head';
 
-
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
   const { asPath, query } = router

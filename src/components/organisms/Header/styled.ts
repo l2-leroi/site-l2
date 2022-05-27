@@ -1,8 +1,12 @@
 import styled  from 'styled-components';
 import { colors } from '../../../styles/colors';
 
-export const HeaderStyled = styled.header`
-    height: 100vh;
+interface HeaderProps {
+    height: number;
+}
+
+export const HeaderStyled = styled.header<HeaderProps>`
+    height: ${props => `${props.height}px`};
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -11,10 +15,6 @@ export const HeaderStyled = styled.header`
     padding: 0px 28px;
     background-color: ${colors.gray}; 
     overflow: hidden;
-
-    @media (max-width: 800px) {
-        height: 93vh;
-    }
 
     @media (max-width: 500px), (max-height: 415px) {
         user-select: none;
@@ -133,7 +133,7 @@ export const LanguageStyled = styled.div`
     position: absolute;
     right: 28px;
     
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media (min-height: 416px) and (max-width: 800px) {
         position: static;
         flex-direction: row;
         margin-top: 32px;
@@ -162,23 +162,26 @@ export const LanguageItemStyled = styled.button`
     line-height: 140%;
     text-align: right;
     letter-spacing: -0.02em;
-    //display: none;
 
     &.white {
         color: white;
     }
 
-    ::selection {
-        background: ${colors.purple};
-        color: ${colors.gray};
+    a{
+        ::selection {
+            background: ${colors.purple};
+            color: ${colors.gray};
+        }
     }
 
     &:first-child {
         margin-bottom: 8px;
     }
 
-    &:hover {
-        color: ${colors.green};
+    @media (min-width: 500px) {
+        &:hover {
+            color: ${colors.green};
+        }
     }
 
     @media (max-width: 800px) {
@@ -319,7 +322,8 @@ export const ImageStyled = styled.img`
 export const ArrowSpinnerContainerStyled = styled.div`
     position: absolute;
     right: 148px;
-    bottom: -70px;
+    bottom: -69.5px;
+    user-select: none;
 
     @media (min-width: 2560px) {
         right: 703px;
@@ -327,6 +331,15 @@ export const ArrowSpinnerContainerStyled = styled.div`
 
     @media (max-width: 1365px) {
         right: 70px;
+        bottom: -70px;
+    }
+
+    @media (max-width: 800px) {
+        bottom: -44.5px;
+    }
+
+    @media (max-height: 600px) and (max-width: 800px) {
+        bottom: -44.6px;
     }
 
     @media (max-height: 415px) and (max-width: 800px) {
@@ -334,10 +347,14 @@ export const ArrowSpinnerContainerStyled = styled.div`
     }
 
     @media (orientation: portrait) and (max-width: 800px) {
-        right: 0;
-        bottom: -45px;
+        right: 0.5px;
+        bottom: -44.6px;
         justify-self: center;
         width: 100%;
+    }
+
+    @media (orientation: portrait) and (max-width: 500px) {
+        bottom: -45.1px;
     }
 
     @media (max-height: 415px), (max-width: 500px) {
