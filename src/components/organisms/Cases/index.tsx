@@ -48,7 +48,7 @@ const Cases = () => {
       title: "Tô Parado", 
       info: t('cases.providers'), 
       image: "./images/capa-to-parado.jpg", 
-      alt: t('cases.alt.ImStopped'), 
+      alt: t('cases.alt.coverImStopped'), 
       link: "#3", 
       hover: toParadoHover 
     },
