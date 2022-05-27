@@ -1,7 +1,8 @@
 import { NextPage } from "next";
 import { useEffect } from "react";
+import HeaderMemoriesUp from "../../../components/organisms/HeaderMemoriesUp";
 
-const Case01: NextPage = () => {
+const MemoriesUp: NextPage = () => {
 
     useEffect(() => {
         if (history.scrollRestoration) {
@@ -12,13 +13,17 @@ const Case01: NextPage = () => {
           }
         }
       });
+
         return (
-            <div>
-                <h1>Case 01</h1>
-            </div>
+            <>
+                <HeaderMemoriesUp />
+                {/* <div className="case-01">
+                    <h1>Case 01</h1>
+                </div> */}
+            </>
         );
     };
 
 
 
-    export default Case01;
+    export default MemoriesUp;

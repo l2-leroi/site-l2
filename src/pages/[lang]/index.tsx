@@ -3,6 +3,9 @@ import Cases from '../../components/organisms/Cases';
 import OurServicesOnePage from '../../components/organisms/OurServicesOnePage';
 import OurCustomers from '../../components/organisms/OurCustomers';
 import { useEffect } from 'react';
+import Footer from '../../components/organisms/Footer';
+import Header from '../../components/organisms/Header/index';
+import Nav from '../../components/organisms/NavOnePage/index';
 
 const Home: NextPage = () => {
 
@@ -19,9 +22,12 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Nav />
+      <Header />
       <OurServicesOnePage />
       <Cases />
       <OurCustomers />
+      <Footer />
     </>
   );
 };
