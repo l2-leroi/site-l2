@@ -2,7 +2,6 @@ import { GlobalStyle } from '../styles/global';
 import '../styles/fonts.css';
 import type { AppProps } from 'next/app';
 import Footer from '../components/organisms/Footer/index';
-import Header from '../components/organisms/Header/index';
 import Nav from '../components/organisms/NavOnePage/index';
 
 import '../i18n'
@@ -11,7 +10,6 @@ import i18next from 'i18next'
 import { defaultLanguage, languages } from '../i18n'
 import { useRouter } from 'next/router'
 import Head from 'next/head';
-
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -54,7 +52,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       {/* End Google Tag Manager (noscript) */}
       <GlobalStyle />
       <Nav />
-      <Header />
       <Component {...pageProps} />
       <Footer />
     </>

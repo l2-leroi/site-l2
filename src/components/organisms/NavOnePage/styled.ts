@@ -137,4 +137,6 @@ export const TextMenuStyled = styled.p`
   }
 `;
 
-export const ImageStyled = styled.img``;
+export const ImageStyled = styled.img`
+  user-select: none;
+`;

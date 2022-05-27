@@ -36,12 +36,9 @@ export const HeaderStyled = styled.hgroup`
     max-width: 400px;
   }
 
-
   @media(max-width: 800px){
     max-width: 264px;
   }
-
-
 `;
 
 export const TitleStyled = styled.h2`
@@ -148,6 +145,7 @@ export const SpinningIconStyled = styled.div`
   border-radius: 50%;
   animation: ${SpinningAnimation} 5s linear infinite;
   max-width: 468px;
+  user-select: none;
 
   img{
 

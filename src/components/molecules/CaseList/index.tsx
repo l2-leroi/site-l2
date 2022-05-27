@@ -42,7 +42,7 @@ function CaseList(props: CaseProps) {
     variableWidth: true,
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -119,12 +119,12 @@ function CaseList(props: CaseProps) {
 
                 <LinkStyled className="images"
                   onMouseEnter={() => {
-                    if (window.innerWidth > 500) {
+                    if (window.innerWidth > 800) {
                       initInterval(itemCase.hover);
                     }
                   }}
                   onMouseLeave={() => {
-                    if (window.innerWidth > 500) {
+                    if (window.innerWidth > 800) {
                       cancelInterval(itemCase.image);
                     }
                   }}
