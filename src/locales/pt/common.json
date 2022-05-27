@@ -19,6 +19,19 @@
       }
      },
 
+    "allCases":{
+      "ourCases": "VEJA ALGUNS DE NOSSOS CASES",
+      "weDoWell": "Nossa entrega é de alto nível porque nos preocupamos com qualidade, estética e acima de tudo, com resultados.",
+      "weHelped": "Ajudamos essa start-up americana a definir seu negócio e lançamos seu produto.",  
+      "webApp": "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.", 
+      "providers": "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira.",
+        "alt":{
+          "coverMemoriesUp" : "Capa Memories Up",
+          "coverMoreAccess" : "Capa Mais Acesso",
+          "coverImStopped" : "Capa Tô Parado"
+        }
+       },
+
   "footer":{
     "letsTalk": "VAMOS CONVERSAR",
     "ourWhatsapp": "nosso whatsapp",
