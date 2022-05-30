@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { colors } from './colors';
 const theme = {
   colors: {
     black: '#171B21',
@@ -38,7 +37,7 @@ const theme = {
     weight3: 800
   },
   family: {
-    font1: 'Neue Machina',
+    font1: 'Neue Machina', 
     font2: 'Circular Air Pro',
   },
 };
@@ -68,7 +67,7 @@ export const Typography = styled('p').attrs<TypographyProps>(({ tag }) => ({
     color: ${theme.colors[color]};
     font-weight: ${theme.weight[fontWeight]};
     line-height: ${theme.line[lineHeight]};
-    font-family: ${theme.family[fontFamily]};
+    font-family: ${theme.family[fontFamily]}, 'Helvetica', 'Arial', sans-serif;
     letter-spacing: ${theme.spacing[letterSpacing]};
   `}
 `;
