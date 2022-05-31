@@ -6,6 +6,14 @@ export const OurCustomersStyled = styled.section`
   overflow: hidden;
   position: relative;
 
+  position: relative;
+  width: 100%;
+  // margin-top: -200px;
+  background-color: ${colors.gray};
+  // transform: skewY(17.76deg);
+  transition: 0.1s linear all;
+  
+
   @media(max-width: 600px){
     padding-top: 50px;
   }
@@ -13,6 +21,22 @@ export const OurCustomersStyled = styled.section`
   @media(max-width: 414px){
     padding-top: 0px;
   }
+`;
+
+export const Teste2 = styled.section`
+// transform: skewY(-17.76deg);
+transition: 0.2s linear all;
+`;
+
+export const Teste5 = styled.div`
+    position: absolute;
+    top: -200px;
+    left: 0;
+    background: blue;
+    width: 1000px;
+    height: 200px;
+    z-index: 50;
+    clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 100% 100%);
 `;
 
 export const BlackLineStyled = styled.div`
@@ -23,6 +47,7 @@ export const BlackLineStyled = styled.div`
   grid-template-columns: 1fr minmax(280px, 1456px) 1fr;
   padding: 0px 28px;
   overflow: hidden;
+  // padding-bottom: 300px;
   @media(max-width: 800px){
     padding: 0px 12px;
   }
@@ -168,7 +193,7 @@ export const SpinningIconStyled = styled.div`
 export const SignContainerStyled = styled.div`
   color: ${colors.dark_gray};
   top: 120px;
-  position: absolute;
+  // position: absolute;
   display: none;
 `;
 
@@ -183,5 +208,23 @@ export const BlackBg = styled.div`
   padding-bottom: 50px;
   width:100%;
   background-color: ${colors.black};
-  position: absolute;
+  // position: absolute;
+`;
+
+export const DiagonalBox = styled.div`
+width: 100%;
+overflow: hidden;
+// position: relative;
+transition: 0.2s linear all;
+width: 100%;
+// margin-top: -200px;
+background-color: #5900CC;
+background-color:  #171B21;	
+// transform: skewY(17.76deg);
+`;
+
+export const Contentteste = styled.div`
+  // max-width: 50em;
+  // transform: rotate(17.76deg);
+  
 `;

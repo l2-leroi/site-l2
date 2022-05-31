@@ -11,6 +11,7 @@ import {
   ParagraphStyled,
   CustomersContainer,
   BlackBg,
+  DiagonalBox, Contentteste, Teste2, Teste5
 } from './styled';
 
 import CustomersList from '../../molecules/CustomersList/index';
@@ -18,6 +19,7 @@ import React from 'react';
 import LineAnimation from '../../atoms/LineAnimation';
 import OutSourcing from '../../atoms/OutSourcing';
 import { colors } from '../../../styles/colors';
+import { Teste } from '../Menu/styled';
 
 const OurCustomers = () => {
   const ToParadoLogo = './images/OurCustomers/to-parado-logo.svg';
@@ -45,81 +47,8 @@ const OurCustomers = () => {
     { alt: 'Fundacred Logo', src: FundacredLogo },
   ];
 
-  const verifyPurpleLine = () => {
-    const sign = document.querySelector('.signCustomers') as HTMLElement;
-    const purpleLine = document.querySelector('.purpleLine') as HTMLElement;
-    let purpleLinePaddingTop = +getComputedStyle(purpleLine)
-      .getPropertyValue('padding-top')
-      .replace('px', '');
-    const purpleLineMovement =
-      window.innerHeight * 0.8 - purpleLine.getBoundingClientRect().top - 128;
-    const purpleLineWidth = purpleLine.getBoundingClientRect().width;
-
-    let inclination = 25;
-
-    if (window.innerWidth > 600 && window.innerWidth < 800) {
-      inclination = 15;
-    } else if (window.innerWidth <= 600) {
-      inclination = 12;
-    }
-
-    let rotationMovement = purpleLineMovement / 15;
-    let defaultTopInRotation = 150;
-    let morePadding = 0;
-
-    if (window.innerWidth > 800 && window.innerWidth < 1000) {
-      morePadding = 38;
-      rotationMovement = purpleLineMovement / 10;
-    } else if (window.innerWidth <= 800 && window.innerWidth > 750){
-      purpleLinePaddingTop = purpleLinePaddingTop / 2.6;
-      defaultTopInRotation = 90;
-      morePadding = 38;
-    }
-    else if (window.innerWidth <= 750 && window.innerWidth > 600){
-      purpleLinePaddingTop = purpleLinePaddingTop / 2.1;
-      defaultTopInRotation = 100;
-      morePadding = 20;
-    } else if (window.innerWidth <= 600 && window.innerWidth > 400){
-      purpleLinePaddingTop = purpleLinePaddingTop / 2.35;
-      defaultTopInRotation = 80;
-      morePadding = 5;
-
-    }else if (window.innerWidth <= 400 && window.innerWidth > 330) {
-      defaultTopInRotation = 110;
-      morePadding = 36;
-    } else if (window.innerWidth <= 330) {
-      defaultTopInRotation = 70;
-      morePadding = 20;
-      purpleLinePaddingTop = purpleLinePaddingTop / 2.9;
-    }
-
-    const arcTangent = Math.atan(
-      (purpleLinePaddingTop + morePadding) / purpleLineWidth,
-    );
-    const degrees = arcTangent * (180 / Math.PI);
-    const topInRotation = defaultTopInRotation - purpleLineMovement / 5;
-
-    if (
-      purpleLineMovement >= 0 &&
-      inclination + purpleLineMovement / 50 < inclination + 5
-    ) {
-      if (window.innerWidth <= 800) {
-        const padding = topInRotation - purpleLinePaddingTop * 0.25;
-        sign.style.top = `${padding}px`;
-      } else {
-        sign.style.top = `${topInRotation}px`;
-      }
-
-      if (rotationMovement <= degrees) {
-        sign.style.transform = `rotate(${rotationMovement}deg)`;
-      } else {
-        sign.style.transform = `rotate(${degrees}deg)`;
-      }
-    }
-  };
-
   const handleScroll = () => {
-    verifyPurpleLine();
+    // verifyPurpleLine();
     const spinner = document.querySelector('.spinner') as HTMLElement;
     const blackLine = document.querySelector('.blackLine') as HTMLElement;
     const hgroup = document.querySelector('.hgroup') as HTMLElement;
@@ -154,42 +83,109 @@ const OurCustomers = () => {
     }
   };
 
-  const spinnerBehindText = () => {
-    if (window.innerWidth < 1164) {
-      const content = document.querySelector(
-        '.customersContent',
-      ) as HTMLElement;
-      const blackLine = document.querySelector('.blackLine') as HTMLElement;
-      const sign = document.querySelector('.black') as HTMLElement;
-      const customers = document.querySelector('.customers') as HTMLElement;
+  const teste = () => {
+    const black = document.querySelector(".customers") as HTMLElement;
+    const blackLineMovimento =
+    window.innerHeight * 0.6 - black.getBoundingClientRect().top;
 
-      customers.appendChild(content);
+    const box = document.querySelector(".testebox") as HTMLElement;
+    const customersContent = document.querySelector(".customersContent") as HTMLElement;
+    const teste4 = document.querySelector(".teste4") as HTMLElement;
+    const contentstyled = document.querySelector(".containerstyled") as HTMLElement;
+    const footer = document.querySelector(".footer") as HTMLElement;
 
-      blackLine.style.height = content.getBoundingClientRect().height + 'px';
-      content.style.marginTop =
-        -(
-          content.getBoundingClientRect().height -
-          +getComputedStyle(blackLine)
-            .getPropertyValue('padding-top')
-            .replace('px', '') *
-            1.1
-        ) + 'px';
-    }
-  };
+
+    // const blackLineMovimento =
+    //   window.innerHeight * 0.6 - box.getBoundingClientRect().top;
+
+      const graus = blackLineMovimento/50;
+
+    if(graus > 0 && graus <= 17.76){
+      black.style.transform = `skewY(${graus}deg)`;
+      
+
+      const radians = graus * (Math.PI/180)
+      const x = Math.tan(radians) * (window.innerWidth) / 2;
+
+      black.style.marginTop = `${x}px`;
+      customersContent.style.paddingTop = x+"px";
+      customersContent.style.marginTop = -x+"px";
+      customersContent.style.transition = `0.2s linear all`;
+
+      black.style.paddingTop = x+"px";
+
+    
+  }
+
+    requestAnimationFrame(teste);
+  }
+
+  const teste3 = () => {
+    
+    const box = document.querySelector(".testebox") as HTMLElement;
+    const roxo = document.querySelector("#contact") as HTMLElement;
+    const customersContent = document.querySelector(".customersContent") as HTMLElement;
+    const teste4 = document.querySelector(".teste4") as HTMLElement;
+    const contentstyled = document.querySelector(".containerstyled") as HTMLElement;
+    const footer = document.querySelector(".footer") as HTMLElement;
+
+
+    const blackLineMovimento =
+      window.innerHeight * 0.6 - box.getBoundingClientRect().top;
+
+      const graus = blackLineMovimento/50;
+
+    if(graus > 0 && graus <= 17.76){
+      box.style.transform = `skewY(${graus}deg)`;
+
+      const radians = graus * (Math.PI/180)
+      const x = Math.tan(radians) * (window.innerWidth) / 2;
+
+      roxo.style.paddingTop = x+"px";
+      roxo.style.marginTop = -x+"px";
+      roxo.style.transition = `0.2s linear all`;
+      customersContent.style.marginBottom = -x+"px";
+      customersContent.style.paddingBottom = x+"px";
+      customersContent.style.transition = `0.2s linear all`;
+      teste4.style.top = -(x + 50)+"px";
+      teste4.style.height = (x + 20)+"px";
+      teste4.style.width = (window.innerWidth/2)+"px";
+      teste4.style.transition = `0.2s linear all`;
+      const padding = +getComputedStyle(contentstyled).getPropertyValue('margin-right')
+      .replace('px', '')
+      const paddingfooter = +getComputedStyle(footer).getPropertyValue('padding-right')
+      .replace('px', '')
+      const soma = padding + paddingfooter;
+      teste4.style.right = `-${soma}px`
+      box.style.paddingTop = x+"px";
+      box.style.marginTop = -x+"px";
+
+    
+  }
+  requestAnimationFrame(teste3);
+}
 
   React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    spinnerBehindText();
-  });
+    requestAnimationFrame(teste)
+    requestAnimationFrame(teste3)
+  },[]);
 
   return (
     <>
-      <OurCustomersStyled id="customers" className="customers">
-        <SpinningIconStyled className="spinner">
+    <OurCustomersStyled id="customers" className="customers">
+    </OurCustomersStyled>
+    <div style={{position: "relative", overflow: "hidden"}}>
+      <SpinningIconStyled className="spinner">
           <img src={Spinner} alt="L2 Code" />
-        </SpinningIconStyled>
+      </SpinningIconStyled>
+    </div>
+    <div style={{
 
-        <LineAnimation classe="blackLine" backgroundColor={colors.black}>
+    }}>
+
+        <Teste2 className='teste2' >
+        <Teste5 className="teste5"></Teste5>
+
           <BlackLineStyled className="customersContent">
             <ContentStyled>
               <HeaderStyled className="hgroup">
@@ -208,13 +204,23 @@ const OurCustomers = () => {
               <CustomersList customers={customers} />
             </CustomersContainer>
           </BlackLineStyled>
-        </LineAnimation>
-      </OurCustomersStyled>
-      <BlackBg className="black">
-        <SignContainerStyled className="signCustomers">
+        </Teste2>
+      
+      </div>
+      <DiagonalBox className="testebox">
+          <Contentteste>
+            <OutSourcing />
+          </Contentteste>
+      </DiagonalBox>
+
+      
+      {/* <BlackBg className="black"> */}
+
+        {/* <SignContainerStyled className="signCustomers">
           <OutSourcing />
-        </SignContainerStyled>
-      </BlackBg>
+        </SignContainerStyled> */}
+      {/* </BlackBg> */}
+      
     </>
   );
 };

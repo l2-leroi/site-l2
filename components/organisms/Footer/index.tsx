@@ -11,6 +11,7 @@ import {
   ImageStyled,
   ContainerStyled,
   DivStyled,
+  Teste4
 } from "./styled";
 import { HeartIcon } from '../../../assets/icons/heartIcon';
 import ContactList from '../../molecules/ContactList/index'
@@ -38,9 +39,10 @@ const Footer = () => {
   ];
 
   return (
-    <LineAnimation backgroundColor={colors.purple} classe={'purpleLine'}>
-    <FooterStyled id="contact">
-      <ContainerStyled>
+    // <LineAnimation backgroundColor={colors.purple} classe={'purpleLine'}>
+    <FooterStyled id="contact" className="footer">
+      <ContainerStyled className="containerstyled">
+       <Teste4 className="teste4"></Teste4>
         <ContentStyled>
           <DivStyled>
             <TitleStyled>VAMOS CONVERSAR</TitleStyled>
@@ -73,7 +75,7 @@ const Footer = () => {
           
         </ContainerStyled>
     </FooterStyled>
-    </LineAnimation>
+    // </LineAnimation>
   );
 };
 

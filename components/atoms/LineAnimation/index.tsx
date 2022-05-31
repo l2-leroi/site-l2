@@ -2,45 +2,76 @@ import{
     Line
 } from './style'
 
-import React, { Children } from 'react';
+import React, { useRef } from 'react';
 
 interface Props{
-  classe: String;
+  aboveElement: React.ReactNode;
+  belowElement: React.ReactNode;
+  supportDiv: React.ReactNode;
   children: React.ReactNode;
   backgroundColor: string;
 }
 
-const LineAnimation = ({children,classe,backgroundColor}) => {
-    React.useEffect(()=> {
-        window.addEventListener("scroll", handleScroll);
-      });
-    const handleScroll = () => {
-        const blackLine = document.querySelector(`.${classe}`) as HTMLElement;
-        
-        const blackLineMovimento = ( window.innerHeight * 0.8 - blackLine.getBoundingClientRect().top )
+const LineAnimation = ({aboveElement, belowElement, backgroundColor, children, supportDiv}) => {
+  const line = useRef();
 
-        let inclination = 25;
-
-        if((window.innerWidth > 600) && (window.innerWidth < 800)){
-          inclination = 15;
-        }else if(window.innerWidth <= 600){
-          inclination = 12;
-        }
+  const animateLine = () => {
+    // const box = document.querySelector(".testebox") as HTMLElement;
+    // const roxo = document.querySelector("#contact") as HTMLElement;
+    // const customersContent = document.querySelector(".customersContent") as HTMLElement;
+    // const teste4 = document.querySelector(".teste4") as HTMLElement;
+    // const contentstyled = document.querySelector(".containerstyled") as HTMLElement;
+    // const footer = document.querySelector(".footer") as HTMLElement;
 
 
-        const movimento = inclination - ((blackLineMovimento-128)/10);
-        const movimento2 = inclination + ((blackLineMovimento-128)/50);
-        
-        if((movimento > 0) && (movimento2 >= inclination) && (movimento2 < (inclination + 5))){
-          blackLine.style.clipPath = `polygon(0 ${movimento}%, 100% ${movimento2}%, 100% 100%, 0% 100%)`
-        }
-        
-      };
+    const lineElement = line.current as HTMLElement;
+
+    const halfTopScroll =
+      window.innerHeight * 0.6 - lineElement.getBoundingClientRect().top;
+
+    const degrees = halfTopScroll/50;
+
+    if(degrees > 0 && degrees <= 17.76){
+      lineElement.style.transform = `skewY(${degrees}deg)`;
+
+      const radians = degrees * (Math.PI/180)
+      const x = Math.tan(radians) * (window.innerWidth) / 2;
+
+      belowElement.style.paddingTop = x+"px";
+      belowElement.style.marginTop = -x+"px";
+      belowElement.style.transition = `0.2s linear all`;
+
+      aboveElement.style.marginBottom = -x+"px";
+      aboveElement.style.paddingBottom = x+"px";
+      aboveElement.style.transition = `0.2s linear all`;
+
+      supportDiv.style.top = -(x + 50)+"px";
+      supportDiv.style.height = (x + 20)+"px";
+      supportDiv.style.width = (window.innerWidth/2)+"px";
+      supportDiv.style.transition = `0.2s linear all`;
+      const marginContainer = +getComputedStyle(aboveElement).getPropertyValue('margin-right')
+      .replace('px', '')
+      const paddingContainer = +getComputedStyle(belowElement).getPropertyValue('padding-right')
+      .replace('px', '')
+      const sum = marginContainer + paddingContainer;
+      supportDiv.style.right = `-${sum}px`
+      lineElement.style.paddingTop = x+"px";
+      lineElement.style.marginTop = -x+"px";
+    }
+
+    requestAnimationFrame(animateLine);
+  }
+
+  React.useEffect(() => {
+    requestAnimationFrame(animateLine)
+  },[]);
+
     return(
-        <Line className={classe} bgColor={backgroundColor}>
-            { children }
+      <>
+        <Line ref={line} bgColor={backgroundColor}>
+          {children}
         </Line>
+      </>
     )
-
 }
 export default LineAnimation
