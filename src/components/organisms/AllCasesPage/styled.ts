@@ -6,7 +6,9 @@ export const ContainerStyled = styled.div`
   background-color: ${colors.black};
   // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   // padding: 10rem 2.8rem 48rem;
-  padding: 10rem 2.8rem 10rem;  
+  // padding: 10rem 2.8rem 10rem;  
+  padding: 24rem 2.8rem 10rem;  //12.5
+
 
   // @media (min-width: 2560px) {
   //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 77%);
@@ -114,56 +116,6 @@ export const PhraseStyled = styled.p`
   }
 `;
 
-export const BlackLineStyled = styled.div`
-  color: ${colors.gray};
-  background-color: ${colors.black};
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr minmax(280px, 1456px) 1fr;
-  padding: 0px 28px;
-  overflow: hidden;
-  @media(max-width: 800px){
-    padding: 0px 12px;
-  }
-`;
-
-export const HeaderStyled = styled.hgroup`
-  max-width: 648px;
-  z-index: 50;
-
-  @media(max-width: 1000px){
-    max-width: 400px;
-  }
-
-
-  @media(max-width: 800px){
-    max-width: 264px;
-  }
-
-
-`;
-
-export const SubtitleStyled = styled.h3`
-  font-family: 'Circular Air Pro', sans-serif;
-  max-width: 464px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 2.4em;
-  line-height: 140%;
-  letter-spacing: -0.04em;
-  ::selection {
-    background: ${colors.purple};
-  }
-
-  @media(max-width: 800px){
-    max-width: 160px;
-  }
-`;
-
-export const CustomersContainer = styled.div`
-  z-index: 5;  
-  grid-column: 2;
-`;
 export const BlackBg = styled.div`
   height: 510px;
   width: 100%;
