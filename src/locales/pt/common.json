@@ -25,10 +25,12 @@
       "weHelped": "Ajudamos essa start-up americana a definir seu negócio e lançamos seu produto.",  
       "webApp": "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.", 
       "providers": "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira.",
+      "educationalCredit": "Ajudamos milhares de jovens na burocrática jornada de obtenção de crédito educacional",
         "alt":{
           "coverMemoriesUp" : "Capa Memories Up",
           "coverMoreAccess" : "Capa Mais Acesso",
-          "coverImStopped" : "Capa Tô Parado"
+          "coverImStopped" : "Capa Tô Parado",
+          "coverWorkQueue" : "Capa Fila de Trabalho"
         }
        },
 
