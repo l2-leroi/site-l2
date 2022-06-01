@@ -1,10 +1,8 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import AllCasesPage from '../../../components/organisms/AllCasesPage';
-
-
-
-//http://localhost:3000/pt/AllCases
+import Menu from '../../../components/organisms/Menu';
+import AllMenu from '../../../components/organisms/AllMenu';
 
 const AllCases: NextPage = () => {
   // make page refresh on top
@@ -20,6 +18,8 @@ const AllCases: NextPage = () => {
 
   return (
     <>
+      {/*<AllMenu />*/}
+      {/*<Menu openMenu={true} closeMenu = {() => (false)}/>*/}
       <AllCasesPage />
     </>
   );
