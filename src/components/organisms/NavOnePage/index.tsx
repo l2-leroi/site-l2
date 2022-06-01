@@ -64,12 +64,11 @@ export default function NavOnePage() {
 
   return (
     <>
-    
       <NavStyled className="nav anime">
         <NavContentStyled className="navList">
           <NavItemStyled>
             <Link href="/">
-              <ImageStyled className="navImage" src="./images/L2Code-Logo.svg" alt="L2 Code" />
+              <ImageStyled className="navImage" src="../images/L2Code-Logo.svg" alt="L2 Code" />
             </Link>
           </NavItemStyled>
           
