@@ -8,14 +8,17 @@
   },
   "cases":{
     "ourCases": "NOSSOS CASES SELECIONADOS",
+    "ourCasesMemoriesUp": "VEJA OUTROS CASES",
     "weDoWell": "Fazemos muito bem porque nos preocupamos com qualidade, estética e, acima de tudo, com resultados.",
     "weHelped": "Ajudamos start-up americana a definir seu negócio e lançamos seu produto.",  
     "webApp": "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.", 
+    "weHelpedThousands": "Ajudamos milhares de jovens na burocrática jornada de obtenção de crédito educacional.",
     "providers": "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira.",
       "alt":{
         "coverMemoriesUp" : "Capa Memories Up",
         "coverMoreAccess" : "Capa Mais Acesso",
-        "coverImStopped" : "Capa Tô Parado"
+        "coverImStopped" : "Capa Tô Parado",
+        "coverWorkQueue" : "Capa Fila de Trabalho"
       }
      },
 
@@ -61,7 +64,9 @@
     "weImprove": "Melhoramos a experiência dos produtos e serviços de nossos clientes, com foco em resultados para seus negócio.",
     "followUs": "Siga nos",
     "outsourcing":"Outsourcing Consultivo",
+    "outsourcingMemoriesUp":"No início era apenas uma ideia:",
     "increase": "Aumente sua capacidade produtiva ● Com acesso a nossa equipe, você agrega ao seu time profissionais apaixonados com competências diversas.",
+    "increaseMemoriesUp": "E se o serviço de núvem tivesse tanto engajamento quanto as redes sociais? ● Ajudamos essa start-up americana a definir seu negócio e lançamos seu produto.",
     "startupService":"Atendimento à Startup",
     "uxuiTeam":"Nossa equipe de UX/UI e desenvolvimento irá projetar e construir seu MVP a partir do zero, “garantindo” uma entrega rápida e rentável.",
     "ideation":"Ideação",

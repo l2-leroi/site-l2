@@ -1,6 +1,12 @@
 import { NextPage } from "next";
 import { useEffect } from "react";
+import MenuMemoriesUp from "../../../components/organisms/MenuMemoriesUp";
+import FooterMemoriesUp from "../../../components/organisms/FooterMemoriesUp";
+import CasesMemoriesUp from "../../../components/organisms/CasesMemoriesUp";
 import HeaderMemoriesUp from "../../../components/organisms/HeaderMemoriesUp";
+import OurServicesOnePageMemoriesUp from "../../../components/organisms/OurServicesOnePageMemoriesUp";
+import ProcessPageMemoriesUp from "../../../components/organisms/ProcessMemoriesUp";
+import DesignMemoriesUp from "../../../components/organisms/DesignMemoriesUp";
 
 const MemoriesUp: NextPage = () => {
 
@@ -16,10 +22,16 @@ const MemoriesUp: NextPage = () => {
 
         return (
             <>
+                
+                <MenuMemoriesUp />
                 <HeaderMemoriesUp />
-                {/* <div className="case-01">
-                    <h1>Case 01</h1>
-                </div> */}
+                <OurServicesOnePageMemoriesUp/>
+                <ProcessPageMemoriesUp/>
+                <DesignMemoriesUp />
+                <CasesMemoriesUp />
+                
+                <FooterMemoriesUp />
+               
             </>
         );
     };
