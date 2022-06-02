@@ -24,10 +24,10 @@ const Cases = () => {
     "../images/to-parado-4.jpg"
   ];
   const FilaDeTrabalho = [
-    "../images/mais-acesso-1.jpg", 
-    "../images/mais-acesso-2.jpg", 
-    "../images/mais-acesso-3.jpg", 
-    "../images/mais-acesso-4.jpg"
+    "../images/fila-de-trabalho-1.jpg", 
+    "../images/fila-de-trabalho-2.jpg", 
+    "../images/fila-de-trabalho-3.jpg", 
+    "../images/fila-de-trabalho-4.jpg"
   ];
 
   const allCases = [
