@@ -80,6 +80,15 @@
       "startupService":"Atendimento à Startup",
       "consultingService":"Consultoria em TI",
       "design" : "Design"
+    },
+    "scroll": {
+      "home": "Home",
+      "about": "Sobre",
+      "cases": "Cases",
+      "services": "Serviços",
+      "people": "Pessoas",
+      "career": "Carreira",
+      "contact": "Contato"
     }
   }
   

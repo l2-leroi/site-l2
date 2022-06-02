@@ -2,7 +2,7 @@ import { GlobalStyle } from '../styles/global';
 import '../styles/fonts.css';
 import type { AppProps } from 'next/app';
 import Footer from '../components/organisms/Footer/index';
-import Nav from '../components/organisms/NavOnePage/index';
+import Nav from '../components/organisms/Nav/index';
 
 import '../i18n'
 import { useEffect, useState } from 'react'

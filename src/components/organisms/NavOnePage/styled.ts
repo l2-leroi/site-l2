@@ -125,6 +125,7 @@ export const NavButtonStyled = styled.button`
     }
   }
 `;
+
 export const DivTextStyled = styled.div``;
 
 export const TextMenuStyled = styled.p`

@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { ElementScrollStyled, InfiniteScrollContainerStyled } from './styled';
+import i18next from 'i18next';
 
 /*
 const element = document.getElementById('home')
@@ -9,7 +10,9 @@ element.style.color = "#20BD9D"
 */
 
 export default function Scroll() {
-  const baseItems = [
+  const { t } = i18next
+
+  const baseItemsPT = [
     'Home',
     'Sobre',
     'Cases',
@@ -17,6 +20,16 @@ export default function Scroll() {
     'Pessoas',
     'Carreira',
     'Contato',
+  ];
+  
+  const baseItemsEN = [
+    'Home',
+    'About',
+    'Cases',
+    'Services',
+    'People',
+    'Career',
+    'Contact',
   ];
 
   const baseUrl = [
@@ -28,22 +41,36 @@ export default function Scroll() {
     './carreira',
     './contato',
   ];
-  baseItems[0]
-  function createMarkup() {
-    for (let i = 0; i < baseItems.length; i++) {
-      const element = baseItems[i];
-      const url = baseUrl[i];
 
-      if (baseUrl[i] == './') {
-        // console.log(baseItems[i]);
-        // console.log('funcionando');
-      }
+//   function createMarkup() {
+//     for (let i = 0; i < baseItems.length; i++) {
+//       const element = baseItems[i];
+//       const url = baseUrl[i];
+
+//       if (baseUrl[i] == './') {
+//         console.log(baseItems[i]);
+//         console.log('funcionando');
+//       }
+//     }
+//   }
+//  console.log(createMarkup());
+
+  let baseItems = t('menu.ourEmail') == "our e-mail" ? baseItemsEN : baseItemsPT;
+  console.log(baseItems);
+
+  useEffect(() => {
+    const urlLanguage = window.location.pathname;
+
+    if(urlLanguage == '/en') {
+      baseItems = baseItemsEN;
     }
-  }
-  // console.log(createMarkup());
+    else { 
+      baseItems = baseItemsPT;
+    }
+  })
 
   const [items, setItems] = useState([...baseItems, ...baseItems]);
-
+  
   const fetchData = () => {
     setItems([...items, ...baseItems]);
   };
@@ -56,9 +83,11 @@ export default function Scroll() {
       loader={null}
       height="100vh"
     >
-      {items.map((item) => {
-        return <ElementScrollStyled key={`${item}-${uuid()}`}>{item}</ElementScrollStyled>;
-      })}
+      {items.map((item) => (
+        <ElementScrollStyled key={`${item}-${uuid()}`}>
+          {item}
+        </ElementScrollStyled>
+      ))}
     </InfiniteScrollContainerStyled>
   );
 }

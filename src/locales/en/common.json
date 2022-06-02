@@ -80,6 +80,15 @@
       "startupService":"Start-up Service",
       "consultingService":"IT Consulting Service",
       "design" : "Design"
+    },
+    "scroll": {
+      "home": "Home",
+      "about": "About",
+      "cases": "Cases",
+      "services": "Services",
+      "people": "People",
+      "career": "Career",
+      "contact": "Contact"
     }
   }
   

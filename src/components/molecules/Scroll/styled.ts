@@ -6,6 +6,7 @@ export const InfiniteScrollContainerStyled = styled(InfiniteScroll)`
   display: flex;
   flex-direction: column;
   overflow-x: none;
+
   ::-webkit-scrollbar {
     display: none;
   }
@@ -20,18 +21,22 @@ export const ElementScrollStyled = styled.a`
   font-family: 'Neue Machina';
   font-weight: 800;
   font-size: 4vw;
-  line-height: 110px;
   letter-spacing: -0.06em;
-  line-height: 6.5vw;
+  line-height: 100%;
   color: ${colors.gray};
   width: 100%;
   cursor: pointer;
   text-decoration: none;
+  margin-top: 38px;
+
+  ::selection {
+    background: ${colors.purple};
+  }
+  
   @media (max-width: 600px) {
     padding-bottom: 15vw;
   }
   @media (max-width: 1024px) {
     font-size: 5vw;
-    line-height: 9.5vw;
   }
 `;
