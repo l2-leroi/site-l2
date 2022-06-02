@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 import Slider from "react-slick";
+import { Typography } from '../../../styles/typography';
 
 export const ContentStyled = styled.section`
   display: flex;
@@ -31,6 +32,35 @@ export const CaseStyled = styled.article`
 
   @media (max-width: 800px) {
     height: 530px;
+  }
+  
+  h3{
+    border-top: 1px solid ${colors.dark_gray};
+    padding: 4.4rem 0 2.8rem 0;
+    ::selection {
+      background: ${colors.purple};
+      color: ${colors.gray};
+    }
+  
+    @media (min-width: 800px) and (max-width: 1365px) {
+      font-size: 34px;
+    }
+  }
+  
+  p{
+    &:first-child{
+      padding-left:10px;
+    }
+    max-width: 345px;
+    padding-bottom: 3.2rem;
+    ::selection {
+      background: ${colors.purple};
+      color: ${colors.gray};
+    }
+    @media (max-width: 800px) {
+      font-size: 10px;
+      line-height: 14px;
+    }
   }
 `;
 
@@ -119,41 +149,7 @@ export const SliderStyled = styled(Slider)`
 
 export const GhostStyled = styled.div``;
 
-export const CaseNumberStyled = styled.h3`
-  font-family: 'Circular Air Pro', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22.4px;
-  letter-spacing: -0.02em;
-  padding: 0 0 3.2rem 10px;
-  border-bottom: 1px solid ${colors.dark_gray};
-  ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
-  }
 
-  @media (max-width: 800px) {
-    font-size: 10px;
-    line-height: 14px;
-  }
-`;
-
-export const TitleStyled = styled.h4`
-  font-family: 'Neue Machina', sans-serif;
-  font-weight: 800;
-  font-size: 4rem;
-  line-height: 4.8rem;
-  letter-spacing: -0.02em;
-  padding: 4.4rem 0 2.8rem 0;
-  ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
-  }
-
-  @media (min-width: 800px) and (max-width: 1365px) {
-    font-size: 34px;
-  }
-`;
 
 export const InfoStyled = styled.p`
   font-family: 'Circular Air Pro', sans-serif;

@@ -4,74 +4,73 @@ import {
   SectionOnePageStyled,
   ContentOnePageStyled,
   DivServicesStyled,
-  HeadingStyled,
-  ParagraphServicesStyled,
   DivServiceItemsStyled,
   DivItemStyled,
-  HeadingItemStyled,
-  ParagraphItemStyled,
   ImageStyled,
   ScrollArrow,
 } from "./styled";
+import { Typography } from '../../../styles/typography';
+
 import i18next from 'i18next';
 export default function OurServicesOnePage() {
-  const {t} = i18next
+  const { t } = i18next
   return (
     <SectionOnePageStyled id="services">
       <ScrollArrow className="SpinnerCircle2">
-        <ScrollCircle isWhiteImage={false} 
-        blackImage={`${t('images.spinner')}`} 
-        whiteImage={`${t('images.whiteSpinner')}`} 
-        alt={`${t('images.alt.thereIsMore')}`}/>
+        <ScrollCircle isWhiteImage={false}
+          blackImage={`${t('images.spinner')}`}
+          whiteImage={`${t('images.whiteSpinner')}`}
+          alt={`${t('images.alt.thereIsMore')}`} />
       </ScrollArrow>
-      
+
       <ContentOnePageStyled>
         <DivServicesStyled>
-          <HeadingStyled>{t('services.ourServices')}</HeadingStyled>
-          <ParagraphServicesStyled>
-            {t('services.weImprove')}
-          </ParagraphServicesStyled>
+          <Typography color='gray' tag="h2" size='medium' fontWeight='weight3' fontFamily='font1' lineHeight='line90'>
+            {t('services.ourServices')}
+          </Typography>
+          <Typography color='gray' tag="p">{t('services.weImprove')}</Typography>
         </DivServicesStyled>
 
         <DivServiceItemsStyled>
-            <DivItemStyled>
-              <HeadingItemStyled>{t('services.outsourcing')}</HeadingItemStyled>
-              <ParagraphItemStyled>
-                {t('services.increase')}
-              </ParagraphItemStyled>
-            </DivItemStyled>
-          
-            <DivItemStyled>
-              <HeadingItemStyled>{t('services.startupService')}</HeadingItemStyled>
-              <ParagraphItemStyled>
-                {t('services.uxuiTeam')}
-              </ParagraphItemStyled>
-            </DivItemStyled>
+          <DivItemStyled>
+            <Typography color='gray' tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
+              {t('services.outsourcing')}</Typography>
 
-            <DivItemStyled>
-              <HeadingItemStyled>{t('services.ideation')}</HeadingItemStyled>
-              <ParagraphItemStyled>
-                {t('services.coCreation')}
-              </ParagraphItemStyled>
-            </DivItemStyled>
+            <Typography color='dark_gray' tag='p'> {t('services.increase')}</Typography>
+          </DivItemStyled>
 
-            <DivItemStyled>
-              <HeadingItemStyled>{t('services.uxuiDesign')}</HeadingItemStyled>
-              <ParagraphItemStyled>
-                {t('services.weDesign')}
-              </ParagraphItemStyled>
-            </DivItemStyled>
+          <DivItemStyled>
+            <Typography color='gray' tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
+            {t('services.startupService')}</Typography>
 
-            <DivItemStyled>
-              <HeadingItemStyled>{t('services.consultingService')}</HeadingItemStyled>
-              <ParagraphItemStyled className='last-paragraph'>
-                {t('services.ourTechLead')}
-              </ParagraphItemStyled>
-            </DivItemStyled>
+            <Typography color='dark_gray' tag='p'>{t('services.uxuiTeam')}</Typography>
+          </DivItemStyled>
 
-            <DivItemStyled>
-              <ImageStyled src="./images/RectangleL2.svg" alt="L2 Code" />
-            </DivItemStyled>
+          <DivItemStyled>
+            <Typography color='gray' tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
+            {t('services.ideation')}</Typography>
+
+            <Typography color='dark_gray' tag='p'>{t('services.coCreation')}</Typography>
+          </DivItemStyled>
+
+          <DivItemStyled>
+            <Typography color='gray' tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
+            {t('services.uxuiDesign')}</Typography>
+
+            <Typography color='dark_gray' tag='p'>{t('services.weDesign')}</Typography>
+          </DivItemStyled>
+
+          <DivItemStyled>
+            <Typography color='gray' tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
+            {t('services.consultingService')}</Typography>
+
+            <Typography color='dark_gray' tag='p'>{t('services.ourTechLead')}</Typography>
+          </DivItemStyled>
+
+
+          <DivItemStyled>
+            <ImageStyled src="./images/RectangleL2.svg" alt="L2 Code" />
+          </DivItemStyled>
         </DivServiceItemsStyled>
       </ContentOnePageStyled>
     </SectionOnePageStyled>

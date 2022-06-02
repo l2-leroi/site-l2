@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
+import { Typography } from '../../../styles/typography';
 
 export const NavStyled = styled.nav`
   position: absolute;
@@ -45,17 +46,21 @@ export const NavContentStyled = styled.ul`
 
 export const NavItemStyled = styled.li`
   list-style-type: none;
-  font-family: 'Circular Air Pro';
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: -0.02em;
-  font-weight: 700;
   min-width: 173px;
+  ${Typography}{
+    &.white{
+      color: white;
+    }
+    @media (max-width: 500px) {
+      font-size: 10px;
+      line-height: 140%;
+      text-align: right;
+    }
+  }
   ::selection {
     background: ${colors.purple};
     color: ${colors.gray};
   }
-  
   
   &:first-of-type{
       @media (max-width: 980px) {
@@ -70,11 +75,7 @@ export const NavItemStyled = styled.li`
     }
   }
 
-  @media (max-width: 500px) {
-    font-size: 10px;
-    line-height: 14px;
-    text-align: right;
-  }
+
 
   img {
     @media (max-width: 500px) {
@@ -87,29 +88,25 @@ export const NavLinkListStyled = styled.ul`
   margin: 0;
   display: flex;
   justify-content: space-between;
-`;
-
-export const NavLinkStyled = styled.li`
-  list-style-type: none;
-  font-family: 'Circular Air Pro';
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: -0.02em;
-  font-weight: 700;
-  padding: 0px 40px;
-  cursor: pointer;
-  ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
-  }
-
-  &:hover {
-    color: ${colors.green};
-  }
-
-  @media (max-width: 500px) {
-    font-size: 10px;
-    line-height: 14px;
+  ${Typography}{
+    list-style-type: none;
+    padding: 0px 40px;
+    cursor: pointer;
+    ::selection {
+      background: ${colors.purple};
+      color: ${colors.gray};
+    }
+    &:hover {
+      color: ${colors.green};
+    }
+    @media (max-width: 500px) {
+      font-size: 10px;
+      line-height: 14px;
+    }
+    &.white {
+      color: white;
+    }
+    
   }
 `;
 

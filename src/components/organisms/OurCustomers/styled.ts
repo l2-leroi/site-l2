@@ -39,40 +39,25 @@ export const HeaderStyled = styled.hgroup`
   @media(max-width: 800px){
     max-width: 264px;
   }
-`;
-
-export const TitleStyled = styled.h2`
-  font-family: 'Neue Machina', sans-serif;
-  font-style: normal;
-  font-size: 6.4rem;
-  line-height: 90%;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  margin-bottom: 40px;
-  ::selection {
-    background: ${colors.purple};
+  p{
+    max-width: 464px;
+    ::selection {
+      background: ${colors.purple};
+    }
+    @media(max-width: 800px){
+      max-width: 160px;
+    }
   }
-  
-  @media(max-width: 800px){
-    max-width: 264px;
-    margin-bottom: 16px;
-  }
-`;
-
-export const SubtitleStyled = styled.h3`
-  font-family: 'Circular Air Pro', sans-serif;
-  max-width: 464px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 2.4em;
-  line-height: 140%;
-  letter-spacing: -0.04em;
-  ::selection {
-    background: ${colors.purple};
-  }
-
-  @media(max-width: 800px){
-    max-width: 160px;
+  h2{
+    margin-bottom: 40px;
+    ::selection {
+      background: ${colors.purple};
+    }
+    
+    @media(max-width: 800px){
+      max-width: 264px;
+      margin-bottom: 16px;
+    }
   }
 `;
 
@@ -90,24 +75,16 @@ export const AsideStyled = styled.aside`
   @media(max-width: 800px){
     max-width: 50px;
   }
+  p{
+    ::selection {
+      background: ${colors.purple};
+    }
+    @media(max-width: 800px){
+      max-width: 61px;
+    }
+  }
 `;
 
-export const ParagraphStyled = styled.p`
-  font-family: 'Circular Air Pro', sans-serif;
-  font-family: 'Circular Air Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 140%;
-  letter-spacing: -0.02em;
-  ::selection {
-    background: ${colors.purple};
-  }
-  
-  @media(max-width: 800px){
-    max-width: 61px;
-  }
-`;
 
 export const ContentStyled = styled.section`
   position: relative;

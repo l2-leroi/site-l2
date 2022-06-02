@@ -1,5 +1,6 @@
-import styled  from 'styled-components';
+import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
+import { Typography } from '../../../styles/typography';
 
 interface HeaderProps {
     height: number;
@@ -40,91 +41,87 @@ export const MainTextStyled = styled.hgroup`
     margin: 0 auto;
     text-align: center;
     width: 100%;
-`;
-
-export const TitleStyled = styled.h1`
-    align-self: center;
-    font-family: 'Neue Machina';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 200px;
-    line-height: 100%;
-    text-align: center;
-    letter-spacing: -0.04em;
-    margin: 0 auto 10px;
-    user-select: none;
-
-    @media (max-width: 1220px) {
-        font-size: 140px;
-    }
-
-    @media (max-width: 910px) {
-        font-size: 120px;
-        margin-bottom: 20px;
-    }
-
-    @media (max-width: 800px) {
-        font-size: 64px;   
-        margin-bottom: 13px;
-    }
-
-    @media (max-width: 500px) {
-        &.textWrap {
-            max-width: 220px;
-            overflow-wrap: break-word;
+    h2{
+        align-self: center;
+        font-style: normal;
+        text-align: center;
+        margin: 0 auto -10px;
+        ::selection {
+            background: ${colors.purple};
+            color: ${colors.gray};
+        }
+    
+        @media (min-width: 801px) and (max-width: 1220px) {
+            font-size: 3.4rem;
+        }
+    
+        @media (max-width: 910px) {
+            margin-bottom: 15px;
+        }
+    
+        @media (orientation: portrait) and (max-width: 800px) {
+            margin-top: 120px;
+            margin-bottom: 8px;
+        } 
+        &.white {
+            color: white;
         } 
     }
+    h1{
+        align-self: center;
+        font-style: normal;
+        text-align: center;
+        margin: 0 auto 10px;
+        user-select: none;
+    
+        @media (max-width: 1220px) {
+            font-size: 140px;
+
+        }
+    
+        @media (max-width: 910px) {
+            font-size: 120px;
+            margin-bottom: 20px;
+
+        }
+    
+        @media (max-width: 800px) {
+            font-size: 64px;  
+            margin-bottom: 13px;
+            
+        }
+    
+        @media (max-width: 500px) {
+            &.textWrap {
+                max-width: 220px;
+                overflow-wrap: break-word;
+            } 
+        }
+        &.white {
+            color: white;
+        }
+    }
+    p{
+        align-self: center;
+        font-style: normal;
+        text-align: center;
+        max-width: 464px;
+        margin: 0 auto;
+        ::selection {
+            background: ${colors.purple};
+            color: ${colors.gray};
+        }
+    
+        @media (max-width: 800px) {
+            width: 212px;
+        }  
+        &.white {
+            color: white;
+        }
+    }
+    
 `;
 
-export const SubtitleStyled = styled.h2`
-    align-self: center;
-    font-family: 'Neue Machina';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 4rem;
-    line-height: 120%;
-    text-align: center;
-    letter-spacing: -0.02em;
-    margin: 0 auto -10px;
-    ::selection {
-        background: ${colors.purple};
-        color: ${colors.gray};
-    }
-
-    @media (min-width: 801px) and (max-width: 1220px) {
-        font-size: 34px;
-    }
-
-    @media (max-width: 910px) {
-        margin-bottom: 15px;
-    }
-
-    @media (orientation: portrait) and (max-width: 800px) {
-        margin-top: 120px;
-        margin-bottom: 8px;
-    } 
-`;
-
-export const TitleComplementStyled = styled.h3`
-    align-self: center;
-    font-family: 'Circular Air Pro';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.4rem;
-    line-height: 140%;
-    text-align: center;
-    letter-spacing: -0.04em;
-    max-width: 464px;
-    margin: 0 auto;
-    ::selection {
-        background: ${colors.purple};
-        color: ${colors.gray};
-    }
-
-    @media (max-width: 800px) {
-        width: 212px;
-    }  
-`;
 
 export const LanguageStyled = styled.div`
     display: flex;
@@ -149,49 +146,39 @@ export const LanguageStyled = styled.div`
         opacity: 1;
         transition: opacity .8s;
     }
-`;
-
-export const LanguageItemStyled = styled.button`
-    background: transparent;
-    cursor: pointer;
-    border: none;   
-    font-family: 'Circular Air Pro';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
-    text-align: right;
-    letter-spacing: -0.02em;
-
-    &.white {
-        color: white;
-    }
-
-    a{
-        ::selection {
-            background: ${colors.purple};
-            color: ${colors.gray};
+    ${Typography}{
+        background: transparent;
+        cursor: pointer;
+        border: none;   
+        font-style: normal;
+        text-align: right;
+        a{
+            ::selection {
+                background: ${colors.purple};
+                color: ${colors.gray};
+            }
         }
-    }
+        &:first-child {
+            margin-bottom: 8px;
+        }
 
-    &:first-child {
-        margin-bottom: 8px;
-    }
-
-    @media (min-width: 500px) {
         &:hover {
             color: ${colors.green};
         }
-    }
 
-    @media (max-width: 800px) {
-        font-size: 10px;
+        @media (max-width: 800px) {
+            font-size: 10px;
 
-        &:first-child {
-            margin-bottom: 0px;
+            &:first-child {
+                margin-bottom: 0px;
+            }
+        }  
+        &.white {
+            color: white;
         }
-    }  
+    }
 `;
+
 
 export const FooterContentStyled = styled.div`
     width: 100%;
@@ -237,68 +224,67 @@ export const SocialMediaStyled = styled.div`
         opacity: 1;
         transition: opacity .8s;
     }
-`;
-
-export const SocialMediaTitleStyled = styled.span`  
-    margin-right: 120px;
-    margin-left: 1.2rem;
-    position: relative;
-    font-family: 'Circular Air Pro';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
-    letter-spacing: -0.02em;
-    ::selection {
-        background: ${colors.purple};
-        color: ${colors.gray};
-    }
-
-    @media (max-width: 800px) {
-        font-size: 10px;
-        margin-right: 57px;
-    }
-
-    &:after {
-        content: "";
-        width: 84px;
-        height: 1px;
-        background-color: ${colors.lightGray};
-        position: absolute;
-        top: 50%;
-        margin: 0px 2.4rem;
-
+    span{
+        margin-right: 120px;
+        margin-left: 1.2rem;
+        position: relative;
+        font-style: normal;
+        ::selection {
+            background: ${colors.purple};
+            color: ${colors.gray};
+        }
+    
         @media (max-width: 800px) {
-            width: 39px;
+            font-size: 10px;
+            margin-right: 57px;
+        }
+    
+        &:after {
+            content: "";
+            width: 84px;
+            height: 1px;
+            background-color: ${colors.lightGray};
+            position: absolute;
+            top: 50%;
+            margin: 0px 2.4rem;
+    
+            @media (max-width: 800px) {
+                width: 39px;
+            }
+        }
+        &.white {
+            color: white;
         }
     }
 `;
 
-export const SocialMediaItemStyled = styled.a`
-    margin: 0px 1.2rem;
-    font-family: 'Circular Air Pro';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 140%;
-    letter-spacing: -0.02em;
-    z-index: 50;
-    cursor: pointer;
-
-    ::selection {
-        background: ${colors.purple};
-        color: ${colors.gray};
+export const SocialMediaLinkStyled = styled.a`
+    ${Typography}{
+        border: none;
+        margin: 0px 1.2rem;
+        font-style: normal;
+        background: none;
+        z-index: 50;
+        cursor: pointer;
+    
+        ::selection {
+            background: ${colors.purple};
+            color: ${colors.gray};
+        }
+    
+        @media (max-width: 800px) {
+            font-size: 10px;
+        }
+    
+        &:hover {
+            color: ${colors.green};
+        }
+        &.white {
+            color: white;
+        }
     }
 
-    @media (max-width: 800px) {
-        font-size: 10px;
-    }
-
-    &:hover {
-        color: ${colors.green};
-    }
-`;
-
+`
 export const ImageStyled = styled.img`
     display: none;  
     position: absolute;

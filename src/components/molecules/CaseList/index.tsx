@@ -1,11 +1,9 @@
 import {
-  CaseNumberStyled,
   CaseStyled,
   ContentStyled,
   ListStyled,
   InfoStyled,
   LinkStyled,
-  TitleStyled,
   ImageStyled,
   SliderStyled,
   GhostStyled,
@@ -13,6 +11,7 @@ import {
 import { useEffect, useRef, useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Typography } from '../../../styles/typography';
 
 interface Case {
   number: string;
@@ -110,9 +109,14 @@ function CaseList(props: CaseProps) {
           {
             props.cases.map((itemCase) => (
               <CaseStyled key={itemCase.title} data-anime="animate">
-                <CaseNumberStyled>Case {itemCase.number}</CaseNumberStyled>
-                <TitleStyled>{itemCase.title}</TitleStyled>
-                <InfoStyled>{itemCase.info}</InfoStyled>
+                
+                <Typography tag="p" size='xxsmall' letterSpacing='space1'>Case {itemCase.number}</Typography>
+
+                <Typography tag='h3' fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1'>{itemCase.title}</Typography>
+            
+                <Typography tag="p">{itemCase.info}</Typography>
+
+
                 <LinkStyled className="images"
                   onMouseEnter={() => {
                     if (window.innerWidth > 800) {
