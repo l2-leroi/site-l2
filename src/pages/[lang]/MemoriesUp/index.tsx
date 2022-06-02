@@ -5,7 +5,7 @@ import FooterMemoriesUp from "../../../components/organisms/FooterMemoriesUp";
 import CasesMemoriesUp from "../../../components/organisms/CasesMemoriesUp";
 import HeaderMemoriesUp from "../../../components/organisms/HeaderMemoriesUp";
 import OurServicesOnePageMemoriesUp from "../../../components/organisms/OurServicesOnePageMemoriesUp";
-import ProcessPageMemoriesUp from "../../../components/organisms/ProcessMemoriesUp";
+import ProcessMemoriesUp from "../../../components/organisms/ProcessMemoriesUp";
 import DesignMemoriesUp from "../../../components/organisms/DesignMemoriesUp";
 
 const MemoriesUp: NextPage = () => {
@@ -26,10 +26,9 @@ const MemoriesUp: NextPage = () => {
                 <MenuMemoriesUp />
                 <HeaderMemoriesUp />
                 <OurServicesOnePageMemoriesUp/>
-                <ProcessPageMemoriesUp/>
+                <ProcessMemoriesUp/>
                 <DesignMemoriesUp />
                 <CasesMemoriesUp />
-                
                 <FooterMemoriesUp />
                
             </>

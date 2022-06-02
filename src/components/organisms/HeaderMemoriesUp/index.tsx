@@ -1,4 +1,4 @@
-import { ContentStyled } from "../Cases/styled";
+import { ContentStyled } from "../CasesMemoriesUp/styled";
 import { MainContentStyled, 
   MainTextStyled,
   SubtitleStyled, 

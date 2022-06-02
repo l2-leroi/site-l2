@@ -143,56 +143,31 @@ export const ButtonClose = styled.div`
   padding-top: 20px;
 `;
 
-export const ButtonOpen = styled.div`
-  position: absolute;
-  top: 100px;
-  left: 490px;
-  width: 300px;
-  height: 80px;
-  background-color: #242a33;
-  border-radius: 100px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+// export const ButtonOpen = styled.div`
+//   position: absolute;
+//   top: 100px;
+//   left: 490px;
+//   width: 300px;
+//   height: 80px;
+//   background-color: #242a33;
+//   border-radius: 100px;
+//   cursor: pointer;
+//   display: flex;
+//   justify-content: center;
+//   text-align: center;
 
-  font-family: 'Circular Air Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 140%;
-  letter-spacing: -0.04em;
-  color: #ffffff;
-  padding-left: 130px;
-  padding-top: 20px;
-`;
+//   font-family: 'Circular Air Pro';
+//   font-style: normal;
+//   font-weight: 400;
+//   font-size: 24px;
+//   line-height: 140%;
+//   letter-spacing: -0.04em;
+//   color: #ffffff;
+//   padding-left: 130px;
+//   padding-top: 20px;
+// `;
 
-export const ImageStyled = styled.img`
-  position: absolute;
-  /* margin-left: -212px;
-  height: 105%;
-  margin-top: -11px; */
-  width: 675px;
-  height: 938px;
-  left: 0px;
-  /* top: 2400px; */
 
-  @media (max-width: 800px) {
-    max-width: 164px;
-  }
-
-  @media (max-width: 576px) {
-    display: none;
-  }
-
-  >div {
-    width: 50px;
-    height: 50px;
-    margin-left: 40px;
-    border: 12px solid #000000;
-border-radius: 24px;
-} 
-`;
 
 
 

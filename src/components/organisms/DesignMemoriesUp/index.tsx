@@ -1,4 +1,4 @@
-import { AsideStyled, ContainerStyled, ContentStyled, DivStyled, ParagraphStyled, PhraseStyled, TitleStyled, ButtonClose, ButtonOpen, ImageStyled} from "./styled";
+import { AsideStyled, ContainerStyled, ContentStyled, DivStyled, ParagraphStyled, PhraseStyled, TitleStyled} from "./styled";
 import React from "react";
 import i18next from 'i18next';
 
@@ -20,9 +20,9 @@ const DesignMemoriesUp = () => {
           <TitleStyled>Design</TitleStyled>
         </DivStyled>
         
-        <ButtonOpen>Imagens</ButtonOpen>
+        {/* <ButtonOpen>Imagens</ButtonOpen>
         
-        <ButtonClose>Protótipo</ButtonClose>
+        <ButtonClose>Protótipo</ButtonClose> */}
 
       
         

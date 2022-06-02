@@ -54,7 +54,7 @@ const CasesMemoriesUp = () => {
       number: "04", 
       title: "Fila de Trabalho", 
       info: t('cases.weHelpedThousands'), 
-      image: "../images/to-parado-2.jpg", 
+      image: "../images/capa-fila-de-trabalho.jpg", 
       alt: t('cases.alt.coverWorkQueue'), 
       link: "#1", 
       hover: filaDeTrabalhoHover 
