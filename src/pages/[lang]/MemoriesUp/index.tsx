@@ -1,12 +1,12 @@
 import { NextPage } from "next";
 import { useEffect } from "react";
 import MenuMemoriesUp from "../../../components/organisms/MenuMemoriesUp";
-import FooterMemoriesUp from "../../../components/organisms/FooterMemoriesUp";
-import CasesMemoriesUp from "../../../components/organisms/CasesMemoriesUp";
-import HeaderMemoriesUp from "../../../components/organisms/HeaderMemoriesUp";
-import OurServicesOnePageMemoriesUp from "../../../components/organisms/OurServicesOnePageMemoriesUp";
-import ProcessMemoriesUp from "../../../components/organisms/ProcessMemoriesUp";
-import DesignMemoriesUp from "../../../components/organisms/DesignMemoriesUp";
+import FooterMemoriesUp from "../../../components/organisms/Footer/FooterMemoriesUp";
+import CasesMemoriesUp from "../../../components/organisms/Cases/CasesMemoriesUp";
+import HeaderMemoriesUp from "../../../components/organisms/Header/HeaderMemoriesUp";
+import OurServicesOnePageMemoriesUp from "../../../components/organisms/OurServicesOnePage/OurServicesOnePageMemoriesUp";
+import OurProcessesMemoriesUp from "../../../components/organisms/OurProcesses/OurProcessesMemoriesUp";
+import OurDesignsMemoriesUp from "../../../components/organisms/OurDesigns/OurDesignsMemoriesUp";
 
 const MemoriesUp: NextPage = () => {
 
@@ -26,8 +26,8 @@ const MemoriesUp: NextPage = () => {
                 <MenuMemoriesUp />
                 <HeaderMemoriesUp />
                 <OurServicesOnePageMemoriesUp/>
-                <ProcessMemoriesUp/>
-                <DesignMemoriesUp />
+                <OurProcessesMemoriesUp/>
+                <OurDesignsMemoriesUp />
                 <CasesMemoriesUp />
                 <FooterMemoriesUp />
                

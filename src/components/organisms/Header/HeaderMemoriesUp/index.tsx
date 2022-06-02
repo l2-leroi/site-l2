@@ -1,4 +1,4 @@
-import { ContentStyled } from "../CasesMemoriesUp/styled";
+import { ContentStyled } from "../../Cases/CasesMemoriesUp/styled";
 import { MainContentStyled, 
   MainTextStyled,
   SubtitleStyled, 
@@ -19,7 +19,7 @@ const HeaderMemoriesUp = () => {
     return (
         <>
         <ContainerStyled>
-            
+        
         <MainContentStyled>
         <LanguageStyled className='anime'>
           <LanguageItemStyled className="link">
@@ -36,15 +36,17 @@ const HeaderMemoriesUp = () => {
         
         <TextStyled >Design de produto para start-up americana</TextStyled>
 
-        <DivItemStyled>
-              <ImageStyled src="../images/LYRS_150_1728x-memories-up.jpg" alt=""  />
-        </DivItemStyled>
-
-       
         </MainTextStyled>
         
         </MainContentStyled>
+       
+        
         </ContainerStyled>
+        {/* <DivItemStyled> */}
+        <ImageStyled src="../images/imagens-memories-up.jpg" alt="Imagens Memories Up"  />
+        {/* </DivItemStyled> */}
+
+        
         
         </>
         

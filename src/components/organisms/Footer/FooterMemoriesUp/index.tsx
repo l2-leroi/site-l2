@@ -12,11 +12,11 @@ import {
     ContainerStyled,
     DivStyled,
   } from "./styled";
-  import { HeartIcon } from '../../../assets/icons/heartIcon';
-  import ContactList from '../../molecules/ContactList/index'
+  import { HeartIcon } from '../../../../assets/icons/heartIcon';
+  import ContactList from '../../../molecules/ContactList/index'
   import React from 'react';
-  import LineAnimation from '../../atoms/LineAnimation';
-  import { colors } from '../../../styles/colors';
+  import LineAnimation from '../../../atoms/LineAnimation';
+  import { colors } from '../../../../styles/colors';
   import i18next from "i18next";
   
   const FooterMemoriesUp = () => {

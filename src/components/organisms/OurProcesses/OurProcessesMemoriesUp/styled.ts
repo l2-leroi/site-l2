@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../../styles/colors';
+import { colors } from '../../../../styles/colors';
 
 export const SectionOnePageStyled = styled.section`
   display: flex;
@@ -98,7 +98,7 @@ export const ParagraphServicesStyled = styled.p`
   line-height: 3.4rem;
   letter-spacing: -0.04em;
   color: ${colors.gray};
-  padding-top: 24px;
+  padding-top: 22px;
   margin: 0;
 
   @media (max-width: 800px) {
@@ -131,9 +131,21 @@ export const DivServiceItemsStyled = styled.div`
 export const DivItemStyled = styled.div`
   max-width: 350px;
   max-height: 850px;
-  background-color: #5900CC;
+  /* background-color: #5900CC; */
   margin-left: 65%;
-    margin-top: 10%;
+  margin-top: 8%;
+
+  > ul, li {
+    margin-left: 0rem;
+    margin-top: 1.6rem;
+    bottom: 1rem;
+    color: white;
+    font-size: 24px;
+    font-family: 'Circular Air Pro';
+    list-style-type: none;
+    
+  }
+  
 
   @media (max-width: 800px) {
     max-width: 270px;
@@ -169,6 +181,7 @@ export const DivItemStyled = styled.div`
       order: 5;
     }
   }
+  
 `;
 
 export const HeadingItemStyled = styled.h3`
@@ -182,8 +195,11 @@ export const HeadingItemStyled = styled.h3`
   line-height: 4.8rem;
   letter-spacing: -0.02em;
   color: ${colors.gray};
-  padding-bottom: 24px;
+  margin-bottom: 1.2rem;
   margin: 0;
+  
+  
+  
 
   @media (max-width: 800px) {
     padding-bottom: 16px;
@@ -204,9 +220,9 @@ export const ParagraphItemStyled = styled.p`
   font-size: 2.4rem;
   line-height: 3.4rem;
   letter-spacing: -0.04em;
-  color: ${colors.dark_gray};
-  margin-top: 0;
-  margin-bottom: 8rem;
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 
   @media (max-width: 800px) {
     max-width: 230px;

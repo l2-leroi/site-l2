@@ -7,7 +7,7 @@ import i18next from 'i18next';
 // import Button from "../../atoms/Button";
 // import Spinner from "../../atoms/Spinner";
 
-const DesignMemoriesUp = () => {
+const OurDesignsMemoriesUp = () => {
   // const  {t}  = i18next;
 
   
@@ -33,4 +33,4 @@ const DesignMemoriesUp = () => {
     
   );
 };
-export default DesignMemoriesUp;
+export default OurDesignsMemoriesUp;

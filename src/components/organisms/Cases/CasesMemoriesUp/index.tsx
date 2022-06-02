@@ -1,11 +1,11 @@
 import { AsideStyled, ContainerStyled, ContentStyled, DivStyled, ParagraphStyled, PhraseStyled, TitleStyled} from "./styled";
-import CaseList from "../../molecules/CaseList";
+import CaseList from "../../../molecules/CaseList";
 import React from "react";
 import i18next from 'i18next';
 
 import path from 'path';
-import { DivItemStyled } from "../HeaderMemoriesUp/styled";
-import Button from "../../atoms/Button";
+import { DivItemStyled } from "../../Header/HeaderMemoriesUp/styled";
+import Button from "../../../atoms/Button";
 
 const CasesMemoriesUp = () => {
   const  {t}  = i18next;

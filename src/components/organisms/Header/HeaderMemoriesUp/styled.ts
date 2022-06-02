@@ -1,21 +1,19 @@
 import styled from 'styled-components';
-import { colors } from '../../../styles/colors';
+import { colors } from '../../../../styles/colors';
+
 
 export const ContainerStyled = styled.section`
   background-image: url('../images/capa-memories-up.jpg');
   background-size: cover;
+  position: relative;
   background-position: center;
   width: 100%;
   height: 1200px;
-
-  // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-  // padding: 10rem 2.8rem 48rem;
-  /* padding: 10rem 2.8rem 10rem;   */
+  
 `;
 
 export const MainContentStyled = styled.section`
-  background: #171b21;
-  opacity: 0.7;
+ 
   width: 100%;
   height: 1200px;
   display: flex;
@@ -26,6 +24,8 @@ export const MainContentStyled = styled.section`
   flex-direction: column;
   position: relative;
   margin: 0 auto;
+  /* background: #171b21;
+  opacity: 0.3; */
 `;
 
 export const MainTextStyled = styled.hgroup`
@@ -34,7 +34,8 @@ export const MainTextStyled = styled.hgroup`
   text-align: center;
   width: 100%;
   height: 70%;
-  margin-top: 20rem;
+  margin-top: 25rem;
+  position:absolute;
 `;
 
 export const TitleStyled = styled.h1`
@@ -143,7 +144,13 @@ export const TextStyled = styled.p`
 `;
 
 export const DivItemStyled = styled.div`
-  max-width: 340px;
+  width: 600px;
+  height: 200px;
+  display: flex;
+  position: absolute;
+  
+  /* background: #171b21;
+  opacity: 0.7; */
 
   @media (max-width: 800px) {
     max-width: 270px;
@@ -183,13 +190,30 @@ export const DivItemStyled = styled.div`
 
 export const ImageStyled = styled.img`
   /* user-select: none; */
-
+  
   background-position: center;
   background-size: cover;
-  margin-left: 20%;
-  margin-top: 60%;
+  margin-left: 5%;
+  margin-top: -20%;
   border-radius: 8px;
-  opacity: 200%;
+  position: absolute;
+
+  > div, img {
+    #main-banner {
+    padding:0;
+    width: 1000px;
+    margin-top: -10px;
+  }
+  #main-banner-content {
+    margin-top: -10px;
+  }
+  }
+  
+  
+
+ 
+
+
   
 
   @media (max-width: 800px) {

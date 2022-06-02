@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../../styles/colors';
+import { colors } from '../../../../styles/colors';
 
 export const SectionOnePageStyled = styled.section`
   display: flex;
@@ -129,6 +129,7 @@ export const DivServiceItemsStyled = styled.div`
 
 export const DivItemStyled = styled.div`
   max-width: 340px;
+  
 
   @media (max-width: 800px) {
     max-width: 270px;
@@ -228,14 +229,4 @@ export const ParagraphItemStyled = styled.p`
   }
 `;
 
-export const ImageStyled = styled.img`
-  user-select: none;
 
-  @media (max-width: 800px) {
-    max-width: 164px;
-  }
-
-  @media (max-width: 576px) {
-    display: none;
-  }
-`;

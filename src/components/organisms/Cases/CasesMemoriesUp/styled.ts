@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { colors } from '../../../styles/colors';
+import { colors } from '../../../../styles/colors';
 
 export const ContainerStyled = styled.div`
   color: ${colors.black};
-  background-color: black;
+  background-color: ${colors.gray};
   // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   // padding: 10rem 2.8rem 48rem;
-  padding: 10rem 2.8rem 10rem;
+  padding: 10rem 2.8rem 10rem;  
 
   // @media (min-width: 2560px) {
   //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 77%);
@@ -31,16 +31,12 @@ export const ContentStyled = styled.section`
   flex-direction: column;
   max-width: 1500px;
   margin: 0 auto;
-
-  
 `;
 
 export const DivStyled = styled.div`
   display: flex;
   align-items: end;
   margin-bottom: 3.6rem;
-  color: White;
-  margin-left: 54rem;
 `;
 
 export const AsideStyled = styled.aside`
@@ -76,9 +72,8 @@ export const TitleStyled = styled.h2`
   font-size: 5.4rem;
   line-height: 57.6px;
   font-weight: 800;
-  width: 686px;
+  width: 686px; 
   letter-spacing: -0.04em;
-  
 
   ::selection {
     background: ${colors.purple};
@@ -119,55 +114,56 @@ export const PhraseStyled = styled.p`
   }
 `;
 
-export const ButtonClose = styled.div`
-  position: absolute;
-  top: 100px;
-  /* right: 45%; */
-  left: 490px;
-  width: 150px;
-  height: 80px;
-  background-color: #000000;
-  border-radius: 100px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
+// export const DivItemStyled = styled.div`
+//   max-width: 340px;
+  
 
-  font-family: 'Circular Air Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 140%;
-  letter-spacing: -0.04em;
-  color: #ffffff;
-  /* padding-left: 130px; */
-  padding-top: 20px;
-`;
+//   @media (max-width: 800px) {
+//     max-width: 270px;
+//     min-width: 270px;
+//   }
 
-// export const ButtonOpen = styled.div`
-//   position: absolute;
-//   top: 100px;
-//   left: 490px;
-//   width: 300px;
-//   height: 80px;
-//   background-color: #242a33;
-//   border-radius: 100px;
-//   cursor: pointer;
-//   display: flex;
-//   justify-content: center;
-//   text-align: center;
+//   @media (max-width: 700px) {
+//     max-width: 300px;
+//   }
 
-//   font-family: 'Circular Air Pro';
-//   font-style: normal;
-//   font-weight: 400;
-//   font-size: 24px;
-//   line-height: 140%;
-//   letter-spacing: -0.04em;
-//   color: #ffffff;
-//   padding-left: 130px;
-//   padding-top: 20px;
+//   @media (max-width: 600px) {
+//     max-width: 160px;
+//     min-width: 260px;
+//   }
+
+//   @media (max-width: 576px) {
+//     max-width: 384px;
+//     min-width: 0px;
+//   }
+//   `;
+
+// export const Link = styled.div`
+// width: 253px;
+// height: 34px;
+
+// font-family: 'Circular Air Pro';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 19px;
+// line-height: 140%;
+// text-align: center;
+// letter-spacing: -0.04em;
+// padding: 3px;
+// margin-left: 900px;
+// border: 2px solid #20BD9D;
+// border-radius: 24px;
+// color: #171B21;
+
+
+// /* Inside auto layout */
+
+// flex: none;
+// order: 0;
+// flex-grow: 0;
 // `;
 
-
+// export const button = styled.div``;
 
 
 
