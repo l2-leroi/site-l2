@@ -26,7 +26,8 @@ export default function OurServices() {
         </ParagraphServicesStyled>
         <Button linkBtn="#" backgroundColor={`${colors.green}`} text="VEJA NOSSOS SERVIÇOS"></Button>  
       </DivOurServicesStyled>
-      <OutSourcing /> 
+      <OutSourcing text="   ·  Outsourcing Consultivo · Ideação · Design · Atendimento à Start-up ·
+            Consultora em TI  ·  Outsourcing Consultivo · Ideação · Design · Atendimento à Start-up · Consultora em TI" color={"#8e9195"}/> 
     </SectionStyled>
     
   );

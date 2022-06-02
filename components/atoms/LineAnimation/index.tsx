@@ -1,76 +1,126 @@
 import{
-    Line
+    LineStyled,
+    TextContainerStyled,
+    LineContainerStyled, Sup, SpinningIconStyled
 } from './style'
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import OutSourcing from '../../atoms/OutSourcing';
+const Spinner = './images/OurCustomers/enfeite-giratorio.svg';
 
-interface Props{
-  aboveElement: React.ReactNode;
-  belowElement: React.ReactNode;
-  supportDiv: React.ReactNode;
-  children: React.ReactNode;
-  backgroundColor: string;
-}
-
-const LineAnimation = ({aboveElement, belowElement, backgroundColor, children, supportDiv}) => {
+const LineAnimation = ({lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceForSpinner}) => {
   const line = useRef();
+  const text = useRef();
+  const spinner = useRef();
+  
+  const maxRadians = 17.76 * (Math.PI * 180);
+  let maxHeight = 0;
+  let minHeightOutSourcing = 60;
+  let maxHeightSpinner = 200;
+  let resize = false;
+
+  const calculateMaxHeight = (lineElement: HTMLElement) => {
+    maxHeight = (Math.tan(maxRadians) * lineElement.getBoundingClientRect().width) * -1;
+  }
+
+  const verifySpinnerMaxHeight = (spinnerElement: HTMLElement) => {
+    if (spinnerElement.getBoundingClientRect().height > maxHeightSpinner) {
+      maxHeightSpinner = spinnerElement.getBoundingClientRect().height;
+    }
+  }
+  
 
   const animateLine = () => {
-    // const box = document.querySelector(".testebox") as HTMLElement;
-    // const roxo = document.querySelector("#contact") as HTMLElement;
-    // const customersContent = document.querySelector(".customersContent") as HTMLElement;
-    // const teste4 = document.querySelector(".teste4") as HTMLElement;
-    // const contentstyled = document.querySelector(".containerstyled") as HTMLElement;
-    // const footer = document.querySelector(".footer") as HTMLElement;
+    const textElement = text.current as HTMLElement;
+    const lineElement = line.current as HTMLElement;;
+    const spinnerElement = spinner.current as HTMLElement;
 
-
-    const lineElement = line.current as HTMLElement;
-
-    const halfTopScroll =
-      window.innerHeight * 0.6 - lineElement.getBoundingClientRect().top;
-
-    const degrees = halfTopScroll/50;
-
-    if(degrees > 0 && degrees <= 17.76){
-      lineElement.style.transform = `skewY(${degrees}deg)`;
-
-      const radians = degrees * (Math.PI/180)
-      const x = Math.tan(radians) * (window.innerWidth) / 2;
-
-      belowElement.style.paddingTop = x+"px";
-      belowElement.style.marginTop = -x+"px";
-      belowElement.style.transition = `0.2s linear all`;
-
-      aboveElement.style.marginBottom = -x+"px";
-      aboveElement.style.paddingBottom = x+"px";
-      aboveElement.style.transition = `0.2s linear all`;
-
-      supportDiv.style.top = -(x + 50)+"px";
-      supportDiv.style.height = (x + 20)+"px";
-      supportDiv.style.width = (window.innerWidth/2)+"px";
-      supportDiv.style.transition = `0.2s linear all`;
-      const marginContainer = +getComputedStyle(aboveElement).getPropertyValue('margin-right')
-      .replace('px', '')
-      const paddingContainer = +getComputedStyle(belowElement).getPropertyValue('padding-right')
-      .replace('px', '')
-      const sum = marginContainer + paddingContainer;
-      supportDiv.style.right = `-${sum}px`
-      lineElement.style.paddingTop = x+"px";
-      lineElement.style.marginTop = -x+"px";
+    calculateMaxHeight(lineElement);
+    if(hasSpinner){
+      verifySpinnerMaxHeight(spinnerElement);
     }
+    
 
+    const width = lineElement.getBoundingClientRect().width;
+    
+    let distanceFromTop = window.innerHeight * 0.6 - lineElement.getBoundingClientRect().top;
+
+    if(resize) {
+      distanceFromTop = 0;
+      resize = false;
+      maxHeightSpinner = 20;
+    }
+    const provisionalHeight = distanceFromTop;
+
+    const tangent = provisionalHeight/width;
+    const arcTangent = Math.atan(tangent);
+    const degrees = arcTangent * (180/ Math.PI);
+
+    if(degrees >= 0 && degrees <= 17.76 && distanceFromTop <= maxHeight){
+
+      if(distanceFromTop >= 0 && hasOutSourcing){
+        textElement.style.top =  (- (minHeightOutSourcing) + distanceFromTop/2) + "px";
+      }
+
+      if(hasSpinner){
+        const sum = (maxHeightSpinner/2.5) + (spaceForSpinner + maxHeight);
+
+        if (!(distanceFromTop * 0.8 > sum)) {
+          spinnerElement.style.top = (distanceFromTop * 1.2 - (maxHeightSpinner/2.5)) + 'px';
+        }
+      }
+      
+      lineElement.style.height = (distanceFromTop) + "px";
+      if(hasOutSourcing){
+        textElement.style.transform = `rotate(${degrees}deg)`;
+      }
+
+    }
     requestAnimationFrame(animateLine);
   }
 
+  const putTextInTheCorrectTop = () => {
+    const textElement = text.current as HTMLElement;
+    textElement.style.top = -(minHeightOutSourcing) + "px";
+  }
+
+  const putSpinnerInTheCorrectTop = () => {
+    const spinnerElement = spinner.current as HTMLElement;
+    spinnerElement.style.top = -(maxHeightSpinner) + "px";
+  }
+
   React.useEffect(() => {
+    if(hasOutSourcing){
+      putTextInTheCorrectTop();
+    }
+
     requestAnimationFrame(animateLine)
+
+    if(hasSpinner){
+      putSpinnerInTheCorrectTop();
+    }
+
+    window.addEventListener("resize", ()=> resize = true);
   },[]);
 
     return(
       <>
-        <Line ref={line} bgColor={backgroundColor}>
-          {children}
-        </Line>
+        <LineContainerStyled style={{backgroundColor: secondaryBg, borderColor: lineBg}}>
+
+        {(hasSpinner)? (
+        <SpinningIconStyled className="spinner" ref={spinner}>
+          <img src={Spinner} alt="L2 Code" />
+        </SpinningIconStyled>): null}
+        
+
+          {(hasOutSourcing)? (<TextContainerStyled ref={text} style={{backgroundColor: secondaryBg}}>
+            <OutSourcing color={"#242A33"} text={"Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · "}/>
+          </TextContainerStyled>): null}
+          
+          <LineStyled ref={line} style={{backgroundColor: lineBg }}/>
+          <Sup style={{backgroundColor: lineBg }} />
+        </LineContainerStyled>
+        
       </>
     )
 }

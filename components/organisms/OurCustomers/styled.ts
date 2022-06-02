@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const OurCustomersStyled = styled.section`
@@ -6,38 +6,11 @@ export const OurCustomersStyled = styled.section`
   overflow: hidden;
   position: relative;
 
-  position: relative;
   width: 100%;
-  // margin-top: -200px;
   background-color: ${colors.gray};
-  // transform: skewY(17.76deg);
   transition: 0.1s linear all;
-  
-
-  @media(max-width: 600px){
-    padding-top: 50px;
-  }
-
-  @media(max-width: 414px){
-    padding-top: 0px;
-  }
 `;
 
-export const Teste2 = styled.section`
-// transform: skewY(-17.76deg);
-transition: 0.2s linear all;
-`;
-
-export const Teste5 = styled.div`
-    position: absolute;
-    top: -200px;
-    left: 0;
-    background: blue;
-    width: 1000px;
-    height: 200px;
-    z-index: 50;
-    clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 100% 100%);
-`;
 
 export const BlackLineStyled = styled.div`
   color: ${colors.gray};
@@ -47,9 +20,10 @@ export const BlackLineStyled = styled.div`
   grid-template-columns: 1fr minmax(280px, 1456px) 1fr;
   padding: 0px 28px;
   overflow: hidden;
-  // padding-bottom: 300px;
+  padding-bottom: 80px;
   @media(max-width: 800px){
     padding: 0px 12px;
+    padding-bottom: 80px;
   }
 `;
 
@@ -155,76 +129,8 @@ export const ContentStyled = styled.section`
 `;
 
 
-export const SpinningAnimation = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-`;
-
-export const SpinningIconStyled = styled.div`
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  z-index: 1;  
-  overflow-x: hidden;
-  border-radius: 50%;
-  animation: ${SpinningAnimation} 5s linear infinite;
-  max-width: 468px;
-
-  img{
-
-    @media(max-width: 1366px){
-      max-width: 380px;
-    }
-  
-    @media(max-width: 800px){
-      max-width: 248px;
-    }
-  
-    @media(max-width: 414px){
-      max-width: 140px;
-    }
-  }
-`;
-
-export const SignContainerStyled = styled.div`
-  color: ${colors.dark_gray};
-  top: 120px;
-  // position: absolute;
-  display: none;
-`;
-
 export const CustomersContainer = styled.div`
   z-index: 5;  
   grid-column: 2;
 `;
 
-export const BlackBg = styled.div`
-  margin-top: -5px;
-  height: 400px;
-  padding-bottom: 50px;
-  width:100%;
-  background-color: ${colors.black};
-  // position: absolute;
-`;
-
-export const DiagonalBox = styled.div`
-width: 100%;
-overflow: hidden;
-// position: relative;
-transition: 0.2s linear all;
-width: 100%;
-// margin-top: -200px;
-background-color: #5900CC;
-background-color:  #171B21;	
-// transform: skewY(17.76deg);
-`;
-
-export const Contentteste = styled.div`
-  // max-width: 50em;
-  // transform: rotate(17.76deg);
-  
-`;

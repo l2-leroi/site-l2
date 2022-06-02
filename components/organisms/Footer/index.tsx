@@ -42,7 +42,6 @@ const Footer = () => {
     // <LineAnimation backgroundColor={colors.purple} classe={'purpleLine'}>
     <FooterStyled id="contact" className="footer">
       <ContainerStyled className="containerstyled">
-       <Teste4 className="teste4"></Teste4>
         <ContentStyled>
           <DivStyled>
             <TitleStyled>VAMOS CONVERSAR</TitleStyled>
