@@ -24,10 +24,10 @@ const Cases = () => {
     "../images/to-parado-4.jpg"
   ];
   const FilaDeTrabalho = [
-    "../images/to-parado-1.jpg", 
-    "../images/to-parado-2.jpg", 
-    "../images/to-parado-3.jpg", 
-    "../images/to-parado-4.jpg"
+    "../images/mais-acesso-1.jpg", 
+    "../images/mais-acesso-2.jpg", 
+    "../images/mais-acesso-3.jpg", 
+    "../images/mais-acesso-4.jpg"
   ];
 
   const allCases = [
@@ -44,8 +44,8 @@ const Cases = () => {
       number: "04", 
       title: "Fila de Trabalho", 
       info: t('allCases.educationalCredit'), 
-      image: "../images/capa-fila-de-trabalho-1.png", 
-      alt: t('cases.alt.coverWorkQueue'), 
+      image: "../images/capa-fila-de-trabalho-1.jpg", 
+      alt: t('allCases.alt.coverWorkQueue'), 
       link: "#4", 
       hover: FilaDeTrabalho 
     },
