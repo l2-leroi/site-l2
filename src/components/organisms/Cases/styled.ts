@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
+import { Typography } from '../../../styles/typography';
 
 export const ContainerStyled = styled.div`
   color: ${colors.black};
@@ -31,12 +32,45 @@ export const ContentStyled = styled.section`
   flex-direction: column;
   max-width: 1500px;
   margin: 0 auto;
+  >p{
+    margin-bottom: 8rem;
+    width: 502px;
+    ::selection {
+      background: ${colors.purple};
+      color: ${colors.gray};
+    }
+  
+    @media (max-width: 800px) {
+      width: 175px;
+    }
+  }
 `;
 
 export const DivStyled = styled.div`
   display: flex;
   align-items: end;
   margin-bottom: 3.6rem;
+  h2{
+    width: 686px; 
+    ::selection {
+      background: ${colors.purple};
+      color: ${colors.gray};
+    }
+  
+    @media (max-width: 930px) {
+      width: 500px;
+    }
+  
+    @media (max-width: 800px) {
+      width: 278px;
+      line-height: 28.8px;
+    }
+  
+    @media (max-width: 415px) {
+      width: 264px;
+      line-height: 28.8px;
+    }
+  }
 `;
 
 export const AsideStyled = styled.aside`
@@ -52,64 +86,11 @@ export const AsideStyled = styled.aside`
   @media (max-width: 400px) {
     margin-left: 19px;
   }
-`;
-
-export const ParagraphStyled = styled.p`
-  font-family: 'Circular Air Pro', sans-serif;
-  font-size: 1.6rem;
-  line-height: 22.4px;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-
-  ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
+  p{
+    ::selection {
+      background: ${colors.purple};
+      color: ${colors.gray};
+    }
   }
 `;
 
-export const TitleStyled = styled.h2`
-  font-family: 'Neue Machina', sans-serif;
-  font-size: 6.4rem;
-  line-height: 57.6px;
-  font-weight: 800;
-  width: 686px; 
-  letter-spacing: -0.04em;
-
-  ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
-  }
-
-  @media (max-width: 930px) {
-    width: 500px;
-  }
-
-  @media (max-width: 800px) {
-    width: 278px;
-    line-height: 28.8px;
-  }
-
-  @media (max-width: 415px) {
-    width: 264px;
-    line-height: 28.8px;
-  }
-`;
-
-export const PhraseStyled = styled.p`
-  font-family: 'Circular Air Pro', sans-serif;
-  font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 3.36rem;
-  width: 502px;
-  margin-bottom: 8rem;
-  letter-spacing: -0.04em;
-
-  ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
-  }
-
-  @media (max-width: 800px) {
-    width: 175px;
-  }
-`;

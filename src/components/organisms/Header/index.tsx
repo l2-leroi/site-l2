@@ -6,20 +6,17 @@ import {
   LanguageStyled,
   SocialMediaStyled,
   ArrowSpinnerContainerStyled,
-  TitleStyled,
-  SubtitleStyled,
-  TitleComplementStyled,
-  LanguageItemStyled,
-  SocialMediaTitleStyled,
-  SocialMediaItemStyled,
-  ImageStyled,
+  SocialMediaLinkStyled,
+  ImageStyled
 } from "./styled";
 import React, { useEffect, useRef, useState } from 'react';
 import ScrollCircle from '../../atoms/ScrollCircle/index';
 import Link from "next/link";
 import i18next from "i18next";
+import { Typography } from "../../../styles/typography";
+
 const Header = () => {
-  const {t} = i18next
+  const { t } = i18next
   const backgroundList = [
     {
       image: './images/PROTOTYPE.jpg',
@@ -75,7 +72,7 @@ const Header = () => {
       document.body.style.overflow = 'hidden';
       const title = document.querySelectorAll<HTMLElement>('.title');
       title.forEach((title) => {
-        title.addEventListener('contextmenu', (e) => {e.preventDefault()});
+        title.addEventListener('contextmenu', (e) => { e.preventDefault() });
       });
     }
   }, [])
@@ -83,8 +80,8 @@ const Header = () => {
   useEffect(() => {
     function runAnimation() {
       const header = document.querySelector(".header");
-      const link = document.querySelectorAll(".link");
       const nav = document.querySelector(".nav");
+      const typography = document.querySelectorAll(".typography");
       const index = currentImage !== '' ? (backgroundList.findIndex(
         (background) => background.image === currentImage) + 1)
         : 0;
@@ -115,27 +112,28 @@ const Header = () => {
         currentText = backgroundList[index].text;
         setActualText(currentText);
       }
-      header.classList.add("white");
-      nav?.classList.add("white");
-      link.forEach((element) => {
+      typography.forEach((element) => {
         element.classList.add('white');
       });
+      header.classList.add("white");
+      nav?.classList.add("white");
       setWhiteCircle(true);
     }
 
-    if(isInitInterval) {
+    if (isInitInterval) {
       interval.current = setInterval(runAnimation, 200);
     }
-  },[isInitInterval])
+  }, [isInitInterval])
 
   const exitInterval = (backgroundList) => {
-    
+
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
-    const link = document.querySelectorAll(".link");
+    const typography= document.querySelectorAll(".typography");
     header.classList.remove("white");
     nav?.classList.remove("white");
-    link.forEach((element) => {
+
+    typography.forEach((element) => {
       element.classList.remove('white');
     });
     setWhiteCircle(false);
@@ -187,12 +185,15 @@ const Header = () => {
         />
       ))}
 
-      <MainContentStyled>
+      <MainContentStyled >
         <MainTextStyled>
-        <SubtitleStyled>Love to</SubtitleStyled>
-          <TitleStyled className={
-            actualText.length > 7 ? 'textWrap title' : 'title'
-          } 
+
+          <Typography className="typography" tag="h2" size="small" lineHeight="line120" fontWeight="weight3" fontFamily="font1" letterSpacing="space1">Love to</Typography>
+
+          <Typography tag='h1' fontFamily='font1' fontWeight="weight3" size="xxlarge" lineHeight="line100"
+            className={
+              actualText.length > 7 ? 'textWrap typography title' : ' typography title'
+            }
             onMouseEnter={() => {
               if (window.innerWidth > 500 && window.innerHeight > 414) {
                 setIsInitInterval(true);
@@ -218,35 +219,48 @@ const Header = () => {
             }}
           >
             {actualText}
-          </TitleStyled>
-
-          <TitleComplementStyled className='bannerText'>
-          {t('header.weCreate')}
-          </TitleComplementStyled>
+          </Typography>
+          <Typography className='bannerText typography' tag={"p"} >{t('header.weCreate')}</Typography>
         </MainTextStyled>
 
         <LanguageStyled className='anime'>
-          <LanguageItemStyled className="link">
+          <Typography tag='button' size="xxsmall"  letterSpacing="space1" className="typography">
             <Link href='/pt' locale='pt' scroll={false}>PT</Link>
-          </LanguageItemStyled>
-          <LanguageItemStyled className="link">
+          </Typography>
+          <Typography tag='button' size="xxsmall"  letterSpacing="space1" className="typography">
             <Link href='/en' locale='en' scroll={false}>EN</Link>
-          </LanguageItemStyled>
+          </Typography>
         </LanguageStyled>
       </MainContentStyled>
 
       <FooterContentStyled>
         <SocialMediaStyled className='anime'>
-          <SocialMediaTitleStyled>{t('header.followUs')}</SocialMediaTitleStyled>
-          <SocialMediaItemStyled className="link" href="https://www.linkedin.com/company/l2code-dev/" target="_blank">In</SocialMediaItemStyled>
-          <SocialMediaItemStyled className="link" href="https://www.instagram.com/l2code.com.br/" target="_blank">IG</SocialMediaItemStyled>
+
+          <Typography className="typography" tag='span' size="xxsmall" letterSpacing="space1" >
+            {t('header.followUs')}
+          </Typography>
+
+          <SocialMediaLinkStyled  href="https://www.linkedin.com/company/l2code-dev/" target="_blank">
+
+            <Typography className="typography" tag='button' fontWeight="weight2" size="xxsmall" letterSpacing="space1">In
+            </Typography>
+
+          </SocialMediaLinkStyled>
+
+          <SocialMediaLinkStyled  href="https://www.instagram.com/l2code.com.br/" target="_blank">
+
+            <Typography className="typography" tag='button' fontWeight="weight2" size="xxsmall" letterSpacing="space1">IG
+            </Typography>
+
+          </SocialMediaLinkStyled>
+
         </SocialMediaStyled>
 
         <ArrowSpinnerContainerStyled className='anime'>
-        <ScrollCircle isWhiteImage={whiteCircle} 
-        blackImage={`${t('images.spinner')}`} 
-        whiteImage={`${t('images.whiteSpinner')}`} 
-        alt={`${t('images.alt.thereIsMore')}`}/>
+          <ScrollCircle isWhiteImage={whiteCircle}
+            blackImage={`${t('images.spinner')}`}
+            whiteImage={`${t('images.whiteSpinner')}`}
+            alt={`${t('images.alt.thereIsMore')}`} />
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
     </HeaderStyled>

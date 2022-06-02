@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
+import { Typography } from '../../../styles/typography';
 
 export const SectionOnePageStyled = styled.section`
   display: flex;
@@ -63,45 +64,34 @@ export const DivServicesStyled = styled.div`
   flex-direction: column;
   margin-bottom: 8rem;
   align-items: center;
-`;
-
-export const HeadingStyled = styled.h2`
-  ::selection {
-    background: ${colors.purple};
+  h2{
+    ::selection {
+      background: ${colors.purple};
+    }
+    max-width: 464px;
+    margin: 0;
+  
+    @media (max-width: 800px) {
+      max-width: 264px;
+    }
+  
   }
-  max-width: 464px;
-  font-family: 'Neue Machina';
-  font-weight: 800;
-  font-size: 6.4rem;
-  line-height: 5.8rem;
-  letter-spacing: -0.04em;
-  color: ${colors.gray};
-  margin: 0;
-
-  @media (max-width: 800px) {
-    max-width: 264px;
-  }
-`;
-
-export const ParagraphServicesStyled = styled.p`
-  ::selection {
-    background: ${colors.purple};
-  }
-  max-width: 464px;
-  font-family: 'Circular Air Pro';
-  font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 3.4rem;
-  letter-spacing: -0.04em;
-  color: ${colors.gray};
-  padding-top: 24px;
-  margin: 0;
-
-  @media (max-width: 800px) {
-    width: 160px;
-    padding-top: 20px;
+  p{
+    max-width: 464px;
+    ::selection {
+      background: ${colors.purple};
+    }
+    color: ${colors.gray};
+    padding-top: 24px;
+    margin: 0;
+  
+    @media (max-width: 800px) {
+      width: 160px;
+      padding-top: 20px;
+    }
   }
 `;
+
 
 export const DivServiceItemsStyled = styled.div`
   display: flex;
@@ -157,70 +147,58 @@ export const DivItemStyled = styled.div`
       order: 5;
     }
   }
-`;
+  h3{
+    ::selection {
+      background: ${colors.purple};
 
-export const HeadingItemStyled = styled.h3`
-  ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
-  }
-  font-family: 'Neue Machina';
-  font-weight: 800;
-  font-size: 4rem;
-  line-height: 4.8rem;
-  letter-spacing: -0.02em;
-  color: ${colors.gray};
-  padding-bottom: 24px;
-  margin: 0;
+    }
 
-  @media (max-width: 800px) {
-    padding-bottom: 16px;
-  }
-
-  @media (max-width: 800px) {
-    padding-bottom: 16px;
-  }
-`;
-
-export const ParagraphItemStyled = styled.p`
-  ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
-  }
-  font-family: 'Circular Air Pro';
-  font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 3.4rem;
-  letter-spacing: -0.04em;
-  color: ${colors.dark_gray};
-  margin-top: 0;
-  margin-bottom: 8rem;
-
-   @media (max-width: 800px) {
-    max-width: 230px;
-
-    &.last-paragraph{
-      max-width: 144px;
+    padding-bottom: 24px;
+    margin: 0;
+  
+    @media (max-width: 800px) {
+      padding-bottom: 16px;
+    }
+  
+    @media (max-width: 800px) {
+      padding-bottom: 16px;
     }
   }
+  p{
+    ::selection {
+      background: ${colors.purple};
 
-  @media (max-width: 600px) {
-    max-width: 180px;
-
-    &.last-paragraph{
+    }
+    color: ${colors.dark_gray};
+    margin-top: 0;
+    margin-bottom: 8rem;
+  
+     @media (max-width: 800px) {
+      max-width: 230px;
+  
+      &.last-paragraph{
+        max-width: 144px;
+      }
+    }
+  
+    @media (max-width: 600px) {
       max-width: 180px;
+  
+      &.last-paragraph{
+        max-width: 180px;
+      }
     }
-  }
-
-  @media (max-width: 576px) {
-    max-width: 300px;
-
-    &.last-paragraph{
+  
+    @media (max-width: 576px) {
       max-width: 300px;
+  
+      &.last-paragraph{
+        max-width: 300px;
+      }
     }
   }
 `;
-
+  
 export const ImageStyled = styled.img`
   user-select: none;
 
