@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ContainerStyled,
   DivLogoStyled,
@@ -20,13 +20,30 @@ import Scroll from '../../molecules/Scroll';
 import i18next from 'i18next';
 import Link from 'next/link';
 
-export interface Props {
+export interface MenuProps {
   openMenu: boolean;
   closeMenu: (value: boolean) => void;
 }
 
-const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
-  const { t } = i18next
+const Menu = ({ openMenu, closeMenu }: MenuProps) => {
+  const { t } = i18next;
+  const [language, setLanguage] = useState('');
+
+  useEffect(() => {
+    const urlLanguage = window.location.pathname;
+
+    if(urlLanguage == '/en') {
+      setLanguage('en');
+    }
+    else { 
+      setLanguage('pt');
+    }
+  }, [])
+
+  useEffect(() => {
+    openMenu ? document.body.style.overflow = 'hidden' : document.body.style.overflow = null;
+  }, [openMenu])
+
   return (
     <MenuStyled style={{ display: openMenu ? 'block' : 'none' }}>
       <ContainerStyled>
@@ -39,7 +56,7 @@ const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
           </DivContactStyled>
         </DivLogoStyled>
 
-        <Scroll />
+        <Scroll language={language} />
 
         <DivMenuStyled>
           <DivTextMenuStyled>
@@ -53,10 +70,10 @@ const Menu: React.FC<Props> = ({ openMenu, closeMenu }) => {
           </DivTextMenuStyled>
 
           <DivLanguageStyled>
-            <ParagraphLanguageStyled>
+            <ParagraphLanguageStyled onClick={() => setLanguage('pt')}>
               <Link href='/pt' locale='pt' scroll={false}>PT</Link>
             </ParagraphLanguageStyled>
-            <ParagraphLanguageStyled>
+            <ParagraphLanguageStyled onClick={() => setLanguage('en')}>
               <Link href='/en' locale='en' scroll={false}>EN</Link>
             </ParagraphLanguageStyled>
           </DivLanguageStyled>

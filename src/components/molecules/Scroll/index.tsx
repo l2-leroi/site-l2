@@ -3,13 +3,11 @@ import { v4 as uuid } from 'uuid';
 import { ElementScrollStyled, InfiniteScrollContainerStyled } from './styled';
 import i18next from 'i18next';
 
-/*
-const element = document.getElementById('home')
-element.innerText = "< Home >"
-element.style.color = "#20BD9D"
-*/
+export interface ScrollProps {
+  language: string;
+}
 
-export default function Scroll() {
+const Scroll = (language: ScrollProps) => {
   const { t } = i18next
 
   const baseItemsPT = [
@@ -42,38 +40,35 @@ export default function Scroll() {
     './contato',
   ];
 
-//   function createMarkup() {
-//     for (let i = 0; i < baseItems.length; i++) {
-//       const element = baseItems[i];
-//       const url = baseUrl[i];
-
-//       if (baseUrl[i] == './') {
-//         console.log(baseItems[i]);
-//         console.log('funcionando');
-//       }
-//     }
-//   }
-//  console.log(createMarkup());
-
   let baseItems = t('menu.ourEmail') == "our e-mail" ? baseItemsEN : baseItemsPT;
-  console.log(baseItems);
 
   useEffect(() => {
+    console.log('entrei');
     const urlLanguage = window.location.pathname;
 
     if(urlLanguage == '/en') {
+      setItems([...baseItemsEN, ...baseItemsEN])
       baseItems = baseItemsEN;
     }
     else { 
+      setItems([...baseItemsPT, ...baseItemsPT])
       baseItems = baseItemsPT;
     }
-  })
+  });
 
   const [items, setItems] = useState([...baseItems, ...baseItems]);
   
   const fetchData = () => {
     setItems([...items, ...baseItems]);
   };
+
+  // useEffect(() => {
+  //   if(language.language == 'en') {
+  //     setItems([...baseItemsEN, ...baseItemsEN])
+  //   } else {
+  //     setItems([...baseItemsPT, ...baseItemsPT])
+  //   }
+  // }, [language])
 
   return (
     <InfiniteScrollContainerStyled
@@ -91,3 +86,5 @@ export default function Scroll() {
     </InfiniteScrollContainerStyled>
   );
 }
+
+export default Scroll;
