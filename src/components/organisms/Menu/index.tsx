@@ -56,7 +56,7 @@ const Menu = ({ openMenu, closeMenu }: MenuProps) => {
           </DivContactStyled>
         </DivLogoStyled>
 
-        <Scroll language={language} />
+        <Scroll />
 
         <DivMenuStyled>
           <DivTextMenuStyled>

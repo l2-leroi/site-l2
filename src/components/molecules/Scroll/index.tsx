@@ -1,15 +1,13 @@
 import { useEffect, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { ElementScrollStyled, InfiniteScrollContainerStyled } from './styled';
-import i18next from 'i18next';
+import { useRouter } from 'next/router';
 
 export interface ScrollProps {
   language: string;
 }
 
-const Scroll = (language: ScrollProps) => {
-  const { t } = i18next
-
+const Scroll = () => {
   const baseItemsPT = [
     'Home',
     'Sobre',
@@ -40,13 +38,11 @@ const Scroll = (language: ScrollProps) => {
     './contato',
   ];
 
-  let baseItems = t('menu.ourEmail') == "our e-mail" ? baseItemsEN : baseItemsPT;
+  const router = useRouter();
+  let baseItems = router.asPath == "/en" ? baseItemsEN : baseItemsPT;
 
   useEffect(() => {
-    console.log('entrei');
-    const urlLanguage = window.location.pathname;
-
-    if(urlLanguage == '/en') {
+    if(router.asPath == '/en') {
       setItems([...baseItemsEN, ...baseItemsEN])
       baseItems = baseItemsEN;
     }
@@ -54,21 +50,13 @@ const Scroll = (language: ScrollProps) => {
       setItems([...baseItemsPT, ...baseItemsPT])
       baseItems = baseItemsPT;
     }
-  });
+  },[router.asPath]);
 
   const [items, setItems] = useState([...baseItems, ...baseItems]);
   
   const fetchData = () => {
     setItems([...items, ...baseItems]);
   };
-
-  // useEffect(() => {
-  //   if(language.language == 'en') {
-  //     setItems([...baseItemsEN, ...baseItemsEN])
-  //   } else {
-  //     setItems([...baseItemsPT, ...baseItemsPT])
-  //   }
-  // }, [language])
 
   return (
     <InfiniteScrollContainerStyled
