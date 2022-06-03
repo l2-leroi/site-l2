@@ -112,9 +112,8 @@ const LineAnimation = ({lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceFo
           <img src={Spinner} alt="L2 Code" />
         </SpinningIconStyled>): null}
         
-
           {(hasOutSourcing)? (<TextContainerStyled ref={text} style={{backgroundColor: secondaryBg}}>
-            <OutSourcing color={"#242A33"} text={"Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · "}/>
+            <OutSourcing color={"black_1"} texts={"outSourcing.ourCustomers"}/>
           </TextContainerStyled>): null}
           
           <LineStyled ref={line} style={{backgroundColor: lineBg }}/>
