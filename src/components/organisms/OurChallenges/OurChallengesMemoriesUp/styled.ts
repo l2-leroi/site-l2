@@ -49,7 +49,7 @@ export const ContentOnePageStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 12px;
+  margin-top: 120px;
 
   @media (max-width: 900px) {
     padding: 40px 16px;

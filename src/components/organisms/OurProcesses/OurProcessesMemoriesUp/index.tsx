@@ -9,7 +9,7 @@ import {
   ImageStyled,
 } from "./styled";
 import i18next from 'i18next';
-export default function OurProcessesPageMemoriesUp() {
+export default function OurProcessesMemoriesUp() {
   const {t} = i18next
   return (
     <SectionOnePageStyled id="services">

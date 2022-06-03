@@ -13,7 +13,7 @@ import {
   ScrollArrow,
 } from "./styled";
 import i18next from 'i18next';
-export default function OurServicesOnePageMemoriesUp() {
+export default function OurChallengesMemoriesUp() {
   const {t} = i18next
   return (
     <SectionOnePageStyled id="services">

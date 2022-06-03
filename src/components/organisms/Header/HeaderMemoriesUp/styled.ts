@@ -1,56 +1,49 @@
 import styled from 'styled-components';
 import { colors } from '../../../../styles/colors';
 
-
 export const ContainerStyled = styled.section`
-  background-image: url('../images/capa-memories-up.jpg');
-  background-size: cover;
-  position: relative;
-  background-position: center;
   width: 100%;
-  height: 1200px;
-  
+  height: 982px;
+  top: 0px;
+
+  position: relative;
 `;
 
-export const MainContentStyled = styled.section`
- 
+export const MainContentStyled = styled.hgroup`
+  background: black;
+  opacity: 0.9;
+  background-image: url('../images/capa-maior-memories-up.jpg');
+  background-position: center;
+  background-size: cover;
+  position: absolute;
   width: 100%;
-  height: 1200px;
-  display: flex;
-  align-self: center;
-  z-index: 50;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  margin: 0 auto;
-  /* background: #171b21;
-  opacity: 0.3; */
+  height: 1008.12px;
+  left: 0px;
+  top: -26px;
 `;
 
 export const MainTextStyled = styled.hgroup`
   align-self: center;
-  margin: 0 auto;
+  position: absolute;
+  width: 800px;
+  height: 100px;
+  left: 0px;
+  top: 25rem;
   text-align: center;
-  width: 100%;
-  height: 70%;
-  margin-top: 25rem;
-  position:absolute;
 `;
 
 export const TitleStyled = styled.h1`
-  align-self: center;
   font-family: 'Neue Machina';
   font-style: normal;
   font-weight: 800;
   font-size: 40px;
   line-height: 48%;
-  padding-top: 0;
+  top: 50px;
+  left: 600px;
   text-align: center;
   letter-spacing: -0.04em;
-  margin: 0 auto 10px;
-  user-select: none;
-  color: white;
+  color: #f2f3f4;
+  position: absolute;
 
   @media (max-width: 1220px) {
     font-size: 140px;
@@ -75,17 +68,19 @@ export const TitleStyled = styled.h1`
 `;
 
 export const SubtitleStyled = styled.h2`
-  align-self: center;
   font-family: 'Neue Machina';
   font-style: normal;
   font-weight: 800;
-  font-size: 100px;
+  font-size: 150px;
   line-height: 200px;
   text-align: center;
-  letter-spacing: -0.02em;
-  padding-top: 10px;
-  margin: 0 auto -10px;
-  color: white;
+  letter-spacing: -6px;
+  padding-top: 90px;
+  left: 30px;
+  width: 1303px;
+  height: 200px;
+  color: #f2f3f4;
+  position: absolute;
 
   ::selection {
     background: ${colors.purple};
@@ -107,19 +102,22 @@ export const SubtitleStyled = styled.h2`
 `;
 
 export const TextStyled = styled.p`
-  align-self: center;
-  font-family: 'Neue Machina';
+  font-family: 'Circular Air Pro';
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 140%;
-  padding-top: 10px;
   padding-bottom: 10%;
   text-align: center;
   letter-spacing: -0.04em;
   margin: 0 auto 10px;
   user-select: none;
   color: #f2f3f4;
+  position: absolute;
+  width: 464px;
+  height: 34px;
+  left: 500px;
+  top: 300px;
 
   @media (max-width: 1220px) {
     font-size: 140px;
@@ -144,13 +142,12 @@ export const TextStyled = styled.p`
 `;
 
 export const DivItemStyled = styled.div`
-  width: 600px;
-  height: 200px;
-  display: flex;
   position: absolute;
-  
-  /* background: #171b21;
-  opacity: 0.7; */
+  width: 1208px;
+  height: 700px;
+  left: calc(50% - 1208px / 2);
+  top: 801px;
+  border-radius: 8px;
 
   @media (max-width: 800px) {
     max-width: 270px;
@@ -189,32 +186,12 @@ export const DivItemStyled = styled.div`
 `;
 
 export const ImageStyled = styled.img`
-  /* user-select: none; */
-  
-  background-position: center;
-  background-size: cover;
-  margin-left: 5%;
-  margin-top: -20%;
-  border-radius: 8px;
   position: absolute;
-
-  > div, img {
-    #main-banner {
-    padding:0;
-    width: 1000px;
-    margin-top: -10px;
-  }
-  #main-banner-content {
-    margin-top: -10px;
-  }
-  }
-  
-  
-
- 
-
-
-  
+  width: 1208px;
+  height: 700px;
+  left: 0px;
+  top: 0px;
+  border-radius: 8px;
 
   @media (max-width: 800px) {
     max-width: 164px;
@@ -225,14 +202,15 @@ export const ImageStyled = styled.img`
   }
 `;
 
-
 export const LanguageStyled = styled.div`
   display: flex;
   flex-direction: column;
   list-style: none;
   position: absolute;
-  right: 28px;
-  margin-top: -25%;
+  right: 0px;
+  margin-top: -43%;
+  left: 0px;
+  color: aliceblue;
 
   @media (min-height: 416px) and (max-width: 800px) {
     position: static;
@@ -262,6 +240,9 @@ export const LanguageItemStyled = styled.button`
   font-size: 16px;
   line-height: 140%;
   text-align: right;
+  margin-right: 30px;
+  top: -100px;
+
   letter-spacing: -0.02em;
   color: white;
 

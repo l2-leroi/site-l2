@@ -21,31 +21,29 @@ const HeaderMemoriesUp = () => {
         <ContainerStyled>
         
         <MainContentStyled>
+        
+        
+        <MainTextStyled>
+            <TitleStyled>Case 01</TitleStyled>
+        <SubtitleStyled>Memories Up</SubtitleStyled>
+        <TextStyled >Design de produto para start-up americana</TextStyled>
+        </MainTextStyled>
+        </MainContentStyled>
+
+        </ContainerStyled>
+        <DivItemStyled>
+        <ImageStyled src="../images/imagens-memories-up.jpg" alt="Imagens Memories Up"  /> 
+        </DivItemStyled>
+
         <LanguageStyled className='anime'>
           <LanguageItemStyled className="link">
             <Link >PT</Link>
           </LanguageItemStyled>
           <LanguageItemStyled className="link">
-            <Link >EN</Link>
+            <Link > EN</Link>
           </LanguageItemStyled>
         </LanguageStyled>
         
-        <MainTextStyled>
-            <TitleStyled>Case 01</TitleStyled>
-        <SubtitleStyled>Memories Up</SubtitleStyled>
-        
-        <TextStyled >Design de produto para start-up americana</TextStyled>
-
-        </MainTextStyled>
-        
-        </MainContentStyled>
-       
-        
-        </ContainerStyled>
-        {/* <DivItemStyled> */}
-        <ImageStyled src="../images/imagens-memories-up.jpg" alt="Imagens Memories Up"  />
-        {/* </DivItemStyled> */}
-
         
         
         </>

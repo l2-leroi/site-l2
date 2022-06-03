@@ -10,6 +10,8 @@ export const SectionOnePageStyled = styled.section`
   width: 100%;
   height: 938px;
 
+
+
   @media (max-width: 1366px) {
     padding: 0px 12px;
   }
@@ -257,7 +259,7 @@ export const ImageStyled = styled.img`
   width: 675px;
   height: 938px;
   left: 0px;
-  top: 2400px;
+  top: 2182px;
 
   @media (max-width: 800px) {
     max-width: 164px;
