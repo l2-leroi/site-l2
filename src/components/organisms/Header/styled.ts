@@ -20,10 +20,6 @@ export const HeaderStyled = styled.header<HeaderProps>`
     @media (max-width: 500px), (max-height: 415px) {
         user-select: none;
     }
-    
-    &.white{
-        color: white;
-    }
 `;
 
 export const MainContentStyled = styled.div`
@@ -116,7 +112,7 @@ export const MainTextStyled = styled.hgroup`
             width: 212px;
         }  
         &.white {
-            color: white;
+            color: ${colors.gray};
         }
     }
     
@@ -174,7 +170,7 @@ export const LanguageStyled = styled.div`
             }
         }  
         &.white {
-            color: white;
+            color: ${colors.gray};
         }
     }
 `;
@@ -253,7 +249,7 @@ export const SocialMediaStyled = styled.div`
             }
         }
         &.white {
-            color: white;
+            color: ${colors.gray};
         }
     }
 `;
@@ -280,7 +276,7 @@ export const SocialMediaLinkStyled = styled.a`
             color: ${colors.green};
         }
         &.white {
-            color: white;
+            color: ${colors.gray};
         }
     }
 

@@ -11,11 +11,6 @@ export const NavStyled = styled.nav`
 
   &.white {
     background-color: transparent;
-    color: white;
-  }
-
-  &.white p{
-    color: white;
   }
 
   &.smallFixed{
@@ -47,9 +42,10 @@ export const NavContentStyled = styled.ul`
 export const NavItemStyled = styled.li`
   list-style-type: none;
   min-width: 173px;
+
   ${Typography}{
     &.white{
-      color: white;
+      color: ${colors.gray};
     }
     @media (max-width: 500px) {
       font-size: 10px;
@@ -57,6 +53,7 @@ export const NavItemStyled = styled.li`
       text-align: right;
     }
   }
+
   ::selection {
     background: ${colors.purple};
     color: ${colors.gray};
@@ -75,8 +72,6 @@ export const NavItemStyled = styled.li`
     }
   }
 
-
-
   img {
     @media (max-width: 500px) {
       width: 43px !important;
@@ -88,6 +83,7 @@ export const NavLinkListStyled = styled.ul`
   margin: 0;
   display: flex;
   justify-content: space-between;
+  
   ${Typography}{
     list-style-type: none;
     padding: 0px 40px;
@@ -103,41 +99,10 @@ export const NavLinkListStyled = styled.ul`
       font-size: 10px;
       line-height: 14px;
     }
-    &.white {
-      color: white;
-    }
-    
-  }
-`;
-
-export const NavButtonStyled = styled.button`
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  img {
-    @media (max-width: 500px) {
-      width: 20px !important;
-    }
-  }
-`;
-export const DivTextStyled = styled.div``;
-
-export const TextMenuStyled = styled.p`
-  font-family: 'Circular Air Pro';
-  margin: 0;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
-  text-align: center;
-  letter-spacing: -0.02em;
-  padding-left: 8px;
-  @media (max-width: 500px) {
-    display: none;
   }
 `;
 
 export const ImageStyled = styled.img`
   user-select: none;
+  cursor: pointer;
 `;
