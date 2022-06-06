@@ -6,11 +6,9 @@ export const SectionOnePageStyled = styled.section`
   justify-content: center;
   margin-top: 0;
 
-  background-color:#5900CC;
+  background-color: #5900cc;
   width: 100%;
   height: 938px;
-
-
 
   @media (max-width: 1366px) {
     padding: 0px 12px;
@@ -43,7 +41,6 @@ export const ScrollArrow = styled.div`
 `;
 
 export const ContentOnePageStyled = styled.div`
- 
   /* padding: 124px 90px; */
   /* border-radius: 8px; */
   width: 100%;
@@ -137,7 +134,8 @@ export const DivItemStyled = styled.div`
   margin-left: 65%;
   margin-top: 8%;
 
-  > ul, li {
+  > ul,
+  li {
     margin-left: 0rem;
     margin-top: 1.6rem;
     bottom: 1rem;
@@ -145,9 +143,7 @@ export const DivItemStyled = styled.div`
     font-size: 24px;
     font-family: 'Circular Air Pro';
     list-style-type: none;
-    
   }
-  
 
   @media (max-width: 800px) {
     max-width: 270px;
@@ -183,7 +179,6 @@ export const DivItemStyled = styled.div`
       order: 5;
     }
   }
-  
 `;
 
 export const HeadingItemStyled = styled.h3`
@@ -199,9 +194,6 @@ export const HeadingItemStyled = styled.h3`
   color: ${colors.gray};
   margin-bottom: 1.2rem;
   margin: 0;
-  
-  
-  
 
   @media (max-width: 800px) {
     padding-bottom: 16px;
@@ -253,9 +245,6 @@ export const ParagraphItemStyled = styled.p`
 
 export const ImageStyled = styled.img`
   position: absolute;
-  /* margin-left: -212px;
-  height: 105%;
-  margin-top: -11px; */
   width: 675px;
   height: 938px;
   left: 0px;
@@ -269,3 +258,5 @@ export const ImageStyled = styled.img`
     display: none;
   }
 `;
+
+export const SpinningIconStyled = styled.img``;

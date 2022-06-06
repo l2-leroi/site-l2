@@ -60,54 +60,52 @@ export const ContentOnePageStyled = styled.div`
   }
 `;
 
-export const DivServicesStyled = styled.div`
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  margin-bottom: 8rem;
-  align-items: center;
-  margin-top: 40%;
-`;
+// export const DivServicesStyled = styled.div`
+//   display: flex;
+//   text-align: center;
+//   flex-direction: column;
+//   margin-bottom: 8rem;
+//   align-items: center;
+//   margin-top: 40%;
+// `;
 
-export const HeadingStyled = styled.h2`
-  ::selection {
-    background: ${colors.purple};
-  }
-  max-width: 464px;
-  font-family: 'Neue Machina';
-  font-weight: 800;
-  font-size: 6.4rem;
-  line-height: 5.8rem;
-  letter-spacing: -0.04em;
-  color: ${colors.gray};
-  margin: 0;
+// export const HeadingStyled = styled.h2`
+//   ::selection {
+//     background: ${colors.purple};
+//   }
+//   max-width: 464px;
+//   font-family: 'Neue Machina';
+//   font-weight: 800;
+//   font-size: 6.4rem;
+//   line-height: 5.8rem;
+//   letter-spacing: -0.04em;
+//   color: ${colors.gray};
+//   margin: 0;
 
-  
+//   @media (max-width: 800px) {
+//     max-width: 264px;
+//   }
+// `;
 
-  @media (max-width: 800px) {
-    max-width: 264px;
-  }
-`;
+// export const ParagraphServicesStyled = styled.p`
+//   ::selection {
+//     background: ${colors.purple};
+//   }
+//   max-width: 464px;
+//   font-family: 'Circular Air Pro';
+//   font-weight: 400;
+//   font-size: 2.4rem;
+//   line-height: 3.4rem;
+//   letter-spacing: -0.04em;
+//   color: ${colors.gray};
+//   padding-top: 24px;
+//   margin: 0;
 
-export const ParagraphServicesStyled = styled.p`
-  ::selection {
-    background: ${colors.purple};
-  }
-  max-width: 464px;
-  font-family: 'Circular Air Pro';
-  font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 3.4rem;
-  letter-spacing: -0.04em;
-  color: ${colors.gray};
-  padding-top: 24px;
-  margin: 0;
-
-  @media (max-width: 800px) {
-    width: 160px;
-    padding-top: 20px;
-  }
-`;
+//   @media (max-width: 800px) {
+//     width: 160px;
+//     padding-top: 20px;
+//   }
+// `;
 
 export const DivServiceItemsStyled = styled.div`
   display: flex;
@@ -129,7 +127,6 @@ export const DivServiceItemsStyled = styled.div`
 
 export const DivItemStyled = styled.div`
   max-width: 340px;
-  
 
   @media (max-width: 800px) {
     max-width: 270px;
@@ -228,5 +225,3 @@ export const ParagraphItemStyled = styled.p`
     }
   }
 `;
-
-

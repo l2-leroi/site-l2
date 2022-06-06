@@ -5,34 +5,34 @@ export const NavStyled = styled.nav`
   position: fixed;
   width: 100%;
   z-index: 60;
+  position:relative;
+  background-color: transparent;
   
+
+
   /* color: ${colors.black};
   background-color: ${colors.gray}; */
   &.white {
     background-color: transparent;
     /* color: white; */
   }
-  &.white p{
+  &.white p {
     color: white;
   }
 `;
 
 export const NavContentStyled = styled.ul`
   padding: 43px 32px 53px 28px;
- 
-/* width: 1512px; */
-height: 108px;
 
+  /* width: 1512px; */
+  height: 108px;
+  width: 100%;
   margin: 0;
   display: flex;
   justify-content: space-between;
-  /* background: #171B21; */
-  /* opacity: 0.7; */
-  background: #171B21; 
-  opacity: 0.5; 
-  
- 
-  
+  background: #171b21;
+  opacity: 0.5;
+  position: absolute;
 `;
 
 export const NavItemStyled = styled.li`
@@ -43,7 +43,8 @@ export const NavItemStyled = styled.li`
   line-height: 22px;
   letter-spacing: -0.02em;
   font-weight: 700;
- 
+  
+
   @media (max-width: 500px) {
     font-size: 10px;
     line-height: 14px;
@@ -87,5 +88,3 @@ export const TextMenuStyled = styled.p`
 export const ImageStyled = styled.img`
   user-select: none;
 `;
-
-

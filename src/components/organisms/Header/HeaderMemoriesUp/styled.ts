@@ -2,51 +2,78 @@ import styled from 'styled-components';
 import { colors } from '../../../../styles/colors';
 
 export const ContainerStyled = styled.section`
-  width: 100%;
+ background-image: url('../images/capa-maior-memories-up.jpg');
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
   height: 982px;
   top: 0px;
+  overflow: hidden;
+  /* background-color: ${colors.gray}; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
-  position: relative;
+  @media (max-width: 600px), (max-height: 415px) {
+    width: 100% !important;
+  }
+
+  &.white {
+    color: white;
+  }
 `;
 
 export const MainContentStyled = styled.hgroup`
-  background: black;
-  opacity: 0.9;
-  background-image: url('../images/capa-maior-memories-up.jpg');
-  background-position: center;
-  background-size: cover;
-  position: absolute;
+   background-color: rgba(23, 27, 33, 0.6);
   width: 100%;
   height: 1008.12px;
   left: 0px;
   top: -26px;
+  padding: 0px 28px;
+  @media (max-width: 500px) {
+    font-size: 10px;
+    line-height: 14px;
+  }
+ 
 `;
 
 export const MainTextStyled = styled.hgroup`
-  align-self: center;
+
+ align-self: center;
   position: absolute;
   width: 800px;
   height: 100px;
   left: 0px;
   top: 25rem;
   text-align: center;
+
+  @media (max-width: 500px) {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  img {
+    @media (max-width: 500px) {
+      width: 43px !important;
+    }
+  }
 `;
 
 export const TitleStyled = styled.h1`
   font-family: 'Neue Machina';
   font-style: normal;
-  font-weight: 800;
+  font-weight: 800px;
   font-size: 40px;
   line-height: 48%;
   top: 50px;
   left: 600px;
+  max-width: 50%;
   text-align: center;
   letter-spacing: -0.04em;
   color: #f2f3f4;
   position: absolute;
 
-  @media (max-width: 1220px) {
-    font-size: 140px;
+  @media (max-width: 600px) {
+    font-size: 60px;
   }
 
   @media (max-width: 910px) {
@@ -70,14 +97,14 @@ export const TitleStyled = styled.h1`
 export const SubtitleStyled = styled.h2`
   font-family: 'Neue Machina';
   font-style: normal;
-  font-weight: 800;
-  font-size: 150px;
+  font-weight: 800px;
+  font-size: 100px;
   line-height: 200px;
   text-align: center;
   letter-spacing: -6px;
-  padding-top: 90px;
-  left: 30px;
-  width: 1303px;
+  padding-top: 80px;
+  left: 300px;
+  width: 100%;
   height: 200px;
   color: #f2f3f4;
   position: absolute;
@@ -104,7 +131,7 @@ export const SubtitleStyled = styled.h2`
 export const TextStyled = styled.p`
   font-family: 'Circular Air Pro';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400px;
   font-size: 24px;
   line-height: 140%;
   padding-bottom: 10%;
@@ -116,7 +143,7 @@ export const TextStyled = styled.p`
   position: absolute;
   width: 464px;
   height: 34px;
-  left: 500px;
+  left: 460px;
   top: 300px;
 
   @media (max-width: 1220px) {
@@ -142,12 +169,15 @@ export const TextStyled = styled.p`
 `;
 
 export const DivItemStyled = styled.div`
-  position: absolute;
-  width: 1208px;
+
+ position: absolute;
+  width: 100%;
+  /* max-width: 1208px; */
   height: 700px;
-  left: calc(50% - 1208px / 2);
+  /* left: calc(50% - 1208px / 2); */
   top: 801px;
   border-radius: 8px;
+  padding: 0px 152px;
 
   @media (max-width: 800px) {
     max-width: 270px;
@@ -186,12 +216,13 @@ export const DivItemStyled = styled.div`
 `;
 
 export const ImageStyled = styled.img`
-  position: absolute;
-  width: 1208px;
-  height: 700px;
-  left: 0px;
-  top: 0px;
+ 
+  width: 100%;
+  height: auto;
   border-radius: 8px;
+  /* position: absolute; */
+  
+
 
   @media (max-width: 800px) {
     max-width: 164px;

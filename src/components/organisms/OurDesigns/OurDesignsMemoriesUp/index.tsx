@@ -1,5 +1,13 @@
-import { AsideStyled, ContainerStyled, ContentStyled, DivStyled, ParagraphStyled, PhraseStyled, TitleStyled} from "./styled";
-import React from "react";
+import {
+  AsideStyled,
+  ContainerStyled,
+  ContentStyled,
+  DivStyled,
+  ParagraphStyled,
+  PhraseStyled,
+  TitleStyled,
+} from './styled';
+import React from 'react';
 import i18next from 'i18next';
 
 // import path from 'path';
@@ -10,27 +18,18 @@ import i18next from 'i18next';
 const OurDesignsMemoriesUp = () => {
   // const  {t}  = i18next;
 
-  
-
-
   return (
-    <ContainerStyled >
+    <ContainerStyled>
       <ContentStyled>
         <DivStyled>
           <TitleStyled>Design</TitleStyled>
         </DivStyled>
-        
+
         {/* <ButtonOpen>Imagens</ButtonOpen>
         
         <ButtonClose>Protótipo</ButtonClose> */}
-
-      
-        
       </ContentStyled>
-
     </ContainerStyled>
-    
-    
   );
 };
 export default OurDesignsMemoriesUp;
