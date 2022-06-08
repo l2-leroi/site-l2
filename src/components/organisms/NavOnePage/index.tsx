@@ -3,28 +3,28 @@ import {
   NavContentStyled,
   NavItemStyled,
   NavLinkListStyled,
-  NavLinkStyled,
   ImageStyled
 } from "./styled";
 import React, { useEffect } from 'react';
 import Link from 'next/link'
 import i18next from 'i18next';
+import { Typography } from "../../../styles/typography";
 
 export default function NavOnePage() {
-  const  {t}  = i18next;
+  const { t } = i18next;
 
-  const handleWhite = () =>{
+  const handleWhite = () => {
     const observer = new MutationObserver(handleMutation);
 
     const observerTarget = document.querySelector('.nav')
-    observer.observe(observerTarget,{attributes: true})
+    observer.observe(observerTarget, { attributes: true })
   }
 
   const handleMutation = (mutation) => {
-    if(mutation[0].target.classList.contains('white')){
+    if (mutation[0].target.classList.contains('white')) {
       document.querySelector(".navImage").setAttribute('src', "./images/L2Code-Logo-White.svg")
     }
-    else{
+    else {
       document.querySelector(".navImage").setAttribute('src', "./images/L2Code-Logo.svg");
     }
   }
@@ -37,34 +37,34 @@ export default function NavOnePage() {
 
     const nav = document.querySelector('.nav')
 
-    if( screen.width <= 880 ) {
-      if (bannerTextTop > lastScrollTop){
+    if (screen.width <= 880) {
+      if (bannerTextTop > lastScrollTop) {
         nav.classList.add("smallFixed");
       }
-      else{
+      else {
         nav.classList.remove("smallFixed");
       }
       lastScrollTop = bannerTextTop;
     }
-    else{
-      bannerTextTop < 0? 
-      nav.classList.add("smallFixed") :
-      nav.classList.remove("smallFixed");
+    else {
+      bannerTextTop < 0 ?
+        nav.classList.add("smallFixed") :
+        nav.classList.remove("smallFixed");
     }
   }
 
 
-  useEffect(()=> {
+  useEffect(() => {
     handleWhite();
     addEventListener("scroll", handleScroll);
     document.querySelector('html').style.scrollBehavior = "smooth";
   }, [])
 
-  
+
 
   return (
     <>
-    
+
       <NavStyled className="nav anime">
         <NavContentStyled className="navList">
           <NavItemStyled>
@@ -72,25 +72,33 @@ export default function NavOnePage() {
               <ImageStyled className="navImage" src="./images/L2Code-Logo.svg" alt="L2 Code" />
             </Link>
           </NavItemStyled>
-          
+
           <NavItemStyled>
             <NavLinkListStyled>
-            <Link href="#services">
-              <NavLinkStyled>{t('nav.services')}</NavLinkStyled>
-            </Link>
-            <Link href="#cases">
-                <NavLinkStyled>{t('nav.cases')}</NavLinkStyled>
-            </Link>
-            <Link href="#customers">
-                <NavLinkStyled>{t('nav.customers')}</NavLinkStyled>
-            </Link>
-            <Link href="#contact">
-                <NavLinkStyled>{t('nav.contact')}</NavLinkStyled>
-            </Link>
-          </NavLinkListStyled>
-            
+              <Typography className="typography" tag="li" size="xxsmall" fontWeight="weight2" letterSpacing="space1">
+                <Link href="#services">{t('nav.services')}</Link>
+              </Typography>
+
+              <Typography className="typography" tag="li" size="xxsmall" fontWeight="weight2" letterSpacing="space1">
+                <Link href="#cases">{t('nav.cases')}</Link>
+              </Typography>
+
+              <Typography className="typography" tag="li" size="xxsmall" fontWeight="weight2" letterSpacing="space1">
+                <Link href="#customers">{t('nav.customers')}</Link>
+              </Typography>
+
+              <Typography className="typography" tag="li" size="xxsmall" fontWeight="weight2" letterSpacing="space1">
+                <Link href="#contact">{t('nav.contact')}</Link>
+              </Typography>
+
+            </NavLinkListStyled>
+
           </NavItemStyled>
-          <NavItemStyled>contato@l2code.com.br</NavItemStyled>
+
+          <NavItemStyled>
+            <Typography className="typography" tag="li" size="xxsmall" fontWeight="weight2" letterSpacing="space1">contato@l2code.com.br</Typography>
+
+          </NavItemStyled>
         </NavContentStyled>
       </NavStyled>
     </>

@@ -15,7 +15,7 @@ import i18next from 'i18next';
 // import Button from "../../atoms/Button";
 // import Spinner from "../../atoms/Spinner";
 
-const OurDesignsMemoriesUp = () => {
+const DesignsCases  = () => {
   // const  {t}  = i18next;
 
   return (
@@ -32,4 +32,4 @@ const OurDesignsMemoriesUp = () => {
     </ContainerStyled>
   );
 };
-export default OurDesignsMemoriesUp;
+export default DesignsCases ;

@@ -1,7 +1,8 @@
-import { AsideStyled, ContainerStyled, ContentStyled, DivStyled, ParagraphStyled, PhraseStyled, TitleStyled} from "./styled";
+import { AsideStyled, ContainerStyled, ContentStyled, DivStyled} from "./styled";
 import CaseList from "../../molecules/CaseList";
 import React from "react";
 import i18next from 'i18next';
+import { Typography } from "../../../styles/typography";
 
 const Cases = () => {
   const  {t}  = i18next;
@@ -57,15 +58,22 @@ const Cases = () => {
   return (
     <ContainerStyled id="cases">
       <ContentStyled>
+
         <DivStyled>
-          <TitleStyled>{t('cases.ourCases')}</TitleStyled>
+
+          <Typography tag='h2' size="medium" fontFamily="font1" lineHeight="line90" fontWeight="weight3">{t('cases.ourCases')}</Typography>
+
           <AsideStyled>
-            <ParagraphStyled>&lt;LA CREAM&gt;</ParagraphStyled>
+            <Typography tag='p' size="xxsmall" letterSpacing="space1">&lt;LA CREAM&gt;</Typography>
           </AsideStyled>
+
         </DivStyled>
-        <PhraseStyled>{t('cases.weDoWell')}</PhraseStyled>
+
+        <Typography tag='p'>{t('cases.weDoWell')}</Typography>
+        
         <CaseList cases={cases} />
       </ContentStyled>
+
     </ContainerStyled>
   );
 };

@@ -19,7 +19,7 @@ import {
   import { colors } from '../../../../styles/colors';
   import i18next from "i18next";
   
-  const FooterMemoriesUp = () => {
+  const FooterCases = () => {
     const {t} = i18next
     const contacts = [
       {
@@ -79,4 +79,4 @@ import {
     );
   };
   
-  export default FooterMemoriesUp;
+  export default FooterCases;

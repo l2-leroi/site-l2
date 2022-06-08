@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
+import { Typography } from '../../../styles/typography';
 
 export const NavStyled = styled.nav`
   position: absolute;
@@ -10,11 +11,6 @@ export const NavStyled = styled.nav`
 
   &.white {
     background-color: transparent;
-    color: white;
-  }
-
-  &.white p{
-    color: white;
   }
 
   &.smallFixed{
@@ -45,17 +41,23 @@ export const NavContentStyled = styled.ul`
 
 export const NavItemStyled = styled.li`
   list-style-type: none;
-  font-family: 'Circular Air Pro';
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: -0.02em;
-  font-weight: 700;
   min-width: 173px;
+
+  ${Typography}{
+    &.white{
+      color: ${colors.gray};
+    }
+    @media (max-width: 500px) {
+      font-size: 10px;
+      line-height: 140%;
+      text-align: right;
+    }
+  }
+
   ::selection {
     background: ${colors.purple};
     color: ${colors.gray};
   }
-  
   
   &:first-of-type{
       @media (max-width: 980px) {
@@ -70,12 +72,6 @@ export const NavItemStyled = styled.li`
     }
   }
 
-  @media (max-width: 500px) {
-    font-size: 10px;
-    line-height: 14px;
-    text-align: right;
-  }
-
   img {
     @media (max-width: 500px) {
       width: 43px !important;
@@ -87,60 +83,26 @@ export const NavLinkListStyled = styled.ul`
   margin: 0;
   display: flex;
   justify-content: space-between;
-`;
-
-export const NavLinkStyled = styled.li`
-  list-style-type: none;
-  font-family: 'Circular Air Pro';
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: -0.02em;
-  font-weight: 700;
-  padding: 0px 40px;
-  cursor: pointer;
-  ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
-  }
-
-  &:hover {
-    color: ${colors.green};
-  }
-
-  @media (max-width: 500px) {
-    font-size: 10px;
-    line-height: 14px;
-  }
-`;
-
-export const NavButtonStyled = styled.button`
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  img {
-    @media (max-width: 500px) {
-      width: 20px !important;
+  
+  ${Typography}{
+    list-style-type: none;
+    padding: 0px 40px;
+    cursor: pointer;
+    ::selection {
+      background: ${colors.purple};
+      color: ${colors.gray};
     }
-  }
-`;
-export const DivTextStyled = styled.div``;
-
-export const TextMenuStyled = styled.p`
-  font-family: 'Circular Air Pro';
-  margin: 0;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
-  text-align: center;
-  letter-spacing: -0.02em;
-  padding-left: 8px;
-  @media (max-width: 500px) {
-    display: none;
+    &:hover {
+      color: ${colors.green};
+    }
+    @media (max-width: 500px) {
+      font-size: 10px;
+      line-height: 14px;
+    }
   }
 `;
 
 export const ImageStyled = styled.img`
   user-select: none;
+  cursor: pointer;
 `;

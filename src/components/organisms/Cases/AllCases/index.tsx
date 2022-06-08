@@ -6,7 +6,7 @@ import i18next from 'i18next';
 
 import Button from "../../../atoms/Button";
 
-const CasesMemoriesUp = () => {
+const AllCases = () => {
   const  {t}  = i18next;
 
   
@@ -76,4 +76,4 @@ const CasesMemoriesUp = () => {
     </ContainerStyled>
   );
 };
-export default CasesMemoriesUp;
+export default AllCases;
