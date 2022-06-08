@@ -4,18 +4,13 @@ import {
   MainTextStyled,
   ContainerStyled,
   LanguageStyled,
-  LanguageItemStyled,
-  Link,
   ImageStyled,
   DivItemStyled,
-  HeadingItemStyled,
-  ParagraphItemStyled,
   SectionOnePageStyled,
   DivTextStyled,
-  DivItemStyledService,
+  DivItemSTextStyled,
 } from './styled';
-import i18next from 'i18next';
-const { t } = i18next;
+import Link from 'next/link';
 
 const HeaderCases = () => {
   return (
@@ -51,15 +46,30 @@ const HeaderCases = () => {
             </Typography>
 
             <LanguageStyled>
-              <LanguageItemStyled>
-                <Link>PT</Link>
-              </LanguageItemStyled>
-              <LanguageItemStyled>
-                <Link>EN</Link>
-              </LanguageItemStyled>
+              <Typography
+                tag="button"
+                size="xxsmall"
+                letterSpacing="space1"
+                color="gray"
+              >
+                <Link href="/pt/memories-up" locale="pt" scroll={false}>
+                  PT
+                </Link>
+              </Typography>
+              <Typography
+                tag="button"
+                size="xxsmall"
+                letterSpacing="space1"
+                color="gray"
+              >
+                <Link href="/en/memories-up" locale="en" scroll={false}>
+                  EN
+                </Link>
+              </Typography>
             </LanguageStyled>
           </MainTextStyled>
         </MainContentStyled>
+
         <DivItemStyled>
           <ImageStyled
             src="../images/imagens-memories-up.jpg"
@@ -70,14 +80,24 @@ const HeaderCases = () => {
 
       <SectionOnePageStyled>
         <DivTextStyled>
-          <DivItemStyledService>
-            <HeadingItemStyled>
-              {t('services.outsourcingMemoriesUp')}
-            </HeadingItemStyled>
-            <ParagraphItemStyled>
-              {t('services.increaseMemoriesUp')}
-            </ParagraphItemStyled>
-          </DivItemStyledService>
+          <DivItemSTextStyled>
+            <Typography
+              tag="h1"
+              size="small"
+              fontWeight="weight3"
+              lineHeight="line120"
+              color="gray"
+              fontFamily="font1"
+              letterSpacing="space1"
+            >
+              No início era apenas uma ideia:
+            </Typography>
+            <Typography tag="p" color="gray" fontFamily="font2">
+              E se o serviço de núvem tivesse tanto engajamento quanto as redes
+              sociais? ● Ajudamos essa start-up americana a definir seu negócio
+              e lançamos seu produto.
+            </Typography>
+          </DivItemSTextStyled>
         </DivTextStyled>
       </SectionOnePageStyled>
     </>

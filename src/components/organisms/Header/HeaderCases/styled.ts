@@ -11,6 +11,7 @@ export const ContainerStyled = styled.section`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  
 
   @media (max-width: 600px), (max-height: 415px) {
     width: 100% !important;
@@ -209,20 +210,10 @@ export const LanguageStyled = styled.div`
     opacity: 1;
     transition: opacity 0.8s;
   }
-`;
-
-export const LanguageItemStyled = styled.button`
-  background: transparent;
+  button {
+    background: transparent;
   cursor: pointer;
   border: none;
-  font-family: 'Circular Air Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-
-  letter-spacing: -0.02em;
-  color: white;
 
   &.white {
     color: white;
@@ -252,10 +243,13 @@ export const LanguageItemStyled = styled.button`
       margin-bottom: 0px;
     }
   }
+
+  }
 `;
 
-export const Link = styled.div``;
 
+
+export const Link = styled.div``;
 
 
 export const SectionOnePageStyled = styled.section`
@@ -279,7 +273,7 @@ export const DivTextStyled = styled.div`
   max-width: 1018px;
   margin: 0 auto;
   margin-top: 40%;
-  margin-bottom: 10px;
+  margin-bottom: 6rem;
 
   @media (max-width: 800px) {
     max-width: 1018px;
@@ -290,8 +284,8 @@ export const DivTextStyled = styled.div`
   }
 `;
 
-export const DivItemStyledService = styled.div`
-  max-width: 340px;
+export const DivItemSTextStyled = styled.div`
+  max-width: 314px;
 
   @media (max-width: 800px) {
     max-width: 270px;
@@ -327,21 +321,15 @@ export const DivItemStyledService = styled.div`
       order: 5;
     }
   }
-`;
 
-export const HeadingItemStyled = styled.h3`
-  ::selection {
+  h1 {
+    ::selection {
     background: ${colors.purple};
     color: ${colors.gray};
   }
-  font-family: 'Neue Machina';
-  font-weight: 800;
-  font-size: 4rem;
-  line-height: 4.8rem;
-  letter-spacing: -0.02em;
-  color: ${colors.gray};
-  padding-bottom: 24px;
-  margin: 0;
+  padding-bottom: 18px;
+  width: 314px;
+  
 
   @media (max-width: 800px) {
     padding-bottom: 16px;
@@ -350,43 +338,43 @@ export const HeadingItemStyled = styled.h3`
   @media (max-width: 800px) {
     padding-bottom: 16px;
   }
-`;
+  }
 
-export const ParagraphItemStyled = styled.p`
-  ::selection {
+  p {
+    ::selection {
     background: ${colors.purple};
     color: ${colors.gray};
   }
-  font-family: 'Circular Air Pro';
-  font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 3.4rem;
-  letter-spacing: -0.04em;
-  color: ${colors.dark_gray};
-  margin-bottom: 8rem;
+  width: 430px;
+  margin-bottom: 6rem;
 
-  @media (max-width: 800px) {
-    max-width: 230px;
+@media (max-width: 800px) {
+  max-width: 230px;
 
-    &.last-paragraph {
-      max-width: 144px;
-    }
+  &.last-paragraph {
+    max-width: 144px;
   }
+}
 
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
+  max-width: 180px;
+
+  &.last-paragraph {
     max-width: 180px;
-
-    &.last-paragraph {
-      max-width: 180px;
-    }
   }
+}
 
-  @media (max-width: 576px) {
+@media (max-width: 576px) {
+  max-width: 300px;
+
+  &.last-paragraph {
     max-width: 300px;
-
-    &.last-paragraph {
-      max-width: 300px;
-    }
+  }
+}
   }
 `;
+
+
+
+
 
