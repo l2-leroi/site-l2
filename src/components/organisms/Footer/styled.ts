@@ -14,6 +14,18 @@ export const ContainerStyled = styled.div`
   flex-direction: column;
   max-width: 1500px;
   margin: 0 auto;
+  position: relative;
+`;
+
+export const Teste4 = styled.div`
+    position: absolute;
+    top: -225px;
+    right: -28px;
+    background: ${colors.black};
+    width: 692px;
+    height: 200px;
+    z-index: 1;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%);
 `;
 
 export const ContentStyled = styled.div``;
