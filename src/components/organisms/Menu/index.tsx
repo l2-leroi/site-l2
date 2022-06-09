@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   ContainerStyled,
   DivLogoStyled,
@@ -9,9 +9,6 @@ import {
   DivTextMenuStyled,
   DivContactStyled,
   DivLanguageStyled,
-  ParagraphLanguageStyled,
-  ParagraphOneStyled,
-  ParagraphTwoStyled,
   MenuStyled,
   ButtonCloseStyled,
   ImageStyled,
@@ -19,6 +16,8 @@ import {
 import Scroll from '../../molecules/Scroll';
 import i18next from 'i18next';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Typography } from '../../../styles/typography';
 
 export interface MenuProps {
   openMenu: boolean;
@@ -27,61 +26,57 @@ export interface MenuProps {
 
 const Menu = ({ openMenu, closeMenu }: MenuProps) => {
   const { t } = i18next;
-  const [language, setLanguage] = useState('');
-
-  useEffect(() => {
-    const urlLanguage = window.location.pathname;
-
-    if(urlLanguage == '/en') {
-      setLanguage('en');
-    }
-    else { 
-      setLanguage('pt');
-    }
-  }, [])
+  const router = useRouter();
+  const previousPage = useRef('');
 
   useEffect(() => {
     openMenu ? document.body.style.overflow = 'hidden' : document.body.style.overflow = null;
   }, [openMenu])
+
+  useEffect(() => {
+    const currentUrl = router.asPath;
+    previousPage.current = currentUrl.substring(3);
+    console.log(previousPage.current)
+  }, [router.asPath])
 
   return (
     <MenuStyled style={{ display: openMenu ? 'block' : 'none' }}>
       <ContainerStyled>
         <DivLogoStyled>
           <ImageStyled src="./images/L2Code-Logo-White.svg" alt="L2 Code" />
-          <DivContactStyled>
-            <ParagraphOneStyled>{t('menu.bePart')}</ParagraphOneStyled>
+          <DivContactStyled className="first">
+            <Typography tag="p" size="xxsmall" letterSpacing="space1" color="gray">{t('menu.bePart')}</Typography>
             <DivLineStyled></DivLineStyled>
-            <ParagraphTwoStyled>talentos@l2code.com.br</ParagraphTwoStyled>
+            <Typography tag="p" size="xxsmall" fontWeight="weight2" color="gray">talentos@l2code.com.br</Typography>
           </DivContactStyled>
         </DivLogoStyled>
 
-        <Scroll />
+        <Scroll closeMenu={closeMenu} />
 
         <DivMenuStyled>
           <DivTextMenuStyled>
             <ButtonCloseStyled onClick={() => closeMenu(false)}>
               <ImageStyled src="./images/closeMenu.svg"></ImageStyled>
-              <DivTextStyled>
-                <TextMenuStyled>ME</TextMenuStyled>
-                <TextMenuStyled>NU</TextMenuStyled>
-              </DivTextStyled>
+                <DivTextStyled>
+                  <TextMenuStyled>ME</TextMenuStyled>
+                  <TextMenuStyled>NU</TextMenuStyled>
+                </DivTextStyled>
             </ButtonCloseStyled>
           </DivTextMenuStyled>
 
           <DivLanguageStyled>
-            <ParagraphLanguageStyled onClick={() => setLanguage('pt')}>
-              <Link href='/pt' locale='pt' scroll={false}>PT</Link>
-            </ParagraphLanguageStyled>
-            <ParagraphLanguageStyled onClick={() => setLanguage('en')}>
-              <Link href='/en' locale='en' scroll={false}>EN</Link>
-            </ParagraphLanguageStyled>
+            <Typography tag="p" size="xxsmall" letterSpacing="space1" color="gray">
+              <Link href={`/pt${previousPage.current}`} locale='pt' scroll={false}>PT</Link>
+            </Typography>
+            <Typography tag="p" size="xxsmall" letterSpacing="space1" color="gray">
+              <Link href={`/en${previousPage.current}`} locale='en' scroll={false}>EN</Link>
+            </Typography>
           </DivLanguageStyled>
 
           <DivContactStyled className="last">
-            <ParagraphOneStyled>{t('menu.ourWhatsapp')}</ParagraphOneStyled>
+            <Typography tag="p" size="xxsmall" letterSpacing="space1" color="gray">{t('menu.ourWhatsapp')}</Typography>
             <DivLineStyled></DivLineStyled>
-            <ParagraphTwoStyled>+55 51 99693.9336</ParagraphTwoStyled>
+            <Typography tag="p" size="xxsmall" fontWeight="weight2" color="gray">+55 51 99693.9336</Typography>
           </DivContactStyled>
         </DivMenuStyled>
       </ContainerStyled>

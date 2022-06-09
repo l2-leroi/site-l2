@@ -18,7 +18,7 @@ import { colors } from '../../../styles/colors';
 import i18next from 'i18next';
 import { Typography } from '../../../styles/typography';
 const OurCustomers = () => {
-  const {t} = i18next
+  const { t } = i18next
   const ToParadoLogo = './images/OurCustomers/to-parado-logo.svg';
   const PhiLogo = './images/OurCustomers/phi-logo.svg';
   const BancoRCILogo = './images/OurCustomers/banco-rci-logo.svg';
@@ -69,21 +69,21 @@ const OurCustomers = () => {
     if (window.innerWidth > 800 && window.innerWidth < 1000) {
       morePadding = 38;
       rotationMovement = purpleLineMovement / 10;
-    } else if (window.innerWidth <= 800 && window.innerWidth > 750){
+    } else if (window.innerWidth <= 800 && window.innerWidth > 750) {
       purpleLinePaddingTop = purpleLinePaddingTop / 2.6;
       defaultTopInRotation = 90;
       morePadding = 38;
     }
-    else if (window.innerWidth <= 750 && window.innerWidth > 600){
+    else if (window.innerWidth <= 750 && window.innerWidth > 600) {
       purpleLinePaddingTop = purpleLinePaddingTop / 2.1;
       defaultTopInRotation = 100;
       morePadding = 20;
-    } else if (window.innerWidth <= 600 && window.innerWidth > 400){
+    } else if (window.innerWidth <= 600 && window.innerWidth > 400) {
       purpleLinePaddingTop = purpleLinePaddingTop / 2.35;
       defaultTopInRotation = 80;
       morePadding = 5;
 
-    }else if (window.innerWidth <= 400 && window.innerWidth > 330) {
+    } else if (window.innerWidth <= 400 && window.innerWidth > 330) {
       defaultTopInRotation = 110;
       morePadding = 36;
     } else if (window.innerWidth <= 330) {
@@ -140,9 +140,9 @@ const OurCustomers = () => {
 
     let soma = blackLinePadding + hgroupHeight - spinnerMaxHeight * 0.5;
 
-    if(window.innerWidth <= 500 && window.innerWidth > 350){
+    if (window.innerWidth <= 500 && window.innerWidth > 350) {
       soma = blackLinePadding + (hgroupHeight * 0.2) - spinnerMaxHeight * 0.5;
-    }else if(window.innerWidth <= 350){
+    } else if (window.innerWidth <= 350) {
       soma = blackLinePadding - spinnerMaxHeight * 0.5;
     }
 
@@ -171,7 +171,7 @@ const OurCustomers = () => {
           +getComputedStyle(blackLine)
             .getPropertyValue('padding-top')
             .replace('px', '') *
-            1.1
+          1.1
         ) + 'px';
     }
   };

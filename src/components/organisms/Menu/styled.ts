@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
+import { Typography } from '../../../styles/typography';
 
 export const MenuStyled = styled.section`
     position: fixed;
@@ -43,30 +44,30 @@ export const DivContactStyled = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 750px) {
+  @media (max-width: 835px) {
     transform: rotate(90deg);
-    width: 10%;
     position: absolute;
-    bottom: 26rem;
-    margin-right: 20px;
-  }
-`;
-
-export const ParagraphOneStyled = styled.p`
-  font-family: 'Circular Air Pro';
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: -0.02em;
-  color: ${colors.gray};
-
-  ::selection {
-    background: ${colors.purple};
+    top: 53%;
   }
 
-  @media (max-width: 930px) {
-    font-size: 12px;
-    line-height: 17px;
+  &.first {
+    left: -140px;
+  }
+
+  &.last {
+    right: -140px;
+    visibility: hidden;
+  }
+
+  ${Typography} {
+    ::selection {
+      background: ${colors.purple};
+    }
+
+    @media (max-width: 980px) {
+      font-size: 12px;
+      line-height: 140%;
+    }
   }
 `;
 
@@ -77,24 +78,6 @@ export const DivLineStyled = styled.div`
   background-color: ${colors.gray};
   margin-right: 24px;
   margin-left: 24px;
-`;
-
-export const ParagraphTwoStyled = styled.p`
-  font-family: 'Circular Air Pro';
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: -0.04em;
-  color: ${colors.gray};
-
-  ::selection {
-    background: ${colors.purple};
-  }
-
-  @media (max-width: 930px) {
-    font-size: 12px;
-    line-height: 17px;
-  }
 `;
 
 export const DivMenuStyled = styled.div`
@@ -148,37 +131,33 @@ export const DivLanguageStyled = styled.div`
   position: absolute;
   right: 28px;
   top: 46.3%;
-  @media (max-width: 750px) {
-    margin-top: 50px;
-  }
-`;
 
-export const ParagraphLanguageStyled = styled.p`
-  font-family: 'Circular Air Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: -0.02em;
-  color: ${colors.gray};
-  text-align: right;
-
-  &:first-child {
-    margin-bottom: 8px;
+  @media (max-width: 835px) {
+    top: 90px;
   }
 
-  ::selection {
-    background: ${colors.purple};
-  }
+  ${Typography} {
+    text-align: right;
 
-  @media (max-width: 930px) {
-    font-size: 10px;
-    line-height: 27px;
-  }
+    &:first-child {
+      margin-bottom: 8px;
+    }
 
-  @media (min-width: 500px) {
-    &:hover {
-        color: ${colors.green};
+    a{
+      ::selection {
+        background: ${colors.purple};
+      }
+    }
+
+    @media (max-width: 930px) {
+      font-size: 10px;
+      line-height: 27px;
+    }
+
+    @media (min-width: 500px) {
+      &:hover {
+          color: ${colors.green};
+      }
     }
   }
 `;

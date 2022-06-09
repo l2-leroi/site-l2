@@ -1,6 +1,7 @@
 import InfiniteScroll from 'react-infinite-scroll-component';
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
+import { Typography } from '../../../styles/typography';
 
 export const InfiniteScrollContainerStyled = styled(InfiniteScroll)`
   display: flex;
@@ -14,29 +15,30 @@ export const InfiniteScrollContainerStyled = styled(InfiniteScroll)`
   @media (max-width: 700px) {
     margin-top: 30px;
   }
-`;
 
-export const ElementScrollStyled = styled.a`
-  text-align: center;
-  font-family: 'Neue Machina';
-  font-weight: 800;
-  font-size: 4vw;
-  letter-spacing: -0.06em;
-  line-height: 100%;
-  color: ${colors.gray};
-  width: 100%;
-  cursor: pointer;
-  text-decoration: none;
-  margin-top: 38px;
+  ${Typography} {
+    margin-top: 60px;
+    text-align: center;
 
-  ::selection {
-    background: ${colors.purple};
-  }
-  
-  @media (max-width: 600px) {
-    padding-bottom: 15vw;
-  }
-  @media (max-width: 1024px) {
-    font-size: 5vw;
+    a{ 
+      font-size: 4vw;
+      width: 100%;
+      cursor: pointer;
+      text-decoration: none;
+      
+      ::selection {
+        background: ${colors.purple};
+      }
+      
+      @media (max-width: 600px) {
+        font-size: 40px;
+      }
+      @media (max-width: 980px) {
+        font-size: 40px;
+      }
+      @media (min-width: 601px) and (max-width: 1015px) {
+        font-size: 3.5vw;
+      }
+    }
   }
 `;

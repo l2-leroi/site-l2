@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
+import { Typography } from '../../../styles/typography';
 
 interface NavProps { 
   borderWhite?: boolean;
@@ -11,6 +12,11 @@ export const NavStyled = styled.nav`
   z-index: 60;
   color: ${colors.black};
   background-color: ${colors.gray};
+  padding: 32px 28px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   &.white {
     background-color: transparent;
@@ -23,11 +29,8 @@ export const NavStyled = styled.nav`
 
   &.smallFixed{
     position: fixed;
-    
-    ul.navList {
-      padding: 25px 28px;
-      transition: padding 0.4s;
-    }
+    padding: 25px 28px;
+    transition: padding 0.4s;
   }
 
   @media (max-width: 500px) {
@@ -40,34 +43,19 @@ export const NavStyled = styled.nav`
   }
 `;
 
-export const NavContentStyled = styled.ul`
-  padding: 32px 28px;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+export const NavItemStyled = styled.div`
+  ${Typography}{
+    margin: 0;
+    text-align: center;
 
-export const NavItemStyled = styled.li`
-  list-style-type: none;
-  font-family: 'Circular Air Pro';
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: -0.02em;
-  font-weight: 700;
-  
-  ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
-  }
+    ::selection {
+      background: ${colors.purple};
+      color: ${colors.gray};
+    }
 
-  @media (max-width: 500px) {
-    font-size: 10px;
-    line-height: 14px;
-  }
-  img {
-    @media (max-width: 500px) {
-      width: 43px !important;
+    @media (max-width: 800px) {
+      font-size: 10px;
+      line-height: 14px;
     }
   }
 `;
@@ -78,11 +66,6 @@ export const NavButtonStyled = styled.button`
   cursor: pointer;
   display: flex;
   align-items: center;
-  img {
-    @media (max-width: 500px) {
-      width: 20px !important;
-    }
-  }
 `;
 
 export const SandwichMenuStyled = styled.span<NavProps>`
@@ -92,28 +75,18 @@ export const SandwichMenuStyled = styled.span<NavProps>`
   width: 20px;
 `;
 
-export const DivTextStyled = styled.div``;
-
-export const TextMenuStyled = styled.p`
-  font-family: 'Circular Air Pro';
-  margin: 0;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
-  text-align: center;
-  letter-spacing: -0.02em;
+export const DivTextStyled = styled.div`
   padding-left: 8px;
 
-  ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
-  }
-
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     display: none;
   }
 `;
 
 export const ImageStyled = styled.img`
   user-select: none;
+
+  @media (max-width: 800px) {
+    width: 40px;
+  }
 `;

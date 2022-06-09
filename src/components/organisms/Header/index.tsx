@@ -129,7 +129,7 @@ const Header = () => {
 
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
-    const typography= document.querySelectorAll(".typography");
+    const typography = document.querySelectorAll(".typography");
     header.classList.remove("white");
     nav?.classList.remove("white");
 
@@ -224,10 +224,10 @@ const Header = () => {
         </MainTextStyled>
 
         <LanguageStyled className='anime'>
-          <Typography tag='button' size="xxsmall"  letterSpacing="space1" className="typography">
+          <Typography tag='button' size="xxsmall" letterSpacing="space1" className="typography">
             <Link href='/pt' locale='pt' scroll={false}>PT</Link>
           </Typography>
-          <Typography tag='button' size="xxsmall"  letterSpacing="space1" className="typography">
+          <Typography tag='button' size="xxsmall" letterSpacing="space1" className="typography">
             <Link href='/en' locale='en' scroll={false}>EN</Link>
           </Typography>
         </LanguageStyled>
@@ -240,14 +240,14 @@ const Header = () => {
             {t('header.followUs')}
           </Typography>
 
-          <SocialMediaLinkStyled  href="https://www.linkedin.com/company/l2code-dev/" target="_blank">
+          <SocialMediaLinkStyled href="https://www.linkedin.com/company/l2code-dev/" target="_blank">
 
             <Typography className="typography" tag='button' fontWeight="weight2" size="xxsmall" letterSpacing="space1">In
             </Typography>
 
           </SocialMediaLinkStyled>
 
-          <SocialMediaLinkStyled  href="https://www.instagram.com/l2code.com.br/" target="_blank">
+          <SocialMediaLinkStyled href="https://www.instagram.com/l2code.com.br/" target="_blank">
 
             <Typography className="typography" tag='button' fontWeight="weight2" size="xxsmall" letterSpacing="space1">IG
             </Typography>

@@ -18,7 +18,6 @@ const theme = {
     large: '7.2rem',
     xlarge: '8rem',
     xxlarge: '20rem',
-   
   },
   line: {
     line90: '90%',
