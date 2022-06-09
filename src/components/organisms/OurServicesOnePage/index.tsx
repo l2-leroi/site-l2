@@ -41,28 +41,28 @@ export default function OurServicesOnePage() {
 
           <DivItemStyled>
             <Typography color='gray' tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
-            {t('services.startupService')}</Typography>
+              {t('services.startupService')}</Typography>
 
             <Typography color='dark_gray' tag='p'>{t('services.uxuiTeam')}</Typography>
           </DivItemStyled>
 
           <DivItemStyled>
             <Typography color='gray' tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
-            {t('services.ideation')}</Typography>
+              {t('services.ideation')}</Typography>
 
             <Typography color='dark_gray' tag='p'>{t('services.coCreation')}</Typography>
           </DivItemStyled>
 
           <DivItemStyled>
             <Typography color='gray' tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
-            {t('services.uxuiDesign')}</Typography>
+              {t('services.uxuiDesign')}</Typography>
 
             <Typography color='dark_gray' tag='p'>{t('services.weDesign')}</Typography>
           </DivItemStyled>
 
           <DivItemStyled>
             <Typography color='gray' tag="h3" fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1' >
-            {t('services.consultingService')}</Typography>
+              {t('services.consultingService')}</Typography>
 
             <Typography color='dark_gray' tag='p'>{t('services.ourTechLead')}</Typography>
           </DivItemStyled>

@@ -8,7 +8,6 @@ import {
   ImageStyled,
   ContainerStyled,
   DivStyled,
-  Teste4
 } from "./styled";
 import { HeartIcon } from '../../../assets/icons/heartIcon';
 import ContactList from '../../molecules/ContactList/index'
@@ -19,7 +18,7 @@ import i18next from "i18next";
 import { Typography } from "../../../styles/typography";
 
 const Footer = () => {
-  const {t} = i18next
+  const { t } = i18next
   const contacts = [
     // obs: deixar comentado para não exibir a parte do whatsapp, pois está com o número do nery
     // {
@@ -60,15 +59,15 @@ const Footer = () => {
               <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.weWork')}</Typography>
             </InfoStyled>
             <InfoStyled className="desktop">
-                <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
+              <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
             </InfoStyled>
             <InfoStyled className="align-end">
-              <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.madeWith')} <IconStyled> <HeartIcon/> </IconStyled> L2code</Typography>
+              <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.madeWith')} <IconStyled> <HeartIcon /> </IconStyled> L2code</Typography>
               <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.copyright')}</Typography>
             </InfoStyled>
           </CopyrightStyled>
           <InfoStyled className="mobile">
-                <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
+            <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
           </InfoStyled>
         </ContainerStyled>
     </FooterStyled>
