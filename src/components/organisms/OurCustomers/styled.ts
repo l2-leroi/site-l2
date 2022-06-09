@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const OurCustomersStyled = styled.section`
@@ -6,14 +6,11 @@ export const OurCustomersStyled = styled.section`
   overflow: hidden;
   position: relative;
 
-  @media(max-width: 600px){
-    padding-top: 50px;
-  }
-
-  @media(max-width: 414px){
-    padding-top: 0px;
-  }
+  width: 100%;
+  background-color: ${colors.gray};
+  transition: 0.1s linear all;
 `;
+
 
 export const BlackLineStyled = styled.div`
   color: ${colors.gray};
@@ -23,8 +20,10 @@ export const BlackLineStyled = styled.div`
   grid-template-columns: 1fr minmax(280px, 1456px) 1fr;
   padding: 0px 28px;
   overflow: hidden;
+  padding-bottom: 80px;
   @media(max-width: 800px){
     padding: 0px 12px;
+    padding-bottom: 80px;
   }
 `;
 
@@ -104,59 +103,8 @@ export const ContentStyled = styled.section`
 `;
 
 
-export const SpinningAnimation = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-`;
-
-export const SpinningIconStyled = styled.div`
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  z-index: 1;  
-  overflow-x: hidden;
-  border-radius: 50%;
-  animation: ${SpinningAnimation} 5s linear infinite;
-  max-width: 468px;
-  user-select: none;
-
-  img{
-
-    @media(max-width: 1366px){
-      max-width: 380px;
-    }
-  
-    @media(max-width: 800px){
-      max-width: 248px;
-    }
-  
-    @media(max-width: 414px){
-      max-width: 140px;
-    }
-  }
-`;
-
-export const SignContainerStyled = styled.div`
-  color: ${colors.dark_gray};
-  top: 120px;
-  position: absolute;
-  display: none;
-`;
-
 export const CustomersContainer = styled.div`
   z-index: 5;  
   grid-column: 2;
 `;
 
-export const BlackBg = styled.div`
-  margin-top: -5px;
-  height: 400px;
-  padding-bottom: 50px;
-  width:100%;
-  background-color: ${colors.black};
-  position: absolute;
-`;

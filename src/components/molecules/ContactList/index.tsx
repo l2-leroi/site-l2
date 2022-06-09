@@ -1,5 +1,6 @@
 import { Typography } from '../../../styles/typography';
 import { ContentStyled, ItemStyled, ContactStyled } from './styled';
+import ReactGA from 'react-ga';
 
 interface Contact {
   title: string,
@@ -12,6 +13,13 @@ interface ContactProps {
 }
 
 function ContactList(props: ContactProps) {
+
+  const ClickHandler = () => {
+    ReactGA.event({
+      category: 'Button',
+      action: 'Click nos links do footer'
+    })
+  }
   return (
     <ContentStyled>
       {
@@ -19,7 +27,7 @@ function ContactList(props: ContactProps) {
           <ItemStyled key={c.title}>
             <Typography tag='h3' color='gray'>{c.title}</Typography>
 
-            <ContactStyled href={c.link} target="_blank">
+            <ContactStyled href={c.link} target="_blank" onClick={ClickHandler}>
               <Typography tag="p" color='gray' size='small' lineHeight='line120' letterSpacing='space1' fontWeight='weight3'>{c.contact}</Typography>
             </ContactStyled>
           </ItemStyled>     
