@@ -91,7 +91,7 @@ const Scroll = ({closeMenu}: ScrollProps) => {
         >
           <Link
             key={`${item}-${uuid()}`}
-            href={`${language + baseUrl[items.indexOf(item)]}`}
+            href={`/${language + baseUrl[items.indexOf(item)]}`}
           >
             { currentPage === `${baseUrl[items.indexOf(item)]}` ?
             `< ${item} >` : `${item}` }
