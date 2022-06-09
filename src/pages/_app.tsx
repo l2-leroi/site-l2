@@ -3,6 +3,7 @@ import '../styles/fonts.css';
 import type { AppProps } from 'next/app';
 import Footer from '../components/organisms/Footer/index';
 import Nav from '../components/organisms/NavOnePage/index';
+import ReactGa from 'react-ga';
 
 import '../i18n'
 import { useEffect, useState } from 'react'
@@ -26,6 +27,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     setClientLanguage(language)
   }, [language])
 
+  useEffect(()=> {
+    ReactGa.initialize('G-E4RS6QZT6P');
+
+    ReactGa.pageview(window.location.pathname + window.location.search);
+  }, [])
+
   // Don't trigger `i18next.changeLanguage()` on root folder, use `router` to redirect to the specific language
   if (asPath !== '/' && asPath !== '/404') {
     i18next.changeLanguage(clientLanguage)
@@ -34,6 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
     <Head>
+
         {/* Google Tag Manager */}
         <script 
           dangerouslySetInnerHTML={{
