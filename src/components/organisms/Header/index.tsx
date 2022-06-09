@@ -42,6 +42,7 @@ const Header = () => {
   const [counterLoop, setCounterLoop] = useState(0);
   const [isInitInterval, setIsInitInterval] = useState(false);
   const isTouchActive = useRef(false);
+  const [isAnimating, setIsAnimating] = useState(false);
   const [splashPage, setSplashPage] = useState(false);
   const [isFirstTouch, setIsFirstTouch] = useState(false);
   const interval = useRef(null);
@@ -126,17 +127,16 @@ const Header = () => {
   }, [isInitInterval])
 
   const exitInterval = (backgroundList) => {
-
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
     const typography= document.querySelectorAll(".typography");
     header.classList.remove("white");
     nav?.classList.remove("white");
-
     typography.forEach((element) => {
       element.classList.remove('white');
     });
     setWhiteCircle(false);
+    setIsAnimating(false);
     clearInterval(interval.current);
     interval.current = null;
     setActualImage(backgroundList);
@@ -200,7 +200,8 @@ const Header = () => {
               }
             }}
             onTouchStart={() => {
-              if (splashPage) {
+              if (splashPage && !isAnimating) {
+                setIsAnimating(true);
                 isTouchActive.current = true;
                 setIsInitInterval(true);
               }
