@@ -9,6 +9,7 @@ const theme = {
     purple: '#5900CC',
     lightGray: '#8E9195',
     secondary1: '#27E5BF',
+    black_1: '#242A33',
   },
   sizes: {
     xxsmall:'1.6rem',

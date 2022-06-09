@@ -39,20 +39,20 @@ const Footer = () => {
   ];
 
   return (
-    <LineAnimation backgroundColor={colors.purple} classe={'purpleLine'}>
-      <FooterStyled id="contact">
-        <ContainerStyled>
-          <ContentStyled>
-            <DivStyled>
-              <Typography color='gray' tag="h2" size='medium' fontWeight='weight3' fontFamily='font1' lineHeight='line90'>
-                {t('footer.letsTalk')}
-              </Typography>
-              <AsideStyled>
-                <Typography color='gray' tag='p' size="xxsmall" letterSpacing="space1">&lt;AND DANCE&gt;</Typography>
-              </AsideStyled>
-            </DivStyled>
-            <ContactList contacts={contacts} />
-          </ContentStyled>
+    // <LineAnimation backgroundColor={colors.purple} classe={'purpleLine'}>
+    <FooterStyled id="contact" className="footer">
+      <ContainerStyled className="containerstyled">
+        <ContentStyled>
+          <DivStyled>
+            <Typography color='gray' tag="h2" size='medium' fontWeight='weight3' fontFamily='font1' lineHeight='line90'>
+            {t('footer.letsTalk')}
+            </Typography>
+            <AsideStyled>
+              <Typography color='gray' tag='p' size="xxsmall" letterSpacing="space1">&lt;AND DANCE&gt;</Typography>
+            </AsideStyled>
+          </DivStyled>
+          <ContactList contacts={contacts} />
+        </ContentStyled>
           <CopyrightStyled>
             <InfoStyled>
               <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.weEmbrace')}</Typography>
@@ -70,8 +70,8 @@ const Footer = () => {
             <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
           </InfoStyled>
         </ContainerStyled>
-      </FooterStyled>
-    </LineAnimation>
+    </FooterStyled>
+    // </LineAnimation>
   );
 };
 
