@@ -29,7 +29,7 @@ export default function OurServices() {
         </ParagraphServicesStyled>
         <Button linkBtn="#" backgroundColor={`${colors.green}`} text={`${t('services.text.seeOurServices')}`}></Button>  
       </DivOurServicesStyled>
-      <OutSourcing /> 
+      <OutSourcing texts={"outSourcing.ourServices"} color={"dark_gray"}/> 
     </SectionStyled>
     
   );

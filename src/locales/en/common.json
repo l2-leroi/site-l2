@@ -75,11 +75,8 @@
     }   
     },
     "outSourcing":{
-      "outsourcing":"Outsourcing Advisory", 
-      "ideation":"Ideation",
-      "startupService":"Start-up Service",
-      "consultingService":"IT Consulting Service",
-      "design" : "Design"
+      "ourServices": "Outsourcing Advisory · Ideation · Start-up Service · IT Consulting Service · Design · ",
+      "ourCustomers": "We would love to have you on this list · We would love to have you on this list · We would love to have you on this list · "
     }
   }
   
