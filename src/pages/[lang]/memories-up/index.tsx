@@ -1,12 +1,12 @@
 import { NextPage } from "next";
 import { useEffect } from "react";
 import MenuCases from "../../../components/organisms/Menu/MenuCases";
-import FooterCases from "../../../components/organisms/Footer/FooterCases";
-import AllCases from "../../../components/organisms/Cases/AllCases";
 import HeaderCases from "../../../components/organisms/Header/HeaderCases";
 import ProcessesCases from "../../../components/organisms/ProcessesCases";
 import DesignsCases from "../../../components/organisms/DesignsCases";
-
+import AllCases from "../../../components/organisms/Cases/AllCases";
+// import Footer from "../../../components/organisms/Footer";
+import FooterCases from "../../../components/organisms/Footer/FooterCases";
 const MemoriesUp: NextPage = () => {
 
     useEffect(() => {
@@ -27,6 +27,7 @@ const MemoriesUp: NextPage = () => {
                 <ProcessesCases/>
                 <DesignsCases  />
                 <AllCases />
+                {/* <Footer /> */}
                 <FooterCases />
                
             </>
