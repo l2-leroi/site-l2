@@ -85,6 +85,13 @@
       "startupService":"Atendimento à Startup",
       "consultingService":"Consultoria em TI",
       "design" : "Design"
+    },
+    
+    "CasesDetail":{
+      "design" : "Design",
+      "imagens" : "Imagens",
+      "prototipo" : "Protótipo",
+      "tecnologias" : "tecnologias"
     }
   }
   
