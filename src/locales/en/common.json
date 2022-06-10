@@ -1,7 +1,7 @@
 {
   "images": {
-    "spinner": "./images/Arrow-Spinner-English.svg",
-    "whiteSpinner": "./images/Arrow-Spinner-English-White.svg",
+    "spinner": "/images/Arrow-Spinner-English.svg",
+    "whiteSpinner": "/images/Arrow-Spinner-English-White.svg",
     "alt": {
       "thereIsMore": "There's more down here"
     }
@@ -68,7 +68,7 @@
     "text": {
       "seeOurServices": "SEE OUR SERVICES"
     },
-    "outSourcing":{
+    "outSourcing": {
       "ourServices": "Outsourcing Advisory · Ideation · Start-up Service · IT Consulting Service · Design · ",
       "ourCustomers": "We would love to have you on this list · We would love to have you on this list · We would love to have you on this list · "
     }

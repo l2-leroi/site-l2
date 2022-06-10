@@ -22,8 +22,8 @@ function ScrollCircle(props: imageProps) {
       />
       <ImageArrowSpinnerStyled
         src={props.isWhiteImage ?
-          './images/Arrow-White.svg' :
-          './images/Arrow.svg'
+          '/images/Arrow-White.svg' :
+          '/images/Arrow.svg'
 
         }
         alt="Seta"

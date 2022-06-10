@@ -69,7 +69,7 @@ export default function OurServicesOnePage() {
 
 
           <DivItemStyled>
-            <ImageStyled src="./images/RectangleL2.svg" alt="L2 Code" />
+            <ImageStyled src="/images/RectangleL2.svg" alt="L2 Code" />
           </DivItemStyled>
         </DivServiceItemsStyled>
       </ContentOnePageStyled>
