@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
+import { Typography } from '../../../styles/typography';
 
 export const ContainerStyled = styled.div`
   color: ${colors.gray};
@@ -115,11 +116,59 @@ export const PhraseStyled = styled.p`
     width: 175px;
   }
 `;
+export const LanguageStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    position: absolute;
+    right: 28px;
+    
+    @media (min-height: 416px) and (max-width: 800px) {
+        position: static;
+        flex-direction: row;
+        margin-top: 32px;
+        gap: 16px;
+    }
 
-export const BlackBg = styled.div`
-  height: 510px;
-  width: 100%;
-  right 0;
-  background-color: ${colors.black};
-  position: absolute;
+    @media (max-height: 415px), (max-width: 500px) {
+        opacity: 0;
+        gap: 9px;
+    }
+
+    &.animate {
+        opacity: 1;
+        transition: opacity .8s;
+    }
+    ${Typography}{
+        background: transparent;
+        cursor: pointer;
+        border: none;   
+        font-style: normal;
+        text-align: right;
+        color: ${colors.gray};
+        a{
+            ::selection {
+                background: ${colors.purple};
+                color: ${colors.gray};
+            }
+        }
+        &:first-child {
+            margin-bottom: 8px;
+        }
+
+        &:hover {
+            color: ${colors.green};
+        }
+
+        @media (max-width: 800px) {
+            font-size: 10px;
+
+            &:first-child {
+                margin-bottom: 0px;
+            }
+        }  
+        &.white {
+            color: ${colors.gray};
+        }
+    }
 `;
