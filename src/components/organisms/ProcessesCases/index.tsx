@@ -25,19 +25,19 @@ export default function ProcessesCases() {
         </Typography>
 
         <ul>
-          <Typography tag="p" color="gray" fontFamily="font2">
+          <Typography tag="li" color="gray" fontFamily="font2">
             + Ideação
           </Typography>
-          <Typography tag="p" color="gray" fontFamily="font2">
+          <Typography tag="li" color="gray" fontFamily="font2">
             + Wireframe
             </Typography>
-            <Typography tag="p" color="gray" fontFamily="font2">
+            <Typography tag="li" color="gray" fontFamily="font2">
             + Concept art
             </Typography>
-            <Typography tag="p" color="gray" fontFamily="font2">
+            <Typography tag="li" color="gray" fontFamily="font2">
             + Design
             </Typography>
-            <Typography tag="p" color="gray" fontFamily="font2">
+            <Typography tag="li" color="gray" fontFamily="font2">
             + Protótipo navegável
             </Typography>
         </ul>
