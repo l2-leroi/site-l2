@@ -7,7 +7,6 @@ export const ContainerStyled = styled.div`
   padding: 18rem 2.8rem 10rem;
   display: flex;
 
-
   // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   // padding: 10rem 2.8rem 48rem;
 
@@ -77,36 +76,35 @@ export const ParagraphStyled = styled.p`
     background: ${colors.purple};
     color: ${colors.gray};
   }
-  
 `;
 
 export const TecTitleStyled = styled.h2`
-font-family: 'Neue Machina', sans-serif;
-font-size: 64px;
-line-height: 57.6px;
-text-align: center;
-font-weight: 800;
-color: #F2F3F4;
-letter-spacing: -0.04em;
+  font-family: 'Neue Machina', sans-serif;
+  font-size: 64px;
+  line-height: 57.6px;
+  text-align: center;
+  font-weight: 800;
+  color: #f2f3f4;
+  letter-spacing: -0.04em;
 
-::selection {
-  background: ${colors.purple};
-  color: ${colors.gray};
-}
+  ::selection {
+    background: ${colors.purple};
+    color: ${colors.gray};
+  }
 
-// @media (max-width: 930px) {
-//   width: 500px;
-// }
+  // @media (max-width: 930px) {
+  //   width: 500px;
+  // }
 
-// @media (max-width: 800px) {
-//   width: 278px;
-//   line-height: 28.8px;
-// }
+  // @media (max-width: 800px) {
+  //   width: 278px;
+  //   line-height: 28.8px;
+  // }
 
-// @media (max-width: 415px) {
-//   width: 264px;
-//   line-height: 28.8px;
-// }
+  // @media (max-width: 415px) {
+  //   width: 264px;
+  //   line-height: 28.8px;
+  // }
 `;
 
 export const TitleStyled = styled.h2`
@@ -118,7 +116,7 @@ export const TitleStyled = styled.h2`
   font-size: 64px;
   text-align: center;
   font-weight: 800;
-  color: #F2F3F4;
+  color: #f2f3f4;
   letter-spacing: -0.04em;
 
   ::selection {
@@ -160,7 +158,7 @@ export const PhraseStyled = styled.p`
   }
 `;
 
-export const ButtonImages  = styled.button`
+export const ButtonImages = styled.button`
   background-color: #242a33;
   padding: 10px;
   padding-left: 40px;
@@ -175,16 +173,16 @@ export const ButtonImages  = styled.button`
   line-height: 140%;
   border-style: none;
 
-  &.classBtn2{
+  &.classBtn2 {
     background-color: black;
-    z-index: 2; 
+    z-index: 2;
   }
-  &.classPadding2{
+  &.classPadding2 {
     padding-left: 80px;
   }
 `;
 
-export const ButtonPrototype  = styled.button`
+export const ButtonPrototype = styled.button`
   padding: 10px;
   padding-left: 40px;
   padding-right: 40px;
@@ -201,11 +199,11 @@ export const ButtonPrototype  = styled.button`
   line-height: 140%;
   border-style: none;
 
-  &.classBtn1{
+  &.classBtn1 {
     background-color: black;
   }
 
-  &.classPadding1{
+  &.classPadding1 {
     padding-right: 80px;
   }
 `;
@@ -225,22 +223,19 @@ export const ButtonStyled = styled.div`
     margin-bottom: 8px;
   }
 
-  &:hover ${ButtonPrototype} 
-  {
+  &:hover ${ButtonPrototype} {
     background-color: #242a33;
   }
 
-  ${ButtonPrototype}:hover + ${ButtonImages}
-  {
+  ${ButtonPrototype}:hover + ${ButtonImages} {
     background-color: #242a33;
   }
 
-  ${ButtonPrototype}:hover 
-  {
+  ${ButtonPrototype}:hover {
     background-color: black;
   }
 
-  ${ButtonImages}:hover{
+  ${ButtonImages}:hover {
     background-color: black;
   }
 `;
@@ -258,13 +253,13 @@ export const ImageStyled = styled.img`
     display: none;
   }
 
-  >div {
+  > div {
     width: 50px;
     height: 50px;
     margin-left: 40px;
     border: 12px solid #000000;
-border-radius: 24px;
-} 
+    border-radius: 24px;
+  }
 `;
 
 export const TechnologiesStyled = styled.div`

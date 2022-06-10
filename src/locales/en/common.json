@@ -8,14 +8,17 @@
   },
   "cases": {
     "ourCases": "OUR SELECTED CASES",
+    "ourCasesMemoriesUp": "VEJA OUTROS CASES",
     "weDoWell": "We do a great job because we care about quality, aesthetics and, most of all, results.",
     "weHelped": "We helped this American start-up to define its business and released its product.",
     "webApp": "A Webapp that facilitates getting student loans for young people all over Brazil.",
+    "weHelpedThousands": "Ajudamos milhares de jovens na burocrática jornada de obtenção de crédito educacional.",
     "providers": "Service providers succeed in life with this app we created for a Brazilian start-up.",
     "alt": {
       "coverMemoriesUp": "Memories Up Cover",
       "coverMoreAccess": "Mais Acesso Cover",
-      "coverImStopped": "Tô Parado Cover"
+      "coverImStopped": "Tô Parado Cover",
+      "coverWorkQueue": "Fila de Trabalho Cover"
     }
   },
   "footer": {
@@ -33,6 +36,25 @@
     "followUs": "Follow us",
     "weCreate": "We create digital products and online experiences that people love"
   },
+
+  "headerCases": {
+    "case01": "Case 01",
+    "memoriesUp": "Memories Up",
+    "design": "Design de produto para start-up americana",
+    "atTheBeginning": "No início era apenas uma ideia:",
+    "ifTheService": "E se o serviço de núvem tivesse tanto engajamento quanto as redes sociais? ● Ajudamos essa start-up americana a definir seu negócio e lançamos seu produto."
+  },
+
+  "processesCases": {
+    "processesCarriedOut": "Processos Realizados",
+    "weTread": "Trilhamos uma rica jornada de design, iniciando na concepção de negócio e produto até o protótipo de alta fidelidade no celular.",
+    "ideation": "+ Ideação",
+    "wireframe": "+ Wireframe",
+    "design": "+ Design",
+    "conceptArt": "+ Concept Art",
+    "navigablePrototype": "+ Protótipo Navegável"
+  },
+
   "menu": {
     "ourWhatsapp": "our whatsapp",
     "ourEmail": "our e-mail",
@@ -80,6 +102,14 @@
     "consultingService": "IT Consulting Service",
     "design": "Design"
   },
+
+  "CasesDetail": {
+    "design": "Design",
+    "prototipo": "Protótipo",
+    "imagens": "Imagens",
+    "tecnologias": "Tecnologias"
+  },
+
   "scroll": {
     "home": "Home",
     "about": "About",

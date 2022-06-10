@@ -1,6 +1,5 @@
 import { NextPage } from 'next';
 import { useEffect, useState } from 'react';
-import MenuCases from '../../../components/organisms/Menu/MenuCases';
 import HeaderCases from '../../../components/organisms/Header/HeaderCases';
 import ProcessesCases from '../../../components/organisms/ProcessesCases';
 import DesignsCases from '../../../components/organisms/DesignsCases';

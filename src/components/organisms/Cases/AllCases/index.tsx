@@ -65,11 +65,7 @@ const AllCases = () => {
       <ContentStyled>
         <DivStyled>
           <TitleStyled>{t('cases.ourCasesMemoriesUp')}</TitleStyled>
-          {/* <AsideStyled>
-            <ParagraphStyled>&lt;LA CREAM&gt;</ParagraphStyled>
-          </AsideStyled> */}
         </DivStyled>
-        {/* <PhraseStyled>{t('cases.weDoWell')}</PhraseStyled> */}
         <CaseList cases={cases} />
       </ContentStyled>
       <Button linkBtn={t('cases.seeAllCases')} text={"VEJA TODOS OS CASES"}></Button>
