@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const OurCustomersStyled = styled.section`
@@ -6,14 +6,11 @@ export const OurCustomersStyled = styled.section`
   overflow: hidden;
   position: relative;
 
-  @media(max-width: 600px){
-    padding-top: 50px;
-  }
-
-  @media(max-width: 414px){
-    padding-top: 0px;
-  }
+  width: 100%;
+  background-color: ${colors.gray};
+  transition: 0.1s linear all;
 `;
+
 
 export const BlackLineStyled = styled.div`
   color: ${colors.gray};
@@ -23,8 +20,10 @@ export const BlackLineStyled = styled.div`
   grid-template-columns: 1fr minmax(280px, 1456px) 1fr;
   padding: 0px 28px;
   overflow: hidden;
+  padding-bottom: 80px;
   @media(max-width: 800px){
     padding: 0px 12px;
+    padding-bottom: 80px;
   }
 `;
 
@@ -39,40 +38,25 @@ export const HeaderStyled = styled.hgroup`
   @media(max-width: 800px){
     max-width: 264px;
   }
-`;
-
-export const TitleStyled = styled.h2`
-  font-family: 'Neue Machina', sans-serif;
-  font-style: normal;
-  font-size: 6.4rem;
-  line-height: 90%;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  margin-bottom: 40px;
-  ::selection {
-    background: ${colors.purple};
+  p{
+    max-width: 464px;
+    ::selection {
+      background: ${colors.purple};
+    }
+    @media(max-width: 800px){
+      max-width: 160px;
+    }
   }
-  
-  @media(max-width: 800px){
-    max-width: 264px;
-    margin-bottom: 16px;
-  }
-`;
-
-export const SubtitleStyled = styled.h3`
-  font-family: 'Circular Air Pro', sans-serif;
-  max-width: 464px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 2.4em;
-  line-height: 140%;
-  letter-spacing: -0.04em;
-  ::selection {
-    background: ${colors.purple};
-  }
-
-  @media(max-width: 800px){
-    max-width: 160px;
+  h2{
+    margin-bottom: 40px;
+    ::selection {
+      background: ${colors.purple};
+    }
+    
+    @media(max-width: 800px){
+      max-width: 264px;
+      margin-bottom: 16px;
+    }
   }
 `;
 
@@ -90,24 +74,16 @@ export const AsideStyled = styled.aside`
   @media(max-width: 800px){
     max-width: 50px;
   }
+  p{
+    ::selection {
+      background: ${colors.purple};
+    }
+    @media(max-width: 800px){
+      max-width: 61px;
+    }
+  }
 `;
 
-export const ParagraphStyled = styled.p`
-  font-family: 'Circular Air Pro', sans-serif;
-  font-family: 'Circular Air Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 140%;
-  letter-spacing: -0.02em;
-  ::selection {
-    background: ${colors.purple};
-  }
-  
-  @media(max-width: 800px){
-    max-width: 61px;
-  }
-`;
 
 export const ContentStyled = styled.section`
   position: relative;
@@ -127,59 +103,8 @@ export const ContentStyled = styled.section`
 `;
 
 
-export const SpinningAnimation = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-`;
-
-export const SpinningIconStyled = styled.div`
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  z-index: 1;  
-  overflow-x: hidden;
-  border-radius: 50%;
-  animation: ${SpinningAnimation} 5s linear infinite;
-  max-width: 468px;
-  user-select: none;
-
-  img{
-
-    @media(max-width: 1366px){
-      max-width: 380px;
-    }
-  
-    @media(max-width: 800px){
-      max-width: 248px;
-    }
-  
-    @media(max-width: 414px){
-      max-width: 140px;
-    }
-  }
-`;
-
-export const SignContainerStyled = styled.div`
-  color: ${colors.dark_gray};
-  top: 120px;
-  position: absolute;
-  display: none;
-`;
-
 export const CustomersContainer = styled.div`
   z-index: 5;  
   grid-column: 2;
 `;
 
-export const BlackBg = styled.div`
-  margin-top: -5px;
-  height: 400px;
-  padding-bottom: 50px;
-  width:100%;
-  background-color: ${colors.black};
-  position: absolute;
-`;

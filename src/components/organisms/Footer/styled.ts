@@ -14,6 +14,18 @@ export const ContainerStyled = styled.div`
   flex-direction: column;
   max-width: 1500px;
   margin: 0 auto;
+  position: relative;
+`;
+
+export const Teste4 = styled.div`
+    position: absolute;
+    top: -225px;
+    right: -28px;
+    background: ${colors.black};
+    width: 692px;
+    height: 200px;
+    z-index: 1;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%);
 `;
 
 export const ContentStyled = styled.div``;
@@ -22,6 +34,26 @@ export const DivStyled = styled.div`
   display: flex;
   align-items: end;
   margin-bottom: 10rem;
+  h2{
+    width: 404px;
+    ::selection {
+      background: ${colors.green};
+      color: ${colors.black};
+    }
+  
+    @media (max-width: 930px) {
+      width: 300px;
+    }
+  
+    @media (max-width: 800px) {
+      width: 264px;
+      line-height: 28.8px;
+    }
+  
+    @media (max-width: 414px) {
+      width: 229px;
+    }
+  }
 `;
 
 export const AsideStyled = styled.aside`
@@ -39,43 +71,11 @@ export const AsideStyled = styled.aside`
   @media (max-width: 376px) {
     margin-left: 39px;
   }
-`;
-
-export const ParagraphStyled = styled.p`
-  font-family: 'Circular Air Pro', sans-serif;
-  font-size: 1.6rem;
-  line-height: 22.4px;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  ::selection {
-    background: ${colors.green};
-    color: ${colors.black};
-  }
-`;
-
-export const TitleStyled = styled.h2`
-  font-family: 'Neue Machina', sans-serif;
-  font-size: 6.4rem;
-  line-height: 57.6px;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  width: 404px;
-  ::selection {
-    background: ${colors.green};
-    color: ${colors.black};
-  }
-
-  @media (max-width: 930px) {
-    width: 300px;
-  }
-
-  @media (max-width: 800px) {
-    width: 264px;
-    line-height: 28.8px;
-  }
-
-  @media (max-width: 414px) {
-    width: 229px;
+  p{
+    ::selection {
+      background: ${colors.green};
+      color: ${colors.black};
+    }
   }
 `;
 
@@ -123,8 +123,26 @@ export const InfoStyled = styled.div`
       display: none;
     }
   }
+  p{
+    ::selection {
+      background: ${colors.green};
+      color: ${colors.black};
+    }
+  
+    @media (max-width: 800px) {
+      font-size: 10px;
+      line-height: 14px;
+    }
+  
+    &:first-child {
+      margin-bottom: 9px;
+  
+      @media (max-width: 800px) {
+        margin-bottom: 16px;
+      }
+    }
+  }
 `;
-
 
 export const ImageStyled = styled.img`
   user-select: none;
@@ -133,31 +151,6 @@ export const ImageStyled = styled.img`
     width: 58px;
     height: 20px;
     margin-top: 80px;
-  }
-`;
-
-export const PhraseStyled = styled.p`
-  font-family: 'Circular Air Pro', sans-serif;
-  font-size: 16px;
-  line-height: 22.4px;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  ::selection {
-    background: ${colors.green};
-    color: ${colors.black};
-  }
-
-  @media (max-width: 800px) {
-    font-size: 10px;
-    line-height: 14px;
-  }
-
-  &:first-child {
-    margin-bottom: 9px;
-
-    @media (max-width: 800px) {
-      margin-bottom: 16px;
-    }
   }
 `;
 

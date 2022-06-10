@@ -14,9 +14,9 @@ interface SpinnerProps {
 function Spinner(props: SpinnerProps) {
   return (
     <>
-    <SpinningIconStyled>
-        <SpinnerImage src='./images/enfeite-giratorio.svg' style={{top: props.spinnerPosition.top, left: props.spinnerPosition.left, bottom: props.spinnerPosition.bottom, right: props.spinnerPosition.right}}/>
-    </SpinningIconStyled>
+      <SpinningIconStyled>
+        <SpinnerImage src='/images/enfeite-giratorio.svg' style={{ top: props.spinnerPosition.top, left: props.spinnerPosition.left, bottom: props.spinnerPosition.bottom, right: props.spinnerPosition.right }} />
+      </SpinningIconStyled>
     </>
   );
 };

@@ -1,16 +1,16 @@
 {
-  "images":{
-    "spinner": "./images/Arrow-Spinner.svg",
-    "whiteSpinner": "./images/Arrow-Spinner-White.svg",
-    "alt":{
-       "thereIsMore" : "Tem mais coisa aqui em baixo" 
+  "images": {
+    "spinner": "/images/Arrow-Spinner.svg",
+    "whiteSpinner": "/images/Arrow-Spinner-White.svg",
+    "alt": {
+      "thereIsMore": "Tem mais coisa aqui em baixo"
     }
   },
-  "cases":{
+  "cases": {
     "ourCases": "NOSSOS CASES SELECIONADOS",
     "weDoWell": "Fazemos muito bem porque nos preocupamos com qualidade, estética e, acima de tudo, com resultados.",
-    "weHelped": "Ajudamos start-up americana a definir seu negócio e lançamos seu produto.",  
-    "webApp": "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.", 
+    "weHelped": "Ajudamos start-up americana a definir seu negócio e lançamos seu produto.",
+    "webApp": "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.",
     "providers": "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira.",
       "alt":{
         "coverMemoriesUp" : "Capa Memories Up",
@@ -43,58 +43,66 @@
     "weWork": "Somos uma empresa que trabalha 100% remoto",
     "madeWith": "Feito com",
     "copyright": "Copyright © Todos os direitos reservados"
-    },
-
-  "header":{
+  },
+  "header": {
     "loveTo": "Love to",
     "followUs": "Siga nos",
     "weCreate": "Criamos produtos digitais e experiências online que as pessoas adoram"
-    },
-
-  "menu":{
+  },
+  "menu": {
     "ourWhatsapp": "nosso whatsapp",
     "ourEmail": "nosso e-mail",
     "bePart": "entre no time"
-    },
-    
-  "nav":{
-    "services":"Serviços",
-    "cases":"Cases",
-    "customers":"Clientes",
-    "contact":"Contato"
-    },
-
-  "customers":{
-    "someCustomers":"ALGUNS DE NOSSOS CLIENTES",
-    "weAreProud": "Temos orgulho de fazer parceria com empresas e startups com fome de inovação.",
-      "alt": {
-        "30Customers" : "30+ CLIENTES"
-      }
   },
-  "services":{
-    "ourServices":"NOSSOS SERVIÇOS",
+  "nav": {
+    "services": "Serviços",
+    "cases": "Cases",
+    "customers": "Clientes",
+    "contact": "Contato"
+  },
+  "customers": {
+    "someCustomers": "ALGUNS DE NOSSOS CLIENTES",
+    "weAreProud": "Temos orgulho de fazer parceria com empresas e startups com fome de inovação.",
+    "alt": {
+      "30Customers": "30+ CLIENTES"
+    }
+  },
+  "services": {
+    "ourServices": "NOSSOS SERVIÇOS",
     "weImprove": "Melhoramos a experiência dos produtos e serviços de nossos clientes, com foco em resultados para seus negócio.",
     "followUs": "Siga nos",
-    "outsourcing":"Outsourcing Consultivo",
+    "outsourcing": "Outsourcing Consultivo",
     "increase": "Aumente sua capacidade produtiva ● Com acesso a nossa equipe, você agrega ao seu time profissionais apaixonados com competências diversas.",
-    "startupService":"Atendimento à Startup",
-    "uxuiTeam":"Nossa equipe de UX/UI e desenvolvimento irá projetar e construir seu MVP a partir do zero, “garantindo” uma entrega rápida e rentável.",
-    "ideation":"Ideação",
+    "startupService": "Atendimento à Startup",
+    "uxuiTeam": "Nossa equipe de UX/UI e desenvolvimento irá projetar e construir seu MVP a partir do zero, “garantindo” uma entrega rápida e rentável.",
+    "ideation": "Ideação",
     "coCreation": "Co-criação com nosso time multidisciplinar na concepção do seu produto e estratégias de negócio.",
-    "uxuiDesign":"UX / UI Design",
-    "weDesign":"Projetamos um produto encantador e funcional para os usuários, aliado aos objetivos do seu negócio.",
-    "consultingService":"Consultoria em TI",
+    "uxuiDesign": "UX / UI Design",
+    "weDesign": "Projetamos um produto encantador e funcional para os usuários, aliado aos objetivos do seu negócio.",
+    "consultingService": "Consultoria em TI",
     "ourTechLead": "Nosso Tech Lead Maicon Martins irá aconselhar você sobre as melhores práticas que sua empresa pode usar na infraestrutura.",
     "text": {
-      "seeOurServices" : "VEJA NOSSOS SERVIÇOS"
-    }
+      "seeOurServices": "VEJA NOSSOS SERVIÇOS"
     },
-    "outSourcing":{
-      "outsourcing":"Outsourcing Consultivo", 
-      "ideation":"Ideação",
-      "startupService":"Atendimento à Startup",
-      "consultingService":"Consultoria em TI",
-      "design" : "Design"
+    "outSourcing": {
+      "ourServices": "Outsourcing Consultivo · Ideação · Atendimento à Startup · Consultoria em TI · Design · ",
+      "ourCustomers": "Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · "
     }
+  },
+  "outSourcing": {
+    "outsourcing": "Outsourcing Consultivo",
+    "ideation": "Ideação",
+    "startupService": "Atendimento à Startup",
+    "consultingService": "Consultoria em TI",
+    "design": "Design"
+  },
+  "scroll": {
+    "home": "Home",
+    "about": "Sobre",
+    "cases": "Cases",
+    "services": "Serviços",
+    "people": "Pessoas",
+    "career": "Carreira",
+    "contact": "Contato"
   }
-  
+}
