@@ -28,8 +28,8 @@ const HeaderCases = () => {
               color="gray"
               fontFamily="font1"
             >
-              {t(headerPages.Case01)}
-              {/* Case 01 */}
+              {/*{t(headerPages.Case01)}*/}
+              Case 01 
             </Typography>
 
             <Typography
