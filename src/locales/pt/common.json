@@ -83,8 +83,18 @@
     }
     },
     "outSourcing":{
-      "ourServices": "Outsourcing Consultivo · Ideação · Atendimento à Startup · Consultoria em TI · Design · ",
-      "ourCustomers": "Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · "
+      "outsourcing":"Outsourcing Consultivo", 
+      "ideation":"Ideação",
+      "startupService":"Atendimento à Startup",
+      "consultingService":"Consultoria em TI",
+      "design" : "Design"
+    },
+    
+    "CasesDetail":{
+      "design" : "Design",
+      "imagens" : "Imagens",
+      "prototipo" : "Protótipo",
+      "tecnologias" : "tecnologias"
     }
   }
   
