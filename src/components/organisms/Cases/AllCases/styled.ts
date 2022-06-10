@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../../styles/colors';
+import { colors } from '../../../../styles/colors';
 
 export const ContainerStyled = styled.div`
   color: ${colors.black};
@@ -114,56 +114,7 @@ export const PhraseStyled = styled.p`
   }
 `;
 
-// export const DivItemStyled = styled.div`
-//   max-width: 340px;
-  
-
-//   @media (max-width: 800px) {
-//     max-width: 270px;
-//     min-width: 270px;
-//   }
-
-//   @media (max-width: 700px) {
-//     max-width: 300px;
-//   }
-
-//   @media (max-width: 600px) {
-//     max-width: 160px;
-//     min-width: 260px;
-//   }
-
-//   @media (max-width: 576px) {
-//     max-width: 384px;
-//     min-width: 0px;
-//   }
-//   `;
-
-// export const Link = styled.div`
-// width: 253px;
-// height: 34px;
-
-// font-family: 'Circular Air Pro';
-// font-style: normal;
-// font-weight: 400;
-// font-size: 19px;
-// line-height: 140%;
-// text-align: center;
-// letter-spacing: -0.04em;
-// padding: 3px;
-// margin-left: 900px;
-// border: 2px solid #20BD9D;
-// border-radius: 24px;
-// color: #171B21;
-
-
-// /* Inside auto layout */
-
-// flex: none;
-// order: 0;
-// flex-grow: 0;
-// `;
-
-// export const button = styled.div``;
+ export const Button = styled.div``;
 
 
 

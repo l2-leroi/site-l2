@@ -1,4 +1,5 @@
-import { ContentStyled, ItemStyled, TitleStyled, ContactStyled } from './styled';
+import { Typography } from '../../../styles/typography';
+import { ContentStyled, ItemStyled, ContactStyled } from './styled';
 
 interface Contact {
   title: string,
@@ -16,8 +17,11 @@ function ContactList(props: ContactProps) {
       {
         props.contacts.map((c) => (      
           <ItemStyled key={c.title}>
-            <TitleStyled>{c.title}</TitleStyled>
-            <ContactStyled href={c.link} target="_blank">{c.contact}</ContactStyled>
+            <Typography tag='h3' color='gray'>{c.title}</Typography>
+
+            <ContactStyled href={c.link} target="_blank">
+              <Typography tag="p" color='gray' size='small' lineHeight='line120' letterSpacing='space1' fontWeight='weight3'>{c.contact}</Typography>
+            </ContactStyled>
           </ItemStyled>     
         ))
       }

@@ -27,7 +27,7 @@ const Home: NextPage = () => {
       <OurServicesOnePage />
       <Cases />
       <OurCustomers />
-      <Footer />
+      
     </>
   );
 };

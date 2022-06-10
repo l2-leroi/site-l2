@@ -1,11 +1,26 @@
-import {ContainerStyled, ContentStyled, DivStyled,TitleStyled, ButtonImages, ImageStyled, ButtonStyled, TechnologiesStyled, TecTitleStyled, ButtonPrototype} from "./styled";
+import {
+  AsideStyled,
+  ContainerStyled,
+  ContentStyled,
+  DivStyled,
+  ParagraphStyled,
+  PhraseStyled,
+  TitleStyled,
+  ButtonImages,
+  ImageStyled,
+  ButtonStyled,
+  TechnologiesStyled,
+  TecTitleStyled,
+  ButtonPrototype
+} from './styled';
+//import React from 'react';
 import React, { useEffect } from "react";
 import {useState} from 'react';
 import i18next from 'i18next';
 import DesignPrototype from "../../molecules/DesignPrototype";
 import DesignImages from "../../molecules/DesignImages";
 
-function DesignMemoriesUp() {
+function DesignsCases() {
   const [button1isShown, button1setIsShown] = useState(true);
   const [button2isShown, button2setIsShown] = useState(false);
   const {t}  = i18next;
@@ -40,6 +55,7 @@ function DesignMemoriesUp() {
 
   return ( 
     <ContainerStyled >
+
       <ContentStyled>
 
         <DivStyled> 
@@ -68,4 +84,4 @@ function DesignMemoriesUp() {
     </ContainerStyled>
   );
 };
-export default DesignMemoriesUp;
+export default DesignsCases ;

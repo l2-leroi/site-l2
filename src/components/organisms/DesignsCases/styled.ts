@@ -45,6 +45,9 @@ export const ContentStyled = styled.section`
 export const DivStyled = styled.div`
   text-align: center;
   color: White;
+  margin-left: 54rem;
+
+  
 `;
 
 export const AsideStyled = styled.aside`
@@ -73,6 +76,7 @@ export const ParagraphStyled = styled.p`
     background: ${colors.purple};
     color: ${colors.gray};
   }
+  
 `;
 
 export const TecTitleStyled = styled.h2`

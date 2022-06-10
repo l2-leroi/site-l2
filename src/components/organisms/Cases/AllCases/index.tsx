@@ -1,15 +1,14 @@
 import { AsideStyled, ContainerStyled, ContentStyled, DivStyled, ParagraphStyled, PhraseStyled, TitleStyled} from "./styled";
-import CaseList from "../../molecules/CaseList";
+import CaseList from "../../../molecules/CaseList";
 import React from "react";
 import i18next from 'i18next';
 
-import path from 'path';
-import { DivItemStyled } from "../HeaderMemoriesUp/styled";
-import Button from "../../atoms/Button";
 
-const CasesMemoriesUp = () => {
+import Button from "../../../atoms/Button";
+
+const AllCases = () => {
   const  {t}  = i18next;
-//   console.log('OI',)
+
   
   const maisAcessoHover = [
     "../images/mais-acesso-1.jpg", 
@@ -24,10 +23,10 @@ const CasesMemoriesUp = () => {
     "../images/to-parado-4.jpg"
   ];
   const filaDeTrabalhoHover = [
-    "../images/memories-up-2.jpg",
-    "../images/mais-acesso-3.jpg", 
-    "../images/to-parado-4.jpg", 
-    "../images/memories-up-3.jpg"
+    "../images/memories-up-2-copy.jpg",
+    "../images/mais-acesso-3-copy.jpg", 
+    "../images/to-parado-4-copy.jpg", 
+    "../images/memories-up-3-copy.jpg"
   ];
  
 
@@ -54,7 +53,7 @@ const CasesMemoriesUp = () => {
       number: "04", 
       title: "Fila de Trabalho", 
       info: t('cases.weHelpedThousands'), 
-      image: "../images/to-parado-2.jpg", 
+      image: "../images/capa-fila-de-trabalho.jpg", 
       alt: t('cases.alt.coverWorkQueue'), 
       link: "#1", 
       hover: filaDeTrabalhoHover 
@@ -73,12 +72,8 @@ const CasesMemoriesUp = () => {
         {/* <PhraseStyled>{t('cases.weDoWell')}</PhraseStyled> */}
         <CaseList cases={cases} />
       </ContentStyled>
-      {/* <DivItemStyled className="link">
-        <Button></Button>
-        <Link>VEJA TODOS OS CASES </Link>
-        <button>icon</button>
-      </DivItemStyled> */}
+      <Button linkBtn={t('cases.seeAllCases')} text={"VEJA TODOS OS CASES"}></Button>
     </ContainerStyled>
   );
 };
-export default CasesMemoriesUp;
+export default AllCases;
