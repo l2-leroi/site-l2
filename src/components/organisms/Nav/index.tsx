@@ -24,11 +24,11 @@ export default function Nav() {
 
   const handleMutation = (mutation) => {
     if (mutation[0].target.classList.contains('white')) {
-      document.querySelector(".navImage").setAttribute('src', "./images/L2Code-Logo-White.svg")
+      document.querySelector(".navImage").setAttribute('src', "/images/L2Code-Logo-White.svg")
       setIsAnimating(true);
     }
     else {
-      document.querySelector(".navImage").setAttribute('src', "./images/L2Code-Logo.svg");
+      document.querySelector(".navImage").setAttribute('src', "/images/L2Code-Logo.svg");
       setIsAnimating(false);
     }
   }
@@ -68,7 +68,7 @@ export default function Nav() {
       <NavStyled className="nav anime">
         <NavItemStyled>
           <Link href="/">
-            <ImageStyled className="navImage" src="./images/L2Code-Logo.svg" alt="L2 Code" />
+            <ImageStyled className="navImage" src="/images/L2Code-Logo.svg" alt="L2 Code" />
           </Link>
         </NavItemStyled>
 

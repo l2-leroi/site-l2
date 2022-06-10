@@ -45,7 +45,7 @@ const Footer = () => {
         <ContentStyled>
           <DivStyled>
             <Typography color='gray' tag="h2" size='medium' fontWeight='weight3' fontFamily='font1' lineHeight='line90'>
-            {t('footer.letsTalk')}
+              {t('footer.letsTalk')}
             </Typography>
             <AsideStyled>
               <Typography color='gray' tag='p' size="xxsmall" letterSpacing="space1">&lt;AND DANCE&gt;</Typography>
@@ -53,23 +53,23 @@ const Footer = () => {
           </DivStyled>
           <ContactList contacts={contacts} />
         </ContentStyled>
-          <CopyrightStyled>
-            <InfoStyled>
-              <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.weEmbrace')}</Typography>
-              <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.weWork')}</Typography>
-            </InfoStyled>
-            <InfoStyled className="desktop">
-              <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
-            </InfoStyled>
-            <InfoStyled className="align-end">
-              <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.madeWith')} <IconStyled> <HeartIcon /> </IconStyled> L2code</Typography>
-              <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.copyright')}</Typography>
-            </InfoStyled>
-          </CopyrightStyled>
-          <InfoStyled className="mobile">
-            <ImageStyled src="./images/Logo-Small.svg" alt="L2 Code" />
+        <CopyrightStyled>
+          <InfoStyled>
+            <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.weEmbrace')}</Typography>
+            <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.weWork')}</Typography>
           </InfoStyled>
-        </ContainerStyled>
+          <InfoStyled className="desktop">
+            <ImageStyled src="/images/Logo-Small.svg" alt="L2 Code" />
+          </InfoStyled>
+          <InfoStyled className="align-end">
+            <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.madeWith')} <IconStyled> <HeartIcon /> </IconStyled> L2code</Typography>
+            <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.copyright')}</Typography>
+          </InfoStyled>
+        </CopyrightStyled>
+        <InfoStyled className="mobile">
+          <ImageStyled src="/images/Logo-Small.svg" alt="L2 Code" />
+        </InfoStyled>
+      </ContainerStyled>
     </FooterStyled>
     // </LineAnimation>
   );

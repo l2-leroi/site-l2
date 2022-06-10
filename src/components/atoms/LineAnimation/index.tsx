@@ -1,18 +1,18 @@
-import{
-    LineStyled,
-    TextContainerStyled,
-    LineContainerStyled, Sup, SpinningIconStyled
+import {
+  LineStyled,
+  TextContainerStyled,
+  LineContainerStyled, Sup, SpinningIconStyled
 } from './style'
 
 import React, { useRef, useState } from 'react';
 import OutSourcing from '../../atoms/OutSourcing';
-const Spinner = './images/OurCustomers/enfeite-giratorio.svg';
+const Spinner = '/images/OurCustomers/enfeite-giratorio.svg';
 
-const LineAnimation = ({lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceForSpinner}) => {
+const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceForSpinner }) => {
   const line = useRef();
   const text = useRef();
   const spinner = useRef();
-  
+
   const maxRadians = 17.76 * (Math.PI * 180);
   let maxHeight = 0;
   let minHeightOutSourcing = 60;
@@ -28,7 +28,7 @@ const LineAnimation = ({lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceFo
       maxHeightSpinner = spinnerElement.getBoundingClientRect().height;
     }
   }
-  
+
 
   const animateLine = () => {
     const textElement = text.current as HTMLElement;
@@ -36,42 +36,42 @@ const LineAnimation = ({lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceFo
     const spinnerElement = spinner.current as HTMLElement;
 
     calculateMaxHeight(lineElement);
-    if(hasSpinner){
+    if (hasSpinner) {
       verifySpinnerMaxHeight(spinnerElement);
     }
-    
+
 
     const width = lineElement.getBoundingClientRect().width;
-    
+
     let distanceFromTop = window.innerHeight * 0.6 - lineElement.getBoundingClientRect().top;
 
-    if(resize) {
+    if (resize) {
       distanceFromTop = 0;
       resize = false;
       maxHeightSpinner = 20;
     }
     const provisionalHeight = distanceFromTop;
 
-    const tangent = provisionalHeight/width;
+    const tangent = provisionalHeight / width;
     const arcTangent = Math.atan(tangent);
-    const degrees = arcTangent * (180/ Math.PI);
+    const degrees = arcTangent * (180 / Math.PI);
 
-    if(degrees >= 0 && degrees <= 17.76 && distanceFromTop <= maxHeight){
+    if (degrees >= 0 && degrees <= 17.76 && distanceFromTop <= maxHeight) {
 
-      if(distanceFromTop >= 0 && hasOutSourcing){
-        textElement.style.top =  (- (minHeightOutSourcing) + distanceFromTop/2) + "px";
+      if (distanceFromTop >= 0 && hasOutSourcing) {
+        textElement.style.top = (- (minHeightOutSourcing) + distanceFromTop / 2) + "px";
       }
 
-      if(hasSpinner){
-        const sum = (maxHeightSpinner/2.5) + (spaceForSpinner + maxHeight);
+      if (hasSpinner) {
+        const sum = (maxHeightSpinner / 2.5) + (spaceForSpinner + maxHeight);
 
         if (!(distanceFromTop * 0.8 > sum)) {
-          spinnerElement.style.top = (distanceFromTop * 1.2 - (maxHeightSpinner/2.5)) + 'px';
+          spinnerElement.style.top = (distanceFromTop * 1.2 - (maxHeightSpinner / 2.5)) + 'px';
         }
       }
-      
+
       lineElement.style.height = (distanceFromTop) + "px";
-      if(hasOutSourcing){
+      if (hasOutSourcing) {
         textElement.style.transform = `rotate(${degrees}deg)`;
       }
 
@@ -90,37 +90,37 @@ const LineAnimation = ({lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceFo
   }
 
   React.useEffect(() => {
-    if(hasOutSourcing){
+    if (hasOutSourcing) {
       putTextInTheCorrectTop();
     }
 
     requestAnimationFrame(animateLine)
 
-    if(hasSpinner){
+    if (hasSpinner) {
       putSpinnerInTheCorrectTop();
     }
 
-    window.addEventListener("resize", ()=> resize = true);
-  },[]);
+    window.addEventListener("resize", () => resize = true);
+  }, []);
 
-    return(
-      <>
-        <LineContainerStyled style={{backgroundColor: secondaryBg, borderColor: lineBg}}>
+  return (
+    <>
+      <LineContainerStyled style={{ backgroundColor: secondaryBg, borderColor: lineBg }}>
 
-        {(hasSpinner)? (
-        <SpinningIconStyled className="spinner" ref={spinner}>
-          <img src={Spinner} alt="L2 Code" />
-        </SpinningIconStyled>): null}
-        
-          {(hasOutSourcing)? (<TextContainerStyled ref={text} style={{backgroundColor: secondaryBg}}>
-            <OutSourcing color={"black_1"} texts={"outSourcing.ourCustomers"}/>
-          </TextContainerStyled>): null}
-          
-          <LineStyled ref={line} style={{backgroundColor: lineBg }}/>
-          <Sup style={{backgroundColor: lineBg }} />
-        </LineContainerStyled>
-        
-      </>
-    )
+        {(hasSpinner) ? (
+          <SpinningIconStyled className="spinner" ref={spinner}>
+            <img src={Spinner} alt="L2 Code" />
+          </SpinningIconStyled>) : null}
+
+        {(hasOutSourcing) ? (<TextContainerStyled ref={text} style={{ backgroundColor: secondaryBg }}>
+          <OutSourcing color={"black_1"} texts={"outSourcing.ourCustomers"} />
+        </TextContainerStyled>) : null}
+
+        <LineStyled ref={line} style={{ backgroundColor: lineBg }} />
+        <Sup style={{ backgroundColor: lineBg }} />
+      </LineContainerStyled>
+
+    </>
+  )
 }
 export default LineAnimation

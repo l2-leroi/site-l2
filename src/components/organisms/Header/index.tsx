@@ -19,23 +19,23 @@ const Header = () => {
   const { t } = i18next
   const backgroundList = [
     {
-      image: './images/PROTOTYPE.jpg',
+      image: '/images/PROTOTYPE.jpg',
       text: 'PROTOTYPE',
     },
     {
-      image: './images/INOVATE.jpg',
+      image: '/images/INOVATE.jpg',
       text: 'INOVATE',
     },
     {
-      image: './images/HACK.jpg',
+      image: '/images/HACK.jpg',
       text: 'HACK',
     },
     {
-      image: './images/LAUGH.jpg',
+      image: '/images/LAUGH.jpg',
       text: 'LAUGH',
     },
     {
-      image: './images/THINK.jpg',
+      image: '/images/THINK.jpg',
       text: 'THINK',
     },
   ];

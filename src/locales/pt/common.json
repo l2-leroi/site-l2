@@ -1,7 +1,7 @@
 {
   "images": {
-    "spinner": "./images/Arrow-Spinner.svg",
-    "whiteSpinner": "./images/Arrow-Spinner-White.svg",
+    "spinner": "/images/Arrow-Spinner.svg",
+    "whiteSpinner": "/images/Arrow-Spinner-White.svg",
     "alt": {
       "thereIsMore": "Tem mais coisa aqui em baixo"
     }
@@ -68,7 +68,7 @@
     "text": {
       "seeOurServices": "VEJA NOSSOS SERVIÇOS"
     },
-    "outSourcing":{
+    "outSourcing": {
       "ourServices": "Outsourcing Consultivo · Ideação · Atendimento à Startup · Consultoria em TI · Design · ",
       "ourCustomers": "Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · "
     }

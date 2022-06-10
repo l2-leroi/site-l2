@@ -43,7 +43,7 @@ const Menu = ({ openMenu, closeMenu }: MenuProps) => {
     <MenuStyled style={{ display: openMenu ? 'block' : 'none' }}>
       <ContainerStyled>
         <DivLogoStyled>
-          <ImageStyled src="./images/L2Code-Logo-White.svg" alt="L2 Code" />
+          <ImageStyled src="/images/L2Code-Logo-White.svg" alt="L2 Code" />
           <DivContactStyled className="first">
             <Typography tag="p" size="xxsmall" letterSpacing="space1" color="gray">{t('menu.bePart')}</Typography>
             <DivLineStyled></DivLineStyled>
@@ -56,11 +56,11 @@ const Menu = ({ openMenu, closeMenu }: MenuProps) => {
         <DivMenuStyled>
           <DivTextMenuStyled>
             <ButtonCloseStyled onClick={() => closeMenu(false)}>
-              <ImageStyled src="./images/closeMenu.svg"></ImageStyled>
-                <DivTextStyled>
-                  <TextMenuStyled>ME</TextMenuStyled>
-                  <TextMenuStyled>NU</TextMenuStyled>
-                </DivTextStyled>
+              <ImageStyled src="/images/closeMenu.svg"></ImageStyled>
+              <DivTextStyled>
+                <TextMenuStyled>ME</TextMenuStyled>
+                <TextMenuStyled>NU</TextMenuStyled>
+              </DivTextStyled>
             </ButtonCloseStyled>
           </DivTextMenuStyled>
 
