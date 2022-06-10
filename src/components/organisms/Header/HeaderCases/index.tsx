@@ -11,14 +11,16 @@ import {
   DivItemSTextStyled,
 } from './styled';
 import Link from 'next/link';
+import i18next from "i18next";
 
 const HeaderCases = () => {
+  const {t} = i18next
   return (
     <>
       <ContainerStyled>
         <MainContentStyled>
-          <MainTextStyled>
-            <Typography
+          <MainTextStyled >
+            <Typography className='bannerText typography'
               tag="h2"
               size="small"
               fontWeight="weight3"
@@ -26,12 +28,13 @@ const HeaderCases = () => {
               color="gray"
               fontFamily="font1"
             >
-              Case 01
+              {t(headerPages.Case01)}
+              {/* Case 01 */}
             </Typography>
 
             <Typography
               tag="h1"
-              // size="xxlarge"
+              // size="xlarge"
               fontWeight="weight3"
               lineHeight="line100"
               letterSpacing="space2"

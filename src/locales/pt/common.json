@@ -39,6 +39,11 @@
     "weCreate": "Criamos produtos digitais e experiências online que as pessoas adoram"
     },
 
+  "headerPages":{
+    "case01": "Case 01",
+    "memoriesUp": "Memories Up"
+  },
+
   "menu":{
     "ourWhatsapp": "nosso whatsapp",
     "ourEmail": "nosso e-mail",
