@@ -46,8 +46,9 @@ export const DivStyled = styled.div`
   text-align: center;
   color: White;
   margin-left: 54rem;
-
-  
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const AsideStyled = styled.aside`
