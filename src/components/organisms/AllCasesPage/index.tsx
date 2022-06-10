@@ -1,7 +1,18 @@
-import { AsideStyled, BlackBg, ContainerStyled, ContentStyled, DivStyled, ParagraphStyled, PhraseStyled, TitleStyled} from "./styled";
+import { 
+  AsideStyled,
+  ContainerStyled,
+  ContentStyled, 
+  DivStyled, 
+  LanguageStyled, 
+  ParagraphStyled, 
+  PhraseStyled, 
+  TitleStyled} from "./styled";
 import AllCaseList from "../../molecules/AllCaseList";
 import React from "react";
 import i18next from 'i18next';
+
+import { Typography } from "../../../styles/typography";
+import Link from "next/link";
 
 const Cases = () => {
   const  {t}  = i18next;
@@ -78,12 +89,22 @@ const Cases = () => {
           <AsideStyled>
             <ParagraphStyled>&lt;LA CREAM&gt;</ParagraphStyled>
           </AsideStyled>
+
+          <LanguageStyled>
+            <Typography tag='button' size="xxsmall" letterSpacing="space1" className="typography">
+              <Link href='/pt/all-cases' locale='pt' scroll={false}>PT</Link>
+            </Typography>
+            <Typography tag='button' size="xxsmall" letterSpacing="space1" className="typography">
+              <Link href='/en/all-cases' locale='en' scroll={false}>EN</Link>
+            </Typography>
+          </LanguageStyled>
+
         </DivStyled>
         <PhraseStyled>{t('allCases.weDoWell')}</PhraseStyled>
         <AllCaseList cases={allCases} />
       </ContentStyled>
-      <BlackBg />
     </ContainerStyled>
+    
   );
 };
 export default Cases;
