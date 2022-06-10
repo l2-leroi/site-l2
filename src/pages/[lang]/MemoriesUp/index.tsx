@@ -19,23 +19,18 @@ const MemoriesUp: NextPage = () => {
           }
         }
       });
-
         return (
             <>
-                
                 <MenuMemoriesUp />
                 <HeaderMemoriesUp />
                 <OurServicesOnePageMemoriesUp/>
                 <ProcessPageMemoriesUp/>
                 <DesignMemoriesUp />
                 <CasesMemoriesUp />
-                
+
                 <FooterMemoriesUp />
-               
             </>
         );
     };
-
-
 
     export default MemoriesUp;
