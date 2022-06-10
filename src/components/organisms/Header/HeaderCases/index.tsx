@@ -11,16 +11,17 @@ import {
   DivItemSTextStyled,
 } from './styled';
 import Link from 'next/link';
-import i18next from "i18next";
+import i18next from 'i18next';
 
 const HeaderCases = () => {
-  const {t} = i18next
+  const { t } = i18next;
   return (
     <>
       <ContainerStyled>
         <MainContentStyled>
-          <MainTextStyled >
-            <Typography className='bannerText typography'
+          <MainTextStyled>
+            <Typography
+              className="bannerText typography"
               tag="h2"
               size="small"
               fontWeight="weight3"
@@ -28,8 +29,7 @@ const HeaderCases = () => {
               color="gray"
               fontFamily="font1"
             >
-              {t(headerPages.Case01)}
-              {/* Case 01 */}
+              {t('headerCases.case01')}
             </Typography>
 
             <Typography
@@ -41,11 +41,11 @@ const HeaderCases = () => {
               color="gray"
               fontFamily="font1"
             >
-              Memories up
+              {t('headerCases.memoriesUp')}
             </Typography>
 
             <Typography tag="p" color="gray">
-              Design de produto para start-up americana
+              {t('headerCases.design')}
             </Typography>
 
             <LanguageStyled>
@@ -93,12 +93,10 @@ const HeaderCases = () => {
               fontFamily="font1"
               letterSpacing="space1"
             >
-              No início era apenas uma ideia:
+              {t('headerCases.atTheBeginning')}
             </Typography>
             <Typography tag="p" color="gray" fontFamily="font2">
-              E se o serviço de núvem tivesse tanto engajamento quanto as redes
-              sociais? ● Ajudamos essa start-up americana a definir seu negócio
-              e lançamos seu produto.
+              {t('headerCases.ifTheService')}
             </Typography>
           </DivItemSTextStyled>
         </DivTextStyled>

@@ -1,7 +1,10 @@
 import React from 'react';
 import { SectionOnePageStyled, DivItemStyled, ImageStyled } from './styled';
 import { Typography } from '../../../styles/typography';
+import i18next from 'i18next';
+
 export default function ProcessesCases() {
+  const { t } = i18next;
   return (
     <SectionOnePageStyled>
       <ImageStyled src="../images/process-memories-up.jpg" alt="L2 Code" />
@@ -16,30 +19,29 @@ export default function ProcessesCases() {
           fontFamily="font1"
           letterSpacing="space1"
         >
-          Processos realizados
+          {t('processCases.processes carried out')}
         </Typography>
 
         <Typography tag="p" color="gray" fontFamily="font2">
-          Trilhamos uma rica jornada de design, iniciando na concepção de
-          negócios e produto até o protótipo de alta fidelidade no celular.
+          {t('processCases.weTread')}
         </Typography>
 
         <ul>
           <Typography tag="li" color="gray" fontFamily="font2">
-            + Ideação
+            {t('processCases.ideation')}
           </Typography>
           <Typography tag="li" color="gray" fontFamily="font2">
-            + Wireframe
-            </Typography>
-            <Typography tag="li" color="gray" fontFamily="font2">
-            + Concept art
-            </Typography>
-            <Typography tag="li" color="gray" fontFamily="font2">
-            + Design
-            </Typography>
-            <Typography tag="li" color="gray" fontFamily="font2">
-            + Protótipo navegável
-            </Typography>
+            {t('processCases.wireframe')}
+          </Typography>
+          <Typography tag="li" color="gray" fontFamily="font2">
+            {t('processCases.conceptArt')}
+          </Typography>
+          <Typography tag="li" color="gray" fontFamily="font2">
+            {t('processCases.design')}
+          </Typography>
+          <Typography tag="li" color="gray" fontFamily="font2">
+            {t('processCases.navigablePrototype')}
+          </Typography>
         </ul>
       </DivItemStyled>
     </SectionOnePageStyled>
