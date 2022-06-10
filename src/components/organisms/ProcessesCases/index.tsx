@@ -19,28 +19,28 @@ export default function ProcessesCases() {
           fontFamily="font1"
           letterSpacing="space1"
         >
-          {t('processCases.processes carried out')}
+          {t('processesCases.processesCarriedOut')}
         </Typography>
 
         <Typography tag="p" color="gray" fontFamily="font2">
-          {t('processCases.weTread')}
+          {t('processesCases.weTread')}
         </Typography>
 
         <ul>
           <Typography tag="li" color="gray" fontFamily="font2">
-            {t('processCases.ideation')}
+            {t('processesCases.ideation')}
           </Typography>
           <Typography tag="li" color="gray" fontFamily="font2">
-            {t('processCases.wireframe')}
+            {t('processesCases.wireframe')}
           </Typography>
           <Typography tag="li" color="gray" fontFamily="font2">
-            {t('processCases.conceptArt')}
+            {t('processesCases.conceptArt')}
           </Typography>
           <Typography tag="li" color="gray" fontFamily="font2">
-            {t('processCases.design')}
+            {t('processesCases.design')}
           </Typography>
           <Typography tag="li" color="gray" fontFamily="font2">
-            {t('processCases.navigablePrototype')}
+            {t('processesCases.navigablePrototype')}
           </Typography>
         </ul>
       </DivItemStyled>

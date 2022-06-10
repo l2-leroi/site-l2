@@ -35,6 +35,27 @@
     "followUs": "Siga nos",
     "weCreate": "Criamos produtos digitais e experiências online que as pessoas adoram"
   },
+
+  "headerCases": {
+    "case01": "Case 01",
+    "memoriesUp": "Memories Up",
+    "design": "Design de produto para start-up americana",
+    "atTheBeginning": "No início era apenas uma ideia:",
+    "ifTheService": "E se o serviço de núvem tivesse tanto engajamento quanto as redes sociais? ● Ajudamos essa start-up americana a definir seu negócio e lançamos seu produto."
+  },
+
+  "processesCases": {
+    "processesCarriedOut": "Processos Realizados",
+    "weTread": "Trilhamos uma rica jornada de design, iniciando na concepção de negócio e produto até o protótipo de alta fidelidade no celular.",
+    "ideation": "+ Ideação",
+    "wireframe": "+ Wireframe",
+    "design": "+ Design",
+    "conceptArt": "+ Concept Art",
+    "navigablePrototype": "+ Protótipo Navegável"
+
+
+  },
+
   "menu": {
     "ourWhatsapp": "nosso whatsapp",
     "ourEmail": "nosso e-mail",
