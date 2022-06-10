@@ -1,7 +1,7 @@
 {
   "images": {
-    "spinner": "./images/Arrow-Spinner.svg",
-    "whiteSpinner": "./images/Arrow-Spinner-White.svg",
+    "spinner": "/images/Arrow-Spinner.svg",
+    "whiteSpinner": "/images/Arrow-Spinner-White.svg",
     "alt": {
       "thereIsMore": "Tem mais coisa aqui em baixo"
     }
@@ -17,11 +17,9 @@
     "alt": {
       "coverMemoriesUp": "Capa Memories Up",
       "coverMoreAccess": "Capa Mais Acesso",
-      "coverImStopped": "Capa Tô Parado",
-      "coverWorkQueue": "Capa Fila de Trabalho"
+      "coverImStopped": "Capa Tô Parado"
     }
   },
-
   "footer": {
     "letsTalk": "VAMOS CONVERSAR",
     "ourWhatsapp": "nosso whatsapp",
@@ -32,44 +30,22 @@
     "madeWith": "Feito com",
     "copyright": "Copyright © Todos os direitos reservados"
   },
-
   "header": {
     "loveTo": "Love to",
     "followUs": "Siga nos",
     "weCreate": "Criamos produtos digitais e experiências online que as pessoas adoram"
   },
-
-  "headerCases": {
-    "case01": "Case 01",
-    "memoriesUp": "Memories Up",
-    "design": "Design de produto para start-up americana",
-    "atTheBeginning": "No início era apenas uma ideia:",
-    "ifTheService": "E se o serviço de núvem tivesse tanto engajamento quanto as redes sociais? ● Ajudamos essa start-up americana a definir seu negócio e lançamos seu produto."
-  },
-
-  "processCases": {
-    "processes carried out": "Processos realizados",
-    "weTread": "Trilhamos uma rica jornada de design, iniciando na concepção de negócios e produto até o protótipo de alta fidelidade no celular.",
-    "ideation": "+ Ideação",
-    "wireframe": "+ Wireframe",
-    "conceptArt": "+ Concept Art",
-    "design": "+ Design",
-    "navigablePrototype": "+ Protótipo navegável"
-  },
-
   "menu": {
     "ourWhatsapp": "nosso whatsapp",
     "ourEmail": "nosso e-mail",
     "bePart": "entre no time"
   },
-
   "nav": {
     "services": "Serviços",
     "cases": "Cases",
     "customers": "Clientes",
     "contact": "Contato"
   },
-
   "customers": {
     "someCustomers": "ALGUNS DE NOSSOS CLIENTES",
     "weAreProud": "Temos orgulho de fazer parceria com empresas e startups com fome de inovação.",
@@ -93,6 +69,10 @@
     "ourTechLead": "Nosso Tech Lead Maicon Martins irá aconselhar você sobre as melhores práticas que sua empresa pode usar na infraestrutura.",
     "text": {
       "seeOurServices": "VEJA NOSSOS SERVIÇOS"
+    },
+    "outSourcing": {
+      "ourServices": "Outsourcing Consultivo · Ideação · Atendimento à Startup · Consultoria em TI · Design · ",
+      "ourCustomers": "Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · "
     }
   },
   "outSourcing": {
@@ -102,11 +82,13 @@
     "consultingService": "Consultoria em TI",
     "design": "Design"
   },
-
-  "CasesDetail": {
-    "design": "Design",
-    "imagens": "Imagens",
-    "prototipo": "Protótipo",
-    "tecnologias": "tecnologias"
+  "scroll": {
+    "home": "Home",
+    "about": "Sobre",
+    "cases": "Cases",
+    "services": "Serviços",
+    "people": "Pessoas",
+    "career": "Carreira",
+    "contact": "Contato"
   }
 }

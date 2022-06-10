@@ -19,29 +19,30 @@ const Header = () => {
   const { t } = i18next
   const backgroundList = [
     {
-      image: './images/PROTOTYPE.jpg',
+      image: '/images/PROTOTYPE.jpg',
       text: 'PROTOTYPE',
     },
     {
-      image: './images/INOVATE.jpg',
+      image: '/images/INOVATE.jpg',
       text: 'INOVATE',
     },
     {
-      image: './images/HACK.jpg',
+      image: '/images/HACK.jpg',
       text: 'HACK',
     },
     {
-      image: './images/LAUGH.jpg',
+      image: '/images/LAUGH.jpg',
       text: 'LAUGH',
     },
     {
-      image: './images/THINK.jpg',
+      image: '/images/THINK.jpg',
       text: 'THINK',
     },
   ];
   const [counterLoop, setCounterLoop] = useState(0);
   const [isInitInterval, setIsInitInterval] = useState(false);
   const isTouchActive = useRef(false);
+  const [isAnimating, setIsAnimating] = useState(false);
   const [splashPage, setSplashPage] = useState(false);
   const [isFirstTouch, setIsFirstTouch] = useState(false);
   const interval = useRef(null);
@@ -126,17 +127,16 @@ const Header = () => {
   }, [isInitInterval])
 
   const exitInterval = (backgroundList) => {
-
     const header = document.querySelector(".header");
     const nav = document.querySelector(".nav");
-    const typography= document.querySelectorAll(".typography");
+    const typography = document.querySelectorAll(".typography");
     header.classList.remove("white");
     nav?.classList.remove("white");
-
     typography.forEach((element) => {
       element.classList.remove('white');
     });
     setWhiteCircle(false);
+    setIsAnimating(false);
     clearInterval(interval.current);
     interval.current = null;
     setActualImage(backgroundList);
@@ -200,7 +200,8 @@ const Header = () => {
               }
             }}
             onTouchStart={() => {
-              if (splashPage) {
+              if (splashPage && !isAnimating) {
+                setIsAnimating(true);
                 isTouchActive.current = true;
                 setIsInitInterval(true);
               }
@@ -224,10 +225,10 @@ const Header = () => {
         </MainTextStyled>
 
         <LanguageStyled className='anime'>
-          <Typography tag='button' size="xxsmall"  letterSpacing="space1" className="typography">
+          <Typography tag='button' size="xxsmall" letterSpacing="space1" className="typography">
             <Link href='/pt' locale='pt' scroll={false}>PT</Link>
           </Typography>
-          <Typography tag='button' size="xxsmall"  letterSpacing="space1" className="typography">
+          <Typography tag='button' size="xxsmall" letterSpacing="space1" className="typography">
             <Link href='/en' locale='en' scroll={false}>EN</Link>
           </Typography>
         </LanguageStyled>
@@ -240,14 +241,14 @@ const Header = () => {
             {t('header.followUs')}
           </Typography>
 
-          <SocialMediaLinkStyled  href="https://www.linkedin.com/company/l2code-dev/" target="_blank">
+          <SocialMediaLinkStyled href="https://www.linkedin.com/company/l2code-dev/" target="_blank">
 
             <Typography className="typography" tag='button' fontWeight="weight2" size="xxsmall" letterSpacing="space1">In
             </Typography>
 
           </SocialMediaLinkStyled>
 
-          <SocialMediaLinkStyled  href="https://www.instagram.com/l2code.com.br/" target="_blank">
+          <SocialMediaLinkStyled href="https://www.instagram.com/l2code.com.br/" target="_blank">
 
             <Typography className="typography" tag='button' fontWeight="weight2" size="xxsmall" letterSpacing="space1">IG
             </Typography>

@@ -1,8 +1,6 @@
 import { GlobalStyle } from '../styles/global';
 import '../styles/fonts.css';
 import type { AppProps } from 'next/app';
-import Footer from '../components/organisms/Footer/index';
-import NavOnePage from '../components/organisms/NavOnePage/index';
 import ReactGa from 'react-ga';
 
 import '../i18n'
@@ -11,6 +9,8 @@ import i18next from 'i18next'
 import { defaultLanguage, languages } from '../i18n'
 import { useRouter } from 'next/router'
 import Head from 'next/head';
+import NavOnePage from '../components/organisms/NavOnePage';
+import Footer from '../components/organisms/Footer/index';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
