@@ -20,11 +20,12 @@ import { colors } from '../../../styles/colors';
 
 const Footer = () => {
   const contacts = [
-    {
-      title: 'nosso whatsapp',
-      contact: '+55 51 99693.9336',
-      link: 'https://api.whatsapp.com/send?phone=5551996939336',
-    },
+    // obs: deixar comentado para não exibir a parte do whatsapp, pois está com o número do nery
+    // {
+    //   title: t('footer.ourWhatsapp'),
+    //   contact: '+55 51 99693.9336',
+    //   link: 'https://api.whatsapp.com/send?phone=5551996939336',
+    // },
     {
       title: 'nosso e-mail',
       contact: 'contato@l2code.com.br',
