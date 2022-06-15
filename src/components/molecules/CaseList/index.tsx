@@ -1,17 +1,16 @@
+import { useEffect, useRef, useState } from "react";
 import {
   CaseStyled,
   ContentStyled,
   ListStyled,
-  InfoStyled,
   LinkStyled,
   ImageStyled,
   SliderStyled,
   GhostStyled,
-} from './styled';
-import { useEffect, useRef, useState } from 'react';
+} from "./styled";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Typography } from '../../../styles/typography';
+import { Typography } from "../../../styles/typography";
 
 interface Case {
   number: string;
@@ -29,8 +28,8 @@ interface CaseProps {
 
 function CaseList(props: CaseProps) {
   const interval = useRef(null);
-  var currentImage = '';
-  const [actualImage, setActualImage] = useState('');
+  let currentImage = "";
+  const [actualImage, setActualImage] = useState("");
 
   // anime slider
   const settings = {
@@ -47,27 +46,27 @@ function CaseList(props: CaseProps) {
           slidesToShow: 2,
           slidesToScroll: 1,
           swipeToSlide: true,
-        }
+        },
       },
-    ]
+    ],
   };
 
-  // anime scroll 
+  // anime scroll
   useEffect(() => {
-    const target = document.querySelectorAll<HTMLElement>('[data-anime]');
+    const target = document.querySelectorAll<HTMLElement>("[data-anime]");
     function animeScroll() {
       const windowTop = window.pageYOffset + window.innerHeight * 0.7;
       target.forEach((element) => {
         const position = element.getBoundingClientRect();
         const positionAbsolute = position.top + window.scrollY;
         if (windowTop > positionAbsolute) {
-          element.classList.add('animate');
+          element.classList.add("animate");
         }
       });
     }
     animeScroll();
     if (target.length) {
-      window.addEventListener('scroll', () => {
+      window.addEventListener("scroll", () => {
         animeScroll();
       });
     }
@@ -75,9 +74,11 @@ function CaseList(props: CaseProps) {
 
   useEffect(() => {
     if (window.innerWidth < 500) {
-      const images = document.querySelectorAll<HTMLElement>('.images');
+      const images = document.querySelectorAll<HTMLElement>(".images");
       images.forEach((img) => {
-        img.addEventListener('contextmenu', (e) => { e.preventDefault() });
+        img.addEventListener("contextmenu", (e) => {
+          e.preventDefault();
+        });
       });
     }
   });
@@ -85,8 +86,8 @@ function CaseList(props: CaseProps) {
   // anime hover
   const initInterval = (images: string[]) => {
     interval.current = setInterval(() => {
-      const index = currentImage != '' ? images.indexOf(currentImage) : 0;
-      if (index == images.length - 1) {
+      const index = currentImage !== "" ? images.indexOf(currentImage) : 0;
+      if (index === images.length - 1) {
         currentImage = images[0];
         setActualImage(currentImage);
       } else {
@@ -106,56 +107,64 @@ function CaseList(props: CaseProps) {
     <ContentStyled>
       <ListStyled>
         <SliderStyled {...settings}>
-          {
-            props.cases.map((itemCase) => (
-              <CaseStyled key={itemCase.title} data-anime="animate">
-                
-                <Typography tag="p" size='xxsmall' letterSpacing='space1'>Case {itemCase.number}</Typography>
+          {props.cases.map((itemCase) => (
+            <CaseStyled key={itemCase.title} data-anime="animate">
+              <Typography tag="p" size="xxsmall" letterSpacing="space1">
+                Case {itemCase.number}
+              </Typography>
 
-                <Typography tag='h3' fontWeight='weight3' size='small' lineHeight='line120' letterSpacing='space1'>{itemCase.title}</Typography>
-            
-                <Typography tag="p">{itemCase.info}</Typography>
+              <Typography
+                tag="h3"
+                fontWeight="weight3"
+                size="small"
+                lineHeight="line120"
+                letterSpacing="space1"
+              >
+                {itemCase.title}
+              </Typography>
 
+              <Typography tag="p">{itemCase.info}</Typography>
 
-                <LinkStyled className="images"
-                  onMouseEnter={() => {
-                    if (window.innerWidth > 800) {
-                      initInterval(itemCase.hover);
-                    }
-                  }}
-                  onMouseLeave={() => {
-                    if (window.innerWidth > 800) {
-                      cancelInterval(itemCase.image);
-                    }
-                  }}
-                  onTouchStart={() => {
+              <LinkStyled
+                className="images"
+                onMouseEnter={() => {
+                  if (window.innerWidth > 800) {
                     initInterval(itemCase.hover);
-                  }}
-                  onTouchEnd={() => {
-                    cancelInterval(itemCase.image);
-                  }}
-                >
-                  <ImageStyled className="images"
-                    src={itemCase.image}
-                    alt={itemCase.alt}
-                  />
-                  {
-                    itemCase.hover.map((imageHover => (
-                      <ImageStyled
-                        key={imageHover}
-                        src={imageHover}
-                        alt={itemCase.alt}
-                        className={
-                          ((actualImage == imageHover) ? "images imageBlock" : "images imageNone")
-                        }
-                      />
-                    )))
                   }
-                </LinkStyled>
-              </CaseStyled>
-            ))
-          }
-          <GhostStyled></GhostStyled>
+                }}
+                onMouseLeave={() => {
+                  if (window.innerWidth > 800) {
+                    cancelInterval(itemCase.image);
+                  }
+                }}
+                onTouchStart={() => {
+                  initInterval(itemCase.hover);
+                }}
+                onTouchEnd={() => {
+                  cancelInterval(itemCase.image);
+                }}
+              >
+                <ImageStyled
+                  className="images"
+                  src={itemCase.image}
+                  alt={itemCase.alt}
+                />
+                {itemCase.hover.map((imageHover) => (
+                  <ImageStyled
+                    key={imageHover}
+                    src={imageHover}
+                    alt={itemCase.alt}
+                    className={
+                      actualImage === imageHover
+                        ? "images imageBlock"
+                        : "images imageNone"
+                    }
+                  />
+                ))}
+              </LinkStyled>
+            </CaseStyled>
+          ))}
+          <GhostStyled />
         </SliderStyled>
       </ListStyled>
     </ContentStyled>

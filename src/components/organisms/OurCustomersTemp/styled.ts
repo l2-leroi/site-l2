@@ -1,5 +1,5 @@
-import styled, { keyframes } from 'styled-components';
-import { colors } from '../../../styles/colors';
+import styled, { keyframes } from "styled-components";
+import { colors } from "../../../styles/colors";
 
 export const OurCustomersStyled = styled.section`
   background-color: transparent;
@@ -65,13 +65,13 @@ export const BlackLineStyled = styled.div`
 export const HeaderStyled = styled.hgroup`
   max-width: 680px;
 
-  @media(max-width: 800px){
+  @media (max-width: 800px) {
     max-width: 336px;
   }
 `;
 
 export const TitleStyled = styled.h2`
-  font-family: 'Neue Machina', sans-serif;
+  font-family: "Neue Machina", sans-serif;
   font-style: normal;
   font-size: 64px;
   //4em
@@ -82,8 +82,8 @@ export const TitleStyled = styled.h2`
   ::selection {
     background: ${colors.purple};
   }
-  
-  @media(max-width: 800px){
+
+  @media (max-width: 800px) {
     max-width: 264px;
     font-size: 32px;
     //2em
@@ -92,7 +92,7 @@ export const TitleStyled = styled.h2`
 `;
 
 export const SubtitleStyled = styled.h3`
-  font-family: 'Circular Air Pro', sans-serif;
+  font-family: "Circular Air Pro", sans-serif;
   max-width: 464px;
   font-style: normal;
   font-weight: 400;
@@ -104,7 +104,7 @@ export const SubtitleStyled = styled.h3`
     background: ${colors.purple};
   }
 
-  @media(max-width: 800px){
+  @media (max-width: 800px) {
     font-size: 12px;
     //0.75em
     line-height: 140%;
@@ -118,9 +118,9 @@ export const AsideStyled = styled.aside`
 `;
 
 export const ParagraphStyled = styled.p`
-  font-family: 'Circular Air Pro', sans-serif;
+  font-family: "Circular Air Pro", sans-serif;
   font-size: 16px;
-  font-family: 'Circular Air Pro';
+  font-family: "Circular Air Pro";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -130,14 +130,14 @@ export const ParagraphStyled = styled.p`
   ::selection {
     background: ${colors.purple};
   }
-  
-  @media(max-width: 800px){
+
+  @media (max-width: 800px) {
     font-size: 12px;
     //0.75em
     max-width: 61px;
   }
 
-  @media(max-width: 414px){
+  @media (max-width: 414px) {
     font-size: 10px;
     //0.625em
     max-width: 61px;
@@ -151,18 +151,18 @@ export const ContentStyled = styled.section`
   margin-bottom: 124px;
   grid-column: 2;
 
-  @media(max-width: 800px){
+  @media (max-width: 800px) {
     margin-bottom: 39px;
   }
 
-  @media(max-width: 414px){
+  @media (max-width: 414px) {
     margin-bottom: 36px;
     width: 100%;
   }
 `;
 
 export const SignStyled = styled.span`
-  font-family: 'Neue Machina', sans-serif;
+  font-family: "Neue Machina", sans-serif;
   font-style: normal;
   font-size: 3rem;
   line-height: 200%;
@@ -180,7 +180,7 @@ export const SignStyled = styled.span`
   margin-top: -20px;
   transform: rotate(17.76deg);
 
-  @media(max-width: 800px){
+  @media (max-width: 800px) {
     font-size: 20px;
     //1.25em
     line-height: 120%;
@@ -199,17 +199,17 @@ export const SpinningAnimation = keyframes`
 export const SpinningIconStyled = styled.div`
   position: absolute;
   right: 0px;
-  z-index: 99;  
+  z-index: 99;
   overflow-x: hidden;
   top: 20rem;
   animation: ${SpinningAnimation} 5s linear infinite;
 
-  @media(max-width: 800px){
+  @media (max-width: 800px) {
     max-width: 248px;
     top: -10px;
   }
 
-  @media(max-width: 414px){
+  @media (max-width: 414px) {
     max-width: 140px;
   }
 `;
@@ -219,7 +219,6 @@ export const SignContainerStyled = styled.div`
   padding-top: 40px;
   margin-top: -2px;
   position: relative;
-  
 `;
 
 export const CustomersContainer = styled.div`

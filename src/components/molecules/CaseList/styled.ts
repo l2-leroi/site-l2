@@ -1,11 +1,10 @@
-import styled from 'styled-components';
-import { colors } from '../../../styles/colors';
+import styled from "styled-components";
 import Slider from "react-slick";
-import { Typography } from '../../../styles/typography';
+import { colors } from "../../../styles/colors";
 
 export const ContentStyled = styled.section`
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   overflow: hidden;
 `;
 
@@ -14,7 +13,7 @@ export const ListStyled = styled.section``;
 export const CaseStyled = styled.article`
   height: 1010px;
   opacity: 0;
-  transition: .8s;
+  transition: 0.8s;
   transform: translate3d(0, 200px, 0);
 
   &.animate {
@@ -25,7 +24,7 @@ export const CaseStyled = styled.article`
   @media (max-width: 1350px) {
     height: 940px;
   }
-  
+
   @media (max-width: 1155px) {
     height: 920px;
   }
@@ -33,23 +32,23 @@ export const CaseStyled = styled.article`
   @media (max-width: 800px) {
     height: 530px;
   }
-  
-  h3{
+
+  h3 {
     border-top: 1px solid ${colors.dark_gray};
     padding: 4.4rem 0 2.8rem 0;
     ::selection {
       background: ${colors.purple};
       color: ${colors.gray};
     }
-  
+
     @media (min-width: 800px) and (max-width: 1365px) {
       font-size: 34px;
     }
   }
-  
-  p{
-    &:first-child{
-      padding-left:10px;
+
+  p {
+    &:first-child {
+      padding-left: 10px;
     }
     max-width: 345px;
     padding-bottom: 3.2rem;
@@ -96,11 +95,11 @@ export const SliderStyled = styled(Slider)`
       margin-top: 0px;
     }
 
-    .slick-active.slick-current +div {
+    .slick-active.slick-current + div {
       margin-top: 80px;
     }
 
-    .slick-active +div {
+    .slick-active + div {
       margin-top: 160px;
     }
   }
@@ -109,16 +108,16 @@ export const SliderStyled = styled(Slider)`
     width: 464px;
     margin-top: 0px;
     margin: 0 1.6rem;
-    transition: .5s;
+    transition: 0.5s;
 
     @media (min-width: 801px) {
       &:nth-child(2) {
         margin-top: 300px;
-      } 
+      }
       &:nth-child(3) {
         margin-top: 600px;
       }
-    } 
+    }
 
     &:first-of-type {
       margin-left: 0px;
@@ -132,7 +131,7 @@ export const SliderStyled = styled(Slider)`
         width: 0px;
       }
     }
-    
+
     @media (max-width: 1350px) {
       width: 415px;
     }
@@ -149,10 +148,8 @@ export const SliderStyled = styled(Slider)`
 
 export const GhostStyled = styled.div``;
 
-
-
 export const InfoStyled = styled.p`
-  font-family: 'Circular Air Pro', sans-serif;
+  font-family: "Circular Air Pro", sans-serif;
   font-weight: 400;
   font-size: 2.4rem;
   line-height: 3.36rem;
@@ -183,7 +180,7 @@ export const ImageStyled = styled.img`
   border-radius: 8px;
   position: absolute;
   user-select: none;
-  
+
   &.imageBlock {
     display: block;
   }

@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { colors } from '../../../styles/colors';
-import { Typography } from '../../../styles/typography';
+import styled from "styled-components";
+import { colors } from "../../../styles/colors";
+import { Typography } from "../../../styles/typography";
 
-interface NavProps { 
+interface NavProps {
   borderWhite?: boolean;
 }
 
@@ -22,12 +22,12 @@ export const NavStyled = styled.nav`
     background-color: transparent;
     color: ${colors.gray};
 
-    p { 
+    p {
       color: ${colors.gray};
     }
   }
 
-  &.smallFixed{
+  &.smallFixed {
     position: fixed;
     padding: 25px 28px;
     transition: padding 0.4s;
@@ -38,13 +38,13 @@ export const NavStyled = styled.nav`
 
     &.animate {
       opacity: 1;
-      transition: opacity .8s;
+      transition: opacity 0.8s;
     }
   }
 `;
 
 export const NavItemStyled = styled.div`
-  ${Typography}{
+  ${Typography} {
     margin: 0;
     text-align: center;
 
@@ -69,8 +69,10 @@ export const NavButtonStyled = styled.button`
 `;
 
 export const SandwichMenuStyled = styled.span<NavProps>`
-  border-top: 2px solid ${props => props.borderWhite ? colors.gray : colors.black};
-  border-bottom: 2px solid ${props => props.borderWhite ? colors.gray : colors.black};
+  border-top: 2px solid
+    ${(props) => (props.borderWhite ? colors.gray : colors.black)};
+  border-bottom: 2px solid
+    ${(props) => (props.borderWhite ? colors.gray : colors.black)};
   height: 8px;
   width: 20px;
 `;

@@ -1,7 +1,7 @@
-import InfiniteScroll from 'react-infinite-scroll-component';
-import styled from 'styled-components';
-import { colors } from '../../../styles/colors';
-import { Typography } from '../../../styles/typography';
+import InfiniteScroll from "react-infinite-scroll-component";
+import styled from "styled-components";
+import { colors } from "../../../styles/colors";
+import { Typography } from "../../../styles/typography";
 
 export const InfiniteScrollContainerStyled = styled(InfiniteScroll)`
   display: flex;
@@ -20,16 +20,16 @@ export const InfiniteScrollContainerStyled = styled(InfiniteScroll)`
     margin-top: 60px;
     text-align: center;
 
-    a{ 
+    a {
       font-size: 4vw;
       width: 100%;
       cursor: pointer;
       text-decoration: none;
-      
+
       ::selection {
         background: ${colors.purple};
       }
-      
+
       @media (max-width: 600px) {
         font-size: 40px;
       }

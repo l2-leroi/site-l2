@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import { colors } from '../../../styles/colors';
+import styled from "styled-components";
+import { colors } from "../../../styles/colors";
 
 export const ListStyled = styled.ul`
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   margin-bottom: 40px;
   position: relative;
@@ -19,21 +19,19 @@ export const ListStyled = styled.ul`
     width: 2%;
     height: 80%;
     z-index: 7;
-    @media (max-width: 800px){
+    @media (max-width: 800px) {
       width: 5%;
     }
   }
 
-  @media(max-width: 800px){
-    grid-template-columns: repeat(2,1fr);
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
 
     &::after {
       top: -20px;
       height: 90%;
     }
   }
-
-  
 `;
 
 export const ContentStyled = styled.li`
@@ -44,7 +42,7 @@ export const ContentStyled = styled.li`
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  
+
   align-items: center;
   padding: 40px;
   min-width: 80px;
@@ -63,7 +61,6 @@ export const ContentStyled = styled.li`
     right: -3px;
     z-index: 6;
     font-size: 20px;
-    
   }
 
   &::before {
@@ -73,19 +70,16 @@ export const ContentStyled = styled.li`
     right: -3px;
     z-index: 6;
     font-size: 20px;
-    
   }
 
-  img{
-    @media (max-width: 1025px){
+  img {
+    @media (max-width: 1025px) {
       max-width: 150px;
     }
-    @media (max-width: 430px){
+    @media (max-width: 430px) {
       max-width: 100px;
     }
   }
 `;
 
-export const ImageStyled = styled.img`
-
-`;
+export const ImageStyled = styled.img``;
