@@ -7,8 +7,8 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { defaultLanguage, languages } from "../i18n";
 import { GlobalStyle } from "../styles/global";
-import NavOnePage from "../components/organisms/NavOnePage";
 import Footer from "../components/organisms/Footer/index";
+import Nav from "../components/organisms/Nav";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -58,7 +58,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
       {/* End Google Tag Manager (noscript) */}
       <GlobalStyle />
-      <NavOnePage />
+      <Nav />
       <Component {...pageProps} />
       <Footer />
     </>
