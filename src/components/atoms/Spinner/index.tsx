@@ -1,4 +1,4 @@
-import { SpinningIconStyled, SpinnerImage } from "./styled";
+import { SpinningIconStyled, SpinnerImage } from './styled';
 
 interface Positions {
   top: string;

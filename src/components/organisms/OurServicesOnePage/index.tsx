@@ -1,6 +1,6 @@
-import React from "react";
-import i18next from "i18next";
-import ScrollCircle from "../../atoms/ScrollCircle";
+import React from 'react';
+import i18next from 'i18next';
+import ScrollCircle from '../../atoms/ScrollCircle';
 import {
   SectionOnePageStyled,
   ContentOnePageStyled,
@@ -9,8 +9,8 @@ import {
   DivItemStyled,
   ImageStyled,
   ScrollArrow,
-} from "./styled";
-import { Typography } from "../../../styles/typography";
+} from './styled';
+import { Typography } from '../../../styles/typography';
 
 export default function OurServicesOnePage() {
   const { t } = i18next;
@@ -19,8 +19,8 @@ export default function OurServicesOnePage() {
       <ScrollArrow className="SpinnerCircle2">
         <ScrollCircle
           isWhiteImage={false}
-          blackImage={`${t("images.spinner")}`}
-          whiteImage={`${t("images.whiteSpinner")}`}
+          blackImage={`${t('images.spinner')}`}
+          whiteImage={`${t('images.whiteSpinner')}`}
         />
       </ScrollArrow>
 
@@ -34,10 +34,10 @@ export default function OurServicesOnePage() {
             fontFamily="font1"
             lineHeight="line90"
           >
-            {t("services.ourServices")}
+            {t('services.ourServices')}
           </Typography>
           <Typography color="gray" tag="p">
-            {t("services.weImprove")}
+            {t('services.weImprove')}
           </Typography>
         </DivServicesStyled>
 
@@ -51,12 +51,12 @@ export default function OurServicesOnePage() {
               lineHeight="line120"
               letterSpacing="space1"
             >
-              {t("services.outsourcing")}
+              {t('services.outsourcing')}
             </Typography>
 
             <Typography color="dark_gray" tag="p">
-              {" "}
-              {t("services.increase")}
+              {' '}
+              {t('services.increase')}
             </Typography>
           </DivItemStyled>
 
@@ -69,11 +69,11 @@ export default function OurServicesOnePage() {
               lineHeight="line120"
               letterSpacing="space1"
             >
-              {t("services.startupService")}
+              {t('services.startupService')}
             </Typography>
 
             <Typography color="dark_gray" tag="p">
-              {t("services.uxuiTeam")}
+              {t('services.uxuiTeam')}
             </Typography>
           </DivItemStyled>
 
@@ -86,11 +86,11 @@ export default function OurServicesOnePage() {
               lineHeight="line120"
               letterSpacing="space1"
             >
-              {t("services.ideation")}
+              {t('services.ideation')}
             </Typography>
 
             <Typography color="dark_gray" tag="p">
-              {t("services.coCreation")}
+              {t('services.coCreation')}
             </Typography>
           </DivItemStyled>
 
@@ -103,11 +103,11 @@ export default function OurServicesOnePage() {
               lineHeight="line120"
               letterSpacing="space1"
             >
-              {t("services.uxuiDesign")}
+              {t('services.uxuiDesign')}
             </Typography>
 
             <Typography color="dark_gray" tag="p">
-              {t("services.weDesign")}
+              {t('services.weDesign')}
             </Typography>
           </DivItemStyled>
 
@@ -120,11 +120,11 @@ export default function OurServicesOnePage() {
               lineHeight="line120"
               letterSpacing="space1"
             >
-              {t("services.consultingService")}
+              {t('services.consultingService')}
             </Typography>
 
             <Typography color="dark_gray" tag="p">
-              {t("services.ourTechLead")}
+              {t('services.ourTechLead')}
             </Typography>
           </DivItemStyled>
 

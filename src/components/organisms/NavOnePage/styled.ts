@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { colors } from "../../../styles/colors";
-import { Typography } from "../../../styles/typography";
+import styled from 'styled-components';
+import { colors } from '../../../styles/colors';
+import { Typography } from '../../../styles/typography';
 
 export const NavStyled = styled.nav`
   position: absolute;

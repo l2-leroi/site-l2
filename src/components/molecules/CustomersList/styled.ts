@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { colors } from "../../../styles/colors";
+import styled from 'styled-components';
+import { colors } from '../../../styles/colors';
 
 export const ListStyled = styled.ul`
   display: grid;
@@ -9,7 +9,7 @@ export const ListStyled = styled.ul`
   position: relative;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: -5;
     margin-top: -15px;
@@ -55,7 +55,7 @@ export const ContentStyled = styled.li`
   }
 
   &::after {
-    content: "+";
+    content: '+';
     position: absolute;
     bottom: -6px;
     right: -3px;
@@ -64,7 +64,7 @@ export const ContentStyled = styled.li`
   }
 
   &::before {
-    content: "+";
+    content: '+';
     position: absolute;
     top: -17px;
     right: -3px;

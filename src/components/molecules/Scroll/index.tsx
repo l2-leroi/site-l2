@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import { v4 as uuid } from "uuid";
-import { useRouter } from "next/router";
-import i18next from "i18next";
-import Link from "next/link";
-import { InfiniteScrollContainerStyled } from "./styled";
-import { Typography } from "../../../styles/typography";
+import { useEffect, useState } from 'react';
+import { v4 as uuid } from 'uuid';
+import { useRouter } from 'next/router';
+import i18next from 'i18next';
+import Link from 'next/link';
+import { InfiniteScrollContainerStyled } from './styled';
+import { Typography } from '../../../styles/typography';
 
 export interface ScrollProps {
   closeMenu: () => void;
@@ -12,37 +12,37 @@ export interface ScrollProps {
 
 function Scroll({ closeMenu }: ScrollProps) {
   const baseItemsPT = [
-    "Home",
-    "Sobre",
-    "Cases",
-    "Serviços",
-    "Pessoas",
-    "Carreira",
-    "Contato",
+    'Home',
+    'Sobre',
+    'Cases',
+    'Serviços',
+    'Pessoas',
+    'Carreira',
+    'Contato',
   ];
 
   const baseItemsEN = [
-    "Home",
-    "About",
-    "Cases",
-    "Services",
-    "People",
-    "Career",
-    "Contact",
+    'Home',
+    'About',
+    'Cases',
+    'Services',
+    'People',
+    'Career',
+    'Contact',
   ];
 
   const baseUrl = [
-    "",
-    "/about",
-    "/cases",
-    "/services",
-    "/people",
-    "/career",
-    "/contact",
+    '',
+    '/about',
+    '/cases',
+    '/services',
+    '/people',
+    '/career',
+    '/contact',
   ];
 
   const language = i18next.language.substring(0, 2);
-  let baseItems = language === "en" ? baseItemsEN : baseItemsPT;
+  let baseItems = language === 'en' ? baseItemsEN : baseItemsPT;
   const [items, setItems] = useState([...baseItems, ...baseItems]);
   const router = useRouter();
   const initialPage = router.asPath.substring(3);
@@ -53,7 +53,7 @@ function Scroll({ closeMenu }: ScrollProps) {
   };
 
   useEffect(() => {
-    if (language === "en") {
+    if (language === 'en') {
       setItems([...baseItemsEN, ...baseItemsEN]);
       baseItems = baseItemsEN;
     } else {
@@ -82,7 +82,7 @@ function Scroll({ closeMenu }: ScrollProps) {
           letterSpacing="space3"
           fontFamily="font1"
           color={
-            currentPage === `${baseUrl[items.indexOf(item)]}` ? "green" : "gray"
+            currentPage === `${baseUrl[items.indexOf(item)]}` ? 'green' : 'gray'
           }
           onClick={() => closeMenu()}
         >

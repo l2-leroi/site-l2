@@ -1,21 +1,21 @@
-import "../styles/fonts.css";
-import type { AppProps } from "next/app";
-import ReactGa from "react-ga";
-import { useEffect, useState } from "react";
-import i18next from "i18next";
-import { useRouter } from "next/router";
-import Head from "next/head";
-import { defaultLanguage, languages } from "../i18n";
-import { GlobalStyle } from "../styles/global";
-import Footer from "../components/organisms/Footer/index";
-import Nav from "../components/organisms/Nav";
+import '../styles/fonts.css';
+import type { AppProps } from 'next/app';
+import ReactGa from 'react-ga';
+import { useEffect, useState } from 'react';
+import i18next from 'i18next';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import { defaultLanguage, languages } from '../i18n';
+import { GlobalStyle } from '../styles/global';
+import Footer from '../components/organisms/Footer/index';
+import Nav from '../components/organisms/Nav';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const { asPath, query } = router;
 
   // Detect current language
-  const slug = asPath.split("/")[1];
+  const slug = asPath.split('/')[1];
   const langSlug = languages.includes(slug) && slug;
   const language = query.lang || langSlug || defaultLanguage;
 
@@ -26,13 +26,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [language]);
 
   useEffect(() => {
-    ReactGa.initialize("G-E4RS6QZT6P");
+    ReactGa.initialize('G-E4RS6QZT6P');
 
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
 
   // Don't trigger `i18next.changeLanguage()` on root folder, use `router` to redirect to the specific language
-  if (asPath !== "/" && asPath !== "/404") {
+  if (asPath !== '/' && asPath !== '/404') {
     i18next.changeLanguage(clientLanguage);
   }
 

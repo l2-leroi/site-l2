@@ -1,5 +1,5 @@
-import styled, { keyframes } from "styled-components";
-import { colors } from "../../../styles/colors";
+import styled, { keyframes } from 'styled-components';
+import { colors } from '../../../styles/colors';
 
 export const OurCustomersStyled = styled.section`
   background-color: transparent;
@@ -71,7 +71,7 @@ export const HeaderStyled = styled.hgroup`
 `;
 
 export const TitleStyled = styled.h2`
-  font-family: "Neue Machina", sans-serif;
+  font-family: 'Neue Machina', sans-serif;
   font-style: normal;
   font-size: 64px;
   //4em
@@ -92,7 +92,7 @@ export const TitleStyled = styled.h2`
 `;
 
 export const SubtitleStyled = styled.h3`
-  font-family: "Circular Air Pro", sans-serif;
+  font-family: 'Circular Air Pro', sans-serif;
   max-width: 464px;
   font-style: normal;
   font-weight: 400;
@@ -118,9 +118,9 @@ export const AsideStyled = styled.aside`
 `;
 
 export const ParagraphStyled = styled.p`
-  font-family: "Circular Air Pro", sans-serif;
+  font-family: 'Circular Air Pro', sans-serif;
   font-size: 16px;
-  font-family: "Circular Air Pro";
+  font-family: 'Circular Air Pro';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -162,7 +162,7 @@ export const ContentStyled = styled.section`
 `;
 
 export const SignStyled = styled.span`
-  font-family: "Neue Machina", sans-serif;
+  font-family: 'Neue Machina', sans-serif;
   font-style: normal;
   font-size: 3rem;
   line-height: 200%;

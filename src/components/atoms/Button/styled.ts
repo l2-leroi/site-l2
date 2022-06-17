@@ -14,7 +14,8 @@ export const LinkStyled = styled.a`
 `;
 
 export const ButtonStyled = styled.div<ButtonProps>`
-  border: 2px solid ${(props) => (props.borderColor ? props.borderColor : colors.green)};
+  border: 2px solid
+    ${(props) => (props.borderColor ? props.borderColor : colors.green)};
   background-color: ${(props) => (props.bgColor ? props.bgColor : 'none')};
   border-radius: 50px;
   font-family: 'Circular Air Pro', sans-serif;
@@ -41,11 +42,13 @@ export const ButtonStyled = styled.div<ButtonProps>`
   &:hover {
     &:first-child + div {
       border-color: ${colors.secondary1};
-      background-color: ${(props) => (props.bgColor ? colors.secondary1 : 'none')};
+      background-color: ${(props) =>
+        props.bgColor ? colors.secondary1 : 'none'};
     }
     &:first-child {
       border-color: ${colors.secondary1};
-      background-color: ${(props) => (props.bgColor ? colors.secondary1 : 'none')};
+      background-color: ${(props) =>
+        props.bgColor ? colors.secondary1 : 'none'};
     }
   }
 `;

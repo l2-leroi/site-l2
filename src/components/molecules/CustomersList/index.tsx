@@ -1,4 +1,4 @@
-import { ContentStyled, ListStyled } from "./styled";
+import { ContentStyled, ListStyled } from './styled';
 
 interface Customer {
   alt: string;

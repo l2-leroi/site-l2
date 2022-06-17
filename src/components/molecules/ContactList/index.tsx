@@ -1,6 +1,6 @@
-import ReactGA from "react-ga";
-import { Typography } from "../../../styles/typography";
-import { ContentStyled, ItemStyled, ContactStyled } from "./styled";
+import ReactGA from 'react-ga';
+import { Typography } from '../../../styles/typography';
+import { ContentStyled, ItemStyled, ContactStyled } from './styled';
 
 interface Contact {
   title: string;
@@ -15,8 +15,8 @@ interface ContactProps {
 function ContactList(props: ContactProps) {
   const ClickHandler = () => {
     ReactGA.event({
-      category: "Button",
-      action: "Click nos links do footer",
+      category: 'Button',
+      action: 'Click nos links do footer',
     });
   };
   return (

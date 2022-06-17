@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 import {
   CaseStyled,
   ContentStyled,
@@ -7,10 +7,10 @@ import {
   ImageStyled,
   SliderStyled,
   GhostStyled,
-} from "./styled";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { Typography } from "../../../styles/typography";
+} from './styled';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { Typography } from '../../../styles/typography';
 
 interface Case {
   number: string;
@@ -28,8 +28,8 @@ interface CaseProps {
 
 function CaseList(props: CaseProps) {
   const interval = useRef(null);
-  let currentImage = "";
-  const [actualImage, setActualImage] = useState("");
+  let currentImage = '';
+  const [actualImage, setActualImage] = useState('');
 
   // anime slider
   const settings = {
@@ -53,20 +53,20 @@ function CaseList(props: CaseProps) {
 
   // anime scroll
   useEffect(() => {
-    const target = document.querySelectorAll<HTMLElement>("[data-anime]");
+    const target = document.querySelectorAll<HTMLElement>('[data-anime]');
     function animeScroll() {
       const windowTop = window.pageYOffset + window.innerHeight * 0.7;
       target.forEach((element) => {
         const position = element.getBoundingClientRect();
         const positionAbsolute = position.top + window.scrollY;
         if (windowTop > positionAbsolute) {
-          element.classList.add("animate");
+          element.classList.add('animate');
         }
       });
     }
     animeScroll();
     if (target.length) {
-      window.addEventListener("scroll", () => {
+      window.addEventListener('scroll', () => {
         animeScroll();
       });
     }
@@ -74,9 +74,9 @@ function CaseList(props: CaseProps) {
 
   useEffect(() => {
     if (window.innerWidth < 500) {
-      const images = document.querySelectorAll<HTMLElement>(".images");
+      const images = document.querySelectorAll<HTMLElement>('.images');
       images.forEach((img) => {
-        img.addEventListener("contextmenu", (e) => {
+        img.addEventListener('contextmenu', (e) => {
           e.preventDefault();
         });
       });
@@ -86,7 +86,7 @@ function CaseList(props: CaseProps) {
   // anime hover
   const initInterval = (images: string[]) => {
     interval.current = setInterval(() => {
-      const index = currentImage !== "" ? images.indexOf(currentImage) : 0;
+      const index = currentImage !== '' ? images.indexOf(currentImage) : 0;
       if (index === images.length - 1) {
         currentImage = images[0];
         setActualImage(currentImage);
@@ -156,8 +156,8 @@ function CaseList(props: CaseProps) {
                     alt={itemCase.alt}
                     className={
                       actualImage === imageHover
-                        ? "images imageBlock"
-                        : "images imageNone"
+                        ? 'images imageBlock'
+                        : 'images imageNone'
                     }
                   />
                 ))}

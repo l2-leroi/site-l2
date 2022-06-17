@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
-import i18next from "i18next";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import Scroll from "../../molecules/Scroll";
+import React, { useEffect, useRef } from 'react';
+import i18next from 'i18next';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import Scroll from '../../molecules/Scroll';
 import {
   ContainerStyled,
   DivLogoStyled,
@@ -16,8 +16,8 @@ import {
   MenuStyled,
   ButtonCloseStyled,
   ImageStyled,
-} from "./styled";
-import { Typography } from "../../../styles/typography";
+} from './styled';
+import { Typography } from '../../../styles/typography';
 
 export interface MenuProps {
   openMenu: boolean;
@@ -27,11 +27,11 @@ export interface MenuProps {
 function Menu({ openMenu, closeMenu }: MenuProps) {
   const { t } = i18next;
   const router = useRouter();
-  const previousPage = useRef("");
+  const previousPage = useRef('');
 
   useEffect(() => {
     openMenu
-      ? (document.body.style.overflow = "hidden")
+      ? (document.body.style.overflow = 'hidden')
       : (document.body.style.overflow = null);
   }, [openMenu]);
 
@@ -41,7 +41,7 @@ function Menu({ openMenu, closeMenu }: MenuProps) {
   }, [router.asPath]);
 
   return (
-    <MenuStyled style={{ display: openMenu ? "block" : "none" }}>
+    <MenuStyled style={{ display: openMenu ? 'block' : 'none' }}>
       <ContainerStyled>
         <DivLogoStyled>
           <ImageStyled src="/images/L2Code-Logo-White.svg" alt="L2 Code" />
@@ -52,7 +52,7 @@ function Menu({ openMenu, closeMenu }: MenuProps) {
               letterSpacing="space1"
               color="gray"
             >
-              {t("menu.bePart")}
+              {t('menu.bePart')}
             </Typography>
             <DivLineStyled />
             <Typography
@@ -117,7 +117,7 @@ function Menu({ openMenu, closeMenu }: MenuProps) {
               letterSpacing="space1"
               color="gray"
             >
-              {t("menu.ourWhatsapp")}
+              {t('menu.ourWhatsapp')}
             </Typography>
             <DivLineStyled />
             <Typography

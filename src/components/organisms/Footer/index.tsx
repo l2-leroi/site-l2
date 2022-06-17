@@ -1,5 +1,5 @@
-import React from "react";
-import i18next from "i18next";
+import React from 'react';
+import i18next from 'i18next';
 import {
   FooterStyled,
   ContentStyled,
@@ -10,10 +10,10 @@ import {
   ImageStyled,
   ContainerStyled,
   DivStyled,
-} from "./styled";
-import { HeartIcon } from "../../../assets/icons/heartIcon";
-import ContactList from "../../molecules/ContactList/index";
-import { Typography } from "../../../styles/typography";
+} from './styled';
+import { HeartIcon } from '../../../assets/icons/heartIcon';
+import ContactList from '../../molecules/ContactList/index';
+import { Typography } from '../../../styles/typography';
 
 function Footer() {
   const { t } = i18next;
@@ -25,14 +25,14 @@ function Footer() {
     //   link: 'https://api.whatsapp.com/send?phone=5551996939336',
     // },
     {
-      title: t("footer.ourEmail"),
-      contact: "contato@l2code.com.br",
-      link: "mailto:contato@l2code.com.br",
+      title: t('footer.ourEmail'),
+      contact: 'contato@l2code.com.br',
+      link: 'mailto:contato@l2code.com.br',
     },
     {
-      title: t("footer.bePart"),
-      contact: "talentos@l2code.com.br",
-      link: "mailto:talentos@l2code.com.br",
+      title: t('footer.bePart'),
+      contact: 'talentos@l2code.com.br',
+      link: 'mailto:talentos@l2code.com.br',
     },
   ];
 
@@ -50,7 +50,7 @@ function Footer() {
               fontFamily="font1"
               lineHeight="line90"
             >
-              {t("footer.letsTalk")}
+              {t('footer.letsTalk')}
             </Typography>
             <AsideStyled>
               <Typography
@@ -73,7 +73,7 @@ function Footer() {
               letterSpacing="space1"
               color="gray"
             >
-              {t("footer.weEmbrace")}
+              {t('footer.weEmbrace')}
             </Typography>
             <Typography
               tag="p"
@@ -81,7 +81,7 @@ function Footer() {
               letterSpacing="space1"
               color="gray"
             >
-              {t("footer.weWork")}
+              {t('footer.weWork')}
             </Typography>
           </InfoStyled>
           <InfoStyled className="desktop">
@@ -94,11 +94,11 @@ function Footer() {
               letterSpacing="space1"
               color="gray"
             >
-              {t("footer.madeWith")}{" "}
+              {t('footer.madeWith')}{' '}
               <IconStyled>
-                {" "}
-                <HeartIcon />{" "}
-              </IconStyled>{" "}
+                {' '}
+                <HeartIcon />{' '}
+              </IconStyled>{' '}
               L2code
             </Typography>
             <Typography
@@ -107,7 +107,7 @@ function Footer() {
               letterSpacing="space1"
               color="gray"
             >
-              {t("footer.copyright")}
+              {t('footer.copyright')}
             </Typography>
           </InfoStyled>
         </CopyrightStyled>

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { colors } from "../../../styles/colors";
+import styled from 'styled-components';
+import { colors } from '../../../styles/colors';
 
 export const OurCustomersStyled = styled.section`
   width: 100%;
@@ -62,7 +62,7 @@ export const HeaderStyled = styled.hgroup`
 export const AsideStyled = styled.aside`
   text-align: right;
   align-self: center;
-  font-family: "Circular Air Pro";
+  font-family: 'Circular Air Pro';
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 import {
   NavStyled,
   NavItemStyled,
@@ -7,9 +7,9 @@ import {
   DivTextStyled,
   ImageStyled,
   SandwichMenuStyled,
-} from "./styled";
-import Menu from "../Menu/index";
-import { Typography } from "../../../styles/typography";
+} from './styled';
+import Menu from '../Menu/index';
+import { Typography } from '../../../styles/typography';
 
 export default function Nav() {
   const [MenuClick, setClick] = useState(false);
@@ -18,20 +18,20 @@ export default function Nav() {
   const handleWhite = () => {
     const observer = new MutationObserver(handleMutation);
 
-    const observerTarget = document.querySelector(".nav");
+    const observerTarget = document.querySelector('.nav');
     observer.observe(observerTarget, { attributes: true });
   };
 
   const handleMutation = (mutation) => {
-    if (mutation[0].target.classList.contains("white")) {
+    if (mutation[0].target.classList.contains('white')) {
       document
-        .querySelector(".navImage")
-        .setAttribute("src", "/images/L2Code-Logo-White.svg");
+        .querySelector('.navImage')
+        .setAttribute('src', '/images/L2Code-Logo-White.svg');
       setIsAnimating(true);
     } else {
       document
-        .querySelector(".navImage")
-        .setAttribute("src", "/images/L2Code-Logo.svg");
+        .querySelector('.navImage')
+        .setAttribute('src', '/images/L2Code-Logo.svg');
       setIsAnimating(false);
     }
   };
@@ -39,28 +39,28 @@ export default function Nav() {
   let lastScrollTop = 0;
 
   const handleScroll = () => {
-    const bannerText = document.querySelector(".bannerText") as HTMLElement;
+    const bannerText = document.querySelector('.bannerText') as HTMLElement;
     const bannerTextTop = bannerText.getBoundingClientRect().top;
-    const nav = document.querySelector(".nav");
+    const nav = document.querySelector('.nav');
 
     if (screen.width <= 880) {
       if (bannerTextTop > lastScrollTop) {
-        nav.classList.add("smallFixed");
+        nav.classList.add('smallFixed');
       } else {
-        nav.classList.remove("smallFixed");
+        nav.classList.remove('smallFixed');
       }
       lastScrollTop = bannerTextTop;
     } else {
       bannerTextTop < 0
-        ? nav.classList.add("smallFixed")
-        : nav.classList.remove("smallFixed");
+        ? nav.classList.add('smallFixed')
+        : nav.classList.remove('smallFixed');
     }
   };
 
   useEffect(() => {
     handleWhite();
-    addEventListener("scroll", handleScroll);
-    document.querySelector("html").style.scrollBehavior = "smooth";
+    addEventListener('scroll', handleScroll);
+    document.querySelector('html').style.scrollBehavior = 'smooth';
   }, []);
 
   return (

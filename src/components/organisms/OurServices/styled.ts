@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { colors } from "../../../styles/colors";
+import styled from 'styled-components';
+import { colors } from '../../../styles/colors';
 
 export const SectionStyled = styled.section`
   display: flex;
@@ -76,7 +76,7 @@ export const HeadingStyled = styled.h2`
   letter-spacing: -0.04em;
   color: ${colors.gray};
   margin-bottom: 24px;
-  font-family: "Neue Machina";
+  font-family: 'Neue Machina';
   width: 464px;
 
   @media (max-width: 800px) {
@@ -95,7 +95,7 @@ export const ParagraphServicesStyled = styled.p`
   text-align: center;
   letter-spacing: -0.04em;
   color: ${colors.gray};
-  font-family: "Circular Air Pro";
+  font-family: 'Circular Air Pro';
   width: 464px;
   margin-bottom: 40px;
 

@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import Slider from "react-slick";
-import { colors } from "../../../styles/colors";
+import styled from 'styled-components';
+import Slider from 'react-slick';
+import { colors } from '../../../styles/colors';
 
 export const ContentStyled = styled.section`
   display: flex;
@@ -149,7 +149,7 @@ export const SliderStyled = styled(Slider)`
 export const GhostStyled = styled.div``;
 
 export const InfoStyled = styled.p`
-  font-family: "Circular Air Pro", sans-serif;
+  font-family: 'Circular Air Pro', sans-serif;
   font-weight: 400;
   font-size: 2.4rem;
   line-height: 3.36rem;

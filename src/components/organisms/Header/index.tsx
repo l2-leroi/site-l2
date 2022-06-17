@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import i18next from "i18next";
-import ScrollCircle from "../../atoms/ScrollCircle/index";
+import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+import i18next from 'i18next';
+import ScrollCircle from '../../atoms/ScrollCircle/index';
 import {
   HeaderStyled,
   MainContentStyled,
@@ -12,31 +12,31 @@ import {
   ArrowSpinnerContainerStyled,
   SocialMediaLinkStyled,
   ImageStyled,
-} from "./styled";
-import { Typography } from "../../../styles/typography";
+} from './styled';
+import { Typography } from '../../../styles/typography';
 
 function Header() {
   const { t } = i18next;
   const backgroundList = [
     {
-      image: "/images/PROTOTYPE.jpg",
-      text: "PROTOTYPE",
+      image: '/images/PROTOTYPE.jpg',
+      text: 'PROTOTYPE',
     },
     {
-      image: "/images/INOVATE.jpg",
-      text: "INOVATE",
+      image: '/images/INOVATE.jpg',
+      text: 'INOVATE',
     },
     {
-      image: "/images/HACK.jpg",
-      text: "HACK",
+      image: '/images/HACK.jpg',
+      text: 'HACK',
     },
     {
-      image: "/images/LAUGH.jpg",
-      text: "LAUGH",
+      image: '/images/LAUGH.jpg',
+      text: 'LAUGH',
     },
     {
-      image: "/images/THINK.jpg",
-      text: "THINK",
+      image: '/images/THINK.jpg',
+      text: 'THINK',
     },
   ];
   const [counterLoop, setCounterLoop] = useState(0);
@@ -46,17 +46,17 @@ function Header() {
   const [splashPage, setSplashPage] = useState(false);
   const [isFirstTouch, setIsFirstTouch] = useState(false);
   const interval = useRef(null);
-  let currentImage = "";
-  const [actualImage, setActualImage] = useState("");
+  let currentImage = '';
+  const [actualImage, setActualImage] = useState('');
   const [whiteCircle, setWhiteCircle] = useState(false);
-  let currentText = "";
-  const [actualText, setActualText] = useState("CODE");
+  let currentText = '';
+  const [actualText, setActualText] = useState('CODE');
   const [viewHeight, setViewHeight] = useState(100);
 
   const animeSplashPage = () => {
-    const target = document.querySelectorAll<HTMLElement>(".anime");
+    const target = document.querySelectorAll<HTMLElement>('.anime');
     target.forEach((element) => {
-      element.classList.add("animate");
+      element.classList.add('animate');
     });
     if (window.innerWidth < 500 || window.innerHeight <= 414) {
       document.body.style.overflow = null;
@@ -70,10 +70,10 @@ function Header() {
 
   useEffect(() => {
     if (window.innerWidth < 500 || window.innerHeight <= 414) {
-      document.body.style.overflow = "hidden";
-      const title = document.querySelectorAll<HTMLElement>(".title");
+      document.body.style.overflow = 'hidden';
+      const title = document.querySelectorAll<HTMLElement>('.title');
       title.forEach((title) => {
-        title.addEventListener("contextmenu", (e) => {
+        title.addEventListener('contextmenu', (e) => {
           e.preventDefault();
         });
       });
@@ -82,13 +82,13 @@ function Header() {
 
   useEffect(() => {
     function runAnimation() {
-      const header = document.querySelector(".header");
-      const nav = document.querySelector(".nav");
-      const typography = document.querySelectorAll(".typography");
+      const header = document.querySelector('.header');
+      const nav = document.querySelector('.nav');
+      const typography = document.querySelectorAll('.typography');
       const index =
-        currentImage !== ""
+        currentImage !== ''
           ? backgroundList.findIndex(
-              (background) => background.image === currentImage
+              (background) => background.image === currentImage,
             ) + 1
           : 0;
 
@@ -120,10 +120,10 @@ function Header() {
         setActualText(currentText);
       }
       typography.forEach((element) => {
-        element.classList.add("white");
+        element.classList.add('white');
       });
-      header.classList.add("white");
-      nav?.classList.add("white");
+      header.classList.add('white');
+      nav?.classList.add('white');
       setWhiteCircle(true);
     }
 
@@ -133,21 +133,21 @@ function Header() {
   }, [isInitInterval]);
 
   const exitInterval = (backgroundList) => {
-    const header = document.querySelector(".header");
-    const nav = document.querySelector(".nav");
-    const typography = document.querySelectorAll(".typography");
-    header.classList.remove("white");
-    nav?.classList.remove("white");
+    const header = document.querySelector('.header');
+    const nav = document.querySelector('.nav');
+    const typography = document.querySelectorAll('.typography');
+    header.classList.remove('white');
+    nav?.classList.remove('white');
     typography.forEach((element) => {
-      element.classList.remove("white");
+      element.classList.remove('white');
     });
     setWhiteCircle(false);
     setIsAnimating(false);
     clearInterval(interval.current);
     interval.current = null;
     setActualImage(backgroundList);
-    setActualText("CODE");
-    document.body.classList.remove("white");
+    setActualText('CODE');
+    document.body.classList.remove('white');
     setCounterLoop(0);
   };
 
@@ -195,7 +195,7 @@ function Header() {
           src={background.image}
           alt={background.text}
           className={
-            actualImage === background.image ? "activeImage" : "noneImage"
+            actualImage === background.image ? 'activeImage' : 'noneImage'
           }
         />
       ))}
@@ -222,8 +222,8 @@ function Header() {
             lineHeight="line100"
             className={
               actualText.length > 7
-                ? "textWrap typography title"
-                : " typography title"
+                ? 'textWrap typography title'
+                : ' typography title'
             }
             onMouseEnter={() => {
               if (window.innerWidth > 500 && window.innerHeight > 414) {
@@ -253,7 +253,7 @@ function Header() {
             {actualText}
           </Typography>
           <Typography className="bannerText typography" tag="p">
-            {t("header.weCreate")}
+            {t('header.weCreate')}
           </Typography>
         </MainTextStyled>
 
@@ -289,7 +289,7 @@ function Header() {
             size="xxsmall"
             letterSpacing="space1"
           >
-            {t("header.followUs")}
+            {t('header.followUs')}
           </Typography>
 
           <SocialMediaLinkStyled
@@ -326,8 +326,8 @@ function Header() {
         <ArrowSpinnerContainerStyled className="anime">
           <ScrollCircle
             isWhiteImage={whiteCircle}
-            blackImage={`${t("images.spinner")}`}
-            whiteImage={`${t("images.whiteSpinner")}`}
+            blackImage={`${t('images.spinner')}`}
+            whiteImage={`${t('images.whiteSpinner')}`}
           />
         </ArrowSpinnerContainerStyled>
       </FooterContentStyled>

@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { colors } from "../../../styles/colors";
-import { Typography } from "../../../styles/typography";
+import styled from 'styled-components';
+import { colors } from '../../../styles/colors';
+import { Typography } from '../../../styles/typography';
 
 interface HeaderProps {
   height: number;
@@ -230,7 +230,7 @@ export const SocialMediaStyled = styled.div`
     }
 
     &:after {
-      content: "";
+      content: '';
       width: 84px;
       height: 1px;
       background-color: ${colors.lightGray};

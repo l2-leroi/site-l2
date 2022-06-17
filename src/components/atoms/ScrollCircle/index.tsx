@@ -1,5 +1,5 @@
-import i18next from "i18next";
-import { ArrowSpinnerComponentStyled, ImageArrowSpinnerStyled } from "./styled";
+import i18next from 'i18next';
+import { ArrowSpinnerComponentStyled, ImageArrowSpinnerStyled } from './styled';
 
 interface imageProps {
   isWhiteImage: boolean;
@@ -13,12 +13,12 @@ function ScrollCircle(props: imageProps) {
     <ArrowSpinnerComponentStyled>
       <ImageArrowSpinnerStyled
         src={props.isWhiteImage ? props.whiteImage : props.blackImage}
-        alt={t("images.alt.thereIsMore")}
+        alt={t('images.alt.thereIsMore')}
         className="animate"
       />
       <ImageArrowSpinnerStyled
         src={
-          props.isWhiteImage ? "/images/Arrow-White.svg" : "/images/Arrow.svg"
+          props.isWhiteImage ? '/images/Arrow-White.svg' : '/images/Arrow.svg'
         }
         alt="Seta"
         className="absolute"

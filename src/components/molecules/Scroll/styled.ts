@@ -1,7 +1,7 @@
-import InfiniteScroll from "react-infinite-scroll-component";
-import styled from "styled-components";
-import { colors } from "../../../styles/colors";
-import { Typography } from "../../../styles/typography";
+import InfiniteScroll from 'react-infinite-scroll-component';
+import styled from 'styled-components';
+import { colors } from '../../../styles/colors';
+import { Typography } from '../../../styles/typography';
 
 export const InfiniteScrollContainerStyled = styled(InfiniteScroll)`
   display: flex;

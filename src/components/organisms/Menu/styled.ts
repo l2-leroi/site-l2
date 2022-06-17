@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { colors } from "../../../styles/colors";
-import { Typography } from "../../../styles/typography";
+import styled from 'styled-components';
+import { colors } from '../../../styles/colors';
+import { Typography } from '../../../styles/typography';
 
 export const MenuStyled = styled.section`
   position: fixed;
@@ -115,7 +115,7 @@ export const TextMenuStyled = styled.p`
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-  font-family: "Circular Air Pro";
+  font-family: 'Circular Air Pro';
   letter-spacing: -0.04em;
   color: ${colors.gray};
   margin: 0;
