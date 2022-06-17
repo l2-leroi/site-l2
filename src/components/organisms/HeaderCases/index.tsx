@@ -1,10 +1,9 @@
-import { Typography } from '../../../../styles/typography';
+import { Typography } from '../../../styles/typography';
 import {
   MainContentStyled,
   MainTextStyled,
   ContainerStyled,
   LanguageStyled,
-  ImageStyled,
   DivItemStyled,
   SectionOnePageStyled,
   DivTextStyled,
@@ -13,11 +12,34 @@ import {
 import Link from 'next/link';
 import i18next from 'i18next';
 
-const HeaderCases = () => {
+interface HeaderCasesProps {
+  backgroundImage: string;
+  backgroundImageSmall: string;
+  h1: string;
+  h1Second: string;
+  h2: string;
+  p: string;
+  pSecond: string;
+  linkBtnPt: string;
+  linkBtnEn: string;
+
+}
+
+export default function HeaderCases({
+  backgroundImage,
+  backgroundImageSmall,
+  h1,
+  h1Second,
+  h2,
+  p,
+  pSecond,
+  linkBtnPt,
+  linkBtnEn,
+}: HeaderCasesProps) {
   const { t } = i18next;
   return (
     <>
-      <ContainerStyled>
+      <ContainerStyled bgImage={backgroundImage}>
         <MainContentStyled>
           <MainTextStyled>
             <Typography
@@ -29,7 +51,7 @@ const HeaderCases = () => {
               color="gray"
               fontFamily="font1"
             >
-              {t('headerCases.case01')}
+              {t(h2)}
             </Typography>
 
             <Typography
@@ -41,11 +63,11 @@ const HeaderCases = () => {
               color="gray"
               fontFamily="font1"
             >
-              {t('headerCases.memoriesUp')}
+              {t(h1)}
             </Typography>
 
             <Typography tag="p" color="gray">
-              {t('headerCases.design')}
+              {t(p)}
             </Typography>
 
             <LanguageStyled>
@@ -55,7 +77,7 @@ const HeaderCases = () => {
                 letterSpacing="space1"
                 color="gray"
               >
-                <Link href="/pt/memories-up" locale="pt" scroll={false}>
+                <Link href={linkBtnPt} locale="pt" scroll={false}>
                   PT
                 </Link>
               </Typography>
@@ -65,7 +87,7 @@ const HeaderCases = () => {
                 letterSpacing="space1"
                 color="gray"
               >
-                <Link href="/en/memories-up" locale="en" scroll={false}>
+                <Link href={linkBtnEn} locale="en" scroll={false}>
                   EN
                 </Link>
               </Typography>
@@ -73,12 +95,8 @@ const HeaderCases = () => {
           </MainTextStyled>
         </MainContentStyled>
 
-        <DivItemStyled>
-          <ImageStyled
-            src="../images/imagens-memories-up.jpg"
-            alt="Imagens Memories Up"
-          />
-        </DivItemStyled>
+        <DivItemStyled bgImageSmall={backgroundImageSmall} />
+         
       </ContainerStyled>
 
       <SectionOnePageStyled>
@@ -93,10 +111,10 @@ const HeaderCases = () => {
               fontFamily="font1"
               letterSpacing="space1"
             >
-              {t('headerCases.atTheBeginning')}
+              {t(h1Second)}
             </Typography>
             <Typography tag="p" color="gray" fontFamily="font2">
-              {t('headerCases.ifTheService')}
+              {t(pSecond)}
             </Typography>
           </DivItemSTextStyled>
         </DivTextStyled>
@@ -105,4 +123,5 @@ const HeaderCases = () => {
   );
 };
 
-export default HeaderCases;
+
+

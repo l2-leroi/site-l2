@@ -5,7 +5,7 @@ import CardText from '../../../components/organisms/CardText';
 import DesignsCases from '../../../components/organisms/DesignsCases';
 import AllCases from '../../../components/organisms/Cases/AllCases';
 
-const MemoriesUp: NextPage = () => {
+const MaisAcesso: NextPage = () => {
   useEffect(() => {
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
@@ -16,55 +16,54 @@ const MemoriesUp: NextPage = () => {
     }
   });
 
-  const h2Header = 'headerCases.case01';
-  const h1Header = 'headerCases.memoriesUp';
-  const pHeader = 'headerCases.design';
-  const h1SecondHeader = 'headerCases.atTheBeginning';
-  const pSecondHeader = 'headerCases.ifTheService';
-  const linkBtnPt = '/pt/memories-up';
-  const linkBtnEn = '/en/memories-up';
+  const h2Header = 'headerCases.case02';
+  const h1Header = 'headerCases.moreAccess';
+  const pHeader = 'headerCases.webappDevelopment';
+  const h1SecondHeader = 'headerCases.helpingToStart';
+  const pSecondHeader = 'headerCases.aWebapp';
+  const linkBtnPt = '/pt/mais-acesso';
+  const linkBtnEn = '/en/mais-acesso';
 
   const h1Card = 'cardText.processesCarriedOut';
   const pCard = 'cardText.weTread';
   const liCard = [
-    'cardText.ideation',
-    'cardText.wireframe',
+    'cardText.uxUiDesign',
     'cardText.conceptArt',
-    'cardText.design',
-    'cardText.navigablePrototype',
+    'cardText.wireframe',
+    
   ];
 
   const imagesDesign = [
     {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-1.jpg',
+      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-1.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-2.jpg',
+      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-2.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-3.jpg',
+      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-3.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-4.jpg',
+      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-4.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-5.jpg',
+      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-5.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-6.jpg',
+      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-6.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-7.jpg',
+      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-7.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-8.jpg',
+      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-8.jpg',
       alt: 'Mockup',
     },
   ];
@@ -85,8 +84,8 @@ const MemoriesUp: NextPage = () => {
   return (
     <>
       <HeaderCases
-        backgroundImage="/images/memories-up/capa-maior-memories-up.jpg"
-        backgroundImageSmall="/images/memories-up/celulares-memories-up.jpg"
+        backgroundImage="/images/mais-acesso/capa-maior-mais-acesso.jpg"
+        backgroundImageSmall="/images/mais-acesso/celulares-mais-acesso.jpg"
         h2={h2Header}
         h1={h1Header}
         p={pHeader}
@@ -97,7 +96,7 @@ const MemoriesUp: NextPage = () => {
       />
       <CardText
         backgroundColor="#5900cc"
-        backgroundImage="/images/memories-up/card-image-memories-up.jpg"
+        backgroundImage="/images/mais-acesso/card-image-mais-acesso.jpg"
         h1={h1Card}
         p={pCard}
         li={liCard}
@@ -116,4 +115,4 @@ const MemoriesUp: NextPage = () => {
   );
 };
 
-export default MemoriesUp;
+export default MaisAcesso;

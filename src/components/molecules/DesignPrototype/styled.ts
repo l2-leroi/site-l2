@@ -2,6 +2,11 @@ import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 import Slider from "react-slick";
 
+interface DesignPrototypePropsMockup {
+  width: number;
+  height: number;
+}
+
 export const ContentStyled = styled.section`
   display: flex;
   flex-direction: column;  
@@ -186,9 +191,10 @@ export const LinkStyled = styled.a`
   cursor: pointer;
 `;
 
-export const ImageStyled = styled.img`
-  width: 414px;
-  height: 896px;
+export const ImageStyled = styled.img<DesignPrototypePropsMockup>`
+  width: ${props => props.width}px;
+  height: ${props => props.height}px;
+  border-radius: 40px;
 
   &.imageBlock {
     display: block;

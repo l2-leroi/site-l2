@@ -11,7 +11,9 @@ import {
   ButtonStyled,
   TechnologiesStyled,
   TecTitleStyled,
-  ButtonPrototype
+  ButtonPrototype,
+  
+   
 } from './styled';
 //import React from 'react';
 import React, { useEffect } from "react";
@@ -19,8 +21,29 @@ import {useState} from 'react';
 import i18next from 'i18next';
 import DesignPrototype from "../../molecules/DesignPrototype";
 import DesignImages from "../../molecules/DesignImages";
+import LineAnimation from "../../atoms/LineAnimation";
+import { colors } from '../../../styles/colors';
 
-function DesignsCases() {
+
+interface DesignImage {
+  image: string;
+  alt: string;
+}
+
+ interface DesignsCasesProps {
+  images: DesignImage[];
+  width: number;
+  height: number;
+  widthImage: number;
+  heightImage: number;
+  src: string;
+  alt: string;
+ }
+
+
+
+
+function DesignsCases({ images, width, height, src, alt, widthImage,heightImage }: DesignsCasesProps) {
   const [button1isShown, button1setIsShown] = useState(true);
   const [button2isShown, button2setIsShown] = useState(false);
   const {t}  = i18next;
@@ -54,6 +77,7 @@ function DesignsCases() {
   };
 
   return ( 
+    
     <ContainerStyled >
 
       <ContentStyled>
@@ -67,8 +91,8 @@ function DesignsCases() {
           <ButtonImages onClick={buttonOpen2} id="btn2"> {t('CasesDetail.imagens')} </ButtonImages>
         </ButtonStyled>
 
-        {button1isShown && <DesignPrototype  />}
-        {button2isShown && <DesignImages />}
+        {button1isShown && <DesignPrototype width={width} height={height} src={src} alt={alt} />}
+        {button2isShown && <DesignImages imagesArray={images} widthImage={widthImage} heightImage={heightImage} />}
        
         <TecTitleStyled>
           {t('CasesDetail.tecnologias')}
@@ -81,7 +105,9 @@ function DesignsCases() {
         </TechnologiesStyled>
       
       </ContentStyled>
+      
     </ContainerStyled>
+   
   );
 };
 export default DesignsCases ;

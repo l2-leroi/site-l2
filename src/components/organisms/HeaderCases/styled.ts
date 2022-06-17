@@ -1,8 +1,18 @@
+import { Interface } from 'readline';
 import styled from 'styled-components';
-import { colors } from '../../../../styles/colors';
+import { colors } from '../../../styles/colors';
 
-export const ContainerStyled = styled.section`
-  background-image: url('../images/capa-maior-memories-up.jpg');
+interface HeaderCasesBgImage {
+  bgImage: string;
+}
+
+interface HeaderCasesBgImageSmall {
+  bgImageSmall: string;
+}
+
+
+export const ContainerStyled = styled.section<HeaderCasesBgImage>`
+  background-image: url(${(props) => (props.bgImage ? props.bgImage : 'none')});
   background-position: center;
   background-size: cover;
   max-width: 100%;
@@ -11,7 +21,6 @@ export const ContainerStyled = styled.section`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  
 
   @media (max-width: 600px), (max-height: 415px) {
     width: 100% !important;
@@ -51,7 +60,6 @@ export const MainTextStyled = styled.hgroup`
     text-align: center;
     margin-bottom: 16px;
 
-
     @media (max-width: 600px) {
       font-size: 60px;
     }
@@ -78,30 +86,28 @@ export const MainTextStyled = styled.hgroup`
     text-align: center;
     font-size: 15rem;
     margin-bottom: 16px;
-   
 
     ::selection {
       background: ${colors.purple};
       color: ${colors.gray};
     }
 
-  @media (min-width: 801px) and (max-width: 1220px) {
-    font-size: 140px;
-  }
+    @media (min-width: 801px) and (max-width: 1220px) {
+      font-size: 140px;
+    }
 
-  @media (max-width: 910px) {
-    margin-bottom: 15px;
-  }
+    @media (max-width: 910px) {
+      margin-bottom: 15px;
+    }
 
-  @media (orientation: portrait) and (max-width: 800px) {
-    margin-top: 120px;
-    margin-bottom: 8px;
-  }
+    @media (orientation: portrait) and (max-width: 800px) {
+      margin-top: 120px;
+      margin-bottom: 8px;
+    }
   }
 
   p {
     text-align: center;
-    
 
     @media (max-width: 1220px) {
       font-size: 34px;
@@ -126,10 +132,13 @@ export const MainTextStyled = styled.hgroup`
   }
 `;
 
-export const DivItemStyled = styled.div`
+export const DivItemStyled = styled.div<HeaderCasesBgImageSmall>`
+  background-image: url(${props => props.bgImageSmall ? props.bgImageSmall:"none"});
+  background-position: center;
+  background-size: cover;
+  width: 80%;
   position: absolute;
-  width: 100%;
-  height: 700px;
+  height: 600px;
   top: 801px;
   border-radius: 8px;
   padding: 0px 152px;
@@ -170,20 +179,19 @@ export const DivItemStyled = styled.div`
   }
 `;
 
-export const ImageStyled = styled.img`
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  
+// export const ImageStyled = styled.img`
+//   width: 100%;
+//   height: auto;
+//   border-radius: 8px;
 
-  @media (max-width: 800px) {
-    max-width: 164px;
-  }
+//   @media (max-width: 800px) {
+//     max-width: 164px;
+//   }
 
-  @media (max-width: 576px) {
-    display: none;
-  }
-`;
+//   @media (max-width: 576px) {
+//     display: none;
+//   }
+// `;
 
 export const LanguageStyled = styled.div`
   display: flex;
@@ -212,58 +220,52 @@ export const LanguageStyled = styled.div`
   }
   button {
     background: transparent;
-  cursor: pointer;
-  border: none;
+    cursor: pointer;
+    border: none;
 
-  &.white {
-    color: white;
-  }
-
-  a {
-    ::selection {
-      background: ${colors.purple};
-      color: ${colors.gray};
+    &.white {
+      color: white;
     }
-  }
 
-  &:first-child {
-    margin-bottom: 8px;
-  }
-
-  @media (min-width: 500px) {
-    &:hover {
-      color: ${colors.green};
+    a {
+      ::selection {
+        background: ${colors.purple};
+        color: ${colors.gray};
+      }
     }
-  }
-
-  @media (max-width: 800px) {
-    font-size: 10px;
 
     &:first-child {
-      margin-bottom: 0px;
+      margin-bottom: 8px;
     }
-  }
 
+    @media (min-width: 500px) {
+      &:hover {
+        color: ${colors.green};
+      }
+    }
+
+    @media (max-width: 800px) {
+      font-size: 10px;
+
+      &:first-child {
+        margin-bottom: 0px;
+      }
+    }
   }
 `;
 
-
-
 export const Link = styled.div``;
-
 
 export const SectionOnePageStyled = styled.section`
   display: flex;
   justify-content: center;
-  background-color: #171B21;
+  background-color: #171b21;
   width: 100%;
-  
 
   @media (max-width: 1366px) {
     padding: 0px 12px;
   }
 `;
-
 
 export const DivTextStyled = styled.div`
   display: flex;
@@ -324,57 +326,51 @@ export const DivItemSTextStyled = styled.div`
 
   h1 {
     ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
-  }
-  padding-bottom: 18px;
-  width: 314px;
-  
+      background: ${colors.purple};
+      color: ${colors.gray};
+    }
+    padding-bottom: 18px;
+    width: 314px;
 
-  @media (max-width: 800px) {
-    padding-bottom: 16px;
-  }
+    @media (max-width: 800px) {
+      padding-bottom: 16px;
+    }
 
-  @media (max-width: 800px) {
-    padding-bottom: 16px;
-  }
+    @media (max-width: 800px) {
+      padding-bottom: 16px;
+    }
   }
 
   p {
     ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
-  }
-  width: 430px;
-  margin-bottom: 6rem;
+      background: ${colors.purple};
+      color: ${colors.gray};
+    }
+    width: 430px;
+    margin-bottom: 6rem;
 
-@media (max-width: 800px) {
-  max-width: 230px;
+    @media (max-width: 800px) {
+      max-width: 230px;
 
-  &.last-paragraph {
-    max-width: 144px;
-  }
-}
+      &.last-paragraph {
+        max-width: 144px;
+      }
+    }
 
-@media (max-width: 600px) {
-  max-width: 180px;
+    @media (max-width: 600px) {
+      max-width: 180px;
 
-  &.last-paragraph {
-    max-width: 180px;
-  }
-}
+      &.last-paragraph {
+        max-width: 180px;
+      }
+    }
 
-@media (max-width: 576px) {
-  max-width: 300px;
+    @media (max-width: 576px) {
+      max-width: 300px;
 
-  &.last-paragraph {
-    max-width: 300px;
-  }
-}
+      &.last-paragraph {
+        max-width: 300px;
+      }
+    }
   }
 `;
-
-
-
-
-

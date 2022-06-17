@@ -5,7 +5,7 @@ import CardText from '../../../components/organisms/CardText';
 import DesignsCases from '../../../components/organisms/DesignsCases';
 import AllCases from '../../../components/organisms/Cases/AllCases';
 
-const MemoriesUp: NextPage = () => {
+const FilaDeTrabalho: NextPage = () => {
   useEffect(() => {
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
@@ -16,65 +16,56 @@ const MemoriesUp: NextPage = () => {
     }
   });
 
-  const h2Header = 'headerCases.case01';
-  const h1Header = 'headerCases.memoriesUp';
-  const pHeader = 'headerCases.design';
-  const h1SecondHeader = 'headerCases.atTheBeginning';
-  const pSecondHeader = 'headerCases.ifTheService';
-  const linkBtnPt = '/pt/memories-up';
-  const linkBtnEn = '/en/memories-up';
+  const h2Header = 'headerCases.case04';
+  const h1Header = 'headerCases.workQueue';
+  const pHeader = 'headerCases.platformDevelopment';
+  const h1SecondHeader = 'headerCases.theBureaucracy';
+  const pSecondHeader = 'headerCases.weMakeCharming';
+  const linkBtnPt = '/pt/fila-de-trabalho';
+  const linkBtnEn = '/en/fila-de-trabalho';
 
   const h1Card = 'cardText.processesCarriedOut';
   const pCard = 'cardText.weTread';
   const liCard = [
-    'cardText.ideation',
-    'cardText.wireframe',
+    'cardText.uxUiDesign',
     'cardText.conceptArt',
-    'cardText.design',
-    'cardText.navigablePrototype',
+    'cardText.wireframe',
   ];
 
   const imagesDesign = [
     {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-1.jpg',
+      image: '/images/DesignFilaDeTrabalho/RectangleCaseFilaDeTrabalho-1.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-2.jpg',
+      image: '/images/DesignFilaDeTrabalho/RectangleCaseFilaDeTrabalho-2.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-3.jpg',
+      image: '/images/DesignFilaDeTrabalho/RectangleCaseFilaDeTrabalho-3.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-4.jpg',
+      image: '/images/DesignFilaDeTrabalho/RectangleCaseFilaDeTrabalho-4.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-5.jpg',
+      image: '/images/DesignFilaDeTrabalho/RectangleCaseFilaDeTrabalho-5.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-6.jpg',
-      alt: 'Mockup',
-    },
-    {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-7.jpg',
-      alt: 'Mockup',
-    },
-    {
-      image: '/images/DesignMemoriesUp/RectangleCaseMemoriesUp-8.jpg',
+      image: '/images/DesignFilaDeTrabalho/RectangleCaseFilaDeTrabalho-6.jpg',
       alt: 'Mockup',
     },
   ];
 
-  const widthPrototype = 414;
-  const heightPrototype = 896;
-  const srcPrototype = '/images/mockup-animado-cell.png';
+  const widthPrototype = 1239;
+  const heightPrototype = 688;
+  const srcPrototype = 
+    '/images/fila-de-trabalho/mockup-desk-fila-de-trabalho.jpg';
   const altPrototype = 'Mockup animado';
-  const widthImage = 270;
-  const heightImage = 582;
+  const widthImage = 464;
+  const heightImage = 257;
 
   const [space, setSpace] = useState(0);
 
@@ -85,8 +76,8 @@ const MemoriesUp: NextPage = () => {
   return (
     <>
       <HeaderCases
-        backgroundImage="/images/memories-up/capa-maior-memories-up.jpg"
-        backgroundImageSmall="/images/memories-up/celulares-memories-up.jpg"
+        backgroundImage="/images/fila-de-trabalho/capa-maior-fila-de-trabalho.jpg"
+        backgroundImageSmall="/images/fila-de-trabalho/desk-fila-de-trabalho.jpg"
         h2={h2Header}
         h1={h1Header}
         p={pHeader}
@@ -97,7 +88,7 @@ const MemoriesUp: NextPage = () => {
       />
       <CardText
         backgroundColor="#5900cc"
-        backgroundImage="/images/memories-up/card-image-memories-up.jpg"
+        backgroundImage="/images/fila-de-trabalho/card-image-fila-de-trabalho.jpg"
         h1={h1Card}
         p={pCard}
         li={liCard}
@@ -116,4 +107,4 @@ const MemoriesUp: NextPage = () => {
   );
 };
 
-export default MemoriesUp;
+export default FilaDeTrabalho;

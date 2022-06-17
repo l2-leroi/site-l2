@@ -5,49 +5,27 @@ import { useEffect, useRef, useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function DesignImages() {
+interface DesignImage {
+  image: string;
+  alt: string;
+}
 
-  const images = [
-    {
-      image: "../images/DesignMemoriesUp/RectangleCaseMemoriesUp-1.jpg",
-      alt: "Mockup"
-    },
-    { 
-      image: "../images/DesignMemoriesUp/RectangleCaseMemoriesUp-2.jpg", 
-      alt: "Mockup"
-    },
-    {
-      image: "../images/DesignMemoriesUp/RectangleCaseMemoriesUp-3.jpg",
-      alt: "Mockup" 
-    },
-    {
-      image: "../images/DesignMemoriesUp/RectangleCaseMemoriesUp-4.jpg",
-      alt: "Mockup"
-    },
-    {
-      image: "../images/DesignMemoriesUp/RectangleCaseMemoriesUp-5.jpg", 
-      alt: "Mockup"
-    },
-    { 
-      image: "../images/DesignMemoriesUp/RectangleCaseMemoriesUp-6.jpg", 
-      alt: "Mockup"
-    },
-    {
-      image: "../images/DesignMemoriesUp/RectangleCaseMemoriesUp-7.jpg", 
-      alt: "Mockup"
-    },
-    {  
-      image: "../images/DesignMemoriesUp/RectangleCaseMemoriesUp-8.jpg",
-      alt: "Mockup"
-    }
-  ];
+interface DesignImagesProps {
+  imagesArray: DesignImage[];
+  widthImage: number;
+  heightImage: number;
+}
+
+export default function DesignImages({
+  imagesArray, widthImage, heightImage
+}: DesignImagesProps) {
 
   return (
     <ContentStyled>
-        {images.map((images) => (
-          <ImageStyled src={images.image} alt={images.alt} />)
+        {imagesArray.map((images) =>(
+          <ImageStyled src={images.image} alt={images.alt} widthImage={widthImage} heightImage={heightImage}  />)
         )}
     </ContentStyled>
   );
 };
-export default DesignImages;
+

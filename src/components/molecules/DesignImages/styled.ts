@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
-import Slider from "react-slick";
+import Slider from 'react-slick';
+
+interface DesignPrototypePropsImages {
+  widthImage: number;
+  heightImage: number;
+}
 
 export const ContentStyled = styled.section`
   display: flex;
@@ -18,7 +23,7 @@ export const ListStyled = styled.section``;
 export const CaseStyled = styled.article`
   height: 1010px;
   opacity: 0;
-  transition: .8s;
+  transition: 0.8s;
   transform: translate3d(0, 200px, 0);
 
   &.animate {
@@ -29,7 +34,7 @@ export const CaseStyled = styled.article`
   @media (max-width: 1350px) {
     height: 940px;
   }
-  
+
   @media (max-width: 1155px) {
     height: 920px;
   }
@@ -71,11 +76,11 @@ export const SliderStyled = styled(Slider)`
       margin-top: 0px;
     }
 
-    .slick-active.slick-current +div {
+    .slick-active.slick-current + div {
       margin-top: 80px;
     }
 
-    .slick-active +div {
+    .slick-active + div {
       margin-top: 160px;
     }
   }
@@ -84,16 +89,16 @@ export const SliderStyled = styled(Slider)`
     width: 464px;
     margin-top: 0px;
     margin: 0 1.6rem;
-    transition: .5s;
+    transition: 0.5s;
 
     @media (min-width: 801px) {
       &:nth-child(2) {
         margin-top: 300px;
-      } 
+      }
       &:nth-child(3) {
         margin-top: 600px;
       }
-    } 
+    }
 
     &:first-of-type {
       margin-left: 0px;
@@ -107,7 +112,7 @@ export const SliderStyled = styled(Slider)`
         width: 0px;
       }
     }
-    
+
     @media (max-width: 1350px) {
       width: 415px;
     }
@@ -186,12 +191,11 @@ export const LinkStyled = styled.a`
   cursor: pointer;
 `;
 
-export const ImageStyled = styled.img`
-  width: 270px;
-  height: 582px;
+export const ImageStyled = styled.img<DesignPrototypePropsImages>`
+  width: ${(props) => props.widthImage}px;
+  height: ${(props) => props.heightImage}px;
   user-select: none;
 
-  
   &.imageBlock {
     display: block;
   }

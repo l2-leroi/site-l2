@@ -5,10 +5,23 @@ import { useEffect, useRef, useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function DesignPrototype() {
+
+interface DesignPrototypeProps {
+  width: number;
+  height: number;
+  src: string;
+  alt: string;
+}
+
+function DesignPrototype({
+  width,
+  height,
+  src,
+  alt,
+}: DesignPrototypeProps) {
   return (
     <ContentStyled>
-        <ImageStyled src="../images/mockup-animado-cell.png" alt="Mockup Animado" />
+        <ImageStyled width={width} height={height} src={src} alt={alt} />
     </ContentStyled>
   );
 }
