@@ -2,7 +2,7 @@ import { GlobalStyle } from '../styles/global';
 import '../styles/fonts.css';
 import type { AppProps } from 'next/app';
 import ReactGa from 'react-ga';
-
+import { hotjar } from 'react-hotjar';
 import '../i18n'
 import { useEffect, useState } from 'react'
 import i18next from 'i18next'
@@ -29,9 +29,15 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(()=> {
     ReactGa.initialize('G-E4RS6QZT6P');
-
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, [])
+
+  useEffect(()=> {
+    hotjar.initialize(3015131, 6);
+    hotjar.identify('USER_ID', { userProperty: 'value' });
+    hotjar.event('button-click');
+    hotjar.stateChange('/');
+  }, []);
 
   // Don't trigger `i18next.changeLanguage()` on root folder, use `router` to redirect to the specific language
   if (asPath !== '/' && asPath !== '/404') {
