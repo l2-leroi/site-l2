@@ -35,6 +35,7 @@ module.exports = {
     'prefer-destructuring': 0,
     'no-use-before-define': 0,
     '@typescript-eslint/no-shadow': 0,
+    '@typescript-eslint/no-explicit-any': 0,
     '@typescript/no-use-before-define': 0,
     '@typescript-eslint/interface-name-prefix': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
