@@ -8,7 +8,8 @@ export const ContainerStyled = styled.div`
   // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   // padding: 10rem 2.8rem 48rem;
   // padding: 10rem 2.8rem 10rem;  
-  padding: 24rem 2.8rem 10rem;  //12.5
+  padding-top: 24rem;
+  padding-bottom: 10rem;
 
 
   // @media (min-width: 2560px) {
@@ -34,12 +35,23 @@ export const ContentStyled = styled.section`
   flex-direction: column;
   max-width: 1500px;
   margin: 0 auto;
+  padding-left: 2.8rem;
+  padding-right: 2.8rem;
+  
 `;
 
 export const DivStyled = styled.div`
   display: flex;
   align-items: end;
   margin-bottom: 3.6rem;
+`;
+
+export const MainDivStyled = styled.div`
+  width: 100%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 export const AsideStyled = styled.aside`
@@ -116,18 +128,20 @@ export const PhraseStyled = styled.p`
     width: 175px;
   }
 `;
+
 export const LanguageStyled = styled.div`
     display: flex;
     flex-direction: column;
     list-style: none;
     position: absolute;
     right: 28px;
-    
+    top: 3.1%;
+
     @media (min-height: 416px) and (max-width: 800px) {
-        position: static;
-        flex-direction: row;
-        margin-top: 32px;
+        flex-direction: column;
         gap: 16px;
+        //margin-top: 32px;
+        //position: static;
     }
 
     @media (max-height: 415px), (max-width: 500px) {
@@ -139,6 +153,7 @@ export const LanguageStyled = styled.div`
         opacity: 1;
         transition: opacity .8s;
     }
+
     ${Typography}{
         background: transparent;
         cursor: pointer;

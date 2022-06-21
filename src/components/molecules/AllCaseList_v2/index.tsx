@@ -41,7 +41,7 @@ function CaseList(props: CaseProps) {
     swipeToSlide: false,
     speed: 400,
     variableWidth: true,
-    rows: 2,
+    rows: Math.ceil(props.cases.length/3),
     slidesPerRow: 1,
     responsive: [
       {
@@ -149,7 +149,7 @@ function CaseList(props: CaseProps) {
       </CaseStyled>
     ))
   
-  cases.splice(3, 0, <div> </div>)
+  cases.splice(props.cases.length, 0, <div> </div>)
   
   return (
     <ContentStyled>
