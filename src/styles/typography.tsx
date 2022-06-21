@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+
 const theme = {
   colors: {
     black: '#171B21',
@@ -12,7 +13,7 @@ const theme = {
     black_1: '#242A33',
   },
   sizes: {
-    xxsmall:'1.6rem',
+    xxsmall: '1.6rem',
     xsmall: '2.4rem',
     small: '4.0rem',
     medium: '6.4rem',
@@ -29,15 +30,15 @@ const theme = {
   spacing: {
     space1: '-0.02em',
     space2: '-0.04em',
-    space3: '-0.06em'
+    space3: '-0.06em',
   },
   weight: {
     weight1: 400,
     weight2: 700,
-    weight3: 800
+    weight3: 800,
   },
   family: {
-    font1: 'Neue Machina', 
+    font1: 'Neue Machina',
     font2: 'Circular Air Pro',
   },
 };

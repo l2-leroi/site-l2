@@ -6,7 +6,6 @@ export const FooterStyled = styled.footer`
   background-color: ${colors.purple};
   width: 100%;
   padding: 0rem 2.8rem 6.05rem;
-
 `;
 
 export const ContainerStyled = styled.div`
@@ -18,14 +17,14 @@ export const ContainerStyled = styled.div`
 `;
 
 export const Teste4 = styled.div`
-    position: absolute;
-    top: -225px;
-    right: -28px;
-    background: ${colors.black};
-    width: 692px;
-    height: 200px;
-    z-index: 1;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%);
+  position: absolute;
+  top: -225px;
+  right: -28px;
+  background: ${colors.black};
+  width: 692px;
+  height: 200px;
+  z-index: 1;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%);
 `;
 
 export const ContentStyled = styled.div``;
@@ -34,22 +33,22 @@ export const DivStyled = styled.div`
   display: flex;
   align-items: end;
   margin-bottom: 10rem;
-  h2{
+  h2 {
     width: 404px;
     ::selection {
       background: ${colors.green};
       color: ${colors.black};
     }
-  
+
     @media (max-width: 930px) {
       width: 300px;
     }
-  
+
     @media (max-width: 800px) {
       width: 264px;
       line-height: 28.8px;
     }
-  
+
     @media (max-width: 414px) {
       width: 229px;
     }
@@ -71,7 +70,7 @@ export const AsideStyled = styled.aside`
   @media (max-width: 376px) {
     margin-left: 39px;
   }
-  p{
+  p {
     ::selection {
       background: ${colors.green};
       color: ${colors.black};
@@ -123,20 +122,20 @@ export const InfoStyled = styled.div`
       display: none;
     }
   }
-  p{
+  p {
     ::selection {
       background: ${colors.green};
       color: ${colors.black};
     }
-  
+
     @media (max-width: 800px) {
       font-size: 10px;
       line-height: 14px;
     }
-  
+
     &:first-child {
       margin-bottom: 9px;
-  
+
       @media (max-width: 800px) {
         margin-bottom: 16px;
       }

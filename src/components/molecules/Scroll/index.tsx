@@ -1,17 +1,16 @@
 import { useEffect, useState } from 'react';
 import { v4 as uuid } from 'uuid';
-import { InfiniteScrollContainerStyled } from './styled';
 import { useRouter } from 'next/router';
 import i18next from 'i18next';
 import Link from 'next/link';
-import { colors } from '../../../styles/colors';
+import { InfiniteScrollContainerStyled } from './styled';
 import { Typography } from '../../../styles/typography';
 
 export interface ScrollProps {
-  closeMenu: (value: boolean) => void;
+  closeMenu: () => void;
 }
 
-const Scroll = ({closeMenu}: ScrollProps) => {
+function Scroll({ closeMenu }: ScrollProps) {
   const baseItemsPT = [
     'Home',
     'Sobre',
@@ -43,7 +42,7 @@ const Scroll = ({closeMenu}: ScrollProps) => {
   ];
 
   const language = i18next.language.substring(0, 2);
-  let baseItems = language == "en" ? baseItemsEN : baseItemsPT;
+  let baseItems = language === 'en' ? baseItemsEN : baseItemsPT;
   const [items, setItems] = useState([...baseItems, ...baseItems]);
   const router = useRouter();
   const initialPage = router.asPath.substring(3);
@@ -54,25 +53,24 @@ const Scroll = ({closeMenu}: ScrollProps) => {
   };
 
   useEffect(() => {
-    if (language == 'en') {
-      setItems([...baseItemsEN, ...baseItemsEN])
+    if (language === 'en') {
+      setItems([...baseItemsEN, ...baseItemsEN]);
       baseItems = baseItemsEN;
-    }
-    else {
-      setItems([...baseItemsPT, ...baseItemsPT])
+    } else {
+      setItems([...baseItemsPT, ...baseItemsPT]);
       baseItems = baseItemsPT;
     }
   }, [language]);
 
   useEffect(() => {
     setCurrentPage(router.asPath.substring(3));
-  }, [router.asPath])
+  }, [router.asPath]);
 
   return (
     <InfiniteScrollContainerStyled
       dataLength={items.length}
       next={fetchData}
-      hasMore={true}
+      hasMore
       loader={null}
       height="100vh"
     >
@@ -84,17 +82,17 @@ const Scroll = ({closeMenu}: ScrollProps) => {
           letterSpacing="space3"
           fontFamily="font1"
           color={
-            currentPage === `${baseUrl[items.indexOf(item)]}` ?
-            'green' : 'gray'
+            currentPage === `${baseUrl[items.indexOf(item)]}` ? 'green' : 'gray'
           }
-          onClick={() => closeMenu(true)}
+          onClick={() => closeMenu()}
         >
           <Link
             key={`${item}-${uuid()}`}
             href={`/${language + baseUrl[items.indexOf(item)]}`}
           >
-            { currentPage === `${baseUrl[items.indexOf(item)]}` ?
-            `< ${item} >` : `${item}` }
+            {currentPage === `${baseUrl[items.indexOf(item)]}`
+              ? `< ${item} >`
+              : `${item}`}
           </Link>
         </Typography>
       ))}
