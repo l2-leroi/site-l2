@@ -10,7 +10,7 @@ import {
 
 const  SectionTitle = () =>{
     return(
-        <Section>
+        <Section className="bannerText">
                 <Text>
                     <Title title="SEJA TRAINEE NA L2CODE"/>
                     <Subtitle text="Aqui o trainee não faz café, faz a diferença. ● A cada 4 meses contratamos estudantes de graduação para iniciarem suas carreiras conosco."></Subtitle>

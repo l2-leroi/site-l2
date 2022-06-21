@@ -10,7 +10,7 @@ export const Button = styled.button`
     line-height: 140%;
     color: ${colors.black};
     background-color: ${colors.green};
-    padding: 0px 1.6rem;
+    padding: 0px 2px;
     border: 0.2rem solid ${colors.green};
     box-sizing: border-box;
     border-radius: 2.4rem;

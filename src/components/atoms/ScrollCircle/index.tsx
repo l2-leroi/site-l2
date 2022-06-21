@@ -5,6 +5,8 @@ interface imageProps {
   blackImage: string;
   whiteImage: string;
   alt: string;
+  src: string;
+  className?: string;
 }
 
 function ScrollCircle(props: imageProps) {

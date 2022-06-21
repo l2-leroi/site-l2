@@ -16,7 +16,7 @@ const ApplyButton = ({applyButton} : Props) => {
             {applyButton}
         </Button>
         <Arrow>
-            <ArrowIcon src={'./images/arrow-right.svg'}/>
+            <ArrowIcon src={'/images/arrow-right.svg'}/>
         </Arrow>
     </Div>
 

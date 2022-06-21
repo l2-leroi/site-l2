@@ -21,7 +21,7 @@ export const ArrowRightStyled = styled.div`
         display: none !important;
     }
     right: -10rem;
-    background-image: url("./images/white-arrow-right.png") !important;
+    background-image: url("/images/white-arrow-right.png") !important;
     background-position: 3.5rem !important;
     background-repeat: no-repeat !important;
 `;
