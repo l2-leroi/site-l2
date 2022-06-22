@@ -59,7 +59,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
       {/* End Google Tag Manager (noscript) */}
       <GlobalStyle />
-      <NavOnePage />
+      {/* <NavOnePage /> */}
       <Component {...pageProps} />
       <Footer />
     </>

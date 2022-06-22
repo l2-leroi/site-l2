@@ -73,6 +73,37 @@
       "ourCustomers": "Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · "
     }
   },
+  "ourServicesFull": {
+    "ourServices": "CONHEÇA NOSSOS SERVIÇOS",
+    "paragraph": "Trabalhamos ao lado dos nossos clientes para melhorar a experiência dos produtos e serviços, trazendo resultados para o negócio.",
+    "makeItHappen": "FAÇA ACONTECER",
+    "audioText": "Leroi Oliveira ● Líder técnico",
+    "outSourcingAdvisory": {
+      "title": "Outsourcing Consultativo",
+      "paragraph": "Aumente sua capacidade produtiva ● Com acesso a nossa equipe, você agraga ao seu time profissionais apaixonados com competências diversas.",
+      "list": {
+        "optimization": "Otimização e controle de custos",
+        "costs": "Custos fixos variáveis",
+        "flexibility": "Flexibilidade e rapidez",
+        "access": "Acesso aos recursos da L2",
+        "l2": "Equipe L2 integrada a sua equipe",
+        "updated": "Atualizado às mudanças do mercado"
+      }
+    },
+    "ideation": {
+      "title": "Ideação",
+      "paragraph": "Co-criação com nosso time multidisciplinar na concepção do seu produto e estratégias de negócio.",
+      "list": {
+        "optimization": "Preparação do escopo",
+        "costs": "Custos fixos variáveis",
+        "flexibility": "Flexibilidade e rapidez",
+        "access": "Acesso aos recursos da L2",
+        "l2": "Equipe L2 integrada a sua equipe",
+        "updated": "Atualizado às mudanças do mercado"
+      }
+    }
+
+  },
   "outSourcing": {
     "outsourcing": "Outsourcing Consultivo",
     "ideation": "Ideação",
