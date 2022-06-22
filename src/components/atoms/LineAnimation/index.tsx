@@ -13,14 +13,14 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceF
   const text = useRef();
   const spinner = useRef();
 
-  const maxRadians = 17.76 * (Math.PI * 180);
+  const maxRadians = 17.76 * (Math.PI/180);
   let maxHeight = 0;
   let minHeightOutSourcing = 60;
   let maxHeightSpinner = 200;
   let resize = false;
 
   const calculateMaxHeight = (lineElement: HTMLElement) => {
-    maxHeight = (Math.tan(maxRadians) * lineElement.getBoundingClientRect().width) * -1;
+    maxHeight = (Math.tan(maxRadians) * lineElement.getBoundingClientRect().width);
   }
 
   const verifySpinnerMaxHeight = (spinnerElement: HTMLElement) => {
