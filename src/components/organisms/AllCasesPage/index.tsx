@@ -67,7 +67,7 @@ const Cases = () => {
       alt: t('allCases.alt.coverMoreAccess'), 
       link: "#2", 
       hover: maisAcessoHover 
-    }/*,
+    },
     { 
       number: "03", 
       title: "Tô Parado", 
@@ -103,7 +103,7 @@ const Cases = () => {
       alt: t('allCases.alt.coverImStopped'), 
       link: "#6", 
       hover: Testehelo 
-    },
+    }/*,
     { 
       number: "07", 
       title: "Teste 7", 
@@ -170,6 +170,7 @@ const Cases = () => {
   ];
 
   return (
+  
     <ContainerStyled id="allCases">
       <ContentStyled>
         <MainDivStyled>
@@ -191,13 +192,14 @@ const Cases = () => {
         </DivStyled>
         </MainDivStyled>
         <PhraseStyled>{t('allCases.weDoWell')}</PhraseStyled>
+
         {/*<AllCaseList cases={allCases} />*/}
-
         {/*<AllCaseListCopy cases={allCases} />*/}
+       
         <AllCaseListCopy_2 cases={allCases} />
-
       </ContentStyled>
     </ContainerStyled>
+    
   );
 };
 export default Cases;

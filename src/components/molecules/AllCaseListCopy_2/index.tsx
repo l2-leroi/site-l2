@@ -37,13 +37,12 @@ function CaseList(props: CaseProps) {
   // anime slider
   const settings = {
     infinite: false,
-    slidesToShow: 1,//1
+    slidesToShow: 3,//1
     slidesToScroll: 1,
     swipeToSlide: false,
     speed: 400,
     variableWidth: true,
-    rows: Math.ceil(props.cases.length/3),
-    slidesPerRow: Math.ceil(props.cases.length/3), //1
+    slidesPerRow: 1,
     responsive: [
       {
         breakpoint: 800,
@@ -108,67 +107,6 @@ function CaseList(props: CaseProps) {
     setActualImage(image);
   };
 
-  /*let v = []
-  for (let j=0; j<3; j++){ 
-    for (let i=0; i<2; i++){
-      if(((i*3)+j) >= 4)
-      {
-        break;
-      }
-      else
-      {
-        console.log('tt v = ' + ((i*3)+j))
-        v.push(props.cases[((i*3)+j)])
-      }
-  }}
-  console.log('helo = '+ v[2].title);*/
-
-
- let vetor_cases = []
- 
-  for (let j=0; j<3; j++){ 
-    for (let i=0; i<Math.ceil(props.cases.length/3); i++){
-      if(((i*3)+j) >= props.cases.length){
-        break;
-      }
-      else{
-        //console.log('tt = ' + ((i*3)+j))
-        vetor_cases.push(props.cases[((i*3)+j)])
-      }
-    }
-  }
- // vetor_cases.map((itemCase) => (
-  //console.log('vetor_cases = ' + itemCase.number)
-  //))
-
-  
-  /*
-  let pos = 0; 
-  let matrix = [];
-
-  props.cases.forEach((item, index) => {
-      if(index%3 == 0){
-        pos++;
-      }
-      if(matrix[pos]){
-        matrix[pos].push(item);
-      }
-      else{
-        matrix[pos] = [item];
-      }
-    });
-  //matrix.filter(item => item)  
-  matrix.shift()
-  */
-  
-
-  //const cases = 
-  //props.cases.map((itemCase) => ( 
-
-  //const cases =  
-   // matrix.map((matrixCases) => (
-    //  matrixCases.map((itemCase: any) => (
-  
   const cases = 
     props.cases.map((itemCase) => (
     <CaseStyled key={itemCase.title} data-anime="animate">
@@ -198,8 +136,6 @@ function CaseList(props: CaseProps) {
               alt={itemCase.alt}
             />
             { 
-              // itemCase.hover?.map(( 
-              //(imageHover: any)
               itemCase.hover.map((
                 imageHover => (
                 <ImageStyled
@@ -214,33 +150,31 @@ function CaseList(props: CaseProps) {
             } 
           </LinkStyled>
         </CaseStyled> 
-    // ))
   ))
-  
-  // cases.splice(props.cases.length, 0, <div> </div>)
-  //cases.splice(3, 0, <div></div>)
-  return (
-    <ContentStyled>
-      <ListStyled>
-           {/* 
-           for(let j=0; j<props.cases.length/3; j++){
-           cases.splice(0, 3)}
-          
-            for(let j=0; j<cases.length; j++){
-              cases.splice(0, 3)
-            } */
-          }
-        {
-          console.log('teste = '+ tam)
-          
-        }
+
+  const splicedCases = () => {
+    const size = Math.ceil(Object.keys(props.cases).length/3);
+    let aux_case = [];
+
+    for (let j = 0; j < size; j++) {
+      aux_case.push(
+      <ListStyled>  
         <SliderStyled {...settings}>
           { 
-            cases
+            cases.splice(0,3)
           }
-          {/*<GhostStyled></GhostStyled> */}
         </SliderStyled>
-      </ListStyled>
+      </ListStyled>);
+    }
+    return aux_case;
+  };
+  
+  return (
+    <ContentStyled>
+      {  
+        splicedCases()
+      }
+      {/*<GhostStyled></GhostStyled> */}
     </ContentStyled>
   );
 }

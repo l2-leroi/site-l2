@@ -6,13 +6,14 @@ export const ContentStyled = styled.section`
   display: flex;
   flex-direction: column;  
   overflow: hidden;
-  height: 100%;
 `;
 
 export const ListStyled = styled.section``;
 
 export const CaseStyled = styled.article`
-  height: 1010px;
+  display: flex;
+  height: auto;
+
   opacity: 0;
   transition: .8s;
   transform: translate3d(0, 200px, 0);
@@ -23,7 +24,7 @@ export const CaseStyled = styled.article`
   }
 
   @media (max-width: 1350px) {
-    height: 940px;
+    height: 940px;   
   }
   
   @media (max-width: 1155px) {
@@ -36,13 +37,17 @@ export const CaseStyled = styled.article`
 `;
 
 export const SliderStyled = styled(Slider)`
-  height: 100%;
+padding:0px;
   .slick-track {
     display: flex;
+    padding:0px;
+    grid-gap: 32px;
+    height: 1620px;
+    margin: 0px;
+    user-select: text;
+    //height: fit-content;
     flex-wrap: nowrap;
-    user-select: text;  
-    //height: 100%;
-    //height: 3000px;
+ 
     div{
       @media (min-width: 801px) {
         &:nth-child(2) {
@@ -91,8 +96,9 @@ export const SliderStyled = styled(Slider)`
 
   .slick-slide {
     width: 464px;
+    margin: 0px;
     margin-top: 0px;
-    margin: 0 16px;
+    //margin: 0 16px;
     transition: .5s;
 
     &:first-of-type {
@@ -100,17 +106,17 @@ export const SliderStyled = styled(Slider)`
     }
 
     &:last-of-type {
-      width: 100px;
-      margin: 16px;
+      //width: 464px;
       margin-right: 0px;
 
       @media (min-width: 600px) {
-        width: 0px;
+        //width: 464px;
       }
     }
     
     @media (max-width: 1350px) {
       width: 415px;
+      //width: 464px;
     }
 
     @media (max-width: 1160px) {
@@ -118,7 +124,7 @@ export const SliderStyled = styled(Slider)`
     }
 
     @media (max-width: 800px) {
-      width: 248px;
+     width: 248px;
     }
   }
 `;
@@ -189,8 +195,7 @@ export const LinkStyled = styled.a`
 `;
 
 export const ImageStyled = styled.img`
-  width: 100%;
-  height: auto;
+  width: 464px;
   //border-radius: 8px;
   border-radius: 10px;
   position: absolute;
