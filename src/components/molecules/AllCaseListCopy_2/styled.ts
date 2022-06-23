@@ -195,7 +195,8 @@ export const LinkStyled = styled.a`
 `;
 
 export const ImageStyled = styled.img`
-  width: 464px;
+  //width: 464px;
+  width: 100%;
   //border-radius: 8px;
   border-radius: 10px;
   position: absolute;
