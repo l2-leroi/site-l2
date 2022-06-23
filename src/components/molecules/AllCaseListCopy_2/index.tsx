@@ -9,6 +9,7 @@ import {
   ImageStyled,
   SliderStyled,
   GhostStyled,
+  GridStyled,
 } from './styled';
 import { useEffect, useRef, useState } from 'react';
 import "slick-carousel/slick/slick.css";
@@ -33,7 +34,6 @@ function CaseList(props: CaseProps) {
   var currentImage = '';
   const [actualImage, setActualImage] = useState('');
 
-  let tam = Math.ceil(props.cases.length/3);
   // anime slider
   const settings = {
     infinite: false,
@@ -158,13 +158,16 @@ function CaseList(props: CaseProps) {
 
     for (let j = 0; j < size; j++) {
       aux_case.push(
-      <ListStyled>  
-        <SliderStyled {...settings}>
-          { 
-            cases.splice(0,3)
-          }
-        </SliderStyled>
-      </ListStyled>);
+      <GridStyled>
+        <ListStyled>  
+          <SliderStyled {...settings}>
+            { 
+              cases.splice(0,3)
+            }
+          </SliderStyled>
+        </ListStyled>
+      </GridStyled>
+      );
     }
     return aux_case;
   };

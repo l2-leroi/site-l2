@@ -128,6 +128,11 @@ export const PhraseStyled = styled.p`
     width: 175px;
   }
 `;
+export const AsideStyledbutton = styled.div`
+margin-left: 15px;
+display: flex;
+align-items: center;
+`;
 
 export const LanguageStyled = styled.div`
     display: flex;
@@ -135,18 +140,14 @@ export const LanguageStyled = styled.div`
     list-style: none;
     position: absolute;
     right: 28px;
-    top: 3.1%;
 
-    @media (min-height: 416px) and (max-width: 800px) {
-        flex-direction: column;
-        gap: 16px;
-        //margin-top: 32px;
-        //position: static;
+    @media (max-width: 800px) {
+      gap: 16px;
     }
-
-    @media (max-height: 415px), (max-width: 500px) {
-        opacity: 0;
-        gap: 9px;
+    
+    @media (max-width: 500px) {
+      opacity: 0;
+      gap: 9px;
     }
 
     &.animate {

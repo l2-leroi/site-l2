@@ -8,6 +8,33 @@ export const ContentStyled = styled.section`
   overflow: hidden;
 `;
 
+export const GridStyled = styled.section`
+  &:not(:first-child) {
+    position: relative;
+
+    @media (min-width: 801px) {
+     margin-top: -370px;
+    }
+   
+    /*@media (max-width: 750px) {
+      margin-top: -117px
+    }
+
+    @media (max-width: 700px) {
+      margin-top: -384px
+    }
+
+    @media (max-width: 650px) {
+     margin-top: -384px
+    }
+
+    @media (max-width: 600px) {
+      margin-top: -384px
+    }*/
+
+  }
+`;
+
 export const ListStyled = styled.section``;
 
 export const CaseStyled = styled.article`
@@ -37,19 +64,21 @@ export const CaseStyled = styled.article`
 `;
 
 export const SliderStyled = styled(Slider)`
-padding:0px;
   .slick-track {
+    //display: grid;
+    //grid-template-columns: repeat(3, 1fr);
     display: flex;
     padding:0px;
-    grid-gap: 32px;
-    height: 1620px;
+    //grid-gap: 32px;
+    gap: 32px;
     margin: 0px;
     user-select: text;
     //height: fit-content;
     flex-wrap: nowrap;
- 
+    
     div{
       @media (min-width: 801px) {
+
         &:nth-child(2) {
           margin-top: 300px;
         } 
@@ -58,6 +87,23 @@ padding:0px;
         }
       } 
     }
+    @media (min-width: 801px) {
+      height: 1550px;
+    }
+  
+    /*
+    @media (max-width: 750px) { 
+      height: 750px;
+    }
+
+    @media (max-width: 700px) {
+      height: 780px;
+    }
+
+    @media (max-width: 650px) {
+      height: 1160px;
+    }
+    */
 
     @media (max-width: 600px) {
       height: 1480px;
@@ -69,6 +115,7 @@ padding:0px;
 
     @media (max-width: 500px) {
       height: 1330px;
+      
     }
 
     @media (max-width: 430px) {
@@ -127,6 +174,7 @@ padding:0px;
      width: 248px;
     }
   }
+
 `;
 
 export const GhostStyled = styled.div``;

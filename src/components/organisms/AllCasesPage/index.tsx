@@ -1,5 +1,6 @@
 import { 
   AsideStyled,
+  AsideStyledbutton,
   ContainerStyled,
   ContentStyled, 
   DivStyled, 
@@ -103,7 +104,7 @@ const Cases = () => {
       alt: t('allCases.alt.coverImStopped'), 
       link: "#6", 
       hover: Testehelo 
-    }/*,
+    },
     { 
       number: "07", 
       title: "Teste 7", 
@@ -112,7 +113,7 @@ const Cases = () => {
       alt: t('allCases.alt.coverImStopped'), 
       link: "#7", 
       hover: Testehelo 
-    },
+    }/*,
     { 
       number: "08", 
       title: "Teste 8", 
@@ -179,7 +180,7 @@ const Cases = () => {
           <AsideStyled>
             <ParagraphStyled>&lt;LA CREAM&gt;</ParagraphStyled>
           </AsideStyled>
-
+          <AsideStyledbutton>
           <LanguageStyled>
             <Typography tag='button' size="xxsmall" letterSpacing="space1" className="typography">
               <Link href='/pt/all-cases' locale='pt' scroll={false}>PT</Link>
@@ -188,7 +189,7 @@ const Cases = () => {
               <Link href='/en/all-cases' locale='en' scroll={false}>EN</Link>
             </Typography>
           </LanguageStyled>
-
+          </AsideStyledbutton>
         </DivStyled>
         </MainDivStyled>
         <PhraseStyled>{t('allCases.weDoWell')}</PhraseStyled>
