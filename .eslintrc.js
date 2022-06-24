@@ -52,6 +52,8 @@ module.exports = {
     'react/prop-types': 0,
     'class-methods-use-this': 0,
     'prefer-promise-reject-errors': 0,
+    'react/function-component-definition': 0,
+
     'react/jsx-filename-extension': [
       'error',
       {
