@@ -33,6 +33,7 @@ function CaseList(props: CaseProps) {
   const interval = useRef(null);
   var currentImage = '';
   const [actualImage, setActualImage] = useState('');
+  const [isMobile, setIsMobile] = useState(false);
 
   // anime slider
   const settings = {
@@ -40,15 +41,16 @@ function CaseList(props: CaseProps) {
     slidesToShow: 3,//1
     slidesToScroll: 1,
     swipeToSlide: false,
-    speed: 400,
+    speed: 400, 
     variableWidth: true,
     slidesPerRow: 1,
     responsive: [
       {
         breakpoint: 800,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,//2
           slidesToScroll: 1,
+          infinite: true,
           swipeToSlide: true,
           rows: 1,
           slidesPerRow: 1,
@@ -78,6 +80,18 @@ function CaseList(props: CaseProps) {
     }
   }, []);
 
+  useEffect(() => {
+    if (window.innerWidth < 800) {
+      console.log('Entrou no useEffect');
+      console.log('isMobile 1 = ' + isMobile);
+      setIsMobile(true);
+      console.log('isMobile 2 = ' + isMobile);
+    }
+    else{
+      setIsMobile(false);
+    }
+  }, []);
+  //, [window.innerWidth]
   useEffect(() => {
     if (window.innerWidth < 500) {
       const images = document.querySelectorAll<HTMLElement>('.images');
@@ -152,32 +166,38 @@ function CaseList(props: CaseProps) {
         </CaseStyled> 
   ))
 
-  const splicedCases = () => {
-    const size = Math.ceil(Object.keys(props.cases).length/3);
-    let aux_case = [];
-
-    for (let j = 0; j < size; j++) {
-      aux_case.push(
-      <GridStyled>
-        <ListStyled>  
-          <SliderStyled {...settings}>
-            { 
-              cases.splice(0,3)
-            }
-          </SliderStyled>
-        </ListStyled>
-      </GridStyled>
-      );
+  const MobileCases = () => {
+   return (
+   <SliderStyled {...settings}>
+    { 
+      cases
     }
-    return aux_case;
+    </SliderStyled> 
+    );
   };
-  
+
+  const splicedCases = () => {
+    let aux_case = [];
+    const size = Math.ceil(Object.keys(props.cases).length/3);
+      for (let j = 0; j < size; j++) {
+        aux_case.push(
+        <GridStyled>
+          <ListStyled>  
+            <SliderStyled {...settings}>
+              { 
+                cases.splice(0,3)
+              }
+            </SliderStyled>
+          </ListStyled>
+        </GridStyled>
+        );
+      }
+      return aux_case;
+  };
+
   return (
     <ContentStyled>
-      {  
-        splicedCases()
-      }
-      {/*<GhostStyled></GhostStyled> */}
+      { isMobile ? MobileCases() : splicedCases() }
     </ContentStyled>
   );
 }

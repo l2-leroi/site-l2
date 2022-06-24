@@ -9,11 +9,11 @@ export const ContentStyled = styled.section`
 `;
 
 export const GridStyled = styled.section`
-  &:not(:first-child) {
+  &:not(:first-child) { //
     position: relative;
 
     @media (min-width: 801px) {
-     margin-top: -370px;
+     margin-top: -600px;
     }
    
     /*@media (max-width: 750px) {
@@ -91,20 +91,6 @@ export const SliderStyled = styled(Slider)`
       height: 1550px;
     }
   
-    /*
-    @media (max-width: 750px) { 
-      height: 750px;
-    }
-
-    @media (max-width: 700px) {
-      height: 780px;
-    }
-
-    @media (max-width: 650px) {
-      height: 1160px;
-    }
-    */
-
     @media (max-width: 600px) {
       height: 1480px;
     }
