@@ -9,7 +9,7 @@ import {
   ParagraphStyled, 
   PhraseStyled, 
   TitleStyled} from "./styled";
-import AllCaseListCopy_2 from "../../molecules/AllCaseListCopy_2";
+import AllCaseList from "../../molecules/AllCaseList";
 import React from "react";
 import i18next from 'i18next';
 import { Typography } from "../../../styles/typography";
@@ -192,7 +192,7 @@ const Cases = () => {
         </MainDivStyled>
         <PhraseStyled>{t('allCases.weDoWell')}</PhraseStyled>
     
-        <AllCaseListCopy_2 cases={allCases} />
+        <AllCaseList cases={allCases} />
       </ContentStyled>
     </ContainerStyled>
     
