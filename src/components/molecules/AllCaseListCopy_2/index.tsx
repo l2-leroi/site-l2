@@ -81,17 +81,16 @@ function CaseList(props: CaseProps) {
   }, []);
 
   useEffect(() => {
-    if (window.innerWidth < 800) {
+    if (window.innerWidth <= 800) {
       console.log('Entrou no useEffect');
       console.log('isMobile 1 = ' + isMobile);
-      setIsMobile(true);
+      console.log('Width 1 = ', window.innerWidth);
+      //let res = !isMobile
+      setIsMobile(true);//true
       console.log('isMobile 2 = ' + isMobile);
     }
-    else{
-      setIsMobile(false);
-    }
-  }, []);
-  //, [window.innerWidth]
+  });
+
   useEffect(() => {
     if (window.innerWidth < 500) {
       const images = document.querySelectorAll<HTMLElement>('.images');
@@ -169,11 +168,10 @@ function CaseList(props: CaseProps) {
   const MobileCases = () => {
    return (
    <SliderStyled {...settings}>
-    { 
+    {
       cases
     }
-    </SliderStyled> 
-    );
+   </SliderStyled> );
   };
 
   const splicedCases = () => {

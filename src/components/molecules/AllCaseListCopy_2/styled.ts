@@ -63,6 +63,8 @@ export const CaseStyled = styled.article`
   }
 `;
 
+export const SliderStyled2 = styled(Slider)``;
+
 export const SliderStyled = styled(Slider)`
   .slick-track {
     //display: grid;
@@ -100,8 +102,7 @@ export const SliderStyled = styled(Slider)`
     }
 
     @media (max-width: 500px) {
-      height: 1330px;
-      
+      height: 1330px; 
     }
 
     @media (max-width: 430px) {
