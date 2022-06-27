@@ -9,29 +9,12 @@ export const ContentStyled = styled.section`
 `;
 
 export const GridStyled = styled.section`
-  &:not(:first-child) { //
+  pointer-events: none;
+  &:not(:first-child) {
     position: relative;
-
     @media (min-width: 801px) {
-     margin-top: -600px;
+      margin-top: -357px;
     }
-   
-    /*@media (max-width: 750px) {
-      margin-top: -117px
-    }
-
-    @media (max-width: 700px) {
-      margin-top: -384px
-    }
-
-    @media (max-width: 650px) {
-     margin-top: -384px
-    }
-
-    @media (max-width: 600px) {
-      margin-top: -384px
-    }*/
-
   }
 `;
 
@@ -42,24 +25,12 @@ export const CaseStyled = styled.article`
   height: auto;
 
   opacity: 0;
-  transition: .8s;
+  transition: 0.8s;
   transform: translate3d(0, 200px, 0);
-  
+
   &.animate {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-  }
-
-  @media (max-width: 1350px) {
-    height: 940px;   
-  }
-  
-  @media (max-width: 1155px) {
-    height: 920px;
-  }
-
-  @media (max-width: 800px) {
-    height: 530px;
   }
 `;
 
@@ -68,61 +39,43 @@ export const SliderStyled = styled(Slider)`
     //display: grid;
     //grid-template-columns: repeat(3, 1fr);
     display: flex;
-    padding:0px;
+    padding: 0px;
     //grid-gap: 32px;
     gap: 32px;
     margin: 0px;
     user-select: text;
     //height: fit-content;
     flex-wrap: nowrap;
-    
-    div{
-      @media (min-width: 801px) {
 
+    .header {
+      @media (min-width: 801px) {
+        // TODO: Pode alterar essa altura de acordo com a largura da tela
+        height: 400px;
+      }
+    }
+
+    .slick-slide {
+      @media (min-width: 801px) {
         &:nth-child(2) {
           margin-top: 300px;
-        } 
+        }
         &:nth-child(3) {
           margin-top: 600px;
         }
-      } 
-    }
-    @media (min-width: 801px) {
-      height: 1550px;
-    }
-  
-    @media (max-width: 600px) {
-      height: 1480px;
-    }
-
-    @media (max-width: 550px) {
-      height: 1400px;
-    }
-
-    @media (max-width: 500px) {
-      height: 1330px;
-      
-    }
-
-    @media (max-width: 430px) {
-      height: 1220px;
-    }
-
-    @media (max-width: 390px) {
-      height: 1180px;
+      }
     }
   }
-  
+
   @media (max-width: 800px) {
     .slick-current {
       margin-top: 0px;
     }
 
-    .slick-active.slick-current +div {
+    .slick-active.slick-current + div {
       margin-top: 80px;
     }
 
-    .slick-active +div {
+    .slick-active + div {
       margin-top: 160px;
     }
   }
@@ -132,7 +85,7 @@ export const SliderStyled = styled(Slider)`
     margin: 0px;
     margin-top: 0px;
     //margin: 0 16px;
-    transition: .5s;
+    transition: 0.5s;
 
     &:first-of-type {
       margin-left: 0px;
@@ -146,7 +99,7 @@ export const SliderStyled = styled(Slider)`
         //width: 464px;
       }
     }
-    
+
     @media (max-width: 1350px) {
       width: 415px;
       //width: 464px;
@@ -157,10 +110,9 @@ export const SliderStyled = styled(Slider)`
     }
 
     @media (max-width: 800px) {
-     width: 248px;
+      width: 248px;
     }
   }
-
 `;
 
 export const GhostStyled = styled.div``;
@@ -229,11 +181,11 @@ export const LinkStyled = styled.a`
 `;
 
 export const ImageStyled = styled.img`
+  pointer-events: all;
   //width: 464px;
   width: 100%;
   //border-radius: 8px;
   border-radius: 10px;
-  position: absolute;
   user-select: none;
 
   &.imageBlock {
