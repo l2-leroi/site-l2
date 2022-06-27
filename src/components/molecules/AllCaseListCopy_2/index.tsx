@@ -120,50 +120,54 @@ function CaseList(props: CaseProps) {
     setActualImage(image);
   };
 
-  const cases = 
-    props.cases.map((itemCase) => (
+  const cases = props.cases.map((itemCase) => (
     <CaseStyled key={itemCase.title} data-anime="animate">
-          <CaseNumberStyled>Case {itemCase.number}</CaseNumberStyled>
-          <TitleStyled>{itemCase.title}</TitleStyled>
-          <InfoStyled>{itemCase.info}</InfoStyled>
-          <LinkStyled className="images"
-            onMouseEnter={() => {
-              if (window.innerWidth > 800) {
-                initInterval(itemCase.hover);
-              }
-            }}
-            onMouseLeave={() => {
-              if (window.innerWidth > 800) {
-                cancelInterval(itemCase.image);
-              }
-            }}
-            onTouchStart={() => {
-              initInterval(itemCase.hover);
-            }}
-            onTouchEnd={() => {
-              cancelInterval(itemCase.image);
-            }}
-            >
-            <ImageStyled className="images"
-              src={itemCase.image}
-              alt={itemCase.alt}
-            />
-            { 
-              itemCase.hover.map((
-                imageHover => (
-                <ImageStyled
-                  key={imageHover}
-                  src={imageHover}
-                  alt={itemCase.alt}
-                  className={
-                    ((actualImage == imageHover) ? "images imageBlock" : "images imageNone")
-                  }
-                  />
-              )))
-            } 
-          </LinkStyled>
-        </CaseStyled> 
-  ))
+      <CaseNumberStyled>Case {itemCase.number}</CaseNumberStyled>
+      <TitleStyled>{itemCase.title}</TitleStyled>
+      <InfoStyled>{itemCase.info}</InfoStyled>
+      <LinkStyled
+        className="images"
+        onMouseEnter={() => {
+          if (window.innerWidth > 800) {
+            initInterval(itemCase.hover);
+          }
+        }}
+        onMouseLeave={() => {
+          if (window.innerWidth > 800) {
+            cancelInterval(itemCase.image);
+          }
+        }}
+        onTouchStart={() => {
+          initInterval(itemCase.hover);
+        }}
+        onTouchEnd={() => {
+          cancelInterval(itemCase.image);
+        }}
+      >
+        <ImageStyled
+          src={itemCase.image}
+          alt={itemCase.alt}
+          className={
+            itemCase.hover.find((imageHover) => actualImage == imageHover)
+              ? 'images imageNone'
+              : 'images imageBlock'
+          }
+        />
+        {itemCase.hover.map((imageHover) => (
+          <ImageStyled
+            key={imageHover}
+            src={imageHover}
+            alt={itemCase.alt}
+            className={
+              actualImage == imageHover
+                ? 'images imageBlock'
+                : 'images imageNone'
+            }
+          />
+        ))}
+      </LinkStyled>
+    </CaseStyled>
+  ));
 
   const MobileCases = () => {
    return (
