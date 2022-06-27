@@ -36,7 +36,6 @@ function CaseList(props: CaseProps) {
   const [actualImage, setActualImage] = useState('');
   const {width} = useWindowSize()
   const isMobile = useMemo(() => {return width <= 800}, [width]);
- // const [isMobile, setIsMobile] = useState(width);
  
   // anime slider
   const settings = {
@@ -81,7 +80,7 @@ function CaseList(props: CaseProps) {
         animeScroll();
       });
     }
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     if (window.innerWidth < 500) {
@@ -161,15 +160,6 @@ function CaseList(props: CaseProps) {
     </CaseStyled>
   ));
 
-  const MobileCases = () => {
-   return (
-   <SliderStyled {...settings}>
-    {
-      cases
-    }
-   </SliderStyled> );
-  };
-
   const splicedCases = () => {
     let aux_case = [];
     const size = Math.ceil(Object.keys(props.cases).length/3);
@@ -191,7 +181,7 @@ function CaseList(props: CaseProps) {
 
   return (
     <ContentStyled>
-      { isMobile ?   <SliderStyled {...settings}>{cases}</SliderStyled>  : splicedCases() }
+      { isMobile ? <SliderStyled {...settings}>{cases}</SliderStyled> : splicedCases() }
     </ContentStyled>
   );
 }

@@ -34,8 +34,6 @@ export const CaseStyled = styled.article`
   }
 `;
 
-export const SliderStyled2 = styled(Slider)``;
-
 export const SliderStyled = styled(Slider)`
   .slick-track {
     //display: grid;
