@@ -25,6 +25,7 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3",
     "twin.macro": "^2.8.2",
+    "use-hooks": "^2.0.0-rc.5",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

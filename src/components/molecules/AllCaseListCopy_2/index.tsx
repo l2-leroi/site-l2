@@ -11,9 +11,10 @@ import {
   GhostStyled,
   GridStyled,
 } from './styled';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useWindowSize } from 'use-hooks';
 
 interface Case {
   number: string;
@@ -33,8 +34,10 @@ function CaseList(props: CaseProps) {
   const interval = useRef(null);
   var currentImage = '';
   const [actualImage, setActualImage] = useState('');
-  const [isMobile, setIsMobile] = useState(false);
-
+  const {width} = useWindowSize()
+  const isMobile = useMemo(() => {return width <= 800}, [width]);
+ // const [isMobile, setIsMobile] = useState(width);
+ 
   // anime slider
   const settings = {
     infinite: false,
@@ -79,17 +82,6 @@ function CaseList(props: CaseProps) {
       });
     }
   }, []);
-
-  useEffect(() => {
-    if (window.innerWidth <= 800) {
-      console.log('Entrou no useEffect');
-      console.log('isMobile 1 = ' + isMobile);
-      console.log('Width 1 = ', window.innerWidth);
-      //let res = !isMobile
-      setIsMobile(true);//true
-      console.log('isMobile 2 = ' + isMobile);
-    }
-  });
 
   useEffect(() => {
     if (window.innerWidth < 500) {
