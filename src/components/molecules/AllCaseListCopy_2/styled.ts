@@ -13,7 +13,7 @@ export const GridStyled = styled.section`
   &:not(:first-child) {
     position: relative;
     @media (min-width: 801px) {
-      margin-top: -357px;
+      margin-top: -300px;
     }
   }
 `;
@@ -47,12 +47,6 @@ export const SliderStyled = styled(Slider)`
     //height: fit-content;
     flex-wrap: nowrap;
 
-    .header {
-      @media (min-width: 801px) {
-        // TODO: Pode alterar essa altura de acordo com a largura da tela
-        height: 400px;
-      }
-    }
 
     .slick-slide {
       @media (min-width: 801px) {

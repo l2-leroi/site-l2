@@ -123,11 +123,9 @@ function CaseList(props: CaseProps) {
 
   const cases = props.cases.map((itemCase) => (
     <CaseStyled key={itemCase.title} data-anime="animate">
-      <div className="header">
-        <CaseNumberStyled>Case {itemCase.number}</CaseNumberStyled>
-        <TitleStyled>{itemCase.title}</TitleStyled>
-        <InfoStyled>{itemCase.info}</InfoStyled>
-      </div>
+      <CaseNumberStyled>Case {itemCase.number}</CaseNumberStyled>
+      <TitleStyled>{itemCase.title}</TitleStyled>
+      <InfoStyled>{itemCase.info}</InfoStyled>
       <LinkStyled
         className="images"
         onMouseEnter={() => {
@@ -147,13 +145,15 @@ function CaseList(props: CaseProps) {
           cancelInterval(itemCase.image);
         }}
       >
-        {!itemCase.hover.find(imageHover=>actualImage == imageHover) && (
-          <ImageStyled
-            className="images"
-            src={itemCase.image}
-            alt={itemCase.alt}
-          />
-        )}
+        <ImageStyled
+          src={itemCase.image}
+          alt={itemCase.alt}
+          className={
+            itemCase.hover.find((imageHover) => actualImage == imageHover)
+              ? 'images imageNone'
+              : 'images imageBlock'
+          }
+        />
         {itemCase.hover.map((imageHover) => (
           <ImageStyled
             key={imageHover}
