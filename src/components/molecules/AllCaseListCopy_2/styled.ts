@@ -60,29 +60,6 @@ export const SliderStyled = styled(Slider)`
         }
       } 
     }
-    @media (min-width: 801px) {
-      height: 1550px;
-    }
-  
-    @media (max-width: 600px) {
-      height: 1480px;
-    }
-
-    @media (max-width: 550px) {
-      height: 1400px;
-    }
-
-    @media (max-width: 500px) {
-      height: 1330px; 
-    }
-
-    @media (max-width: 430px) {
-      height: 1220px;
-    }
-
-    @media (max-width: 390px) {
-      height: 1180px;
-    }
   }
 
   @media (max-width: 800px) {
