@@ -199,7 +199,7 @@ function CaseList(props: CaseProps) {
 
   return (
     <ContentStyled>
-      { isMobile ? MobileCases() : splicedCases() }
+      { isMobile ?   <SliderStyled {...settings}>{cases}</SliderStyled>  : splicedCases() }
     </ContentStyled>
   );
 }
