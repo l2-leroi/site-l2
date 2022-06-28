@@ -36,17 +36,12 @@ export const CaseStyled = styled.article`
 
 export const SliderStyled = styled(Slider)`
   .slick-track {
-    //display: grid;
-    //grid-template-columns: repeat(3, 1fr);
     display: flex;
     padding: 0px;
-    //grid-gap: 32px;
     gap: 32px;
     margin: 0px;
     user-select: text;
-    //height: fit-content;
     flex-wrap: nowrap;
-
 
     .slick-slide {
       @media (min-width: 801px) {
@@ -68,6 +63,9 @@ export const SliderStyled = styled(Slider)`
     .slick-active.slick-current + div {
       margin-top: 80px;
     }
+    .slick-active.slick-current + div + div {
+      margin-top: 160px;
+    }
 
     .slick-active + div {
       margin-top: 160px;
@@ -78,7 +76,6 @@ export const SliderStyled = styled(Slider)`
     width: 464px;
     margin: 0px;
     margin-top: 0px;
-    //margin: 0 16px;
     transition: 0.5s;
 
     &:first-of-type {
@@ -96,7 +93,6 @@ export const SliderStyled = styled(Slider)`
 
     @media (max-width: 1350px) {
       width: 415px;
-      //width: 464px;
     }
 
     @media (max-width: 1160px) {
@@ -108,8 +104,6 @@ export const SliderStyled = styled(Slider)`
     }
   }
 `;
-
-export const GhostStyled = styled.div``;
 
 export const CaseNumberStyled = styled.h3`
   font-family: 'Circular Air Pro', sans-serif;
@@ -176,9 +170,7 @@ export const LinkStyled = styled.a`
 
 export const ImageStyled = styled.img`
   pointer-events: all;
-  //width: 464px;
   width: 100%;
-  //border-radius: 8px;
   border-radius: 10px;
   user-select: none;
 
