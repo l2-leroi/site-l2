@@ -2,12 +2,12 @@ import {
   AsideStyled,
   AsideStyledbutton,
   ContainerStyled,
-  ContentStyled, 
-  DivStyled, 
-  LanguageStyled, 
-  MainDivStyled, 
-  ParagraphStyled, 
-  PhraseStyled, 
+  ContentStyled,
+  DivStyled,
+  LanguageStyled,
+  MainDivStyled,
+  ParagraphStyled,
+  PhraseStyled,
   TitleStyled} from "./styled";
 import AllCaseList from "../../molecules/AllCaseList";
 import React from "react";
@@ -41,13 +41,7 @@ const Cases = () => {
     "/images/fila-de-trabalho-3.jpg", 
     "/images/fila-de-trabalho-4.jpg"
   ];
-  const Testehelo = [
-    "/images/fila-de-trabalho-1.jpg", 
-    "/images/fila-de-trabalho-2.jpg", 
-    "/images/fila-de-trabalho-3.jpg", 
-    "/images/fila-de-trabalho-4.jpg"
-  ];
-
+  
   const allCases = [
     { 
       number: "01", 
@@ -84,92 +78,10 @@ const Cases = () => {
       alt: t('allCases.alt.coverWorkQueue'), 
       link: "#4", 
       hover: FilaDeTrabalho 
-    },
-    { 
-      number: "05", 
-      title: "Teste 5", 
-      info: t('allCases.providers'), 
-      image: "/images/capa-to-parado.jpg",
-      alt: t('allCases.alt.coverImStopped'), 
-      link: "#5", 
-      hover: Testehelo 
-    },
-    { 
-      number: "06", 
-      title: "Teste 6", 
-      info: t('allCases.providers'), 
-      image: "/images/capa-to-parado.jpg",
-      alt: t('allCases.alt.coverImStopped'), 
-      link: "#6", 
-      hover: Testehelo 
-    },
-    { 
-      number: "07", 
-      title: "Teste 7", 
-      info: t('allCases.providers'), 
-      image: "/images/capa-to-parado.jpg",
-      alt: t('allCases.alt.coverImStopped'), 
-      link: "#7", 
-      hover: Testehelo 
-    }/*,
-    { 
-      number: "08", 
-      title: "Teste 8", 
-      info: t('allCases.providers'), 
-      image: "/images/capa-to-parado.jpg",
-      alt: t('allCases.alt.coverImStopped'), 
-      link: "#4", 
-      hover: Testehelo 
-    },
-    { 
-      number: "09", 
-      title: "Teste 9", 
-      info: t('allCases.providers'), 
-      image: "/images/capa-to-parado.jpg",
-      alt: t('allCases.alt.coverImStopped'), 
-      link: "#5", 
-      hover: Testehelo 
-    },
-    { 
-      number: "10", 
-      title: "Teste 10", 
-      info: t('allCases.providers'), 
-      image: "/images/capa-to-parado.jpg",
-      alt: t('allCases.alt.coverImStopped'), 
-      link: "#10", 
-      hover: Testehelo 
-    },
-    { 
-      number: "07", 
-      title: "7 Teste helo 8", 
-      info: t('allCases.providers'), 
-      image: "/images/capa-to-parado.jpg",
-      alt: t('allCases.alt.coverImStopped'), 
-      link: "#4", 
-      hover: Testehelo 
-    },
-    { 
-      number: "08", 
-      title: "8 Teste helo 9", 
-      info: t('allCases.providers'), 
-      image: "/images/capa-to-parado.jpg",
-      alt: t('allCases.alt.coverImStopped'), 
-      link: "#5", 
-      hover: Testehelo 
-    },
-    { 
-      number: "09", 
-      title: "9 Teste helo 9", 
-      info: t('allCases.providers'), 
-      image: "/images/capa-to-parado.jpg",
-      alt: t('allCases.alt.coverImStopped'), 
-      link: "#6", 
-      hover: Testehelo 
-    },*/
+    }
   ];
 
   return (
-  
     <ContainerStyled id="allCases">
       <ContentStyled>
         <MainDivStyled>
@@ -191,11 +103,9 @@ const Cases = () => {
         </DivStyled>
         </MainDivStyled>
         <PhraseStyled>{t('allCases.weDoWell')}</PhraseStyled>
-    
         <AllCaseList cases={allCases} />
       </ContentStyled>
     </ContainerStyled>
-    
   );
 };
 export default Cases;
