@@ -128,7 +128,7 @@ export default function HeaderOurCareer({
             {!isStartDateBeforeThanNow && (
               <Button
                 backgroundColor="#20BD9D"
-                linkBtn={t('headerOurCareer.button')}
+                linkBtn={t('forms')}
                 text={t('headerOurCareer.iWantToApply')}
               />
             )}
@@ -204,7 +204,7 @@ export default function HeaderOurCareer({
           <DivButtonStyled>
             <Button
               backgroundColor="#20BD9D"
-              linkBtn={t('headerOurCareer.button')}
+              linkBtn={t('forms')}
               text={t('headerOurCareer.iWantToApply')}
             />
           </DivButtonStyled>

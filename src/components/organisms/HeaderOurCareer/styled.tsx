@@ -203,7 +203,7 @@ export const Div = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  width: 95%;
   margin-left: 55px;
 
   h1 {
