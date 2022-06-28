@@ -40,7 +40,7 @@ const OurCustomers = ({ setSpaceForSpinner }) => {
 
   const catchHeight = () => {
     const hgroupElement = hgroup.current as HTMLElement;
-    return hgroupElement.getBoundingClientRect().height;
+    return hgroupElement?.getBoundingClientRect().height;
   }
 
   useEffect(() => {
