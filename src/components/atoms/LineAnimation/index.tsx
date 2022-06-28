@@ -18,6 +18,7 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceF
   let minHeightOutSourcing = 60;
   let maxHeightSpinner = 200;
   let resize = false;
+  let wasAnimated = false;
 
   const calculateMaxHeight = (lineElement: HTMLElement) => {
     maxHeight = (Math.tan(maxRadians) * lineElement.getBoundingClientRect().width);
@@ -32,7 +33,7 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceF
 
   const animateLine = () => {
     const textElement = text.current as HTMLElement;
-    const lineElement = line.current as HTMLElement;;
+    const lineElement = line.current as HTMLElement;
     const spinnerElement = spinner.current as HTMLElement;
 
     calculateMaxHeight(lineElement);
@@ -45,38 +46,85 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceF
 
     let distanceFromTop = window.innerHeight * 0.6 - lineElement.getBoundingClientRect().top;
 
-    if (resize) {
-      distanceFromTop = 0;
-      resize = false;
-      maxHeightSpinner = 20;
-    }
-    const provisionalHeight = distanceFromTop;
-
-    const tangent = provisionalHeight / width;
+    const tangent = maxHeight / width;
     const arcTangent = Math.atan(tangent);
     const degrees = arcTangent * (180 / Math.PI);
 
-    if (degrees >= 0 && degrees <= 17.76 && distanceFromTop <= maxHeight) {
+    if((distanceFromTop > 0 && wasAnimated === false) ||(resize && wasAnimated)){
 
-      if (distanceFromTop >= 0 && hasOutSourcing) {
-        textElement.style.top = (- (minHeightOutSourcing) + distanceFromTop / 2) + "px";
+      // Desabilita o scroll
+      document.body.style.height = "100%"
+      document.body.style.overflow = "hidden";
+
+      lineElement.style.transition = "height 0.5s ease";
+      lineElement.style.height = maxHeight + "px";
+
+      const scroll = () => {
+        window.scrollBy({
+        top: (window.innerHeight - (lineElement.getBoundingClientRect().top) + maxHeight/1.5),
+        left: 0,
+        behavior: 'smooth'
+      });
       }
 
-      if (hasSpinner) {
-        const sum = (maxHeightSpinner / 2.5) + (spaceForSpinner + maxHeight);
 
-        if (!(distanceFromTop * 0.8 > sum)) {
-          spinnerElement.style.top = (distanceFromTop * 1.2 - (maxHeightSpinner / 2.5)) + 'px';
-        }
-      }
-
-      lineElement.style.height = (distanceFromTop) + "px";
-      if (hasOutSourcing) {
+      if(hasOutSourcing){
+        textElement.style.top = (- (minHeightOutSourcing) + maxHeight / 2) + "px";
         textElement.style.transform = `rotate(${degrees}deg)`;
       }
 
+      if (hasSpinner) {
+        spinnerElement.style.top = (maxHeight + spaceForSpinner) - (maxHeightSpinner * 0.2) + 'px';
+      }
+      wasAnimated = true;
+
+      console.log(resize)
+
+      if(resize){
+        resize = false;
+        console.log("resize", resize)
+      }
+
+      const enableScroll = () => {
+        document.body.style.height = "auto";
+        document.body.style.overflow = "visible";
+      }
+
+      if(!resize){
+        setTimeout(scroll, 500)
+        setTimeout(enableScroll, 1000)
+      }
+
+      
     }
+
+    // Animação antiga
+    // if(wasAnimated === false){
+    //   
+    // }
+
+    // if (degrees >= 0 && degrees <= 17.76 && distanceFromTop <= maxHeight) {
+
+    //   if (distanceFromTop >= 0 && hasOutSourcing) {
+    //     textElement.style.top = (- (minHeightOutSourcing) + distanceFromTop / 2) + "px";
+    //   }
+
+    //   if (hasSpinner) {
+    //     const sum = (maxHeightSpinner / 2.5) + (spaceForSpinner + maxHeight);
+
+    //     if (!(distanceFromTop * 0.8 > sum)) {
+    //       spinnerElement.style.top = (distanceFromTop * 1.2 - (maxHeightSpinner / 2.5)) + 'px';
+    //     }
+    //   }
+
+    //   lineElement.style.height = (distanceFromTop) + "px";
+    //   if (hasOutSourcing) {
+    //     textElement.style.transform = `rotate(${degrees}deg)`;
+    //   }
+
+    // }
     requestAnimationFrame(animateLine);
+    
   }
 
   const putTextInTheCorrectTop = () => {

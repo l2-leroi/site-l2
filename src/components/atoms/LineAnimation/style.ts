@@ -9,10 +9,10 @@ interface Props{
 export const LineStyled = styled.div<Props>`
     clip-path: polygon(0px 0%, 100% 100%, 100% 100%, 0% 100%);
     background-color: ${props => props.lineBg};
-    
+    height: 0px;
     box-sizing: padding-box;
     z-index: 20;
-    transition: height 0.5s ease;
+    transition: all 0.5s ease;
 `;
 
 export const TextContainerStyled = styled.div`
