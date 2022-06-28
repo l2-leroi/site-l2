@@ -33,6 +33,23 @@
     "followUs": "Siga nos",
     "weCreate": "Criamos produtos digitais e experiências online que as pessoas adoram"
   },
+  "headerOurCareer": {
+    "beTrainee": "SEJA TRAINEE NA L2CODE",
+    "hereTheTrainee": "Aqui o trainee não faz café, faz a diferença. ● A cada 4 meses contratamos estudantes de graduação para iniciarem suas carreiras conosco.",
+    "toTheTalents": "AOS TALENTOS",
+    "registrationUntil": "Incrições até:",
+    "resultIn": "Resultado em:",
+    "iWantToApply": "QUERO ME CANDIDATAR",
+    "makeYourCandidacy": "Faça sua candidatura agora e receba resposta primeiro. Fique tranquila, você pode atualizar seus dados depois.",
+    "waitForTheResult": "Aguarde o resultado. Iremos encaminhá-lo a você por e-mail.",
+    "lastClass": "Última turma de Trainnes chamados.",
+    "aboutTheProgram": "Sobre o programa de Trainne",
+    "youAreGoingTo": "Você vai trabalhar num time de TI excepcional e vai ter treinamento durante 12 meses. O foco é ampliar seus conhecimentos em diferentes tecnologias, assim você descobre o que realmente gosta e a gente direciona seu potencial para gerar o máximo de impacto. ● Somos flexíveis com horários, o que facilita para você conciliar sua rotina acadêmica.",
+    "requirements": "Requisitos",
+    "desirable": "+ Desejável estar cursando o último ano de Ciência da Computação ou equivalente ou outro curso superior na área de TI;",
+    "availability": "+ Disponibilidade para trabalhar 30 horas semanais;",
+    "knowledge": "+ Conhecimentos de lógica de programação e estrutura de dados."
+  },
   "menu": {
     "ourWhatsapp": "nosso whatsapp",
     "ourEmail": "nosso e-mail",

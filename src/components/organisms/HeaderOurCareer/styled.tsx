@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
 import { colors } from '../../../styles/colors';
 
 export const ContainerStyled = styled.section`
@@ -187,17 +188,14 @@ export const DivStyled = styled.div`
   margin-left: 13%;
   min-width: 30%;
   max-width: 70%;
-  /* width: 961px; */
   height: auto;
-  /* min-height: 20%;
-  max-height: 50%; */
   position: relative;
 `;
 
 export const DateStyled = styled.div`
-  margin: 0 6rem;
+  margin: 0 1rem;
   display: flex;
-  width: 80%;
+  width: 92%;
   margin-top: 2.4rem;
 `;
 
@@ -209,13 +207,6 @@ export const Div = styled.div`
   margin-left: 55px;
 
   h1 {
-    display: flex;
-    margin-bottom: 30px;
-    margin-top: 50px;
-    flex-direction: column;
-  }
-
-  h3 {
     display: flex;
     margin-bottom: 30px;
     margin-top: 50px;
@@ -240,15 +231,14 @@ export const ExpireDate = styled.div`
   justify-content: space-between;
   letter-spacing: -0.02em;
   text-decoration-line: line-through;
+
+  p {
+    margin-top: 4rem;
+    width: 33%;
+  }
 `;
 
 export const TextStyled = styled.p`
-  font-family: 'Circular Air Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 140%;
-  letter-spacing: -0.04em;
   margin-top: 4rem;
   width: 33%;
 `;
@@ -267,5 +257,158 @@ export const DivButton = styled.div`
   min-width: 30%;
   max-width: 50%;
   height: auto;
-  color: black;
+  color: #171b21; ;
+`;
+
+export const DivImageStyled = styled.div`
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 80px;
+  margin-top: 250px;
+
+  img {
+    display: flex;
+    width: 50%;
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    position: relative;
+  }
+
+  p {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 460px;
+    margin-left: 5px;
+    text-align: center;
+  }
+`;
+
+export const SpinningAnimation = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+
+export const ArrowSpinnerContainerStyled = styled.div`
+  display: flex;
+  margin-left: 150px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+`;
+
+export const SpinningIconStyled = styled.div`
+  position: absolute;
+  left: 0px;
+  margin-top: 79%;
+  margin-left: -155px;
+  overflow-x: hidden;
+  animation: ${SpinningAnimation} 5s linear infinite;
+  @media (max-width: 800px) {
+    max-width: 248px;
+  }
+  @media (max-width: 414px) {
+    max-width: 140px;
+  }
+`;
+
+export const SpinnerImage = styled.img``;
+
+export const DivTextStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 200px;
+
+  h1 {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-top: -930px;
+    margin-bottom: 20px;
+    margin-left: 550px;
+    position: relative;
+    font-style: normal;
+    color: #f2f3f4;
+    ::selection {
+      background: ${colors.purple};
+      color: ${colors.gray};
+    }
+    @media (min-width: 801px) and (max-width: 1220px) {
+      font-size: 10px;
+    }
+    @media (max-width: 910px) {
+      margin-bottom: 15px;
+    }
+    @media (orientation: portrait) and (max-width: 800px) {
+      margin-top: 120px;
+      margin-bottom: 8px;
+    }
+  }
+
+  p {
+    display: flex;
+    flex-direction: column;
+    width: 34%;
+    margin-top: -800px;
+    margin-left: 550px;
+
+    font-style: normal;
+    font-weight: 400;
+    /* font-size: 20px; */
+  }
+
+  h2 {
+    display: flex;
+    flex-direction: column;
+    width: 14%;
+    margin-top: 320px;
+    margin-left: 550px;
+    position: relative;
+    font-style: normal;
+
+    /* font-size: 20px; */
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    bottom: 1px;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 2px;
+    top: -60px;
+    margin-left: 275px;
+    position: relative;
+    list-style-type: none;
+    font-style: normal;
+    line-height: 33.6px;
+    /* font-size: 20px; */
+  }
+`;
+
+export const DivButtonStyled = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px;
+  margin-top: -40px;
+  margin-bottom: 100px;
+  margin-left: 510px;
+  gap: 8px;
+  width: 100%;
+  min-width: 30%;
+  max-width: 70%;
+  height: auto;
+  color: #171b21; ;
 `;

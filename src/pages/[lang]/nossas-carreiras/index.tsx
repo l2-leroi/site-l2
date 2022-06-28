@@ -1,8 +1,7 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
 
-// import TraineeImg from '../../../components/organisms/trainee-img';
-// import TextCarroussel from '../../../components/organisms/text-carroussel';
+import TextCarroussel from '../../../components/organisms/text-carroussel';
 import HeaderOurCareer from '../../../components/organisms/HeaderOurCareer';
 
 const NossasCarreiras: NextPage = () => {
@@ -18,26 +17,22 @@ const NossasCarreiras: NextPage = () => {
 
   const startDate = '20/07/2022';
   const endDate = '24/07/2022';
-  const title = 'Inscrições até:';
-  const subTitle = 'Resultado em:';
-  const text =
-    'Faça sua candidatura agora e receba resposta primeiro. Fique tranquila, você pode atualizar seus dados depois.';
-  const textEnd = 'Aguarde o resultado. Iremos encaminhá-lo a você por e-mail.';
   const id = 1;
+  const li = [
+    'headerOurCareer.desirable',
+    'headerOurCareer.availability',
+    'headerOurCareer.knowledge',
+  ];
   return (
     <>
       <HeaderOurCareer
         startDate={startDate}
         endDate={endDate}
-        title={title}
-        subTitle={subTitle}
-        text={text}
-        textEnd={textEnd}
         id={id}
+        li={li}
       />
 
-      {/* <TraineeImg /> */}
-      {/* <TextCarroussel /> */}
+      <TextCarroussel />
     </>
   );
 };
