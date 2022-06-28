@@ -8,7 +8,6 @@ import {
   TitleStyled,
   ImageStyled,
   SliderStyled,
-  GhostStyled,
   GridStyled,
 } from './styled';
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -40,7 +39,7 @@ function CaseList(props: CaseProps) {
   // anime slider
   const settings = {
     infinite: false,
-    slidesToShow: 3,//1
+    slidesToShow: 3,
     slidesToScroll: 1,
     swipeToSlide: false,
     speed: 400, 
@@ -50,19 +49,18 @@ function CaseList(props: CaseProps) {
       {
         breakpoint: 800,
         settings: {
-          slidesToShow: 1,//2
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          swipeToSlide: true,
           rows: 1,
           slidesPerRow: 1,
         }
-      },
+      }
     ]
   };
 
   // anime scroll 
-  useEffect(() => {
+  const animateSlides = () => {
     const target = document.querySelectorAll<HTMLElement>('[data-anime]');
     function animeScroll() {
       const windowTop = window.pageYOffset + window.innerHeight * 0.7;
@@ -74,13 +72,17 @@ function CaseList(props: CaseProps) {
         }
       });
     }
+
     animeScroll();
     if (target.length) {
-      window.addEventListener('scroll', () => {
-        animeScroll();
-      });
+      window.addEventListener('scroll', animeScroll);
     }
-  }, [isMobile]);
+    return () => {
+      window.removeEventListener('scroll', animeScroll);
+    }
+  }
+
+  useEffect(animateSlides, [isMobile]);
 
   useEffect(() => {
     if (window.innerWidth < 500) {
@@ -180,7 +182,7 @@ function CaseList(props: CaseProps) {
   };
 
   return (
-    <ContentStyled>
+    <ContentStyled onTouchEnd={animateSlides}>
       { isMobile ? <SliderStyled {...settings}>{cases}</SliderStyled> : splicedCases() }
     </ContentStyled>
   );
