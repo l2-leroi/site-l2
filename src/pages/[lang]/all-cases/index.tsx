@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import LineAnimation from '../../../components/atoms/LineAnimation';
 import AllCasesPage from '../../../components/organisms/AllCasesPage';
-import Nav from '../../../components/organisms/Nav';
 import { colors } from '../../../styles/colors';
 
 const AllCases: NextPage = () => {
@@ -16,10 +15,9 @@ const AllCases: NextPage = () => {
       }
     }
   });
-
+  
   return (
     <>
-      <Nav/>
       <AllCasesPage />
       <LineAnimation lineBg={colors.purple} secondaryBg={colors.black} hasOutSourcing={false} hasSpinner={false} spaceForSpinner={0}/>
     </>
