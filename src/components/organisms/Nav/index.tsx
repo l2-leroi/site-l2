@@ -1,3 +1,5 @@
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 import {
   NavStyled,
   NavItemStyled,
@@ -5,11 +7,9 @@ import {
   DivTextStyled,
   ImageStyled,
   SandwichMenuStyled,
-} from "./styled";
-import React, { useEffect, useState } from 'react';
-import Menu from "../Menu/index";
-import Link from "next/link";
-import { Typography } from "../../../styles/typography";
+} from './styled';
+import Menu from '../Menu/index';
+import { Typography } from '../../../styles/typography';
 
 export default function Nav() {
   const [MenuClick, setClick] = useState(false);
@@ -18,20 +18,23 @@ export default function Nav() {
   const handleWhite = () => {
     const observer = new MutationObserver(handleMutation);
 
-    const observerTarget = document.querySelector('.nav')
-    observer.observe(observerTarget, { attributes: true })
-  }
+    const observerTarget = document.querySelector('.nav');
+    observer.observe(observerTarget, { attributes: true });
+  };
 
   const handleMutation = (mutation) => {
     if (mutation[0].target.classList.contains('white')) {
-      document.querySelector(".navImage").setAttribute('src', "/images/L2Code-Logo-White.svg")
+      document
+        .querySelector('.navImage')
+        .setAttribute('src', '/images/L2Code-Logo-White.svg');
       setIsAnimating(true);
-    }
-    else {
-      document.querySelector(".navImage").setAttribute('src', "/images/L2Code-Logo.svg");
+    } else {
+      document
+        .querySelector('.navImage')
+        .setAttribute('src', '/images/L2Code-Logo.svg');
       setIsAnimating(false);
     }
-  }
+  };
 
   let lastScrollTop = 0;
 
@@ -42,25 +45,23 @@ export default function Nav() {
 
     if (screen.width <= 880) {
       if (bannerTextTop > lastScrollTop) {
-        nav.classList.add("smallFixed");
-      }
-      else {
-        nav.classList.remove("smallFixed");
+        nav.classList.add('smallFixed');
+      } else {
+        nav.classList.remove('smallFixed');
       }
       lastScrollTop = bannerTextTop;
+    } else {
+      bannerTextTop < 0
+        ? nav.classList.add('smallFixed')
+        : nav.classList.remove('smallFixed');
     }
-    else {
-      bannerTextTop < 0 ?
-        nav.classList.add("smallFixed") :
-        nav.classList.remove("smallFixed");
-    }
-  }
+  };
 
   useEffect(() => {
     handleWhite();
-    addEventListener("scroll", handleScroll);
-    document.querySelector('html').style.scrollBehavior = "smooth";
-  }, [])
+    addEventListener('scroll', handleScroll);
+    document.querySelector('html').style.scrollBehavior = 'smooth';
+  }, []);
 
   return (
     <>
@@ -68,22 +69,45 @@ export default function Nav() {
       <NavStyled className="nav anime">
         <NavItemStyled>
           <Link href="/">
-            <ImageStyled className="navImage" src="/images/L2Code-Logo.svg" alt="L2 Code" />
+            <ImageStyled
+              className="navImage"
+              src="/images/L2Code-Logo.svg"
+              alt="L2 Code"
+            />
           </Link>
         </NavItemStyled>
 
         <NavItemStyled>
-          <Typography tag="p" fontWeight="weight2" size="xxsmall" letterSpacing="space1">
+          <Typography
+            tag="p"
+            fontWeight="weight2"
+            size="xxsmall"
+            letterSpacing="space1"
+          >
             contato@l2code.com.br
           </Typography>
         </NavItemStyled>
 
         <NavItemStyled>
           <NavButtonStyled onClick={() => setClick(true)}>
-            <SandwichMenuStyled borderWhite={isAnimating}></SandwichMenuStyled>
+            <SandwichMenuStyled borderWhite={isAnimating} />
             <DivTextStyled>
-              <Typography tag="p" fontWeight="weight2" size="xxsmall" letterSpacing="space1">ME</Typography>
-              <Typography tag="p" fontWeight="weight2" size="xxsmall" letterSpacing="space1">NU</Typography>
+              <Typography
+                tag="p"
+                fontWeight="weight2"
+                size="xxsmall"
+                letterSpacing="space1"
+              >
+                ME
+              </Typography>
+              <Typography
+                tag="p"
+                fontWeight="weight2"
+                size="xxsmall"
+                letterSpacing="space1"
+              >
+                NU
+              </Typography>
             </DivTextStyled>
           </NavButtonStyled>
         </NavItemStyled>
