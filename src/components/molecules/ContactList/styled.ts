@@ -11,13 +11,13 @@ export const ItemStyled = styled.li`
   &:last-child {
     margin-bottom: 0px;
   }
-  h3{
+  h3 {
     margin-bottom: 19px;
     ::selection {
       background: ${colors.green};
       color: ${colors.black};
     }
-  
+
     @media (max-width: 800px) {
       margin-bottom: 16px;
     }

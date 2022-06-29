@@ -1,11 +1,11 @@
+import ReactGA from 'react-ga';
 import { Typography } from '../../../styles/typography';
 import { ContentStyled, ItemStyled, ContactStyled } from './styled';
-import ReactGA from 'react-ga';
 
 interface Contact {
-  title: string,
-  contact: string,
-  link: string,
+  title: string;
+  contact: string;
+  link: string;
 }
 
 interface ContactProps {
@@ -13,28 +13,36 @@ interface ContactProps {
 }
 
 function ContactList(props: ContactProps) {
-
   const ClickHandler = () => {
     ReactGA.event({
       category: 'Button',
-      action: 'Click nos links do footer'
-    })
-  }
+      action: 'Click nos links do footer',
+    });
+  };
   return (
     <ContentStyled>
-      {
-        props.contacts.map((c) => (      
-          <ItemStyled key={c.title}>
-            <Typography tag='h3' color='gray'>{c.title}</Typography>
+      {props.contacts.map((c) => (
+        <ItemStyled key={c.title}>
+          <Typography tag="h3" color="gray">
+            {c.title}
+          </Typography>
 
-            <ContactStyled href={c.link} target="_blank" onClick={ClickHandler}>
-              <Typography tag="p" color='gray' size='small' lineHeight='line120' letterSpacing='space1' fontWeight='weight3'>{c.contact}</Typography>
-            </ContactStyled>
-          </ItemStyled>     
-        ))
-      }
+          <ContactStyled href={c.link} target="_blank" onClick={ClickHandler}>
+            <Typography
+              tag="p"
+              color="gray"
+              size="small"
+              lineHeight="line120"
+              letterSpacing="space1"
+              fontWeight="weight3"
+            >
+              {c.contact}
+            </Typography>
+          </ContactStyled>
+        </ItemStyled>
+      ))}
     </ContentStyled>
   );
-};
+}
 
 export default ContactList;
