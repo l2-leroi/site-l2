@@ -108,3 +108,9 @@ export const CustomersContainer = styled.div`
   grid-column: 2;
 `;
 
+export const IdSpanStyled = styled.div`
+  width: 10px;
+  height: 2px;
+  position: absolute;
+  top: -200px;
+`;

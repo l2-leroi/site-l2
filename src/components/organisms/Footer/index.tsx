@@ -8,6 +8,7 @@ import {
   ImageStyled,
   ContainerStyled,
   DivStyled,
+  IdSpanStyled
 } from "./styled";
 import { HeartIcon } from '../../../assets/icons/heartIcon';
 import ContactList from '../../molecules/ContactList/index'
@@ -40,7 +41,8 @@ const Footer = () => {
 
   return (
     // <LineAnimation backgroundColor={colors.purple} classe={'purpleLine'}>
-    <FooterStyled id="contact" className="footer">
+    <FooterStyled className="footer">
+      <IdSpanStyled id="contact" />
       <ContainerStyled className="containerstyled">
         <ContentStyled>
           <DivStyled>

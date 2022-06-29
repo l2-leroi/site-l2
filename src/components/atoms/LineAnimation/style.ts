@@ -50,7 +50,7 @@ export const SpinningIconStyled = styled.div`
   z-index: 1;  
   overflow-x: hidden;
   border-radius: 50%;
-  animation: ${SpinningAnimation} 5s linear infinite;
+  animation: ${SpinningAnimation} 27s linear infinite;
   max-width: 468px;
   transition: top 0.5s ease;
 

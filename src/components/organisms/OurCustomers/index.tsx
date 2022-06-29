@@ -5,6 +5,7 @@ import {
   BlackLineStyled,
   AsideStyled,
   CustomersContainer,
+  IdSpanStyled
 } from './styled';
 
 import CustomersList from '../../molecules/CustomersList/index';
@@ -49,7 +50,8 @@ const OurCustomers = ({ setSpaceForSpinner }) => {
 
   return (
     <>
-      <OurCustomersStyled id="customers" className="customers">
+      <OurCustomersStyled className="customers">
+      <IdSpanStyled id="customers" />
         <BlackLineStyled className="customersContent">
 
           <ContentStyled>

@@ -6,7 +6,7 @@ export const FooterStyled = styled.footer`
   background-color: ${colors.purple};
   width: 100%;
   padding: 0rem 2.8rem 6.05rem;
-
+  position: relative;
 `;
 
 export const ContainerStyled = styled.div`
@@ -152,6 +152,13 @@ export const ImageStyled = styled.img`
     height: 20px;
     margin-top: 80px;
   }
+`;
+
+export const IdSpanStyled = styled.div`
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    top: -200px;
 `;
 
 export const IconStyled = styled.span`

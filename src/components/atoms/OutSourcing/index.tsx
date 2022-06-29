@@ -9,7 +9,7 @@ export default function OutSourcing({texts, color}) {
     <SectionOutSourcingStyled>
       <Marquee gradientColor={[null,undefined,undefined]} direction='left' loop={0} speed={100}>
         <Typography tag='p' color={color} size='small' lineHeight='line120' fontWeight='weight2' letterSpacing='space1'>
-          {t(texts)}{t(texts)}
+           {t(texts)} {t(texts)}
         </Typography>
       </Marquee> 
     </SectionOutSourcingStyled>
