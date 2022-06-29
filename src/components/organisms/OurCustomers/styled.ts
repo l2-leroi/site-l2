@@ -11,7 +11,6 @@ export const OurCustomersStyled = styled.section`
   transition: 0.1s linear all;
 `;
 
-
 export const BlackLineStyled = styled.div`
   color: ${colors.gray};
   background-color: ${colors.black};
@@ -21,7 +20,7 @@ export const BlackLineStyled = styled.div`
   padding: 0px 28px;
   overflow: hidden;
   padding-bottom: 80px;
-  @media(max-width: 800px){
+  @media (max-width: 800px) {
     padding: 0px 12px;
     padding-bottom: 80px;
   }
@@ -31,29 +30,29 @@ export const HeaderStyled = styled.hgroup`
   max-width: 648px;
   z-index: 50;
 
-  @media(max-width: 1000px){
+  @media (max-width: 1000px) {
     max-width: 400px;
   }
 
-  @media(max-width: 800px){
+  @media (max-width: 800px) {
     max-width: 264px;
   }
-  p{
+  p {
     max-width: 464px;
     ::selection {
       background: ${colors.purple};
     }
-    @media(max-width: 800px){
+    @media (max-width: 800px) {
       max-width: 160px;
     }
   }
-  h2{
+  h2 {
     margin-bottom: 40px;
     ::selection {
       background: ${colors.purple};
     }
-    
-    @media(max-width: 800px){
+
+    @media (max-width: 800px) {
       max-width: 264px;
       margin-bottom: 16px;
     }
@@ -71,19 +70,18 @@ export const AsideStyled = styled.aside`
   letter-spacing: -0.02em;
   z-index: 2;
 
-  @media(max-width: 800px){
+  @media (max-width: 800px) {
     max-width: 50px;
   }
-  p{
+  p {
     ::selection {
       background: ${colors.purple};
     }
-    @media(max-width: 800px){
+    @media (max-width: 800px) {
       max-width: 61px;
     }
   }
 `;
-
 
 export const ContentStyled = styled.section`
   position: relative;
@@ -91,20 +89,18 @@ export const ContentStyled = styled.section`
   margin-bottom: 124px;
   grid-column: 2;
 
-  @media(max-width: 800px){
+  @media (max-width: 800px) {
     margin-bottom: 39px;
-
   }
 
-  @media(max-width: 414px){
+  @media (max-width: 414px) {
     margin-bottom: 36px;
     width: 100%;
   }
 `;
 
-
 export const CustomersContainer = styled.div`
-  z-index: 5;  
+  z-index: 5;
   grid-column: 2;
 `;
 

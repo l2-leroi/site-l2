@@ -1,3 +1,5 @@
+import React from 'react';
+import i18next from 'i18next';
 import {
   FooterStyled,
   ContentStyled,
@@ -11,15 +13,11 @@ import {
   IdSpanStyled
 } from "./styled";
 import { HeartIcon } from '../../../assets/icons/heartIcon';
-import ContactList from '../../molecules/ContactList/index'
-import React from 'react';
-import LineAnimation from '../../atoms/LineAnimation';
-import { colors } from '../../../styles/colors';
-import i18next from "i18next";
-import { Typography } from "../../../styles/typography";
+import ContactList from '../../molecules/ContactList/index';
+import { Typography } from '../../../styles/typography';
 
-const Footer = () => {
-  const { t } = i18next
+function Footer() {
+  const { t } = i18next;
   const contacts = [
     // obs: deixar comentado para não exibir a parte do whatsapp, pois está com o número do nery
     // {
@@ -46,26 +44,73 @@ const Footer = () => {
       <ContainerStyled className="containerstyled">
         <ContentStyled>
           <DivStyled>
-            <Typography color='gray' tag="h2" size='medium' fontWeight='weight3' fontFamily='font1' lineHeight='line90'>
+            <Typography
+              color="gray"
+              tag="h2"
+              size="medium"
+              fontWeight="weight3"
+              fontFamily="font1"
+              lineHeight="line90"
+            >
               {t('footer.letsTalk')}
             </Typography>
             <AsideStyled>
-              <Typography color='gray' tag='p' size="xxsmall" letterSpacing="space1">&lt;AND DANCE&gt;</Typography>
+              <Typography
+                color="gray"
+                tag="p"
+                size="xxsmall"
+                letterSpacing="space1"
+              >
+                &lt;AND DANCE&gt;
+              </Typography>
             </AsideStyled>
           </DivStyled>
           <ContactList contacts={contacts} />
         </ContentStyled>
         <CopyrightStyled>
           <InfoStyled>
-            <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.weEmbrace')}</Typography>
-            <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.weWork')}</Typography>
+            <Typography
+              tag="p"
+              size="xxsmall"
+              letterSpacing="space1"
+              color="gray"
+            >
+              {t('footer.weEmbrace')}
+            </Typography>
+            <Typography
+              tag="p"
+              size="xxsmall"
+              letterSpacing="space1"
+              color="gray"
+            >
+              {t('footer.weWork')}
+            </Typography>
           </InfoStyled>
           <InfoStyled className="desktop">
             <ImageStyled src="/images/Logo-Small.svg" alt="L2 Code" />
           </InfoStyled>
           <InfoStyled className="align-end">
-            <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.madeWith')} <IconStyled> <HeartIcon /> </IconStyled> L2code</Typography>
-            <Typography tag='p' size="xxsmall" letterSpacing="space1" color="gray">{t('footer.copyright')}</Typography>
+            <Typography
+              tag="p"
+              size="xxsmall"
+              letterSpacing="space1"
+              color="gray"
+            >
+              {t('footer.madeWith')}{' '}
+              <IconStyled>
+                {' '}
+                <HeartIcon />{' '}
+              </IconStyled>{' '}
+              L2code
+            </Typography>
+            <Typography
+              tag="p"
+              size="xxsmall"
+              letterSpacing="space1"
+              color="gray"
+            >
+              {t('footer.copyright')}
+            </Typography>
           </InfoStyled>
         </CopyrightStyled>
         <InfoStyled className="mobile">
@@ -75,6 +120,6 @@ const Footer = () => {
     </FooterStyled>
     // </LineAnimation>
   );
-};
+}
 
 export default Footer;

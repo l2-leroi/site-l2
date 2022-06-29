@@ -3,13 +3,13 @@ import { colors } from '../../../styles/colors';
 import { Typography } from '../../../styles/typography';
 
 export const MenuStyled = styled.section`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    height: 100vh;
-    background: ${colors.black};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 100vh;
+  background: ${colors.black};
 `;
 
 export const ContainerStyled = styled.div`
@@ -143,7 +143,7 @@ export const DivLanguageStyled = styled.div`
       margin-bottom: 8px;
     }
 
-    a{
+    a {
       ::selection {
         background: ${colors.purple};
       }
@@ -156,7 +156,7 @@ export const DivLanguageStyled = styled.div`
 
     @media (min-width: 500px) {
       &:hover {
-          color: ${colors.green};
+        color: ${colors.green};
       }
     }
   }
