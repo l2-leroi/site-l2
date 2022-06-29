@@ -1,3 +1,7 @@
+import { useEffect, useMemo, useRef, useState } from 'react';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { useWindowSize } from 'use-hooks';
 import {
   CaseNumberStyled,
   CaseStyled,
@@ -10,10 +14,6 @@ import {
   SliderStyled,
   GridStyled,
 } from './styled';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { useWindowSize } from 'use-hooks';
 
 interface Case {
   number: string;
@@ -31,18 +31,20 @@ interface CaseProps {
 
 function CaseList(props: CaseProps) {
   const interval = useRef(null);
-  var currentImage = '';
+  let currentImage = '';
   const [actualImage, setActualImage] = useState('');
-  const {width} = useWindowSize()
-  const isMobile = useMemo(() => {return width <= 800}, [width]);
- 
+  const { width } = useWindowSize();
+  const isMobile = useMemo(() => {
+    return width <= 800;
+  }, [width]);
+
   // anime slider
   const settings = {
     infinite: false,
     slidesToShow: 3,
     slidesToScroll: 1,
     swipeToSlide: false,
-    speed: 400, 
+    speed: 400,
     variableWidth: true,
     slidesPerRow: 1,
     responsive: [
@@ -54,12 +56,12 @@ function CaseList(props: CaseProps) {
           infinite: true,
           rows: 1,
           slidesPerRow: 1,
-        }
-      }
-    ]
+        },
+      },
+    ],
   };
 
-  // anime scroll 
+  // anime scroll
   const animateSlides = () => {
     const target = document.querySelectorAll<HTMLElement>('[data-anime]');
     function animeScroll() {
@@ -79,8 +81,8 @@ function CaseList(props: CaseProps) {
     }
     return () => {
       window.removeEventListener('scroll', animeScroll);
-    }
-  }
+    };
+  };
 
   useEffect(animateSlides, [isMobile]);
 
@@ -88,7 +90,9 @@ function CaseList(props: CaseProps) {
     if (window.innerWidth < 500) {
       const images = document.querySelectorAll<HTMLElement>('.images');
       images.forEach((img) => {
-        img.addEventListener('contextmenu', (e) => { e.preventDefault() });
+        img.addEventListener('contextmenu', (e) => {
+          e.preventDefault();
+        });
       });
     }
   });
@@ -163,27 +167,27 @@ function CaseList(props: CaseProps) {
   ));
 
   const splicedCases = () => {
-    let aux_case = [];
-    const size = Math.ceil(Object.keys(props.cases).length/3);
-      for (let j = 0; j < size; j++) {
-        aux_case.push(
+    const aux_case = [];
+    const size = Math.ceil(Object.keys(props.cases).length / 3);
+    for (let j = 0; j < size; j++) {
+      aux_case.push(
         <GridStyled>
-          <ListStyled>  
-            <SliderStyled {...settings}>
-              { 
-                cases.splice(0,3)
-              }
-            </SliderStyled>
+          <ListStyled>
+            <SliderStyled {...settings}>{cases.splice(0, 3)}</SliderStyled>
           </ListStyled>
-        </GridStyled>
-        );
-      }
-      return aux_case;
+        </GridStyled>,
+      );
+    }
+    return aux_case;
   };
 
   return (
     <ContentStyled onTouchEnd={animateSlides}>
-      { isMobile ? <SliderStyled {...settings}>{cases}</SliderStyled> : splicedCases() }
+      {isMobile ? (
+        <SliderStyled {...settings}>{cases}</SliderStyled>
+      ) : (
+        splicedCases()
+      )}
     </ContentStyled>
   );
 }

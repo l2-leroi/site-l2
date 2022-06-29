@@ -7,10 +7,9 @@ export const ContainerStyled = styled.div`
   background-color: ${colors.black};
   // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   // padding: 10rem 2.8rem 48rem;
-  // padding: 10rem 2.8rem 10rem;  
+  // padding: 10rem 2.8rem 10rem;
   padding-top: 24rem;
   padding-bottom: 10rem;
-
 
   // @media (min-width: 2560px) {
   //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 77%);
@@ -37,7 +36,6 @@ export const ContentStyled = styled.section`
   margin: 0 auto;
   padding-left: 2.8rem;
   padding-right: 2.8rem;
-  
 `;
 
 export const DivStyled = styled.div`
@@ -87,7 +85,7 @@ export const TitleStyled = styled.h2`
   font-size: 6.4rem;
   line-height: 57.6px;
   font-weight: 800;
-  width: 686px; 
+  width: 686px;
   letter-spacing: -0.04em;
 
   ::selection {
@@ -129,62 +127,62 @@ export const PhraseStyled = styled.p`
   }
 `;
 export const AsideStyledbutton = styled.div`
-margin-left: 15px;
-display: flex;
-align-items: center;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
 `;
 
 export const LanguageStyled = styled.div`
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    position: absolute;
-    right: 28px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  position: absolute;
+  right: 28px;
+
+  @media (max-width: 800px) {
+    gap: 16px;
+  }
+
+  @media (max-width: 500px) {
+    opacity: 0;
+    gap: 9px;
+  }
+
+  &.animate {
+    opacity: 1;
+    transition: opacity 0.8s;
+  }
+
+  ${Typography} {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    font-style: normal;
+    text-align: right;
+    color: ${colors.gray};
+    a {
+      ::selection {
+        background: ${colors.purple};
+        color: ${colors.gray};
+      }
+    }
+    &:first-child {
+      margin-bottom: 8px;
+    }
+
+    &:hover {
+      color: ${colors.green};
+    }
 
     @media (max-width: 800px) {
-      gap: 16px;
+      font-size: 10px;
+
+      &:first-child {
+        margin-bottom: 0px;
+      }
     }
-    
-    @media (max-width: 500px) {
-      opacity: 0;
-      gap: 9px;
+    &.white {
+      color: ${colors.gray};
     }
-
-    &.animate {
-        opacity: 1;
-        transition: opacity .8s;
-    }
-
-    ${Typography}{
-        background: transparent;
-        cursor: pointer;
-        border: none;   
-        font-style: normal;
-        text-align: right;
-        color: ${colors.gray};
-        a{
-            ::selection {
-                background: ${colors.purple};
-                color: ${colors.gray};
-            }
-        }
-        &:first-child {
-            margin-bottom: 8px;
-        }
-
-        &:hover {
-            color: ${colors.green};
-        }
-
-        @media (max-width: 800px) {
-            font-size: 10px;
-
-            &:first-child {
-                margin-bottom: 0px;
-            }
-        }  
-        &.white {
-            color: ${colors.gray};
-        }
-    }
+  }
 `;

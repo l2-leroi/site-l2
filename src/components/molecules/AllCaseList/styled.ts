@@ -1,10 +1,10 @@
 import styled from 'styled-components';
+import Slider from 'react-slick';
 import { colors } from '../../../styles/colors';
-import Slider from "react-slick";
 
 export const ContentStyled = styled.section`
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   overflow: hidden;
 `;
 
@@ -51,7 +51,7 @@ export const SliderStyled = styled(Slider)`
         &:nth-child(3) {
           margin-top: 600px;
         }
-      } 
+      }
     }
   }
 

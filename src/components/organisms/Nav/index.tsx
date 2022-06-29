@@ -39,9 +39,9 @@ export default function Nav() {
   let lastScrollTop = 0;
 
   const handleScroll = () => {
-    const bannerText = document.querySelector(".bannerText") as HTMLElement;
+    const bannerText = document.querySelector('.bannerText') as HTMLElement;
     const bannerTextTop = bannerText?.getBoundingClientRect().top;
-    const nav = document.querySelector('.nav')
+    const nav = document.querySelector('.nav');
 
     if (screen.width <= 880) {
       if (bannerTextTop > lastScrollTop) {

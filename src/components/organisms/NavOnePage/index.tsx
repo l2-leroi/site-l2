@@ -35,7 +35,7 @@ export default function NavOnePage() {
   let lastScrollTop = 0;
 
   const handleScroll = () => {
-    const bannerText = document.querySelector(".bannerText") as HTMLElement;
+    const bannerText = document.querySelector('.bannerText') as HTMLElement;
     const bannerTextTop = bannerText?.getBoundingClientRect().top;
 
     const nav = document.querySelector('.nav');

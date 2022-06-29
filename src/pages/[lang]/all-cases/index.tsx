@@ -12,14 +12,20 @@ const AllCases: NextPage = () => {
     } else {
       window.onbeforeunload = function () {
         window.scrollTo(0, 0);
-      }
+      };
     }
   });
-  
+
   return (
     <>
       <AllCasesPage />
-      <LineAnimation lineBg={colors.purple} secondaryBg={colors.black} hasOutSourcing={false} hasSpinner={false} spaceForSpinner={0}/>
+      <LineAnimation
+        lineBg={colors.purple}
+        secondaryBg={colors.black}
+        hasOutSourcing={false}
+        hasSpinner={false}
+        spaceForSpinner={0}
+      />
     </>
   );
 };
