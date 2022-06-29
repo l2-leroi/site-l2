@@ -171,6 +171,11 @@ export const LinkStyled = styled.a`
 export const ImageStyled = styled.img`
   pointer-events: all;
   width: 100%;
+
+  //height: 700px;
+  //background-size: cover;
+  //object-fit: cover;
+
   border-radius: 10px;
   user-select: none;
 
