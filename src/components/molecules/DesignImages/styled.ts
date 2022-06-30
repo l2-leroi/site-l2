@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { colors } from '../../../styles/colors';
 import Slider from 'react-slick';
+import { colors } from '../../../styles/colors';
 
 interface DesignPrototypePropsImages {
   widthImage: number;

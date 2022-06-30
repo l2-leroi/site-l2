@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
-
 export const ContainerStyled = styled.div`
   color: ${colors.black};
   background-color: #171b21;
@@ -271,7 +270,4 @@ export const TechnologiesStyled = styled.div`
   grid-gap: 80px;
 `;
 
-export const LineAnimation= styled.div``;
-
-
-
+export const LineAnimation = styled.div``;

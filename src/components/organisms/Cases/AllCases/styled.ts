@@ -6,7 +6,7 @@ export const ContainerStyled = styled.div`
   background-color: ${colors.gray};
   // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   // padding: 10rem 2.8rem 48rem;
-  padding: 10rem 2.8rem 10rem;  
+  padding: 10rem 2.8rem 10rem;
 
   // @media (min-width: 2560px) {
   //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 77%);
@@ -72,7 +72,7 @@ export const TitleStyled = styled.h2`
   font-size: 5.4rem;
   line-height: 57.6px;
   font-weight: 800;
-  width: 686px; 
+  width: 686px;
   letter-spacing: -0.04em;
 
   ::selection {
@@ -114,7 +114,4 @@ export const PhraseStyled = styled.p`
   }
 `;
 
- export const Button = styled.div``;
-
-
-
+export const Button = styled.div``;

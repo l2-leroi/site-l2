@@ -26,7 +26,6 @@ export default function Home() {
 
   return (
     <>
-      
       <Header />
       <OurServicesOnePage />
       <Cases />

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import i18next from 'i18next';
 import { Typography } from '../../../styles/typography';
 import {
   MainContentStyled,
@@ -9,8 +11,6 @@ import {
   DivTextStyled,
   DivItemSTextStyled,
 } from './styled';
-import Link from 'next/link';
-import i18next from 'i18next';
 
 interface HeaderCasesProps {
   backgroundImage: string;
@@ -22,7 +22,6 @@ interface HeaderCasesProps {
   pSecond: string;
   linkBtnPt: string;
   linkBtnEn: string;
-
 }
 
 export default function HeaderCases({
@@ -96,7 +95,6 @@ export default function HeaderCases({
         </MainContentStyled>
 
         <DivItemStyled bgImageSmall={backgroundImageSmall} />
-         
       </ContainerStyled>
 
       <SectionOnePageStyled>
@@ -121,7 +119,4 @@ export default function HeaderCases({
       </SectionOnePageStyled>
     </>
   );
-};
-
-
-
+}

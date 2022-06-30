@@ -10,7 +10,6 @@ interface HeaderCasesBgImageSmall {
   bgImageSmall: string;
 }
 
-
 export const ContainerStyled = styled.section<HeaderCasesBgImage>`
   background-image: url(${(props) => (props.bgImage ? props.bgImage : 'none')});
   background-position: center;
@@ -133,7 +132,8 @@ export const MainTextStyled = styled.hgroup`
 `;
 
 export const DivItemStyled = styled.div<HeaderCasesBgImageSmall>`
-  background-image: url(${props => props.bgImageSmall ? props.bgImageSmall:"none"});
+  background-image: url(${(props) =>
+    props.bgImageSmall ? props.bgImageSmall : 'none'});
   background-position: center;
   background-size: cover;
   width: 80%;
@@ -200,7 +200,6 @@ export const LanguageStyled = styled.div`
   position: absolute;
   margin-top: 2%;
   left: 96%;
-  
 
   @media (min-height: 416px) and (max-width: 800px) {
     position: static;

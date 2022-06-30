@@ -1,10 +1,7 @@
-import {
-  ContentStyled, ImageStyled,
-} from './styled';
 import { useEffect, useRef, useState } from 'react';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
+import { ContentStyled, ImageStyled } from './styled';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 interface DesignPrototypeProps {
   width: number;
@@ -13,15 +10,10 @@ interface DesignPrototypeProps {
   alt: string;
 }
 
-function DesignPrototype({
-  width,
-  height,
-  src,
-  alt,
-}: DesignPrototypeProps) {
+function DesignPrototype({ width, height, src, alt }: DesignPrototypeProps) {
   return (
     <ContentStyled>
-        <ImageStyled width={width} height={height} src={src} alt={alt} />
+      <ImageStyled width={width} height={height} src={src} alt={alt} />
     </ContentStyled>
   );
 }

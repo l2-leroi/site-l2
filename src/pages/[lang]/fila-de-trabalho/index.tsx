@@ -61,7 +61,7 @@ const FilaDeTrabalho: NextPage = () => {
 
   const widthPrototype = 1239;
   const heightPrototype = 688;
-  const srcPrototype = 
+  const srcPrototype =
     '/images/fila-de-trabalho/mockup-desk-fila-de-trabalho.jpg';
   const altPrototype = 'Mockup animado';
   const widthImage = 464;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
+import Slider from 'react-slick';
 import { colors } from '../../../styles/colors';
-import Slider from "react-slick";
 
 interface DesignPrototypePropsMockup {
   width: number;
@@ -9,7 +9,7 @@ interface DesignPrototypePropsMockup {
 
 export const ContentStyled = styled.section`
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   max-width: 1500px;
   flex-direction: row;
   justify-content: center;
@@ -22,7 +22,7 @@ export const ListStyled = styled.section``;
 export const CaseStyled = styled.article`
   height: 1010px;
   opacity: 0;
-  transition: .8s;
+  transition: 0.8s;
   transform: translate3d(0, 200px, 0);
 
   &.animate {
@@ -33,7 +33,7 @@ export const CaseStyled = styled.article`
   @media (max-width: 1350px) {
     height: 940px;
   }
-  
+
   @media (max-width: 1155px) {
     height: 920px;
   }
@@ -75,11 +75,11 @@ export const SliderStyled = styled(Slider)`
       margin-top: 0px;
     }
 
-    .slick-active.slick-current +div {
+    .slick-active.slick-current + div {
       margin-top: 80px;
     }
 
-    .slick-active +div {
+    .slick-active + div {
       margin-top: 160px;
     }
   }
@@ -88,16 +88,16 @@ export const SliderStyled = styled(Slider)`
     width: 464px;
     margin-top: 0px;
     margin: 0 1.6rem;
-    transition: .5s;
+    transition: 0.5s;
 
     @media (min-width: 801px) {
       &:nth-child(2) {
         margin-top: 300px;
-      } 
+      }
       &:nth-child(3) {
         margin-top: 600px;
       }
-    } 
+    }
 
     &:first-of-type {
       margin-left: 0px;
@@ -111,7 +111,7 @@ export const SliderStyled = styled(Slider)`
         width: 0px;
       }
     }
-    
+
     @media (max-width: 1350px) {
       width: 415px;
     }
@@ -192,8 +192,8 @@ export const LinkStyled = styled.a`
 `;
 
 export const ImageStyled = styled.img<DesignPrototypePropsMockup>`
-  width: ${props => props.width}px;
-  height: ${props => props.height}px;
+  width: ${(props) => props.width}px;
+  height: ${(props) => props.height}px;
   border-radius: 40px;
 
   &.imageBlock {

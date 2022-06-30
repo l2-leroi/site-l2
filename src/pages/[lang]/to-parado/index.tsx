@@ -1,3 +1,7 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/order */
+/* eslint-disable import/named */
+/* eslint-disable import/no-unresolved */
 import { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import HeaderCases from '../../../components/organisms/HeaderCases';
@@ -30,7 +34,6 @@ const ToParado: NextPage = () => {
     'cardText.uxUiDesign',
     'cardText.conceptArt',
     'cardText.wireframe',
-    
   ];
 
   const imagesDesign = [
@@ -59,19 +62,18 @@ const ToParado: NextPage = () => {
       alt: 'Mockup',
     },
     {
-        image: '/images/DesignToParado/RectangleCaseToParado-7.jpg',
-        alt: 'Mockup',
-      },
-      {
-        image: '/images/DesignToParado/RectangleCaseToParado-8.jpg',
-        alt: 'Mockup',
-      },
+      image: '/images/DesignToParado/RectangleCaseToParado-7.jpg',
+      alt: 'Mockup',
+    },
+    {
+      image: '/images/DesignToParado/RectangleCaseToParado-8.jpg',
+      alt: 'Mockup',
+    },
   ];
 
   const widthPrototype = 414;
   const heightPrototype = 896;
-  const srcPrototype =
-    '/images/mockup-animado-cell.png';
+  const srcPrototype = '/images/mockup-animado-cell.png';
   const altPrototype = 'Mockup animado';
   const widthImage = 270;
   const heightImage = 582;

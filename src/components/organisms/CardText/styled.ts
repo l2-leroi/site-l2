@@ -1,7 +1,7 @@
 // import styled from 'styled-components';
-import { colors } from '../../../styles/colors';
 import styled, { keyframes } from 'styled-components';
 import { Url } from 'url';
+import { colors } from '../../../styles/colors';
 
 interface CardTextPropsBgColor {
   bgColor: string;
@@ -10,15 +10,12 @@ interface CardTextPropsBgImage {
   bgImage: string;
 }
 
-
-
 export const SectionOnePageStyled = styled.section<CardTextPropsBgColor>`
   display: flex;
-  background-color: ${props => props.bgColor ? props.bgColor :"none"};
+  background-color: ${(props) => (props.bgColor ? props.bgColor : 'none')};
   height: 938px;
   width: 100%;
   max-width: 100%;
- 
 
   @media (max-width: 800px) {
     max-width: 150px;
@@ -29,16 +26,15 @@ export const SectionOnePageStyled = styled.section<CardTextPropsBgColor>`
 `;
 
 export const DivImageStyled = styled.div<CardTextPropsBgImage>`
-background-image: url(${props => props.bgImage ? props.bgImage:"none"});
-background-size: cover;
-background-position: center;
-position: absolute;
+  background-image: url(${(props) => (props.bgImage ? props.bgImage : 'none')});
+  background-size: cover;
+  background-position: center;
+  position: absolute;
 
   display: flex;
   width: 50%;
   max-width: 50%;
   height: 938px;
- 
 `;
 
 export const DivItemStyled = styled.div`
@@ -49,7 +45,6 @@ export const DivItemStyled = styled.div`
   margin-left: 750px;
   justify-content: center;
   position: relative;
-  
 
   ul {
     display: flex;
@@ -96,7 +91,7 @@ export const DivItemStyled = styled.div`
     }
   }
 
-  h1  {
+  h1 {
     ::selection {
       background: ${colors.purple};
       color: ${colors.gray};
@@ -119,7 +114,6 @@ export const DivItemStyled = styled.div`
       background: ${colors.purple};
       color: ${colors.gray};
     }
-   
 
     @media (max-width: 800px) {
       max-width: 230px;
@@ -164,16 +158,13 @@ export const SpinningIconStyled = styled.div`
   overflow-x: hidden;
   animation: ${SpinningAnimation} 5s linear infinite;
 
-  @media(max-width: 800px){
+  @media (max-width: 800px) {
     max-width: 248px;
   }
 
-  @media(max-width: 414px){
+  @media (max-width: 414px) {
     max-width: 140px;
   }
 `;
 
-export const SpinnerImage = styled.img`
- 
-
-`;
+export const SpinnerImage = styled.img``;

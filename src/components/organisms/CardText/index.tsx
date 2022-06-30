@@ -1,4 +1,5 @@
 import React from 'react';
+import i18next from 'i18next';
 import {
   SectionOnePageStyled,
   DivItemStyled,
@@ -7,7 +8,6 @@ import {
   SpinnerImage,
 } from './styled';
 import { Typography } from '../../../styles/typography';
-import i18next from 'i18next';
 
 interface CardTextProps {
   backgroundColor: string;
@@ -27,7 +27,7 @@ export default function CardText({
   const { t } = i18next;
   return (
     <SectionOnePageStyled bgColor={backgroundColor}>
-      <DivImageStyled  bgImage={backgroundImage} />
+      <DivImageStyled bgImage={backgroundImage} />
 
       <DivItemStyled>
         <Typography
@@ -47,15 +47,16 @@ export default function CardText({
         </Typography>
 
         <ul>
-          { li.map((item) => <li>
-            <Typography tag="li" color="gray" fontFamily="font2">
-              {t(item)}
-            </Typography>
-          </li>
-          )}
+          {li.map((item) => (
+            <li>
+              <Typography tag="li" color="gray" fontFamily="font2">
+                {t(item)}
+              </Typography>
+            </li>
+          ))}
         </ul>
       </DivItemStyled>
-      <SpinningIconStyled >
+      <SpinningIconStyled>
         <SpinnerImage src="/images/enfeite-giratorio.svg" />
       </SpinningIconStyled>
     </SectionOnePageStyled>

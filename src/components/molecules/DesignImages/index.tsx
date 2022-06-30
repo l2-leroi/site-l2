@@ -1,9 +1,7 @@
-import {
-  ContentStyled, ImageStyled,
-} from './styled';
 import { useEffect, useRef, useState } from 'react';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { ContentStyled, ImageStyled } from './styled';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 interface DesignImage {
   image: string;
@@ -17,15 +15,20 @@ interface DesignImagesProps {
 }
 
 export default function DesignImages({
-  imagesArray, widthImage, heightImage
+  imagesArray,
+  widthImage,
+  heightImage,
 }: DesignImagesProps) {
-
   return (
     <ContentStyled>
-        {imagesArray.map((images) =>(
-          <ImageStyled src={images.image} alt={images.alt} widthImage={widthImage} heightImage={heightImage}  />)
-        )}
+      {imagesArray.map((images) => (
+        <ImageStyled
+          src={images.image}
+          alt={images.alt}
+          widthImage={widthImage}
+          heightImage={heightImage}
+        />
+      ))}
     </ContentStyled>
   );
-};
-
+}

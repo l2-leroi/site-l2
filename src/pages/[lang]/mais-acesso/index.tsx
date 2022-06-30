@@ -30,7 +30,6 @@ const MaisAcesso: NextPage = () => {
     'cardText.uxUiDesign',
     'cardText.conceptArt',
     'cardText.wireframe',
-    
   ];
 
   const imagesDesign = [
