@@ -102,7 +102,7 @@ export default function NavOnePage() {
               fontWeight="weight2"
               letterSpacing="space1"
             >
-              <Link href="#customers">{t('nav.customers')}</Link>
+              <Link href="#customers">{t('nav.clients')}</Link>
             </Typography>
 
             <Typography

@@ -46,37 +46,37 @@ function Cases() {
   const allCases = [
     {
       number: '01',
-      title: t('allCases.title.MemoriesUp'),
-      info: t('allCases.weHelped'),
+      title: 'MemoriesUp',
+      info: t('cases.weHelped'),
       image: '/images/capa-memories-up.jpg',
-      alt: t('allCases.alt.coverMemoriesUp'),
+      alt: t('cases.alt.coverMemoriesUp'),
       link: '#1',
       hover: memoriesUpHover,
     },
     {
       number: '02',
-      title: t('allCases.title.MaisAcesso'),
-      info: t('allCases.webApp'),
+      title: 'Mais Acesso',
+      info: t('cases.webApp'),
       image: '/images/capa-mais-acesso.jpg',
-      alt: t('allCases.alt.coverMoreAccess'),
+      alt: t('cases.alt.coverMoreAccess'),
       link: '#2',
       hover: maisAcessoHover,
     },
     {
       number: '03',
-      title: t('allCases.title.ToParado'),
-      info: t('allCases.providers'),
+      title: 'Tô Parado',
+      info: t('cases.providers'),
       image: '/images/capa-to-parado.jpg',
-      alt: t('allCases.alt.coverImStopped'),
+      alt: t('cases.alt.coverImStopped'),
       link: '#3',
       hover: toParadoHover,
     },
     {
       number: '04',
-      title: t('allCases.title.FilaDeTrabalho'),
-      info: t('allCases.educationalCredit'),
+      title: 'Fila de Trabalho',
+      info: t('cases.educationalCredit'),
       image: '/images/capa-fila-de-trabalho-1.jpg',
-      alt: t('allCases.alt.coverWorkQueue'),
+      alt: t('cases.alt.coverWorkQueue'),
       link: '#4',
       hover: FilaDeTrabalho,
     },
@@ -87,7 +87,7 @@ function Cases() {
       <ContentStyled>
         <MainDivStyled>
           <DivStyled>
-            <TitleStyled>{t('allCases.ourCases')}</TitleStyled>
+            <TitleStyled>{t('cases.seeSomeCases')}</TitleStyled>
             <AsideStyled>
               <ParagraphStyled>&lt;LA CREAM&gt;</ParagraphStyled>
             </AsideStyled>
@@ -117,7 +117,7 @@ function Cases() {
             </AsideStyledbutton>
           </DivStyled>
         </MainDivStyled>
-        <PhraseStyled>{t('allCases.weDoWell')}</PhraseStyled>
+        <PhraseStyled>{t('cases.weDoWell')}</PhraseStyled>
         <AllCaseList cases={allCases} />
       </ContentStyled>
     </ContainerStyled>
