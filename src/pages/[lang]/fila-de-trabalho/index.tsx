@@ -67,12 +67,6 @@ const FilaDeTrabalho: NextPage = () => {
   const widthImage = 464;
   const heightImage = 257;
 
-  const [space, setSpace] = useState(0);
-
-  const setSpaceForSpinner = (spaceForSet) => {
-    setSpace(spaceForSet);
-  };
-
   return (
     <>
       <HeaderCases

@@ -1,6 +1,5 @@
 // import styled from 'styled-components';
 import styled, { keyframes } from 'styled-components';
-import { Url } from 'url';
 import { colors } from '../../../styles/colors';
 
 interface CardTextPropsBgColor {

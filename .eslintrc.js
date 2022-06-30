@@ -29,7 +29,7 @@ module.exports = {
     'react/no-danger': 0,
     'no-restricted-globals': 0,
     'no-unused-expressions': 0,
-    'no-unused-vars': 2,
+    'no-unused-vars': 1,
     'no-return-assign': 0,
     'react/require-default-props': 0,
     'prefer-destructuring': 0,
@@ -76,9 +76,9 @@ module.exports = {
     'react/no-array-index-key': 'off',
     camelcase: 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
-    'no-plusplus': 'off',
-    eqeqeq: 'off',
-    'react/function-component-definition': 'off',
+    'no-plusplus': 0,
+    eqeqeq: 1,
+    'react/function-component-definition': 0,
   },
   settings: {
     'import/parsers': {

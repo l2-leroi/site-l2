@@ -1,9 +1,5 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/order */
-/* eslint-disable import/named */
-/* eslint-disable import/no-unresolved */
 import { NextPage } from 'next';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import HeaderCases from '../../../components/organisms/HeaderCases';
 import CardText from '../../../components/organisms/CardText';
 import DesignsCases from '../../../components/organisms/DesignsCases';
@@ -77,12 +73,6 @@ const ToParado: NextPage = () => {
   const altPrototype = 'Mockup animado';
   const widthImage = 270;
   const heightImage = 582;
-
-  const [space, setSpace] = useState(0);
-
-  const setSpaceForSpinner = (spaceForSet) => {
-    setSpace(spaceForSet);
-  };
 
   return (
     <>

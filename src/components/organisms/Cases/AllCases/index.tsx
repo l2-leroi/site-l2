@@ -1,12 +1,9 @@
 import React from 'react';
 import i18next from 'i18next';
 import {
-  AsideStyled,
   ContainerStyled,
   ContentStyled,
   DivStyled,
-  ParagraphStyled,
-  PhraseStyled,
   TitleStyled,
 } from './styled';
 import CaseList from '../../../molecules/CaseList';

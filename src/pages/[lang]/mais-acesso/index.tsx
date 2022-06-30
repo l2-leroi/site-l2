@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import HeaderCases from '../../../components/organisms/HeaderCases';
 import CardText from '../../../components/organisms/CardText';
 import DesignsCases from '../../../components/organisms/DesignsCases';
@@ -73,12 +73,6 @@ const MaisAcesso: NextPage = () => {
   const altPrototype = 'Mockup animado';
   const widthImage = 270;
   const heightImage = 582;
-
-  const [space, setSpace] = useState(0);
-
-  const setSpaceForSpinner = (spaceForSet) => {
-    setSpace(spaceForSet);
-  };
 
   return (
     <>
