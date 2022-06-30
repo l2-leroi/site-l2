@@ -4,6 +4,8 @@ import HeaderCases from '../../../components/organisms/HeaderCases';
 import CardText from '../../../components/organisms/CardText';
 import DesignsCases from '../../../components/organisms/DesignsCases';
 import AllCases from '../../../components/organisms/Cases/AllCases';
+import LineAnimation from '../../../components/atoms/LineAnimation';
+import { colors } from '../../../styles/colors';
 
 const FilaDeTrabalho: NextPage = () => {
   useEffect(() => {
@@ -59,8 +61,8 @@ const FilaDeTrabalho: NextPage = () => {
     },
   ];
 
-  const widthPrototype = 1239;
-  const heightPrototype = 688;
+  const widthPrototype = 414; // 1239;
+  const heightPrototype = 896; // 688;
   const srcPrototype =
     '/images/fila-de-trabalho/mockup-desk-fila-de-trabalho.jpg';
   const altPrototype = 'Mockup animado';
@@ -97,6 +99,14 @@ const FilaDeTrabalho: NextPage = () => {
         heightImage={heightImage}
       />
       <AllCases />
+
+      <LineAnimation
+        lineBg={colors.purple}
+        secondaryBg={colors.black}
+        hasOutSourcing={false}
+        hasSpinner={false}
+        spaceForSpinner={0}
+      />
     </>
   );
 };
