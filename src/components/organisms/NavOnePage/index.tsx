@@ -36,7 +36,7 @@ export default function NavOnePage() {
 
   const handleScroll = () => {
     const bannerText = document.querySelector('.bannerText') as HTMLElement;
-    const bannerTextTop = bannerText.getBoundingClientRect().top;
+    const bannerTextTop = bannerText?.getBoundingClientRect().top;
 
     const nav = document.querySelector('.nav');
 
@@ -102,7 +102,7 @@ export default function NavOnePage() {
               fontWeight="weight2"
               letterSpacing="space1"
             >
-              <Link href="#customers">{t('nav.customers')}</Link>
+              <Link href="#customers">{t('nav.clients')}</Link>
             </Typography>
 
             <Typography

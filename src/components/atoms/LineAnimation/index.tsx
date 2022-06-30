@@ -129,7 +129,7 @@ function LineAnimation({
           ref={text}
           style={{ backgroundColor: secondaryBg }}
         >
-          <OutSourcing color="black_1" texts="outSourcing.ourCustomers" />
+          <OutSourcing color="black_1" texts="outSourcing.ourClients" />
         </TextContainerStyled>
       ) : null}
 
