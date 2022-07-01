@@ -156,10 +156,10 @@ export const ImageStyled = styled.img`
 `;
 
 export const IdSpanStyled = styled.div`
-    width: 10px;
-    height: 2px;
-    position: absolute;
-    top: -200px;
+  width: 10px;
+  height: 2px;
+  position: absolute;
+  top: -200px;
 `;
 
 export const IconStyled = styled.span`

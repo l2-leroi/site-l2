@@ -7,7 +7,7 @@ import {
   BlackLineStyled,
   AsideStyled,
   CustomersContainer,
-  IdSpanStyled
+  IdSpanStyled,
 } from './styled';
 
 import CustomersList from '../../molecules/CustomersList/index';
@@ -41,7 +41,7 @@ function OurCustomers({ setSpaceForLine }) {
   const blackLine = useRef();
 
   const catchTitleHeight = () => {
-    const hgroupElement = hgroup.current as HTMLElement; 
+    const hgroupElement = hgroup.current as HTMLElement;
     const title = hgroupElement.children[0];
 
     return title.getBoundingClientRect().height;
@@ -52,8 +52,8 @@ function OurCustomers({ setSpaceForLine }) {
   }, []);
 
   return (
-  <OurCustomersStyled className="customers">
-    <IdSpanStyled id="customers" />
+    <OurCustomersStyled className="customers">
+      <IdSpanStyled id="customers" />
       <BlackLineStyled className="customersContent" ref={blackLine}>
         <ContentStyled>
           <HeaderStyled className="hgroup" ref={hgroup}>

@@ -6,39 +6,45 @@ interface Props {
 }
 
 export const LineStyled = styled.div<Props>`
-    clip-path: polygon(0px 0%, 100% 100%, 100% 100%, 0% 100%);
-    background-color: ${props => props.lineBg};
-    height: 0px;
-    box-sizing: padding-box;
-    z-index: 20;
-    transition: all 0.5s ease;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
+  clip-path: polygon(
+    0 -1px,
+    100% -1px,
+    100% calc(100% - 50px),
+    0 calc(100% - 50px)
+  );
+  transition: clip-path 0.5s ease;
+  background-color: ${(props) => props.secondaryBg};
+  height: 100%;
+  box-sizing: padding-box;
+  z-index: 20;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 `;
 
 export const TextContainerStyled = styled.div`
   position: absolute;
-  transition: transform 0.5s ease;
   z-index: 21;
-  bottom: 0px;
-  right: 0px;
   width: 105%;
+  top: calc(100% - 50px - 5em);
 `;
 
 export const LineContainerStyled = styled.div<Props>`
-  background-color: ${(props) => props.secondaryBg};
+  margin-bottom: -50px;
+  background-color: ${(props) => props.lineBg};
+  border-color: ${(props) => props.secondaryBg};
   position: relative;
   overflow-x: clip;
 `;
 
-export const Sup = styled.div`
+export const Sup = styled.div<Props>`
   width: 100%;
   height: 2px;
   position: absolute;
   bottom: 0;
+  background-color: ${(props) => props.lineBg};
 `;
 
 export const SpinningAnimation = keyframes`

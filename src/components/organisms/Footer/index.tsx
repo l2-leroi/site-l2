@@ -10,8 +10,8 @@ import {
   ImageStyled,
   ContainerStyled,
   DivStyled,
-  IdSpanStyled
-} from "./styled";
+  IdSpanStyled,
+} from './styled';
 import { HeartIcon } from '../../../assets/icons/heartIcon';
 import ContactList from '../../molecules/ContactList/index';
 import { Typography } from '../../../styles/typography';
