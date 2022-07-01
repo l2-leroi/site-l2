@@ -12,12 +12,20 @@ export const LineStyled = styled.div<Props>`
     box-sizing: padding-box;
     z-index: 20;
     transition: all 0.5s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
 `;
 
 export const TextContainerStyled = styled.div`
   position: absolute;
   transition: all 0.5s ease;
   z-index: 21;
+  bottom: 0px;
+  right: 0px;
+  width: 105%;
 `;
 
 export const LineContainerStyled = styled.div<Props>`
@@ -45,9 +53,7 @@ export const SpinningAnimation = keyframes`
 export const SpinningIconStyled = styled.div`
   position: absolute;
   right: 0px;
-  top: 0px;
-  z-index: 1;
-  overflow-x: hidden;
+  z-index: 10;
   border-radius: 50%;
   animation: ${SpinningAnimation} 27s linear infinite;
   max-width: 468px;

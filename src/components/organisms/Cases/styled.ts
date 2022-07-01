@@ -5,7 +5,7 @@ export const ContainerStyled = styled.div`
   color: ${colors.black};
   background-color: ${colors.gray};
   padding: 10rem 2.8rem 10rem;
-  padding-bottom: 20%;
+  padding-bottom: 80px;
 `;
 
 export const ContentStyled = styled.section`

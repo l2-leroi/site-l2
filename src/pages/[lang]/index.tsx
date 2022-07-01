@@ -19,9 +19,11 @@ export default function Home() {
   });
 
   const [space, setSpace] = useState(0);
+  const [titleSpace, setTitleSpace] = useState(0);
 
-  const setSpaceForSpinner = (spaceForSet) => {
-    setSpace(spaceForSet);
+
+  const setSpaceForTitle = (spaceForSet) => {
+    setTitleSpace(spaceForSet);
   };
 
   return (
@@ -34,15 +36,15 @@ export default function Home() {
         secondaryBg={colors.gray}
         hasOutSourcing={false}
         hasSpinner
-        spaceForSpinner={space}
+        titleSpace={titleSpace}
       />
-      <OurCustomers setSpaceForSpinner={setSpaceForSpinner} />
+      <OurCustomers setSpaceForLine={setSpaceForTitle}/>
       <LineAnimation
         lineBg={colors.purple}
         secondaryBg={colors.black}
         hasOutSourcing
         hasSpinner={false}
-        spaceForSpinner={0}
+        titleSpace={titleSpace}
       />
     </>
   );

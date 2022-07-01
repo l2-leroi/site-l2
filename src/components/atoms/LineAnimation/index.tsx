@@ -8,10 +8,11 @@ import {
 import OutSourcing from '../../atoms/OutSourcing';
 const Spinner = '/images/spinner.png';
 
-const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceForSpinner}) => {
+const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, titleSpace}) => {
   const line = useRef();
   const text = useRef();
   const spinner = useRef();
+  const container = useRef();
 
   const maxRadians = 17.76 * (Math.PI/180);
   let maxHeight = 0;
@@ -24,9 +25,32 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceF
     maxHeight = (Math.tan(maxRadians) * lineElement.getBoundingClientRect().width);
   }
 
+  const lineMaxHeight = () => {
+    const lineElement = line.current as HTMLElement;
+    const containerElement = container.current as HTMLElement;
+    calculateMaxHeight(lineElement);
+
+    containerElement.style.height = maxHeight + "px";
+
+    (window.innerWidth > 800)?
+      containerElement.style.marginBottom = "-"+(titleSpace/2)+"px"
+    :
+      containerElement.style.marginBottom = null;
+  }
+
   const verifySpinnerMaxHeight = (spinnerElement: HTMLElement) => {
     if (spinnerElement.getBoundingClientRect().height > maxHeightSpinner) {
       maxHeightSpinner = spinnerElement.getBoundingClientRect().height;
+    }
+  }
+
+  const putSpinnerInCorrectPosition = (max?) => {
+    const spinnerElement = spinner.current as HTMLElement;
+    (max)? spinnerElement.style.top = (maxHeight - (maxHeightSpinner/3)) + "px" :
+    spinnerElement.style.top = (maxHeight - (maxHeightSpinner * 1.15)) + "px";
+
+    if(window.innerWidth < 400){
+      spinnerElement.style.top = (maxHeight - (maxHeightSpinner/3)) + "px";
     }
   }
 
@@ -40,10 +64,32 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceF
     document.body.style.overflow = "hidden";
   }
 
+  const resetAll = () => {
+    const textElement = text.current as HTMLElement;
+    const lineElement = line.current as HTMLElement;
+    const containerElement = container.current as HTMLElement;
+
+    lineElement.style.height = "0px";
+
+    if(window.innerWidth > 800)
+        containerElement.style.marginBottom = "0px";
+
+    if(hasOutSourcing){
+      textElement.style.top = null;
+      textElement.style.transform = `rotate(0deg)`;
+    }
+
+    if(hasSpinner){
+      putSpinnerInCorrectPosition(true);
+    }
+
+    wasAnimated = false;
+  }
+
   const scroll = () => {
     const lineElement = line.current as HTMLElement;
     window.scrollBy({
-      top: (lineElement.getBoundingClientRect().top + maxHeight - 200 ),
+      top: (lineElement.getBoundingClientRect().top + (maxHeight - (titleSpace/2)) - 200 ),
       left: 0,
       behavior: 'smooth'
     });
@@ -53,25 +99,37 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceF
     const textElement = text.current as HTMLElement;
     const lineElement = line.current as HTMLElement;
     const spinnerElement = spinner.current as HTMLElement;
+    const containerElement = container.current as HTMLElement;
 
     calculateMaxHeight(lineElement);
+
+    if(resize){
+      lineMaxHeight();
+    }
 
     if (hasSpinner) {
       verifySpinnerMaxHeight(spinnerElement);
     }
 
     const width = lineElement.getBoundingClientRect().width;
-    const distanceFromTop = window.innerHeight * 0.4 - lineElement.getBoundingClientRect().top;
+    const distanceFromTop = window.innerHeight * 0.8 - lineElement.getBoundingClientRect().top;
     
     const tangent = maxHeight / width;
     const arcTangent = Math.atan(tangent);
     const degrees = arcTangent * (180 / Math.PI);
+
+    if(distanceFromTop < 0 && wasAnimated === true){
+      resetAll();
+    }
 
     if((distanceFromTop > 0 && wasAnimated === false) ||(resize && wasAnimated)){
       disableScroll();
 
       lineElement.style.transition = "height 0.5s ease";
       lineElement.style.height = maxHeight + "px";
+      
+      if(window.innerWidth > 800)
+        setTimeout(()=> {containerElement.style.marginBottom = "-100px"}, 50)
 
       if(hasOutSourcing){
         textElement.style.top = (- (minHeightOutSourcing) + maxHeight / 2) + "px";
@@ -79,7 +137,11 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceF
       }
 
       if (hasSpinner) {
-        spinnerElement.style.top = (maxHeight + spaceForSpinner) - (maxHeightSpinner * 0.2) + 'px';
+        spinnerElement.style.top = (maxHeight + (titleSpace/2)) - (maxHeightSpinner * 0.3) + 'px';
+
+        if(innerWidth < 414){
+          spinnerElement.style.top = (maxHeight + maxHeightSpinner * 0.1) + "px";
+        }
       }
 
       wasAnimated = true;
@@ -95,33 +157,17 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceF
       
     }
 
-    if(!wasAnimated){
       requestAnimationFrame(animateLine);
-    }
   }
 
-
-
-  const putTextInTheCorrectTop = () => {
-    const textElement = text.current as HTMLElement;
-    textElement.style.top = `${-minHeightOutSourcing}px`;
-  };
-
-  const putSpinnerInTheCorrectTop = () => {
-    const spinnerElement = spinner.current as HTMLElement;
-    spinnerElement.style.top = `${-maxHeightSpinner}px`;
-  };
-
   React.useEffect(() => {
-    if (hasOutSourcing) {
-      putTextInTheCorrectTop();
-    }
 
     requestAnimationFrame(animateLine);
 
-    if (hasSpinner) {
-      putSpinnerInTheCorrectTop();
-    }
+    lineMaxHeight();
+
+    if(hasSpinner)
+      putSpinnerInCorrectPosition();
 
     window.addEventListener("resize", () => {
       resize = true
@@ -132,14 +178,15 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, spaceF
   return (
     <LineContainerStyled
       style={{ backgroundColor: secondaryBg, borderColor: lineBg }}
+      ref={container}
     >
       {hasSpinner ? (
         <SpinningIconStyled className="spinner" ref={spinner}>
-          <img src={Spinner} alt="L2 Code" />
+          <img src={Spinner} alt="L2 Code"/>
         </SpinningIconStyled>
       ) : null}
 
-        {(hasOutSourcing) ? (<TextContainerStyled ref={text} style={{ backgroundColor: secondaryBg }}>
+        {(hasOutSourcing) ? (<TextContainerStyled ref={text} style={{ backgroundColor: null }}>
           <OutSourcing color={"black_1"} texts={"outSourcing.ourCustomers"} />
         </TextContainerStyled>) : null}
 

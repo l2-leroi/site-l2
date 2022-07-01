@@ -13,7 +13,7 @@ import {
 import CustomersList from '../../molecules/CustomersList/index';
 import { Typography } from '../../../styles/typography';
 
-function OurCustomers({ setSpaceForSpinner }) {
+function OurCustomers({ setSpaceForLine }) {
   const { t } = i18next;
   const ToParadoLogo = '/images/OurCustomers/to-parado-logo.svg';
   const PhiLogo = '/images/OurCustomers/phi-logo.svg';
@@ -38,20 +38,23 @@ function OurCustomers({ setSpaceForSpinner }) {
     { alt: 'Fundacred Logo', src: FundacredLogo },
   ];
   const hgroup = useRef();
+  const blackLine = useRef();
 
-  const catchHeight = () => {
-    const hgroupElement = hgroup.current as HTMLElement;
-    return hgroupElement.getBoundingClientRect().height;
+  const catchTitleHeight = () => {
+    const hgroupElement = hgroup.current as HTMLElement; 
+    const title = hgroupElement.children[0];
+
+    return title.getBoundingClientRect().height;
   };
 
   useEffect(() => {
-    setSpaceForSpinner(catchHeight());
+    setSpaceForLine(catchTitleHeight());
   }, []);
 
   return (
   <OurCustomersStyled className="customers">
     <IdSpanStyled id="customers" />
-      <BlackLineStyled className="customersContent">
+      <BlackLineStyled className="customersContent" ref={blackLine}>
         <ContentStyled>
           <HeaderStyled className="hgroup" ref={hgroup}>
             <Typography

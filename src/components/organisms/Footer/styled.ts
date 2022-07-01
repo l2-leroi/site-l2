@@ -6,7 +6,7 @@ export const FooterStyled = styled.footer`
   background-color: ${colors.purple};
   width: 100%;
   padding: 0rem 2.8rem 6.05rem;
-  position: relative;
+  // position: relative;
 `;
 
 export const ContainerStyled = styled.div`
@@ -15,6 +15,7 @@ export const ContainerStyled = styled.div`
   max-width: 1500px;
   margin: 0 auto;
   position: relative;
+  z-index: 4;
 `;
 
 export const Teste4 = styled.div`

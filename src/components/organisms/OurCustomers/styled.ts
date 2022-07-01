@@ -4,7 +4,7 @@ import { colors } from '../../../styles/colors';
 export const OurCustomersStyled = styled.section`
   width: 100%;
   overflow: hidden;
-  position: relative;
+  // position: relative;
 
   width: 100%;
   background-color: ${colors.gray};
@@ -23,6 +23,10 @@ export const BlackLineStyled = styled.div`
   @media (max-width: 800px) {
     padding: 0px 12px;
     padding-bottom: 80px;
+  }
+
+  @media (max-width: 414px) {
+    padding-top: 60px;
   }
 `;
 
@@ -88,6 +92,7 @@ export const ContentStyled = styled.section`
   display: flex;
   margin-bottom: 124px;
   grid-column: 2;
+  z-index: 11;
 
   @media (max-width: 800px) {
     margin-bottom: 39px;
