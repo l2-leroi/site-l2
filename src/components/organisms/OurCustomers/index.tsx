@@ -65,11 +65,11 @@ function OurCustomers({ setSpaceForLine }) {
               lineHeight="line90"
               fontWeight="weight3"
             >
-              {t('customers.someCustomers')}
+              {t('clients.someClients')}
             </Typography>
 
             <Typography color="gray" tag="p">
-              {t('customers.weAreProud')}
+              {t('clients.weAreProud')}
             </Typography>
           </HeaderStyled>
 
@@ -80,7 +80,7 @@ function OurCustomers({ setSpaceForLine }) {
               size="xxsmall"
               letterSpacing="space1"
             >
-              &lt;{t('customers.alt.30Customers')}&gt;
+              &lt;{t('clients.alt.30Clients')}&gt;
             </Typography>
           </AsideStyled>
         </ContentStyled>

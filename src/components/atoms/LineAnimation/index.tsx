@@ -186,9 +186,14 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, titleS
         </SpinningIconStyled>
       ) : null}
 
-        {(hasOutSourcing) ? (<TextContainerStyled ref={text} style={{ backgroundColor: null }}>
-          <OutSourcing color={"black_1"} texts={"outSourcing.ourCustomers"} />
-        </TextContainerStyled>) : null}
+      {hasOutSourcing ? (
+        <TextContainerStyled
+          ref={text}
+          style={{ backgroundColor: secondaryBg }}
+        >
+          <OutSourcing color="black_1" texts="outSourcing.ourClients" />
+        </TextContainerStyled>
+      ) : null}
 
         <LineStyled ref={line} style={{ backgroundColor: lineBg }} />
         
