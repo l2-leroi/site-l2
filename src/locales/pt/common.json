@@ -48,11 +48,11 @@
     "customers": "Clientes",
     "contact": "Contato"
   },
-  "customers": {
-    "someCustomers": "ALGUNS DE NOSSOS CLIENTES",
+  "clients": {
+    "someClients": "ALGUNS DE NOSSOS CLIENTES",
     "weAreProud": "Temos orgulho de fazer parceria com empresas e startups com fome de inovação.",
     "alt": {
-      "30Customers": "30+ CLIENTES"
+      "30Clients": "30+ CLIENTES"
     }
   },
   "services": {
@@ -71,11 +71,11 @@
     "ourTechLead": "Nosso Tech Lead Maicon Martins irá aconselhar você sobre as melhores práticas que sua empresa pode usar na infraestrutura.",
     "text": {
       "seeOurServices": "VEJA NOSSOS SERVIÇOS"
-    },
-    "outSourcing": {
-      "ourServices": " Outsourcing Consultivo · Ideação · Atendimento à Startup · Consultoria em TI · Design · ",
-      "ourClients": " Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · "
     }
+  },
+  "outSourcing": {
+    "ourServices": " Outsourcing Consultivo · Ideação · Atendimento à Startup · Consultoria em TI · Design · ",
+    "ourClients": " Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · "
   },
   "scroll": {
     "home": "Home",

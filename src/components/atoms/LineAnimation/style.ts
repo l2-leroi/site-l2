@@ -21,7 +21,7 @@ export const LineStyled = styled.div<Props>`
 
 export const TextContainerStyled = styled.div`
   position: absolute;
-  transition: all 0.5s ease;
+  transition: transform 0.5s ease;
   z-index: 21;
   bottom: 0px;
   right: 0px;

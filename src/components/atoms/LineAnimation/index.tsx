@@ -76,6 +76,7 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, titleS
 
     if(hasOutSourcing){
       textElement.style.top = null;
+      textElement.style.bottom = "0px";
       textElement.style.transform = `rotate(0deg)`;
     }
 
@@ -132,6 +133,7 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, titleS
         setTimeout(()=> {containerElement.style.marginBottom = "-100px"}, 50)
 
       if(hasOutSourcing){
+        textElement.style.bottom = null;
         textElement.style.top = (- (minHeightOutSourcing) + maxHeight / 2) + "px";
         textElement.style.transform = `rotate(${degrees}deg)`;
       }
@@ -189,7 +191,7 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner, titleS
       {hasOutSourcing ? (
         <TextContainerStyled
           ref={text}
-          style={{ backgroundColor: secondaryBg }}
+          style={{ backgroundColor: null }}
         >
           <OutSourcing color="black_1" texts="outSourcing.ourClients" />
         </TextContainerStyled>
