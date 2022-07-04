@@ -221,6 +221,10 @@ export const ParagraphItemStyled = styled.p`
 `;
 
 export const ImageStyled = styled.img`
+  ::selection {
+    background-color: transparent;
+  }
+
   @media (max-width: 800px) {
     max-width: 164px;
   }

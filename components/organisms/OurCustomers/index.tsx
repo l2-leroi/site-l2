@@ -186,7 +186,7 @@ const OurCustomers = () => {
     <>
       <OurCustomersStyled id="customers" className="customers">
         <SpinningIconStyled className="spinner">
-          <img src={Spinner} alt="L2 Code" />
+          <img src={Spinner} alt="L2 Code"/>
         </SpinningIconStyled>
 
         <LineAnimation classe="blackLine" backgroundColor={colors.black}>
