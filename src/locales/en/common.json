@@ -8,10 +8,12 @@
   },
   "cases": {
     "ourCases": "OUR SELECTED CASES",
+    "seeSomeCases": "SEE SOME OF OUR CASES",
     "weDoWell": "We do a great job because we care about quality, aesthetics and, most of all, results.",
     "weHelped": "We helped this American start-up to define its business and released its product.",
     "webApp": "A Webapp that facilitates getting student loans for young people all over Brazil.",
     "providers": "Service providers succeed in life with this app we created for a Brazilian start-up.",
+    "educationalCredit": "We helped thousands of young people in the bureaucratic journey of getting student loans.",
     "alt": {
       "coverMemoriesUp": "Memories Up Cover",
       "coverMoreAccess": "Mais Acesso Cover",
@@ -41,19 +43,19 @@
   "nav": {
     "services": "Services",
     "cases": "Cases",
-    "customers": "Clients",
+    "clients": "Clients",
     "contact": "Contact"
   },
-  "customers": {
-    "someCustomers": "SOME OF OUR CUSTOMERS",
+  "clients": {
+    "someClients": "SOME OF OUR CLIENTS",
     "weAreProud": "We are proud to partner with companies and start-ups that are hungry for innovation.",
     "alt": {
-      "30Customers": "30+ CUSTOMERS"
+      "30Clients": "30+ CLIENTS"
     }
   },
   "services": {
     "ourServices": "OUR SERVICES",
-    "weImprove": "We improve the experience of the products and services of our customers, focusing on results for their businesses.",
+    "weImprove": "We improve the experience of the products and services of our clients, focusing on results for their businesses.",
     "followUs": "Follow us",
     "outsourcing": "Outsourcing Advisory",
     "increase": "Increase your productive capacity ● Having our team with you, you add to your team professionals in love with work who have a diversity of skills.",
@@ -70,7 +72,7 @@
     },
     "outSourcing": {
       "ourServices": "Outsourcing Advisory · Ideation · Start-up Service · IT Consulting Service · Design · ",
-      "ourCustomers": "We would love to have you on this list · We would love to have you on this list · We would love to have you on this list · "
+      "ourClients": "We would love to have you on this list · We would love to have you on this list · We would love to have you on this list · "
     }
   },
   "outSourcing": {

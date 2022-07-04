@@ -76,6 +76,9 @@ module.exports = {
     'react/no-array-index-key': 'off',
     camelcase: 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
+    'no-plusplus': 'off',
+    eqeqeq: 'off',
+    'react/function-component-definition': 'off',
   },
   settings: {
     'import/parsers': {
