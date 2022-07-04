@@ -13,6 +13,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+      <meta name="description" content="Empresa especializada em desenvolvimento web e soluções digitais. Entre em contato pelo email contato@l2code.com.br."/>
+      <title>L2Code - Soluções em tecnologia</title>
         {/* Google Tag Manager */}
         <script 
           dangerouslySetInnerHTML={{
