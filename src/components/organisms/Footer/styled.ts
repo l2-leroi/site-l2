@@ -10,6 +10,7 @@ export const FooterStyled = styled.footer`
 `;
 
 export const ContainerStyled = styled.div`
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   max-width: 1500px;

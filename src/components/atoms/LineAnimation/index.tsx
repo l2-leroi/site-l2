@@ -33,18 +33,30 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner }) => {
     }
   };
 
-  const putSpinnerInCorrectPosition = (max?) => {
+  const putSpinnerInCorrectPosition = (reset?) => {
+    console.log("max", maxHeight)
+    console.log("sp", maxHeightSpinner)
+    const teste = `-${(maxHeight - 50) - (maxHeightSpinner * 0.3)}px`
+    console.log("teste", teste)
+    
     const spinnerElement = spinner.current as HTMLElement;
-    max
-      ? (spinnerElement.style.top = `${maxHeight - maxHeightSpinner / 3}px`)
-      : (spinnerElement.style.top = `${maxHeight - maxHeightSpinner * 1.15}px`);
+
+    verifySpinnerMaxHeight(spinnerElement);
+    
+    spinnerElement.style.bottom = `-${maxHeightSpinner * 0.5}px`
+    
+    if(reset){
+      spinnerElement.style.bottom = `-${maxHeightSpinner / 3}px`
+    }
 
     if (window.innerWidth < 400) {
-      spinnerElement.style.top = `${maxHeight - maxHeightSpinner / 3}px`;
+      spinnerElement.style.bottom = `-${maxHeight - maxHeightSpinner / 3}px`;
     }
   };
-
+  
   const resetAll = () => {
+    calculateMaxHeight();
+
     const lineElement = line.current as HTMLElement;
     lineElement.style.clipPath = `polygon(
       0 -1px,

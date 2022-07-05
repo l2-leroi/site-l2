@@ -19,6 +19,7 @@ export const BlackLineStyled = styled.div`
   grid-template-columns: 1fr minmax(280px, 1456px) 1fr;
   padding: 0px 28px;
   overflow: hidden;
+  padding-top: 10px;
   padding-bottom: 80px;
   @media (max-width: 800px) {
     padding: 0px 12px;

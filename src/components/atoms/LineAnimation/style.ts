@@ -63,7 +63,7 @@ export const SpinningIconStyled = styled.div`
   border-radius: 50%;
   animation: ${SpinningAnimation} 27s linear infinite;
   max-width: 468px;
-  transition: top 0.5s ease;
+  transition: bottom 0.5s ease;
 
   img {
     @media (max-width: 1366px) {
