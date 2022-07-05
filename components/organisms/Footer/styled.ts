@@ -127,6 +127,10 @@ export const InfoStyled = styled.div`
 
 
 export const ImageStyled = styled.img`
+  ::selection {
+    background-color: transparent;
+  }
+
   @media (max-width: 800px) {
     width: 58px;
     height: 20px;
@@ -162,4 +166,8 @@ export const PhraseStyled = styled.p`
 export const IconStyled = styled.span`
   margin: 0 8px 0 9px;
   vertical-align: middle;
+
+  ::selection {
+    background-color: transparent;
+  }
 `;

@@ -303,6 +303,10 @@ export const ImageStyled = styled.img`
     height: 100vh;
     width: auto;
 
+    ::selection {
+        background-color: transparent;
+    }
+
     @media (min-width: 2000px) {
         width: 100%;
     }

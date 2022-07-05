@@ -4,6 +4,9 @@ export const ArrowSpinnerComponentStyled = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    ::selection {
+        background-color: transparent;
+    }
 `;
 
 export const SpinningAnimation = keyframes`
@@ -16,6 +19,10 @@ export const SpinningAnimation = keyframes`
 `;
 
 export const ImageArrowSpinnerStyled = styled.img`
+    ::selection {
+        background-color: transparent;
+    }
+
     &.absolute {
         position: absolute;
         margin: 0 auto;
