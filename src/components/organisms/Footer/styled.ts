@@ -7,6 +7,15 @@ export const FooterStyled = styled.footer`
   width: 100%;
   padding: 0rem 2.8rem 6.05rem;
   // position: relative;
+
+  padding-top: 10px;
+  @media (max-width: 800px) {
+    padding-top: 10px;
+  }
+
+  @media (max-width: 414px) {
+    padding-top: 60px;
+  }
 `;
 
 export const ContainerStyled = styled.div`

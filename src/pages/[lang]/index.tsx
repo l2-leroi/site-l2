@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Cases from '../../components/organisms/Cases';
 import OurServicesOnePage from '../../components/organisms/OurServicesOnePage';
 import OurCustomers from '../../components/organisms/OurCustomers';
@@ -17,13 +17,6 @@ export default function Home() {
       };
     }
   });
-
-  const [titleSpace, setTitleSpace] = useState(0);
-
-  const setSpaceForTitle = (spaceForSet) => {
-    setTitleSpace(spaceForSet);
-  };
-
   return (
     <>
       <Header />
@@ -34,15 +27,13 @@ export default function Home() {
         secondaryBg={colors.gray}
         hasOutSourcing={false}
         hasSpinner
-        titleSpace={titleSpace}
       />
-      <OurCustomers setSpaceForLine={setSpaceForTitle} />
+      <OurCustomers />
       <LineAnimation
         lineBg={colors.purple}
         secondaryBg={colors.black}
         hasOutSourcing
         hasSpinner={false}
-        titleSpace={titleSpace}
       />
     </>
   );

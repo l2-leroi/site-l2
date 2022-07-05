@@ -23,6 +23,7 @@ export const BlackLineStyled = styled.div`
   padding-bottom: 80px;
   @media (max-width: 800px) {
     padding: 0px 12px;
+    padding-top: 10px;
     padding-bottom: 80px;
   }
 

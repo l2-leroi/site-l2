@@ -41,7 +41,13 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner }) => {
     spinnerElement.style.bottom = `-${maxHeightSpinner * 0.5}px`;
 
     if (reset) {
-      spinnerElement.style.bottom = `-${maxHeightSpinner / 3}px`;
+      const spinnerHeight = +getComputedStyle(
+        spinnerElement.children[0] as HTMLElement,
+      )
+        .getPropertyValue('height')
+        .replace('px', '');
+
+      spinnerElement.style.bottom = `-${spinnerHeight / 2 - 50}px`;
     }
 
     if (window.innerWidth < 400) {
@@ -79,7 +85,7 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner }) => {
     containerElement.style.height = `${maxHeight}px`;
 
     if (hasSpinner) {
-      putSpinnerInCorrectPosition();
+      putSpinnerInCorrectPosition(false);
       verifySpinnerMaxHeight(spinnerElement);
     }
 

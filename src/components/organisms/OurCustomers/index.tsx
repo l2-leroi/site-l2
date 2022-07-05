@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import i18next from 'i18next';
 import {
   OurCustomersStyled,
@@ -13,7 +13,7 @@ import {
 import CustomersList from '../../molecules/CustomersList/index';
 import { Typography } from '../../../styles/typography';
 
-function OurCustomers({ setSpaceForLine }) {
+function OurCustomers() {
   const { t } = i18next;
   const ToParadoLogo = '/images/OurCustomers/to-parado-logo.svg';
   const PhiLogo = '/images/OurCustomers/phi-logo.svg';
@@ -39,17 +39,6 @@ function OurCustomers({ setSpaceForLine }) {
   ];
   const hgroup = useRef();
   const blackLine = useRef();
-
-  const catchTitleHeight = () => {
-    const hgroupElement = hgroup.current as HTMLElement;
-    const title = hgroupElement.children[0];
-
-    return title.getBoundingClientRect().height;
-  };
-
-  useEffect(() => {
-    setSpaceForLine(catchTitleHeight());
-  }, []);
 
   return (
     <OurCustomersStyled className="customers">
