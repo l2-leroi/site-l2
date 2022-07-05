@@ -6,14 +6,26 @@ export const FooterStyled = styled.footer`
   background-color: ${colors.purple};
   width: 100%;
   padding: 0rem 2.8rem 6.05rem;
+  // position: relative;
+
+  padding-top: 10px;
+  @media (max-width: 800px) {
+    padding-top: 10px;
+  }
+
+  @media (max-width: 414px) {
+    padding-top: 60px;
+  }
 `;
 
 export const ContainerStyled = styled.div`
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   max-width: 1500px;
   margin: 0 auto;
   position: relative;
+  z-index: 4;
 `;
 
 export const Teste4 = styled.div`
@@ -151,6 +163,13 @@ export const ImageStyled = styled.img`
     height: 20px;
     margin-top: 80px;
   }
+`;
+
+export const IdSpanStyled = styled.div`
+  width: 10px;
+  height: 2px;
+  position: absolute;
+  top: -200px;
 `;
 
 export const IconStyled = styled.span`

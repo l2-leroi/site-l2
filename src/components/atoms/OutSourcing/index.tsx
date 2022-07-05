@@ -22,8 +22,7 @@ export default function OutSourcing({ texts, color }) {
           fontWeight="weight2"
           letterSpacing="space1"
         >
-          {t(texts)}
-          {t(texts)}
+          {t(texts)} {t(texts)}
         </Typography>
       </Marquee>
     </SectionOutSourcingStyled>

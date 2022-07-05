@@ -24,7 +24,6 @@ const AllCases: NextPage = () => {
         secondaryBg={colors.black}
         hasOutSourcing={false}
         hasSpinner={false}
-        spaceForSpinner={0}
       />
     </>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import i18next from 'i18next';
 import {
   OurCustomersStyled,
@@ -7,12 +7,13 @@ import {
   BlackLineStyled,
   AsideStyled,
   CustomersContainer,
+  IdSpanStyled,
 } from './styled';
 
 import CustomersList from '../../molecules/CustomersList/index';
 import { Typography } from '../../../styles/typography';
 
-function OurCustomers({ setSpaceForSpinner }) {
+function OurCustomers() {
   const { t } = i18next;
   const ToParadoLogo = '/images/OurCustomers/to-parado-logo.svg';
   const PhiLogo = '/images/OurCustomers/phi-logo.svg';
@@ -37,19 +38,12 @@ function OurCustomers({ setSpaceForSpinner }) {
     { alt: 'Fundacred Logo', src: FundacredLogo },
   ];
   const hgroup = useRef();
-
-  const catchHeight = () => {
-    const hgroupElement = hgroup.current as HTMLElement;
-    return hgroupElement?.getBoundingClientRect().height;
-  };
-
-  useEffect(() => {
-    setSpaceForSpinner(catchHeight());
-  }, []);
+  const blackLine = useRef();
 
   return (
-    <OurCustomersStyled id="customers" className="customers">
-      <BlackLineStyled className="customersContent">
+    <OurCustomersStyled className="customers">
+      <IdSpanStyled id="customers" />
+      <BlackLineStyled className="customersContent" ref={blackLine}>
         <ContentStyled>
           <HeaderStyled className="hgroup" ref={hgroup}>
             <Typography
