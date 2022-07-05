@@ -103,7 +103,7 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner }) => {
           textElement.style.transition = 'all 0.5s ease';
         }
 
-        textElement.style.top = `calc(${maxHeight / 2}px - 5em)`;
+        textElement.style.top = `calc(${maxHeight / 2}px - 7em)`;
         textElement.style.transform = `rotate(17.76deg)`;
       }
       lineElement.style.clipPath = `polygon(
