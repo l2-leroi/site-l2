@@ -172,12 +172,11 @@ export const LanguageStyled = styled.div`
 
 export const DivStyled = styled.div`
   background-color: rgba(36, 42, 51, 1);
-  /* background-color: aliceblue; */
   display: flex;
   flex-direction: column;
   border-radius: 0.8rem;
   margin-top: 150px;
-  margin-bottom: 10px;
+  margin-bottom: -60px;
   margin-left: 13%;
   min-width: 30%;
   max-width: 70%;
@@ -196,30 +195,11 @@ export const DivStyled = styled.div`
 `;
 
 export const DateStyled = styled.div`
-  @media (min-width: 801px) and (max-width: 1400px) {
-    margin: 0 1rem;
-    display: flex;
-    width: 92%;
-    margin-top: 2.4rem;
-    margin-left: 2rem;
-    /* background-color: red; */
-  }
-
-  /* div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 95%;
-    margin-left: 20px;
-    background-color: pink;
-  }
-
-  h1 {
-    display: flex;
-    margin-bottom: 30px;
-    margin-top: 50px;
-    flex-direction: column;
-  } */
+  margin: 0 1rem;
+  display: flex;
+  width: 92%;
+  margin-top: 2.4rem;
+  margin-left: 2rem;
 `;
 
 export const Div = styled.div`
@@ -229,12 +209,11 @@ export const Div = styled.div`
   width: 90%;
   margin-left: 40px;
   margin-top: 50px;
-  /* background-color: pink; */
 
   h1 {
     display: flex;
     margin-bottom: 30px;
-    margin-top: 50px;
+    margin-top: 30px;
     flex-direction: column;
   }
 `;
@@ -262,10 +241,10 @@ export const ExpireDate = styled.div`
   }
 `;
 
-export const TextStyled = styled.p`
-  margin-top: 4rem;
-  width: 33%;
-`;
+// export const TextStyled = styled.p`
+//   margin-top: 4rem;
+//   width: 33%;
+// `;
 
 export const DivButton = styled.div`
   display: flex;
@@ -290,7 +269,7 @@ export const DivImageStyled = styled.div`
   max-width: 100%;
   height: auto;
   margin-bottom: 80px;
-  margin-top: 250px;
+  margin-top: 230px;
   img {
     display: flex;
     width: 50%;
@@ -352,7 +331,7 @@ export const DivTextStyled = styled.div`
     display: flex;
     flex-direction: column;
     width: 60%;
-    margin-top: -930px;
+    margin-top: -910px;
     margin-bottom: 20px;
     margin-left: 550px;
     position: relative;
@@ -377,7 +356,7 @@ export const DivTextStyled = styled.div`
     display: flex;
     flex-direction: column;
     width: 34%;
-    margin-top: -800px;
+    margin-top: -780px;
     margin-left: 550px;
     font-style: normal;
     font-weight: 400;
@@ -414,7 +393,6 @@ export const DivButtonStyled = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0px 16px;
-  margin-top: -10px;
   margin-bottom: 100px;
   margin-left: 510px;
   gap: 8px;

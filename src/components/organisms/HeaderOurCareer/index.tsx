@@ -20,7 +20,6 @@ import {
 import { Typography } from '../../../styles/typography';
 import Button from '../../atoms/Button';
 import ScrollCircle from '../../atoms/ScrollCircle';
-// import { ImageArrowSpinnerStyled } from '../../atoms/ScrollCircle/styled';
 
 interface PropsHeaderOurCareer {
   startDate: string; // Formato para data: 'dd/MM/yyyy'
@@ -162,9 +161,6 @@ export default function HeaderOurCareer({
             blackImage={`${t('images.spinner')}`}
             whiteImage={`${t('images.whiteSpinner')}`}
           />
-          {/* <ImageArrowSpinnerStyled>
-            <img src="/images/arrow-spinner.svg" alt="arrow spinner" />
-          </ImageArrowSpinnerStyled> */}
         </ArrowSpinnerContainerStyled>
 
         <DivTextStyled>
