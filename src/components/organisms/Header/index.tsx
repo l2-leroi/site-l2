@@ -280,6 +280,24 @@ function Header() {
           </Typography>
         </LanguageStyled>
       </MainContentStyled>
+      <ArrowSpinnerContainerStyled className="anime">
+        <ScrollCircle
+          isWhiteImage={false}
+          blackImage={`${t('images.spinner')}`}
+          whiteImage={`${t('images.whiteSpinner')}`}
+        />
+      </ArrowSpinnerContainerStyled>
+
+      <div className="whiteSpinner">
+        <ArrowSpinnerContainerStyled className="anime">
+          <ScrollCircle
+            hidden={!whiteCircle}
+            isWhiteImage
+            blackImage={`${t('images.spinner')}`}
+            whiteImage={`${t('images.whiteSpinner')}`}
+          />
+        </ArrowSpinnerContainerStyled>
+      </div>
 
       <FooterContentStyled>
         <SocialMediaStyled className="anime">
@@ -322,14 +340,6 @@ function Header() {
             </Typography>
           </SocialMediaLinkStyled>
         </SocialMediaStyled>
-
-        <ArrowSpinnerContainerStyled className="anime">
-          <ScrollCircle
-            isWhiteImage={whiteCircle}
-            blackImage={`${t('images.spinner')}`}
-            whiteImage={`${t('images.whiteSpinner')}`}
-          />
-        </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
     </HeaderStyled>
   );

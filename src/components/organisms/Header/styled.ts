@@ -15,7 +15,14 @@ export const HeaderStyled = styled.header<HeaderProps>`
   position: relative;
   padding: 0px 28px;
   background-color: ${colors.gray};
-  overflow: hidden;
+  overflow: visible;
+
+  .whiteSpinner {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
 
   @media (max-width: 500px), (max-height: 415px) {
     user-select: none;
