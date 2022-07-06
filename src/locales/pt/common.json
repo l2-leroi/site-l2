@@ -46,9 +46,25 @@
     "aboutTheProgram": "Sobre o programa de Trainne",
     "youAreGoingTo": "Você vai trabalhar num time de TI excepcional e vai ter treinamento durante 12 meses. O foco é ampliar seus conhecimentos em diferentes tecnologias, assim você descobre o que realmente gosta e a gente direciona seu potencial para gerar o máximo de impacto. ● Somos flexíveis com horários, o que facilita para você conciliar sua rotina acadêmica.",
     "requirements": "Requisitos",
-    "desirable": "+ Desejável estar cursando o último ano de Ciência da Computação ou equivalente ou outro curso superior na área de TI;",
-    "availability": "+ Disponibilidade para trabalhar 30 horas semanais;",
-    "knowledge": "+ Conhecimentos de lógica de programação e estrutura de dados."
+    "desirable": "Desejável estar cursando o último ano de Ciência da Computação ou equivalente ou outro curso superior na área de TI;",
+    "availability": "Disponibilidade para trabalhar 30 horas semanais;",
+    "knowledge": "Conhecimentos de lógica de programação e estrutura de dados."
+  },
+  "TalentsOurCareer": {
+    "weEmbrace": "Abraçamos os talentos do mundo",
+    "weAreConnected": "Estamos conectados pela tecnologia e paixão de gerar impacto positivo no mundo. Se você tem fome de crescer, então vamos adorar te ter na equipe.",
+    "weLove": "Adoramos nosso trabalho Menos aos sábados",
+    "weCreate": "Criamos um ambiente acolhedor e inclusivo para que você possa dar o seu melhor. ● Mas para um bom trabalho, é preciso também de um bom descanso. Por isso, finais de semana são para descansar e curtir a vida!",
+    "enjoyToo": "Aproveite também um dia de folga no seu aniversário. Afinal, esse é um dia especial!",
+    "weValue": "Valorizamos pessoas",
+    "empathize": "Ter empatia é uma ótima prática de trabalho. Todos estamos em constante aprendizado e buscamos crescer juntos.",
+    "whatTheySay": "O que dizem os Lcoders:",
+    "comment1": "“Ambiente descontraído, horário flexível, equipe muito bacana, oportunidade de crescimento.”",
+    "comment2": "“Na L2 você aprende algo novo todos os dias. Aqui, sua opinião importa e colabora com o crescimento do time.”",
+    "comment3": "“L2 tem um ótimo ambiente de trabalho, é flexível e dá muito suporte.”",
+    "comment4": "“A L2 criou um ambiente incrível, onde todos se ajudam mutuamente e se divertem trabalhando juntos.”",
+    "comment5": "“Equipe acolhedora, gosto de trabalhar aqui, está sendo uma ótima oportunidade de conhecimento e experiência”",
+    "comment6": "“Cresci muito na L2, pessoal e profissionalmente. Estamos sempre aprendendo algo novo e ajudando uns aos outros.”"
   },
   "menu": {
     "ourWhatsapp": "nosso whatsapp",

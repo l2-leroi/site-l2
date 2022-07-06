@@ -50,6 +50,22 @@
     "availability": "+ Availability to work 30 hours per week;",
     "knowledge": "+ Knowledge of programming logic and data structure."
   },
+  "TalentsOurCareer": {
+    "weEmbrace": "We embrace the talents of the world",
+    "weAreConnected": "We are connected by technology and passion to make a positive impact on the world. If you're hungry to grow, then we'd love to have you on the team.",
+    "weLove": "We love our work Except on Saturdays",
+    "weCreate": "We create a welcoming and inclusive environment for you to give your best. ● But for a good job, you also need a good rest. That's why weekends are for resting and enjoying life!",
+    "enjoyToo": "Also enjoy a day off on your birthday. After all, this is a special day!",
+    "weValue": "We value people",
+    "empathize": "Having empathy is a great work practice. We are all constantly learning and looking to grow together.",
+    "whatTheySay": "What the Lcoders say:",
+    "comment1": "“Relaxed atmosphere, flexible hours, very nice team, opportunity for growth.”",
+    "comment2": "“At L2 you learn something new every day. Here, your opinion matters and contributes to the growth of the team.”",
+    "comment3": "“L2 has a great work environment, is flexible and very supportive.”",
+    "comment4": "“L2 has created an amazing environment where everyone helps each other and has fun working together.”",
+    "comment5": "“Welcoming staff, I enjoy working here, it has been a great opportunity for knowledge and experience”",
+    "comment6": "“I grew up a lot in L2, personally and professionally. We are always learning something new and helping each other.”"
+  },
   "menu": {
     "ourWhatsapp": "our whatsapp",
     "ourEmail": "our e-mail",

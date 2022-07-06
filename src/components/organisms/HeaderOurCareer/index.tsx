@@ -20,6 +20,7 @@ import {
 import { Typography } from '../../../styles/typography';
 import Button from '../../atoms/Button';
 import ScrollCircle from '../../atoms/ScrollCircle';
+// import { ImageArrowSpinnerStyled } from '../../atoms/ScrollCircle/styled';
 
 interface PropsHeaderOurCareer {
   startDate: string; // Formato para data: 'dd/MM/yyyy'
@@ -161,6 +162,9 @@ export default function HeaderOurCareer({
             blackImage={`${t('images.spinner')}`}
             whiteImage={`${t('images.whiteSpinner')}`}
           />
+          {/* <ImageArrowSpinnerStyled>
+            <img src="/images/arrow-spinner.svg" alt="arrow spinner" />
+          </ImageArrowSpinnerStyled> */}
         </ArrowSpinnerContainerStyled>
 
         <DivTextStyled>
@@ -189,16 +193,15 @@ export default function HeaderOurCareer({
           </Typography>
           <ul>
             {li.map((item) => (
-              <li>
-                <Typography
-                  tag="li"
-                  color="gray"
-                  fontFamily="font2"
-                  size="xsmall"
-                >
-                  {t(item)}
-                </Typography>
-              </li>
+              <Typography
+                tag="li"
+                color="gray"
+                fontFamily="font2"
+                size="xsmall"
+                lineHeight="line140"
+              >
+                {t(item)}
+              </Typography>
             ))}
           </ul>
           <DivButtonStyled>

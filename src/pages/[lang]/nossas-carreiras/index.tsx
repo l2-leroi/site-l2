@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
 
-import TextCarroussel from '../../../components/organisms/text-carroussel';
 import HeaderOurCareer from '../../../components/organisms/HeaderOurCareer';
+import TalentsOurCareer from '../../../components/organisms/TalentsOurCareer';
 
 const NossasCarreiras: NextPage = () => {
   useEffect(() => {
@@ -31,8 +31,7 @@ const NossasCarreiras: NextPage = () => {
         id={id}
         li={li}
       />
-
-      <TextCarroussel />
+      <TalentsOurCareer />
     </>
   );
 };
