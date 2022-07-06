@@ -196,6 +196,9 @@ export const DivItemStyled = styled.div`
 
 export const ImageStyled = styled.img`
   user-select: none;
+  ::selection {
+    background-color: transparent;
+  }
 
   @media (max-width: 800px) {
     max-width: 164px;

@@ -8,10 +8,12 @@
   },
   "cases": {
     "ourCases": "OUR SELECTED CASES",
+    "seeSomeCases": "SEE SOME OF OUR CASES",
     "weDoWell": "We do a great job because we care about quality, aesthetics and, most of all, results.",
     "weHelped": "We helped this American start-up to define its business and released its product.",
     "webApp": "A Webapp that facilitates getting student loans for young people all over Brazil.",
     "providers": "Service providers succeed in life with this app we created for a Brazilian start-up.",
+    "educationalCredit": "We helped thousands of young people in the bureaucratic journey of getting student loans.",
     "alt": {
       "coverMemoriesUp": "Memories Up Cover",
       "coverMoreAccess": "Mais Acesso Cover",
@@ -74,19 +76,19 @@
   "nav": {
     "services": "Services",
     "cases": "Cases",
-    "customers": "Clients",
+    "clients": "Clients",
     "contact": "Contact"
   },
-  "customers": {
-    "someCustomers": "SOME OF OUR CUSTOMERS",
+  "clients": {
+    "someClients": "SOME OF OUR CLIENTS",
     "weAreProud": "We are proud to partner with companies and start-ups that are hungry for innovation.",
     "alt": {
-      "30Customers": "30+ CUSTOMERS"
+      "30Clients": "30+ CLIENTS"
     }
   },
   "services": {
     "ourServices": "OUR SERVICES",
-    "weImprove": "We improve the experience of the products and services of our customers, focusing on results for their businesses.",
+    "weImprove": "We improve the experience of the products and services of our clients, focusing on results for their businesses.",
     "followUs": "Follow us",
     "outsourcing": "Outsourcing Advisory",
     "increase": "Increase your productive capacity ● Having our team with you, you add to your team professionals in love with work who have a diversity of skills.",
@@ -95,23 +97,16 @@
     "ideation": "Ideation",
     "coCreation": "Co-creation with our multidisciplinary team in the design of your product and business strategies.",
     "uxuiDesign": "UX / UI Design",
-    "weDesign": "We design a gorgeous and functional products for the users, allied with the goals of your business.",
+    "weDesign": "We design a gorgeous and functional products for the users, aligned with the goals of your business.",
     "consultingService": "IT Consulting Service",
     "ourTechLead": "Our Teach Lead Maicon Martins will advise you about the best practices that your company can use in your infrastructure.",
     "text": {
       "seeOurServices": "SEE OUR SERVICES"
-    },
-    "outSourcing": {
-      "ourServices": "Outsourcing Advisory · Ideation · Start-up Service · IT Consulting Service · Design · ",
-      "ourCustomers": "We would love to have you on this list · We would love to have you on this list · We would love to have you on this list · "
     }
   },
   "outSourcing": {
-    "outsourcing": "Outsourcing Advisory",
-    "ideation": "Ideation",
-    "startupService": "Start-up Service",
-    "consultingService": "IT Consulting Service",
-    "design": "Design"
+    "ourServices": " Outsourcing Advisory · Ideation · Start-up Service · IT Consulting Service · Design · ",
+    "ourClients": " We would love to have you on this list · We would love to have you on this list · We would love to have you on this list · "
   },
   "scroll": {
     "home": "Home",

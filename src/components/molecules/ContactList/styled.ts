@@ -30,6 +30,12 @@ export const ContactStyled = styled.a`
     color: ${colors.black};
   }
 
+  p {
+    ::selection {
+      background: ${colors.green};
+      color: ${colors.black};
+    }
+  }
   &:hover {
     color: ${colors.green};
   }

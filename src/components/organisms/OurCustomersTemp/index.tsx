@@ -49,12 +49,12 @@ function OurCustomersTemp() {
       <BlackLineStyled>
         <ContentStyled>
           <HeaderStyled>
-            <TitleStyled>{t('customers.someCustomers')}</TitleStyled>
-            <SubtitleStyled>{t('customers.weAreProud')}</SubtitleStyled>
+            <TitleStyled>{t('clients.someClients')}</TitleStyled>
+            <SubtitleStyled>{t('clients.weAreProud')}</SubtitleStyled>
           </HeaderStyled>
           <AsideStyled>
             <ParagraphStyled>
-              &lt;{t('customers.alt.30Customers')}&gt;
+              &lt;{t('clients.alt.30Clients')}&gt;
             </ParagraphStyled>
           </AsideStyled>
         </ContentStyled>

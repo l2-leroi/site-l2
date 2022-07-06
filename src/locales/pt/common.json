@@ -8,17 +8,21 @@
   },
   "cases": {
     "ourCases": "NOSSOS CASES SELECIONADOS",
+    "seeSomeCases": "VEJA ALGUNS DE NOSSOS CASES",
     "weDoWell": "Fazemos muito bem porque nos preocupamos com qualidade, estética e, acima de tudo, com resultados.",
     "weHelped": "Ajudamos start-up americana a definir seu negócio e lançamos seu produto.",
     "webApp": "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.",
     "providers": "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira.",
-    "alt": {
-      "coverMemoriesUp": "Capa Memories Up",
-      "coverMoreAccess": "Capa Mais Acesso",
-      "coverImStopped": "Capa Tô Parado"
-    }
-  },
-  "footer": {
+    "educationalCredit": "Ajudamos milhares de jovens na burocrática jornada de obtenção de crédito educacional",
+      "alt":{
+        "coverMemoriesUp" : "Capa Memories Up",
+        "coverMoreAccess" : "Capa Mais Acesso",
+        "coverImStopped" : "Capa Tô Parado",
+        "coverWorkQueue" : "Capa Fila de Trabalho"
+      }
+     },
+
+  "footer":{
     "letsTalk": "VAMOS CONVERSAR",
     "ourWhatsapp": "nosso whatsapp",
     "ourEmail": "nosso e-mail",
@@ -77,11 +81,11 @@
     "customers": "Clientes",
     "contact": "Contato"
   },
-  "customers": {
-    "someCustomers": "ALGUNS DE NOSSOS CLIENTES",
+  "clients": {
+    "someClients": "ALGUNS DE NOSSOS CLIENTES",
     "weAreProud": "Temos orgulho de fazer parceria com empresas e startups com fome de inovação.",
     "alt": {
-      "30Customers": "30+ CLIENTES"
+      "30Clients": "30+ CLIENTES"
     }
   },
   "services": {
@@ -95,23 +99,16 @@
     "ideation": "Ideação",
     "coCreation": "Co-criação com nosso time multidisciplinar na concepção do seu produto e estratégias de negócio.",
     "uxuiDesign": "UX / UI Design",
-    "weDesign": "Projetamos um produto encantador e funcional para os usuários, aliado aos objetivos do seu negócio.",
+    "weDesign": "Projetamos um produto encantador e funcional para os usuários, alinhado aos objetivos do seu negócio.",
     "consultingService": "Consultoria em TI",
     "ourTechLead": "Nosso Tech Lead Maicon Martins irá aconselhar você sobre as melhores práticas que sua empresa pode usar na infraestrutura.",
     "text": {
       "seeOurServices": "VEJA NOSSOS SERVIÇOS"
-    },
-    "outSourcing": {
-      "ourServices": "Outsourcing Consultivo · Ideação · Atendimento à Startup · Consultoria em TI · Design · ",
-      "ourCustomers": "Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · "
     }
   },
   "outSourcing": {
-    "outsourcing": "Outsourcing Consultivo",
-    "ideation": "Ideação",
-    "startupService": "Atendimento à Startup",
-    "consultingService": "Consultoria em TI",
-    "design": "Design"
+    "ourServices": " Outsourcing Consultivo · Ideação · Atendimento à Startup · Consultoria em TI · Design · ",
+    "ourClients": " Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · "
   },
   "scroll": {
     "home": "Home",
