@@ -35,23 +35,6 @@ export const SectionStyled = styled.section`
   }
 `;
 
-export const ScrollArrow = styled.div`
-  position: absolute;
-  right: 148px;
-  top: -240px;
-
-  @media (max-width: 800px) {
-    top: -198px;
-    right: 0.5px;
-    width: 100%;
-  }
-
-  @media (min-width: 2560px) {
-    top: -230px;
-    right: 703px;
-  }
-`;
-
 export const DivOurServicesStyled = styled.div`
   display: flex;
   align-items: center;

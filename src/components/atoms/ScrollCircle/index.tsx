@@ -5,12 +5,15 @@ interface imageProps {
   isWhiteImage: boolean;
   blackImage: string;
   whiteImage: string;
+  hidden?: boolean;
 }
 
 function ScrollCircle(props: imageProps) {
   const { t } = i18next;
   return (
-    <ArrowSpinnerComponentStyled>
+    <ArrowSpinnerComponentStyled
+      style={{ visibility: props.hidden ? 'hidden' : 'visible' }}
+    >
       <ImageArrowSpinnerStyled
         src={props.isWhiteImage ? props.whiteImage : props.blackImage}
         alt={t('images.alt.thereIsMore')}
