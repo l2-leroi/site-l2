@@ -157,6 +157,9 @@ export const InfoStyled = styled.div`
 
 export const ImageStyled = styled.img`
   user-select: none;
+  ::selection {
+    background-color: transparent;
+  }
 
   @media (max-width: 800px) {
     width: 58px;
@@ -176,4 +179,8 @@ export const IconStyled = styled.span`
   margin: 0 8px 0 9px;
   vertical-align: middle;
   user-select: none;
+
+  ::selection {
+    background-color: transparent;
+  }
 `;
