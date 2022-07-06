@@ -204,6 +204,16 @@ export const SpinningIconStyled = styled.div`
   top: 20rem;
   animation: ${SpinningAnimation} 5s linear infinite;
 
+  ::selection {
+    background-color: transparent;
+  }
+
+  img {
+    ::selection {
+      background-color: transparent;
+    }
+  }
+
   @media (max-width: 800px) {
     max-width: 248px;
     top: -10px;

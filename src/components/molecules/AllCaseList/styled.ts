@@ -186,4 +186,8 @@ export const ImageStyled = styled.img`
   &.imageNone {
     display: none;
   }
+
+  ::selection {
+    background-color: transparent;
+  }
 `;
