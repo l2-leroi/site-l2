@@ -10,12 +10,29 @@ interface DesignPrototypePropsImages {
 export const ContentStyled = styled.section`
   display: flex;
   overflow: hidden;
+  //width: 100%;
+  //height: auto;
+  //overflow: hidden;
   max-width: 1500px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   grid-gap: 32px;
   padding-bottom: 140px;
+`;
+
+export const ImageStyled = styled.img<DesignPrototypePropsImages>`
+  width: ${(props) => props.widthImage}px;
+  height: ${(props) => props.heightImage}px;
+  user-select: none;
+
+  &.imageBlock {
+    display: block;
+  }
+
+  &.imageNone {
+    display: none;
+  }
 `;
 
 export const ListStyled = styled.section``;
@@ -189,18 +206,4 @@ export const InfoStyled = styled.p`
 
 export const LinkStyled = styled.a`
   cursor: pointer;
-`;
-
-export const ImageStyled = styled.img<DesignPrototypePropsImages>`
-  width: ${(props) => props.widthImage}px;
-  height: ${(props) => props.heightImage}px;
-  user-select: none;
-
-  &.imageBlock {
-    display: block;
-  }
-
-  &.imageNone {
-    display: none;
-  }
 `;
