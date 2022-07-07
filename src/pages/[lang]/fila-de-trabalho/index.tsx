@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import { useEffect, useState } from 'react';
+// import { useWindowSize } from 'use-hooks';
 import HeaderCases from '../../../components/organisms/HeaderCases';
 import CardText from '../../../components/organisms/CardText';
 import DesignsCases from '../../../components/organisms/DesignsCases';
@@ -8,6 +9,8 @@ import LineAnimation from '../../../components/atoms/LineAnimation';
 import { colors } from '../../../styles/colors';
 
 const FilaDeTrabalho: NextPage = () => {
+  // const { width } = useWindowSize();
+
   useEffect(() => {
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
@@ -61,10 +64,10 @@ const FilaDeTrabalho: NextPage = () => {
     },
   ];
 
-  const widthPrototype = 414; // 1239;
-  const heightPrototype = 896; // 688;
+  const widthPrototype = 1239;
+  const heightPrototype = 688;
   const srcPrototype =
-    '/images/fila-de-trabalho/mockup-desk-fila-de-trabalho.jpg';
+    '/images/fila-de-trabalho/mockup-desk-fila-de-trabalho.png';
   const altPrototype = 'Mockup animado';
   const widthImage = 464;
   const heightImage = 257;
@@ -102,7 +105,7 @@ const FilaDeTrabalho: NextPage = () => {
 
       <LineAnimation
         lineBg={colors.purple}
-        secondaryBg={colors.black}
+        secondaryBg={colors.gray}
         hasOutSourcing={false}
         hasSpinner={false}
         spaceForSpinner={0}
