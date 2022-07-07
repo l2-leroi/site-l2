@@ -20,16 +20,16 @@ export const InfiniteScrollContainerStyled = styled(InfiniteScroll)`
     margin-top: 60px;
     text-align: center;
 
-    a{ 
+    a {
       font-size: 4vw;
       width: 100%;
       cursor: pointer;
       text-decoration: none;
-      
+
       ::selection {
         background: ${colors.purple};
       }
-      
+
       @media (max-width: 600px) {
         font-size: 40px;
       }

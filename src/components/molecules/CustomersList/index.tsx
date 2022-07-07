@@ -1,8 +1,8 @@
 import { ContentStyled, ListStyled } from './styled';
 
 interface Customer {
-  alt: string,
-  src: string,
+  alt: string;
+  src: string;
 }
 
 interface CustomerProps {
@@ -11,18 +11,14 @@ interface CustomerProps {
 
 function CustomersList(props: CustomerProps) {
   return (
-    <>
     <ListStyled>
-      {
-        props.customers.map((customer) => (
-            <ContentStyled key={customer.alt}>
-                <img src={customer.src} alt={customer.alt} />
-            </ContentStyled>
-        )) 
-      }
-      </ListStyled>
-    </>
+      {props.customers.map((customer) => (
+        <ContentStyled key={customer.alt}>
+          <img src={customer.src} alt={customer.alt} />
+        </ContentStyled>
+      ))}
+    </ListStyled>
   );
-};
+}
 
 export default CustomersList;

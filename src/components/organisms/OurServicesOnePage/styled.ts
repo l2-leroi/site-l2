@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
-import { Typography } from '../../../styles/typography';
 
 export const SectionOnePageStyled = styled.section`
   display: flex;
@@ -14,30 +13,30 @@ export const SectionOnePageStyled = styled.section`
   }
 `;
 
-export const ScrollArrow = styled.div`
-  position: absolute;
-  right: 148px;
-  bottom: -70px;
-  user-select: none;
+// export const ScrollArrow = styled.div`
+//   position: absolute;
+//   right: 148px;
+//   bottom: -70px;
+//   user-select: none;
 
-  @media (min-width: 2560px) {
-    right: 703px;
-  }
+//   @media (min-width: 2560px) {
+//     right: 703px;
+//   }
 
-  @media (max-width: 1365px) {
-    right: 70px;
-  }
+//   @media (max-width: 1365px) {
+//     right: 70px;
+//   }
 
-  @media (orientation: landscape) and (max-width: 800px) {
-    bottom: -45px;
-  }
+//   @media (orientation: landscape) and (max-width: 800px) {
+//     bottom: -45px;
+//   }
 
-  @media (orientation: portrait) and (max-width: 800px) {
-    bottom: -45px;
-    right: 0.5px;
-    width: 100%;
-  }
-`;
+//   @media (orientation: portrait) and (max-width: 800px) {
+//     bottom: -45px;
+//     right: 0.5px;
+//     width: 100%;
+//   }
+// `;
 
 export const ContentOnePageStyled = styled.div`
   background: ${colors.black};
@@ -64,19 +63,18 @@ export const DivServicesStyled = styled.div`
   flex-direction: column;
   margin-bottom: 8rem;
   align-items: center;
-  h2{
+  h2 {
     ::selection {
       background: ${colors.purple};
     }
     max-width: 464px;
     margin: 0;
-  
+
     @media (max-width: 800px) {
       max-width: 264px;
     }
-  
   }
-  p{
+  p {
     max-width: 464px;
     ::selection {
       background: ${colors.purple};
@@ -84,14 +82,13 @@ export const DivServicesStyled = styled.div`
     color: ${colors.gray};
     padding-top: 24px;
     margin: 0;
-  
+
     @media (max-width: 800px) {
       width: 160px;
       padding-top: 20px;
     }
   }
 `;
-
 
 export const DivServiceItemsStyled = styled.div`
   display: flex;
@@ -147,60 +144,61 @@ export const DivItemStyled = styled.div`
       order: 5;
     }
   }
-  h3{
+  h3 {
     ::selection {
       background: ${colors.purple};
-
     }
 
     padding-bottom: 24px;
     margin: 0;
-  
+
     @media (max-width: 800px) {
       padding-bottom: 16px;
     }
-  
+
     @media (max-width: 800px) {
       padding-bottom: 16px;
     }
   }
-  p{
+  p {
     ::selection {
       background: ${colors.purple};
-
     }
     color: ${colors.dark_gray};
     margin-top: 0;
     margin-bottom: 8rem;
-  
-     @media (max-width: 800px) {
+
+    @media (max-width: 800px) {
       max-width: 230px;
-  
-      &.last-paragraph{
+
+      &.last-paragraph {
         max-width: 144px;
       }
     }
-  
+
     @media (max-width: 600px) {
       max-width: 180px;
-  
-      &.last-paragraph{
+
+      &.last-paragraph {
         max-width: 180px;
       }
     }
-  
+
     @media (max-width: 576px) {
       max-width: 300px;
-  
-      &.last-paragraph{
+
+      &.last-paragraph {
         max-width: 300px;
       }
     }
   }
 `;
-  
+
 export const ImageStyled = styled.img`
   user-select: none;
+  ::selection {
+    background-color: transparent;
+  }
 
   @media (max-width: 800px) {
     max-width: 164px;

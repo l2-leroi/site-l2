@@ -1,37 +1,50 @@
-import styled, { keyframes } from "styled-components";
-import { colors } from '../../../styles/colors';
+import styled, { keyframes } from 'styled-components';
 
-interface Props{
-    lineBg?: string;
-    secondaryBg?: string;
+interface Props {
+  lineBg?: string;
+  secondaryBg?: string;
 }
 
 export const LineStyled = styled.div<Props>`
-    clip-path: polygon(0px 0%, 100% 100%, 100% 100%, 0% 100%);
-    background-color: ${props => props.lineBg};
-    
-    box-sizing: padding-box;
-    z-index: 20;
-    transition: height 0.5s ease;
+  clip-path: polygon(
+    0 -1px,
+    100% -1px,
+    100% calc(100% - 50px),
+    0 calc(100% - 50px)
+  );
+  transition: clip-path 0.5s ease;
+  background-color: ${(props) => props.secondaryBg};
+  height: 100%;
+  box-sizing: padding-box;
+  z-index: 20;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 `;
 
 export const TextContainerStyled = styled.div`
-    position: absolute; 
-    transition: all 0.5s ease;
-    z-index: 21;
+  position: absolute;
+  z-index: 21;
+  width: 105%;
+  top: calc(100% - 50px - 7em);
 `;
 
 export const LineContainerStyled = styled.div<Props>`
-    background-color: ${props => props.secondaryBg}; 
-    position: relative;
-    overflow-x: clip;
+  margin-bottom: -50px;
+  background-color: ${(props) => props.lineBg};
+  border-color: ${(props) => props.secondaryBg};
+  position: relative;
+  overflow-x: clip;
 `;
 
-export const Sup = styled.div`
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    bottom: 0;
+export const Sup = styled.div<Props>`
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  background-color: ${(props) => props.lineBg};
 `;
 
 export const SpinningAnimation = keyframes`
@@ -46,25 +59,25 @@ export const SpinningAnimation = keyframes`
 export const SpinningIconStyled = styled.div`
   position: absolute;
   right: 0px;
-  top: 0px;
-  z-index: 1;  
-  overflow-x: hidden;
+  z-index: 10;
   border-radius: 50%;
-  animation: ${SpinningAnimation} 5s linear infinite;
+  animation: ${SpinningAnimation} 27s linear infinite;
   max-width: 468px;
-  transition: top 0.5s ease;
+  transition: bottom 0.5s ease;
 
-  img{
-
-    @media(max-width: 1366px){
+  img {
+    ::selection {
+      background: transparent;
+    }
+    @media (max-width: 1366px) {
       max-width: 380px;
     }
-  
-    @media(max-width: 800px){
+
+    @media (max-width: 800px) {
       max-width: 248px;
     }
-  
-    @media(max-width: 414px){
+
+    @media (max-width: 414px) {
       max-width: 140px;
     }
   }

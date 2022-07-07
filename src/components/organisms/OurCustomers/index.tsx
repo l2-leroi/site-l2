@@ -1,3 +1,5 @@
+import React, { useRef } from 'react';
+import i18next from 'i18next';
 import {
   OurCustomersStyled,
   HeaderStyled,
@@ -5,15 +7,14 @@ import {
   BlackLineStyled,
   AsideStyled,
   CustomersContainer,
+  IdSpanStyled,
 } from './styled';
 
 import CustomersList from '../../molecules/CustomersList/index';
-import React, { useEffect, useRef } from 'react';
-import i18next from 'i18next';
 import { Typography } from '../../../styles/typography';
 
-const OurCustomers = ({ setSpaceForSpinner }) => {
-  const { t } = i18next
+function OurCustomers() {
+  const { t } = i18next;
   const ToParadoLogo = '/images/OurCustomers/to-parado-logo.svg';
   const PhiLogo = '/images/OurCustomers/phi-logo.svg';
   const BancoRCILogo = '/images/OurCustomers/banco-rci-logo.svg';
@@ -37,39 +38,46 @@ const OurCustomers = ({ setSpaceForSpinner }) => {
     { alt: 'Fundacred Logo', src: FundacredLogo },
   ];
   const hgroup = useRef();
-
-  const catchHeight = () => {
-    const hgroupElement = hgroup.current as HTMLElement;
-    return hgroupElement.getBoundingClientRect().height;
-  }
-
-  useEffect(() => {
-    setSpaceForSpinner(catchHeight());
-  }, []);
+  const blackLine = useRef();
 
   return (
-    <>
-      <OurCustomersStyled id="customers" className="customers">
-        <BlackLineStyled className="customersContent">
+    <OurCustomersStyled className="customers">
+      <IdSpanStyled id="customers" />
+      <BlackLineStyled className="customersContent" ref={blackLine}>
+        <ContentStyled>
+          <HeaderStyled className="hgroup" ref={hgroup}>
+            <Typography
+              color="gray"
+              tag="h2"
+              size="medium"
+              fontFamily="font1"
+              lineHeight="line90"
+              fontWeight="weight3"
+            >
+              {t('clients.someClients')}
+            </Typography>
 
-          <ContentStyled>
+            <Typography color="gray" tag="p">
+              {t('clients.weAreProud')}
+            </Typography>
+          </HeaderStyled>
 
-            <HeaderStyled className="hgroup" ref={hgroup}>
-              <Typography color='gray' tag='h2' size="medium" fontFamily="font1" lineHeight="line90" fontWeight="weight3">{t('customers.someCustomers')}</Typography>
-
-              <Typography color='gray' tag="p">{t('customers.weAreProud')}</Typography>
-            </HeaderStyled>
-
-            <AsideStyled>
-              <Typography color='gray' tag='p' size="xxsmall" letterSpacing="space1">&lt;{t('customers.alt.30Customers')}&gt;</Typography>
-            </AsideStyled>
-          </ContentStyled>
-          <CustomersContainer className="customersList">
-            <CustomersList customers={customers} />
-          </CustomersContainer>
-        </BlackLineStyled>
-      </OurCustomersStyled>
-    </>
+          <AsideStyled>
+            <Typography
+              color="gray"
+              tag="p"
+              size="xxsmall"
+              letterSpacing="space1"
+            >
+              &lt;{t('clients.alt.30Clients')}&gt;
+            </Typography>
+          </AsideStyled>
+        </ContentStyled>
+        <CustomersContainer className="customersList">
+          <CustomersList customers={customers} />
+        </CustomersContainer>
+      </BlackLineStyled>
+    </OurCustomersStyled>
   );
-};
+}
 export default OurCustomers;
