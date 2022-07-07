@@ -13,7 +13,7 @@ import { Typography } from '../../../styles/typography';
 
 export default function Nav() {
   const [MenuClick, setClick] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isWhiteLogo, setIsWhiteLogo] = useState(false);
 
   const handleWhite = () => {
     const observer = new MutationObserver(handleMutation);
@@ -24,15 +24,9 @@ export default function Nav() {
 
   const handleMutation = (mutation) => {
     if (mutation[0].target.classList.contains('white')) {
-      document
-        .querySelector('.navImage')
-        .setAttribute('src', '/images/L2Code-Logo-White.svg');
-      setIsAnimating(true);
+      setIsWhiteLogo(true);
     } else {
-      document
-        .querySelector('.navImage')
-        .setAttribute('src', '/images/L2Code-Logo.svg');
-      setIsAnimating(false);
+      setIsWhiteLogo(false);
     }
   };
 
@@ -70,9 +64,18 @@ export default function Nav() {
         <NavItemStyled>
           <Link href="/">
             <ImageStyled
+              hidden={!isWhiteLogo}
               className="navImage"
-              src="/images/L2Code-Logo.svg"
               alt="L2 Code"
+              src="/images/L2Code-Logo-White.svg"
+            />
+          </Link>
+          <Link href="/">
+            <ImageStyled
+              hidden={isWhiteLogo}
+              className="navImage"
+              alt="L2 Code"
+              src="/images/L2Code-Logo.svg"
             />
           </Link>
         </NavItemStyled>
@@ -90,7 +93,7 @@ export default function Nav() {
 
         <NavItemStyled>
           <NavButtonStyled onClick={() => setClick(true)}>
-            <SandwichMenuStyled borderWhite={isAnimating} />
+            <SandwichMenuStyled borderWhite={isWhiteLogo} />
             <DivTextStyled>
               <Typography
                 tag="p"
