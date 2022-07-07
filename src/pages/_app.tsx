@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     setClientLanguage(language);
   }, [language]);
 
-  useEffect(()=> {
+  useEffect(() => {
     ReactGa.initialize('UA-231486762-1');
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
