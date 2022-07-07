@@ -55,7 +55,7 @@ export default function HeaderCases({
 
             <Typography
               tag="h1"
-              // size="xlarge"
+              size="xxlarge" // size="xlarge"
               fontWeight="weight3"
               lineHeight="line100"
               letterSpacing="space2"
@@ -94,7 +94,7 @@ export default function HeaderCases({
           </MainTextStyled>
         </MainContentStyled>
 
-        <DivItemStyled bgImageSmall={backgroundImageSmall} />
+        {/* <DivItemStyled bgImageSmall={backgroundImageSmall} /> */}
       </ContainerStyled>
 
       <SectionOnePageStyled>
@@ -102,12 +102,12 @@ export default function HeaderCases({
           <DivItemSTextStyled>
             <Typography
               tag="h1"
-              size="small"
+              size="medium"
               fontWeight="weight3"
-              lineHeight="line120"
+              lineHeight="line90"
               color="gray"
               fontFamily="font1"
-              letterSpacing="space1"
+              letterSpacing="space2"
             >
               {t(h1Second)}
             </Typography>

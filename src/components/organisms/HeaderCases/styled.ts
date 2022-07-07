@@ -20,6 +20,10 @@ export const ContainerStyled = styled.section<HeaderCasesBgImage>`
   justify-content: center;
   flex-wrap: wrap;
 
+  //
+  //width: 100%;
+  //padding-bottom: 100px;
+
   @media (max-width: 600px), (max-height: 415px) {
     width: 100% !important;
   }
@@ -30,12 +34,14 @@ export const ContainerStyled = styled.section<HeaderCasesBgImage>`
 `;
 
 export const MainContentStyled = styled.hgroup`
-  background-color: rgba(23, 27, 33, 0.6);
   width: 100%;
   @media (max-width: 500px) {
     font-size: 10px;
     line-height: 14px;
   }
+
+  //
+  position: relative;
 `;
 
 export const MainTextStyled = styled.hgroup`
@@ -54,22 +60,24 @@ export const MainTextStyled = styled.hgroup`
       width: 43px !important;
     }
   }
+
   h2 {
     text-align: center;
     margin-bottom: 16px;
 
-    @media (max-width: 600px) {
+    /*@media (max-width: 600px) {
       font-size: 60px;
-    }
+    }*/
 
     @media (max-width: 910px) {
-      font-size: 120px;
+      //font-size: 120px;
       margin-bottom: 20px;
     }
 
     @media (max-width: 800px) {
-      font-size: 64px;
-      margin-bottom: 13px;
+      //font-size: 64px;
+      //margin-bottom: 13px;
+      margin-bottom: 18px;
     }
 
     @media (max-width: 500px) {
@@ -78,54 +86,86 @@ export const MainTextStyled = styled.hgroup`
         overflow-wrap: break-word;
       }
     }
+    @media (max-width: 360px) {
+      font-weight: 700;
+    }
   }
 
   h1 {
     text-align: center;
-    font-size: 15rem;
-    margin-bottom: 16px;
+    //font-size: 15rem;
+    //margin-bottom: 16px;
 
     ::selection {
       background: ${colors.purple};
       color: ${colors.gray};
     }
 
+    @media (max-width: 1400px) {
+      font-size: 150px;
+    }
+
     @media (min-width: 801px) and (max-width: 1220px) {
       font-size: 140px;
     }
+    @media (max-width: 1060px) {
+      font-size: 130px;
+    }
+
+    @media (max-width: 960px) {
+      font-size: 110px;
+    }
 
     @media (max-width: 910px) {
-      margin-bottom: 15px;
+      //margin-bottom: 15px;
     }
 
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media (max-width: 500px) {
+      font-size: 56px;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 36px;
+      line-height: 90%;
+    }
+
+    /*@media (orientation: portrait) and (max-width: 800px) {
       margin-top: 120px;
       margin-bottom: 8px;
-    }
+    }*/
   }
 
   p {
     text-align: center;
 
     @media (max-width: 1220px) {
-      font-size: 34px;
+      font-size: 20px;
     }
 
     @media (max-width: 910px) {
-      font-size: 30px;
-      margin-bottom: 20px;
+      //font-size: 20px;
+      //margin-bottom: 20px;
     }
 
     @media (max-width: 800px) {
-      font-size: 64px;
-      margin-bottom: 13px;
+      font-size: 15px;
+      //margin-bottom: 13px;
     }
 
-    @media (max-width: 500px) {
+    /*@media (max-width: 500px) {
       &.textWrap {
         max-width: 220px;
         overflow-wrap: break-word;
       }
+    }*/
+
+    @media (max-width: 360px) {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      text-align: center;
+      letter-spacing: -0.04em;
     }
   }
 `;
@@ -135,14 +175,19 @@ export const DivItemStyled = styled.div<HeaderCasesBgImageSmall>`
     props.bgImageSmall ? props.bgImageSmall : 'none'});
   background-position: center;
   background-size: cover;
+
   width: 80%;
+  //width: 100%;
   position: absolute;
   height: 600px;
   top: 801px;
   border-radius: 8px;
-  padding: 0px 152px;
+  //padding: 0px 152px;
 
-  @media (max-width: 800px) {
+  //
+  max-width: 1500px;
+
+  /*@media (max-width: 800px) {
     max-width: 270px;
     min-width: 270px;
   }
@@ -175,7 +220,7 @@ export const DivItemStyled = styled.div<HeaderCasesBgImageSmall>`
     &:nth-child(5) {
       order: 5;
     }
-  }
+  } */
 `;
 
 // export const ImageStyled = styled.img`
@@ -205,6 +250,7 @@ export const LanguageStyled = styled.div`
     flex-direction: row;
     margin-top: 32px;
     gap: 16px;
+    justify-content: center;
   }
 
   @media (max-height: 415px), (max-width: 500px) {
@@ -261,32 +307,43 @@ export const SectionOnePageStyled = styled.section`
   width: 100%;
 
   @media (max-width: 1366px) {
-    padding: 0px 12px;
+    //padding: 0px 12px;
   }
 `;
 
 export const DivTextStyled = styled.div`
   display: flex;
   flex-wrap: wrap;
-  align-self: stretch;
-  justify-content: space-between;
+  //align-self: stretch;
+  //justify-content: space-between;
   max-width: 1018px;
-  margin: 0 auto;
+  //margin: 0 auto;
   margin-top: 40%;
   margin-bottom: 6rem;
 
-  @media (max-width: 800px) {
+  /*@media (max-width: 800px) {
     max-width: 1018px;
   }
 
   @media (max-width: 576px) {
     flex-direction: column;
-  }
+  }*/
 `;
 
 export const DivItemSTextStyled = styled.div`
-  max-width: 314px;
+  //min-width: 225px; //314px;
+  max-width: 464px;
+  height: auto;
 
+  @media (max-width: 500px) {
+    width: 350px;
+  }
+
+  @media (max-width: 400px) {
+    width: 225px;
+  }
+
+  /*
   @media (max-width: 800px) {
     max-width: 270px;
     min-width: 270px;
@@ -321,15 +378,30 @@ export const DivItemSTextStyled = styled.div`
       order: 5;
     }
   }
+  */
 
   h1 {
     ::selection {
       background: ${colors.purple};
       color: ${colors.gray};
     }
-    padding-bottom: 18px;
-    width: 314px;
+    padding-bottom: 24px;
+    //width: 314px;
 
+    @media (max-width: 800px) {
+      font-size: 64px;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 42px;
+    }
+
+    @media (max-width: 400px) {
+      padding-bottom: 20px;
+      font-size: 32px;
+    }
+
+    /*
     @media (max-width: 800px) {
       padding-bottom: 16px;
     }
@@ -337,6 +409,7 @@ export const DivItemSTextStyled = styled.div`
     @media (max-width: 800px) {
       padding-bottom: 16px;
     }
+    */
   }
 
   p {
@@ -344,10 +417,23 @@ export const DivItemSTextStyled = styled.div`
       background: ${colors.purple};
       color: ${colors.gray};
     }
-    width: 430px;
-    margin-bottom: 6rem;
 
     @media (max-width: 800px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 12px;
+    }
+
+    //width: 430px;
+    //margin-bottom: 6rem;
+
+    /*@media (max-width: 800px) {
       max-width: 230px;
 
       &.last-paragraph {
@@ -369,6 +455,6 @@ export const DivItemSTextStyled = styled.div`
       &.last-paragraph {
         max-width: 300px;
       }
-    }
+    }*/
   }
 `;
