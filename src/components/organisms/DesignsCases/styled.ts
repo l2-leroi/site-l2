@@ -6,6 +6,8 @@ export const ContainerStyled = styled.div`
   background-color: #171b21;
   padding: 18rem 2.8rem 10rem;
   display: flex;
+  margin: auto;
+  justify-content: center;
 
   // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   // padding: 10rem 2.8rem 48rem;
@@ -28,26 +30,37 @@ export const ContainerStyled = styled.div`
 `;
 
 export const ContentStyled = styled.section`
-  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  max-width: 1500px;
+  margin-top: 280px;
+  -webkit-box-pack: center;
+  justify-content: center;
+
+  //position: relative;
+  //display: flex;
+  //flex-direction: column;
+  //max-width: 1500px;
+
+  /*
   //margin: 0 auto;
   //margin: auto;
-  //height: 1500px;
-  height: 100%;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  //height: 1500px;*/
+
+  //height: 100%;
+  //width: fit-content;
+  //margin-left: auto;
+  //margin-right: auto;
 `;
 
 export const DivStyled = styled.div`
   text-align: center;
   color: White;
-  margin-left: 54rem;
+  //margin-left: 54rem;
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  //margin-left: auto;
+  //margin-right: auto;
+  width: 100%;
 `;
 
 export const AsideStyled = styled.aside`
@@ -79,6 +92,9 @@ export const ParagraphStyled = styled.p`
 `;
 
 export const TecTitleStyled = styled.h2`
+  width: 100%;
+  justify-content: center;
+  display: flex;
   font-family: 'Neue Machina', sans-serif;
   font-size: 64px;
   line-height: 57.6px;
@@ -90,6 +106,14 @@ export const TecTitleStyled = styled.h2`
   ::selection {
     background: ${colors.purple};
     color: ${colors.gray};
+  }
+
+  @media (max-width: 400px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 32px;
   }
 
   // @media (max-width: 930px) {
@@ -108,10 +132,6 @@ export const TecTitleStyled = styled.h2`
 `;
 
 export const TitleStyled = styled.h2`
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-
   font-family: 'Neue Machina', sans-serif;
   font-size: 64px;
   text-align: center;
@@ -122,6 +142,14 @@ export const TitleStyled = styled.h2`
   ::selection {
     background: ${colors.purple};
     color: ${colors.gray};
+  }
+
+  @media (max-width: 400px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 32px;
   }
 
   // @media (max-width: 930px) {
@@ -159,6 +187,9 @@ export const PhraseStyled = styled.p`
 `;
 
 export const ButtonImages = styled.button`
+  //width: 100%;
+  //max-width: 174px; //mudar o tamanho 340px;
+
   background-color: #242a33;
   padding: 10px;
   padding-left: 40px;
@@ -168,7 +199,7 @@ export const ButtonImages = styled.button`
   font-family: 'Circular Air Pro';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 24px; //font-size: 12px;
   color: #ffffff;
   line-height: 140%;
   border-style: none;
@@ -183,6 +214,9 @@ export const ButtonImages = styled.button`
 `;
 
 export const ButtonPrototype = styled.button`
+  //width: 100%;
+  //max-width: 174px; //mudar o tamanho 340px;
+
   padding: 10px;
   padding-left: 40px;
   padding-right: 40px;
@@ -194,7 +228,7 @@ export const ButtonPrototype = styled.button`
   font-family: 'Circular Air Pro';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 24px; //font-size: 12px;
   color: #ffffff;
   line-height: 140%;
   border-style: none;
@@ -209,15 +243,21 @@ export const ButtonPrototype = styled.button`
 `;
 
 export const ButtonStyled = styled.div`
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  //width: fit-content;
+  width: 100%;
+  //max-width: 78px;
+  //margin-left: auto;
+  //margin-right: auto;
   border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 80px;
+  //margin-bottom: 80px;
+  //margin-top: 60px;
+
+  margin: auto;
   margin-top: 60px;
+  margin-bottom: 80px;
 
   &:first-child {
     margin-bottom: 8px;
@@ -246,12 +286,18 @@ export const ImageStyled = styled.img`
   left: 0px;
 
   @media (max-width: 800px) {
-    max-width: 150px;
+    max-width: 100px;
+    height: auto;
   }
 
-  @media (max-width: 576px) {
-    display: none;
+  @media (max-width: 380px) {
+    max-width: 80px;
+    height: auto;
   }
+
+  //@media (max-width: 576px) {
+  //  display: none;
+  //}
 
   > div {
     width: 50px;
@@ -268,6 +314,15 @@ export const TechnologiesStyled = styled.div`
   justify-content: center;
   padding-top: 60px;
   grid-gap: 80px;
+
+  @media (max-width: 800px) {
+    grid-gap: 40px;
+  }
+
+  @media (max-width: 360px) {
+    grid-gap: 40px;
+    padding-top: 42px;
+  }
 `;
 
 export const LineAnimation = styled.div``;
