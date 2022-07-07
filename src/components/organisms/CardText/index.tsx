@@ -32,12 +32,12 @@ export default function CardText({
       <DivItemStyled>
         <Typography
           tag="h1"
-          size="small"
+          size="medium"
           fontWeight="weight3"
-          lineHeight="line120"
+          lineHeight="line90"
           color="gray"
           fontFamily="font1"
-          letterSpacing="space1"
+          letterSpacing="space2"
         >
           {t(h1)}
         </Typography>
