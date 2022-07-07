@@ -285,8 +285,9 @@ export const ImageStyled = styled.img`
   display: none;
   position: absolute;
   z-index: 0;
-  height: 100vh;
-  width: auto;
+  height: 100%;
+  width: 100vw;
+  object-fit: cover;
 
   @media (min-width: 2000px) {
     width: 100%;
