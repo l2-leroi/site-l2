@@ -11,7 +11,7 @@ import { defaultLanguage, languages } from '../i18n';
 
 import { GlobalStyle } from '../styles/global';
 import Footer from '../components/organisms/Footer/index';
-import Nav from '../components/organisms/Nav';
+import NavOnePage from '../components/organisms/NavOnePage';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -29,12 +29,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [language]);
 
   useEffect(() => {
-    ReactGa.initialize('G-E4RS6QZT6P');
+    ReactGa.initialize('UA-173567171-1');
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
 
   useEffect(() => {
-    hotjar.initialize(3015131, 6);
+    hotjar.initialize(3055225, 6);
     hotjar.identify('USER_ID', { userProperty: 'value' });
     hotjar.event('button-click');
     hotjar.stateChange('/');
@@ -72,7 +72,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
       {/* End Google Tag Manager (noscript) */}
       <GlobalStyle />
-      <Nav />
+      <NavOnePage />
       <Component {...pageProps} />
       <Footer />
     </>
