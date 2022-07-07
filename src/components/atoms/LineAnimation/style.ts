@@ -28,7 +28,7 @@ export const TextContainerStyled = styled.div`
   position: absolute;
   z-index: 21;
   width: 105%;
-  top: calc(100% - 70px - 5em);
+  top: calc(100% - 50px - 7em);
 `;
 
 export const LineContainerStyled = styled.div<Props>`
@@ -66,6 +66,9 @@ export const SpinningIconStyled = styled.div`
   transition: bottom 0.5s ease;
 
   img {
+    ::selection {
+      background: transparent;
+    }
     @media (max-width: 1366px) {
       max-width: 380px;
     }

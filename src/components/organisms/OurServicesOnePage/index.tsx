@@ -1,6 +1,5 @@
 import React from 'react';
 import i18next from 'i18next';
-import ScrollCircle from '../../atoms/ScrollCircle';
 import {
   SectionOnePageStyled,
   ContentOnePageStyled,
@@ -8,7 +7,6 @@ import {
   DivServiceItemsStyled,
   DivItemStyled,
   ImageStyled,
-  ScrollArrow,
 } from './styled';
 import { Typography } from '../../../styles/typography';
 
@@ -16,14 +14,6 @@ export default function OurServicesOnePage() {
   const { t } = i18next;
   return (
     <SectionOnePageStyled id="services">
-      <ScrollArrow className="SpinnerCircle2">
-        <ScrollCircle
-          isWhiteImage={false}
-          blackImage={`${t('images.spinner')}`}
-          whiteImage={`${t('images.whiteSpinner')}`}
-        />
-      </ScrollArrow>
-
       <ContentOnePageStyled>
         <DivServicesStyled>
           <Typography

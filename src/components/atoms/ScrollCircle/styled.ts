@@ -22,7 +22,7 @@ export const ImageArrowSpinnerStyled = styled.img`
   }
 
   &.animate {
-    animation: ${SpinningAnimation} 27s linear infinite;
+    animation: ${SpinningAnimation} 27s linear infinite forwards;
   }
 
   @media (max-width: 800px) {
