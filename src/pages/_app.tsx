@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [language])
 
   useEffect(()=> {
-    ReactGa.initialize('G-E4RS6QZT6P');
+    ReactGa.initialize('UA-231486762-1');
     ReactGa.pageview(window.location.pathname + window.location.search);
   }, [])
 
