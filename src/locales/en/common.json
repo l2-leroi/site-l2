@@ -1,0 +1,120 @@
+{
+  "images": {
+    "spinner": "/images/Arrow-Spinner-English.svg",
+    "whiteSpinner": "/images/Arrow-Spinner-English-White.svg",
+    "alt": {
+      "thereIsMore": "There's more down here"
+    }
+  },
+  "cases": {
+    "ourCases": "OUR SELECTED CASES",
+    "seeSomeCases": "SEE SOME OF OUR CASES",
+    "weDoWell": "We do a great job because we care about quality, aesthetics and, most of all, results.",
+    "weHelped": "We helped this American start-up to define its business and released its product.",
+    "webApp": "A Webapp that facilitates getting student loans for young people all over Brazil.",
+    "providers": "Service providers succeed in life with this app we created for a Brazilian start-up.",
+    "educationalCredit": "We helped thousands of young people in the bureaucratic journey of getting student loans.",
+    "alt": {
+      "coverMemoriesUp": "Memories Up Cover",
+      "coverMoreAccess": "Mais Acesso Cover",
+      "coverImStopped": "Tô Parado Cover"
+    }
+  },
+  "footer": {
+    "letsTalk": "LET'S TALK",
+    "ourWhatsapp": "our whatsapp",
+    "ourEmail": "our e-mail",
+    "bePart": "be part of the team",
+    "weEmbrace": "We embrace the talents from the world.",
+    "weWork": "We work 100% remotely.",
+    "madeWith": "Made with",
+    "copyright": "Copyright © All rights reserved"
+  },
+  "header": {
+    "loveTo": "Love to",
+    "followUs": "Follow us",
+    "weCreate": "We create digital products and online experiences that people love"
+  },
+  "headerOurCareer": {
+    "beTrainee": "BE A TRAINEE AT L2CODE",
+    "hereTheTrainee": "Here the trainee doesn't make coffee, it makes a difference. ● Every 4 months we hire undergraduate students to start their careers with us.",
+    "toTheTalents": "TO THE TALENTS",
+    "registrationUntil": "Registrations until:",
+    "resultIn": "Result in:",
+    "iWantToApply": "I WANT TO APPLY",
+    "makeYourCandidacy": "Apply now and get an answer first. Don't worry, you can update your details later.",
+    "waitForTheResult": "Wait for the result. We will forward it to you by email.",
+    "lastClass": "Last class of Trainnes called.",
+    "aboutTheProgram": "About the Traine program",
+    "youAreGoingTo": "You will work in an exceptional IT team and will be trained for 12 months. The focus is to expand your knowledge in different technologies, so you discover what you really like and we direct your potential to generate maximum impact. ● We are flexible with schedules, which makes it easier for you to reconcile your academic routine.",
+    "requirements": "Requirements",
+    "desirable": "+ Desirable to be studying the last year of Computer Science or equivalent or another higher course in the IT area;",
+    "availability": "+ Availability to work 30 hours per week;",
+    "knowledge": "+ Knowledge of programming logic and data structure."
+  },
+  "TalentsOurCareer": {
+    "weEmbrace": "We embrace the talents of the world",
+    "weAreConnected": "We are connected by technology and passion to make a positive impact on the world. If you're hungry to grow, then we'd love to have you on the team.",
+    "weLove": "We love our work Except on Saturdays",
+    "weCreate": "We create a welcoming and inclusive environment for you to give your best. ● But for a good job, you also need a good rest. That's why weekends are for resting and enjoying life!",
+    "enjoyToo": "Also enjoy a day off on your birthday. After all, this is a special day!",
+    "weValue": "We value people",
+    "empathize": "Having empathy is a great work practice. We are all constantly learning and looking to grow together.",
+    "whatTheySay": "What the Lcoders say:",
+    "comment1": "“Relaxed atmosphere, flexible hours, very nice team, opportunity for growth.”",
+    "comment2": "“At L2 you learn something new every day. Here, your opinion matters and contributes to the growth of the team.”",
+    "comment3": "“L2 has a great work environment, is flexible and very supportive.”",
+    "comment4": "“L2 has created an amazing environment where everyone helps each other and has fun working together.”",
+    "comment5": "“Welcoming staff, I enjoy working here, it has been a great opportunity for knowledge and experience”",
+    "comment6": "“I grew up a lot in L2, personally and professionally. We are always learning something new and helping each other.”"
+  },
+  "menu": {
+    "ourWhatsapp": "our whatsapp",
+    "ourEmail": "our e-mail",
+    "bePart": "be part of the team"
+  },
+  "nav": {
+    "services": "Services",
+    "cases": "Cases",
+    "clients": "Clients",
+    "contact": "Contact"
+  },
+  "clients": {
+    "someClients": "SOME OF OUR CLIENTS",
+    "weAreProud": "We are proud to partner with companies and start-ups that are hungry for innovation.",
+    "alt": {
+      "30Clients": "30+ CLIENTS"
+    }
+  },
+  "services": {
+    "ourServices": "OUR SERVICES",
+    "weImprove": "We improve the experience of the products and services of our clients, focusing on results for their businesses.",
+    "followUs": "Follow us",
+    "outsourcing": "Outsourcing Advisory",
+    "increase": "Increase your productive capacity ● Having our team with you, you add to your team professionals in love with work who have a diversity of skills.",
+    "startupService": "Start-up Service",
+    "uxuiTeam": "Our UX/UI and development team will help you to project and build your MVP from the scratch, “ensuring” a fast and profitable delivery.",
+    "ideation": "Ideation",
+    "coCreation": "Co-creation with our multidisciplinary team in the design of your product and business strategies.",
+    "uxuiDesign": "UX / UI Design",
+    "weDesign": "We design a gorgeous and functional products for the users, aligned with the goals of your business.",
+    "consultingService": "IT Consulting Service",
+    "ourTechLead": "Our Teach Lead Maicon Martins will advise you about the best practices that your company can use in your infrastructure.",
+    "text": {
+      "seeOurServices": "SEE OUR SERVICES"
+    }
+  },
+  "outSourcing": {
+    "ourServices": " Outsourcing Advisory · Ideation · Start-up Service · IT Consulting Service · Design · ",
+    "ourClients": " We would love to have you on this list · We would love to have you on this list · We would love to have you on this list · "
+  },
+  "scroll": {
+    "home": "Home",
+    "about": "About",
+    "cases": "Cases",
+    "services": "Services",
+    "people": "People",
+    "career": "Career",
+    "contact": "Contact"
+  }
+}
