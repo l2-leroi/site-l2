@@ -89,11 +89,15 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner }) => {
       verifySpinnerMaxHeight(spinnerElement);
     }
 
-    const distanceFromTop = containerElement.getBoundingClientRect().top;
-    if (distanceFromTop > 250) {
+    const screen = innerWidth > 800 ? 0.2 : 0.6;
+
+    const distanceFromTop =
+      window.innerHeight * screen -
+      containerElement.getBoundingClientRect().top;
+    if (distanceFromTop < 0) {
       resetAll();
     }
-    if (distanceFromTop < 250) {
+    if (distanceFromTop > 0) {
       if (hasOutSourcing) {
         textElement.style.bottom = null;
 
