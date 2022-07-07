@@ -14,7 +14,10 @@ export const ContentStyled = styled.section`
   flex-direction: row;
   justify-content: center;
   padding-bottom: 140px;
-  //overflow: hidden;
+
+  @media (max-width: 360px) {
+    padding-bottom: 160px;
+  }
 `;
 
 export const ListStyled = styled.section``;
@@ -192,9 +195,14 @@ export const LinkStyled = styled.a`
 `;
 
 export const ImageStyled = styled.img<DesignPrototypePropsMockup>`
-  width: ${(props) => props.width}px;
-  height: ${(props) => props.height}px;
-  border-radius: 40px;
+  max-width: ${(props) => props.width}px;
+  width: 100%;
+  height: auto;
+
+  /*@media (max-width: 360px) {
+    max-width: 335px;
+    max-height: 197px;
+  }*/
 
   &.imageBlock {
     display: block;
