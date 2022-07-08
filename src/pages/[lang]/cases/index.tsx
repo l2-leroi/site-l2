@@ -7,6 +7,9 @@ import { colors } from '../../../styles/colors';
 const AllCases: NextPage = () => {
   // make page refresh on top
   useEffect(() => {
+    const nav = document.querySelector('.nav');
+    nav?.classList.add('white');
+
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
     } else {
