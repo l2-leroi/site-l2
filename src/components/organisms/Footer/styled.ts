@@ -171,6 +171,7 @@ export const ImageStyled = styled.img`
 export const IdSpanStyled = styled.div`
   width: 10px;
   height: 2px;
+  position: relative;
   top: -200px;
 `;
 
