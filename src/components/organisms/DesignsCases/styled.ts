@@ -8,25 +8,6 @@ export const ContainerStyled = styled.div`
   display: flex;
   margin: auto;
   justify-content: center;
-
-  // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-  // padding: 10rem 2.8rem 48rem;
-
-  // @media (min-width: 2560px) {
-  //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 77%);
-  // }
-
-  // @media (min-width: 1920px) {
-  //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);
-  // }
-
-  // @media (max-width: 800px) {
-  //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
-  // }
-
-  // @media (max-width: 600px) {
-  //   padding-right: 0px;
-  // }
 `;
 
 export const ContentStyled = styled.section`
@@ -36,30 +17,12 @@ export const ContentStyled = styled.section`
   margin-top: 280px;
   -webkit-box-pack: center;
   justify-content: center;
-
-  //position: relative;
-  //display: flex;
-  //flex-direction: column;
-  //max-width: 1500px;
-
-  /*
-  //margin: 0 auto;
-  //margin: auto;
-  //height: 1500px;*/
-
-  //height: 100%;
-  //width: fit-content;
-  //margin-left: auto;
-  //margin-right: auto;
 `;
 
 export const DivStyled = styled.div`
   text-align: center;
   color: White;
-  //margin-left: 54rem;
   width: fit-content;
-  //margin-left: auto;
-  //margin-right: auto;
   width: 100%;
 `;
 
@@ -115,20 +78,6 @@ export const TecTitleStyled = styled.h2`
   @media (max-width: 360px) {
     font-size: 32px;
   }
-
-  // @media (max-width: 930px) {
-  //   width: 500px;
-  // }
-
-  // @media (max-width: 800px) {
-  //   width: 278px;
-  //   line-height: 28.8px;
-  // }
-
-  // @media (max-width: 415px) {
-  //   width: 264px;
-  //   line-height: 28.8px;
-  // }
 `;
 
 export const TitleStyled = styled.h2`
@@ -151,20 +100,6 @@ export const TitleStyled = styled.h2`
   @media (max-width: 360px) {
     font-size: 32px;
   }
-
-  // @media (max-width: 930px) {
-  //   width: 500px;
-  // }
-
-  // @media (max-width: 800px) {
-  //   width: 278px;
-  //   line-height: 28.8px;
-  // }
-
-  // @media (max-width: 415px) {
-  //   width: 264px;
-  //   line-height: 28.8px;
-  // }
 `;
 
 export const PhraseStyled = styled.p`
@@ -187,9 +122,6 @@ export const PhraseStyled = styled.p`
 `;
 
 export const ButtonImages = styled.button`
-  //width: 100%;
-  //max-width: 174px; //mudar o tamanho 340px;
-
   background-color: #242a33;
   padding: 10px;
   padding-left: 40px;
@@ -199,7 +131,7 @@ export const ButtonImages = styled.button`
   font-family: 'Circular Air Pro';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px; //font-size: 12px;
+  font-size: 24px;
   color: #ffffff;
   line-height: 140%;
   border-style: none;
@@ -214,9 +146,6 @@ export const ButtonImages = styled.button`
 `;
 
 export const ButtonPrototype = styled.button`
-  //width: 100%;
-  //max-width: 174px; //mudar o tamanho 340px;
-
   padding: 10px;
   padding-left: 40px;
   padding-right: 40px;
@@ -228,7 +157,7 @@ export const ButtonPrototype = styled.button`
   font-family: 'Circular Air Pro';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px; //font-size: 12px;
+  font-size: 24px;
   color: #ffffff;
   line-height: 140%;
   border-style: none;
@@ -243,18 +172,11 @@ export const ButtonPrototype = styled.button`
 `;
 
 export const ButtonStyled = styled.div`
-  //width: fit-content;
   width: 100%;
-  //max-width: 78px;
-  //margin-left: auto;
-  //margin-right: auto;
   border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  //margin-bottom: 80px;
-  //margin-top: 60px;
-
   margin: auto;
   margin-top: 60px;
   margin-bottom: 80px;
@@ -294,10 +216,6 @@ export const ImageStyled = styled.img`
     max-width: 80px;
     height: auto;
   }
-
-  //@media (max-width: 576px) {
-  //  display: none;
-  //}
 
   > div {
     width: 50px;
