@@ -288,6 +288,7 @@ export const ImageStyled = styled.img`
   height: 100%;
   width: 100vw;
   object-fit: cover;
+  max-width: 100%;
 
   @media (min-width: 2000px) {
     width: 100%;
