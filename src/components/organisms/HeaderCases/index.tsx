@@ -10,6 +10,8 @@ import {
   SectionOnePageStyled,
   DivTextStyled,
   DivItemSTextStyled,
+  DivImageStyled,
+  ContainerImageStyled,
 } from './styled';
 
 interface HeaderCasesProps {
@@ -96,6 +98,10 @@ export default function HeaderCases({
 
         {/* <DivItemStyled bgImageSmall={backgroundImageSmall} /> */}
       </ContainerStyled>
+
+      <ContainerImageStyled>
+        <DivImageStyled src={backgroundImageSmall} />
+      </ContainerImageStyled>
 
       <SectionOnePageStyled>
         <DivTextStyled>
