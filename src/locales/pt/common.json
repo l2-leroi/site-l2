@@ -78,6 +78,7 @@
     "paragraph": "Trabalhamos ao lado dos nossos clientes para melhorar a experiência dos produtos e serviços, trazendo resultados para o negócio.",
     "makeItHappen": "FAÇA ACONTECER",
     "audioText": "Leroi Oliveira ● Líder técnico",
+    "seeHowItWorks": "VEJA COMO FUNCIONA",
     "outSourcingAdvisory": {
       "title": "Outsourcing Consultativo",
       "paragraph": "Aumente sua capacidade produtiva ● Com acesso a nossa equipe, você agraga ao seu time profissionais apaixonados com competências diversas.",
@@ -86,7 +87,7 @@
         "costs": "Custos fixos variáveis",
         "flexibility": "Flexibilidade e rapidez",
         "access": "Acesso aos recursos da L2",
-        "l2": "Equipe L2 integrada a sua equipe",
+        "services": "Centro de <s>custos</s> serviços",
         "updated": "Atualizado às mudanças do mercado"
       }
     },
@@ -94,15 +95,51 @@
       "title": "Ideação",
       "paragraph": "Co-criação com nosso time multidisciplinar na concepção do seu produto e estratégias de negócio.",
       "list": {
-        "optimization": "Preparação do escopo",
-        "costs": "Custos fixos variáveis",
-        "flexibility": "Flexibilidade e rapidez",
-        "access": "Acesso aos recursos da L2",
-        "l2": "Equipe L2 integrada a sua equipe",
-        "updated": "Atualizado às mudanças do mercado"
+        "scope": "Preparação do escopo",
+        "differential": "Identificação dos diferenciais",
+        "immersive": "Sessão imersiva",
+        "product": "Justificativa do produto",
+        "riskReduction": "Redução do risco",
+        "costReduction": "Redução de custos"
+      }
+    },
+    "UXUI": {
+      "title": "UX/UI Design",
+      "paragraph": "Projetamos um produto encantador e funcional para os usuários, aliado aos objetivos do seu negócio.",
+      "list": {
+        "design": "UX/UI design",
+        "research": "Pesquisa de experiência",
+        "concept": "Design concept",
+        "thinking": "Design thinking",
+        "architecture": "Arquitetura de informação",
+        "systems": "Design systems",
+        "mobile": "Responsividade e mobile-first",
+        "prototype": "Protótipos navegáveis"
+      }
+    },
+    "startupService": {
+      "title": "Atendimento à Startup",
+      "paragraph": "Nossa equipe de UX/UI e desenvolvimento irá projetar e construir seu MVP a partir do zero, “garantindo” uma entrega rápida e rentável.",
+      "list": {
+        "market": "Direcionamento de mercado",
+        "growth": "Foco no crescimento do negócio",
+        "investors": "Direcionamento do produto para investidores",
+        "pitch": "Estratégias de pitch de negócio",
+        "mvp": "Concepção de MVP",
+        "test": "Teste e lançamento"
+      }
+    },
+    "ITConsulting": {
+      "title": "Consultoria em TI",
+      "paragraph": "Nosso Tech Lead Maicon Martins irá aconselhar você sobre as melhores práticas que sua empresa pode usar na infraestrutura.",
+      "list": {
+        "requirement": "Compreensão e análise dos requisitos de TI da organização e do ambiente subjacente",
+        "advice": "Aconselhamento de soluções e serviços em TI",
+        "infrastructure": "Infraestrutura de rede",
+        "cloud": "Ambientes em nuvem",
+        "process": "Gerenciamento e supervisão do processo de implementação dos sistemas"
       }
     }
-
   },
   "outSourcing": {
     "outsourcing": "Outsourcing Consultivo",

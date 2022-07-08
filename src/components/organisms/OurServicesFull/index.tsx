@@ -12,92 +12,103 @@ import {
     ContentStyled,
     VideoSectionStyled,
     VideoTitleStyled,
-    TitleGroupStyled
+    TitleGroupStyled,
+    OurServicesFullStyled,
+    ArrowSpinnerComponentStyled
 
 
 } from './styled';
 import ServiceList from '../../molecules/ServiceList';
+import ScrollCircle from '../../atoms/ScrollCircle';
 export default function OurServicesFull() {
   const {t} = i18next
 
 
   const services = [
-    {title: "OutSourcing Consultativo",
-    paragraph: "Aumente sua capacidade produtiva ● Com acesso a nossa equipe, você agraga ao seu time profissionais apaixonados com competências diversas.", 
+    {title: "ourServicesFull.outSourcingAdvisory",
     hasImages: false, 
     images: [], 
     hasVideo: true, 
     video: {src: "", text: "Leroi Oliveira ● Líder técnico"}, 
-    list: ["Otimização e controle de custos", "Custos fixos variáveis", "Flexibilidade e rapidez", "Acesso aos recursos da L2",
-    "Centro de custos serviços", "Atualizado às mudanças do mercado"]
+    list: ["optimization", "access", "costs", "services", "flexibility", "updated"]
     },
-    {title: "Ideação",
-    paragraph: "Co-criação com nosso time multidisciplinar na concepção do seu produto e estratégias de negócio.", 
+    {
+    title: "ourServicesFull.ideation",
     hasImages: true, 
-    images: ["", ""], 
+    images: ["first-image-services.png", "second-image-services.png"], 
     hasVideo: false, 
     video: {}, 
-    list: ["Preparação do escopo", "Identificação dos diferenciais", "Sessão imersiva", "Justificativa do produto", "Redução do risco",
-    "Redução de custos"]
+    list: ["scope", "product", "differential", "riskReduction", "immersive", "costReduction"]
     },
-    {title: "UX/UI Design",
-    paragraph: "Projetamos um produto encantador e funcional para os usuários, aliado aos objetivos do seu negócio.", 
+    {title: "ourServicesFull.UXUI",
     hasImages: false, 
     images: [], 
     hasVideo: true, 
     video: {src: "", text: null}, 
-    list: ["UX/UI Design", "Pesquisa de experiência", "Design concept", "Design thinking", "Arquitetura de informação",
-    "Design systems", "Responsividade e mobile-first", "Protótipos navegáveis"]
+    list: ["design", "architecture", "research", "systems", "concept",
+    "mobile", "thinking", "prototype"]
     },
-    {title: "Atendimento à Startup",
-    paragraph: "Nossa equipe de UX/UI e desenvolvimento irá projetar e construir seu MVP a partir do zero, “garantindo” uma entrega rápida e rentável.", 
+    {title: "ourServicesFull.startupService",
     hasImages: false, 
     images: [], 
     hasVideo: true, 
     video: {src: "", text: "Leroi Oliveira ● Líder técnico"}, 
-    list: ["Direcionamento de mercado", "Foco no crescimento do negócio", "Direcionamento do produto para investidores",
-    "Estratégias de pitch de negócio", "Concepção de MVP", "Teste e lançamento"]
+    list: ["market", "pitch", "growth", "mvp", "investors", "test"]
     },
-    {title: "Consultoria em TI",
-    paragraph: "Nosso Tech Lead Maicon Martins irá aconselhar você sobre as melhores práticas que sua empresa pode usar na infraestrutura.", 
+    {title: "ourServicesFull.ITConsulting",
     hasImages: true, 
-    images: ["", ""], 
+    images: ["first-image-services.png", "second-image-services.png"], 
     hasVideo: false, 
     video: {}, 
-    list: ["Compreensão e análise dos requisitos de TI da organização e do ambiente subjacente", "Aconselhamento de soluções e serviços em TI",
-    "Infraestrutura de rede", "Ambientes de nuvem", "Gerenciamento e supervisão do processo de implementação de sistemas"]
+    list: ["requirement", "cloud", "advice", "process", "infrastructure"]
     },
   ];
 
   return (
     <SectionStyled>
+      <OurServicesFullStyled>
+      
+          <HeaderStyled>
+              <TitleGroupStyled>
+                <TitleStyled>
+                  <Typography tag='h2' color='gray' size='medium' fontWeight='weight3' fontFamily='font1' lineHeight='line90'>
+                    {t('ourServicesFull.ourServices')}
+                  </Typography>
+                </TitleStyled>
+                <ParagraphStyled>
+                      <Typography tag='p' color='gray'>{t('ourServicesFull.paragraph')}</Typography>
+                  </ParagraphStyled> 
+              </TitleGroupStyled>
 
-        <HeaderStyled>
-            <TitleGroupStyled>
-                <Typography color='gray' tag="h2" size='medium' fontWeight='weight3' fontFamily='font1' lineHeight='line90'>
-                {t('ourServicesFull.ourServices')}
+              <AsideStyled>
+                <Typography color='gray' tag='p' size="xxsmall" letterSpacing="space1">
+                  &lt;{t('ourServicesFull.makeItHappen')}&gt;
                 </Typography>
-               <ParagraphStyled>
-                    <Typography color='gray' tag="p">{t('ourServicesFull.paragraph')}</Typography>
-                </ParagraphStyled> 
-            </TitleGroupStyled>
+              </AsideStyled>
+              
+          </HeaderStyled>
 
-            <AsideStyled>
-              <Typography color='gray' tag='p' size="xxsmall" letterSpacing="space1">
-                &lt;{t('ourServicesFull.makeItHappen')}&gt;
-              </Typography>
-            </AsideStyled>
-            
-        </HeaderStyled>
+        <ArrowSpinnerComponentStyled>
+          <ScrollCircle isWhiteImage={true}
+              blackImage={''}
+              whiteImage={'/images/innovativeCompanies.png'}
+              alt={`${t('images.alt.thereIsMore')}`} />
+        </ArrowSpinnerComponentStyled>
+          
 
-        <ContentStyled>
-            <ServiceList services={services}/>
-        </ContentStyled>
+          <ContentStyled>
+              <ServiceList services={services}/>
+          </ContentStyled>
 
-        <VideoSectionStyled>
-            <VideoTitleStyled>Veja Como Funciona</VideoTitleStyled>
-        </VideoSectionStyled>
+          <VideoSectionStyled>
+              <VideoTitleStyled>
+              <Typography color='gray' tag="h2" size='medium' fontWeight='weight3' fontFamily='font1' lineHeight='line90'>
+                  {t('ourServicesFull.seeHowItWorks')}&lt;&gt;
+                  </Typography>
+              </VideoTitleStyled>
+          </VideoSectionStyled>
 
+      </OurServicesFullStyled>
     </SectionStyled>
   );
 }
