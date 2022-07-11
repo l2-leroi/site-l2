@@ -2,8 +2,11 @@
   "images": {
     "spinner": "/images/Arrow-Spinner.svg",
     "whiteSpinner": "/images/Arrow-Spinner-White.svg",
+    "blackSpinner": "/images/black-spinner.svg",
+    "WhiteSpinner": "/images/white-spinner.svg",
     "alt": {
-      "thereIsMore": "Tem mais coisa aqui em baixo"
+      "thereIsMore": "Tem mais coisa aqui em baixo",
+      "howItIs": "Como é trabalhar na L2"
     }
   },
   "cases": {
@@ -14,15 +17,15 @@
     "webApp": "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.",
     "providers": "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira.",
     "educationalCredit": "Ajudamos milhares de jovens na burocrática jornada de obtenção de crédito educacional",
-      "alt":{
-        "coverMemoriesUp" : "Capa Memories Up",
-        "coverMoreAccess" : "Capa Mais Acesso",
-        "coverImStopped" : "Capa Tô Parado",
-        "coverWorkQueue" : "Capa Fila de Trabalho"
-      }
-     },
+    "alt": {
+      "coverMemoriesUp": "Capa Memories Up",
+      "coverMoreAccess": "Capa Mais Acesso",
+      "coverImStopped": "Capa Tô Parado",
+      "coverWorkQueue": "Capa Fila de Trabalho"
+    }
+  },
 
-  "footer":{
+  "footer": {
     "letsTalk": "VAMOS CONVERSAR",
     "ourWhatsapp": "nosso whatsapp",
     "ourEmail": "nosso e-mail",
@@ -95,7 +98,7 @@
     "outsourcing": "Outsourcing Consultivo",
     "increase": "Aumente sua capacidade produtiva ● Com acesso a nossa equipe, você agrega ao seu time profissionais apaixonados com competências diversas.",
     "startupService": "Atendimento à Startup",
-    "uxuiTeam": "Nossa equipe de UX/UI e desenvolvimento irá projetar e construir seu MVP a partir do zero, “garantindo” uma entrega rápida e rentável.",
+    "uxuiTeam": "Nossa equipe de UX/UI e desenvolvimento irá projetar e construir seu MVP a partir do zero, garantindo uma entrega rápida e rentável.",
     "ideation": "Ideação",
     "coCreation": "Co-criação com nosso time multidisciplinar na concepção do seu produto e estratégias de negócio.",
     "uxuiDesign": "UX / UI Design",
