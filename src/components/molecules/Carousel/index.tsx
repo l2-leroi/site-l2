@@ -26,7 +26,7 @@ const settings = {
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 1,
-  speed: 400,
+  speed: 300,
   swipeToSlide: true,
   nextArrow: <ArrowRightStyledFunction />,
   prevArrow: <ArrowLeftStyled />,
@@ -37,7 +37,7 @@ function FindCard() {
   const card = document.getElementsByClassName('Card');
   for (let i = 0; i < card.length; i++) {
     const cardLeft = card[i].getBoundingClientRect().left;
-    if (cardLeft < 450) {
+    if (cardLeft < 300) {
       card[i].classList.add('card-fade');
     } else {
       card[i].classList.remove('card-fade');

@@ -2,10 +2,13 @@ import i18next from 'i18next';
 import {
   ContainerStyled,
   ArrowSpinnerContainerStyled,
-  DivMainTextStyled,
+  DivTextStyled,
+  DivText,
   DivImageStyled,
+  DivTextParagraph,
+  DivParagraph,
 } from './styled';
-import Carroussel from '../../molecules/Carousel';
+import Carousel from '../../molecules/Carousel';
 import ScrollCircle from '../../atoms/ScrollCircle';
 import { Typography } from '../../../styles/typography';
 
@@ -60,11 +63,11 @@ export default function TalentsOurCareer() {
       <ArrowSpinnerContainerStyled className="anime">
         <ScrollCircle
           isWhiteImage={false}
-          blackImage={`${t('images.spinner')}`}
+          blackImage={`${t('images.blackSpinner')}`}
           whiteImage={`${t('images.whiteSpinner')}`}
         />
       </ArrowSpinnerContainerStyled>
-      <DivMainTextStyled>
+      <DivTextStyled>
         <Typography
           tag="h1"
           size="small"
@@ -77,6 +80,8 @@ export default function TalentsOurCareer() {
         </Typography>
         <Typography tag="p">{t('TalentsOurCareer.weAreConnected')}</Typography>
         <div className="line" />
+      </DivTextStyled>
+      <DivText>
         <Typography
           tag="h1"
           size="small"
@@ -88,13 +93,18 @@ export default function TalentsOurCareer() {
           {t('TalentsOurCareer.weLove')}
         </Typography>
         <Typography tag="p">{t('TalentsOurCareer.weCreate')}</Typography>
-        <DivImageStyled>
-          <img src="/images/OurCareer/talent-01.jpg" alt="talentos L2 Code" />
-          <img src="/images/OurCareer/talent-02.jpg" alt="talentos L2 Code" />
-          <img src="/images/OurCareer/talent-03.jpg" alt="talentos L2 Code" />
-        </DivImageStyled>
+      </DivText>
+
+      <DivImageStyled>
+        <img src="/images/OurCareer/talent-01.jpg" alt="talentos L2 Code" />
+        <img src="/images/OurCareer/talent-02.jpg" alt="talentos L2 Code" />
+        <img src="/images/OurCareer/talent-03.jpg" alt="talentos L2 Code" />
+      </DivImageStyled>
+      <DivTextParagraph>
         <Typography tag="p">{t('TalentsOurCareer.enjoyToo')}</Typography>
         <div className="line" />
+      </DivTextParagraph>
+      <DivParagraph>
         <Typography
           tag="h1"
           color="black"
@@ -110,14 +120,16 @@ export default function TalentsOurCareer() {
         <Typography tag="p" className="paragrafoCarrossel">
           {t('TalentsOurCareer.whatTheySay')}
         </Typography>
-      </DivMainTextStyled>
+      </DivParagraph>
+
       <div>
-        <Carroussel cards={cards} />
+        <Carousel cards={cards} />
       </div>
+
       <ArrowSpinnerContainerStyled className="anime">
         <ScrollCircle
           isWhiteImage={false}
-          blackImage={`${t('images.spinner')}`}
+          blackImage={`${t('images.blackSpinner')}`}
           whiteImage={`${t('images.whiteSpinner')}`}
         />
       </ArrowSpinnerContainerStyled>

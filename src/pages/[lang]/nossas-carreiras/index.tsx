@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 
 import HeaderOurCareer from '../../../components/organisms/HeaderOurCareer';
 import TalentsOurCareer from '../../../components/organisms/TalentsOurCareer';
+import LineAnimation from '../../../components/atoms/LineAnimation';
+import { colors } from '../../../styles/colors';
 
 const NossasCarreiras: NextPage = () => {
   useEffect(() => {
@@ -31,7 +33,19 @@ const NossasCarreiras: NextPage = () => {
         id={id}
         li={li}
       />
+      <LineAnimation
+        lineBg={colors.gray}
+        secondaryBg={colors.black}
+        hasOutSourcing={false}
+        hasSpinner={false}
+      />
       <TalentsOurCareer />
+      <LineAnimation
+        lineBg={colors.purple}
+        secondaryBg={colors.gray}
+        hasOutSourcing={false}
+        hasSpinner={false}
+      />
     </>
   );
 };
