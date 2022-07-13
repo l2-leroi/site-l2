@@ -24,15 +24,6 @@ export const TextArea = styled.div`
   align-items: center;
   letter-spacing: -0.04em;
   min-height: 16.7rem;
-  /* @media (max-width: 930px), (max-width: 800px) {
-    font-size: 2rem;
-    width: 80%;
-  }
-  @media (max-width: 414px), (max-width: 360px) {
-    font-size: 1.4rem;
-    font-weight: 200;
-    width: 60%;
-  } */
 `;
 
 export const AuthorArea = styled.div`
@@ -48,17 +39,11 @@ export const AuthorArea = styled.div`
   border-radius: 0rem 0rem 0.8rem 0.8rem;
   display: flex;
   align-items: center;
-  /* @media (max-width: 930px), (max-width: 800px) {
-    font-size: 1.2rem;
-    width: 80%;
-  }
-  @media (max-width: 414px), (max-width: 360px) {
-    font-size: 1rem;
-    font-weight: 200;
-    width: 60%;
-  } */
 `;
 
 export const AuthorImg = styled.img`
   padding-right: 1.6rem;
+  /* @media (max-width: 414px), (max-width: 360px) {
+    padding-right: 1rem;
+  } */
 `;

@@ -4,6 +4,12 @@ import { colors } from '../../../styles/colors';
 export const DivStyled = styled.div`
   margin-left: 4rem;
   max-width: 95%;
+
+  @media (min-width: 360px), (max-width: 414px) {
+    margin-left: 1%;
+    margin-right: 5%;
+  }
+
   .card-fade {
     visibility: hidden;
     opacity: 0;
@@ -17,6 +23,7 @@ export const ArrowRightStyled = styled.div`
   background-color: ${colors.black} !important;
   border-radius: 50% 0 0 50%;
   position: absolute !important;
+
   ::before {
     display: none !important;
   }
@@ -24,6 +31,12 @@ export const ArrowRightStyled = styled.div`
   background-image: url('/images/white-arrow-right.png') !important;
   background-position: 3.5rem !important;
   background-repeat: no-repeat !important;
+  /* @media (min-width: 360px), (max-width: 414px) {
+    background-position: 1.5rem !important;
+    right: -6rem;
+    width: 12rem;
+    height: 12rem;
+  } */
 `;
 
 export const FadeOutDiv = styled.div`

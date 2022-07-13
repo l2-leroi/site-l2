@@ -33,7 +33,7 @@ export const DivTextStyled = styled.div`
     @media (max-width: 414px), (max-width: 360px) {
       font-size: 24px;
       margin-top: 150px;
-      margin-left: -100px;
+      margin-left: -85px;
     }
   }
 
@@ -51,6 +51,8 @@ export const DivTextStyled = styled.div`
       font-size: 12px;
       margin-top: -15px;
       margin-left: -130px;
+      width: 33.5%;
+      max-width: 45%;
     }
   }
 
@@ -69,7 +71,7 @@ export const DivTextStyled = styled.div`
     }
     @media (max-width: 414px), (max-width: 360px) {
       margin-top: 20px;
-      margin-left: 60px;
+      margin-left: 70px;
     }
   }
 `;
@@ -98,7 +100,9 @@ export const DivText = styled.div`
     @media (max-width: 414px), (max-width: 360px) {
       font-size: 24px;
       margin-top: 0px;
-      margin-left: -100px;
+      margin-left: -65px;
+      width: 55%;
+      max-width: 80%;
     }
   }
 
@@ -115,7 +119,9 @@ export const DivText = styled.div`
     @media (max-width: 414px), (max-width: 360px) {
       font-size: 12px;
       margin-top: -15px;
-      margin-left: -130px;
+      margin-left: -110px;
+      width: 42.6%;
+      max-width: 55%;
     }
   }
 `;
@@ -154,7 +160,8 @@ export const DivImageStyled = styled.div`
 
     @media (max-width: 414px), (max-width: 360px) {
       width: 64px;
-      margin: 4px 4px 20px;
+      margin: 4px 6px 20px;
+      margin-left: 0px;
     }
   }
 `;
@@ -181,7 +188,9 @@ export const DivTextParagraph = styled.div`
     @media (max-width: 414px), (max-width: 360px) {
       font-size: 12px;
       margin-top: -30px;
-      margin-left: -120px;
+      margin-left: -100px;
+      width: 42.5%;
+      max-width: 50%;
     }
   }
 
@@ -200,7 +209,7 @@ export const DivTextParagraph = styled.div`
     }
     @media (max-width: 414px), (max-width: 360px) {
       margin-top: 0px;
-      margin-left: 80px;
+      margin-left: 70px;
     }
   }
 `;
@@ -229,7 +238,7 @@ export const DivParagraph = styled.div`
     @media (max-width: 414px), (max-width: 360px) {
       font-size: 24px;
       margin-top: 80px;
-      margin-left: -100px;
+      margin-left: -120px;
     }
   }
   p {
@@ -238,15 +247,17 @@ export const DivParagraph = styled.div`
     max-width: 35%;
     margin-left: -120px;
     align-self: center;
-    margin-bottom: 50px;
+    margin-top: 50px;
     @media (max-width: 930px), (max-width: 800px) {
       font-size: 24px;
       margin-left: -140px;
     }
     @media (max-width: 414px), (max-width: 360px) {
       font-size: 12px;
-      margin-top: -10px;
-      margin-left: -130px;
+      margin-top: 10px;
+      margin-left: -120px;
+      width: 45%;
+      max-width: 50%;
     }
   }
 `;
@@ -261,22 +272,15 @@ export const SpinningAnimation = keyframes`
 `;
 
 export const ArrowSpinnerContainerStyled = styled.div`
-  display: flex;
-  margin-left: 180px;
-  margin-top: 90px;
-  margin-bottom: 80px;
-  width: 100px;
-
-  /* img {
-    width: 200px;
-  } */
+  display: inline-flex;
+  margin-left: 60px;
+  margin-top: 80px;
 
   @media (max-width: 930px), (max-width: 800px) {
     margin-left: 40px;
     margin-top: 50px;
   }
   @media (max-width: 414px), (max-width: 360px) {
-    width: 64px;
     margin-top: 60px;
   }
 `;

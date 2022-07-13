@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
-
 import HeaderOurCareer from '../../../components/organisms/HeaderOurCareer';
 import TalentsOurCareer from '../../../components/organisms/TalentsOurCareer';
+import Carousel from '../../../components/molecules/Carousel';
 import LineAnimation from '../../../components/atoms/LineAnimation';
 import { colors } from '../../../styles/colors';
 
@@ -25,6 +25,56 @@ const NossasCarreiras: NextPage = () => {
     'headerOurCareer.availability',
     'headerOurCareer.knowledge',
   ];
+  const image = [{ src: '/images/trainee-image.jpg', alt: 'trainnes L2 Code' }];
+  const images = [
+    { src: '/images/OurCareer/talent-01.jpg', alt: 'talentos L2 Code' },
+    { src: '/images/OurCareer/talent-02.jpg', alt: 'talentos L2 Code' },
+    { src: '/images/OurCareer/talent-03.jpg', alt: 'talentos L2 Code' },
+  ];
+  const cards = [
+    {
+      comment: 'TalentsOurCareer.comment1',
+      authorImg: '/images/OurCareer/comment-01.png',
+      authorName: 'Renã ● Dev. FullStack',
+      id: 1,
+      author: true,
+    },
+    {
+      comment: 'TalentsOurCareer.comment2',
+      authorImg: '/images/OurCareer/comment-02.png',
+      authorName: 'Bruna ● Dev. Trainee ',
+      id: 2,
+      author: true,
+    },
+    {
+      comment: 'TalentsOurCareer.comment3',
+      authorImg: '/images/OurCareer/comment-03.png',
+      authorName: 'Guilherme ● Dev. backend',
+      id: 3,
+      author: true,
+    },
+    {
+      comment: 'TalentsOurCareer.comment4',
+      authorImg: '/images/OurCareer/comment-04.png',
+      authorName: 'Ana Julia ● Frontend',
+      id: 4,
+      author: true,
+    },
+    {
+      comment: 'TalentsOurCareer.comment5',
+      authorImg: '/images/OurCareer/comment-05.png',
+      authorName: 'Brenda ● Dev. Trainee ',
+      id: 5,
+      author: true,
+    },
+    {
+      comment: 'TalentsOurCareer.comment6',
+      authorImg: '/images/OurCareer/comment-06.png',
+      authorName: 'Vanessa ● UX / UI Designer',
+      id: 6,
+      author: true,
+    },
+  ];
   return (
     <>
       <HeaderOurCareer
@@ -32,6 +82,7 @@ const NossasCarreiras: NextPage = () => {
         endDate={endDate}
         id={id}
         li={li}
+        traineeImage={image}
       />
       <LineAnimation
         lineBg={colors.gray}
@@ -39,7 +90,10 @@ const NossasCarreiras: NextPage = () => {
         hasOutSourcing={false}
         hasSpinner={false}
       />
-      <TalentsOurCareer />
+
+      <TalentsOurCareer talentsImages={images} />
+      <Carousel cards={cards} />
+
       <LineAnimation
         lineBg={colors.purple}
         secondaryBg={colors.gray}

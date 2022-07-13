@@ -197,12 +197,11 @@ export const Div = styled.div`
   }
 
   p {
-    margin-bottom: 2.8rem;
     margin-top: 25px;
-    width: 50%;
+    margin-bottom: 40px;
+    width: 40%;
     height: 136px;
     margin-left: 0px;
-    text-align: center;
 
     @media (max-width: 930px), (max-width: 800px) {
       font-size: 20px;
@@ -279,7 +278,8 @@ export const DivImageStyled = styled.div`
   max-width: 100%;
   height: auto;
   margin-bottom: 80px;
-  margin-top: 270px;
+  margin-top: 300px;
+
   img {
     display: flex;
     width: 50%;
@@ -303,7 +303,7 @@ export const DivImageStyled = styled.div`
       width: 100%;
       max-width: 100%;
       margin-left: -15px;
-      margin-top: -110px;
+      margin-top: -150px;
       border-radius: 10px;
     }
   }
@@ -342,10 +342,13 @@ export const DivImageStyled = styled.div`
     }
     @media (max-width: 376px) {
       font-size: 12px;
-      margin-top: 130px;
+      margin-top: 90px;
       width: 90%;
       max-width: 90%;
       margin-left: -10px;
+    }
+    @media (max-width: 360px) {
+      margin-top: 80px;
     }
   }
 `;
@@ -361,9 +364,13 @@ export const SpinningAnimation = keyframes`
 
 export const ArrowSpinnerContainerStyled = styled.div`
   display: flex;
-  margin-left: 150px;
+  margin-left: 140px;
   margin-top: 100px;
   margin-bottom: 80px;
+
+  @media (max-width: 1280px) {
+    margin-left: -130px;
+  }
 
   @media (max-width: 414px), (max-width: 376px) {
     width: 65px;
@@ -373,6 +380,9 @@ export const ArrowSpinnerContainerStyled = styled.div`
 `;
 
 export const SpinnerImage = styled.img`
+  width: 300px;
+  max-width: 300px;
+
   @media (max-width: 930px), (max-width: 800px) {
     width: 200px;
     max-width: 200px;
@@ -385,11 +395,14 @@ export const SpinnerImage = styled.img`
 
 export const SpinningIconStyled = styled.div`
   position: absolute;
-  left: 0px;
-  margin-top: 64%;
-  margin-left: -155px;
+  left: -100px;
+  margin-top: 77%;
+
   overflow-x: hidden;
   animation: ${SpinningAnimation} 5s linear infinite;
+  @media (max-width: 1280px) {
+    margin-top: 82%;
+  }
   @media (max-width: 930px), (max-width: 800px) {
     margin-left: -60px;
     margin-top: 950px;
@@ -414,8 +427,12 @@ export const DivTextStyled = styled.div`
     font-style: normal;
     color: #f2f3f4;
 
+    @media (max-width: 1280px) {
+      margin-left: 710px;
+    }
+
     @media (max-width: 930px), (max-width: 800px) {
-      font-size: 36px;
+      font-size: 40px;
       width: 30%;
       max-width: 30%;
       margin-left: 500px;
@@ -424,9 +441,11 @@ export const DivTextStyled = styled.div`
     }
 
     @media (max-width: 414px), (max-width: 376px) {
-      font-size: 14px;
-      margin-left: 100px;
-      margin-top: -280px;
+      font-size: 20px;
+      width: 35%;
+      max-width: 35%;
+      margin-left: 120px;
+      margin-top: -250px;
       font-family: 'Circular Air Pro';
     }
   }
@@ -441,6 +460,12 @@ export const DivTextStyled = styled.div`
     font-weight: 400;
     /* font-size: 20px; */
 
+    @media (max-width: 1280px) {
+      width: 37%;
+      max-width: 40%;
+      margin-left: 710px;
+    }
+
     @media (max-width: 930px), (max-width: 800px) {
       font-size: 20px;
       margin-left: 500px;
@@ -449,11 +474,12 @@ export const DivTextStyled = styled.div`
       max-width: 30%;
     }
     @media (max-width: 414px), (max-width: 376px) {
-      font-size: 10px;
-      margin-left: 100px;
+      font-size: 12px;
+      margin-left: 120px;
       margin-top: 0px;
-      width: 50%;
+      width: 42%;
       max-width: 50%;
+      text-align: left;
     }
   }
   h2 {
@@ -463,6 +489,9 @@ export const DivTextStyled = styled.div`
     margin-top: 320px;
     margin-left: 760px;
     position: relative;
+    @media (max-width: 1280px) {
+      margin-left: 710px;
+    }
 
     @media (max-width: 930px), (max-width: 800px) {
       font-size: 20px;
@@ -472,8 +501,8 @@ export const DivTextStyled = styled.div`
 
     @media (max-width: 414px), (max-width: 376px) {
       font-size: 12px;
-      margin-left: 100px;
-      margin-top: 180px;
+      margin-left: 120px;
+      margin-top: 250px;
     }
   }
   ul {
@@ -485,6 +514,9 @@ export const DivTextStyled = styled.div`
     margin-top: -60px;
     width: 30%;
     max-width: 30%;
+    @media (max-width: 1280px) {
+      margin-left: 730px;
+    }
 
     @media (max-width: 930px), (max-width: 800px) {
       font-size: 20px;
@@ -495,9 +527,9 @@ export const DivTextStyled = styled.div`
     }
     @media (max-width: 414px), (max-width: 376px) {
       font-size: 12px;
-      margin-left: 100px;
-      width: 60%;
-      max-width: 60%;
+      margin-left: 130px;
+      width: 42%;
+      max-width: 50%;
       top: -50px;
     }
   }
@@ -509,28 +541,28 @@ export const DivTextStyled = styled.div`
 export const DivButtonStyled = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 0px 16px;
+  padding: 10px 16px;
   margin-top: 80px;
   margin-bottom: 100px;
-  margin-left: 730px;
+  margin-left: 700px;
   gap: 8px;
   width: 40%;
   max-width: 40%;
   height: auto;
   color: #171b21;
-  float: right;
+
   @media (max-width: 930px), (max-width: 800px) {
     font-size: 20px;
     width: 50%;
     max-width: 50%;
     margin-top: 50px;
-    margin-left: 450px;
+    margin-left: 420px;
   }
 
   @media (max-width: 414px), (max-width: 376px) {
     font-size: 20px;
-    margin-left: 50px;
-    margin-top: 30px;
+    margin-left: 70px;
+    margin-top: 0px;
     width: 82%;
     max-width: 100%;
   }

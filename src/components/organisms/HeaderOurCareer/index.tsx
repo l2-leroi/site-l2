@@ -21,11 +21,16 @@ import { Typography } from '../../../styles/typography';
 import Button from '../../atoms/Button';
 import ScrollCircle from '../../atoms/ScrollCircle';
 
+interface PropsImage {
+  src: string;
+  alt: string;
+}
 interface PropsHeaderOurCareer {
   startDate: string; // Formato para data: 'dd/MM/yyyy'
   endDate: string; // Formato para data: 'dd/MM/yyyy'
   id: number;
   li: string[];
+  traineeImage: PropsImage[];
 }
 
 export default function HeaderOurCareer({
@@ -33,6 +38,7 @@ export default function HeaderOurCareer({
   endDate, // Formato para data: 'dd/MM/yyyy'
   id,
   li,
+  traineeImage,
 }: PropsHeaderOurCareer) {
   const { t } = i18next;
 
@@ -138,7 +144,10 @@ export default function HeaderOurCareer({
         <SpinnerImage src="/images/spinner.png" />
       </SpinningIconStyled>
       <DivImageStyled>
-        <img src="/images/trainee-image.jpg" alt="trainnes L2 Code" />
+        {traineeImage.map((item) => (
+          <img src={item.src} alt={item.alt} />
+        ))}
+
         <Typography tag="p" color="gray" fontFamily="font2" size="xsmall">
           {t('headerOurCareer.lastClass')}
         </Typography>
