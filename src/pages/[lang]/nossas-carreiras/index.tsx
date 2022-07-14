@@ -17,7 +17,7 @@ const NossasCarreiras: NextPage = () => {
     }
   });
 
-  const startDate = '20/07/2022';
+  const startDate = '20/05/2022';
   const endDate = '24/07/2022';
   const id = 1;
   const li = [

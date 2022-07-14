@@ -11,7 +11,6 @@ import {
 
 import ScrollCircle from '../../atoms/ScrollCircle';
 import { Typography } from '../../../styles/typography';
-// import { ImageArrowSpinnerStyled } from '../../atoms/ScrollCircle/styled';
 
 interface PropsImages {
   src: string;
@@ -85,18 +84,16 @@ export default function TalentsOurCareer({
           {t('TalentsOurCareer.weValue')}
         </Typography>
         <Typography tag="p">{t('TalentsOurCareer.empathize')}</Typography>
-        <Typography tag="p" className="paragrafoCarrossel">
-          {t('TalentsOurCareer.whatTheySay')}
-        </Typography>
+        <Typography tag="h2">{t('TalentsOurCareer.whatTheySay')}</Typography>
       </DivParagraph>
 
-      {/* <ArrowSpinnerContainerStyled className="anime">
+      <ArrowSpinnerContainerStyled className="anime">
         <ScrollCircle
           isWhiteImage={false}
           blackImage={`${t('images.blackSpinner')}`}
           whiteImage={`${t('images.whiteSpinner')}`}
         />
-      </ArrowSpinnerContainerStyled> */}
+      </ArrowSpinnerContainerStyled>
     </ContainerStyled>
   );
 }

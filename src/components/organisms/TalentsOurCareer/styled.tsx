@@ -7,7 +7,8 @@ export const ContainerStyled = styled.section`
   width: 100%;
   background-color: ${colors.gray};
   overflow: hidden;
-  padding-bottom: 20rem;
+  padding-top: 20rem;
+  /* padding-bottom: 20rem; */
 `;
 
 export const DivTextStyled = styled.div`
@@ -26,11 +27,11 @@ export const DivTextStyled = styled.div`
     align-self: center;
     margin-left: 0px;
     margin-bottom: 40px;
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       font-size: 36px;
       margin-left: -550px;
     }
-    @media (max-width: 414px), (max-width: 360px) {
+    @media (max-width: 414px) {
       font-size: 24px;
       margin-top: 150px;
       margin-left: -85px;
@@ -44,10 +45,10 @@ export const DivTextStyled = styled.div`
     margin-left: -135px;
     align-self: center;
     margin-bottom: 40px;
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       font-size: 24px;
     }
-    @media (max-width: 414px), (max-width: 360px) {
+    @media (max-width: 414px) {
       font-size: 12px;
       margin-top: -15px;
       margin-left: -130px;
@@ -65,11 +66,11 @@ export const DivTextStyled = styled.div`
     @media (max-width: 1280px) {
       margin-left: 570px;
     }
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       margin-top: 30px;
       margin-left: 380px;
     }
-    @media (max-width: 414px), (max-width: 360px) {
+    @media (max-width: 414px) {
       margin-top: 20px;
       margin-left: 70px;
     }
@@ -92,12 +93,12 @@ export const DivText = styled.div`
     align-self: center;
     margin-left: 0px;
     margin-bottom: 40px;
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       font-size: 36px;
       margin-left: -40px;
       margin-top: 0px;
     }
-    @media (max-width: 414px), (max-width: 360px) {
+    @media (max-width: 414px) {
       font-size: 24px;
       margin-top: 0px;
       margin-left: -65px;
@@ -113,10 +114,10 @@ export const DivText = styled.div`
     margin-left: -135px;
     align-self: center;
     margin-bottom: 40px;
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       font-size: 24px;
     }
-    @media (max-width: 414px), (max-width: 360px) {
+    @media (max-width: 414px) {
       font-size: 12px;
       margin-top: -15px;
       margin-left: -110px;
@@ -135,14 +136,14 @@ export const DivImageStyled = styled.div`
   margin-bottom: 10px;
   margin-top: 5px;
   margin-left: 460px;
-  gap: 30px;
+  gap: 20px;
 
-  @media (max-width: 930px), (max-width: 800px) {
+  @media (max-width: 930px) {
     margin-left: 330px;
     margin: 6px 6px 20px;
   }
-  @media (max-width: 414px), (max-width: 360px) {
-    margin-left: 140px;
+  @media (max-width: 414px) {
+    margin-left: 138px;
     margin-top: -20px;
   }
 
@@ -153,15 +154,13 @@ export const DivImageStyled = styled.div`
     @media (max-width: 1280px) {
       margin: 0px 60px 40px -30px;
     }
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       width: 100px;
       margin: 6px 6px 20px;
     }
 
-    @media (max-width: 414px), (max-width: 360px) {
+    @media (max-width: 414px) {
       width: 64px;
-      margin: 4px 6px 20px;
-      margin-left: 0px;
     }
   }
 `;
@@ -182,10 +181,10 @@ export const DivTextParagraph = styled.div`
     margin-top: -20px;
     align-self: center;
     margin-bottom: 40px;
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       font-size: 24px;
     }
-    @media (max-width: 414px), (max-width: 360px) {
+    @media (max-width: 414px) {
       font-size: 12px;
       margin-top: -30px;
       margin-left: -100px;
@@ -203,11 +202,11 @@ export const DivTextParagraph = styled.div`
     @media (max-width: 1280px) {
       margin-left: 570px;
     }
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       margin-top: 30px;
       margin-left: 380px;
     }
-    @media (max-width: 414px), (max-width: 360px) {
+    @media (max-width: 414px) {
       margin-top: 0px;
       margin-left: 70px;
     }
@@ -230,12 +229,12 @@ export const DivParagraph = styled.div`
     margin-left: 5px;
     margin-bottom: 40px;
     margin-top: 100px;
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       font-size: 36px;
       margin-left: -50px;
       margin-top: 120px;
     }
-    @media (max-width: 414px), (max-width: 360px) {
+    @media (max-width: 414px) {
       font-size: 24px;
       margin-top: 80px;
       margin-left: -120px;
@@ -248,11 +247,30 @@ export const DivParagraph = styled.div`
     margin-left: -120px;
     align-self: center;
     margin-top: 50px;
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       font-size: 24px;
       margin-left: -140px;
     }
-    @media (max-width: 414px), (max-width: 360px) {
+    @media (max-width: 414px) {
+      font-size: 12px;
+      margin-top: 0px;
+      margin-left: -120px;
+      width: 45%;
+      max-width: 50%;
+    }
+  }
+  h2 {
+    display: flex;
+    width: 35%;
+    max-width: 35%;
+    margin-left: -120px;
+    align-self: center;
+    margin-top: 50px;
+    @media (max-width: 930px) {
+      font-size: 24px;
+      margin-left: -140px;
+    }
+    @media (max-width: 414px) {
       font-size: 12px;
       margin-top: 10px;
       margin-left: -120px;
@@ -274,13 +292,20 @@ export const SpinningAnimation = keyframes`
 export const ArrowSpinnerContainerStyled = styled.div`
   display: inline-flex;
   margin-left: 60px;
-  margin-top: 80px;
+  margin-top: -130px;
 
-  @media (max-width: 930px), (max-width: 800px) {
+  @media (max-width: 930px) {
     margin-left: 40px;
     margin-top: 50px;
   }
-  @media (max-width: 414px), (max-width: 360px) {
-    margin-top: 60px;
+  @media (max-width: 414px) {
+    div {
+      .animate {
+        width: 72.01px;
+        height: 72.01px;
+      }
+    }
+
+    margin-top: -60px;
   }
 `;

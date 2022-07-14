@@ -18,13 +18,13 @@ export const ContainerStyled = styled.section`
     width: 50%;
     position: relative;
 
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       font-size: 36px;
       margin-top: 100px;
       margin-bottom: 10px;
     }
 
-    @media (max-width: 414px), (max-width: 376px) {
+    @media (max-width: 414px) {
       font-size: 36px;
       width: 80%;
       max-width: 80%;
@@ -36,10 +36,10 @@ export const ContainerStyled = styled.section`
     width: 35%;
     height: 136px;
     float: none;
-    @media (max-width: 930px), (max-width: 801px) {
+    @media (max-width: 930px) {
       font-size: 24px;
     }
-    @media (max-width: 414px), (max-width: 376px) {
+    @media (max-width: 414px) {
       font-size: 12px;
       width: 50%;
     }
@@ -51,11 +51,11 @@ export const ContainerStyled = styled.section`
     width: 10%;
     height: 20px;
     position: absolute;
-    @media (max-width: 930px), (max-width: 801px) {
+    @media (max-width: 930px) {
       font-size: 12px;
       margin-left: 710px;
     }
-    @media (max-width: 414px), (max-width: 376px) {
+    @media (max-width: 414px) {
       font-size: 10px;
       margin-left: 260px;
       margin-top: 180px;
@@ -133,13 +133,13 @@ export const DivStyled = styled.div`
   height: auto;
   position: relative;
   border-radius: 8px;
-  @media (max-width: 930px), (max-width: 800px) {
+  @media (max-width: 930px) {
     margin-left: 8px;
     width: 95%;
     max-width: 95%;
   }
 
-  @media (max-width: 414px), (max-width: 376px) {
+  @media (max-width: 414px) {
     margin-top: 20px;
     margin-left: -15px;
     margin-bottom: 0px;
@@ -155,7 +155,7 @@ export const DateStyled = styled.div`
   margin-top: 2.4rem;
   margin-left: 2rem;
 
-  @media (max-width: 414px), (max-width: 376px) {
+  @media (max-width: 414px) {
     flex-direction: column;
     justify-content: center;
   }
@@ -168,7 +168,7 @@ export const Div = styled.div`
   width: 90%;
   margin-left: 40px;
   margin-top: 50px;
-  @media (max-width: 414px), (max-width: 376px) {
+  @media (max-width: 414px) {
     font-size: 12px;
     flex-direction: column;
     margin-left: 10px;
@@ -180,14 +180,14 @@ export const Div = styled.div`
     margin-top: 30px;
     flex-direction: column;
     align-items: center;
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       font-size: 20px;
       flex-direction: column;
       margin-left: 15 0px;
       margin-top: 0px;
       margin-bottom: 5px;
     }
-    @media (max-width: 414px), (max-width: 376px) {
+    @media (max-width: 414px) {
       font-size: 12px;
       flex-direction: column;
       margin-left: 15 0px;
@@ -203,14 +203,14 @@ export const Div = styled.div`
     height: 136px;
     margin-left: 0px;
 
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       font-size: 20px;
       margin-top: 20px;
       width: 35%;
       max-width: 35%;
       text-align: center;
     }
-    @media (max-width: 414px), (max-width: 376px) {
+    @media (max-width: 414px) {
       font-size: 12px;
       margin-top: -30px;
       width: 55%;
@@ -228,7 +228,7 @@ export const ValidDate = styled.div`
   font-size: 24px;
   line-height: 120%;
   letter-spacing: -0.02em;
-  @media (max-width: 414px), (max-width: 376px) {
+  @media (max-width: 414px) {
     font-size: 20px;
     flex-direction: column;
     margin-left: 10px;
@@ -244,7 +244,7 @@ export const ExpireDate = styled.div`
   justify-content: space-between;
   letter-spacing: -0.02em;
   text-decoration-line: line-through;
-  @media (max-width: 414px), (max-width: 376px) {
+  @media (max-width: 414px) {
     font-size: 20px;
     flex-direction: column;
     margin-left: 10px;
@@ -264,7 +264,7 @@ export const DivButton = styled.div`
   max-width: 50%;
   height: auto;
   color: #171b21;
-  @media (max-width: 414px), (max-width: 376px) {
+  @media (max-width: 414px) {
     flex-direction: row;
     margin-left: 10px;
     width: 100%;
@@ -289,7 +289,7 @@ export const DivImageStyled = styled.div`
     border-radius: 8px;
     position: relative;
 
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       flex-direction: column;
       width: 96%;
       max-width: 96%;
@@ -298,7 +298,7 @@ export const DivImageStyled = styled.div`
       border-radius: 10px;
     }
 
-    @media (max-width: 414px), (max-width: 376px) {
+    @media (max-width: 414px) {
       flex-direction: column;
       width: 100%;
       max-width: 100%;
@@ -319,7 +319,7 @@ export const DivImageStyled = styled.div`
       margin-top: 525px;
     }
 
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       font-size: 20px;
       margin-top: 700px;
       width: 90%;
@@ -333,20 +333,6 @@ export const DivImageStyled = styled.div`
       margin-left: -10px;
     }
 
-    @media (max-width: 412px) {
-      font-size: 12px;
-      margin-top: 150px;
-      width: 90%;
-      max-width: 90%;
-      margin-left: -10px;
-    }
-    @media (max-width: 376px) {
-      font-size: 12px;
-      margin-top: 90px;
-      width: 90%;
-      max-width: 90%;
-      margin-left: -10px;
-    }
     @media (max-width: 360px) {
       margin-top: 80px;
     }
@@ -369,13 +355,18 @@ export const ArrowSpinnerContainerStyled = styled.div`
   margin-bottom: 80px;
 
   @media (max-width: 1280px) {
-    margin-left: -130px;
+    margin-left: 30px;
   }
 
-  @media (max-width: 414px), (max-width: 376px) {
-    width: 65px;
-    max-width: 70px;
-    margin-left: -18px;
+  @media (max-width: 414px) {
+    div {
+      .animate {
+        width: 72.01px;
+        height: 72.01px;
+      }
+    }
+
+    margin-left: -10px;
   }
 `;
 
@@ -383,11 +374,11 @@ export const SpinnerImage = styled.img`
   width: 300px;
   max-width: 300px;
 
-  @media (max-width: 930px), (max-width: 800px) {
+  @media (max-width: 930px) {
     width: 200px;
     max-width: 200px;
   }
-  @media (max-width: 414px), (max-width: 376px) {
+  @media (max-width: 414px) {
     width: 110px;
     max-width: 150px;
   }
@@ -403,13 +394,14 @@ export const SpinningIconStyled = styled.div`
   @media (max-width: 1280px) {
     margin-top: 82%;
   }
-  @media (max-width: 930px), (max-width: 800px) {
+  @media (max-width: 930px) {
     margin-left: -60px;
     margin-top: 950px;
   }
-  @media (max-width: 414px), (max-width: 376px) {
-    margin-left: 300px;
+  @media (max-width: 414px) {
+    margin-left: 400px;
     margin-top: 815px;
+    overflow: hidden;
   }
 `;
 
@@ -431,20 +423,20 @@ export const DivTextStyled = styled.div`
       margin-left: 710px;
     }
 
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       font-size: 40px;
       width: 30%;
       max-width: 30%;
-      margin-left: 500px;
+      margin-left: 490px;
       margin-top: -280px;
       font-family: 'Circular Air Pro';
     }
 
-    @media (max-width: 414px), (max-width: 376px) {
+    @media (max-width: 414px) {
       font-size: 20px;
       width: 35%;
       max-width: 35%;
-      margin-left: 120px;
+      margin-left: 100px;
       margin-top: -250px;
       font-family: 'Circular Air Pro';
     }
@@ -466,16 +458,16 @@ export const DivTextStyled = styled.div`
       margin-left: 710px;
     }
 
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       font-size: 20px;
-      margin-left: 500px;
+      margin-left: 490px;
       margin-top: 0px;
       width: 28%;
       max-width: 30%;
     }
-    @media (max-width: 414px), (max-width: 376px) {
+    @media (max-width: 414px) {
       font-size: 12px;
-      margin-left: 120px;
+      margin-left: 100px;
       margin-top: 0px;
       width: 42%;
       max-width: 50%;
@@ -493,15 +485,15 @@ export const DivTextStyled = styled.div`
       margin-left: 710px;
     }
 
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       font-size: 20px;
-      margin-left: 500px;
+      margin-left: 490px;
       margin-top: 420px;
     }
 
-    @media (max-width: 414px), (max-width: 376px) {
+    @media (max-width: 414px) {
       font-size: 12px;
-      margin-left: 120px;
+      margin-left: 100px;
       margin-top: 250px;
     }
   }
@@ -518,17 +510,17 @@ export const DivTextStyled = styled.div`
       margin-left: 730px;
     }
 
-    @media (max-width: 930px), (max-width: 800px) {
+    @media (max-width: 930px) {
       font-size: 20px;
-      margin-left: 500px;
+      margin-left: 480px;
       width: 40%;
       max-width: 40%;
       top: -40px;
     }
-    @media (max-width: 414px), (max-width: 376px) {
+    @media (max-width: 414px) {
       font-size: 12px;
-      margin-left: 130px;
-      width: 42%;
+      margin-left: 110px;
+      width: 50%;
       max-width: 50%;
       top: -50px;
     }
@@ -551,7 +543,7 @@ export const DivButtonStyled = styled.div`
   height: auto;
   color: #171b21;
 
-  @media (max-width: 930px), (max-width: 800px) {
+  @media (max-width: 930px) {
     font-size: 20px;
     width: 50%;
     max-width: 50%;
@@ -559,7 +551,7 @@ export const DivButtonStyled = styled.div`
     margin-left: 420px;
   }
 
-  @media (max-width: 414px), (max-width: 376px) {
+  @media (max-width: 414px) {
     font-size: 20px;
     margin-left: 70px;
     margin-top: 0px;

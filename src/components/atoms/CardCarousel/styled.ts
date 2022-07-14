@@ -43,7 +43,4 @@ export const AuthorArea = styled.div`
 
 export const AuthorImg = styled.img`
   padding-right: 1.6rem;
-  /* @media (max-width: 414px), (max-width: 360px) {
-    padding-right: 1rem;
-  } */
 `;

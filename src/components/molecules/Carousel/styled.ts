@@ -3,11 +3,15 @@ import { colors } from '../../../styles/colors';
 
 export const DivStyled = styled.div`
   margin-left: 4rem;
-  max-width: 95%;
+  max-width: 100%;
+  padding-bottom: 4rem;
+  overflow: hidden;
 
-  @media (min-width: 360px), (max-width: 414px) {
-    margin-left: 1%;
-    margin-right: 5%;
+  @media (max-width: 414px) {
+    margin-left: -4px;
+  }
+  .slider {
+    overflow: hidden;
   }
 
   .card-fade {
@@ -18,8 +22,8 @@ export const DivStyled = styled.div`
 `;
 
 export const ArrowRightStyled = styled.div`
-  width: 13rem;
-  height: 13rem;
+  width: 12rem;
+  height: 12rem;
   background-color: ${colors.black} !important;
   border-radius: 50% 0 0 50%;
   position: absolute !important;
@@ -27,16 +31,13 @@ export const ArrowRightStyled = styled.div`
   ::before {
     display: none !important;
   }
-  right: -10rem;
+  right: -5rem;
   background-image: url('/images/white-arrow-right.png') !important;
   background-position: 3.5rem !important;
   background-repeat: no-repeat !important;
-  /* @media (min-width: 360px), (max-width: 414px) {
-    background-position: 1.5rem !important;
-    right: -6rem;
-    width: 12rem;
-    height: 12rem;
-  } */
+  @media (max-width: 414px) {
+    display: none;
+  }
 `;
 
 export const FadeOutDiv = styled.div`
