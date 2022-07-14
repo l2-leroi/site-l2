@@ -114,6 +114,6 @@ export const CustomersContainer = styled.div`
 export const IdSpanStyled = styled.div`
   width: 10px;
   height: 2px;
-  position: absolute;
   top: -200px;
+  position: relative;
 `;
