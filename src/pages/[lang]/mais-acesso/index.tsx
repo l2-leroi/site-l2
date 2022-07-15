@@ -67,6 +67,28 @@ const MaisAcesso: NextPage = () => {
     },
   ];
 
+  // trocar
+  const imagesPrototype = [
+    {
+      image: '/images/PrototypeToParado/PrototypeToParado-1.jpg',
+      alt: 'Mockup',
+    },
+    {
+      image: '/images/PrototypeToParado/PrototypeToParado-2.jpg',
+      alt: 'Mockup',
+    },
+    {
+      image: '/images/PrototypeToParado/PrototypeToParado-3.jpg',
+      alt: 'Mockup',
+    },
+  ];
+
+  const imagesTechnologies = [
+    { image: '/images/TechnologiesLogos/java-logo.svg', alt: 'Java Logo' },
+    { image: '/images/TechnologiesLogos/pwa-logo.svg', alt: 'PWA Logo' },
+    { image: '/images/TechnologiesLogos/reactjs-logo.svg', alt: 'React Logo' },
+  ];
+
   const widthPrototype = 414;
   const heightPrototype = 896;
   const srcPrototype = '/images/mockup-animado-cell.png';
@@ -96,6 +118,8 @@ const MaisAcesso: NextPage = () => {
       />
       <DesignsCases
         images={imagesDesign}
+        imagesPrototype={imagesPrototype}
+        imagesTechnologies={imagesTechnologies}
         width={widthPrototype}
         height={heightPrototype}
         src={srcPrototype}

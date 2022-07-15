@@ -2,9 +2,16 @@ import styled from 'styled-components';
 import Slider from 'react-slick';
 import { colors } from '../../../styles/colors';
 
+interface imagesPrototype {
+  image: string;
+  alt: string;
+}
 interface DesignPrototypePropsMockup {
   width: number;
   height: number;
+}
+interface DesignPrototypeImage {
+  imagesPrototype: imagesPrototype;
 }
 
 export const ContentStyled = styled.section`
@@ -13,11 +20,19 @@ export const ContentStyled = styled.section`
   max-width: 1500px;
   flex-direction: row;
   justify-content: center;
-  padding-bottom: 140px;
+  // padding-bottom: 140px;
 
   @media (max-width: 360px) {
     padding-bottom: 160px;
   }
+
+  //scroll
+  min-width: 100%;
+  background: chocolate;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  overflow-y: auto;
 `;
 
 export const ListStyled = styled.section``;
@@ -211,4 +226,37 @@ export const ImageStyled = styled.img<DesignPrototypePropsMockup>`
   &.imageNone {
     display: none;
   }
+`;
+
+export const ImageStyledPrototype = styled.img<DesignPrototypeImage>`
+  //max-width: ${(props) => props.width}px;
+  width: 100%;
+  //height: auto;
+  height: 100%;
+  scroll-snap-align: start;
+`;
+
+export const ContentStyledPrototype = styled.div`
+  //height: 500px;
+
+  /*  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  overflow-y: auto;*/
+
+  max-height: 700px;
+  max-width: 414px;
+  display: flex;
+  flex-direction: column;
+
+  /* display: flex;
+  flex-direction: column;
+  max-width: 1500px;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 140px;
+
+  @media (max-width: 360px) {
+    padding-bottom: 160px;
+  }*/
 `;

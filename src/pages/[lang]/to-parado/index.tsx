@@ -67,9 +67,34 @@ const ToParado: NextPage = () => {
     },
   ];
 
+  const imagesPrototype = [
+    {
+      image: '/images/PrototypeToParado/PrototypeToParado-1.jpg',
+      alt: 'Mockup',
+    },
+    {
+      image: '/images/PrototypeToParado/PrototypeToParado-2.jpg',
+      alt: 'Mockup',
+    },
+    {
+      image: '/images/PrototypeToParado/PrototypeToParado-3.jpg',
+      alt: 'Mockup',
+    },
+  ];
+
+  const imagesTechnologies = [
+    {
+      image: '/images/TechnologiesLogos/firebase-logo.svg',
+      alt: 'Firebase Logo',
+    },
+    { image: '/images/TechnologiesLogos/nodejs-logo.svg', alt: 'Node.js Logo' },
+    { image: '/images/TechnologiesLogos/pwa-logo.svg', alt: 'PWA Logo' },
+    { image: '/images/TechnologiesLogos/reactjs-logo.svg', alt: 'React Logo' },
+  ];
+
   const widthPrototype = 414;
   const heightPrototype = 896;
-  const srcPrototype = '/images/mockup-animado-cell.png';
+  const srcPrototype = '/images/to-parado/mockup-animado-cell.png';
   const altPrototype = 'Mockup animado';
   const widthImage = 270;
   const heightImage = 582;
@@ -96,6 +121,8 @@ const ToParado: NextPage = () => {
       />
       <DesignsCases
         images={imagesDesign}
+        imagesPrototype={imagesPrototype}
+        imagesTechnologies={imagesTechnologies}
         width={widthPrototype}
         height={heightPrototype}
         src={srcPrototype}

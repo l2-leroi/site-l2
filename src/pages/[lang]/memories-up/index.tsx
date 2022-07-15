@@ -68,6 +68,26 @@ const MemoriesUp: NextPage = () => {
       alt: 'Mockup',
     },
   ];
+  // trocar
+  const imagesPrototype = [
+    {
+      image: '/images/PrototypeToParado/PrototypeToParado-1.jpg',
+      alt: 'Mockup',
+    },
+    {
+      image: '/images/PrototypeToParado/PrototypeToParado-2.jpg',
+      alt: 'Mockup',
+    },
+    {
+      image: '/images/PrototypeToParado/PrototypeToParado-3.jpg',
+      alt: 'Mockup',
+    },
+  ];
+  const imagesTechnologies = [
+    { image: '/images/TechnologiesLogos/WebApp-logo.svg', alt: 'WebApp Logo' },
+    { image: '/images/TechnologiesLogos/nodejs-logo.svg', alt: 'Node.js Logo' },
+    { image: '/images/TechnologiesLogos/reactjs-logo.svg', alt: 'React Logo' },
+  ];
 
   const widthPrototype = 414;
   const heightPrototype = 896;
@@ -98,6 +118,8 @@ const MemoriesUp: NextPage = () => {
       />
       <DesignsCases
         images={imagesDesign}
+        imagesPrototype={imagesPrototype}
+        imagesTechnologies={imagesTechnologies}
         width={widthPrototype}
         height={heightPrototype}
         src={srcPrototype}

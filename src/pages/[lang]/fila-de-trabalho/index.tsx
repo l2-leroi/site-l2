@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 // import { useWindowSize } from 'use-hooks';
 import HeaderCases from '../../../components/organisms/HeaderCases';
 import CardText from '../../../components/organisms/CardText';
@@ -63,6 +63,25 @@ const FilaDeTrabalho: NextPage = () => {
       alt: 'Mockup',
     },
   ];
+  const imagesPrototype = [
+    {
+      image: '/images/PrototypeToParado/PrototypeToParado-1.jpg',
+      alt: 'Mockup',
+    },
+    {
+      image: '/images/PrototypeToParado/PrototypeToParado-2.jpg',
+      alt: 'Mockup',
+    },
+    {
+      image: '/images/PrototypeToParado/PrototypeToParado-3.jpg',
+      alt: 'Mockup',
+    },
+  ];
+
+  const imagesTechnologies = [
+    { image: '/images/TechnologiesLogos/redux-logo.svg', alt: 'Redux Logo' },
+    { image: '/images/TechnologiesLogos/reactjs-logo.svg', alt: 'React Logo' },
+  ];
 
   const widthPrototype = 1239;
   const heightPrototype = 688;
@@ -94,6 +113,8 @@ const FilaDeTrabalho: NextPage = () => {
       />
       <DesignsCases
         images={imagesDesign}
+        imagesPrototype={imagesPrototype}
+        imagesTechnologies={imagesTechnologies}
         width={widthPrototype}
         height={heightPrototype}
         src={srcPrototype}

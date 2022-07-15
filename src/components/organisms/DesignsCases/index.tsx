@@ -20,9 +20,19 @@ interface DesignImage {
   image: string;
   alt: string;
 }
+interface imagesPrototype {
+  image: string;
+  alt: string;
+}
+interface imagesTechnologies {
+  image: string;
+  alt: string;
+}
 
 interface DesignsCasesProps {
   images: DesignImage[];
+  imagesPrototype: imagesPrototype[];
+  imagesTechnologies: imagesTechnologies[];
   width: number;
   height: number;
   widthImage: number;
@@ -33,6 +43,8 @@ interface DesignsCasesProps {
 
 function DesignsCases({
   images,
+  imagesPrototype,
+  imagesTechnologies,
   width,
   height,
   src,
@@ -90,7 +102,13 @@ function DesignsCases({
         </ButtonStyled>
 
         {button1isShown && (
-          <DesignPrototype width={width} height={height} src={src} alt={alt} />
+          <DesignPrototype
+            width={width}
+            height={height}
+            src={src}
+            alt={alt}
+            imagesPrototype={imagesPrototype}
+          />
         )}
         {button2isShown && (
           <DesignImages
@@ -103,9 +121,13 @@ function DesignsCases({
         <TecTitleStyled>{t('CasesDetail.tecnologias')}</TecTitleStyled>
 
         <TechnologiesStyled>
-          <ImageStyled src="../images/WebApp.svg" alt="WebApp Logo" />
+          {imagesTechnologies.map((image) => (
+            <ImageStyled src={image.image} alt={image.alt} />
+          ))}
+
+          {/* <ImageStyled src="../images/WebApp.svg" alt="WebApp Logo" />
           <ImageStyled src="../images/nodejs-logo.svg" alt="Node.js Logo" />
-          <ImageStyled src="../images/reactjs-logo.svg" alt="React Logo" />
+        <ImageStyled src="../images/reactjs-logo.svg" alt="React Logo" /> */}
         </TechnologiesStyled>
       </ContentStyled>
     </ContainerStyled>
