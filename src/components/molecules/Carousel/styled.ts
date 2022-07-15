@@ -8,7 +8,7 @@ export const DivStyled = styled.div`
   overflow: hidden;
 
   @media (max-width: 414px) {
-    margin-left: -4px;
+    margin-left: -40px;
   }
   .slider {
     overflow: hidden;

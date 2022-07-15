@@ -34,7 +34,7 @@ export const DivTextStyled = styled.div`
     @media (max-width: 414px) {
       font-size: 24px;
       margin-top: 150px;
-      margin-left: -85px;
+      margin-left: -90px;
     }
   }
 
@@ -51,7 +51,7 @@ export const DivTextStyled = styled.div`
     @media (max-width: 414px) {
       font-size: 12px;
       margin-top: -15px;
-      margin-left: -130px;
+      margin-left: -140px;
       width: 33.5%;
       max-width: 45%;
     }
@@ -72,7 +72,7 @@ export const DivTextStyled = styled.div`
     }
     @media (max-width: 414px) {
       margin-top: 20px;
-      margin-left: 70px;
+      margin-left: 95px;
     }
   }
 `;
@@ -120,8 +120,8 @@ export const DivText = styled.div`
     @media (max-width: 414px) {
       font-size: 12px;
       margin-top: -15px;
-      margin-left: -110px;
-      width: 42.6%;
+      margin-left: -130px;
+      width: 38.6%;
       max-width: 55%;
     }
   }
@@ -136,15 +136,17 @@ export const DivImageStyled = styled.div`
   margin-bottom: 10px;
   margin-top: 5px;
   margin-left: 460px;
-  gap: 20px;
+  gap: 30px;
 
   @media (max-width: 930px) {
-    margin-left: 330px;
-    margin: 6px 6px 20px;
+    margin-left: 348px;
+
+    gap: 5px;
   }
   @media (max-width: 414px) {
-    margin-left: 138px;
+    margin-left: 142px;
     margin-top: -20px;
+    gap: 1px;
   }
 
   img {
@@ -156,7 +158,6 @@ export const DivImageStyled = styled.div`
     }
     @media (max-width: 930px) {
       width: 100px;
-      margin: 6px 6px 20px;
     }
 
     @media (max-width: 414px) {
@@ -187,9 +188,9 @@ export const DivTextParagraph = styled.div`
     @media (max-width: 414px) {
       font-size: 12px;
       margin-top: -30px;
-      margin-left: -100px;
-      width: 42.5%;
-      max-width: 50%;
+      margin-left: -102px;
+      width: 41%;
+      max-width: 55%;
     }
   }
 
@@ -208,7 +209,7 @@ export const DivTextParagraph = styled.div`
     }
     @media (max-width: 414px) {
       margin-top: 0px;
-      margin-left: 70px;
+      margin-left: 95px;
     }
   }
 `;

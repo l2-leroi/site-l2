@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
+
 import HeaderOurCareer from '../../../components/organisms/HeaderOurCareer';
 import TalentsOurCareer from '../../../components/organisms/TalentsOurCareer';
 import Carousel from '../../../components/molecules/Carousel';
@@ -15,7 +16,12 @@ const NossasCarreiras: NextPage = () => {
         window.scrollTo(0, 0);
       };
     }
-  });
+  }, []);
+
+  useEffect(() => {
+    const nav = document.querySelector('.nav');
+    nav?.classList.add('animate');
+  }, []);
 
   const startDate = '20/05/2022';
   const endDate = '24/07/2022';

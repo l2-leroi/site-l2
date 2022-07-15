@@ -11,7 +11,7 @@ export const ContainerStyled = styled.section`
   background-color: ${colors.black};
   color: ${colors.gray};
   padding-top: 20.5rem;
-  float: none;
+  overflow: hidden;
   h1 {
     margin-top: 4rem;
     margin-bottom: 30px;
@@ -327,7 +327,7 @@ export const DivImageStyled = styled.div`
     }
     @media (max-width: 414px) {
       font-size: 12px;
-      margin-top: 90px;
+      margin-top: 115px;
       width: 90%;
       max-width: 90%;
       margin-left: -10px;
@@ -371,37 +371,30 @@ export const ArrowSpinnerContainerStyled = styled.div`
 `;
 
 export const SpinnerImage = styled.img`
-  width: 300px;
-  max-width: 300px;
-
   @media (max-width: 930px) {
-    width: 200px;
-    max-width: 200px;
+    max-width: 250px;
   }
   @media (max-width: 414px) {
-    width: 110px;
-    max-width: 150px;
+    max-width: 140px;
   }
 `;
 
 export const SpinningIconStyled = styled.div`
   position: absolute;
   left: -100px;
-  margin-top: 77%;
+  margin-top: 67%;
 
-  overflow-x: hidden;
   animation: ${SpinningAnimation} 5s linear infinite;
   @media (max-width: 1280px) {
     margin-top: 82%;
   }
   @media (max-width: 930px) {
-    margin-left: -60px;
+    margin-left: 10px;
     margin-top: 950px;
   }
   @media (max-width: 414px) {
-    margin-left: 400px;
-    margin-top: 815px;
-    overflow: hidden;
+    margin-left: 340px;
+    margin-top: 760px;
   }
 `;
 
