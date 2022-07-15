@@ -46,17 +46,22 @@ function DesignPrototype({
 
     function teste() {
       const prototypeDiv = document.querySelector('#prototype');
+      const contentPrototype = document.querySelector('#contentPrototype');
       const prototypeDiv2 = document.getElementById('prototype');
-
       const topPrototype = prototypeDiv2.offsetTop;
       const heightPrototypeDiv = posicoes.bottom - posicoes.top; // altura da div
       const pageY = window.pageYOffset; // Y da página
-      const aux = (window.innerHeight - heightPrototypeDiv) / 2;
+      const aux = (window.innerHeight - heightPrototypeDiv) / 2; // px onde deve começar a div
       const aux5 = topPrototype - aux; // Div centralizada | o Y da página
 
+      console.log(`pageY= ${pageY}`);
+      console.log(`aux = ${aux}`);
+      console.log(`aux5 = ${aux5}`);
+
       if (pageY > aux5) {
-        prototypeDiv.scrollTop = pageY - aux5;
-        console.log(`scrollTop = ${prototypeDiv.scrollTop}`);
+        // prototypeDiv.scrollTop = Math.floor(pageY - aux5);
+        document.documentElement.scrollTop = aux5; // Math.floor(pageY - aux5);
+        console.log(`pageY - aux5 = ${pageY - aux5}`);
 
         console.log('Entrei no if');
         console.log(`window.innerHeight = ${window.innerHeight}`);
@@ -64,7 +69,7 @@ function DesignPrototype({
         console.log(`topPrototype = ${topPrototype}`);
 
         // window.scrollTo(0, aux2); // IE
-        // unloadScrollBars();
+        unloadScrollBars();
       }
     }
     window.addEventListener('scroll', teste);

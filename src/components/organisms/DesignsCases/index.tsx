@@ -85,7 +85,7 @@ function DesignsCases({
 
   return (
     <ContainerStyled>
-      <ContentStyled>
+      <ContentStyled id="contentPrototype">
         <DivStyled>
           <TitleStyled>{t('CasesDetail.design')}</TitleStyled>
         </DivStyled>
