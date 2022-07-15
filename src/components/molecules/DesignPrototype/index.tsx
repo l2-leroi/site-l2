@@ -48,52 +48,24 @@ function DesignPrototype({
       const prototypeDiv = document.querySelector('#prototype');
       const d = document.getElementById('prototype');
       const topPrototype = d.offsetTop;
-      console.log('Teste');
-      console.log(topPrototype); // retorna o top do elemento em relação a página
       const heightPrototypeDiv = posicoes.bottom - posicoes.top; // altura da div
-      console.log(posicoes);
-      // console.log(posicoes.top); // peguei a posicao do topo
       const pageY = window.pageYOffset;
       const centerscroll =
         pageY + (window.innerHeight - heightPrototypeDiv) / 2;
-      console.log(`Y da página: ${pageY}`); // qual o y da pagina
-      console.log(`Centro da tela? ${centerscroll}`);
+      const aux = (window.innerHeight - heightPrototypeDiv) / 2;  
+      const aux5 = topPrototype - aux; // Div centralizada | o Y da página
 
-      // if (posicoes.top == window.pageYOffset) {
-      // se chegar mais ou menos no meio da página
-      /* centerscroll <= topPrototype + 5 &&
-        centerscroll >= topPrototype - 5 */
-      // elem.scrollTop = middleOffset - (elem.offsetHeight / 2);
-
-      const aux = (window.innerHeight - heightPrototypeDiv) / 2;
-      // const aux5 = topPrototype - window.innerHeight / 2;
-
-      // Div centralizada | o Y da página
-      const aux5 = topPrototype - aux;
-      console.log(`aux5 = ${aux5}`);
-
-      // quantidade de pixels no scrollTop
-      console.log(`aux pixels = ${aux}`);
-
-      // prototypeDiv.scrollTop = aux5;
-      // console.log(`scrollTop = ${prototypeDiv.scrollTop}`);
-
-      // + 5
-      // if (centerscroll + 5 >= topPrototype) {
+      // if (centerscroll >= topPrototype) {
       if (pageY > aux5) {
-        // prototypeDiv.scrollTop = pageY - aux5; // aux5 - window.innerHeight / 2; // aux; // aux5;
         prototypeDiv.scrollTop = pageY - aux5;
         console.log(`scrollTop = ${prototypeDiv.scrollTop}`);
+
         console.log('Entrei no if');
         console.log(`window.innerHeight = ${window.innerHeight}`);
         console.log(`heightPrototypeDiv = ${heightPrototypeDiv}`);
         console.log(`topPrototype = ${topPrototype}`);
 
-        const aux2 = topPrototype - aux; // scrollto
-        const aux3 = window.innerHeight / 2 - heightPrototypeDiv / 2; // scrolltop / sem passar do meio
-        const aux4 = topPrototype + heightPrototypeDiv / 2; // Onde o mouse deve estar
-
-        // window.scrollTo(0, aux2); // deu certo, menos para IE
+        // window.scrollTo(0, aux2); // IE
         // unloadScrollBars();
       }
     }
@@ -113,8 +85,8 @@ function DesignPrototype({
       console.log(`isso é um teste : ${distanceFromTop}`);
     */
 
-    function animePrototype() {
-      /* const scrollTopoffset = '#prototype'.offset().top - window.height();
+    /* function animePrototype() {
+       const scrollTopoffset = '#prototype'.offset().top - window.height();
 
       window.scroll(function () {
         if (window.scrollTop() > scrollTopoffset) {
@@ -122,7 +94,7 @@ function DesignPrototype({
           alert('#dois apareceu!');
         }
       }); */
-      /*
+    /*
       window.addEventListener('scroll', () => {
         const windowTop = window.pageYOffset + window.innerHeight * 0.7;
         const centerscroll = (window.innerHeight - 700) / 2;
@@ -135,15 +107,15 @@ function DesignPrototype({
         //console.log(
          // `teste center: ${window.pageYOffset + window.innerHeight * 0.7}`,
         //); 
-      }); */
-    }
+      }); 
+    } 
     const divPrototy = document.getElementById('prototype');
 
     divPrototy?.addEventListener('wheel', function handleClick(event) {
       console.log('entrou');
       animePrototype();
     });
-  });
+  });*/
 
   useEffect(() => {
     const divPrototy = document.getElementById('prototype');
