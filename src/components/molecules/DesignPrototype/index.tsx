@@ -46,16 +46,15 @@ function DesignPrototype({
 
     function teste() {
       const prototypeDiv = document.querySelector('#prototype');
-      const d = document.getElementById('prototype');
-      const topPrototype = d.offsetTop;
+      const prototypeDiv2 = document.getElementById('prototype');
+
+      const topPrototype = prototypeDiv2.offsetTop;
       const heightPrototypeDiv = posicoes.bottom - posicoes.top; // altura da div
-      const pageY = window.pageYOffset;
-      const centerscroll =
-        pageY + (window.innerHeight - heightPrototypeDiv) / 2;
+      const pageY = window.pageYOffset; // Y da página
       const aux = (window.innerHeight - heightPrototypeDiv) / 2;  
       const aux5 = topPrototype - aux; // Div centralizada | o Y da página
 
-      // if (centerscroll >= topPrototype) {
+    
       if (pageY > aux5) {
         prototypeDiv.scrollTop = pageY - aux5;
         console.log(`scrollTop = ${prototypeDiv.scrollTop}`);
