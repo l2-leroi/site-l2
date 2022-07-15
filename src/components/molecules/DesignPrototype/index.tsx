@@ -51,10 +51,9 @@ function DesignPrototype({
       const topPrototype = prototypeDiv2.offsetTop;
       const heightPrototypeDiv = posicoes.bottom - posicoes.top; // altura da div
       const pageY = window.pageYOffset; // Y da página
-      const aux = (window.innerHeight - heightPrototypeDiv) / 2;  
+      const aux = (window.innerHeight - heightPrototypeDiv) / 2;
       const aux5 = topPrototype - aux; // Div centralizada | o Y da página
 
-    
       if (pageY > aux5) {
         prototypeDiv.scrollTop = pageY - aux5;
         console.log(`scrollTop = ${prototypeDiv.scrollTop}`);
@@ -113,8 +112,8 @@ function DesignPrototype({
     divPrototy?.addEventListener('wheel', function handleClick(event) {
       console.log('entrou');
       animePrototype();
-    });
-  });*/
+    }); */
+  });
 
   useEffect(() => {
     const divPrototy = document.getElementById('prototype');
