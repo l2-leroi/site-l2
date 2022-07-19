@@ -4,6 +4,7 @@ import {
   ArrowSpinnerContainerStyled,
   DivMainTextStyled,
   DivImageStyled,
+  DivTextStyled,
 } from './styled';
 import Carroussel from '../../molecules/Carousel';
 import ScrollCircle from '../../atoms/ScrollCircle';
@@ -75,7 +76,9 @@ export default function TalentsOurCareer() {
         >
           {t('TalentsOurCareer.weEmbrace')}
         </Typography>
+
         <Typography tag="p">{t('TalentsOurCareer.weAreConnected')}</Typography>
+
         <div className="line" />
         <Typography
           tag="h1"
@@ -88,6 +91,7 @@ export default function TalentsOurCareer() {
           {t('TalentsOurCareer.weLove')}
         </Typography>
         <Typography tag="p">{t('TalentsOurCareer.weCreate')}</Typography>
+
         <DivImageStyled>
           <img src="/images/OurCareer/talent-01.jpg" alt="talentos L2 Code" />
           <img src="/images/OurCareer/talent-02.jpg" alt="talentos L2 Code" />
@@ -110,17 +114,20 @@ export default function TalentsOurCareer() {
         <Typography tag="p" className="paragrafoCarrossel">
           {t('TalentsOurCareer.whatTheySay')}
         </Typography>
+
+        <div>
+          <Carroussel cards={cards} />
+        </div>
       </DivMainTextStyled>
-      <div>
-        <Carroussel cards={cards} />
-      </div>
+
+      {/*
       <ArrowSpinnerContainerStyled className="anime">
         <ScrollCircle
           isWhiteImage={false}
           blackImage={`${t('images.spinner')}`}
           whiteImage={`${t('images.whiteSpinner')}`}
         />
-      </ArrowSpinnerContainerStyled>
+  </ArrowSpinnerContainerStyled> */}
     </ContainerStyled>
   );
 }
