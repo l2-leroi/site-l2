@@ -23,19 +23,19 @@ interface DesignPrototypeProps {
 }
 
 function DesignPrototype({
-  width,
+  // width,
   height,
   src,
   alt,
   imagesPrototype,
 }: DesignPrototypeProps) {
   // const [prototypeisShown, prototypesetIsShown] = useState(false);
+  const { width } = useWindowSize();
+  console.log(`width? ${width}`);
 
   useEffect(() => {
     const p = document.querySelector('#prototype');
     const posicoes = p?.getBoundingClientRect();
-    const { width } = useWindowSize();
-    console.log(`width? ${width}`);
 
     function unloadScrollBars() {
       console.log('Entrei no unloadScrollBars');
