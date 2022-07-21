@@ -3,14 +3,27 @@ import { colors } from '../../../styles/colors';
 
 export const DivStyled = styled.div`
   overflow: hidden;
+  //width: 100%;
   width: 80%;
   //margin-left: 4rem;
   // position: absolute;
   //max-width: 95%;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
   .card-fade {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 1s, opacity 1s linear;
+  }
+  .slick-slide {
+    width: auto !important;
+    // width: auto;
+  }
+  .slick-track {
+    //height: 0px;
+    width: max-content !important;
   }
 `;
 
