@@ -2,8 +2,11 @@ import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const DivStyled = styled.div`
-  margin-left: 4rem;
-  max-width: 95%;
+  overflow: hidden;
+  //margin-left: 4rem;
+  // position: absolute;
+  width: 100%;
+  // max-width: 95%;
   .card-fade {
     visibility: hidden;
     opacity: 0;
@@ -20,7 +23,8 @@ export const ArrowRightStyled = styled.div`
   ::before {
     display: none !important;
   }
-  right: -10rem;
+  right: -65px;
+  // right: -10rem;
   background-image: url('/images/white-arrow-right.png') !important;
   background-position: 3.5rem !important;
   background-repeat: no-repeat !important;

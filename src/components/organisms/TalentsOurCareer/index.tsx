@@ -4,7 +4,8 @@ import {
   ArrowSpinnerContainerStyled,
   DivMainTextStyled,
   DivImageStyled,
-  DivTextStyled,
+  ContainerMainStyled,
+  ContainerStyledCarroussel,
 } from './styled';
 import Carroussel from '../../molecules/Carousel';
 import ScrollCircle from '../../atoms/ScrollCircle';
@@ -57,7 +58,72 @@ export default function TalentsOurCareer() {
     },
   ];
   return (
-    <ContainerStyled>
+    <ContainerMainStyled>
+      <ContainerStyled>
+        <ArrowSpinnerContainerStyled className="anime">
+          <ScrollCircle
+            isWhiteImage={false}
+            blackImage={`${t('images.spinner')}`}
+            whiteImage={`${t('images.whiteSpinner')}`}
+          />
+        </ArrowSpinnerContainerStyled>
+
+        <DivMainTextStyled>
+          <Typography
+            tag="h1"
+            size="small"
+            lineHeight="line120"
+            letterSpacing="space1"
+            fontWeight="weight2"
+            fontFamily="font2"
+          >
+            {t('TalentsOurCareer.weEmbrace')}
+          </Typography>
+
+          <Typography tag="p">
+            {t('TalentsOurCareer.weAreConnected')}
+          </Typography>
+
+          <div className="line" />
+          <Typography
+            tag="h1"
+            size="small"
+            lineHeight="line120"
+            letterSpacing="space1"
+            fontWeight="weight2"
+            fontFamily="font2"
+          >
+            {t('TalentsOurCareer.weLove')}
+          </Typography>
+          <Typography tag="p">{t('TalentsOurCareer.weCreate')}</Typography>
+
+          <DivImageStyled>
+            <img src="/images/OurCareer/talent-01.jpg" alt="talentos L2 Code" />
+            <img src="/images/OurCareer/talent-02.jpg" alt="talentos L2 Code" />
+            <img src="/images/OurCareer/talent-03.jpg" alt="talentos L2 Code" />
+          </DivImageStyled>
+          <Typography tag="p">{t('TalentsOurCareer.enjoyToo')}</Typography>
+          <div className="line" />
+          <Typography
+            tag="h1"
+            color="black"
+            size="small"
+            lineHeight="line120"
+            letterSpacing="space1"
+            fontWeight="weight2"
+            fontFamily="font2"
+          >
+            {t('TalentsOurCareer.weValue')}
+          </Typography>
+          <Typography tag="p">{t('TalentsOurCareer.empathize')}</Typography>
+          <Typography tag="p" className="paragrafoCarrossel">
+            {t('TalentsOurCareer.whatTheySay')}
+          </Typography>
+        </DivMainTextStyled>
+      </ContainerStyled>
+      <div>
+        <Carroussel cards={cards} />
+      </div>
       <ArrowSpinnerContainerStyled className="anime">
         <ScrollCircle
           isWhiteImage={false}
@@ -65,69 +131,6 @@ export default function TalentsOurCareer() {
           whiteImage={`${t('images.whiteSpinner')}`}
         />
       </ArrowSpinnerContainerStyled>
-      <DivMainTextStyled>
-        <Typography
-          tag="h1"
-          size="small"
-          lineHeight="line120"
-          letterSpacing="space1"
-          fontWeight="weight2"
-          fontFamily="font2"
-        >
-          {t('TalentsOurCareer.weEmbrace')}
-        </Typography>
-
-        <Typography tag="p">{t('TalentsOurCareer.weAreConnected')}</Typography>
-
-        <div className="line" />
-        <Typography
-          tag="h1"
-          size="small"
-          lineHeight="line120"
-          letterSpacing="space1"
-          fontWeight="weight2"
-          fontFamily="font2"
-        >
-          {t('TalentsOurCareer.weLove')}
-        </Typography>
-        <Typography tag="p">{t('TalentsOurCareer.weCreate')}</Typography>
-
-        <DivImageStyled>
-          <img src="/images/OurCareer/talent-01.jpg" alt="talentos L2 Code" />
-          <img src="/images/OurCareer/talent-02.jpg" alt="talentos L2 Code" />
-          <img src="/images/OurCareer/talent-03.jpg" alt="talentos L2 Code" />
-        </DivImageStyled>
-        <Typography tag="p">{t('TalentsOurCareer.enjoyToo')}</Typography>
-        <div className="line" />
-        <Typography
-          tag="h1"
-          color="black"
-          size="small"
-          lineHeight="line120"
-          letterSpacing="space1"
-          fontWeight="weight2"
-          fontFamily="font2"
-        >
-          {t('TalentsOurCareer.weValue')}
-        </Typography>
-        <Typography tag="p">{t('TalentsOurCareer.empathize')}</Typography>
-        <Typography tag="p" className="paragrafoCarrossel">
-          {t('TalentsOurCareer.whatTheySay')}
-        </Typography>
-
-        <div>
-          <Carroussel cards={cards} />
-        </div>
-      </DivMainTextStyled>
-
-      {/*
-      <ArrowSpinnerContainerStyled className="anime">
-        <ScrollCircle
-          isWhiteImage={false}
-          blackImage={`${t('images.spinner')}`}
-          whiteImage={`${t('images.whiteSpinner')}`}
-        />
-  </ArrowSpinnerContainerStyled> */}
-    </ContainerStyled>
+    </ContainerMainStyled>
   );
 }
