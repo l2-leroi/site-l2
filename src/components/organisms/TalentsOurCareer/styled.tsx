@@ -20,6 +20,10 @@ export const DivMainTextStyled = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 400px) {
+    margin-top: 40px;
+  }
+
   h1 {
     align-self: flex-start;
     display: flex;
@@ -85,7 +89,7 @@ export const DivImageStyled = styled.div`
     border-radius: 18px;
 
     @media (max-width: 400px) {
-      border-radius: 40px;
+      border-radius: 10px;
     }
   }
 
