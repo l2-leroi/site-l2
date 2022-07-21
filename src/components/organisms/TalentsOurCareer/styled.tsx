@@ -123,13 +123,6 @@ export const ContainerMainStyled = styled.div`
 `;
 
 export const ContainerStyledCarroussel = styled.div`
-  /*position: relative;
   display: flex;
-  height: auto;
-  align-items: center;
-
-  .anime {
-    position: absolute;
-  }*/
-  // margin-top: -70px;
+  justify-content: flex-end;
 `;

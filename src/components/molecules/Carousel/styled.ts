@@ -3,10 +3,10 @@ import { colors } from '../../../styles/colors';
 
 export const DivStyled = styled.div`
   overflow: hidden;
+  width: 80%;
   //margin-left: 4rem;
   // position: absolute;
-  width: 100%;
-  // max-width: 95%;
+  //max-width: 95%;
   .card-fade {
     visibility: hidden;
     opacity: 0;

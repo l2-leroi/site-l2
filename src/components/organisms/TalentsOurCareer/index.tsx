@@ -121,9 +121,9 @@ export default function TalentsOurCareer() {
           </Typography>
         </DivMainTextStyled>
       </ContainerStyled>
-      <div>
+      <ContainerStyledCarroussel>
         <Carroussel cards={cards} />
-      </div>
+      </ContainerStyledCarroussel>
       <ArrowSpinnerContainerStyled className="anime">
         <ScrollCircle
           isWhiteImage={false}
