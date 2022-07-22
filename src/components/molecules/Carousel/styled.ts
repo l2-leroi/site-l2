@@ -4,7 +4,7 @@ import { colors } from '../../../styles/colors';
 export const DivStyled = styled.div`
   overflow: hidden;
   //width: 100%;
-  width: 80%;
+  // width: 80%;
   //margin-left: 4rem;
   // position: absolute;
   //max-width: 95%;

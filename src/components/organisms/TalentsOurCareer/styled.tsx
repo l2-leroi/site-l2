@@ -50,7 +50,7 @@ export const DivMainTextStyled = styled.div`
     }
   }
 
-  p:last-child {
+  p:nth-child(11) {
     margin-top: 40px;
     margin-bottom: 40px;
 
@@ -114,6 +114,7 @@ export const ArrowSpinnerContainerStyled = styled.div`
   // width: 30%;
   align-items: flex-start;
   display: flex;
+  z-index: 1;
 
   div {
     width: 100%;
@@ -132,4 +133,6 @@ export const ContainerMainStyled = styled.div`
 export const ContainerStyledCarroussel = styled.div`
   display: flex;
   justify-content: flex-end;
+  // margin-left: -100px;
+  margin-left: -20%;
 `;
