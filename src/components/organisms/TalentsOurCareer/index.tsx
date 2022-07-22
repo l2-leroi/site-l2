@@ -119,18 +119,21 @@ export default function TalentsOurCareer() {
           <Typography tag="p" className="paragrafoCarrossel">
             {t('TalentsOurCareer.whatTheySay')}
           </Typography>
+          <ContainerStyledCarroussel>
+            <Carroussel cards={cards} />
+          </ContainerStyledCarroussel>
         </DivMainTextStyled>
       </ContainerStyled>
-      <ContainerStyledCarroussel>
+      {/* <ContainerStyledCarroussel>
         <Carroussel cards={cards} />
-      </ContainerStyledCarroussel>
+  </ContainerStyledCarroussel>
       <ArrowSpinnerContainerStyled className="anime">
         <ScrollCircle
           isWhiteImage={false}
           blackImage={`${t('images.spinner')}`}
           whiteImage={`${t('images.whiteSpinner')}`}
         />
-      </ArrowSpinnerContainerStyled>
+      </ArrowSpinnerContainerStyled> */}
     </ContainerMainStyled>
   );
 }
