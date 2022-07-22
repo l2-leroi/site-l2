@@ -1,11 +1,9 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useEffect, useRef, useState } from 'react';
-import { event } from 'react-ga';
+import { useEffect } from 'react';
 import { useWindowSize } from 'use-hooks';
 import {
   ContentStyled,
-  ImageStyled,
   ImageStyledPrototype,
   ContentStyledPrototype,
 } from './styled';
@@ -15,7 +13,7 @@ interface imagesPrototype {
   alt: string;
 }
 interface DesignPrototypeProps {
-  width: number;
+  // width: number;
   height: number;
   src: string;
   alt: string;
@@ -30,8 +28,8 @@ function DesignPrototype({
   imagesPrototype,
 }: DesignPrototypeProps) {
   // const [prototypeisShown, prototypesetIsShown] = useState(false);
-  const { width } = useWindowSize();
-  console.log(`width? ${width}`);
+  const { width_t } = useWindowSize();
+  // console.log(`width? ${width}`);
 
   useEffect(() => {
     const p = document.querySelector('#prototype');
@@ -61,9 +59,9 @@ function DesignPrototype({
       console.log(`window.innerWidth = ${window.innerWidth}`);
     }
     window.addEventListener('scroll', teste);
-  }, []); // window.innerWidth
+  }, []); // width_t
 
-  useEffect(() => {
+  /* useEffect(() => {
     const divPrototy = document.getElementById('prototype');
 
     divPrototy?.addEventListener('wheel', function handleClick(event) {
@@ -73,7 +71,7 @@ function DesignPrototype({
       // console.log(event);
       // console.log(event.target);
     });
-  });
+  }); */
 
   return (
     <ContentStyled id="prototype">

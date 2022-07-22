@@ -33,6 +33,9 @@ export const ContentStyled = styled.section`
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   overflow-y: auto;
+  /*::-webkit-scrollbar {
+    display: none;
+  }*/
 `;
 
 export const ListStyled = styled.section``;
