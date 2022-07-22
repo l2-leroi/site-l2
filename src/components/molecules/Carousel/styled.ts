@@ -3,11 +3,6 @@ import { colors } from '../../../styles/colors';
 
 export const DivStyled = styled.div`
   overflow: hidden;
-  //width: 100%;
-  // width: 80%;
-  //margin-left: 4rem;
-  // position: absolute;
-  //max-width: 95%;
 
   @media (max-width: 800px) {
     width: 100%;
@@ -19,10 +14,8 @@ export const DivStyled = styled.div`
   }
   .slick-slide {
     width: auto !important;
-    // width: auto;
   }
   .slick-track {
-    //height: 0px;
     width: max-content !important;
   }
 `;
@@ -37,7 +30,6 @@ export const ArrowRightStyled = styled.div`
     display: none !important;
   }
   right: -65px;
-  // right: -10rem;
   background-image: url('/images/white-arrow-right.png') !important;
   background-position: 3.5rem !important;
   background-repeat: no-repeat !important;

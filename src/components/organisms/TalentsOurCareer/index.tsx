@@ -124,16 +124,6 @@ export default function TalentsOurCareer() {
           </ContainerStyledCarroussel>
         </DivMainTextStyled>
       </ContainerStyled>
-      {/* <ContainerStyledCarroussel>
-        <Carroussel cards={cards} />
-  </ContainerStyledCarroussel>
-      <ArrowSpinnerContainerStyled className="anime">
-        <ScrollCircle
-          isWhiteImage={false}
-          blackImage={`${t('images.spinner')}`}
-          whiteImage={`${t('images.whiteSpinner')}`}
-        />
-      </ArrowSpinnerContainerStyled> */}
     </ContainerMainStyled>
   );
 }

@@ -3,7 +3,6 @@ import styled, { keyframes } from 'styled-components';
 export const ArrowSpinnerComponentStyled = styled.div`
   position: sticky;
   top: 108px;
-
   display: flex;
   align-items: center;
   justify-content: center;

@@ -17,7 +17,6 @@ export const DivMainTextStyled = styled.div`
   align-items: stretch;
   justify-content: flex-end;
   width: 65%;
-  // width: 70%;
   display: flex;
   flex-direction: column;
 
@@ -28,9 +27,7 @@ export const DivMainTextStyled = styled.div`
   h1 {
     align-self: flex-start;
     display: flex;
-    // width: 45%;
     width: 70%;
-    // max-width: 45%;
     margin-bottom: 40px;
 
     @media (max-width: 400px) {
@@ -41,9 +38,7 @@ export const DivMainTextStyled = styled.div`
   p {
     align-self: flex-start;
     display: flex;
-    // max-width: 35%;
     max-width: 47%;
-    // margin-bottom: 40px;
 
     @media (max-width: 400px) {
       max-width: 70%;
@@ -111,7 +106,6 @@ export const SpinningAnimation = keyframes`
 
 export const ArrowSpinnerContainerStyled = styled.div`
   width: 35%;
-  // width: 30%;
   align-items: flex-start;
   display: flex;
   z-index: 1;
@@ -124,6 +118,7 @@ export const ArrowSpinnerContainerStyled = styled.div`
 export const ContainerMainStyled = styled.div`
   padding-bottom: 20rem;
   overflow: inherit;
+
   .anime {
     margin-top: -60px;
     margin-bottom: -60px;
@@ -133,6 +128,5 @@ export const ContainerMainStyled = styled.div`
 export const ContainerStyledCarroussel = styled.div`
   display: flex;
   justify-content: flex-end;
-  // margin-left: -100px;
   margin-left: -20%;
 `;
