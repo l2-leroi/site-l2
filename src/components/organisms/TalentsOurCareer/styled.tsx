@@ -6,7 +6,8 @@ export const ContainerStyled = styled.section`
   flex-direction: row;
   width: 100%;
   background-color: ${colors.gray};
-  overflow: hidden;
+  overflow: inherit;
+  // overflow: hidden;
 `;
 
 export const DivTextStyled = styled.div``;
@@ -121,8 +122,10 @@ export const ArrowSpinnerContainerStyled = styled.div`
 
 export const ContainerMainStyled = styled.div`
   padding-bottom: 20rem;
+  overflow: inherit;
   .anime {
     margin-top: -60px;
+    margin-bottom: -60px;
   }
 `;
 
