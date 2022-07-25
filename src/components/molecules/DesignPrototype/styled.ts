@@ -27,12 +27,15 @@ export const ContentStyled = styled.section`
   }
 
   //scroll
+  /* 
   min-width: 100%;
   background: chocolate;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   overflow-y: auto;
+  */
+
   /*::-webkit-scrollbar {
     display: none;
   }*/

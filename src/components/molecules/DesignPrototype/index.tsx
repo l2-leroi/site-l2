@@ -35,17 +35,7 @@ function DesignPrototype({
     const p = document.querySelector('#prototype');
     const posicoes = p?.getBoundingClientRect();
 
-    function unloadScrollBars() {
-      console.log('Entrei no unloadScrollBars');
-      document.documentElement.style.overflow = 'hidden';
-      document.body.scroll = 'no'; // IE
-    }
-    function reloadScrollBars() {
-      document.documentElement.style.overflow = 'auto';
-      document.body.scroll = 'yes'; // IE
-    }
-
-    function teste() {
+    function CenterWindow() {
       const heightPrototypeDiv = posicoes.bottom - posicoes.top; // altura da div
       const aux = (window.innerHeight - heightPrototypeDiv) / 2; // px onde deve começar a div
       const bottom_page = posicoes.bottom + aux;
@@ -58,20 +48,8 @@ function DesignPrototype({
       console.log(`pageY= ${pageY}`);
       console.log(`window.innerWidth = ${window.innerWidth}`);
     }
-    window.addEventListener('scroll', teste);
+    window.addEventListener('scroll', CenterWindow);
   }, []); // width_t
-
-  /* useEffect(() => {
-    const divPrototy = document.getElementById('prototype');
-
-    divPrototy?.addEventListener('wheel', function handleClick(event) {
-      // console.log(`deltaY: ${event.deltaY}`);
-      // console.log(`window.pageYOffset : ${window.pageYOffset}`);
-      // console.log(`window.innerHeight: ${window.innerHeight}`);
-      // console.log(event);
-      // console.log(event.target);
-    });
-  }); */
 
   return (
     <ContentStyled id="prototype">
