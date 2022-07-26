@@ -15,31 +15,13 @@ interface DesignPrototypeImage {
 }
 
 export const ContentStyled = styled.section`
-  // display: flex;
-  flex-direction: column;
-  max-width: 1500px;
-  flex-direction: row;
+  display: flex;
   justify-content: center;
-  height: 500vh;
-  position: relative;
-
-  // padding-bottom: 140px;
-
+  padding-bottom: 140px;
   @media (max-width: 360px) {
     padding-bottom: 160px;
   }
-
-  //scroll
-  min-width: 100%;
-  background: chocolate;
-  scroll-snap-type: y mandatory;
-  -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-  overflow-y: auto;
-
-  /*::-webkit-scrollbar {
-    display: none;
-  }*/
 `;
 
 export const ListStyled = styled.section``;
@@ -245,29 +227,10 @@ export const ImageStyledPrototype = styled.img<DesignPrototypeImage>`
 `;
 
 export const ContentStyledPrototype = styled.div`
-  height: 500px;
   overflow: hidden;
-  max-height: 700px;
-  max-width: 414px;
   display: flex;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
+  max-height: 700px;
+  top: 94px;
+  max-width: 414px;
   flex-direction: column;
-
-  /*  scroll-snap-type: y mandatory;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  overflow-y: auto;*/
-
-  /* display: flex;
-  flex-direction: column;
-  max-width: 1500px;
-  flex-direction: row;
-  justify-content: center;
-  padding-bottom: 140px;
-
-  @media (max-width: 360px) {
-    padding-bottom: 160px;
-  }*/
 `;

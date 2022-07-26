@@ -5,18 +5,16 @@ export const ContainerStyled = styled.div`
   color: ${colors.black};
   background-color: #171b21;
   padding: 18rem 2.8rem 10rem;
-  display: flex;
-  margin: auto;
-  justify-content: center;
 `;
 
 export const ContentStyled = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 280px;
   -webkit-box-pack: center;
   justify-content: center;
+  position: sticky;
+  top: 94px;
 `;
 
 export const DivStyled = styled.div`
