@@ -32,36 +32,20 @@ function DesignPrototype({
   const containerRef = useRef();
 
   useEffect(() => {
-    const posicoes = prototypeRef?.current?.getBoundingClientRect();
-    const container = containerRef?.current?.getBoundingClientRect();
-
     function scrollPrototype() {
-      const heightPrototypeDiv = posicoes.bottom - posicoes.top; // altura da div
+      const container = containerRef?.current?.getBoundingClientRect();
+      const containerTop = container.top + window.scrollY;
+      const containerBottom = containerTop + container.height;
 
-      if (window.pageYOffset < container.top) {
+      if (window.pageYOffset < containerTop) {
         prototypeRef.current.scroll(0, 0);
-      } else if (window.pageYOffset + window.innerHeight > container.bottom) {
-        const scrollY = container.bottom - container.top;
+      } else if (window.pageYOffset > containerBottom) {
+        const scrollY = containerBottom - containerTop;
         prototypeRef.current.scroll(0, scrollY);
       } else {
-        const scrollY = window.pageYOffset - container.top;
+        const scrollY = window.pageYOffset - containerTop;
         prototypeRef.current.scroll(0, scrollY);
       }
-      const aux = (window.innerHeight - heightPrototypeDiv) / 2; // px onde deve começar a div
-      const bottom_page = posicoes.bottom + aux;
-
-      // console.log(`posicoes.top = ${container.top} `);
-      // console.log(`posicoes.bottom = ${container.bottom} `);
-      // console.log(`window.pageYOffset = ${window.pageYOffset} `);
-
-      // document.getElementById('__next').style.height = `${bottom_page}px`;
-      // document.getElementById('__next').style.overflow = 'hidden';
-
-      /* console.log(document.getElementById('__next').offsetHeight);
-      const pageY = window.pageYOffset; // Y da página
-      console.log(`pageY= ${pageY}`);
-      console.log(`window.innerWidth = ${window.innerWidth}`); 
-      console.log(`O usuario está escrolando.`); */
     }
 
     window.addEventListener('scroll', scrollPrototype);
