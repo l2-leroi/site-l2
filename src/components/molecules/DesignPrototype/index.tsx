@@ -37,24 +37,22 @@ function DesignPrototype({
 
     function scrollPrototype() {
       const heightPrototypeDiv = posicoes.bottom - posicoes.top; // altura da div
-      const bottom = container.bottom - window.innerHeight;
 
-      if (window.pageYOffset > container.top && window.pageYOffset < bottom) {
-        const scrollY = window.pageYOffset - posicoes.top;
-        prototypeRef.current.scroll(0, scrollY);
-      } else if (window.pageYOffset < container.top) {
+      if (window.pageYOffset < container.top) {
         prototypeRef.current.scroll(0, 0);
+      } else if (window.pageYOffset + window.innerHeight > container.bottom) {
+        const scrollY = container.bottom - container.top;
+        prototypeRef.current.scroll(0, scrollY);
       } else {
-        const scrollY = posicoes.top - bottom;
+        const scrollY = window.pageYOffset - container.top;
         prototypeRef.current.scroll(0, scrollY);
       }
-
       const aux = (window.innerHeight - heightPrototypeDiv) / 2; // px onde deve começar a div
       const bottom_page = posicoes.bottom + aux;
 
-      console.log(`posicoes.top = ${container.top} `);
-      console.log(`posicoes.bottom = ${container.bottom} `);
-      console.log(`window.pageYOffset = ${window.pageYOffset} `);
+      // console.log(`posicoes.top = ${container.top} `);
+      // console.log(`posicoes.bottom = ${container.bottom} `);
+      // console.log(`window.pageYOffset = ${window.pageYOffset} `);
 
       // document.getElementById('__next').style.height = `${bottom_page}px`;
       // document.getElementById('__next').style.overflow = 'hidden';

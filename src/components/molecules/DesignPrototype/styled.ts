@@ -17,9 +17,9 @@ interface DesignPrototypeImage {
 export const ContentStyled = styled.section`
   display: flex;
   justify-content: center;
-  padding-bottom: 140px;
+  margin-bottom: 140px;
   @media (max-width: 360px) {
-    padding-bottom: 160px;
+    margin-bottom: 160px;
   }
   scroll-behavior: smooth;
 `;
