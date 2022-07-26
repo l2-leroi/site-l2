@@ -2,26 +2,21 @@ import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const DivStyled = styled.div`
-  margin-left: 4rem;
-  max-width: 100%;
-  padding-bottom: 4rem;
   overflow: hidden;
 
-  @media (max-width: 500px) {
-    margin-left: 60px;
+  @media (max-width: 800px) {
+    width: 100%;
   }
-
-  @media (max-width: 414px) {
-    margin-left: -40px;
-  }
-  .slider {
-    overflow: hidden;
-  }
-
   .card-fade {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 1s, opacity 1s linear;
+  }
+  .slick-slide {
+    width: auto !important;
+  }
+  .slick-track {
+    width: max-content !important;
   }
 `;
 
@@ -35,7 +30,7 @@ export const ArrowRightStyled = styled.div`
   ::before {
     display: none !important;
   }
-  right: -5rem;
+  right: -65px;
   background-image: url('/images/white-arrow-right.png') !important;
   background-position: 3.5rem !important;
   background-repeat: no-repeat !important;

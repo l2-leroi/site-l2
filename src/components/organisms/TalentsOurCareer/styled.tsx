@@ -3,144 +3,65 @@ import { colors } from '../../../styles/colors';
 
 export const ContainerStyled = styled.section`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   background-color: ${colors.gray};
-  overflow: hidden;
-  padding-top: 20rem;
-  /* padding-bottom: 20rem; */
+  overflow: inherit;
 `;
 
-export const DivTextStyled = styled.div`
-  width: 100%;
-  max-width: 100%;
-  margin-top: -180px;
-  margin-left: 90px;
-  align-items: center;
+export const DivMainTextStyled = styled.div`
+  align-self: flex-start;
+  align-items: stretch;
+  justify-content: flex-end;
+  width: 65%;
   display: flex;
   flex-direction: column;
+  padding-top: 10.5rem;
+
+  @media (max-width: 400px) {
+    margin-top: 40px;
+  }
 
   h1 {
+    align-self: flex-start;
     display: flex;
-    width: 45%;
-    max-width: 45%;
-    align-self: center;
-    margin-left: 0px;
+    width: 70%;
     margin-bottom: 40px;
-    @media (max-width: 930px) {
-      font-size: 36px;
-      margin-left: -550px;
-    }
-    @media (max-width: 500px) {
-      font-size: 28px;
-      margin-top: 150px;
-      margin-left: -90px;
-    }
-    @media (max-width: 414px) {
-      font-size: 24px;
+
+    @media (max-width: 400px) {
+      margin-bottom: 20px;
     }
   }
 
   p {
+    align-self: flex-start;
     display: flex;
-    width: 35%;
-    max-width: 35%;
-    margin-left: -135px;
-    align-self: center;
-    margin-bottom: 40px;
-    @media (max-width: 930px) {
-      font-size: 24px;
+    max-width: 47%;
+
+    @media (max-width: 400px) {
+      max-width: 70%;
     }
-    @media (max-width: 500px) {
-      font-size: 14px;
-      margin-top: -15px;
-      margin-left: -160px;
-      width: 30%;
-      max-width: 45%;
+  }
+
+  p:nth-child(11) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @media (max-width: 400px) {
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
   }
 
   .line {
-    width: 90%;
-    border-bottom: 2px solid #8e9195;
-    margin-left: 620px;
-    margin-top: 30px;
-    margin-bottom: 60px;
-    @media (max-width: 1280px) {
-      margin-left: 570px;
-    }
-    @media (max-width: 930px) {
-      margin-top: 30px;
-      margin-left: 380px;
-    }
-    @media (max-width: 500px) {
-      margin-top: 20px;
-      margin-left: 130px;
-    }
-    @media (max-width: 414px) {
-      margin-top: 20px;
-      margin-left: 95px;
-    }
-  }
-`;
+    width: 100%;
+    border-bottom: 1px solid #8e9195;
+    margin-top: 80px;
+    margin-bottom: 80px;
 
-export const DivText = styled.div`
-  width: 100%;
-  max-width: 100%;
-  margin-top: 0px;
-  margin-left: 90px;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-
-  h1 {
-    display: flex;
-    width: 45%;
-    max-width: 45%;
-    align-self: center;
-    margin-left: 0px;
-    margin-bottom: 40px;
-    @media (max-width: 930px) {
-      font-size: 36px;
-      margin-left: -40px;
-      margin-top: 0px;
-    }
-    @media (max-width: 500px) {
-      font-size: 24px;
-      margin-top: 0px;
-      margin-left: -120px;
-      width: 40%;
-      max-width: 80%;
-    }
-    @media (max-width: 414px) {
-      font-size: 24px;
-      margin-left: -65px;
-      width: 55%;
-      max-width: 80%;
-    }
-  }
-
-  p {
-    display: flex;
-    width: 35%;
-    max-width: 35%;
-    margin-left: -135px;
-    align-self: center;
-    margin-bottom: 40px;
-    @media (max-width: 930px) {
-      font-size: 24px;
-    }
-    @media (max-width: 500px) {
-      font-size: 14px;
-      width: 35.8%;
-      max-width: 55%;
-    }
-    @media (max-width: 414px) {
-      font-size: 12px;
-      margin-top: -15px;
-      margin-left: -130px;
-      width: 38.6%;
-      max-width: 55%;
+    @media (max-width: 400px) {
+      margin-top: 40px;
+      margin-bottom: 40px;
     }
   }
 `;
@@ -151,178 +72,24 @@ export const DivImageStyled = styled.div`
   width: 100%;
   max-width: 100%;
   height: auto;
-  margin-bottom: 10px;
-  margin-top: 5px;
-  margin-left: 460px;
-  gap: 20px;
-
-  @media (max-width: 930px) {
-    margin-left: 348px;
-    gap: 5px;
-  }
-  @media (max-width: 500px) {
-    margin-left: 175px;
-    margin-top: -10px;
-    margin-bottom: 40px;
-  }
-  @media (max-width: 414px) {
-    margin-left: 145px;
-  }
+  margin-bottom: 40px;
+  margin-top: 40px;
+  gap: 30px;
 
   img {
+    min-width: 0px;
     display: flex;
     margin-bottom: 20px;
-    border-radius: 20px;
-    @media (max-width: 1280px) {
-      margin: 0px 60px 40px -30px;
-    }
-    @media (max-width: 930px) {
-      width: 100px;
-      margin: 0px;
-    }
-    @media (max-width: 500px) {
-      width: 74px;
-      margin: 5px;
-    }
+    border-radius: 18px;
 
-    @media (max-width: 414px) {
-      width: 64px;
-      margin: 3px;
-    }
-  }
-`;
-
-export const DivTextParagraph = styled.div`
-  width: 100%;
-  max-width: 100%;
-  margin-top: 20px;
-  margin-left: 80px;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  p {
-    display: flex;
-    width: 35%;
-    max-width: 35%;
-    margin-left: -120px;
-    margin-top: -20px;
-    align-self: center;
-    margin-bottom: 40px;
-    @media (max-width: 930px) {
-      font-size: 24px;
-    }
-    @media (max-width: 500px) {
-      font-size: 14px;
-      margin-top: -30px;
-      margin-left: -102px;
-      width: 41%;
-      max-width: 55%;
-    }
-    @media (max-width: 414px) {
-      font-size: 12px;
+    @media (max-width: 400px) {
+      border-radius: 10px;
     }
   }
 
-  .line {
-    width: 90%;
-    border-bottom: 2px solid #8e9195;
-    margin-left: 620px;
-    margin-top: 30px;
-    margin-bottom: 60px;
-    @media (max-width: 1280px) {
-      margin-left: 570px;
-    }
-    @media (max-width: 930px) {
-      margin-top: 30px;
-      margin-left: 380px;
-    }
-    @media (max-width: 500px) {
-      margin-top: 20px;
-      margin-left: 130px;
-    }
-    @media (max-width: 414px) {
-      margin-top: 0px;
-      margin-left: 95px;
-    }
-  }
-`;
-
-export const DivParagraph = styled.div`
-  width: 100%;
-  max-width: 100%;
-  margin-top: -100px;
-  margin-left: 90px;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  h1 {
-    display: flex;
-    width: 45%;
-    max-width: 45%;
-    align-self: center;
-    margin-left: 5px;
-    margin-bottom: 40px;
-    margin-top: 100px;
-    @media (max-width: 930px) {
-      font-size: 36px;
-      margin-left: -50px;
-      margin-top: 120px;
-    }
-    @media (max-width: 500px) {
-      font-size: 28px;
-      margin-top: 80px;
-      margin-left: -120px;
-    }
-    @media (max-width: 414px) {
-      font-size: 24px;
-    }
-  }
-  p {
-    display: flex;
-    width: 35%;
-    max-width: 35%;
-    margin-left: -120px;
-    align-self: center;
-    margin-top: 50px;
-    @media (max-width: 930px) {
-      font-size: 24px;
-      margin-left: -140px;
-    }
-    @media (max-width: 500px) {
-      font-size: 14px;
-      margin-top: 0px;
-      margin-left: -140px;
-      width: 40%;
-      max-width: 50%;
-    }
-    @media (max-width: 414px) {
-      font-size: 12px;
-      margin-left: -120px;
-      width: 45%;
-      max-width: 50%;
-    }
-  }
-  h2 {
-    display: flex;
-    width: 35%;
-    max-width: 35%;
-    margin-left: -120px;
-    align-self: center;
-    margin-top: 50px;
-    @media (max-width: 930px) {
-      font-size: 24px;
-      margin-left: -140px;
-    }
-    @media (max-width: 500px) {
-      font-size: 14px;
-      margin-top: 10px;
-      margin-left: -120px;
-      width: 45%;
-      max-width: 50%;
-    }
-    @media (max-width: 414px) {
-      font-size: 12px;
-    }
+  @media (max-width: 400px) {
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 `;
 
@@ -336,22 +103,28 @@ export const SpinningAnimation = keyframes`
 `;
 
 export const ArrowSpinnerContainerStyled = styled.div`
-  display: inline-flex;
-  margin-left: 60px;
-  margin-top: -130px;
+  width: 35%;
+  align-items: flex-start;
+  display: flex;
+  z-index: 1;
 
-  @media (max-width: 930px) {
-    margin-left: 40px;
-    margin-top: 50px;
-  }
-  @media (max-width: 500px) {
-    div {
-      .animate {
-        width: 72.01px;
-        height: 72.01px;
-      }
-    }
-
-    margin-top: -60px;
+  div {
+    width: 100%;
   }
 `;
+
+export const ContainerMainStyled = styled.div`
+  /* padding-bottom: 20rem; */
+  overflow: inherit;
+
+  .anime {
+    margin-top: 60px;
+    margin-bottom: -160px;
+  }
+`;
+
+// export const ContainerStyledCarroussel = styled.div`
+//   display: flex;
+//   justify-content: flex-end;
+//   margin-left: -20%;
+// `;
