@@ -7,6 +7,10 @@ export const DivStyled = styled.div`
   padding-bottom: 4rem;
   overflow: hidden;
 
+  @media (max-width: 500px) {
+    margin-left: 60px;
+  }
+
   @media (max-width: 414px) {
     margin-left: -40px;
   }
@@ -35,7 +39,7 @@ export const ArrowRightStyled = styled.div`
   background-image: url('/images/white-arrow-right.png') !important;
   background-position: 3.5rem !important;
   background-repeat: no-repeat !important;
-  @media (max-width: 414px) {
+  @media (max-width: 500px) {
     display: none;
   }
 `;

@@ -1,44 +1,29 @@
 import Link from 'next/link';
 import i18next from 'i18next';
 import { parse, isBefore } from 'date-fns';
+import { colors } from '../../../styles/colors';
 import {
   ContainerStyled,
+  TextStyled,
   LanguageStyled,
-  DivStyled,
+  StyledDate,
+  DivStyledDate,
   DateStyled,
-  Div,
-  ValidDate,
-  ExpireDate,
-  DivButton,
-  DivImageStyled,
-  ArrowSpinnerContainerStyled,
-  SpinningIconStyled,
-  SpinnerImage,
-  DivTextStyled,
-  DivButtonStyled,
+  DivDate,
 } from './styled';
 import { Typography } from '../../../styles/typography';
 import Button from '../../atoms/Button';
-import ScrollCircle from '../../atoms/ScrollCircle';
 
-interface PropsImage {
-  src: string;
-  alt: string;
-}
 interface PropsHeaderOurCareer {
   startDate: string; // Formato para data: 'dd/MM/yyyy'
   endDate: string; // Formato para data: 'dd/MM/yyyy'
   id: number;
-  li: string[];
-  traineeImage: PropsImage[];
 }
 
 export default function HeaderOurCareer({
   startDate, // Formato para data: 'dd/MM/yyyy'
   endDate, // Formato para data: 'dd/MM/yyyy'
   id,
-  li,
-  traineeImage,
 }: PropsHeaderOurCareer) {
   const { t } = i18next;
 
@@ -52,26 +37,28 @@ export default function HeaderOurCareer({
 
   return (
     <ContainerStyled>
-      <Typography
-        className="bannerText typography"
-        tag="h1"
-        size="large"
-        fontWeight="weight3"
-        lineHeight="line90"
-        color="gray"
-        fontFamily="font1"
-        letterSpacing="space2"
-      >
-        {t('headerOurCareer.beTrainee')}
-      </Typography>
+      <TextStyled>
+        <Typography
+          className="bannerText typography"
+          tag="h1"
+          size="large"
+          fontWeight="weight3"
+          lineHeight="line90"
+          color="gray"
+          fontFamily="font1"
+          letterSpacing="space2"
+        >
+          {t('headerOurCareer.beTrainee')}
+        </Typography>
 
-      <Typography tag="h2" color="gray" fontFamily="font2">
-        {t('headerOurCareer.hereTheTrainee')}
-      </Typography>
+        <Typography tag="p" color="gray" fontFamily="font2" size="xxsmall">
+          &lt;{t('headerOurCareer.toTheTalents')}&gt;
+        </Typography>
 
-      <Typography tag="p" color="gray" fontFamily="font2" size="xxsmall">
-        &lt;{t('headerOurCareer.toTheTalents')}&gt;
-      </Typography>
+        <Typography tag="h2" color="gray" fontFamily="font2">
+          {t('headerOurCareer.hereTheTrainee')}
+        </Typography>
+      </TextStyled>
 
       <LanguageStyled>
         <Typography
@@ -96,40 +83,76 @@ export default function HeaderOurCareer({
         </Typography>
       </LanguageStyled>
 
-      <DivStyled>
-        <DateStyled key={id}>
-          <Div>
-            <Typography tag="h1" color="gray" fontFamily="font2" size="xsmall">
-              {t('headerOurCareer.registrationUntil')}
-            </Typography>
-            {isStartDateBeforeThanNow ? (
-              <ExpireDate>{startDate}</ExpireDate>
-            ) : (
-              <ValidDate>{startDate}</ValidDate>
+      <StyledDate>
+        <DivStyledDate>
+          <DateStyled key={id}>
+            <DivDate>
+              <Typography tag="h1" color="gray">
+                {t('headerOurCareer.registrationUntil')}
+              </Typography>
+              {isStartDateBeforeThanNow ? (
+                <Typography
+                  tag="h2"
+                  color="gray"
+                  size="small"
+                  fontWeight="weight3"
+                  lineHeight="line120"
+                  letterSpacing="space1"
+                >
+                  {startDate}
+                </Typography>
+              ) : (
+                <Typography
+                  tag="h2"
+                  color="gray"
+                  size="small"
+                  fontWeight="weight3"
+                  lineHeight="line120"
+                  letterSpacing="space1"
+                >
+                  {startDate}
+                </Typography>
+              )}
+            </DivDate>
+            <DivDate>
+              <Typography tag="h1" color="gray">
+                {t('headerOurCareer.resultIn')}
+              </Typography>
+              {isEndDateBeforeThanNow ? (
+                <Typography
+                  tag="h2"
+                  color="gray"
+                  size="small"
+                  fontWeight="weight3"
+                  lineHeight="line120"
+                  letterSpacing="space1"
+                >
+                  {endDate}
+                </Typography>
+              ) : (
+                <Typography
+                  tag="h2"
+                  color="gray"
+                  size="small"
+                  fontWeight="weight3"
+                  lineHeight="line120"
+                  letterSpacing="space1"
+                >
+                  {endDate}
+                </Typography>
+              )}
+            </DivDate>
+          </DateStyled>
+          <div className="button">
+            {!isStartDateBeforeThanNow && (
+              <Button
+                backgroundColor={`${colors.green}`}
+                linkBtn="#"
+                text={t('headerOurCareer.iWantToApply')}
+              />
             )}
-          </Div>
-          <Div>
-            <Typography tag="h1" color="gray" fontFamily="font2" size="xsmall">
-              {t('headerOurCareer.resultIn')}
-            </Typography>
-            {isEndDateBeforeThanNow ? (
-              <ExpireDate>{endDate}</ExpireDate>
-            ) : (
-              <ValidDate>{endDate}</ValidDate>
-            )}
-          </Div>
-        </DateStyled>
-        <DivButton>
-          {!isStartDateBeforeThanNow && (
-            <Button
-              backgroundColor="#20BD9D"
-              linkBtn={t('forms')}
-              text={t('headerOurCareer.iWantToApply')}
-            />
-          )}
-        </DivButton>
-      </DivStyled>
-      <Div>
+          </div>
+        </DivStyledDate>
         {isStartDateBeforeThanNow ? (
           <Typography tag="p" color="gray" fontFamily="font2" size="xsmall">
             {t('headerOurCareer.waitForTheResult')}
@@ -139,74 +162,7 @@ export default function HeaderOurCareer({
             {t('headerOurCareer.makeYourCandidacy')}
           </Typography>
         )}
-      </Div>
-      <SpinningIconStyled>
-        <SpinnerImage src="/images/spinner.png" />
-      </SpinningIconStyled>
-      <DivImageStyled>
-        {traineeImage.map((item) => (
-          <img src={item.src} alt={item.alt} />
-        ))}
-
-        <Typography tag="p" color="gray" fontFamily="font2" size="xsmall">
-          {t('headerOurCareer.lastClass')}
-        </Typography>
-      </DivImageStyled>
-      <div>
-        <ArrowSpinnerContainerStyled className="anime">
-          <ScrollCircle
-            isWhiteImage
-            blackImage={`${t('images.blackSpinner')}`}
-            whiteImage={`${t('images.WhiteSpinner')}`}
-          />
-        </ArrowSpinnerContainerStyled>
-      </div>
-
-      <DivTextStyled>
-        <Typography
-          tag="h1"
-          color="gray"
-          fontFamily="font2"
-          size="small"
-          letterSpacing="space1"
-          lineHeight="line120"
-          fontWeight="weight2"
-        >
-          {t('headerOurCareer.aboutTheProgram')}
-        </Typography>
-        <Typography tag="p" color="gray" fontFamily="font2" size="xsmall">
-          {t('headerOurCareer.youAreGoingTo')}
-        </Typography>
-        <Typography
-          tag="h2"
-          color="gray"
-          fontFamily="font2"
-          size="xsmall"
-          fontWeight="weight2"
-        >
-          {t('headerOurCareer.requirements')}
-        </Typography>
-        <ul>
-          {li.map((item) => (
-            <Typography
-              tag="li"
-              color="gray"
-              fontFamily="font2"
-              size="xsmall"
-              lineHeight="line140"
-            >
-              {t(item)}
-            </Typography>
-          ))}
-        </ul>
-        <DivButtonStyled>
-          <Button
-            backgroundColor="#20BD9D"
-            linkBtn={t('forms')}
-            text={t('headerOurCareer.iWantToApply')}
-          />
-        </DivButtonStyled>
-      </DivTextStyled>
+      </StyledDate>
     </ContainerStyled>
   );
 }
