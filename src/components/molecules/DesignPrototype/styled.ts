@@ -232,7 +232,7 @@ export const ContentStyledPrototype = styled.div`
   position: sticky;
   display: flex;
   height: 100vh;
-  top: 0;
+  top: 0px;
   // @media (min-width: 801px) {
   //   top: 94px;
   //   height: calc(100vh - 94px);
