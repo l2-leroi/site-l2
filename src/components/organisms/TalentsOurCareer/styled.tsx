@@ -114,7 +114,6 @@ export const ArrowSpinnerContainerStyled = styled.div`
 `;
 
 export const ContainerMainStyled = styled.div`
-  /* padding-bottom: 20rem; */
   overflow: inherit;
 
   .anime {
@@ -122,9 +121,3 @@ export const ContainerMainStyled = styled.div`
     margin-bottom: -160px;
   }
 `;
-
-// export const ContainerStyledCarroussel = styled.div`
-//   display: flex;
-//   justify-content: flex-end;
-//   margin-left: -20%;
-// `;

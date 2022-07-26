@@ -42,7 +42,7 @@ export default function AboutOurCareer({
         <ArrowSpinnerContainerStyled className="anime">
           <ScrollCircle
             isWhiteImage
-            blackImage={`${t('images.blackSpinner')}`}
+            blackImage={`${t('images.spinner')}`}
             whiteImage={`${t('images.WhiteSpinner')}`}
           />
         </ArrowSpinnerContainerStyled>

@@ -10,8 +10,9 @@ export const ContainerText = styled.section`
   background-color: ${colors.black};
   color: ${colors.gray};
   padding-top: 10.5rem;
-  padding-bottom: 20.5rem;
+  padding-bottom: 0.5rem;
   overflow: hidden;
+
   @media (max-width: 1260px) {
     flex-direction: column;
   }
@@ -72,8 +73,13 @@ export const SpinnerImage = styled.img`
 export const ArrowSpinnerContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
-  width: 30%;
-
+  margin-top: 10rem;
+  margin-left: 15%;
+  width: 35%;
+  z-index: 2;
+  @media (max-width: 1260px) {
+    margin-left: 0;
+  }
   @media (max-width: 800px) {
     div {
       .animate {

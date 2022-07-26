@@ -92,11 +92,10 @@ export const StyledDate = styled.div`
   p {
     margin-top: 25px;
     margin-bottom: 40px;
-    width: 35%;
+    width: 45%;
     @media (max-width: 600px) {
       font-size: 12px;
       width: 50%;
-      margin-left: 22%;
       text-align: center;
     }
   }
@@ -118,11 +117,12 @@ export const DivStyledDate = styled.div`
 
   .button {
     display: flex;
+    margin-left: 12%;
     justify-content: center;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    width: 100%;
-    max-width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 80%;
+    /* max-width: 100%; */
     height: 100%;
     color: ${colors.black};
   }
