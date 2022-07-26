@@ -1,6 +1,6 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useWindowSize } from 'use-hooks';
 import {
   ContentStyled,
@@ -28,28 +28,35 @@ function DesignPrototype({
   imagesPrototype,
 }: DesignPrototypeProps) {
   // const [prototypeisShown, prototypesetIsShown] = useState(false);
-  const { width_t } = useWindowSize();
-  // console.log(`width? ${width}`);
+  const prototypeRef = useRef();
+  const containerRef = useRef();
 
   useEffect(() => {
-    const p = document.querySelector('#prototype');
-    const posicoes = p?.getBoundingClientRect();
-    const divPrototype = document.getElementById('prototype');
+    const posicoes = prototypeRef?.current?.getBoundingClientRect();
+    const container = containerRef?.current?.getBoundingClientRect();
 
-    document
-      .getElementById('prototype')
-      .addEventListener('scroll', (e) => PrototypeScroll(e));
-
-    // mostra o y do prototype
-    function PrototypeScroll(e) {
-      console.log(`divPrototype = ${divPrototype.scrollTop}`);
-      // console.log(`y = ${posicoes.pageYOffset} `);
-    }
-
-    function CenterWindow() {
+    function scrollPrototype() {
       const heightPrototypeDiv = posicoes.bottom - posicoes.top; // altura da div
+
+      if (
+        window.pageYOffset > container.top &&
+        window.pageYOffset < container.bottom
+      ) {
+        const scrollY = window.pageYOffset - posicoes.bottom;
+        prototypeRef.current.scroll(0, scrollY);
+      } else if (window.pageYOffset < container.top) {
+        prototypeRef.current.scroll(0, 0);
+      } else {
+        const scrollY = posicoes.top - posicoes.bottom;
+        prototypeRef.current.scroll(0, scrollY);
+      }
+
       const aux = (window.innerHeight - heightPrototypeDiv) / 2; // px onde deve começar a div
       const bottom_page = posicoes.bottom + aux;
+
+      console.log(`posicoes.top = ${container.top} `);
+      console.log(`posicoes.bottom = ${container.bottom} `);
+      console.log(`posicoes.bottom = ${container.bottom} `);
 
       // document.getElementById('__next').style.height = `${bottom_page}px`;
       // document.getElementById('__next').style.overflow = 'hidden';
@@ -61,33 +68,7 @@ function DesignPrototype({
       console.log(`O usuario está escrolando.`); */
     }
 
-    function CenterWindow2() {
-      /*
-      const heightPrototypeDiv = posicoes.bottom - posicoes.top; // altura da div
-      const aux = (window.innerHeight - heightPrototypeDiv) / 2; // px onde deve começar a div
-      const bottom_page = posicoes.bottom + aux;
-      const pageY = window.pageYOffset; // Y da página */
-      // o scrollbar tem que ficar parar no bottom_page
-      // $("html").scrollTop(bottom_page);
-
-      const prototypeDiv2 = document.getElementById('prototype');
-      const topPrototype = prototypeDiv2.offsetTop;
-      const heightPrototypeDiv = posicoes.bottom - posicoes.top; // altura da div
-      const pageY = window.pageYOffset; // Y da página
-      const aux = (window.innerHeight - heightPrototypeDiv) / 2; // px onde deve começar a div
-      const aux5 = topPrototype - aux; // Div centralizada | o Y da página
-
-      console.log(`pageY= ${pageY}`);
-      console.log(`aux = ${aux}`);
-      console.log(`aux5 = ${aux5}`);
-      const bottom_page = posicoes.bottom + aux;
-
-      if (pageY > aux5) {
-        $('html').scrollTop(bottom_page);
-      }
-    }
-
-    window.addEventListener('scroll', CenterWindow);
+    window.addEventListener('scroll', scrollPrototype);
   }, []); // width_t
 
   return (
@@ -96,8 +77,9 @@ function DesignPrototype({
       style={{
         height: `${imagesPrototype.length * 100}vh`,
       }}
+      ref={containerRef}
     >
-      <ContentStyledPrototype>
+      <ContentStyledPrototype ref={prototypeRef}>
         {imagesPrototype.map((images) => (
           <ImageStyledPrototype src={images.image} />
         ))}

@@ -84,9 +84,7 @@ const MemoriesUp: NextPage = () => {
     },
   ];
   const imagesTechnologies = [
-    { image: '/images/TechnologiesLogos/WebApp-logo.svg', alt: 'WebApp Logo' },
-    { image: '/images/TechnologiesLogos/nodejs-logo.svg', alt: 'Node.js Logo' },
-    { image: '/images/TechnologiesLogos/reactjs-logo.svg', alt: 'React Logo' },
+    { image: '/images/TechnologiesLogos/figma-logo.svg', alt: 'Figma Logo' },
   ];
 
   const widthPrototype = 414;
