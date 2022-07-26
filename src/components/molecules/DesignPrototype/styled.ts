@@ -15,11 +15,14 @@ interface DesignPrototypeImage {
 }
 
 export const ContentStyled = styled.section`
-  display: flex;
+  // display: flex;
   flex-direction: column;
   max-width: 1500px;
   flex-direction: row;
   justify-content: center;
+  height: 500vh;
+  position: relative;
+
   // padding-bottom: 140px;
 
   @media (max-width: 360px) {
@@ -27,14 +30,12 @@ export const ContentStyled = styled.section`
   }
 
   //scroll
-  /* 
   min-width: 100%;
   background: chocolate;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   overflow-y: auto;
-  */
 
   /*::-webkit-scrollbar {
     display: none;
@@ -240,20 +241,24 @@ export const ImageStyledPrototype = styled.img<DesignPrototypeImage>`
   //height: auto;
   height: 100%;
   scroll-snap-align: start;
+  border-radius: 29px;
 `;
 
 export const ContentStyledPrototype = styled.div`
-  //height: 500px;
+  height: 500px;
+  overflow: hidden;
+  max-height: 700px;
+  max-width: 414px;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  flex-direction: column;
 
   /*  scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   overflow-y: auto;*/
-
-  max-height: 700px;
-  max-width: 414px;
-  display: flex;
-  flex-direction: column;
 
   /* display: flex;
   flex-direction: column;

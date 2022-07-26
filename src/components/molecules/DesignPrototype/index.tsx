@@ -34,20 +34,59 @@ function DesignPrototype({
   useEffect(() => {
     const p = document.querySelector('#prototype');
     const posicoes = p?.getBoundingClientRect();
+    const divPrototype = document.getElementById('prototype');
+
+    document
+      .getElementById('prototype')
+      .addEventListener('scroll', (e) => PrototypeScroll(e));
+
+    // mostra o y do prototype
+    function PrototypeScroll(e) {
+      console.log(`divPrototype = ${divPrototype.scrollTop}`);
+      // console.log(`y = ${posicoes.pageYOffset} `);
+    }
 
     function CenterWindow() {
       const heightPrototypeDiv = posicoes.bottom - posicoes.top; // altura da div
       const aux = (window.innerHeight - heightPrototypeDiv) / 2; // px onde deve começar a div
       const bottom_page = posicoes.bottom + aux;
 
-      document.getElementById('__next').style.height = `${bottom_page}px`;
-      document.getElementById('__next').style.overflow = 'hidden';
+      // document.getElementById('__next').style.height = `${bottom_page}px`;
+      // document.getElementById('__next').style.overflow = 'hidden';
 
-      console.log(document.getElementById('__next').offsetHeight);
+      /* console.log(document.getElementById('__next').offsetHeight);
       const pageY = window.pageYOffset; // Y da página
       console.log(`pageY= ${pageY}`);
-      console.log(`window.innerWidth = ${window.innerWidth}`);
+      console.log(`window.innerWidth = ${window.innerWidth}`); 
+      console.log(`O usuario está escrolando.`); */
     }
+
+    function CenterWindow2() {
+      /*
+      const heightPrototypeDiv = posicoes.bottom - posicoes.top; // altura da div
+      const aux = (window.innerHeight - heightPrototypeDiv) / 2; // px onde deve começar a div
+      const bottom_page = posicoes.bottom + aux;
+      const pageY = window.pageYOffset; // Y da página */
+      // o scrollbar tem que ficar parar no bottom_page
+      // $("html").scrollTop(bottom_page);
+
+      const prototypeDiv2 = document.getElementById('prototype');
+      const topPrototype = prototypeDiv2.offsetTop;
+      const heightPrototypeDiv = posicoes.bottom - posicoes.top; // altura da div
+      const pageY = window.pageYOffset; // Y da página
+      const aux = (window.innerHeight - heightPrototypeDiv) / 2; // px onde deve começar a div
+      const aux5 = topPrototype - aux; // Div centralizada | o Y da página
+
+      console.log(`pageY= ${pageY}`);
+      console.log(`aux = ${aux}`);
+      console.log(`aux5 = ${aux5}`);
+      const bottom_page = posicoes.bottom + aux;
+
+      if (pageY > aux5) {
+        $('html').scrollTop(bottom_page);
+      }
+    }
+
     window.addEventListener('scroll', CenterWindow);
   }, []); // width_t
 
