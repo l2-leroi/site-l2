@@ -84,11 +84,7 @@ function DesignsCases({
   };
 
   return (
-    <ContainerStyled
-      style={{
-        height: button1isShown ? `${images.length * 100}vh` : 'auto',
-      }}
-    >
+    <ContainerStyled>
       <ContentStyled id="contentPrototype">
         <DivStyled>
           <TitleStyled>{t('CasesDetail.design')}</TitleStyled>

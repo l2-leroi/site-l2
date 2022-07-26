@@ -91,7 +91,12 @@ function DesignPrototype({
   }, []); // width_t
 
   return (
-    <ContentStyled id="prototype">
+    <ContentStyled
+      id="prototype"
+      style={{
+        height: `${imagesPrototype.length * 100}vh`,
+      }}
+    >
       <ContentStyledPrototype>
         {imagesPrototype.map((images) => (
           <ImageStyledPrototype src={images.image} />

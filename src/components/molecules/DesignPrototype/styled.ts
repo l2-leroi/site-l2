@@ -219,18 +219,23 @@ export const ImageStyled = styled.img<DesignPrototypePropsMockup>`
 
 export const ImageStyledPrototype = styled.img<DesignPrototypeImage>`
   //max-width: ${(props) => props.width}px;
-  width: 100%;
-  //height: auto;
-  height: 100%;
+  height: 100vh;
+  // @media (min-width: 801px) {
+  //   height: calc(100vh - 94px);
+  // }
   scroll-snap-align: start;
   border-radius: 29px;
 `;
 
 export const ContentStyledPrototype = styled.div`
   overflow: hidden;
+  position: sticky;
   display: flex;
-  max-height: 700px;
-  top: 94px;
-  max-width: 414px;
+  height: 100vh;
+  top: 0;
+  // @media (min-width: 801px) {
+  //   top: 94px;
+  //   height: calc(100vh - 94px);
+  // }
   flex-direction: column;
 `;
