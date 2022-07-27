@@ -5,6 +5,7 @@ import OurCustomers from '../../components/organisms/OurCustomers';
 import LineAnimation from '../../components/atoms/LineAnimation';
 import { colors } from '../../styles/colors';
 import Header from '../../components/organisms/Header';
+import Footer from '../../components/organisms/Footer';
 
 export default function Home() {
   // make page refresh on top
@@ -35,6 +36,7 @@ export default function Home() {
         hasOutSourcing
         hasSpinner={false}
       />
+      <Footer />
     </>
   );
 }
