@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import i18next from 'i18next';
 import {
@@ -11,6 +11,7 @@ import {
 import { Typography } from '../../../styles/typography';
 
 export default function NavOnePage() {
+  const [isWhiteLogo, setIsWhiteLogo] = useState(false);
   const { t } = i18next;
 
   const handleWhite = () => {
@@ -22,13 +23,9 @@ export default function NavOnePage() {
 
   const handleMutation = (mutation) => {
     if (mutation[0].target.classList.contains('white')) {
-      document
-        .querySelector('.navImage')
-        .setAttribute('src', '/images/L2Code-Logo-White.svg');
+      setIsWhiteLogo(true);
     } else {
-      document
-        .querySelector('.navImage')
-        .setAttribute('src', '/images/L2Code-Logo.svg');
+      setIsWhiteLogo(false);
     }
   };
 
@@ -66,6 +63,15 @@ export default function NavOnePage() {
         <NavItemStyled>
           <Link href="/">
             <ImageStyled
+              hidden={!isWhiteLogo}
+              className="navImage"
+              src="/images/L2Code-Logo-White.svg"
+              alt="L2 Code"
+            />
+          </Link>
+          <Link href="/">
+            <ImageStyled
+              hidden={isWhiteLogo}
               className="navImage"
               src="/images/L2Code-Logo.svg"
               alt="L2 Code"
