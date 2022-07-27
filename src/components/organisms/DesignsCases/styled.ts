@@ -170,7 +170,6 @@ export const ButtonPrototype = styled.button`
 `;
 
 export const ButtonStyled = styled.div`
-  width: 100%;
   border-radius: 100px;
   display: flex;
   align-items: center;
