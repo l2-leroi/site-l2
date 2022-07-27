@@ -2,6 +2,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useEffect, useRef, useState } from 'react';
 import { useWindowSize } from 'use-hooks';
+import { Console } from 'console';
 import {
   ContentStyled,
   ImageStyledPrototype,
@@ -35,22 +36,24 @@ function DesignPrototype({
   useEffect(() => {
     const images = document.getElementById('images');
     images.classList.add('transformImage');
+    images.classList.add('transformImageNone');
 
     if (transformImageIsShown === false) {
+      console.log('Removendo / abrindo');
       images.classList.remove('transformImage');
+      images.classList.remove('transformImageNone');
     }
   }, [transformImageIsShown]);
 
   useEffect(() => {
     function scrollPrototype() {
       const container = containerRef?.current?.getBoundingClientRect();
+      const containerTop = container.top + window.scrollY;
+      const containerBottom = containerTop + container.height;
 
       const prototype = prototypeRef?.current?.getBoundingClientRect();
       const prototypeTop = prototype.top + window.scrollY;
       const prototypeBottom = prototypeTop + prototype.height;
-
-      const containerTop = container.top + window.scrollY;
-      const containerBottom = containerTop + container.height;
 
       /* const images = document.getElementById('images');
       images.classList.add('transformImage'); */
@@ -67,11 +70,14 @@ function DesignPrototype({
 
       // -----------------------------------------------------------
 
-      if (prototypeBottom === containerBottom) {
-        console.log('Fim');
-        transformImageSetIsShown(true);
-      } else {
+      // if (prototypeBottom === containerBottom) {
+      if (window.pageYOffset >= containerTop) {
+        console.log('Inicio');
+        // transformImageSetIsShown(true);
         transformImageSetIsShown(false);
+      } else {
+        // transformImageSetIsShown(false);
+        transformImageSetIsShown(true);
       }
 
       // console.log(`window = ${window.pageYOffset}`);

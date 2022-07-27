@@ -256,13 +256,22 @@ export const ContainerImage = styled.div`
   flex-direction: column;
   transition: transform 3s;
 
-  &.transformImage {
-    img:nth-child(1) {
-      display: none;
-    }
+  &.transformImageNone {
     img:nth-child(2) {
       display: none;
     }
+    img:nth-child(3) {
+      display: none;
+    }
+  }
+  &.transformImage {
+    img:nth-child(2) {
+      display: none;
+    }
+    img:nth-child(3) {
+      display: none;
+    }
+
     transform: scaleY(0);
   }
 `;
