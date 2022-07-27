@@ -65,15 +65,15 @@ const FilaDeTrabalho: NextPage = () => {
   ];
   const imagesPrototype = [
     {
-      image: '/images/PrototypeToParado/PrototypeToParado-1.jpg',
+      image: '/images/PrototypeFilaDeTrabalho/PrototypeFilaDeTrabalho-1.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/PrototypeToParado/PrototypeToParado-2.jpg',
+      image: '/images/PrototypeFilaDeTrabalho/PrototypeFilaDeTrabalho-2.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/PrototypeToParado/PrototypeToParado-3.jpg',
+      image: '/images/PrototypeFilaDeTrabalho/PrototypeFilaDeTrabalho-3.jpg',
       alt: 'Mockup',
     },
   ];

@@ -71,15 +71,15 @@ const MemoriesUp: NextPage = () => {
   // trocar
   const imagesPrototype = [
     {
-      image: '/images/PrototypeToParado/PrototypeToParado-1.jpg',
+      image: '/images/PrototypeMemoriesUp/PrototypeMemoriesUp-1.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/PrototypeToParado/PrototypeToParado-2.jpg',
+      image: '/images/PrototypeMemoriesUp/PrototypeMemoriesUp-2.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/PrototypeToParado/PrototypeToParado-3.jpg',
+      image: '/images/PrototypeMemoriesUp/PrototypeMemoriesUp-3.jpg',
       alt: 'Mockup',
     },
   ];
