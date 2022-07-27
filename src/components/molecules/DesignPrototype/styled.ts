@@ -218,13 +218,19 @@ export const ImageStyled = styled.img<DesignPrototypePropsMockup>`
 `;
 
 export const ImageStyledPrototype = styled.img<DesignPrototypeImage>`
-  //max-width: ${(props) => props.width}px;
+  // max-width: ${(props) => props.width}px;
   height: 100vh;
   // @media (min-width: 801px) {
   //   height: calc(100vh - 94px);
   // }
   scroll-snap-align: start;
-  border-radius: 29px;
+  // border-radius: 29px;
+
+  /* transition: transform 1s;
+
+  &.transformImage {
+    transform: scaleY(0);
+  }*/
 `;
 
 export const ContentStyledPrototype = styled.div`
@@ -233,9 +239,30 @@ export const ContentStyledPrototype = styled.div`
   display: flex;
   height: 100vh;
   top: 0px;
+
+  border: 12px;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 24px;
+
   // @media (min-width: 801px) {
   //   top: 94px;
   //   height: calc(100vh - 94px);
   // }
   flex-direction: column;
+`;
+export const ContainerImage = styled.div`
+  display: flex;
+  flex-direction: column;
+  transition: transform 3s;
+
+  &.transformImage {
+    img:nth-child(1) {
+      display: none;
+    }
+    img:nth-child(2) {
+      display: none;
+    }
+    transform: scaleY(0);
+  }
 `;

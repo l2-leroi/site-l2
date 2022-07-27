@@ -1,11 +1,12 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useWindowSize } from 'use-hooks';
 import {
   ContentStyled,
   ImageStyledPrototype,
   ContentStyledPrototype,
+  ContainerImage,
 } from './styled';
 
 interface imagesPrototype {
@@ -27,15 +28,32 @@ function DesignPrototype({
   alt,
   imagesPrototype,
 }: DesignPrototypeProps) {
-  // const [prototypeisShown, prototypesetIsShown] = useState(false);
   const prototypeRef = useRef();
   const containerRef = useRef();
+  const [transformImageIsShown, transformImageSetIsShown] = useState(false);
+
+  useEffect(() => {
+    const images = document.getElementById('images');
+    images.classList.add('transformImage');
+
+    if (transformImageIsShown === false) {
+      images.classList.remove('transformImage');
+    }
+  }, [transformImageIsShown]);
 
   useEffect(() => {
     function scrollPrototype() {
       const container = containerRef?.current?.getBoundingClientRect();
+
+      const prototype = prototypeRef?.current?.getBoundingClientRect();
+      const prototypeTop = prototype.top + window.scrollY;
+      const prototypeBottom = prototypeTop + prototype.height;
+
       const containerTop = container.top + window.scrollY;
       const containerBottom = containerTop + container.height;
+
+      /* const images = document.getElementById('images');
+      images.classList.add('transformImage'); */
 
       if (window.pageYOffset < containerTop) {
         prototypeRef.current.scroll(0, 0);
@@ -46,6 +64,19 @@ function DesignPrototype({
         const scrollY = window.pageYOffset - containerTop;
         prototypeRef.current.scroll(0, scrollY);
       }
+
+      // -----------------------------------------------------------
+
+      if (prototypeBottom === containerBottom) {
+        console.log('Fim');
+        transformImageSetIsShown(true);
+      } else {
+        transformImageSetIsShown(false);
+      }
+
+      // console.log(`window = ${window.pageYOffset}`);
+      // console.log(`prototypeBottom = ${prototypeBottom}`);
+      // console.log(`containerBottom = ${containerBottom}`);
     }
 
     window.addEventListener('scroll', scrollPrototype);
@@ -60,9 +91,11 @@ function DesignPrototype({
       ref={containerRef}
     >
       <ContentStyledPrototype ref={prototypeRef}>
-        {imagesPrototype.map((images) => (
-          <ImageStyledPrototype src={images.image} />
-        ))}
+        <ContainerImage id="images">
+          {imagesPrototype.map((images) => (
+            <ImageStyledPrototype src={images.image} />
+          ))}
+        </ContainerImage>
       </ContentStyledPrototype>
 
       {/* <ImageStyled width={width} height={height} src={src} alt={alt} /> */}
