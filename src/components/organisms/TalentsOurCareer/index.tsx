@@ -24,36 +24,10 @@ export default function TalentsOurCareer({
   talentsImages,
 }: PropsTalentsOurCareer) {
   const { t } = i18next;
-  const [whiteImage, setWhiteImage] = useState<boolean>(false);
-
-  useEffect(() => {
-    const line = document.querySelector('.line-animation');
-    if (line) {
-      window.addEventListener('scroll', () => {
-        const lineBound = line.getBoundingClientRect();
-
-        if (lineBound.top < 0) {
-          setWhiteImage(false);
-          return;
-        }
-
-        setWhiteImage(true);
-      });
-    }
-  }, []);
 
   return (
     <ContainerMainStyled>
       <ContainerStyled>
-        <ArrowSpinnerContainerStyled className="anime arrow-spinner">
-          <ScrollCircle
-            // hidden={!whiteCircle}
-            isWhiteImage={!!whiteImage}
-            blackImage={`${t('images.spinner')}`}
-            whiteImage={`${t('images.whiteSpinner')}`}
-          />
-        </ArrowSpinnerContainerStyled>
-
         <DivMainTextStyled>
           <Typography
             tag="h1"

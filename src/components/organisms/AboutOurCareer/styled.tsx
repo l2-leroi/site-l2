@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 import { colors } from '../../../styles/colors';
+import ScrollCircle from '../../atoms/ScrollCircle';
 
 export const ContainerStyled = styled.section`
   display: flex;
@@ -38,13 +39,6 @@ export const DivImageStyled = styled.div`
       font-size: 12px;
     }
   }
-  .anime {
-    margin-top: 10px;
-    margin-bottom: -160px;
-    @media (max-width: 1260px) {
-      /* margin-top: -1100px; */
-    }
-  }
 `;
 
 export const SpinningAnimation = keyframes`
@@ -76,36 +70,6 @@ export const SpinnerImage = styled.img`
   animation: ${SpinningAnimation} 5s linear infinite;
   @media (max-width: 800px) {
     max-width: 180px;
-  }
-`;
-
-export const ArrowSpinnerContainerStyled = styled.div`
-  width: 35%;
-  align-items: flex-start;
-  flex-direction: column;
-  display: flex;
-  z-index: 1;
-
-  div {
-    width: 100%;
-  }
-
-  /* display: flex;
-  flex-direction: column;
-  margin-top: 10rem;
-  margin-left: 10%;
-  width: 20%;
-  z-index: 2; */
-  @media (max-width: 1260px) {
-    margin-left: 0;
-  }
-  @media (max-width: 800px) {
-    div {
-      .animate {
-        width: 72.01px;
-        height: 72.01px;
-      }
-    }
   }
 `;
 

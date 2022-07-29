@@ -1,12 +1,14 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
 
+import { t } from 'i18next';
 import HeaderOurCareer from '../../../components/organisms/HeaderOurCareer';
 import AboutOurCareer from '../../../components/organisms/AboutOurCareer';
 import TalentsOurCareer from '../../../components/organisms/TalentsOurCareer';
 import Carousel from '../../../components/molecules/Carousel';
 import LineAnimation from '../../../components/atoms/LineAnimation';
 import { colors } from '../../../styles/colors';
+import { Container, StyledScrollCircle } from './style';
 
 const NossasCarreiras: NextPage = () => {
   useEffect(() => {
@@ -83,10 +85,27 @@ const NossasCarreiras: NextPage = () => {
     },
   ];
   return (
-    <>
+    <Container>
       <HeaderOurCareer startDate={startDate} endDate={endDate} id={id} />
       <AboutOurCareer li={li} traineeImage={image} />
       <LineAnimation
+        topChildren={
+          <div className="topSpinner">
+            <StyledScrollCircle
+              isWhiteImage
+              blackImage={`${t('images.spinner')}`}
+              whiteImage={`${t('images.whiteSpinner')}`}
+            />
+          </div>
+        }
+        bottomChildren={
+          <div className="bottomSpinner">
+            <StyledScrollCircle
+              blackImage={`${t('images.spinner')}`}
+              whiteImage={`${t('images.whiteSpinner')}`}
+            />
+          </div>
+        }
         lineBg={colors.gray}
         secondaryBg={colors.black}
         hasOutSourcing={false}
@@ -102,7 +121,7 @@ const NossasCarreiras: NextPage = () => {
         hasOutSourcing={false}
         hasSpinner={false}
       />
-    </>
+    </Container>
   );
 };
 

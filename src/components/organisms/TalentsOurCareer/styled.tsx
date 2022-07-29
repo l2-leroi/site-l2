@@ -2,11 +2,11 @@ import styled, { keyframes } from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const ContainerStyled = styled.section`
-  display: flex;
-  flex-direction: row;
   width: 100%;
   background-color: ${colors.gray};
   overflow: inherit;
+  display: flex;
+  padding-left: 30%;
 `;
 
 export const DivMainTextStyled = styled.div`
@@ -102,39 +102,6 @@ export const SpinningAnimation = keyframes`
   }
 `;
 
-export const ArrowSpinnerContainerStyled = styled.div`
-  width: 35%;
-  align-items: flex-start;
-  display: flex;
-  z-index: 99;
-
-  div {
-    width: 100%;
-  }
-`;
-
 export const ContainerMainStyled = styled.div`
   overflow: inherit;
-  .whiteSpinner {
-    position: absolute;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-  }
-
-  .anime {
-    margin-top: -460px;
-    margin-bottom: -160px;
-    @media (max-width: 1260px) {
-      margin-top: -750px;
-    }
-  }
-  @media (max-width: 800px) {
-    div {
-      .animate {
-        width: 72.01px;
-        height: 72.01px;
-      }
-    }
-  }
 `;
