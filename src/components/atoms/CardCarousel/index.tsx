@@ -8,7 +8,7 @@ interface Card {
   className: string;
 }
 
-const CardCarroussel = ({
+const CardCarousel = ({
   comment,
   authorImg,
   authorName,
@@ -26,4 +26,4 @@ const CardCarroussel = ({
     </DivStyled>
   );
 };
-export default CardCarroussel;
+export default CardCarousel;

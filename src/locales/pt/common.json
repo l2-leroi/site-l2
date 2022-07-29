@@ -2,8 +2,11 @@
   "images": {
     "spinner": "/images/Arrow-Spinner.svg",
     "whiteSpinner": "/images/Arrow-Spinner-White.svg",
+    "blackSpinner": "/images/black-spinner.svg",
+    "WhiteSpinner": "/images/white-spinner.svg",
     "alt": {
-      "thereIsMore": "Tem mais coisa aqui em baixo"
+      "thereIsMore": "Tem mais coisa aqui em baixo",
+      "howItIs": "Como é trabalhar na L2"
     }
   },
   "cases": {
@@ -14,15 +17,15 @@
     "webApp": "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.",
     "providers": "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira.",
     "educationalCredit": "Ajudamos milhares de jovens na burocrática jornada de obtenção de crédito educacional",
-      "alt":{
-        "coverMemoriesUp" : "Capa Memories Up",
-        "coverMoreAccess" : "Capa Mais Acesso",
-        "coverImStopped" : "Capa Tô Parado",
-        "coverWorkQueue" : "Capa Fila de Trabalho"
-      }
-     },
+    "alt": {
+      "coverMemoriesUp": "Capa Memories Up",
+      "coverMoreAccess": "Capa Mais Acesso",
+      "coverImStopped": "Capa Tô Parado",
+      "coverWorkQueue": "Capa Fila de Trabalho"
+    }
+  },
 
-  "footer":{
+  "footer": {
     "letsTalk": "VAMOS CONVERSAR",
     "ourWhatsapp": "nosso whatsapp",
     "ourEmail": "nosso e-mail",
@@ -46,10 +49,10 @@
     "iWantToApply": "QUERO ME CANDIDATAR",
     "makeYourCandidacy": "Faça sua candidatura agora e receba resposta primeiro. Fique tranquila, você pode atualizar seus dados depois.",
     "waitForTheResult": "Aguarde o resultado. Iremos encaminhá-lo a você por e-mail.",
-    "lastClass": "Última turma de Trainnes chamados.",
-    "aboutTheProgram": "Sobre o programa de Trainne",
+    "lastClass": "Última turma de Trainees chamados.",
+    "aboutTheProgram": "Sobre o programa de Trainee",
     "youAreGoingTo": "Você vai trabalhar num time de TI excepcional e vai ter treinamento durante 12 meses. O foco é ampliar seus conhecimentos em diferentes tecnologias, assim você descobre o que realmente gosta e a gente direciona seu potencial para gerar o máximo de impacto. ● Somos flexíveis com horários, o que facilita para você conciliar sua rotina acadêmica.",
-    "requirements": "Requisitos",
+    "requirements": "Requisitos:",
     "desirable": "Desejável estar cursando o último ano de Ciência da Computação ou equivalente ou outro curso superior na área de TI;",
     "availability": "Disponibilidade para trabalhar 30 horas semanais;",
     "knowledge": "Conhecimentos de lógica de programação e estrutura de dados."
