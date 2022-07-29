@@ -137,6 +137,7 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner }) => {
 
   return (
     <LineContainerStyled
+      className="line-animation"
       lineBg={lineBg}
       secondaryBg={secondaryBg}
       ref={container}

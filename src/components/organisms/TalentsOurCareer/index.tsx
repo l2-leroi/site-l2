@@ -1,4 +1,6 @@
 import i18next from 'i18next';
+// import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {
   ContainerStyled,
   ArrowSpinnerContainerStyled,
@@ -22,13 +24,31 @@ export default function TalentsOurCareer({
   talentsImages,
 }: PropsTalentsOurCareer) {
   const { t } = i18next;
+  const [whiteImage, setWhiteImage] = useState<boolean>(false);
+
+  useEffect(() => {
+    const line = document.querySelector('.line-animation');
+    if (line) {
+      window.addEventListener('scroll', () => {
+        const lineBound = line.getBoundingClientRect();
+
+        if (lineBound.top < 0) {
+          setWhiteImage(false);
+          return;
+        }
+
+        setWhiteImage(true);
+      });
+    }
+  }, []);
 
   return (
     <ContainerMainStyled>
       <ContainerStyled>
-        <ArrowSpinnerContainerStyled className="anime">
+        <ArrowSpinnerContainerStyled className="anime arrow-spinner">
           <ScrollCircle
-            isWhiteImage={false}
+            // hidden={!whiteCircle}
+            isWhiteImage={!!whiteImage}
             blackImage={`${t('images.spinner')}`}
             whiteImage={`${t('images.whiteSpinner')}`}
           />

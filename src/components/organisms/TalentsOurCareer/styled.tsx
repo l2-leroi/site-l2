@@ -106,7 +106,7 @@ export const ArrowSpinnerContainerStyled = styled.div`
   width: 35%;
   align-items: flex-start;
   display: flex;
-  z-index: 1;
+  z-index: 99;
 
   div {
     width: 100%;
@@ -115,9 +115,26 @@ export const ArrowSpinnerContainerStyled = styled.div`
 
 export const ContainerMainStyled = styled.div`
   overflow: inherit;
+  .whiteSpinner {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
 
   .anime {
-    margin-top: 60px;
+    margin-top: -460px;
     margin-bottom: -160px;
+    @media (max-width: 1260px) {
+      margin-top: -750px;
+    }
+  }
+  @media (max-width: 800px) {
+    div {
+      .animate {
+        width: 72.01px;
+        height: 72.01px;
+      }
+    }
   }
 `;

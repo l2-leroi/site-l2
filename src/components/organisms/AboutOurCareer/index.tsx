@@ -1,16 +1,17 @@
 import i18next from 'i18next';
 import { colors } from '../../../styles/colors';
 import {
-  ContainerText,
+  // ContainerMainStyled,
+  ContainerStyled,
   DivImageStyled,
   DivTextStyled,
-  ArrowSpinnerContainerStyled,
+  // ArrowSpinnerContainerStyled,
   SpinningIconStyled,
   SpinnerImage,
 } from './styled';
 import { Typography } from '../../../styles/typography';
 import Button from '../../atoms/Button';
-import ScrollCircle from '../../atoms/ScrollCircle';
+// import ScrollCircle from '../../atoms/ScrollCircle';
 
 interface PropsImage {
   src: string;
@@ -28,7 +29,7 @@ export default function AboutOurCareer({
   const { t } = i18next;
 
   return (
-    <ContainerText>
+    <ContainerStyled className="aboutOurCareer">
       <DivImageStyled>
         <SpinningIconStyled>
           <SpinnerImage src="/images/spinner.png" />
@@ -39,13 +40,6 @@ export default function AboutOurCareer({
         <Typography tag="p" color="gray" fontFamily="font2" size="xsmall">
           {t('headerOurCareer.lastClass')}
         </Typography>
-        <ArrowSpinnerContainerStyled className="anime">
-          <ScrollCircle
-            isWhiteImage
-            blackImage={`${t('images.spinner')}`}
-            whiteImage={`${t('images.WhiteSpinner')}`}
-          />
-        </ArrowSpinnerContainerStyled>
       </DivImageStyled>
 
       <DivTextStyled>
@@ -97,6 +91,6 @@ export default function AboutOurCareer({
           />
         </div>
       </DivTextStyled>
-    </ContainerText>
+    </ContainerStyled>
   );
 }

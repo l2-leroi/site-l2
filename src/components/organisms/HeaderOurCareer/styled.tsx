@@ -122,7 +122,6 @@ export const DivStyledDate = styled.div`
     margin-top: 40px;
     margin-bottom: 40px;
     width: 80%;
-    /* max-width: 100%; */
     height: 100%;
     color: ${colors.black};
   }
