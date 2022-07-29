@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
 import { colors } from '../../../styles/colors';
-import ScrollCircle from '../../atoms/ScrollCircle';
 
 export const ContainerStyled = styled.section`
   display: flex;
@@ -12,9 +11,6 @@ export const ContainerStyled = styled.section`
   padding-top: 10.5rem;
   padding-bottom: 10.5rem;
   overflow: hidden;
-
-  /* z-index: -1; */
-  /* overflow: inherit; */
 
   @media (max-width: 1260px) {
     flex-direction: column;
@@ -74,9 +70,6 @@ export const SpinnerImage = styled.img`
 `;
 
 export const DivTextStyled = styled.div`
-  /* align-self: flex-start;
-  align-items: stretch;
-  justify-content: flex-end; */
   display: flex;
   flex-direction: column;
   margin-left: 8%;
@@ -92,7 +85,6 @@ export const DivTextStyled = styled.div`
     }
     @media (max-width: 800px) {
       font-size: 20px;
-      /* margin-top: 30px; */
     }
   }
 

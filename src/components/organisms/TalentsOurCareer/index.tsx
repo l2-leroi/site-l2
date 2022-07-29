@@ -1,15 +1,12 @@
 import i18next from 'i18next';
-// import { useEffect } from 'react';
-import { useEffect, useState } from 'react';
+
 import {
   ContainerStyled,
-  ArrowSpinnerContainerStyled,
   DivImageStyled,
   DivMainTextStyled,
   ContainerMainStyled,
 } from './styled';
 
-import ScrollCircle from '../../atoms/ScrollCircle';
 import { Typography } from '../../../styles/typography';
 
 interface PropsImages {

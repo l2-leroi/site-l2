@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const ContainerStyled = styled.section`
@@ -90,15 +90,6 @@ export const DivImageStyled = styled.div`
   @media (max-width: 400px) {
     margin-bottom: 20px;
     margin-top: 20px;
-  }
-`;
-
-export const SpinningAnimation = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 `;
 
