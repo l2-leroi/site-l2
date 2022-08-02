@@ -23,7 +23,10 @@ export default function Nav() {
   };
 
   const handleMutation = (mutation) => {
-    if (mutation[0].target.classList.contains('white')) {
+    if (
+      mutation[0].target.classList.contains('white') ||
+      mutation[0].target.classList.contains('transparentBlack')
+    ) {
       document
         .querySelector('.navImage')
         .setAttribute('src', '/images/L2Code-Logo-White.svg');
