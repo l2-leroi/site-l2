@@ -12,6 +12,9 @@ const FilaDeTrabalho: NextPage = () => {
   // const { width } = useWindowSize();
 
   useEffect(() => {
+    const nav = document.querySelector('.nav');
+    nav?.classList.add('transparentBlack');
+
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
     } else {
@@ -83,13 +86,22 @@ const FilaDeTrabalho: NextPage = () => {
     { image: '/images/TechnologiesLogos/reactjs-logo.svg', alt: 'React Logo' },
   ];
 
-  const widthPrototype = 1239;
-  const heightPrototype = 688;
+  // 1263; 712;
+  const widthPrototype = 1263; // +24
+  const heightPrototype = 712; // +24
+  // 1000px
+  const medWidthPrototype = 577;
+  const medHeightPrototype = 321;
+  // 400px
+  const minWidthPrototype = 311;
+  const minHeightPrototype = 173;
+
   const srcPrototype =
     '/images/fila-de-trabalho/mockup-desk-fila-de-trabalho.png';
   const altPrototype = 'Mockup animado';
-  const widthImage = 464;
-  const heightImage = 257;
+  const widthImage = 1239;
+  const heightImage = 688;
+  const prototypeType = 'desktop';
 
   return (
     <>
@@ -117,10 +129,15 @@ const FilaDeTrabalho: NextPage = () => {
         imagesTechnologies={imagesTechnologies}
         width={widthPrototype}
         height={heightPrototype}
+        minWidth={minWidthPrototype}
+        minHeight={minHeightPrototype}
+        medWidthPrototype={medWidthPrototype}
+        medHeightPrototype={medHeightPrototype}
         src={srcPrototype}
         alt={altPrototype}
         widthImage={widthImage}
         heightImage={heightImage}
+        prototypeType={prototypeType}
       />
       <AllCases />
 

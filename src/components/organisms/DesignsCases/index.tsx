@@ -35,10 +35,15 @@ interface DesignsCasesProps {
   imagesTechnologies: imagesTechnologies[];
   width: number;
   height: number;
+  minWidth: number;
+  minHeight: number;
+  medHeightPrototype: number;
+  medWidthPrototype: number;
   widthImage: number;
   heightImage: number;
   src: string;
   alt: string;
+  prototypeType: string;
 }
 
 function DesignsCases({
@@ -47,10 +52,15 @@ function DesignsCases({
   imagesTechnologies,
   width,
   height,
+  minWidth,
+  minHeight,
+  medHeightPrototype,
+  medWidthPrototype,
   src,
   alt,
   widthImage,
   heightImage,
+  prototypeType,
 }: DesignsCasesProps) {
   const [button1isShown, button1setIsShown] = useState(true);
   const [button2isShown, button2setIsShown] = useState(false);
@@ -104,10 +114,17 @@ function DesignsCases({
         {button1isShown && (
           <DesignPrototype
             width={width}
+            widthImage={widthImage}
+            minWidth={minWidth}
+            minHeight={minHeight}
+            medHeightPrototype={medHeightPrototype}
+            medWidthPrototype={medWidthPrototype}
+            heightImage={heightImage}
             height={height}
             src={src}
             alt={alt}
             imagesPrototype={imagesPrototype}
+            prototypeType={prototypeType}
           />
         )}
         {button2isShown && (
@@ -124,10 +141,6 @@ function DesignsCases({
           {imagesTechnologies.map((image) => (
             <ImageStyled src={image.image} alt={image.alt} />
           ))}
-
-          {/* <ImageStyled src="../images/WebApp.svg" alt="WebApp Logo" />
-          <ImageStyled src="../images/nodejs-logo.svg" alt="Node.js Logo" />
-        <ImageStyled src="../images/reactjs-logo.svg" alt="React Logo" /> */}
         </TechnologiesStyled>
       </ContentStyled>
     </ContainerStyled>

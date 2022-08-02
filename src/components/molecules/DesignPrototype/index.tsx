@@ -3,6 +3,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import { useEffect, useRef, useState } from 'react';
 import { useWindowSize } from 'use-hooks';
 import { Console } from 'console';
+import { AnimatePresence, motion } from 'framer-motion';
+
 import {
   ContentStyled,
   ImageStyledPrototype,
@@ -15,37 +17,43 @@ interface imagesPrototype {
   alt: string;
 }
 interface DesignPrototypeProps {
-  // width: number;
+  width: number;
+  widthImage: number;
+  heightImage: number;
   height: number;
+  minHeight: number;
+  minWidth: number;
+  medHeightPrototype: number;
+  medWidthPrototype: number;
+  prototypeType: string;
   src: string;
   alt: string;
   imagesPrototype: imagesPrototype[];
 }
-
 function DesignPrototype({
-  // width,
+  width,
+  widthImage,
+  heightImage,
   height,
+  minHeight,
+  minWidth,
+  medHeightPrototype,
+  medWidthPrototype,
+  prototypeType,
   src,
   alt,
   imagesPrototype,
 }: DesignPrototypeProps) {
   const prototypeRef = useRef();
   const containerRef = useRef();
-  const [transformImageIsShown, transformImageSetIsShown] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const images = document.getElementById('images');
-    images.classList.add('transformImage');
-    images.classList.add('transformImageNone');
-
-    if (transformImageIsShown === false) {
-      console.log('Removendo / abrindo');
-      images.classList.remove('transformImage');
-      images.classList.remove('transformImageNone');
+    if (prototypeType === 'mobile') {
+      document.getElementById('ContentPrototype').classList.add('mobile');
+    } else {
+      document.getElementById('ContentPrototype').classList.add('desktop');
     }
-  }, [transformImageIsShown]);
-
-  useEffect(() => {
     function scrollPrototype() {
       const container = containerRef?.current?.getBoundingClientRect();
       const containerTop = container.top + window.scrollY;
@@ -55,34 +63,41 @@ function DesignPrototype({
       const prototypeTop = prototype.top + window.scrollY;
       const prototypeBottom = prototypeTop + prototype.height;
 
-      /* const images = document.getElementById('images');
-      images.classList.add('transformImage'); */
+      function disableScroll() {
+        window.addEventListener('wheel', (e) => e.preventDefault(), {
+          passive: false,
+        });
+      }
+
+      function enableScroll() {
+        window.removeEventListener('wheel', (e) => e.preventDefault(), {
+          passive: false,
+        });
+        // window.removeEventListener('wheel', disableScroll, false);
+      }
 
       if (window.pageYOffset < containerTop) {
         prototypeRef.current.scroll(0, 0);
+        setIsVisible(false);
+
+        /* disableScroll();
+        setTimeout(() => {
+          enableScroll();
+        }, 2000); */
       } else if (window.pageYOffset > containerBottom) {
         const scrollY = containerBottom - containerTop;
         prototypeRef.current.scroll(0, scrollY);
+        setIsVisible(true);
+
+        /* disableScroll();
+        setTimeout(() => {
+          enableScroll();
+        }, 2000); */
       } else {
         const scrollY = window.pageYOffset - containerTop;
         prototypeRef.current.scroll(0, scrollY);
+        setIsVisible(true);
       }
-
-      // -----------------------------------------------------------
-
-      // if (prototypeBottom === containerBottom) {
-      if (window.pageYOffset >= containerTop) {
-        console.log('Inicio');
-        // transformImageSetIsShown(true);
-        transformImageSetIsShown(false);
-      } else {
-        // transformImageSetIsShown(false);
-        transformImageSetIsShown(true);
-      }
-
-      // console.log(`window = ${window.pageYOffset}`);
-      // console.log(`prototypeBottom = ${prototypeBottom}`);
-      // console.log(`containerBottom = ${containerBottom}`);
     }
 
     window.addEventListener('scroll', scrollPrototype);
@@ -96,15 +111,83 @@ function DesignPrototype({
       }}
       ref={containerRef}
     >
-      <ContentStyledPrototype ref={prototypeRef}>
-        <ContainerImage id="images">
-          {imagesPrototype.map((images) => (
-            <ImageStyledPrototype src={images.image} />
-          ))}
-        </ContainerImage>
+      <ContentStyledPrototype
+        id="ContentPrototype"
+        ref={prototypeRef}
+        width={width}
+        height={height}
+        minWidth={minWidth}
+        minHeight={minHeight}
+        medHeightPrototype={medHeightPrototype}
+        medWidthPrototype={medWidthPrototype}
+      >
+        {imagesPrototype.map((images, index) => {
+          if (index === 0) {
+            return (
+              <AnimatePresence>
+                {isVisible && (
+                  <ImageStyledPrototype
+                    widthImage={widthImage}
+                    width={width}
+                    height={height}
+                    minWidth={minWidth}
+                    minHeight={minHeight}
+                    medHeightPrototype={medHeightPrototype}
+                    medWidthPrototype={medWidthPrototype}
+                    src={images.image}
+                    initial={{
+                      scaleY: 0,
+                    }}
+                    animate={{
+                      scaleY: 1,
+                    }}
+                    exit={{
+                      scaleY: 0,
+                    }}
+                    transition={{
+                      duration: 1,
+                    }}
+                  />
+                )}
+              </AnimatePresence>
+            );
+          }
+          return (
+            <AnimatePresence>
+              {isVisible && (
+                <ImageStyledPrototype
+                  width={width}
+                  height={height}
+                  minWidth={minWidth}
+                  minHeight={minHeight}
+                  medHeightPrototype={medHeightPrototype}
+                  medWidthPrototype={medWidthPrototype}
+                  widthImage={widthImage}
+                  heightImage={heightImage}
+                  src={images.image}
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: 1,
+                  }}
+                  exit={{
+                    opacity: 0,
+                    transition: {
+                      delay: 0,
+                      duration: 0,
+                    },
+                  }}
+                  transition={{
+                    delay: 1,
+                    duration: 0,
+                  }}
+                />
+              )}
+            </AnimatePresence>
+          );
+        })}
       </ContentStyledPrototype>
-
-      {/* <ImageStyled width={width} height={height} src={src} alt={alt} /> */}
     </ContentStyled>
   );
 }

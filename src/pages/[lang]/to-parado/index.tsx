@@ -7,6 +7,9 @@ import AllCases from '../../../components/organisms/Cases/AllCases';
 
 const ToParado: NextPage = () => {
   useEffect(() => {
+    const nav = document.querySelector('.nav');
+    nav?.classList.add('transparentBlack');
+
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
     } else {
@@ -92,8 +95,8 @@ const ToParado: NextPage = () => {
     { image: '/images/TechnologiesLogos/reactjs-logo.svg', alt: 'React Logo' },
   ];
 
-  const widthPrototype = 414;
-  const heightPrototype = 896;
+  const widthPrototype = 294; // widthImage + (tam_borda * 2) 270 + 12+ 12
+  const heightPrototype = 582;
   const srcPrototype = '/images/to-parado/mockup-animado-cell.png';
   const altPrototype = 'Mockup animado';
   const widthImage = 270;

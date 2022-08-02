@@ -7,6 +7,9 @@ import AllCases from '../../../components/organisms/Cases/AllCases';
 
 const MemoriesUp: NextPage = () => {
   useEffect(() => {
+    const nav = document.querySelector('.nav');
+    nav?.classList.add('transparentBlack');
+
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
     } else {
@@ -87,12 +90,12 @@ const MemoriesUp: NextPage = () => {
     { image: '/images/TechnologiesLogos/figma-logo.svg', alt: 'Figma Logo' },
   ];
 
-  const widthPrototype = 414;
-  const heightPrototype = 896;
+  const widthPrototype = 294; // 414
+  const heightPrototype = 582; // 896;
   const srcPrototype = '/images/mockup-animado-cell.png';
   const altPrototype = 'Mockup animado';
-  const widthImage = 270;
-  const heightImage = 582;
+  const widthImage = 270; // 414;
+  const heightImage = 582; // 896;
 
   return (
     <>

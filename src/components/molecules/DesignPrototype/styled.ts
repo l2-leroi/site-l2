@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Slider from 'react-slick';
+import { motion } from 'framer-motion';
 import { colors } from '../../../styles/colors';
 
 interface imagesPrototype {
@@ -11,6 +12,14 @@ interface DesignPrototypePropsMockup {
   height: number;
 }
 interface DesignPrototypeImage {
+  height: number;
+  width: number;
+  widthImage: number;
+  heightImage: number;
+  minWidth: number;
+  minHeight: number;
+  medHeightPrototype: number;
+  medWidthPrototype: number;
   imagesPrototype: imagesPrototype;
 }
 
@@ -199,9 +208,9 @@ export const LinkStyled = styled.a`
 `;
 
 export const ImageStyled = styled.img<DesignPrototypePropsMockup>`
+/*
   max-width: ${(props) => props.width}px;
   width: 100%;
-  height: auto;
 
   /*@media (max-width: 360px) {
     max-width: 335px;
@@ -214,30 +223,63 @@ export const ImageStyled = styled.img<DesignPrototypePropsMockup>`
 
   &.imageNone {
     display: none;
-  }
-`;
-
-export const ImageStyledPrototype = styled.img<DesignPrototypeImage>`
-  // max-width: ${(props) => props.width}px;
-  height: 100vh;
-  // @media (min-width: 801px) {
-  //   height: calc(100vh - 94px);
-  // }
-  scroll-snap-align: start;
-  // border-radius: 29px;
-
-  /* transition: transform 1s;
-
-  &.transformImage {
-    transform: scaleY(0);
   }*/
 `;
 
-export const ContentStyledPrototype = styled.div`
+export const ImageStyledPrototype = styled(motion.img)<DesignPrototypeImage>`
+  /*min-width: ${(props) => props.width}px;
+  max-height: ${(props) => props.height}px;
+
+  @media (max-width: 1255px) {
+    min-width: ${(props) => props.medWidthPrototype}px;
+    max-height: ${(props) => props.medHeightPrototype}px;
+  }
+  @media (max-width: 600px) {
+    min-width: ${(props) => props.minWidth}px;
+    max-height: ${(props) => props.minHeight}px;
+  }*/
+
+  width: 100%;
+  height: auto;
+
+  scroll-snap-align: start;
+`;
+
+export const ContentStyledPrototype = styled.div<DesignPrototypeImage>`
+  /*min-width: ${(props) => props.width + 24}px;
+  max-height: ${(props) => props.height}px;
+
+  @media (max-width: 1255px) {
+    min-width: ${(props) => props.medWidthPrototype + 24}px;
+    max-height: ${(props) => props.medHeightPrototype}px;
+  }
+  @media (max-width: 600px) {
+    min-width: ${(props) => props.minWidth + 24}px;
+    max-height: ${(props) => props.minHeight}px;
+  }*/
+
+  &.mobile {
+    width: 30%;
+    // max-height: ${(props) => props.height}px;
+    // height: 15vw;
+    @media (max-width: 1255px) {
+      // min-width: ${(props) => props.medWidthPrototype + 24}px;
+      max-height: ${(props) => props.medHeightPrototype}px;
+    }
+    @media (max-width: 600px) {
+      // min-width: ${(props) => props.minWidth + 24}px;
+      max-height: ${(props) => props.minHeight}px;
+    }
+  }
+
+  &.desktop {
+    background: blue;
+  }
+
   overflow: hidden;
   position: sticky;
   display: flex;
-  height: 100vh;
+
   top: 0px;
 
   border: 12px;
@@ -254,7 +296,7 @@ export const ContentStyledPrototype = styled.div`
 export const ContainerImage = styled.div`
   display: flex;
   flex-direction: column;
-  transition: transform 3s;
+  transition: transform 2s;
 
   &.transformImageNone {
     img:nth-child(2) {
@@ -264,14 +306,13 @@ export const ContainerImage = styled.div`
       display: none;
     }
   }
-  &.transformImage {
-    img:nth-child(2) {
-      display: none;
-    }
-    img:nth-child(3) {
-      display: none;
-    }
+  &.transformAllImageNone {
+    transition: transform 0s;
+    transform: scaleY(0);
+  }
 
+  &.transformImage {
+    // width: 40px;
     transform: scaleY(0);
   }
 `;

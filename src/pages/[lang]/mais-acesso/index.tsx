@@ -7,6 +7,9 @@ import AllCases from '../../../components/organisms/Cases/AllCases';
 
 const MaisAcesso: NextPage = () => {
   useEffect(() => {
+    const nav = document.querySelector('.nav');
+    nav?.classList.add('transparentBlack');
+
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
     } else {
@@ -89,12 +92,13 @@ const MaisAcesso: NextPage = () => {
     { image: '/images/TechnologiesLogos/reactjs-logo.svg', alt: 'React Logo' },
   ];
 
-  const widthPrototype = 414;
-  const heightPrototype = 896;
+  const widthPrototype = 294; // 414;
+  const heightPrototype = 503; // 896;
   const srcPrototype = '/images/mockup-animado-cell.png';
   const altPrototype = 'Mockup animado';
   const widthImage = 270;
-  const heightImage = 582;
+  const heightImage = 479;
+  const prototypeType = 'mobile';
 
   return (
     <>
@@ -126,6 +130,7 @@ const MaisAcesso: NextPage = () => {
         alt={altPrototype}
         widthImage={widthImage}
         heightImage={heightImage}
+        prototypeType={prototypeType}
       />
       <AllCases />
     </>
