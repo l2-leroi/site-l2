@@ -1,50 +1,97 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const ContainerStyledAbout = styled.section`
-  display: flex;
-  flex-direction: column;
-  padding-left: 28px;
-  padding-right: 28px;
+  overflow: hidden;
   background-color: ${colors.black};
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 1456px) 1fr;
   color: ${colors.gray};
-  padding-top: 20.5rem;
+  width: 100%;
+  padding-top: 15.5rem;
+  padding-bottom: 15.5rem;
+  @media (max-width: 800px) {
+    padding: 0px 12px;
+    padding-bottom: 80px;
+  }
 `;
 
 export const SectionStyled = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: ${colors.black};
-  /* width: 100%; */
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-sizing: border-box;
+  padding: 0px 28px;
+  gap: 30px;
+  @media (max-width: 800px) {
+    margin-top: 138px;
+  }
 `;
 
-export const HeaderStyled = styled.div``;
+export const HeaderStyled = styled.div`
+  grid-column: 1/-1;
+  position: relative;
+  display: flex;
 
-export const TitleGroupStyled = styled.hgroup``;
+  @media (max-width: 414px) {
+    margin-bottom: 36px;
+    width: 100%;
+  }
+`;
 
-export const TitleStyled = styled.div`
+export const TitleGroupStyled = styled.hgroup`
   display: flex;
   flex-direction: column;
-  width: 70%;
-  /* margin-top: 14rem; */
-  margin-bottom: 20rem;
-
+  max-width: 100%;
+  z-index: 50;
   h1 {
     margin-top: 8rem;
-    width: 35%;
-    font-size: 42px;
-    font-family: Neue Machina;
+    width: 60%;
+    line-height: 64.8px;
   }
+
   h2 {
-    width: 40%;
-    /* margin-top: 2rem; */
-    font-size: small;
-    font-family: Circular Air Pro;
+    line-height: 33.6px;
+  }
+
+  p {
+    line-height: 19.6px;
+  }
+`;
+
+export const TitleStyled = styled.div`
+  margin-bottom: 40px;
+  @media (max-width: 800px) {
+    max-width: 400px;
+  }
+`;
+
+export const ParagraphStyled = styled.div`
+  max-width: 464px;
+  @media (max-width: 800px) {
+    max-width: 160px;
+  }
+`;
+export const AsideStyled = styled.div`
+  text-align: right;
+  align-self: center;
+  font-family: 'Circular Air Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  z-index: 2;
+  @media (max-width: 800px) {
+    max-width: 50px;
   }
   p {
-    max-width: 70%;
-    margin-left: 65%;
-    /* position: fixed; */
+    ::selection {
+      background: ${colors.purple};
+    }
+    @media (max-width: 800px) {
+      max-width: 61px;
+    }
   }
 `;
 
@@ -99,34 +146,100 @@ export const LanguageStyled = styled.div`
   }
 `;
 
-export const SubTitleStyled = styled.div`
-  background-color: rgba(36, 42, 51, 1);
+export const DivSubTitleStyled = styled.div`
   display: grid;
-  grid-template-columns: auto;
-  flex-direction: column;
+  grid-template-columns: 1fr;
+  margin-top: 15rem;
+  align-items: center;
+  width: 40%;
+  margin-left: 40rem;
 
-  width: 20%;
+  .button {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    color: ${colors.gray};
+  }
 
+  div {
+    .svg {
+      fill: red;
+    }
+  }
+`;
+
+export const SubTitleStyled = styled.div`
+  text-align: left;
   h1 {
-    /* max-width: 25%; */
-    /* margin-top: 2rem; */
-    font-size: 24px;
-    font-family: Circular Air Pro;
+    line-height: 48px;
   }
   p {
     /* max-width: 25%; */
     margin-top: 2rem;
-    font-size: 20px;
-    font-family: Circular Air Pro;
+    line-height: 33.6px;
   }
   h2 {
+    line-height: 33.6px;
     /* max-width: 20%; */
     margin-top: 2rem;
-    font-size: 20px;
-    font-family: Circular Air Pro;
-    /* align-self: center; */
   }
-  ul {
+  ul li {
+    line-height: 33.6px;
+    margin-left: 25px;
     list-style: '+ ';
+  }
+`;
+export const SpinningAnimation = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+export const SpinningIconStyled = styled.div`
+  display: flex;
+  position: absolute;
+  top: 115rem;
+  right: 0;
+  overflow: hidden;
+
+  @media (max-width: 1220px) {
+    display: none;
+  }
+`;
+export const SpinnerImage = styled.img`
+  max-width: 350px;
+  right: 0;
+  overflow: hidden;
+  animation: ${SpinningAnimation} 5s linear infinite;
+`;
+export const DivCardStyled = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 15rem;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+  overflow: hidden;
+
+  .cards {
+    z-index: 2;
+    background-color: #242a33;
+    width: 464px;
+    height: 391px;
+    border-radius: 8px;
+  }
+
+  h1 {
+    line-height: 48px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 2rem;
+  }
+
+  p {
+    line-height: 33.6px;
+    padding: 20px 20px;
   }
 `;
