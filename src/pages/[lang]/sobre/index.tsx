@@ -1,12 +1,11 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
-
 import { t } from 'i18next';
 import About from '../../../components/organisms/About';
 import LineAnimation from '../../../components/atoms/LineAnimation';
 import { colors } from '../../../styles/colors';
 import { Container, StyledScrollCircle } from './style';
-// import Footer from '../../../components/organisms/Footer';
+import Footer from '../../../components/organisms/Footer';
 
 const PageAbout: NextPage = () => {
   useEffect(() => {
@@ -26,7 +25,6 @@ const PageAbout: NextPage = () => {
 
   return (
     <Container>
-      {/* <Header /> */}
       <About />
       <LineAnimation
         topChildren={
@@ -53,7 +51,7 @@ const PageAbout: NextPage = () => {
         hasSpinner={false}
       />
 
-      {/* <Footer /> */}
+      <Footer />
     </Container>
   );
 };

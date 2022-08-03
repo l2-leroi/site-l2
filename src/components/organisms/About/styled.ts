@@ -9,7 +9,8 @@ export const ContainerStyledAbout = styled.section`
   color: ${colors.gray};
   width: 100%;
   padding-top: 15.5rem;
-  padding-bottom: 15.5rem;
+  /* padding-bottom: 15.5rem; */
+
   @media (max-width: 800px) {
     padding: 0px 12px;
     padding-bottom: 80px;
@@ -43,7 +44,7 @@ export const TitleGroupStyled = styled.hgroup`
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  z-index: 50;
+
   h1 {
     margin-top: 8rem;
     width: 60%;
@@ -73,25 +74,9 @@ export const ParagraphStyled = styled.div`
   }
 `;
 export const AsideStyled = styled.div`
-  text-align: right;
   align-self: center;
-  font-family: 'Circular Air Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 140%;
-  letter-spacing: -0.02em;
-  z-index: 2;
-  @media (max-width: 800px) {
-    max-width: 50px;
-  }
-  p {
-    ::selection {
-      background: ${colors.purple};
-    }
-    @media (max-width: 800px) {
-      max-width: 61px;
-    }
+  @media (max-width: 930px) {
+    max-width: 100px;
   }
 `;
 
@@ -151,7 +136,6 @@ export const DivSubTitleStyled = styled.div`
   grid-template-columns: 1fr;
   margin-top: 15rem;
   align-items: center;
-  width: 40%;
   margin-left: 40rem;
 
   .button {
@@ -160,27 +144,20 @@ export const DivSubTitleStyled = styled.div`
     margin-top: 20px;
     color: ${colors.gray};
   }
-
-  div {
-    .svg {
-      fill: red;
-    }
-  }
 `;
 
 export const SubTitleStyled = styled.div`
+  max-width: 45%;
   text-align: left;
   h1 {
     line-height: 48px;
   }
   p {
-    /* max-width: 25%; */
     margin-top: 2rem;
     line-height: 33.6px;
   }
   h2 {
     line-height: 33.6px;
-    /* max-width: 20%; */
     margin-top: 2rem;
   }
   ul li {
@@ -200,7 +177,7 @@ export const SpinningAnimation = keyframes`
 export const SpinningIconStyled = styled.div`
   display: flex;
   position: absolute;
-  top: 115rem;
+  top: 122rem;
   right: 0;
   overflow: hidden;
 

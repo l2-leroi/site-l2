@@ -4,6 +4,7 @@ import { colors } from '../../../styles/colors';
 interface ButtonProps {
   borderColor?: string;
   bgColor?: string;
+  fontSize?: string | number;
 }
 
 export const LinkStyled = styled.a`
@@ -20,7 +21,7 @@ export const ButtonStyled = styled.div<ButtonProps>`
   border-radius: 50px;
   font-family: 'Circular Air Pro', sans-serif;
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: ${(props) => (props.fontSize ? props.fontSize : '2.4rem')};
   margin-right: 8px;
   display: flex;
   justify-content: center;

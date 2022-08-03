@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-// import i18next from 'i18next';
+import i18next from 'i18next';
 import Button from '../../atoms/Button';
-// import { colors } from '../../../styles/colors';
+import { colors } from '../../../styles/colors';
 import { Typography } from '../../../styles/typography';
 import {
   ContainerStyledAbout,
@@ -21,7 +21,8 @@ import {
 } from './styled';
 
 export default function About() {
-  // const { t } = i18next;
+  const { t } = i18next;
+  const list = ['about.innovate', 'about.defend', 'about.transform'];
   return (
     <ContainerStyledAbout>
       <SectionStyled>
@@ -35,25 +36,19 @@ export default function About() {
                 size="large"
                 color="gray"
               >
-                SOMOS A L2CODE
+                {t('about.title')}
               </Typography>
             </TitleStyled>
             <ParagraphStyled>
               <Typography tag="h2" color="gray">
-                Criamos soluções tecnológicas de forma humanizada e inovadora,
-                pois acreditamos que inovar é aprender e ensinar sem fronteiras.
+                {t('about.weCreated')}
               </Typography>
             </ParagraphStyled>
           </TitleGroupStyled>
 
           <AsideStyled>
-            <Typography
-              color="gray"
-              tag="p"
-              size="xxsmall"
-              letterSpacing="space1"
-            >
-              &lt;O QUE SOMOS&gt;
+            <Typography color="gray" tag="p" letterSpacing="space1">
+              &lt;{t('about.whatWeAre')}&gt;
             </Typography>
           </AsideStyled>
           <LanguageStyled>
@@ -89,23 +84,27 @@ export default function About() {
               lineHeight="line90"
               color="gray"
             >
-              Transformamos ideias em soluções
+              {t('about.weTransform')}
             </Typography>
             <Typography tag="p" color="gray" fontWeight="weight2">
-              Somos uma empresa de consultoria especializada em Tecnologia e já
-              conseguimos grandes feitos com a forma humanizada de lidar com
-              clientes e colaboradores. ● A ideia é criar o senso de comunidade,
-              assim tudo flui melhor!
+              {t('about.are')}
             </Typography>
 
             <Typography tag="h2" color="gray">
-              Nosso propósito é:
+              {t('about.ourPurpose')}
             </Typography>
             <Typography tag="ul" color="gray">
-              <li>Conectar e desenvolver pessoas;</li>
-              <li>Inovar a organização digital de empresas;</li>
-              <li>Defender a diversidade de ideias;</li>
-              <li>E transformar estratégias digitais em resultados reais.</li>
+              {list.map((item) => (
+                <Typography
+                  tag="li"
+                  color="gray"
+                  fontFamily="font2"
+                  size="xsmall"
+                  lineHeight="line140"
+                >
+                  {t(item)}
+                </Typography>
+              ))}
             </Typography>
           </SubTitleStyled>
         </DivSubTitleStyled>
@@ -120,13 +119,10 @@ export default function About() {
               size="small"
               letterSpacing="space1"
             >
-              Missão
+              {t('about.mission')}
             </Typography>
             <Typography tag="p" color="gray">
-              Criar soluções tecnológicas de forma humanizada, inovadora e
-              divertida. ● Desenvolver ideias e profissionais é o nosso
-              horizonte, afinal, unimos pessoas através da tecnologia e a união
-              faz a inovação!
+              {t('about.create')}
             </Typography>
           </div>
           <div className="cards">
@@ -136,12 +132,10 @@ export default function About() {
               size="small"
               letterSpacing="space1"
             >
-              Visão
+              {t('about.vision')}
             </Typography>
             <Typography tag="p" color="gray">
-              A L2Code deseja romper barreiras, pois a disrupção nos move para
-              criar e o nosso sonho é humanizar ainda mais soluções em
-              tecnologia para pessoas e empresas.
+              {t('about.desire')}
             </Typography>
           </div>
           <div className="cards">
@@ -151,14 +145,12 @@ export default function About() {
               size="small"
               letterSpacing="space1"
             >
-              Valores
+              {t('about.values')}
             </Typography>
             <Typography tag="p" color="gray">
-              Acreditamos em um mundo onde as pessoas tem liberdade para se
-              manifestar e compartilhar suas ideias. Nossos valores e princípios
-              estão manifestados no nosso{' '}
+              {t('about.weBelieve')}{' '}
               <Typography tag="a" color="green">
-                manifesto L2.
+                {t('about.manifestL2')}
               </Typography>
             </Typography>
           </div>
@@ -174,21 +166,20 @@ export default function About() {
               lineHeight="line90"
               color="gray"
             >
-              Super poderes que fazem a diferença
+              {t('about.superPowers')}
             </Typography>
             <Typography tag="p" color="gray" fontWeight="weight2">
-              Somos feitos de pessoas brilhantes, magos da tecnologia, somos os
-              Lcoders! ● Mas claro, com grandes poderes, vem grandes
-              responsabilidades. Por isso utilizamos nossos super poderes para
-              ajudar pessoas e melhorar o mundo. ● São eles: o poder da
-              colaboração, pluralidade, diversão, empatia, criatividade,
-              aprendizagem, comunicação e, como resultado, temos também o poder
-              da evolução!
+              {t('about.weAreMade')}
             </Typography>
           </SubTitleStyled>
 
           <div className="button">
-            <Button linkBtn="#" text="CONHEÇA A NOSSA EQUIPE" />
+            <Button
+              linkBtn="#"
+              text="CONHEÇA A NOSSA EQUIPE"
+              fill={`${colors.gray}`}
+              fontSize="large"
+            />
           </div>
         </DivSubTitleStyled>
       </SectionStyled>
