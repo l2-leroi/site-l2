@@ -1,15 +1,12 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useEffect, useRef, useState } from 'react';
-import { useWindowSize } from 'use-hooks';
-import { Console } from 'console';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 import {
   ContentStyled,
   ImageStyledPrototype,
   ContentStyledPrototype,
-  ContainerImage,
 } from './styled';
 
 interface imagesPrototype {
@@ -17,31 +14,15 @@ interface imagesPrototype {
   alt: string;
 }
 interface DesignPrototypeProps {
-  width: number;
   widthImage: number;
   heightImage: number;
-  height: number;
-  minHeight: number;
-  minWidth: number;
-  medHeightPrototype: number;
-  medWidthPrototype: number;
   prototypeType: string;
-  src: string;
-  alt: string;
   imagesPrototype: imagesPrototype[];
 }
 function DesignPrototype({
-  width,
   widthImage,
   heightImage,
-  height,
-  minHeight,
-  minWidth,
-  medHeightPrototype,
-  medWidthPrototype,
   prototypeType,
-  src,
-  alt,
   imagesPrototype,
 }: DesignPrototypeProps) {
   const prototypeRef = useRef();
@@ -114,12 +95,8 @@ function DesignPrototype({
       <ContentStyledPrototype
         id="ContentPrototype"
         ref={prototypeRef}
-        width={width}
-        height={height}
-        minWidth={minWidth}
-        minHeight={minHeight}
-        medHeightPrototype={medHeightPrototype}
-        medWidthPrototype={medWidthPrototype}
+        heightImage={heightImage}
+        widthImage={widthImage}
       >
         {imagesPrototype.map((images, index) => {
           if (index === 0) {
@@ -127,13 +104,6 @@ function DesignPrototype({
               <AnimatePresence>
                 {isVisible && (
                   <ImageStyledPrototype
-                    widthImage={widthImage}
-                    width={width}
-                    height={height}
-                    minWidth={minWidth}
-                    minHeight={minHeight}
-                    medHeightPrototype={medHeightPrototype}
-                    medWidthPrototype={medWidthPrototype}
                     src={images.image}
                     initial={{
                       scaleY: 0,
@@ -156,14 +126,6 @@ function DesignPrototype({
             <AnimatePresence>
               {isVisible && (
                 <ImageStyledPrototype
-                  width={width}
-                  height={height}
-                  minWidth={minWidth}
-                  minHeight={minHeight}
-                  medHeightPrototype={medHeightPrototype}
-                  medWidthPrototype={medWidthPrototype}
-                  widthImage={widthImage}
-                  heightImage={heightImage}
                   src={images.image}
                   initial={{
                     opacity: 0,

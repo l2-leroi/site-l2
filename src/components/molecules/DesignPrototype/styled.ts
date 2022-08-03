@@ -2,25 +2,11 @@ import styled from 'styled-components';
 import Slider from 'react-slick';
 import { motion } from 'framer-motion';
 import { colors } from '../../../styles/colors';
+import { device } from '../../../styles/medias';
 
-interface imagesPrototype {
-  image: string;
-  alt: string;
-}
-interface DesignPrototypePropsMockup {
-  width: number;
-  height: number;
-}
 interface DesignPrototypeImage {
-  height: number;
-  width: number;
   widthImage: number;
   heightImage: number;
-  minWidth: number;
-  minHeight: number;
-  medHeightPrototype: number;
-  medWidthPrototype: number;
-  imagesPrototype: imagesPrototype;
 }
 
 export const ContentStyled = styled.section`
@@ -207,90 +193,103 @@ export const LinkStyled = styled.a`
   cursor: pointer;
 `;
 
-export const ImageStyled = styled.img<DesignPrototypePropsMockup>`
-/*
-  max-width: ${(props) => props.width}px;
-  width: 100%;
-
-  /*@media (max-width: 360px) {
-    max-width: 335px;
-    max-height: 197px;
-  }*/
-
-  &.imageBlock {
-    display: block;
-  }
-
-  &.imageNone {
-    display: none;
-  }*/
-`;
-
-export const ImageStyledPrototype = styled(motion.img)<DesignPrototypeImage>`
-  /*min-width: ${(props) => props.width}px;
-  max-height: ${(props) => props.height}px;
-
-  @media (max-width: 1255px) {
-    min-width: ${(props) => props.medWidthPrototype}px;
-    max-height: ${(props) => props.medHeightPrototype}px;
-  }
-  @media (max-width: 600px) {
-    min-width: ${(props) => props.minWidth}px;
-    max-height: ${(props) => props.minHeight}px;
-  }*/
-
+export const ImageStyledPrototype = styled(motion.img)`
   width: 100%;
   height: auto;
-
   scroll-snap-align: start;
 `;
 
 export const ContentStyledPrototype = styled.div<DesignPrototypeImage>`
-  /*min-width: ${(props) => props.width + 24}px;
-  max-height: ${(props) => props.height}px;
-
-  @media (max-width: 1255px) {
-    min-width: ${(props) => props.medWidthPrototype + 24}px;
-    max-height: ${(props) => props.medHeightPrototype}px;
-  }
-  @media (max-width: 600px) {
-    min-width: ${(props) => props.minWidth + 24}px;
-    max-height: ${(props) => props.minHeight}px;
-  }*/
-
   &.mobile {
-    width: 30%;
-    // max-height: ${(props) => props.height}px;
-    // height: 15vw;
-    @media (max-width: 1255px) {
-      // min-width: ${(props) => props.medWidthPrototype + 24}px;
-      max-height: ${(props) => props.medHeightPrototype}px;
+    width: 60vw;
+    height: calc(
+      (
+          (60vw * ${(props) => props.heightImage}) /
+            ${(props) => props.widthImage}
+        ) - 24px
+    );
+
+    @media${device.xs} {
+      width: 40vw;
+      height: calc(
+        (
+            (40vw * ${(props) => props.heightImage}) /
+              ${(props) => props.widthImage}
+          ) - 24px
+      );
     }
-    @media (max-width: 600px) {
-      // min-width: ${(props) => props.minWidth + 24}px;
-      max-height: ${(props) => props.minHeight}px;
+
+    @media${device.sm} {
+      width: 40vw;
+      height: calc(
+        (
+            (40vw * ${(props) => props.heightImage}) /
+              ${(props) => props.widthImage}
+          ) - 24px
+      );
+    }
+
+    @media${device.md} {
+      width: 40vw;
+      height: calc(
+        (
+            (40vw * ${(props) => props.heightImage}) /
+              ${(props) => props.widthImage}
+          ) - 24px
+      );
+    }
+
+    @media${device.lg} {
+      width: 20vw;
+      height: calc(
+        (
+            (20vw * ${(props) => props.heightImage}) /
+              ${(props) => props.widthImage}
+          ) - 24px
+      );
+    }
+
+    @media${device.xl} {
+      width: 20vw;
+      height: calc(
+        (
+            (20vw * ${(props) => props.heightImage}) /
+              ${(props) => props.widthImage}
+          ) - 24px
+      );
     }
   }
-
   &.desktop {
-    background: blue;
+    width: 100vw;
+    height: calc(
+      (100vw * ${(props) => props.heightImage}) / ${(props) => props.widthImage}
+    );
+
+    @media${device.xs} {
+      width: 75vw;
+      height: calc(
+        (75vw * ${(props) => props.heightImage}) /
+          ${(props) => props.widthImage}
+      );
+    }
+
+    @media${device.lg} {
+      width: 60vw;
+      height: calc(
+        (60vw * ${(props) => props.heightImage}) /
+          ${(props) => props.widthImage}
+      );
+    }
   }
 
   overflow: hidden;
   position: sticky;
   display: flex;
-
   top: 0px;
-
   border: 12px;
   border-style: solid;
   border-color: #000000;
   border-radius: 24px;
-
-  // @media (min-width: 801px) {
-  //   top: 94px;
-  //   height: calc(100vh - 94px);
-  // }
   flex-direction: column;
 `;
 export const ContainerImage = styled.div`

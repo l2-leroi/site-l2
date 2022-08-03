@@ -71,7 +71,7 @@ const MemoriesUp: NextPage = () => {
       alt: 'Mockup',
     },
   ];
-  // trocar
+
   const imagesPrototype = [
     {
       image: '/images/PrototypeMemoriesUp/PrototypeMemoriesUp-1.jpg',
@@ -90,12 +90,9 @@ const MemoriesUp: NextPage = () => {
     { image: '/images/TechnologiesLogos/figma-logo.svg', alt: 'Figma Logo' },
   ];
 
-  const widthPrototype = 294; // 414
-  const heightPrototype = 582; // 896;
-  const srcPrototype = '/images/mockup-animado-cell.png';
-  const altPrototype = 'Mockup animado';
-  const widthImage = 270; // 414;
-  const heightImage = 582; // 896;
+  const widthImage = 270;
+  const heightImage = 582;
+  const prototypeType = 'mobile';
 
   return (
     <>
@@ -121,12 +118,9 @@ const MemoriesUp: NextPage = () => {
         images={imagesDesign}
         imagesPrototype={imagesPrototype}
         imagesTechnologies={imagesTechnologies}
-        width={widthPrototype}
-        height={heightPrototype}
-        src={srcPrototype}
-        alt={altPrototype}
         widthImage={widthImage}
         heightImage={heightImage}
+        prototypeType={prototypeType}
       />
       <AllCases />
     </>

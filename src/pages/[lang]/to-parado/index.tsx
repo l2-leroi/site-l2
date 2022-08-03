@@ -95,12 +95,9 @@ const ToParado: NextPage = () => {
     { image: '/images/TechnologiesLogos/reactjs-logo.svg', alt: 'React Logo' },
   ];
 
-  const widthPrototype = 294; // widthImage + (tam_borda * 2) 270 + 12+ 12
-  const heightPrototype = 582;
-  const srcPrototype = '/images/to-parado/mockup-animado-cell.png';
-  const altPrototype = 'Mockup animado';
   const widthImage = 270;
   const heightImage = 582;
+  const prototypeType = 'mobile';
 
   return (
     <>
@@ -126,12 +123,9 @@ const ToParado: NextPage = () => {
         images={imagesDesign}
         imagesPrototype={imagesPrototype}
         imagesTechnologies={imagesTechnologies}
-        width={widthPrototype}
-        height={heightPrototype}
-        src={srcPrototype}
-        alt={altPrototype}
         widthImage={widthImage}
         heightImage={heightImage}
+        prototypeType={prototypeType}
       />
       <AllCases />
     </>

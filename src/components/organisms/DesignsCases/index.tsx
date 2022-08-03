@@ -33,16 +33,8 @@ interface DesignsCasesProps {
   images: DesignImage[];
   imagesPrototype: imagesPrototype[];
   imagesTechnologies: imagesTechnologies[];
-  width: number;
-  height: number;
-  minWidth: number;
-  minHeight: number;
-  medHeightPrototype: number;
-  medWidthPrototype: number;
   widthImage: number;
   heightImage: number;
-  src: string;
-  alt: string;
   prototypeType: string;
 }
 
@@ -50,14 +42,6 @@ function DesignsCases({
   images,
   imagesPrototype,
   imagesTechnologies,
-  width,
-  height,
-  minWidth,
-  minHeight,
-  medHeightPrototype,
-  medWidthPrototype,
-  src,
-  alt,
   widthImage,
   heightImage,
   prototypeType,
@@ -113,16 +97,8 @@ function DesignsCases({
 
         {button1isShown && (
           <DesignPrototype
-            width={width}
             widthImage={widthImage}
-            minWidth={minWidth}
-            minHeight={minHeight}
-            medHeightPrototype={medHeightPrototype}
-            medWidthPrototype={medWidthPrototype}
             heightImage={heightImage}
-            height={height}
-            src={src}
-            alt={alt}
             imagesPrototype={imagesPrototype}
             prototypeType={prototypeType}
           />

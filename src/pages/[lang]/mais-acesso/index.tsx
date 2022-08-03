@@ -70,7 +70,6 @@ const MaisAcesso: NextPage = () => {
     },
   ];
 
-  // trocar
   const imagesPrototype = [
     {
       image: '/images/PrototypeMaisAcesso/PrototypeMaisAcesso-1.jpg',
@@ -92,10 +91,6 @@ const MaisAcesso: NextPage = () => {
     { image: '/images/TechnologiesLogos/reactjs-logo.svg', alt: 'React Logo' },
   ];
 
-  const widthPrototype = 294; // 414;
-  const heightPrototype = 503; // 896;
-  const srcPrototype = '/images/mockup-animado-cell.png';
-  const altPrototype = 'Mockup animado';
   const widthImage = 270;
   const heightImage = 479;
   const prototypeType = 'mobile';
@@ -124,10 +119,6 @@ const MaisAcesso: NextPage = () => {
         images={imagesDesign}
         imagesPrototype={imagesPrototype}
         imagesTechnologies={imagesTechnologies}
-        width={widthPrototype}
-        height={heightPrototype}
-        src={srcPrototype}
-        alt={altPrototype}
         widthImage={widthImage}
         heightImage={heightImage}
         prototypeType={prototypeType}

@@ -1,6 +1,5 @@
 import { NextPage } from 'next';
 import { useEffect } from 'react';
-// import { useWindowSize } from 'use-hooks';
 import HeaderCases from '../../../components/organisms/HeaderCases';
 import CardText from '../../../components/organisms/CardText';
 import DesignsCases from '../../../components/organisms/DesignsCases';
@@ -9,8 +8,6 @@ import LineAnimation from '../../../components/atoms/LineAnimation';
 import { colors } from '../../../styles/colors';
 
 const FilaDeTrabalho: NextPage = () => {
-  // const { width } = useWindowSize();
-
   useEffect(() => {
     const nav = document.querySelector('.nav');
     nav?.classList.add('transparentBlack');
@@ -86,19 +83,6 @@ const FilaDeTrabalho: NextPage = () => {
     { image: '/images/TechnologiesLogos/reactjs-logo.svg', alt: 'React Logo' },
   ];
 
-  // 1263; 712;
-  const widthPrototype = 1263; // +24
-  const heightPrototype = 712; // +24
-  // 1000px
-  const medWidthPrototype = 577;
-  const medHeightPrototype = 321;
-  // 400px
-  const minWidthPrototype = 311;
-  const minHeightPrototype = 173;
-
-  const srcPrototype =
-    '/images/fila-de-trabalho/mockup-desk-fila-de-trabalho.png';
-  const altPrototype = 'Mockup animado';
   const widthImage = 1239;
   const heightImage = 688;
   const prototypeType = 'desktop';
@@ -127,14 +111,6 @@ const FilaDeTrabalho: NextPage = () => {
         images={imagesDesign}
         imagesPrototype={imagesPrototype}
         imagesTechnologies={imagesTechnologies}
-        width={widthPrototype}
-        height={heightPrototype}
-        minWidth={minWidthPrototype}
-        minHeight={minHeightPrototype}
-        medWidthPrototype={medWidthPrototype}
-        medHeightPrototype={medHeightPrototype}
-        src={srcPrototype}
-        alt={altPrototype}
         widthImage={widthImage}
         heightImage={heightImage}
         prototypeType={prototypeType}
