@@ -4,9 +4,10 @@ import { t } from 'i18next';
 import Nav from '../../../components/organisms/Nav';
 import About from '../../../components/organisms/About';
 import LineAnimation from '../../../components/atoms/LineAnimation';
+import Manifest from '../../../components/organisms/Manifest';
 import { colors } from '../../../styles/colors';
 import { Container, StyledScrollCircle } from './style';
-// import Footer from '../../../components/organisms/Footer';
+import Footer from '../../../components/organisms/Footer';
 
 const PageAbout: NextPage = () => {
   useEffect(() => {
@@ -29,6 +30,7 @@ const PageAbout: NextPage = () => {
     <Container>
       <Nav />
       <About />
+
       <LineAnimation
         topChildren={
           <div className="topSpinner">
@@ -53,8 +55,8 @@ const PageAbout: NextPage = () => {
         hasOutSourcing={false}
         hasSpinner={false}
       />
-
-      {/* <Footer /> */}
+      <Manifest />
+      <Footer />
     </Container>
   );
 };

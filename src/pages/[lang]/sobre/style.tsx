@@ -8,7 +8,7 @@ export const Container = styled.div`
   }
   .bottomSpinner {
     width: 30%;
-    height: 300px;
+    height: 3000px;
     @media (max-width: 800px) {
       height: 1400px;
     }
