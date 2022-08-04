@@ -2,14 +2,13 @@ import styled, { keyframes } from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const ContainerStyledAbout = styled.section`
-  overflow: hidden;
   background-color: ${colors.black};
   display: grid;
   grid-template-columns: 1fr minmax(280px, 1456px) 1fr;
   color: ${colors.gray};
   width: 100%;
   padding-top: 15.5rem;
-  /* padding-bottom: 15.5rem; */
+  padding-bottom: 15.5rem;
 
   @media (max-width: 800px) {
     padding: 0px 12px;
@@ -48,15 +47,6 @@ export const TitleGroupStyled = styled.hgroup`
   h1 {
     margin-top: 8rem;
     width: 60%;
-    line-height: 64.8px;
-  }
-
-  h2 {
-    line-height: 33.6px;
-  }
-
-  p {
-    line-height: 19.6px;
   }
 `;
 
@@ -93,7 +83,7 @@ export const LanguageStyled = styled.div`
     margin-top: 32px;
     gap: 16px;
   }
-  @media (max-height: 415px), (max-width: 500px) {
+  @media (max-height: 415px), (max-width: 800px) {
     opacity: 0;
     gap: 9px;
   }
@@ -131,12 +121,30 @@ export const LanguageStyled = styled.div`
   }
 `;
 
-export const DivSubTitleStyled = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+export const SubTitleGroupStyled = styled.hgroup`
+  display: flex;
+  flex-direction: column;
   margin-top: 15rem;
-  align-items: center;
-  margin-left: 40rem;
+  padding-left: 30%;
+  max-width: 100%;
+  text-align: left;
+  align-self: flex-start;
+  align-items: stretch;
+  justify-content: flex-end;
+
+  h1 {
+  }
+
+  p {
+    margin-top: 2rem;
+  }
+  h2 {
+    margin-top: 2rem;
+  }
+  ul li {
+    margin-left: 20px;
+    list-style: '+ ';
+  }
 
   .button {
     width: 100%;
@@ -147,25 +155,33 @@ export const DivSubTitleStyled = styled.div`
 `;
 
 export const SubTitleStyled = styled.div`
-  max-width: 45%;
-  text-align: left;
-  h1 {
-    line-height: 48px;
-  }
-  p {
-    margin-top: 2rem;
-    line-height: 33.6px;
-  }
-  h2 {
-    line-height: 33.6px;
-    margin-top: 2rem;
-  }
-  ul li {
-    line-height: 33.6px;
-    margin-left: 25px;
-    list-style: '+ ';
+  max-width: 464px;
+  @media (max-width: 800px) {
+    max-width: 160px;
   }
 `;
+
+export const ParagraphSubTitleStyled = styled.div`
+  max-width: 464px;
+  @media (max-width: 800px) {
+    max-width: 160px;
+  }
+`;
+
+export const TextStyled = styled.div`
+  max-width: 464px;
+  @media (max-width: 800px) {
+    max-width: 160px;
+  }
+`;
+
+export const ListStyled = styled.div`
+  max-width: 464px;
+  @media (max-width: 800px) {
+    max-width: 160px;
+  }
+`;
+
 export const SpinningAnimation = keyframes`
   0% {
     transform: rotate(0deg);
@@ -177,7 +193,7 @@ export const SpinningAnimation = keyframes`
 export const SpinningIconStyled = styled.div`
   display: flex;
   position: absolute;
-  top: 122rem;
+  top: 115rem;
   right: 0;
   overflow: hidden;
 
@@ -193,30 +209,51 @@ export const SpinnerImage = styled.img`
 `;
 export const DivCardStyled = styled.div`
   display: flex;
-  flex-direction: row;
   margin-top: 15rem;
-  width: 100%;
-  justify-content: space-between;
-  gap: 20px;
   overflow: hidden;
 
   .cards {
     z-index: 2;
     background-color: #242a33;
     width: 464px;
-    height: 391px;
+    height: 361px;
     border-radius: 8px;
+
+    @media (max-width: 800px) {
+      width: 364px;
+      height: 261px;
+    }
+  }
+`;
+
+export const StyledGroupCards = styled.hgroup`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (max-width: 1220px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   h1 {
-    line-height: 48px;
     text-align: center;
     padding: 20px;
     margin-top: 2rem;
   }
 
   p {
-    line-height: 33.6px;
     padding: 20px 20px;
   }
+`;
+
+export const CardTitleStyled = styled.div`
+  max-width: 464px;
+`;
+
+export const CardParagraphStyled = styled.div`
+  max-width: 464px;
 `;

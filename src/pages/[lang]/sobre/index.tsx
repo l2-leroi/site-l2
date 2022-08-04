@@ -1,13 +1,20 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import { t } from 'i18next';
+import Nav from '../../../components/organisms/Nav';
 import About from '../../../components/organisms/About';
 import LineAnimation from '../../../components/atoms/LineAnimation';
 import { colors } from '../../../styles/colors';
 import { Container, StyledScrollCircle } from './style';
-import Footer from '../../../components/organisms/Footer';
+// import Footer from '../../../components/organisms/Footer';
 
 const PageAbout: NextPage = () => {
+  useEffect(() => {
+    const nav = document.querySelector('.nav');
+    nav?.classList.add('.white');
+    nav?.classList.add('animate');
+  }, []);
+
   useEffect(() => {
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
@@ -18,13 +25,9 @@ const PageAbout: NextPage = () => {
     }
   }, []);
 
-  useEffect(() => {
-    const nav = document.querySelector('.nav');
-    nav?.classList.add('animate');
-  }, []);
-
   return (
     <Container>
+      <Nav />
       <About />
       <LineAnimation
         topChildren={
@@ -51,7 +54,7 @@ const PageAbout: NextPage = () => {
         hasSpinner={false}
       />
 
-      <Footer />
+      {/* <Footer /> */}
     </Container>
   );
 };

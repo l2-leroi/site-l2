@@ -12,10 +12,16 @@ import {
   TitleStyled,
   ParagraphStyled,
   AsideStyled,
-  DivSubTitleStyled,
+  SubTitleGroupStyled,
+  ParagraphSubTitleStyled,
+  TextStyled,
+  ListStyled,
   LanguageStyled,
   SubTitleStyled,
   DivCardStyled,
+  StyledGroupCards,
+  CardTitleStyled,
+  CardParagraphStyled,
   SpinningIconStyled,
   SpinnerImage,
 } from './styled';
@@ -33,6 +39,7 @@ export default function About() {
                 tag="h1"
                 fontFamily="font2"
                 fontWeight="weight3"
+                lineHeight="line90"
                 size="large"
                 color="gray"
               >
@@ -74,7 +81,8 @@ export default function About() {
             </Typography>
           </LanguageStyled>
         </HeaderStyled>
-        <DivSubTitleStyled>
+
+        <SubTitleGroupStyled>
           <SubTitleStyled>
             <Typography
               tag="h1"
@@ -86,13 +94,20 @@ export default function About() {
             >
               {t('about.weTransform')}
             </Typography>
+          </SubTitleStyled>
+          <ParagraphSubTitleStyled>
             <Typography tag="p" color="gray" fontWeight="weight2">
               {t('about.are')}
             </Typography>
+          </ParagraphSubTitleStyled>
 
+          <TextStyled>
             <Typography tag="h2" color="gray">
               {t('about.ourPurpose')}
             </Typography>
+          </TextStyled>
+
+          <ListStyled>
             <Typography tag="ul" color="gray">
               {list.map((item) => (
                 <Typography
@@ -106,56 +121,73 @@ export default function About() {
                 </Typography>
               ))}
             </Typography>
-          </SubTitleStyled>
-        </DivSubTitleStyled>
+          </ListStyled>
+        </SubTitleGroupStyled>
         <DivCardStyled>
           <SpinningIconStyled>
             <SpinnerImage src="/images/spinner.png" />
           </SpinningIconStyled>
-          <div className="cards">
-            <Typography
-              tag="h1"
-              color="gray"
-              size="small"
-              letterSpacing="space1"
-            >
-              {t('about.mission')}
-            </Typography>
-            <Typography tag="p" color="gray">
-              {t('about.create')}
-            </Typography>
-          </div>
-          <div className="cards">
-            <Typography
-              tag="h1"
-              color="gray"
-              size="small"
-              letterSpacing="space1"
-            >
-              {t('about.vision')}
-            </Typography>
-            <Typography tag="p" color="gray">
-              {t('about.desire')}
-            </Typography>
-          </div>
-          <div className="cards">
-            <Typography
-              tag="h1"
-              color="gray"
-              size="small"
-              letterSpacing="space1"
-            >
-              {t('about.values')}
-            </Typography>
-            <Typography tag="p" color="gray">
-              {t('about.weBelieve')}{' '}
-              <Typography tag="a" color="green">
-                {t('about.manifestL2')}
-              </Typography>
-            </Typography>
-          </div>
+
+          <StyledGroupCards>
+            <div className="cards">
+              <CardTitleStyled>
+                <Typography
+                  tag="h1"
+                  color="gray"
+                  size="small"
+                  letterSpacing="space1"
+                >
+                  {t('about.mission')}
+                </Typography>
+              </CardTitleStyled>
+
+              <CardParagraphStyled>
+                <Typography tag="p" color="gray">
+                  {t('about.create')}
+                </Typography>
+              </CardParagraphStyled>
+            </div>
+
+            <div className="cards">
+              <CardTitleStyled>
+                <Typography
+                  tag="h1"
+                  color="gray"
+                  size="small"
+                  letterSpacing="space1"
+                >
+                  {t('about.vision')}
+                </Typography>
+              </CardTitleStyled>
+              <CardParagraphStyled>
+                <Typography tag="p" color="gray">
+                  {t('about.desire')}
+                </Typography>
+              </CardParagraphStyled>
+            </div>
+            <div className="cards">
+              <CardTitleStyled>
+                <Typography
+                  tag="h1"
+                  color="gray"
+                  size="small"
+                  letterSpacing="space1"
+                >
+                  {t('about.values')}
+                </Typography>
+              </CardTitleStyled>
+              <CardParagraphStyled>
+                <Typography tag="p" color="gray">
+                  {t('about.weBelieve')}{' '}
+                  <Typography tag="a" color="green">
+                    {t('about.manifestL2')}
+                  </Typography>
+                </Typography>
+              </CardParagraphStyled>
+            </div>
+          </StyledGroupCards>
         </DivCardStyled>
-        <DivSubTitleStyled>
+        <SubTitleGroupStyled>
           <SubTitleStyled>
             {' '}
             <Typography
@@ -168,20 +200,21 @@ export default function About() {
             >
               {t('about.superPowers')}
             </Typography>
+          </SubTitleStyled>
+          <ParagraphSubTitleStyled>
             <Typography tag="p" color="gray" fontWeight="weight2">
               {t('about.weAreMade')}
             </Typography>
-          </SubTitleStyled>
-
-          <div className="button">
-            <Button
-              linkBtn="#"
-              text="CONHEÇA A NOSSA EQUIPE"
-              fill={`${colors.gray}`}
-              fontSize="large"
-            />
-          </div>
-        </DivSubTitleStyled>
+            <div className="button">
+              <Button
+                linkBtn="#"
+                text="CONHEÇA A NOSSA EQUIPE"
+                fill={`${colors.gray}`}
+                fontSize="large"
+              />
+            </div>
+          </ParagraphSubTitleStyled>
+        </SubTitleGroupStyled>
       </SectionStyled>
     </ContainerStyledAbout>
   );

@@ -28,6 +28,11 @@ export const ButtonStyled = styled.div<ButtonProps>`
   align-items: center;
   padding: 10px;
 
+  @media (max-width: 800px) {
+    font-size: 6px;
+    padding: 0px;
+  }
+
   &:first-child {
     width: auto;
     padding: 7.5px 16px;
