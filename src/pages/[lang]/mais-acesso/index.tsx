@@ -91,8 +91,8 @@ const MaisAcesso: NextPage = () => {
     { image: '/images/TechnologiesLogos/reactjs-logo.svg', alt: 'React Logo' },
   ];
 
-  const widthImage = 270;
-  const heightImage = 479;
+  const widthImage = 414;
+  const heightImage = 736;
   const prototypeType = 'mobile';
 
   return (

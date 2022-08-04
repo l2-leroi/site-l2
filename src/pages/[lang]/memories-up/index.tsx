@@ -90,8 +90,8 @@ const MemoriesUp: NextPage = () => {
     { image: '/images/TechnologiesLogos/figma-logo.svg', alt: 'Figma Logo' },
   ];
 
-  const widthImage = 270;
-  const heightImage = 582;
+  const widthImage = 414;
+  const heightImage = 896;
   const prototypeType = 'mobile';
 
   return (

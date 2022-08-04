@@ -95,8 +95,8 @@ const ToParado: NextPage = () => {
     { image: '/images/TechnologiesLogos/reactjs-logo.svg', alt: 'React Logo' },
   ];
 
-  const widthImage = 270;
-  const heightImage = 582;
+  const widthImage = 414;
+  const heightImage = 896;
   const prototypeType = 'mobile';
 
   return (

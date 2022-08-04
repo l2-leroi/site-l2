@@ -35,58 +35,31 @@ function DesignPrototype({
     } else {
       document.getElementById('ContentPrototype').classList.add('desktop');
     }
+
     function scrollPrototype() {
       const container = containerRef?.current?.getBoundingClientRect();
       const containerTop = container.top + window.scrollY;
       const containerBottom = containerTop + container.height;
 
-      const prototype = prototypeRef?.current?.getBoundingClientRect();
-      const prototypeTop = prototype.top + window.scrollY;
-      const prototypeBottom = prototypeTop + prototype.height;
-
-      function disableScroll() {
-        window.addEventListener('wheel', (e) => e.preventDefault(), {
-          passive: false,
-        });
-      }
-
-      function enableScroll() {
-        window.removeEventListener('wheel', (e) => e.preventDefault(), {
-          passive: false,
-        });
-        // window.removeEventListener('wheel', disableScroll, false);
-      }
-
       if (window.pageYOffset < containerTop) {
         prototypeRef.current.scroll(0, 0);
         setIsVisible(false);
-
-        /* disableScroll();
-        setTimeout(() => {
-          enableScroll();
-        }, 2000); */
       } else if (window.pageYOffset > containerBottom) {
         const scrollY = containerBottom - containerTop;
         prototypeRef.current.scroll(0, scrollY);
         setIsVisible(true);
-
-        /* disableScroll();
-        setTimeout(() => {
-          enableScroll();
-        }, 2000); */
       } else {
         const scrollY = window.pageYOffset - containerTop;
         prototypeRef.current.scroll(0, scrollY);
         setIsVisible(true);
       }
     }
-
     window.addEventListener('scroll', scrollPrototype);
-  }, []); // width_t
+  }, []);
 
   return (
     <ContentStyled
-      id="prototype"
+      id="ContentStyled"
       style={{
         height: `${imagesPrototype.length * 100}vh`,
       }}
@@ -115,7 +88,7 @@ function DesignPrototype({
                       scaleY: 0,
                     }}
                     transition={{
-                      duration: 1,
+                      duration: 0.5, // 1,
                     }}
                   />
                 )}
@@ -141,7 +114,7 @@ function DesignPrototype({
                     },
                   }}
                   transition={{
-                    delay: 1,
+                    delay: 0.5, // 1,
                     duration: 0,
                   }}
                 />

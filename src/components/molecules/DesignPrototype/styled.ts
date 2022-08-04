@@ -16,6 +16,13 @@ export const ContentStyled = styled.section`
   @media (max-width: 360px) {
     margin-bottom: 160px;
   }
+
+  &.center {
+    margin-top: 25vh;
+    // position: fixed;
+    // top: 25vh;
+  }
+
   scroll-behavior: smooth;
 `;
 
@@ -202,16 +209,17 @@ export const ImageStyledPrototype = styled(motion.img)`
 export const ContentStyledPrototype = styled.div<DesignPrototypeImage>`
   &.mobile {
     width: 60vw;
-    height: calc(
+    --calc-height: calc(
       (
           (60vw * ${(props) => props.heightImage}) /
             ${(props) => props.widthImage}
         ) - 24px
     );
+    height: var(--calc-height);
 
-    @media${device.xs} {
+    @media ${device.xs} {
       width: 40vw;
-      height: calc(
+      --calc-height: calc(
         (
             (40vw * ${(props) => props.heightImage}) /
               ${(props) => props.widthImage}
@@ -221,7 +229,7 @@ export const ContentStyledPrototype = styled.div<DesignPrototypeImage>`
 
     @media${device.sm} {
       width: 40vw;
-      height: calc(
+      --calc-height: calc(
         (
             (40vw * ${(props) => props.heightImage}) /
               ${(props) => props.widthImage}
@@ -231,7 +239,7 @@ export const ContentStyledPrototype = styled.div<DesignPrototypeImage>`
 
     @media${device.md} {
       width: 40vw;
-      height: calc(
+      --calc-height: calc(
         (
             (40vw * ${(props) => props.heightImage}) /
               ${(props) => props.widthImage}
@@ -240,10 +248,10 @@ export const ContentStyledPrototype = styled.div<DesignPrototypeImage>`
     }
 
     @media${device.lg} {
-      width: 20vw;
-      height: calc(
+      width: 19vw;
+      --calc-height: calc(
         (
-            (20vw * ${(props) => props.heightImage}) /
+            (19vw * ${(props) => props.heightImage}) /
               ${(props) => props.widthImage}
           ) - 24px
       );
@@ -251,7 +259,7 @@ export const ContentStyledPrototype = styled.div<DesignPrototypeImage>`
 
     @media${device.xl} {
       width: 20vw;
-      height: calc(
+      --calc-height: calc(
         (
             (20vw * ${(props) => props.heightImage}) /
               ${(props) => props.widthImage}
@@ -259,15 +267,17 @@ export const ContentStyledPrototype = styled.div<DesignPrototypeImage>`
       );
     }
   }
+
   &.desktop {
     width: 100vw;
-    height: calc(
+    --calc-height: calc(
       (100vw * ${(props) => props.heightImage}) / ${(props) => props.widthImage}
     );
+    height: var(--calc-height);
 
     @media${device.xs} {
       width: 75vw;
-      height: calc(
+      --calc-height: calc(
         (75vw * ${(props) => props.heightImage}) /
           ${(props) => props.widthImage}
       );
@@ -275,7 +285,7 @@ export const ContentStyledPrototype = styled.div<DesignPrototypeImage>`
 
     @media${device.lg} {
       width: 60vw;
-      height: calc(
+      --calc-height: calc(
         (60vw * ${(props) => props.heightImage}) /
           ${(props) => props.widthImage}
       );
@@ -285,7 +295,7 @@ export const ContentStyledPrototype = styled.div<DesignPrototypeImage>`
   overflow: hidden;
   position: sticky;
   display: flex;
-  top: 0px;
+  top: calc(((100vh - var(--calc-height)) / 2) + (94.7812px / 2));
   border: 12px;
   border-style: solid;
   border-color: #000000;
