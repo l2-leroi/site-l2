@@ -4,7 +4,7 @@ import { colors } from '../../../styles/colors';
 interface ButtonProps {
   borderColor?: string;
   bgColor?: string;
-  fontSize?: string | number;
+  fontSize?: number | string;
 }
 
 export const LinkStyled = styled.a`
@@ -29,7 +29,7 @@ export const ButtonStyled = styled.div<ButtonProps>`
   padding: 10px;
 
   @media (max-width: 800px) {
-    font-size: 6px;
+    font-size: xx-small;
     padding: 0px;
   }
 
