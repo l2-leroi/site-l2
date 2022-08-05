@@ -88,7 +88,7 @@ export const ParagraphStyled = styled.div`
 export const ImageStyled = styled.div`
   display: flex;
   flex-direction: row;
-  max-width: 50%;
+  max-width: 100%;
   gap: 30px;
 
   img {
