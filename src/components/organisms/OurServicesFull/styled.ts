@@ -129,9 +129,32 @@ export const AsideTextStyled = styled.span`
 
 `;
 
-export const ArrowSpinnerComponentStyled = styled.div`
+export const ArrowSpinnerContainerStyled = styled.div`
     grid-column: 1/2;
     margin-top: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+`;
+
+export const ArrowSpinnerComponentStyled = styled.div`
+    position: absolute;
+    margin: 0 auto;
+    transition: top .2s linear;
+    
+
+    img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    @media(max-width: 800px){
+        img {
+            max-width: 72px;
+            max-height: 72px;
+        }
+        
+    }
 `;
 
 export const ContentStyled = styled.div`
@@ -139,10 +162,6 @@ export const ContentStyled = styled.div`
     grid-column: 2/3;
 `;
 
-export const VideoSectionStyled = styled.div`
-    grid-column: 1/-1;
-`;
-
-export const VideoTitleStyled = styled.h2`
-
+export const VideoTitleStyled = styled.div`
+    max-width: 400px;
 `;
