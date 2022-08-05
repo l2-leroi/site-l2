@@ -54,6 +54,14 @@ const PageAbout: NextPage = () => {
         hasSpinner={false}
       />
       <Manifest />
+      <LineAnimation
+        topChildren={false}
+        bottomChildren={false}
+        lineBg={colors.purple}
+        secondaryBg={colors.gray}
+        hasOutSourcing={false}
+        hasSpinner={false}
+      />
       <Footer />
     </Container>
   );
