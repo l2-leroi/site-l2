@@ -29,7 +29,7 @@ export const ButtonStyled = styled.div<ButtonProps>`
   padding: 10px;
 
   @media (max-width: 800px) {
-    font-size: xx-small;
+    font-size: 6px;
     padding: 0px;
   }
 

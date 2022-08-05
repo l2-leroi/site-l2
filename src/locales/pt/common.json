@@ -4,9 +4,12 @@
     "whiteSpinner": "/images/Arrow-Spinner-White.svg",
     "blackSpinner": "/images/black-spinner.svg",
     "WhiteSpinner": "/images/white-spinner.svg",
+    "spinnerBlack": "/images/Manifest/spinnerBlack.svg",
+    "spinnerWhite": "/images/Manifest/spinnerWhite.svg",
     "alt": {
       "thereIsMore": "Tem mais coisa aqui em baixo",
-      "howItIs": "Como é trabalhar na L2"
+      "howItIs": "Como é trabalhar na L2",
+      "manifest": "manifesto L2code"
     }
   },
   "about": {

@@ -3,10 +3,11 @@ import { colors } from '../../../styles/colors';
 
 export const ContainerStyledAbout = styled.section`
   background-color: ${colors.black};
-  display: grid;
-  grid-template-columns: 1fr minmax(280px, 1456px) 1fr;
-  color: ${colors.gray};
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  background-color: ${colors.black};
+  color: ${colors.gray};
   padding-top: 15.5rem;
   padding-bottom: 15.5rem;
 
@@ -17,10 +18,6 @@ export const ContainerStyledAbout = styled.section`
 `;
 
 export const SectionStyled = styled.div`
-  grid-column: 2/3;
-  display: grid;
-  grid-template-columns: 1fr;
-  box-sizing: border-box;
   padding: 0px 28px;
   gap: 30px;
   @media (max-width: 800px) {
@@ -29,8 +26,6 @@ export const SectionStyled = styled.div`
 `;
 
 export const HeaderStyled = styled.div`
-  grid-column: 1/-1;
-  position: relative;
   display: flex;
 
   @media (max-width: 414px) {
@@ -47,6 +42,15 @@ export const TitleGroupStyled = styled.hgroup`
   h1 {
     margin-top: 8rem;
     width: 60%;
+    @media (max-width: 800px) {
+      font-size: 36px;
+    }
+  }
+
+  h2 {
+    @media (max-width: 800px) {
+      font-size: 12px;
+    }
   }
 `;
 
@@ -65,8 +69,9 @@ export const ParagraphStyled = styled.div`
 `;
 export const AsideStyled = styled.div`
   align-self: center;
-  @media (max-width: 930px) {
+  @media (max-width: 800px) {
     max-width: 100px;
+    font-size: 10px;
   }
 `;
 
@@ -131,8 +136,14 @@ export const SubTitleGroupStyled = styled.hgroup`
   align-self: flex-start;
   align-items: stretch;
   justify-content: flex-end;
+  @media (max-width: 800px) {
+    font-size: 12px;
+  }
 
   h1 {
+    @media (max-width: 800px) {
+      font-size: 20px;
+    }
   }
 
   p {
@@ -193,7 +204,7 @@ export const SpinningAnimation = keyframes`
 export const SpinningIconStyled = styled.div`
   display: flex;
   position: absolute;
-  top: 115rem;
+  top: 108rem;
   right: 0;
   overflow: hidden;
 
@@ -220,8 +231,8 @@ export const DivCardStyled = styled.div`
     border-radius: 8px;
 
     @media (max-width: 800px) {
-      width: 364px;
-      height: 261px;
+      width: 168px;
+      height: 233px;
     }
   }
 `;
@@ -233,7 +244,7 @@ export const StyledGroupCards = styled.hgroup`
   justify-content: space-between;
   gap: 20px;
 
-  @media (max-width: 1220px) {
+  @media (max-width: 1200px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -246,14 +257,20 @@ export const StyledGroupCards = styled.hgroup`
   }
 
   p {
-    padding: 20px 20px;
+    margin-left: 4rem;
   }
 `;
 
 export const CardTitleStyled = styled.div`
   max-width: 464px;
+  @media (max-width: 800px) {
+    max-width: 160px;
+  }
 `;
 
 export const CardParagraphStyled = styled.div`
   max-width: 464px;
+  @media (max-width: 800px) {
+    max-width: 160px;
+  }
 `;

@@ -16,51 +16,43 @@ export const ContainerStyledManifest = styled.section`
   padding-bottom: 15.5rem;
 `;
 
-export const TitleGroupStyled = styled.div`
+export const GroupStyled = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  text-align: left;
 
   h1 {
-    font-family: Neue Machina;
-    font-size: 64px;
-    font-weight: 800;
-    line-height: 58px;
-    letter-spacing: -0.04em;
-    text-align: left;
+    @media (max-width: 800px) {
+      font-size: 32px;
+    }
   }
 
   h2 {
-    font-family: Circular Air Pro;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 48px;
-    letter-spacing: -0.02em;
-    text-align: left;
     margin-top: 8rem;
+    @media (max-width: 800px) {
+      font-size: 12px;
+    }
   }
 
   h3 {
-    font-family: Circular Air Pro;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 34px;
-    letter-spacing: -0.04em;
-    text-align: left;
+    @media (max-width: 800px) {
+      font-size: 12px;
+    }
   }
 
   b {
     color: ${colors.purple};
+    @media (max-width: 800px) {
+      font-size: 12px;
+    }
   }
 
   p {
-    font-family: Circular Air Pro;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 34px;
-    letter-spacing: -0.04em;
-    text-align: left;
     margin-top: 4rem;
+    @media (max-width: 800px) {
+      font-size: 12px;
+    }
   }
 
   .line {
@@ -75,30 +67,33 @@ export const TitleGroupStyled = styled.div`
 
 export const TitleStyled = styled.div`
   @media (max-width: 800px) {
-    max-width: 160px;
+    max-width: 200px;
   }
 `;
 
 export const SubTitleStyled = styled.div`
   max-width: 600px;
   @media (max-width: 800px) {
-    max-width: 160px;
+    max-width: 250px;
   }
 `;
 
 export const ParagraphStyled = styled.div`
   max-width: 464px;
   @media (max-width: 800px) {
-    max-width: 160px;
+    max-width: 250px;
   }
 `;
 
 export const ImageStyled = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   max-width: 50%;
+  gap: 30px;
+
   img {
     margin-top: 4rem;
     margin-bottom: 8rem;
+    overflow: hidden;
   }
 `;

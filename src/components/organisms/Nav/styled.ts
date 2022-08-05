@@ -34,13 +34,6 @@ export const NavStyled = styled.nav`
     }
   }
 
-  &.black {
-    background: ${colors.black};
-    p {
-      color: ${colors.gray};
-    }
-  }
-
   &.smallFixed {
     position: fixed;
     padding: 25px 28px;

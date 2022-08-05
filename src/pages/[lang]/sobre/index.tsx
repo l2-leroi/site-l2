@@ -1,21 +1,14 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import { t } from 'i18next';
-import Nav from '../../../components/organisms/Nav';
 import About from '../../../components/organisms/About';
 import LineAnimation from '../../../components/atoms/LineAnimation';
 import Manifest from '../../../components/organisms/Manifest';
 import { colors } from '../../../styles/colors';
-import { Container, StyledScrollCircle } from './style';
+import { Container, StyledScrollCircle } from './styled';
 import Footer from '../../../components/organisms/Footer';
 
 const PageAbout: NextPage = () => {
-  useEffect(() => {
-    const nav = document.querySelector('.nav');
-    nav?.classList.add('.white');
-    nav?.classList.add('animate');
-  }, []);
-
   useEffect(() => {
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
@@ -24,11 +17,16 @@ const PageAbout: NextPage = () => {
         window.scrollTo(0, 0);
       };
     }
+  });
+
+  useEffect(() => {
+    const nav = document.querySelector('.nav');
+    nav?.classList.add('white');
+    nav?.classList.add('animate');
   }, []);
 
   return (
     <Container>
-      <Nav />
       <About />
 
       <LineAnimation
@@ -36,8 +34,8 @@ const PageAbout: NextPage = () => {
           <div className="topSpinner">
             <StyledScrollCircle
               isWhiteImage
-              blackImage={`${t('images.spinner')}`}
-              whiteImage={`${t('images.whiteSpinner')}`}
+              blackImage={`${t('images.spinnerBlack')}`}
+              whiteImage={`${t('images.spinnerWhite')}`}
             />
           </div>
         }
@@ -45,8 +43,8 @@ const PageAbout: NextPage = () => {
           <div className="bottomSpinner">
             <StyledScrollCircle
               isWhiteImage={false}
-              blackImage={`${t('images.spinner')}`}
-              whiteImage={`${t('images.whiteSpinner')}`}
+              blackImage={`${t('images.spinnerBlack')}`}
+              whiteImage={`${t('images.spinnerWhite')}`}
             />
           </div>
         }

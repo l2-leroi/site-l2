@@ -8,9 +8,9 @@ export const Container = styled.div`
   }
   .bottomSpinner {
     width: 30%;
-    height: 3000px;
+    height: 9950px;
     @media (max-width: 800px) {
-      height: 1400px;
+      height: 5000px;
     }
   }
 `;
