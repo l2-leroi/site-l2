@@ -12,7 +12,7 @@ interface DesignPrototypeImage {
 export const ContentStyled = styled.section`
   display: flex;
   justify-content: center;
-  margin-bottom: 140px;
+  // margin-bottom: 140px;
   @media (max-width: 360px) {
     margin-bottom: 160px;
   }

@@ -15,6 +15,7 @@ export const ContentStyled = styled.section`
   justify-content: center;
   position: sticky;
   top: 94px;
+  z-index: 80;
 `;
 
 export const DivStyled = styled.div`
@@ -53,6 +54,7 @@ export const ParagraphStyled = styled.p`
 `;
 
 export const TecTitleStyled = styled.h2`
+  padding-top: 140px;
   width: 100%;
   justify-content: center;
   display: flex;

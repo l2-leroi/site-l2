@@ -42,7 +42,7 @@ function DesignPrototype({
       const containerBottom = containerTop + container.height;
 
       if (window.pageYOffset < containerTop) {
-        prototypeRef.current.scroll(0, 0);
+        prototypeRef?.current.scroll(0, 0);
         setIsVisible(false);
       } else if (window.pageYOffset > containerBottom) {
         const scrollY = containerBottom - containerTop;
@@ -50,7 +50,7 @@ function DesignPrototype({
         setIsVisible(true);
       } else {
         const scrollY = window.pageYOffset - containerTop;
-        prototypeRef.current.scroll(0, scrollY);
+        prototypeRef.current?.scroll(0, scrollY);
         setIsVisible(true);
       }
     }

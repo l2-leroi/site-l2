@@ -6,7 +6,6 @@ import {
   MainTextStyled,
   ContainerStyled,
   LanguageStyled,
-  DivItemStyled,
   SectionOnePageStyled,
   DivTextStyled,
   DivItemSTextStyled,

@@ -8,22 +8,88 @@ interface DesignPrototypePropsImages {
 }
 
 export const ContentStyled = styled.section`
+  // display: flex;
+  // overflow: hidden;
+  // max-width: 1500px;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // grid-gap: 32px;
+  // padding-bottom: 140px;
+`;
+
+export const StyledGallery = styled.div`
   display: flex;
   overflow: hidden;
-  //width: 100%;
-  //height: auto;
-  //overflow: hidden;
   max-width: 1500px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   grid-gap: 32px;
-  padding-bottom: 140px;
+  // padding-bottom: 140px;
 `;
 
-export const ImageStyled = styled.img<DesignPrototypePropsImages>`
-  width: ${(props) => props.widthImage}px;
-  height: ${(props) => props.heightImage}px;
+export const GallerySliderStyled = styled(Slider)``;
+
+export const SliderStyled = styled(Slider)`
+  .slick-arrow {
+    background: transparent;
+  }
+  .slick-list {
+    background: transparent;
+    heigth: 100px;
+  }
+
+  .slick-next {
+    heigth: 80px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    background: pink;
+    opacity: 1;
+    border-radius: 100%;
+  }
+`;
+
+export const StyledModal = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 30;
+`;
+
+export const StyledModalContent = styled.div`
+  margin: auto;
+  // margin-top: 10vh;
+  width: 250px;
+  height: auto;
+  // min-height: 300px;
+  // max-width: 600px;
+  // background-color: #eee;
+  // padding: 16px;
+  // box-shadow: 0 0 2px #fff;
+`;
+export const ExitButtonImg = styled.img``;
+export const ExitButtonStyled = styled.button`
+  border: 0;
+  background: transparent;
+  padding: 25px 28px;
+  display: flex;
+  justify-content: end;
+`;
+
+export const SliderImageStyled = styled.img`
+  //  width: 60px;
+`;
+
+export const ImageStyled = styled.img`
+  width: 20%;
   user-select: none;
 
   &.imageBlock {
@@ -60,92 +126,7 @@ export const CaseStyled = styled.article`
     height: 530px;
   }
 `;
-
-export const SliderStyled = styled(Slider)`
-  .slick-track {
-    display: flex;
-    flex-wrap: nowrap;
-    user-select: text;
-
-    @media (max-width: 600px) {
-      height: 740px;
-    }
-
-    @media (max-width: 550px) {
-      height: 700px;
-    }
-
-    @media (max-width: 500px) {
-      height: 665px;
-    }
-
-    @media (max-width: 430px) {
-      height: 610px;
-    }
-
-    @media (max-width: 390px) {
-      height: 590px;
-    }
-  }
-
-  @media (max-width: 800px) {
-    .slick-current {
-      margin-top: 0px;
-    }
-
-    .slick-active.slick-current + div {
-      margin-top: 80px;
-    }
-
-    .slick-active + div {
-      margin-top: 160px;
-    }
-  }
-
-  .slick-slide {
-    width: 464px;
-    margin-top: 0px;
-    margin: 0 1.6rem;
-    transition: 0.5s;
-
-    @media (min-width: 801px) {
-      &:nth-child(2) {
-        margin-top: 300px;
-      }
-      &:nth-child(3) {
-        margin-top: 600px;
-      }
-    }
-
-    &:first-of-type {
-      margin-left: 0px;
-    }
-
-    &:last-of-type {
-      width: 100px;
-      margin: 0px;
-
-      @media (min-width: 600px) {
-        width: 0px;
-      }
-    }
-
-    @media (max-width: 1350px) {
-      width: 415px;
-    }
-
-    @media (max-width: 1160px) {
-      width: 340px;
-    }
-
-    @media (max-width: 800px) {
-      width: 248px;
-    }
-  }
-`;
-
 export const GhostStyled = styled.div``;
-
 export const CaseNumberStyled = styled.h3`
   font-family: 'Circular Air Pro', sans-serif;
   font-weight: 400;
