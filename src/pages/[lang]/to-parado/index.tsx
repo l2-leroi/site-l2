@@ -37,35 +37,35 @@ const ToParado: NextPage = () => {
 
   const imagesDesign = [
     {
-      image: '/images/DesignToParado/RectangleCaseToParado-1.jpg',
+      image: '/images/DesignToParado/CaseToParado-1.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignToParado/RectangleCaseToParado-2.jpg',
+      image: '/images/DesignToParado/CaseToParado-2.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignToParado/RectangleCaseToParado-3.jpg',
+      image: '/images/DesignToParado/CaseToParado-3.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignToParado/RectangleCaseToParado-4.jpg',
+      image: '/images/DesignToParado/CaseToParado-4.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignToParado/RectangleCaseToParado-5.jpg',
+      image: '/images/DesignToParado/CaseToParado-5.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignToParado/RectangleCaseToParado-6.jpg',
+      image: '/images/DesignToParado/CaseToParado-6.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignToParado/RectangleCaseToParado-7.jpg',
+      image: '/images/DesignToParado/CaseToParado-7.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignToParado/RectangleCaseToParado-8.jpg',
+      image: '/images/DesignToParado/CaseToParado-8.jpg',
       alt: 'Mockup',
     },
   ];
