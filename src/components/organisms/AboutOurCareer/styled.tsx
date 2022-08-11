@@ -12,9 +12,6 @@ export const ContainerStyled = styled.section`
   padding-bottom: 10.5rem;
   overflow: hidden;
 
-  /* z-index: -1; */
-  /* overflow: inherit; */
-
   @media (max-width: 1260px) {
     flex-direction: column;
   }
@@ -36,13 +33,6 @@ export const DivImageStyled = styled.div`
 
     @media (max-width: 600px) {
       font-size: 12px;
-    }
-  }
-  .anime {
-    margin-top: 10px;
-    margin-bottom: -160px;
-    @media (max-width: 1260px) {
-      /* margin-top: -1100px; */
     }
   }
 `;
@@ -79,40 +69,7 @@ export const SpinnerImage = styled.img`
   }
 `;
 
-export const ArrowSpinnerContainerStyled = styled.div`
-  width: 35%;
-  align-items: flex-start;
-  flex-direction: column;
-  display: flex;
-  z-index: 1;
-
-  div {
-    width: 100%;
-  }
-
-  /* display: flex;
-  flex-direction: column;
-  margin-top: 10rem;
-  margin-left: 10%;
-  width: 20%;
-  z-index: 2; */
-  @media (max-width: 1260px) {
-    margin-left: 0;
-  }
-  @media (max-width: 800px) {
-    div {
-      .animate {
-        width: 72.01px;
-        height: 72.01px;
-      }
-    }
-  }
-`;
-
 export const DivTextStyled = styled.div`
-  /* align-self: flex-start;
-  align-items: stretch;
-  justify-content: flex-end; */
   display: flex;
   flex-direction: column;
   margin-left: 8%;
@@ -128,7 +85,6 @@ export const DivTextStyled = styled.div`
     }
     @media (max-width: 800px) {
       font-size: 20px;
-      /* margin-top: 30px; */
     }
   }
 

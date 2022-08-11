@@ -1,17 +1,14 @@
 import i18next from 'i18next';
 import { colors } from '../../../styles/colors';
 import {
-  // ContainerMainStyled,
   ContainerStyled,
   DivImageStyled,
   DivTextStyled,
-  // ArrowSpinnerContainerStyled,
   SpinningIconStyled,
   SpinnerImage,
 } from './styled';
 import { Typography } from '../../../styles/typography';
 import Button from '../../atoms/Button';
-// import ScrollCircle from '../../atoms/ScrollCircle';
 
 interface PropsImage {
   src: string;
