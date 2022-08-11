@@ -4,8 +4,9 @@ import {
   ContentStyled,
   ExitButtonImg,
   ExitButtonStyled,
-  GallerySliderStyled,
   ImageStyled,
+  LeftButtonStyled,
+  RightButtonStyled,
   SliderImageStyled,
   SliderStyled,
   StyledGallery,
@@ -37,14 +38,6 @@ export default function DesignImages({ imagesArray }: DesignImagesProps) {
     return width <= 800;
   }, [width]);
 
-  const gallerySettings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    arrows: false,
-  };
   const settings = {
     dots: true,
     infinite: true,
@@ -52,6 +45,8 @@ export default function DesignImages({ imagesArray }: DesignImagesProps) {
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
+    nextArrow: <RightButtonStyled />,
+    prevArrow: <LeftButtonStyled />,
     responsive: [
       {
         breakpoint: 800,
@@ -66,8 +61,6 @@ export default function DesignImages({ imagesArray }: DesignImagesProps) {
   };
 
   useEffect(() => {
-    console.log(window.innerWidth);
-
     if (window.innerWidth < 800) {
       setGalleryIsOpen(false);
       setSliderIsOpen(true);

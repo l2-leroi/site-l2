@@ -17,6 +17,32 @@ export const ContentStyled = styled.section`
   // grid-gap: 32px;
   // padding-bottom: 140px;
 `;
+export const RightButtonStyled = styled.div`
+  width: 40px;
+  height: 40px;
+  background-color: ${colors.black_1} !important;
+  border-radius: 100%;
+  ::before {
+    display: none !important;
+  }
+  right: -100px; // 140 | 80
+  background-image: url('/images/RightButton.png') !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+`;
+export const LeftButtonStyled = styled.div`
+  width: 40px;
+  height: 40px;
+  background-color: ${colors.black_1} !important;
+  border-radius: 100%;
+  ::before {
+    display: none !important;
+  }
+  left: -100px; // 140 | 80
+  background-image: url('/images/LeftButton.png') !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+`;
 
 export const StyledGallery = styled.div`
   display: flex;
@@ -26,7 +52,6 @@ export const StyledGallery = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   grid-gap: 32px;
-  // padding-bottom: 140px;
 `;
 
 export const GallerySliderStyled = styled(Slider)``;
@@ -44,11 +69,29 @@ export const SliderStyled = styled(Slider)`
     heigth: 80px;
   }
 
-  .slick-prev:before,
-  .slick-next:before {
-    background: pink;
-    opacity: 1;
-    border-radius: 100%;
+  .slick-dots li {
+    margin: 0;
+    width: 100%;
+  }
+  .slick-dots li button {
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .slick-dots {
+    display: flex !important;
+    background: ${colors.black_1};
+    height: 2px;
+  }
+
+  .slick-dots li.slick-active {
+    background-color: ${colors.purple};
+    height: 2px;
+  }
+
+  .slick-dots li button:before {
+    display: none !important;
   }
 `;
 
@@ -66,14 +109,8 @@ export const StyledModal = styled.div`
 
 export const StyledModalContent = styled.div`
   margin: auto;
-  // margin-top: 10vh;
   width: 250px;
   height: auto;
-  // min-height: 300px;
-  // max-width: 600px;
-  // background-color: #eee;
-  // padding: 16px;
-  // box-shadow: 0 0 2px #fff;
 `;
 export const ExitButtonImg = styled.img``;
 export const ExitButtonStyled = styled.button`
@@ -84,9 +121,7 @@ export const ExitButtonStyled = styled.button`
   justify-content: end;
 `;
 
-export const SliderImageStyled = styled.img`
-  //  width: 60px;
-`;
+export const SliderImageStyled = styled.img``;
 
 export const ImageStyled = styled.img`
   width: 20%;

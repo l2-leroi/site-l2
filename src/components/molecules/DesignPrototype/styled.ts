@@ -1,6 +1,6 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import Slider from 'react-slick';
-import { motion } from 'framer-motion';
 import { colors } from '../../../styles/colors';
 import { device } from '../../../styles/medias';
 
