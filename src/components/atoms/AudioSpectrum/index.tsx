@@ -1,64 +1,104 @@
-import { init } from "i18next";
-import { useEffect, useRef } from "react";
-import { colors } from "../../../styles/colors";
+import { init } from 'i18next';
+import { useEffect, useRef, useState } from 'react';
+import { colors } from '../../../styles/colors';
+import WaveSurfer from 'wavesurfer.js';
+import Drawer from 'wavesurfer.js/src/drawer.js'
+// import teste from "../../../../public/audio/audioTeste.mp3";
+
+import {
+  IconStyled,
+  AudioContainerStyled,
+  AudioIconStyled,
+  WaveForm,
+} from './styled';
 
 interface audioProps {
-    isPaused: boolean;
-    audioPercent: number;
-    containerWidth: number,
-  }
+  audio: string;
+}
 
-    const AudioSpectrum = (props: audioProps) => {
-        const canvas = useRef();
-        
-        const frequency = [121, 103, 86, 43, 88, 51, 43, 12, 103, 121, 43, 51, 51, 43, 86, 103, 121, 86, 103, 121, 121, 103, 86, 121, 103, 83, 43, 51, 43, 43, 63, 121]
-        const width = props.containerWidth - 160;
-        const canvaAnimation = () => {
-            const canvasElement = canvas.current as HTMLCanvasElement;
+const AudioSpectrum = (props: audioProps) => {
+  const waveform = useRef();
+  const audioRef = useRef();
+  let wavesurfer;
+  const button = useRef();
 
-            if(canvasElement){
-                if(canvasElement.getContext){
-                    const ctx = canvasElement.getContext('2d');
-                    ctx.globalCompositeOperation = 'destination-over';
-                    if(props.audioPercent < 1){
-                        ctx.clearRect(0,0,width,150);
-                    }
-                    frequency.forEach((item, index) => {
-                        console.log("audioPercent", props.audioPercent)
-                        if(((index) * 16 ) > (width * props.audioPercent)/100){
-                            ctx.fillStyle = colors.lightGray;
-                            ctx.fillRect(index * 16, 150 - item, 2, item);
-                        }else {
-                            ctx.fillStyle = colors.green;
-                            ctx.clearRect(index * 16, 150 - item, 2, item);
+  const wave =  () => {
+    const div = waveform.current as HTMLElement;
+    const buttonElement = button.current as HTMLElement;
+    wavesurfer = WaveSurfer.create({
+      container: div,
+      waveColor: colors.lightGray,
+      progressColor: colors.green,
+      cursorColor: 'transparent',
+      barWidth: 3,
+      barRadius: 0,
+      cursorWidth: 1,
+      height: 200,
+      barGap: 12,
+    })
 
-                            for(let i = 0; i < 4; i++){
-                                ctx.fillRect(index * 16 + i, 150 - item, 1, item);
-                            }
+    wavesurfer.load(props.audio);
 
-                        }
-                        // ctx.fillRect(index * 11, 150 - item, 3, item);
-                    })
-
-                }
-            }
+    buttonElement.onclick = () => {
+        if(wavesurfer.isPlaying()){
+            buttonElement.classList.remove("pause")
+        }else{
+            buttonElement.classList.add("pause")
         }
+        wavesurfer.playPause();
+    }
 
-        useEffect(() => {
-            window.requestAnimationFrame(canvaAnimation)
-        }, []);
+    wavesurfer.on('finish', function () {
+        wavesurfer.stop();
+        buttonElement.classList.remove("pause")
+    });
 
-        useEffect(()=> {
-            console.log("entrou uma vez")
-            window.requestAnimationFrame(canvaAnimation)
-        }, [props.audioPercent])
+    window.onresize = () => {
+        // wavesurfer.cancelAjax();
+        console.log(wavesurfer.drawer.clearWave)
+        // wavesurfer.drawer.clearWave();
+//        console.log(div.children); 
+//         wavesurfer.stop();
+//         console.log()
+//         wavesurfer.drawer.containerWidth = wavesurfer.drawer.container.clientWidth;
+// wavesurfer.drawBuffer();
+
+        // wavesurfer = "";
         
-    return (
-        (props.containerWidth > 0)?
-      <canvas width={width} height={150} ref={canvas} />
-      :
-      <canvas width={300} height={150} ref={canvas} />
-    );
+        // wavesurfer = WaveSurfer.create({
+        //     container: div,
+        //     waveColor: colors.lightGray,
+        //     progressColor: colors.green,
+        //     cursorColor: 'transparent',
+        //     barWidth: 3,
+        //     barRadius: 0,
+        //     cursorWidth: 1,
+        //     height: 200,
+        //     barGap: 12,
+        //   })
+        wavesurfer.load(props.audio);
+    }
   };
-  export default AudioSpectrum;
-  
+
+  useEffect(() => {
+    const buttonElement = button.current as HTMLElement;
+    if (props.audio) {
+        wave();
+            // return buttonElement.onclick = null;
+    }
+  }, []);
+
+  return (
+    <>
+      {props.audio && (
+        <AudioContainerStyled>
+          <AudioIconStyled ref={button}>
+            <IconStyled src="/images/video-icon.png" />
+          </AudioIconStyled>
+          <WaveForm id="waveform" ref={waveform} />
+        </AudioContainerStyled>
+      )}
+    </>
+  );
+};
+export default AudioSpectrum;

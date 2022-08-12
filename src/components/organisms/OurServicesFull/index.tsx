@@ -21,7 +21,7 @@ import {
 } from './styled';
 import ServiceList from '../../molecules/ServiceList';
 import ScrollCircle from '../../atoms/ScrollCircle';
-// import DiagonalVideo from '../../atoms/DiagonalVideo';
+import DiagonalVideo from '../../atoms/DiagonalVideo';
 export default function OurServicesFull() {
   const {t} = i18next
   const arrowSpinner = useRef();
@@ -135,13 +135,13 @@ export default function OurServicesFull() {
 
       </OurServicesFullStyled>
     </SectionStyled>
-    {/* <DiagonalVideo> */}
+    <DiagonalVideo>
     <VideoTitleStyled>
         <Typography color='gray' tag="h2" size='medium' fontWeight='weight3' fontFamily='font1' lineHeight='line90'>
               {t('ourServicesFull.seeHowItWorks')}&lt;&gt;
         </Typography>
     </VideoTitleStyled>
-    {/* </DiagonalVideo> */}
+    </DiagonalVideo>
     </>
   );
 }

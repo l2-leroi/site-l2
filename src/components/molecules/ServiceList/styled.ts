@@ -36,6 +36,9 @@ export const ContentStyled = styled.div`
         display: none;
     }
 `;
+
+export const AudioContainer = styled.div`
+`;
 export const ImageContainerStyled = styled.div`
     display: flex;
 
@@ -160,8 +163,9 @@ export const IconStyled = styled.img`
 `;
 
 export const VideoIconContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
+    width: 100%;
 `;
 
 export const LineStyled = styled.hr`
