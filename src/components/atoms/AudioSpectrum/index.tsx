@@ -53,31 +53,12 @@ const AudioSpectrum = (props: audioProps) => {
         buttonElement.classList.remove("pause")
     });
 
-    window.onresize = () => {
-        // wavesurfer.cancelAjax();
-        console.log(wavesurfer.drawer.clearWave)
-        // wavesurfer.drawer.clearWave();
-//        console.log(div.children); 
-//         wavesurfer.stop();
-//         console.log()
-//         wavesurfer.drawer.containerWidth = wavesurfer.drawer.container.clientWidth;
-// wavesurfer.drawBuffer();
-
-        // wavesurfer = "";
-        
-        // wavesurfer = WaveSurfer.create({
-        //     container: div,
-        //     waveColor: colors.lightGray,
-        //     progressColor: colors.green,
-        //     cursorColor: 'transparent',
-        //     barWidth: 3,
-        //     barRadius: 0,
-        //     cursorWidth: 1,
-        //     height: 200,
-        //     barGap: 12,
-        //   })
-        wavesurfer.load(props.audio);
-    }
+    var responsiveWave = wavesurfer.util.debounce(function() {
+        wavesurfer.empty();
+        wavesurfer.drawBuffer();
+      }, 150);
+      
+      window.addEventListener('resize', responsiveWave);
   };
 
   useEffect(() => {
