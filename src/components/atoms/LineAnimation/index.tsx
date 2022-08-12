@@ -11,6 +11,15 @@ import OutSourcing from '../OutSourcing';
 
 const Spinner = '/images/spinner.png';
 
+interface LineAnimationProps {
+  lineBg: string;
+  secondaryBg: string;
+  hasOutSourcing: boolean;
+  hasSpinner: boolean;
+  topChildren?: any;
+  bottomChildren?: any;
+}
+
 const LineAnimation = ({
   lineBg,
   secondaryBg,
@@ -18,7 +27,7 @@ const LineAnimation = ({
   hasSpinner,
   topChildren,
   bottomChildren,
-}) => {
+}: LineAnimationProps) => {
   const line = useRef();
   const text = useRef();
   const spinner = useRef();
