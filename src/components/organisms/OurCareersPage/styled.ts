@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ScrollCircle from '../../../components/atoms/ScrollCircle';
+import ScrollCircle from '../../atoms/ScrollCircle';
 
 export const Container = styled.div`
   .topSpinner {
