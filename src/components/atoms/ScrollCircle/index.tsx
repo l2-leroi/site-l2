@@ -2,7 +2,7 @@ import i18next from 'i18next';
 import { ArrowSpinnerComponentStyled, ImageArrowSpinnerStyled } from './styled';
 
 interface imageProps {
-  isWhiteImage: boolean;
+  isWhiteImage?: boolean;
   blackImage: string;
   whiteImage: string;
   hidden?: boolean;

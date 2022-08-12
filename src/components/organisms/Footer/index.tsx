@@ -38,7 +38,6 @@ function Footer() {
   ];
 
   return (
-    // <LineAnimation backgroundColor={colors.purple} classe={'purpleLine'}>
     <FooterStyled className="footer">
       <IdSpanStyled id="contact" />
       <ContainerStyled className="containerstyled">
@@ -118,7 +117,6 @@ function Footer() {
         </InfoStyled>
       </ContainerStyled>
     </FooterStyled>
-    // </LineAnimation>
   );
 }
 
