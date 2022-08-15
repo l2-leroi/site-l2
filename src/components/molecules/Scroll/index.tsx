@@ -16,9 +16,9 @@ function Scroll({ closeMenu }: ScrollProps) {
     'Sobre',
     'Cases',
     'Serviços',
-    'Pessoas',
+    // 'Pessoas',
     'Carreira',
-    'Contato',
+    // 'Contato',
   ];
 
   const baseItemsEN = [
@@ -26,19 +26,19 @@ function Scroll({ closeMenu }: ScrollProps) {
     'About',
     'Cases',
     'Services',
-    'People',
+    // 'People',
     'Career',
-    'Contact',
+    // 'Contact',
   ];
 
   const baseUrl = [
     '',
-    '/about',
-    '/cases',
-    '/services',
-    '/people',
-    '/career',
-    '/contact',
+    '/sobre',
+    '/nossos-cases',
+    '/servicos',
+    // '/pessoas',
+    '/nossas-carreiras',
+    // '/contato',
   ];
 
   const language = i18next.language.substring(0, 2);
