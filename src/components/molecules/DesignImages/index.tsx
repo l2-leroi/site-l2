@@ -6,10 +6,12 @@ import {
   ExitButtonStyled,
   ImageStyled,
   LeftButtonStyled,
+  MobileImageStyled,
   RightButtonStyled,
   SliderImageStyled,
   SliderStyled,
   StyledGallery,
+  StyledMobileContent,
   StyledModal,
   StyledModalContent,
 } from './styled';
@@ -25,14 +27,19 @@ interface DesignImagesProps {
   imagesArray: DesignImage[];
   widthImage: number;
   heightImage: number;
+  prototypeType: string;
 }
 
-export default function DesignImages({ imagesArray }: DesignImagesProps) {
+export default function DesignImages({
+  imagesArray,
+  widthImage,
+  heightImage,
+  prototypeType,
+}: DesignImagesProps) {
   const [indexShown, indexsetShown] = useState(0);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [galleryIsOpen, setGalleryIsOpen] = useState(true);
   const [sliderIsOpen, setSliderIsOpen] = useState(false);
-  // const [width, setWidth] = useState(window.innerWidth);
   const { width } = useWindowSize();
   const isMobile = useMemo(() => {
     return width <= 800;
@@ -51,7 +58,7 @@ export default function DesignImages({ imagesArray }: DesignImagesProps) {
       {
         breakpoint: 800,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           slidesToScroll: 1,
           swipeToSlide: true,
           arrows: false,
@@ -95,9 +102,10 @@ export default function DesignImages({ imagesArray }: DesignImagesProps) {
   return (
     <ContentStyled id="content">
       {galleryIsOpen && (
-        <StyledGallery>
+        <StyledGallery id="galleryStyled">
           {imagesArray.map((images, index) => (
             <ImageStyled
+              className={prototypeType}
               onClick={() => openModal(index)}
               src={images.image}
               alt={images.alt}
@@ -107,13 +115,13 @@ export default function DesignImages({ imagesArray }: DesignImagesProps) {
       )}
 
       {sliderIsOpen && (
-        <StyledModalContent>
+        <StyledMobileContent className={prototypeType}>
           <SliderStyled {...{ ...settings, initialSlide: indexShown }}>
             {imagesArray.map((images) => (
-              <SliderImageStyled src={images.image} />
+              <MobileImageStyled src={images.image} />
             ))}
           </SliderStyled>
-        </StyledModalContent>
+        </StyledMobileContent>
       )}
 
       {modalIsOpen && (
@@ -124,7 +132,7 @@ export default function DesignImages({ imagesArray }: DesignImagesProps) {
           >
             <ExitButtonImg src="/images/exit.svg" />
           </ExitButtonStyled>
-          <StyledModalContent>
+          <StyledModalContent className={prototypeType}>
             <SliderStyled {...{ ...settings, initialSlide: indexShown }}>
               {imagesArray.map((images) => (
                 <SliderImageStyled src={images.image} />

@@ -8,14 +8,8 @@ interface DesignPrototypePropsImages {
 }
 
 export const ContentStyled = styled.section`
-  // display: flex;
-  // overflow: hidden;
-  // max-width: 1500px;
-  // flex-direction: row;
-  // flex-wrap: wrap;
-  // justify-content: center;
-  // grid-gap: 32px;
-  // padding-bottom: 140px;
+  display: flex;
+  justify-content: center;
 `;
 export const RightButtonStyled = styled.div`
   width: 40px;
@@ -52,6 +46,18 @@ export const StyledGallery = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   grid-gap: 32px;
+
+  &.desktop {
+    img{
+      width: 30%;
+    }
+  }
+  &.mobile {
+    img{
+      width: 20%;
+    }
+  }
+}
 `;
 
 export const GallerySliderStyled = styled(Slider)``;
@@ -109,9 +115,50 @@ export const StyledModal = styled.div`
 
 export const StyledModalContent = styled.div`
   margin: auto;
-  width: 250px;
   height: auto;
+
+  &.mobile {
+    width: 250px;
+    @media (min-height: 900px) {
+      width: 360px;
+    }
+  }
+
+  &.desktop {
+    width: 464px;
+    @media (min-height: 900px) {
+      width: 1072px;
+    }
+  }
 `;
+
+export const StyledMobileContent = styled.div`
+  margin: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+  &.desktop {
+    .slick-list {
+      width: 300vw;
+    }
+    .slick-slider {
+      width: 300%;
+    }
+  }
+
+  &.mobile {
+    .slick-list {
+      width: 200vw;
+    }
+    .slick-slider {
+      width: 200%;
+    }
+  }
+`;
+
 export const ExitButtonImg = styled.img``;
 export const ExitButtonStyled = styled.button`
   border: 0;
@@ -121,11 +168,21 @@ export const ExitButtonStyled = styled.button`
   justify-content: end;
 `;
 
+export const MobileImageStyled = styled.img`
+  padding: 8px;
+`;
 export const SliderImageStyled = styled.img``;
 
 export const ImageStyled = styled.img`
-  width: 20%;
   user-select: none;
+
+  &.desktop {
+    width: 30%;
+  }
+
+  &.mobile {
+    width: 20%;
+  }
 
   &.imageBlock {
     display: block;

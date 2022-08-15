@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
+import { device } from '../../../styles/medias';
 
 export const ContainerStyled = styled.div`
   color: ${colors.black};
   background-color: #171b21;
-  padding: 18rem 2.8rem 10rem;
+  // padding: 18rem 2.8rem 10rem;
+  padding-top: 18rem;
+  padding-bottom: 10rem;
 `;
 
 export const ContentStyled = styled.section`
@@ -54,7 +57,7 @@ export const ParagraphStyled = styled.p`
 `;
 
 export const TecTitleStyled = styled.h2`
-  padding-top: 140px;
+  padding-top: 100px;
   width: 100%;
   justify-content: center;
   display: flex;
@@ -78,11 +81,14 @@ export const TecTitleStyled = styled.h2`
   @media (max-width: 360px) {
     font-size: 32px;
   }
+  @media ${device.xs} {
+    padding-top: 140px;
+  }
 `;
 
 export const TitleStyled = styled.h2`
   font-family: 'Neue Machina', sans-serif;
-  font-size: 64px;
+  font-size: 32px;
   text-align: center;
   font-weight: 800;
   color: #f2f3f4;
@@ -93,12 +99,12 @@ export const TitleStyled = styled.h2`
     color: ${colors.gray};
   }
 
-  @media (max-width: 400px) {
+  @media ${device.xs} {
     font-size: 48px;
   }
 
-  @media (max-width: 360px) {
-    font-size: 32px;
+  @media ${device.sm} {
+    font-size: 64px;
   }
 `;
 
@@ -122,16 +128,17 @@ export const PhraseStyled = styled.p`
 `;
 
 export const ButtonImages = styled.button`
-  background-color: #242a33;
   padding: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 12px;
+
   border-radius: 100px;
   cursor: pointer;
+  background-color: #242a33;
   font-family: 'Circular Air Pro';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
   color: #ffffff;
   line-height: 140%;
   border-style: none;
@@ -141,23 +148,36 @@ export const ButtonImages = styled.button`
     z-index: 2;
   }
   &.classPadding2 {
-    padding-left: 80px;
+    padding-left: 40px;
+  }
+
+  @media ${device.xs} {
+    // 450
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 24px;
+
+    &.classPadding2 {
+      padding-left: 80px;
+    }
   }
 `;
 
 export const ButtonPrototype = styled.button`
   padding: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-right: -30px;
+  font-size: 12px;
+
   background-color: #242a33;
-  margin-right: -45px;
   z-index: 2;
   border-radius: 100px;
   cursor: pointer;
   font-family: 'Circular Air Pro';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
   color: #ffffff;
   line-height: 140%;
   border-style: none;
@@ -167,7 +187,20 @@ export const ButtonPrototype = styled.button`
   }
 
   &.classPadding1 {
-    padding-right: 80px;
+    padding-right: 40px;
+  }
+
+  @media ${device.xs} {
+    // 450
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: -45px;
+    font-size: 24px;
+
+    &.classPadding1 {
+      padding-right: 80px;
+    }
   }
 `;
 
@@ -202,18 +235,20 @@ export const ButtonStyled = styled.div`
 `;
 
 export const ImageStyled = styled.img`
-  width: 150px;
-  height: 150px;
+  max-width: 60px;
+  min-width: 30px;
+  height: auto;
   left: 0px;
 
-  @media (max-width: 800px) {
-    max-width: 100px;
+  @media ${device.xs} {
+    max-width: 80px;
     height: auto;
   }
 
-  @media (max-width: 380px) {
-    max-width: 80px;
+  @media ${device.sm} {
+    min-width: 100px;
     height: auto;
+    max-width: 200px;
   }
 
   > div {

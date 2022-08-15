@@ -108,6 +108,7 @@ function DesignsCases({
             imagesArray={images}
             widthImage={widthImage}
             heightImage={heightImage}
+            prototypeType={prototypeType}
           />
         )}
 

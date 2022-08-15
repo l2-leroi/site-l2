@@ -12,18 +12,11 @@ interface DesignPrototypeImage {
 export const ContentStyled = styled.section`
   display: flex;
   justify-content: center;
-  // margin-bottom: 140px;
-  @media (max-width: 360px) {
-    margin-bottom: 160px;
-  }
+  scroll-behavior: smooth;
 
   &.center {
     margin-top: 25vh;
-    // position: fixed;
-    // top: 25vh;
   }
-
-  scroll-behavior: smooth;
 `;
 
 export const ListStyled = styled.section``;
