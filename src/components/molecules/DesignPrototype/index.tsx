@@ -38,8 +38,8 @@ function DesignPrototype({
 
     function scrollPrototype() {
       const container = containerRef?.current?.getBoundingClientRect();
-      const containerTop = container.top + window.scrollY;
-      const containerBottom = containerTop + container.height;
+      const containerTop = container?.top + window.scrollY;
+      const containerBottom = containerTop + container?.height;
 
       if (window.pageYOffset < containerTop) {
         prototypeRef?.current.scroll(0, 0);
