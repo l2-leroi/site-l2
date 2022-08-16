@@ -10,7 +10,6 @@ import Head from 'next/head';
 import { defaultLanguage, languages } from '../i18n';
 
 import { GlobalStyle } from '../styles/global';
-import Footer from '../components/organisms/Footer/index';
 import Nav from '../components/organisms/Nav';
 
 function MyApp({ Component, pageProps }: AppProps) {
