@@ -9,7 +9,6 @@ export const ContainerStyled = styled.section`
   padding-left: 2.8rem;
   background-color: ${colors.black};
   color: ${colors.gray};
-  padding-top: 20.5rem;
   h1 {
     margin-top: 4rem;
     width: 50%;

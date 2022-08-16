@@ -20,6 +20,7 @@ import {
 import { Typography } from '../../../styles/typography';
 import Button from '../../atoms/Button';
 import ScrollCircle from '../../atoms/ScrollCircle';
+import InternalPageHeader from '../../molecules/InternalPageHeader';
 // import { ImageArrowSpinnerStyled } from '../../atoms/ScrollCircle/styled';
 
 interface PropsHeaderOurCareer {
@@ -45,53 +46,15 @@ export default function HeaderOurCareer({
   const isStartDateBeforeThanNow = isBefore(startDateParsed, today);
   const isEndDateBeforeThanNow = isBefore(endDateParsed, today);
 
+  const headerInternal = {
+    title: t('headerOurCareer.beTrainee'),
+    text: t('headerOurCareer.hereTheTrainee'),
+    sideTag: t('headerOurCareer.toTheTalents'),
+  };
   return (
-    <div>
+    <>
+      <InternalPageHeader internalHeader={headerInternal} />
       <ContainerStyled>
-        <Typography
-          className="bannerText typography"
-          tag="h1"
-          size="large"
-          fontWeight="weight3"
-          lineHeight="line90"
-          color="gray"
-          fontFamily="font1"
-          letterSpacing="space2"
-        >
-          {t('headerOurCareer.beTrainee')}
-        </Typography>
-
-        <Typography tag="h2" color="gray" fontFamily="font2">
-          {t('headerOurCareer.hereTheTrainee')}
-        </Typography>
-
-        <Typography tag="p" color="gray" fontFamily="font2" size="xxsmall">
-          &lt;{t('headerOurCareer.toTheTalents')}&gt;
-        </Typography>
-
-        <LanguageStyled>
-          <Typography
-            tag="button"
-            size="xxsmall"
-            letterSpacing="space1"
-            color="gray"
-          >
-            <Link href="/pt/nossas-carreiras" locale="pt" scroll={false}>
-              PT
-            </Link>
-          </Typography>
-          <Typography
-            tag="button"
-            size="xxsmall"
-            letterSpacing="space1"
-            color="gray"
-          >
-            <Link href="/en/nossas-carreiras" locale="en" scroll={false}>
-              EN
-            </Link>
-          </Typography>
-        </LanguageStyled>
-
         <DivStyled>
           <DateStyled key={id}>
             <Div>
@@ -213,6 +176,6 @@ export default function HeaderOurCareer({
           </DivButtonStyled>
         </DivTextStyled>
       </ContainerStyled>
-    </div>
+    </>
   );
 }
