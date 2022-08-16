@@ -51,7 +51,7 @@ export const AnchorStyled = styled.a`
     background-color: blue;
 `;
 
-export const Teste = styled.div`
+export const VideoContainerStyled = styled.div`
     top: 0;
     width: 100%;
     transition: transform .5s ease;
@@ -149,15 +149,6 @@ export const ControlsStyled = styled.div`
     padding: 0px 16px;
 `;
 
-export const ControlsContainer = styled.div`
-    width: 100%;
-    position: absolute;
-    align-self: end;
-    display: flex;
-    align-items: end;
-    pointer-events: none;
-`;
-
 export const ProgressContainerStyled = styled.div`
     width: 100%;
     position: relative;
@@ -209,6 +200,10 @@ export const PrimaryButtonsStyled = styled.div`
     width: 100%;
     display: flex;
     gap: 40px;
+
+    @media (max-width: 800px) {
+        gap: 20px;
+      }
 `;
 
 
@@ -217,6 +212,17 @@ export const ButtonStyled = styled.img`
     max-height: 35px;
     cursor: pointer;
     transition: all 0.2s ease;
+
+    &.lastButtons{
+        margin-right: 40px;
+    }
+
+    @media (max-width: 800px) {
+        &.lastButtons{
+            margin-right: 20px;
+        }
+        
+      }
     
 
     @media (max-width: 600px) {

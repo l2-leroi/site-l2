@@ -85,12 +85,20 @@ export default function OurServicesFull() {
 
     if(distanceTop > heightContent && topCircle < contentWithoutCircle)
       circleElement.style.top = contentWithoutCircle+"px";
+
+    if(topCircle > heightContent)
+      circleElement.style.top = contentWithoutCircle+"px";
   }
 
   React.useEffect(()=> {
+    window.onresize = animateCircle;
     window.addEventListener('scroll', animateCircle);
+    window.addEventListener('resize', animateCircle);
+    screen.orientation.addEventListener('change', animateCircle);
     return () => {
       window.removeEventListener('scroll', animateCircle);
+      window.removeEventListener('resize', animateCircle);
+      screen.orientation.removeEventListener('change', animateCircle);
     }
   }, []);
 

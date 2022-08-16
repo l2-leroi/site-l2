@@ -2,8 +2,6 @@ import { init } from 'i18next';
 import { useEffect, useRef, useState } from 'react';
 import { colors } from '../../../styles/colors';
 import WaveSurfer from 'wavesurfer.js';
-import Drawer from 'wavesurfer.js/src/drawer.js'
-// import teste from "../../../../public/audio/audioTeste.mp3";
 
 import {
   IconStyled,
@@ -62,10 +60,8 @@ const AudioSpectrum = (props: audioProps) => {
   };
 
   useEffect(() => {
-    const buttonElement = button.current as HTMLElement;
     if (props.audio) {
         wave();
-            // return buttonElement.onclick = null;
     }
   }, []);
 

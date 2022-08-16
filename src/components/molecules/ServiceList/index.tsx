@@ -47,126 +47,8 @@ interface ServiceProps {
 function ServiceList(props: ServiceProps) {
   
   const {t} = i18next
-  const audioRef = useRef();
   const containerRef = useRef();
-  const audioContainer = useRef();
-  const [isPaused, setIsPaused] = useState(true);
-  const [audioPercent, setAudioPercent] = useState(0);
-  const [containerWidth, setContainerWidth] = useState(0);
 
-
-  const playAndStop = () => {
-    const audio = audioRef.current as HTMLAudioElement;
-
-    isPaused? audio.play() : audio.pause();
-    setIsPaused(!isPaused)
-  }
-
-  const updateAudioPercent = () => {
-    const audio = audioRef.current as HTMLAudioElement;
-    const percent = (audio.currentTime * 100)/audio.duration;
-    setAudioPercent(percent);
-
-    if(percent === 100)
-      return setIsPaused(true);
-      
-    if(isPaused === false){
-      setTimeout(()=> {
-        updateAudioPercent();
-      }, 100)
-    }
-    
-  }
-
-  // const WaveSurfer = dynamic(() => import("wavesurfer.js").then(m => m.WaveSurfer), { ssr: false });
-
-
-
-// const Terminal = dynamic(
-//     {
-//         loader: () => import('wavesurfer.js').then((mod) => mod.WaveSurfer),
-//         render: (props, WaveSurfer) => {
-//             // Add logic with `term`
-//             return <></>
-//         }
-//     },
-//     {
-//         ssr: false
-//     }
-// )
-
-  // const onMount = useCallback((ws$) => {
-  //   console.log({ ws$ });
-  //   if (!ws$) return;
-    
-  //   ws$.load("/audio/audioTeste2.mp3");
-  // }, []);
-  
-  // const wave = async (waveteste) => {
-
-  //   // try {
-	// 	// 	const waveSurfer = (await import('wavesurfer.js')).default;
-	// 	// 	const audio = waveSurfer.create({
-	// 	// 		container: `#waveform`,
-	// 	// 		waveColor: '#000000',
-	// 	// 		progressColor: '#ffffff'
-	// 	// 	});
-	// 	// 	audio.load("/audio/audioTeste2.mp3");
-	// 	// } catch (error) {
-	// 	// 	console.error(error);
-	// 	// }
-
-  //     var wavesurfer = waveteste.create({
-  //       container: "#waveform",
-  //       waveColor: '#D9DCFF',
-  //       progressColor: '#4353FF',
-  //       cursorColor: '#4353FF',
-  //       barWidth: 3,
-  //       barRadius: 3,
-  //       cursorWidth: 1,
-  //       height: 200,
-  //       barGap: 3
-  //   });
-
-  //     wavesurfer.load("/audio/audioTeste2.mp3");
-  // }
-
-
-  useEffect(() => {
-    const containerElement = containerRef.current as HTMLElement;
-    const width = containerElement.offsetWidth;
-    const waveform = audioContainer.current as HTMLElement;
-  //   console.log(width);
-  //   setContainerWidth(width);
-
-  //   const initTerminal = async () => {
-  //     const WaveSurfer = await import('wavesurfer.js')
-  //     console.log(WaveSurfer)
-  //     const waveteste = WaveSurfer.default.create({
-  //       container: "#waveform",
-  //       waveColor: '#D9DCFF',
-  //       progressColor: '#4353FF',
-  //       cursorColor: '#4353FF',
-  //       barWidth: 3,
-  //       barRadius: 3,
-  //       cursorWidth: 1,
-  //       height: 200,
-  //       barGap: 3
-  //   });
-  //     // Add logic with `term`
-
-  //     waveteste.load("/audio/audioTeste2.mp3");
-  //     waveteste.play();
-  //     // wave(waveteste)
-  // }
-  //   initTerminal()
-  })
-
-
-  useEffect(()=> {
-    if(isPaused === false)
-      updateAudioPercent(); 
-  }, [isPaused])
   return (
     <>
     <ListStyled>
@@ -193,16 +75,7 @@ function ServiceList(props: ServiceProps) {
                     <VideoStyled>
                       {(service.video.text !== null)?(<>
                         <VideoIconContainer>
-                          {/* <audio
-                          src="/audio/audioTeste2.mp3"
-                          ref={audioRef} id="track"/> */}
-                          {/* <VideoIconStyled onClick={playAndStop} className={isPaused? 'pause' : ''}>
-                            <IconStyled src='/images/video-icon.png'></IconStyled>
-                          </VideoIconStyled> */}
-                          {/* <AudioSpectrum isPaused={isPaused} audioPercent={audioPercent} containerWidth={containerWidth}/> */}
-                          {/* <AudioContainer ref={audioContainer} id="waveform"> */}
                           <DynamicComponent audio={"/audio/audioTeste2.mp3"} />
-                          {/* </AudioContainer> */}
                         </VideoIconContainer>
                         
                         <AltVideoStyled>
