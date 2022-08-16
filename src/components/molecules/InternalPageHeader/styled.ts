@@ -2,6 +2,22 @@ import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 import { Typography } from '../../../styles/typography';
 
+export const ContainerStyled = styled.div`
+  color: ${colors.gray};
+  background-color: ${colors.black};
+  padding-top: 24rem;
+`;
+
+export const ContentStyled = styled.section`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-left: 2.8rem;
+  padding-right: 2.8rem;
+`;
+
 export const MainDivStyled = styled.div`
   width: 100%;
   align-self: center;
