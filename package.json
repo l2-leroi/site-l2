@@ -12,7 +12,7 @@
     "carousel": "^0.0.3",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "framer-motion": "^6.5.1",
+    "framer-motion": "^7.2.0",
     "i18next": "^21.8.3",
     "i18next-browser-languagedetector": "^6.1.4",
     "next": "12.1.0",

@@ -13,7 +13,7 @@ const ToParado: NextPage = () => {
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
     } else {
-      window.onbeforeunload = function () {
+      window.onbeforeunload = () => {
         window.scrollTo(0, 0);
       };
     }

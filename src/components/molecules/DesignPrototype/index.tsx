@@ -1,7 +1,7 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
 import {
   ContentStyled,
@@ -38,8 +38,8 @@ function DesignPrototype({
 
     function scrollPrototype() {
       const container = containerRef?.current?.getBoundingClientRect();
-      const containerTop = container?.top + window.scrollY;
-      const containerBottom = containerTop + container?.height;
+      const containerTop = parseInt(container?.top, 10) + window.scrollY;
+      const containerBottom = containerTop + parseInt(container?.height, 10);
 
       if (window.pageYOffset < containerTop) {
         prototypeRef?.current.scroll(0, 0);

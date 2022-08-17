@@ -9,7 +9,6 @@ import {
 import CaseList from '../../../molecules/CaseList';
 
 import Button from '../../../atoms/Button';
-import { colors } from '../../../../styles/colors';
 
 function AllCases() {
   const { t } = i18next;

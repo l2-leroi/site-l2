@@ -32,8 +32,6 @@ interface DesignImagesProps {
 
 export default function DesignImages({
   imagesArray,
-  widthImage,
-  heightImage,
   prototypeType,
 }: DesignImagesProps) {
   const [indexShown, indexsetShown] = useState(0);
@@ -90,7 +88,7 @@ export default function DesignImages({
     setModalIsOpen(false);
   }
 
-  window.onclick = function (event) {
+  window.onclick = (event) => {
     const modal = document.getElementById('modal-proposta');
     if (typeof modal === 'undefined' || modal === null) return;
     if (event.target === modal) {

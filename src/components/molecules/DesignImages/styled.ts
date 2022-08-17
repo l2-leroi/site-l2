@@ -2,11 +2,6 @@ import styled from 'styled-components';
 import Slider from 'react-slick';
 import { colors } from '../../../styles/colors';
 
-interface DesignPrototypePropsImages {
-  widthImage: number;
-  heightImage: number;
-}
-
 export const ContentStyled = styled.section`
   display: flex;
   justify-content: center;

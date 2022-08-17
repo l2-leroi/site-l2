@@ -1,5 +1,5 @@
-import { NextPage } from 'next';
 import { useEffect } from 'react';
+import { NextPage } from 'next';
 import HeaderCases from '../../../components/organisms/HeaderCases';
 import CardText from '../../../components/organisms/CardText';
 import DesignsCases from '../../../components/organisms/DesignsCases';
@@ -13,7 +13,7 @@ const MemoriesUp: NextPage = () => {
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
     } else {
-      window.onbeforeunload = function () {
+      window.onbeforeunload = () => {
         window.scrollTo(0, 0);
       };
     }
