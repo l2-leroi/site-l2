@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { NextPage } from 'next';
-import HeaderCases from '../../../components/organisms/HeaderCases';
-import CardText from '../../../components/organisms/CardText';
-import DesignsCases from '../../../components/organisms/DesignsCases';
-import AllCases from '../../../components/organisms/Cases/AllCases';
-import LineAnimation from '../../../components/atoms/LineAnimation';
-import { colors } from '../../../styles/colors';
-import Footer from '../../../components/organisms/Footer';
+import HeaderCases from '../../../../components/organisms/HeaderCases';
+import CardText from '../../../../components/organisms/CardText';
+import DesignsCases from '../../../../components/organisms/DesignsCases';
+import AllCases from '../../../../components/organisms/Cases/AllCases';
+import LineAnimation from '../../../../components/atoms/LineAnimation';
+import { colors } from '../../../../styles/colors';
+import Footer from '../../../../components/organisms/Footer';
 
 const MemoriesUp: NextPage = () => {
   useEffect(() => {

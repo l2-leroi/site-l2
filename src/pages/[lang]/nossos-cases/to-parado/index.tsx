@@ -1,14 +1,14 @@
 import { NextPage } from 'next';
 import { useEffect } from 'react';
-import HeaderCases from '../../../components/organisms/HeaderCases';
-import CardText from '../../../components/organisms/CardText';
-import DesignsCases from '../../../components/organisms/DesignsCases';
-import AllCases from '../../../components/organisms/Cases/AllCases';
-import Footer from '../../../components/organisms/Footer';
-import LineAnimation from '../../../components/atoms/LineAnimation';
-import { colors } from '../../../styles/colors';
+import HeaderCases from '../../../../components/organisms/HeaderCases';
+import CardText from '../../../../components/organisms/CardText';
+import DesignsCases from '../../../../components/organisms/DesignsCases';
+import AllCases from '../../../../components/organisms/Cases/AllCases';
+import LineAnimation from '../../../../components/atoms/LineAnimation';
+import { colors } from '../../../../styles/colors';
+import Footer from '../../../../components/organisms/Footer';
 
-const MaisAcesso: NextPage = () => {
+const ToParado: NextPage = () => {
   useEffect(() => {
     const nav = document.querySelector('.nav');
     nav?.classList.add('transparentBlack');
@@ -22,13 +22,13 @@ const MaisAcesso: NextPage = () => {
     }
   });
 
-  const h2Header = 'headerCases.case02';
-  const h1Header = 'headerCases.moreAccess';
-  const pHeader = 'headerCases.webappDevelopment';
-  const h1SecondHeader = 'headerCases.helpingToStart';
-  const pSecondHeader = 'headerCases.aWebapp';
-  const linkBtnPt = '/pt/mais-acesso';
-  const linkBtnEn = '/en/mais-acesso';
+  const h2Header = 'headerCases.case03';
+  const h1Header = 'headerCases.imStopped';
+  const pHeader = 'headerCases.navigablePrototype';
+  const h1SecondHeader = 'headerCases.connecting';
+  const pSecondHeader = 'headerCases.serviceProviders';
+  const linkBtnPt = '/pt/to-parado';
+  const linkBtnEn = '/en/to-parado';
 
   const h1Card = 'cardText.processesCarriedOut';
   const pCard = 'cardText.weTread';
@@ -40,69 +40,73 @@ const MaisAcesso: NextPage = () => {
 
   const imagesDesign = [
     {
-      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-1.jpg',
+      image: '/images/DesignToParado/CaseToParado-1.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-2.jpg',
+      image: '/images/DesignToParado/CaseToParado-2.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-3.jpg',
+      image: '/images/DesignToParado/CaseToParado-3.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-4.jpg',
+      image: '/images/DesignToParado/CaseToParado-4.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-5.jpg',
+      image: '/images/DesignToParado/CaseToParado-5.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-6.jpg',
+      image: '/images/DesignToParado/CaseToParado-6.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-7.jpg',
+      image: '/images/DesignToParado/CaseToParado-7.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/DesignMaisAcesso/RectangleCaseMaisAcesso-8.jpg',
+      image: '/images/DesignToParado/CaseToParado-8.jpg',
       alt: 'Mockup',
     },
   ];
 
   const imagesPrototype = [
     {
-      image: '/images/PrototypeMaisAcesso/PrototypeMaisAcesso-1.jpg',
+      image: '/images/PrototypeToParado/PrototypeToParado-1.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/PrototypeMaisAcesso/PrototypeMaisAcesso-2.jpg',
+      image: '/images/PrototypeToParado/PrototypeToParado-2.jpg',
       alt: 'Mockup',
     },
     {
-      image: '/images/PrototypeMaisAcesso/PrototypeMaisAcesso-3.jpg',
+      image: '/images/PrototypeToParado/PrototypeToParado-3.jpg',
       alt: 'Mockup',
     },
   ];
 
   const imagesTechnologies = [
-    { image: '/images/TechnologiesLogos/java-logo.svg', alt: 'Java Logo' },
+    {
+      image: '/images/TechnologiesLogos/firebase-logo.svg',
+      alt: 'Firebase Logo',
+    },
+    { image: '/images/TechnologiesLogos/nodejs-logo.svg', alt: 'Node.js Logo' },
     { image: '/images/TechnologiesLogos/pwa-logo.svg', alt: 'PWA Logo' },
     { image: '/images/TechnologiesLogos/reactjs-logo.svg', alt: 'React Logo' },
   ];
 
   const widthImage = 414;
-  const heightImage = 736;
+  const heightImage = 896;
   const prototypeType = 'mobile';
 
   return (
     <>
       <HeaderCases
-        backgroundImage="/images/mais-acesso/capa-maior-mais-acesso.jpg"
-        backgroundImageSmall="/images/mais-acesso/celulares-mais-acesso.jpg"
+        backgroundImage="/images/to-parado/capa-maior-to-parado.jpg"
+        backgroundImageSmall="/images/to-parado/celulares-to-parado.jpg"
         h2={h2Header}
         h1={h1Header}
         p={pHeader}
@@ -113,7 +117,7 @@ const MaisAcesso: NextPage = () => {
       />
       <CardText
         backgroundColor="#5900cc"
-        backgroundImage="/images/mais-acesso/card-image-mais-acesso.jpg"
+        backgroundImage="/images/to-parado/card-image.jpg"
         h1={h1Card}
         p={pCard}
         li={liCard}
@@ -139,4 +143,4 @@ const MaisAcesso: NextPage = () => {
   );
 };
 
-export default MaisAcesso;
+export default ToParado;
