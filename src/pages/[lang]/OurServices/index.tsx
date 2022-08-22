@@ -10,6 +10,7 @@ const OurServices: NextPage = () => {
         return (
             <>
                 <OurServicesFull />
+                <Footer />
             </>
         );
     };

@@ -10,7 +10,6 @@ import { defaultLanguage, languages } from '../i18n';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import NavOnePage from '../components/organisms/NavOnePage';
-import Footer from '../components/organisms/Footer/index';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -60,7 +59,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyle />
       {/* <NavOnePage /> */}
       <Component {...pageProps} />
-      <Footer />
     </>
   );
 }
