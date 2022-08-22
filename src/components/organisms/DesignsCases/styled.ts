@@ -269,15 +269,16 @@ export const TechnologiesStyled = styled.div`
   padding-right: 21%;
   padding-left: 21%;
 
-  &.centerIcon {
-    justify-content: center;
-  }
   @media (max-width: 768px) {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-right: 29%;
     padding-left: 29%;
     gap: 47px;
+
+    &.centerIcon {
+      justify-content: center;
+    }
   }
 
   @media (max-width: 500px) {
