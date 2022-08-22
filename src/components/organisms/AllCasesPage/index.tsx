@@ -50,7 +50,7 @@ function Cases() {
       info: t('cases.weHelped'),
       image: '/images/capa-memories-up.jpg',
       alt: t('cases.alt.coverMemoriesUp'),
-      link: '#1',
+      link: '/nossos-cases/memories-up',
       hover: memoriesUpHover,
     },
     {
@@ -59,7 +59,7 @@ function Cases() {
       info: t('cases.webApp'),
       image: '/images/capa-mais-acesso.jpg',
       alt: t('cases.alt.coverMoreAccess'),
-      link: '#2',
+      link: '/nossos-cases/mais-acesso',
       hover: maisAcessoHover,
     },
     {
@@ -68,7 +68,7 @@ function Cases() {
       info: t('cases.providers'),
       image: '/images/capa-to-parado.jpg',
       alt: t('cases.alt.coverImStopped'),
-      link: '#3',
+      link: '/nossos-cases/to-parado',
       hover: toParadoHover,
     },
     {
@@ -77,7 +77,7 @@ function Cases() {
       info: t('cases.educationalCredit'),
       image: '/images/capa-fila-de-trabalho-1.jpg',
       alt: t('cases.alt.coverWorkQueue'),
-      link: '#4',
+      link: '/nossos-cases/fila-de-trabalho',
       hover: FilaDeTrabalho,
     },
   ];
