@@ -25,8 +25,8 @@ function DesignPrototype({
   prototypeType,
   imagesPrototype,
 }: DesignPrototypeProps) {
-  const prototypeRef = useRef();
-  const containerRef = useRef();
+  const prototypeRef = useRef(null);
+  const containerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

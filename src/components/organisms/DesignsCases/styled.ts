@@ -266,14 +266,31 @@ export const TechnologiesStyled = styled.div`
   justify-content: center;
   padding-top: 60px;
   grid-gap: 80px;
+  padding-right: 21%;
+  padding-left: 21%;
 
-  @media (max-width: 800px) {
-    grid-gap: 40px;
+  &.centerIcon {
+    justify-content: center;
+  }
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 29%;
+    padding-left: 29%;
+    gap: 47px;
+  }
+
+  @media (max-width: 500px) {
+    padding-right: 25%;
+    padding-left: 25%;
+    grid-gap: 25px;
   }
 
   @media (max-width: 360px) {
-    grid-gap: 40px;
     padding-top: 42px;
+    gap: 20px;
+    padding-right: 20%;
+    padding-left: 20%;
   }
 `;
 

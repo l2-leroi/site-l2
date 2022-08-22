@@ -76,6 +76,12 @@ function DesignsCases({
     button2setIsShown(true);
     button1setIsShown(false);
   };
+  useEffect(() => {
+    const icon = document.getElementById('icon');
+    if (imagesTechnologies.length === 1) {
+      icon.classList.add('centerIcon');
+    }
+  }, []);
 
   return (
     <ContainerStyled>
@@ -111,12 +117,10 @@ function DesignsCases({
             prototypeType={prototypeType}
           />
         )}
-
         <TecTitleStyled>{t('CasesDetail.tecnologias')}</TecTitleStyled>
-
         <TechnologiesStyled>
           {imagesTechnologies.map((image) => (
-            <ImageStyled src={image.image} alt={image.alt} />
+            <ImageStyled src={image.image} alt={image.alt} id="icon" />
           ))}
         </TechnologiesStyled>
       </ContentStyled>

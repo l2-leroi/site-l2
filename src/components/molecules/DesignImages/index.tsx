@@ -124,10 +124,7 @@ export default function DesignImages({
 
       {modalIsOpen && (
         <StyledModal id="modal-proposta" className="modal">
-          <ExitButtonStyled
-            type="submit"
-            onClick={() => closeModal('modal-proposta')}
-          >
+          <ExitButtonStyled type="submit" onClick={() => closeModal()}>
             <ExitButtonImg src="/images/exit.svg" />
           </ExitButtonStyled>
           <StyledModalContent className={prototypeType}>
