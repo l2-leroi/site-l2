@@ -4,6 +4,9 @@ import HeaderCases from '../../../components/organisms/HeaderCases';
 import CardText from '../../../components/organisms/CardText';
 import DesignsCases from '../../../components/organisms/DesignsCases';
 import AllCases from '../../../components/organisms/Cases/AllCases';
+import Footer from '../../../components/organisms/Footer';
+import LineAnimation from '../../../components/atoms/LineAnimation';
+import { colors } from '../../../styles/colors';
 
 const MaisAcesso: NextPage = () => {
   useEffect(() => {
@@ -124,6 +127,14 @@ const MaisAcesso: NextPage = () => {
         prototypeType={prototypeType}
       />
       <AllCases />
+      <LineAnimation
+        lineBg={colors.purple}
+        secondaryBg={colors.gray}
+        hasOutSourcing={false}
+        hasSpinner={false}
+        spaceForSpinner={0}
+      />
+      <Footer />
     </>
   );
 };

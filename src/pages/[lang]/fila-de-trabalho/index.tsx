@@ -6,6 +6,7 @@ import DesignsCases from '../../../components/organisms/DesignsCases';
 import AllCases from '../../../components/organisms/Cases/AllCases';
 import LineAnimation from '../../../components/atoms/LineAnimation';
 import { colors } from '../../../styles/colors';
+import Footer from '../../../components/organisms/Footer';
 
 const FilaDeTrabalho: NextPage = () => {
   useEffect(() => {
@@ -116,7 +117,6 @@ const FilaDeTrabalho: NextPage = () => {
         prototypeType={prototypeType}
       />
       <AllCases />
-
       <LineAnimation
         lineBg={colors.purple}
         secondaryBg={colors.gray}
@@ -124,6 +124,7 @@ const FilaDeTrabalho: NextPage = () => {
         hasSpinner={false}
         spaceForSpinner={0}
       />
+      <Footer />
     </>
   );
 };

@@ -4,13 +4,10 @@ import ReactGa from 'react-ga';
 import { hotjar } from 'react-hotjar';
 import { useEffect, useState } from 'react';
 import i18next from 'i18next';
-
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { defaultLanguage, languages } from '../i18n';
-
 import { GlobalStyle } from '../styles/global';
-import Footer from '../components/organisms/Footer/index';
 import Nav from '../components/organisms/Nav';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -69,7 +66,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyle />
       <Nav />
       <Component {...pageProps} />
-      <Footer />
     </>
   );
 }
