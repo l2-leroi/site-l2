@@ -123,6 +123,7 @@ function CaseList(props: CaseProps) {
       <TitleStyled>{itemCase.title}</TitleStyled>
       <InfoStyled>{itemCase.info}</InfoStyled>
       <LinkStyled
+        href={itemCase.link}
         className="images"
         onMouseEnter={() => {
           if (window.innerWidth > 800) {
