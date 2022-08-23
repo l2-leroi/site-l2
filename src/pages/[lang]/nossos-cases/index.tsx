@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import LineAnimation from '../../../components/atoms/LineAnimation';
 import AllCasesPage from '../../../components/organisms/AllCasesPage';
+import Footer from '../../../components/organisms/Footer';
 import { colors } from '../../../styles/colors';
 
 const AllCases: NextPage = () => {
@@ -25,6 +26,7 @@ const AllCases: NextPage = () => {
         hasOutSourcing={false}
         hasSpinner={false}
       />
+      <Footer />
     </>
   );
 };
