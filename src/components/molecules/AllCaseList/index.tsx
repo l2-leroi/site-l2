@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useWindowSize } from 'use-hooks';
+import i18next from 'i18next';
 import {
   CaseNumberStyled,
   CaseStyled,
@@ -30,6 +31,7 @@ interface CaseProps {
 }
 
 function CaseList(props: CaseProps) {
+  const language = i18next.language.substring(0, 2);
   const interval = useRef(null);
   let currentImage = '';
   const [actualImage, setActualImage] = useState('');
@@ -123,7 +125,7 @@ function CaseList(props: CaseProps) {
       <TitleStyled>{itemCase.title}</TitleStyled>
       <InfoStyled>{itemCase.info}</InfoStyled>
       <LinkStyled
-        href={itemCase.link}
+        href={`/${language + itemCase.link}`}
         className="images"
         onMouseEnter={() => {
           if (window.innerWidth > 800) {

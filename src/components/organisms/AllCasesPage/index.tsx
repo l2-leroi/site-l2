@@ -99,7 +99,7 @@ function Cases() {
                   letterSpacing="space1"
                   className="typography"
                 >
-                  <Link href="/pt/cases" locale="pt" scroll={false}>
+                  <Link href="/pt/nossos-cases" locale="pt" scroll={false}>
                     PT
                   </Link>
                 </Typography>
@@ -109,7 +109,7 @@ function Cases() {
                   letterSpacing="space1"
                   className="typography"
                 >
-                  <Link href="/en/cases" locale="en" scroll={false}>
+                  <Link href="/en/nossos-cases" locale="en" scroll={false}>
                     EN
                   </Link>
                 </Typography>
