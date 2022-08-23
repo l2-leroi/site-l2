@@ -1,7 +1,7 @@
 import { init } from 'i18next';
 import { useEffect, useRef, useState } from 'react';
-import { colors } from '../../../styles/colors';
 import WaveSurfer from 'wavesurfer.js';
+import { colors } from '../../../styles/colors';
 
 import {
   IconStyled,
