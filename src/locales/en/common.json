@@ -12,12 +12,14 @@
     "weDoWell": "We do a great job because we care about quality, aesthetics and, most of all, results.",
     "weHelped": "We helped this American start-up to define its business and released its product.",
     "webApp": "A Webapp that facilitates getting student loans for young people all over Brazil.",
+    "weHelpedThousands": "Ajudamos milhares de jovens na burocrática jornada de obtenção de crédito educacional.",
     "providers": "Service providers succeed in life with this app we created for a Brazilian start-up.",
     "educationalCredit": "We helped thousands of young people in the bureaucratic journey of getting student loans.",
     "alt": {
       "coverMemoriesUp": "Memories Up Cover",
       "coverMoreAccess": "Mais Acesso Cover",
-      "coverImStopped": "Tô Parado Cover"
+      "coverImStopped": "Tô Parado Cover",
+      "coverWorkQueue": "Fila de Trabalho Cover"
     }
   },
   "footer": {
@@ -35,6 +37,41 @@
     "followUs": "Follow us",
     "weCreate": "We create digital products and online experiences that people love"
   },
+
+  "headerCases": {
+    "case01": "Case 01",
+    "memoriesUp": "Memories Up",
+    "design": "Design de produto para start-up americana",
+    "atTheBeginning": "No início era apenas uma ideia:",
+    "ifTheService": "E se o serviço de núvem tivesse tanto engajamento quanto as redes sociais? ● Ajudamos essa start-up americana a definir seu negócio e lançamos seu produto.",
+    "case02": "Case 02",
+    "moreAccess": "Mais Acesso",
+    "webappDevelopment": "Desenvolvimento de WebApp para a Fundacred",
+    "helpingToStart": "Ajudando a iniciar os estudos:",
+    "aWebapp": "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.",
+    "case03": "Case 03",
+    "imStopped": "Tô Parado",
+    "navigablePrototype": "Protótipo navegável para a startup americana",
+    "connecting": "Conectando quem faz a quem precisa:",
+    "serviceProviders": "Prestadores de serviço crescem na vida e conquistam sua dignidade com o app Android que criamos para Startup brasileira.",
+    "case04": "Case 04",
+    "workQueue": "Fila de Trabalho",
+    "platformDevelopment": "Desenvolvimento de plataforma para a startup americana",
+    "theBureaucracy": "A burocracia não precisa ser chata:",
+    "weMakeCharming": "Tornamos encantadora a burocrática jornada de obtenção de crédito educacional com a plataforma Fila de Trabalho e ajudamos milhares de jovens a iniciarem seus estudos."
+  },
+
+  "cardText": {
+    "processesCarriedOut": "Processos Realizados",
+    "weTread": "Trilhamos uma rica jornada de design, iniciando na concepção de negócio e produto até o protótipo de alta fidelidade no celular.",
+    "ideation": "+ Ideação",
+    "wireframe": "+ Wireframe",
+    "design": "+ Design",
+    "conceptArt": "+ Concept Art",
+    "navigablePrototype": "+ Protótipo Navegável",
+    "uxUiDesign": "+ UX/UI Design"
+  },
+
   "headerOurCareer": {
     "beTrainee": "BE A TRAINEE AT L2CODE",
     "hereTheTrainee": "Here the trainee doesn't make coffee, it makes a difference. ● Every 4 months we hire undergraduate students to start their careers with us.",
@@ -102,12 +139,28 @@
     "ourTechLead": "Our Teach Lead Maicon Martins will advise you about the best practices that your company can use in your infrastructure.",
     "text": {
       "seeOurServices": "SEE OUR SERVICES"
+    },
+    "outSourcing": {
+      "ourServices": "Outsourcing Advisory · Ideation · Start-up Service · IT Consulting Service · Design · ",
+      "ourCustomers": "We would love to have you on this list · We would love to have you on this list · We would love to have you on this list · "
     }
   },
   "outSourcing": {
-    "ourServices": " Outsourcing Advisory · Ideation · Start-up Service · IT Consulting Service · Design · ",
-    "ourClients": " We would love to have you on this list · We would love to have you on this list · We would love to have you on this list · "
+    "ourServices": "Outsourcing Advisory · Ideation · Start-up Service · IT Consulting Service · Design · ",
+    "ourClients": "We would love to have you on this list · We would love to have you on this list · We would love to have you on this list · ",
+    "outsourcing": "Outsourcing Advisory",
+    "ideation": "Ideation",
+    "startupService": "Start-up Service",
+    "consultingService": "IT Consulting Service",
+    "design": "Design"
   },
+  "CasesDetail": {
+    "design": "Design",
+    "prototipo": "Protótipo",
+    "imagens": "Imagens",
+    "tecnologias": "Tecnologias"
+  },
+
   "scroll": {
     "home": "Home",
     "about": "About",

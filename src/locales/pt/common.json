@@ -15,6 +15,7 @@
     "weDoWell": "Fazemos muito bem porque nos preocupamos com qualidade, estética e, acima de tudo, com resultados.",
     "weHelped": "Ajudamos start-up americana a definir seu negócio e lançamos seu produto.",
     "webApp": "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.",
+    "weHelpedThousands": "Ajudamos milhares de jovens na burocrática jornada de obtenção de crédito educacional.",
     "providers": "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira.",
     "educationalCredit": "Ajudamos milhares de jovens na burocrática jornada de obtenção de crédito educacional",
     "alt": {
@@ -40,6 +41,42 @@
     "followUs": "Siga nos",
     "weCreate": "Criamos produtos digitais e experiências online que as pessoas adoram"
   },
+
+  "headerCases": {
+    "case01": "Case 01",
+    "memoriesUp": "Memories Up",
+    "design": "Design de produto para start-up americana",
+    "atTheBeginning": "No início era apenas uma ideia:",
+    "ifTheService": "E se o serviço de núvem tivesse tanto engajamento quanto as redes sociais? ● Ajudamos essa start-up americana a definir seu negócio e lançamos seu produto.",
+    "case02": "Case 02",
+    "moreAccess": "Mais Acesso",
+    "webappDevelopment": "Desenvolvimento de WebApp para a Fundacred",
+    "helpingToStart": "Ajudando a iniciar os estudos:",
+    "aWebapp": "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.",
+    "case03": "Case 03",
+    "imStopped": "Tô Parado",
+    "navigablePrototype": "Protótipo navegável para a startup americana",
+    "connecting": "Conectando quem faz a quem precisa:",
+    "serviceProviders": "Prestadores de serviço crescem na vida e conquistam sua dignidade com o app Android que criamos para Startup brasileira.",
+    "case04": "Case 04",
+    "workQueue": "Fila de Trabalho",
+    "platformDevelopment": "Desenvolvimento de plataforma para a startup americana",
+    "theBureaucracy": "A burocracia não precisa ser chata:",
+    "weMakeCharming": "Tornamos encantadora a burocrática jornada de obtenção de crédito educacional com a plataforma Fila de Trabalho e ajudamos milhares de jovens a iniciarem seus estudos."
+
+  },
+
+  "cardText": {
+    "processesCarriedOut": "Processos Realizados",
+    "weTread": "Trilhamos uma rica jornada de design, iniciando na concepção de negócio e produto até o protótipo de alta fidelidade no celular.",
+    "ideation": "+ Ideação",
+    "wireframe": "+ Wireframe",
+    "design": "+ Design",
+    "conceptArt": "+ Concept Art",
+    "navigablePrototype": "+ Protótipo Navegável",      
+    "uxUiDesign": "+ UX/UI Design"
+  },
+
   "headerOurCareer": {
     "beTrainee": "SEJA TRAINEE NA L2CODE",
     "hereTheTrainee": "Aqui o trainee não faz café, faz a diferença. ● A cada 4 meses contratamos estudantes de graduação para iniciarem suas carreiras conosco.",
@@ -107,12 +144,29 @@
     "ourTechLead": "Nosso Tech Lead Maicon Martins irá aconselhar você sobre as melhores práticas que sua empresa pode usar na infraestrutura.",
     "text": {
       "seeOurServices": "VEJA NOSSOS SERVIÇOS"
+    },
+    "outSourcing": {
+      "ourServices": "Outsourcing Consultivo · Ideação · Atendimento à Startup · Consultoria em TI · Design · ",
+      "ourCustomers": "Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · "
     }
   },
   "outSourcing": {
-    "ourServices": " Outsourcing Consultivo · Ideação · Atendimento à Startup · Consultoria em TI · Design · ",
-    "ourClients": " Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · "
+    "ourServices": "Outsourcing Consultivo · Ideação · Atendimento à Startup · Consultoria em TI · Design · ",
+    "ourClients": "Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · ",
+    "outsourcing": "Outsourcing Consultivo",
+    "ideation": "Ideação",
+    "startupService": "Atendimento à Startup",
+    "consultingService": "Consultoria em TI",
+    "design": "Design"
   },
+
+  "CasesDetail": {
+    "design": "Design",
+    "prototipo": "Protótipo",
+    "imagens": "Imagens",
+    "tecnologias": "Tecnologias"
+  },
+
   "scroll": {
     "home": "Home",
     "about": "Sobre",

@@ -4,11 +4,9 @@ import ReactGa from 'react-ga';
 import { hotjar } from 'react-hotjar';
 import { useEffect, useState } from 'react';
 import i18next from 'i18next';
-
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { defaultLanguage, languages } from '../i18n';
-
 import { GlobalStyle } from '../styles/global';
 import Nav from '../components/organisms/Nav';
 
