@@ -1,12 +1,9 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
-import { t } from 'i18next';
-import About from '../../../components/organisms/About';
 import LineAnimation from '../../../components/atoms/LineAnimation';
-import Manifest from '../../../components/organisms/Manifest';
 import { colors } from '../../../styles/colors';
-import { Container, StyledScrollCircle } from './styled';
 import Footer from '../../../components/organisms/Footer';
+import AboutPage from '../../../components/organisms/AboutPage';
 
 const PageAbout: NextPage = () => {
   useEffect(() => {
@@ -26,34 +23,8 @@ const PageAbout: NextPage = () => {
   }, []);
 
   return (
-    <Container>
-      <About />
-
-      <LineAnimation
-        topChildren={
-          <div className="topSpinner">
-            <StyledScrollCircle
-              isWhiteImage
-              blackImage={`${t('images.spinnerBlack')}`}
-              whiteImage={`${t('images.spinnerWhite')}`}
-            />
-          </div>
-        }
-        bottomChildren={
-          <div className="bottomSpinner">
-            <StyledScrollCircle
-              isWhiteImage={false}
-              blackImage={`${t('images.spinnerBlack')}`}
-              whiteImage={`${t('images.spinnerWhite')}`}
-            />
-          </div>
-        }
-        lineBg={colors.gray}
-        secondaryBg={colors.black}
-        hasOutSourcing={false}
-        hasSpinner={false}
-      />
-      <Manifest />
+    <>
+      <AboutPage />
       <LineAnimation
         topChildren={false}
         bottomChildren={false}
@@ -63,7 +34,7 @@ const PageAbout: NextPage = () => {
         hasSpinner={false}
       />
       <Footer />
-    </Container>
+    </>
   );
 };
 

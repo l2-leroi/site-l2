@@ -1,16 +1,16 @@
 import styled from 'styled-components';
-import ScrollCircle from '../../../components/atoms/ScrollCircle';
+import ScrollCircle from '../../atoms/ScrollCircle';
 
 export const Container = styled.div`
   .topSpinner {
-    height: 300%;
+    height: 100%;
     width: 30%;
   }
   .bottomSpinner {
     width: 30%;
-    height: 2350px;
+    height: 9950px;
     @media (max-width: 800px) {
-      height: 1400px;
+      height: 5000px;
     }
   }
 `;
