@@ -6,26 +6,37 @@ export const FooterStyled = styled.footer`
   background-color: ${colors.purple};
   width: 100%;
   padding: 0rem 2.8rem 6.05rem;
+  // position: relative;
 
+  padding-top: 10px;
+  @media (max-width: 800px) {
+    padding-top: 10px;
+  }
+
+  @media (max-width: 414px) {
+    padding-top: 60px;
+  }
 `;
 
 export const ContainerStyled = styled.div`
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   max-width: 1500px;
   margin: 0 auto;
   position: relative;
+  z-index: 4;
 `;
 
 export const Teste4 = styled.div`
-    position: absolute;
-    top: -225px;
-    right: -28px;
-    background: ${colors.black};
-    width: 692px;
-    height: 200px;
-    z-index: 1;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%);
+  position: absolute;
+  top: -225px;
+  right: -28px;
+  background: ${colors.black};
+  width: 692px;
+  height: 200px;
+  z-index: 1;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%);
 `;
 
 export const ContentStyled = styled.div``;
@@ -34,22 +45,22 @@ export const DivStyled = styled.div`
   display: flex;
   align-items: end;
   margin-bottom: 10rem;
-  h2{
+  h2 {
     width: 404px;
     ::selection {
       background: ${colors.green};
       color: ${colors.black};
     }
-  
+
     @media (max-width: 930px) {
       width: 300px;
     }
-  
+
     @media (max-width: 800px) {
       width: 264px;
       line-height: 28.8px;
     }
-  
+
     @media (max-width: 414px) {
       width: 229px;
     }
@@ -71,7 +82,7 @@ export const AsideStyled = styled.aside`
   @media (max-width: 376px) {
     margin-left: 39px;
   }
-  p{
+  p {
     ::selection {
       background: ${colors.green};
       color: ${colors.black};
@@ -123,20 +134,20 @@ export const InfoStyled = styled.div`
       display: none;
     }
   }
-  p{
+  p {
     ::selection {
       background: ${colors.green};
       color: ${colors.black};
     }
-  
+
     @media (max-width: 800px) {
       font-size: 10px;
       line-height: 14px;
     }
-  
+
     &:first-child {
       margin-bottom: 9px;
-  
+
       @media (max-width: 800px) {
         margin-bottom: 16px;
       }
@@ -146,6 +157,9 @@ export const InfoStyled = styled.div`
 
 export const ImageStyled = styled.img`
   user-select: none;
+  ::selection {
+    background-color: transparent;
+  }
 
   @media (max-width: 800px) {
     width: 58px;
@@ -154,8 +168,19 @@ export const ImageStyled = styled.img`
   }
 `;
 
+export const IdSpanStyled = styled.div`
+  width: 10px;
+  height: 2px;
+  position: relative;
+  top: -200px;
+`;
+
 export const IconStyled = styled.span`
   margin: 0 8px 0 9px;
   vertical-align: middle;
   user-select: none;
+
+  ::selection {
+    background-color: transparent;
+  }
 `;

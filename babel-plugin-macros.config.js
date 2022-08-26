@@ -3,4 +3,4 @@ module.exports = {
     preset: 'styled-components',
     autoCssProp: false,
   },
-}
+};

@@ -72,8 +72,8 @@ function Header() {
     if (window.innerWidth < 500 || window.innerHeight <= 414) {
       document.body.style.overflow = 'hidden';
       const title = document.querySelectorAll<HTMLElement>('.title');
-      title.forEach((titleItem) => {
-        titleItem.addEventListener('contextmenu', (e) => {
+      title.forEach((title) => {
+        title.addEventListener('contextmenu', (e) => {
           e.preventDefault();
         });
       });
@@ -132,7 +132,7 @@ function Header() {
     }
   }, [isInitInterval]);
 
-  const exitInterval = (list) => {
+  const exitInterval = (backgroundList) => {
     const header = document.querySelector('.header');
     const nav = document.querySelector('.nav');
     const typography = document.querySelectorAll('.typography');
@@ -145,7 +145,7 @@ function Header() {
     setIsAnimating(false);
     clearInterval(interval.current);
     interval.current = null;
-    // setActualImage(backgroundList);
+    setActualImage(backgroundList);
     setActualText('CODE');
     document.body.classList.remove('white');
     setCounterLoop(0);
@@ -280,6 +280,24 @@ function Header() {
           </Typography>
         </LanguageStyled>
       </MainContentStyled>
+      <ArrowSpinnerContainerStyled className="anime">
+        <ScrollCircle
+          isWhiteImage={false}
+          blackImage={`${t('images.spinner')}`}
+          whiteImage={`${t('images.whiteSpinner')}`}
+        />
+      </ArrowSpinnerContainerStyled>
+
+      <div className="whiteSpinner">
+        <ArrowSpinnerContainerStyled className="anime">
+          <ScrollCircle
+            hidden={!whiteCircle}
+            isWhiteImage
+            blackImage={`${t('images.spinner')}`}
+            whiteImage={`${t('images.whiteSpinner')}`}
+          />
+        </ArrowSpinnerContainerStyled>
+      </div>
 
       <FooterContentStyled>
         <SocialMediaStyled className="anime">
@@ -322,14 +340,6 @@ function Header() {
             </Typography>
           </SocialMediaLinkStyled>
         </SocialMediaStyled>
-
-        <ArrowSpinnerContainerStyled className="anime">
-          <ScrollCircle
-            isWhiteImage={whiteCircle}
-            blackImage={`${t('images.spinner')}`}
-            whiteImage={`${t('images.whiteSpinner')}`}
-          />
-        </ArrowSpinnerContainerStyled>
       </FooterContentStyled>
     </HeaderStyled>
   );

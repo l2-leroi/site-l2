@@ -13,9 +13,9 @@ export const NavStyled = styled.nav`
     background-color: transparent;
   }
 
-  &.smallFixed{
+  &.smallFixed {
     position: fixed;
-    
+
     ul.navList {
       padding: 25px 28px;
       transition: padding 0.4s;
@@ -27,7 +27,7 @@ export const NavStyled = styled.nav`
 
     &.animate {
       opacity: 1;
-      transition: opacity .8s;
+      transition: opacity 0.8s;
     }
   }
 `;
@@ -43,8 +43,8 @@ export const NavItemStyled = styled.li`
   list-style-type: none;
   min-width: 173px;
 
-  ${Typography}{
-    &.white{
+  ${Typography} {
+    &.white {
       color: ${colors.gray};
     }
     @media (max-width: 500px) {
@@ -58,14 +58,14 @@ export const NavItemStyled = styled.li`
     background: ${colors.purple};
     color: ${colors.gray};
   }
-  
-  &:first-of-type{
-      @media (max-width: 980px) {
-        min-width: 43px;
-      }
+
+  &:first-of-type {
+    @media (max-width: 980px) {
+      min-width: 43px;
+    }
   }
 
-  &:nth-of-type(2){
+  &:nth-of-type(2) {
     @media (max-width: 880px) {
       display: none;
       height: 0px;
@@ -83,8 +83,8 @@ export const NavLinkListStyled = styled.ul`
   margin: 0;
   display: flex;
   justify-content: space-between;
-  
-  ${Typography}{
+
+  ${Typography} {
     list-style-type: none;
     padding: 0px 40px;
     cursor: pointer;

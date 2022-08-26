@@ -7,7 +7,7 @@ import { InfiniteScrollContainerStyled } from './styled';
 import { Typography } from '../../../styles/typography';
 
 export interface ScrollProps {
-  closeMenu: (value: boolean) => void;
+  closeMenu: () => void;
 }
 
 function Scroll({ closeMenu }: ScrollProps) {
@@ -84,7 +84,7 @@ function Scroll({ closeMenu }: ScrollProps) {
           color={
             currentPage === `${baseUrl[items.indexOf(item)]}` ? 'green' : 'gray'
           }
-          onClick={() => closeMenu(true)}
+          onClick={() => closeMenu()}
         >
           <Link
             key={`${item}-${uuid()}`}

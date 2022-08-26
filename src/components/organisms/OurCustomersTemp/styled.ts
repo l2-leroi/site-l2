@@ -65,7 +65,7 @@ export const BlackLineStyled = styled.div`
 export const HeaderStyled = styled.hgroup`
   max-width: 680px;
 
-  @media(max-width: 800px){
+  @media (max-width: 800px) {
     max-width: 336px;
   }
 `;
@@ -82,8 +82,8 @@ export const TitleStyled = styled.h2`
   ::selection {
     background: ${colors.purple};
   }
-  
-  @media(max-width: 800px){
+
+  @media (max-width: 800px) {
     max-width: 264px;
     font-size: 32px;
     //2em
@@ -104,7 +104,7 @@ export const SubtitleStyled = styled.h3`
     background: ${colors.purple};
   }
 
-  @media(max-width: 800px){
+  @media (max-width: 800px) {
     font-size: 12px;
     //0.75em
     line-height: 140%;
@@ -130,14 +130,14 @@ export const ParagraphStyled = styled.p`
   ::selection {
     background: ${colors.purple};
   }
-  
-  @media(max-width: 800px){
+
+  @media (max-width: 800px) {
     font-size: 12px;
     //0.75em
     max-width: 61px;
   }
 
-  @media(max-width: 414px){
+  @media (max-width: 414px) {
     font-size: 10px;
     //0.625em
     max-width: 61px;
@@ -151,11 +151,11 @@ export const ContentStyled = styled.section`
   margin-bottom: 124px;
   grid-column: 2;
 
-  @media(max-width: 800px){
+  @media (max-width: 800px) {
     margin-bottom: 39px;
   }
 
-  @media(max-width: 414px){
+  @media (max-width: 414px) {
     margin-bottom: 36px;
     width: 100%;
   }
@@ -180,7 +180,7 @@ export const SignStyled = styled.span`
   margin-top: -20px;
   transform: rotate(17.76deg);
 
-  @media(max-width: 800px){
+  @media (max-width: 800px) {
     font-size: 20px;
     //1.25em
     line-height: 120%;
@@ -199,17 +199,27 @@ export const SpinningAnimation = keyframes`
 export const SpinningIconStyled = styled.div`
   position: absolute;
   right: 0px;
-  z-index: 99;  
+  z-index: 99;
   overflow-x: hidden;
   top: 20rem;
   animation: ${SpinningAnimation} 5s linear infinite;
 
-  @media(max-width: 800px){
+  ::selection {
+    background-color: transparent;
+  }
+
+  img {
+    ::selection {
+      background-color: transparent;
+    }
+  }
+
+  @media (max-width: 800px) {
     max-width: 248px;
     top: -10px;
   }
 
-  @media(max-width: 414px){
+  @media (max-width: 414px) {
     max-width: 140px;
   }
 `;
@@ -219,7 +229,6 @@ export const SignContainerStyled = styled.div`
   padding-top: 40px;
   margin-top: -2px;
   position: relative;
-  
 `;
 
 export const CustomersContainer = styled.div`

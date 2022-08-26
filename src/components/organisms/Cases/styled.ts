@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
-import { Typography } from '../../../styles/typography';
 
 export const ContainerStyled = styled.div`
   color: ${colors.black};
   background-color: ${colors.gray};
   padding: 10rem 2.8rem 10rem;
-  padding-bottom: 20%;
+  padding-bottom: 80px;
 `;
 
 export const ContentStyled = styled.section`
@@ -15,14 +14,14 @@ export const ContentStyled = styled.section`
   flex-direction: column;
   max-width: 1500px;
   margin: 0 auto;
-  >p{
+  > p {
     margin-bottom: 8rem;
     width: 502px;
     ::selection {
       background: ${colors.purple};
       color: ${colors.gray};
     }
-  
+
     @media (max-width: 800px) {
       width: 175px;
     }
@@ -33,22 +32,22 @@ export const DivStyled = styled.div`
   display: flex;
   align-items: end;
   margin-bottom: 3.6rem;
-  h2{
-    width: 686px; 
+  h2 {
+    width: 686px;
     ::selection {
       background: ${colors.purple};
       color: ${colors.gray};
     }
-  
+
     @media (max-width: 930px) {
       width: 500px;
     }
-  
+
     @media (max-width: 800px) {
       width: 278px;
       line-height: 28.8px;
     }
-  
+
     @media (max-width: 415px) {
       width: 264px;
       line-height: 28.8px;
@@ -69,11 +68,10 @@ export const AsideStyled = styled.aside`
   @media (max-width: 400px) {
     margin-left: 19px;
   }
-  p{
+  p {
     ::selection {
       background: ${colors.purple};
       color: ${colors.gray};
     }
   }
 `;
-
