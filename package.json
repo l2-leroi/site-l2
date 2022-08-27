@@ -33,7 +33,9 @@
     "twin.macro": "^2.8.2",
     "use-hooks": "^2.0.0-rc.5",
     "uuid": "^8.3.2",
-    "yarn": "^1.22.19"
+    "yarn": "^1.22.19",
+    "wavesurfer-react": "^2.2.2",
+    "wavesurfer.js": "^6.2.0"
   },
   "devDependencies": {
     "@types/node": "17.0.21",

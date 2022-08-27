@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
+import OurServicesFull from '../../../components/organisms/OurServicesFull';
+import Footer from '../../../components/organisms/Footer';
 
 const Services: NextPage = () => {
   // make page refresh on top
@@ -13,7 +15,12 @@ const Services: NextPage = () => {
     }
   });
 
-  return <h1>Em produção...</h1>;
+  return (
+    <>
+      <OurServicesFull />
+      <Footer />
+    </>
+  );
 };
 
 export default Services;
