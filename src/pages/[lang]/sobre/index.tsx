@@ -1,8 +1,11 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
+import LineAnimation from '../../../components/atoms/LineAnimation';
+import { colors } from '../../../styles/colors';
+import Footer from '../../../components/organisms/Footer';
+import AboutPage from '../../../components/organisms/AboutPage';
 
-const About: NextPage = () => {
-  // make page refresh on top
+const PageAbout: NextPage = () => {
   useEffect(() => {
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
@@ -13,7 +16,26 @@ const About: NextPage = () => {
     }
   });
 
-  return <h1>Em produção...</h1>;
+  useEffect(() => {
+    const nav = document.querySelector('.nav');
+    nav?.classList.add('white');
+    nav?.classList.add('animate');
+  }, []);
+
+  return (
+    <>
+      <AboutPage />
+      <LineAnimation
+        topChildren={false}
+        bottomChildren={false}
+        lineBg={colors.purple}
+        secondaryBg={colors.gray}
+        hasOutSourcing={false}
+        hasSpinner={false}
+      />
+      <Footer />
+    </>
+  );
 };
 
-export default About;
+export default PageAbout;

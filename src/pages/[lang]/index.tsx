@@ -28,6 +28,8 @@ export default function Home() {
         secondaryBg={colors.gray}
         hasOutSourcing={false}
         hasSpinner
+        bottomChildren={false}
+        topChildren={false}
       />
       <OurCustomers />
       <LineAnimation
@@ -35,6 +37,8 @@ export default function Home() {
         secondaryBg={colors.black}
         hasOutSourcing
         hasSpinner={false}
+        bottomChildren={false}
+        topChildren={false}
       />
       <Footer />
     </>
