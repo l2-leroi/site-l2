@@ -74,6 +74,7 @@ function InfiniteScroll({ closeMenu }: ScrollProps) {
           fontFamily="font1"
           color={currentPage === `${item.url}` ? 'green' : 'gray'}
           onClick={() => closeMenu()}
+          key={`${item[language]}`}
         >
           <Link key={`${item}-${uuid()}`} href={`/${language + item.url}`}>
             {currentPage === `${item.url}`

@@ -64,7 +64,6 @@ export const SpinningIconStyled = styled.div`
   animation: ${SpinningAnimation} 27s linear infinite;
   max-width: 468px;
   transition: bottom 0.5s ease;
-
   img {
     ::selection {
       background: transparent;
@@ -72,11 +71,9 @@ export const SpinningIconStyled = styled.div`
     @media (max-width: 1366px) {
       max-width: 380px;
     }
-
     @media (max-width: 800px) {
       max-width: 248px;
     }
-
     @media (max-width: 414px) {
       max-width: 140px;
     }

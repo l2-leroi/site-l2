@@ -122,7 +122,7 @@ function Header() {
       typography.forEach((element) => {
         element.classList.add('white');
       });
-      header.classList.add('white');
+      header?.classList.add('white');
       nav?.classList.add('white');
       setWhiteCircle(true);
     }
