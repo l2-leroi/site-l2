@@ -6,11 +6,18 @@ interface ButtonProps {
   borderColor?: string;
   backgroundColor?: string;
   text: string;
+  onClick: any;
 }
 
-function Button({ linkBtn, borderColor, backgroundColor, text }: ButtonProps) {
+function Button({
+  linkBtn,
+  borderColor,
+  backgroundColor,
+  text,
+  onClick,
+}: ButtonProps) {
   return (
-    <LinkStyled href={linkBtn}>
+    <LinkStyled onClick={onClick} href={linkBtn}>
       <ButtonStyled bgColor={backgroundColor} borderColor={borderColor}>
         {text}
       </ButtonStyled>

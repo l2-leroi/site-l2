@@ -12,6 +12,7 @@ import { defaultLanguage, languages } from '../i18n';
 import { GlobalStyle } from '../styles/global';
 import Footer from '../components/organisms/Footer/index';
 import NavOnePage from '../components/organisms/NavOnePage';
+import Toastr from '../components/organisms/Toastr';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -44,9 +45,24 @@ function MyApp({ Component, pageProps }: AppProps) {
   if (asPath !== '/' && asPath !== '/404') {
     i18next.changeLanguage(clientLanguage);
   }
+  const toastrs = [
+    {
+      text: 'Estamos com vagas abertas para Trainee.',
+      link: '/pt/cases',
+      id: '1',
+    },
+    {
+      text: 'Olá, Mundo2!!!',
+      link: '#2',
+      id: '2',
+    },
+  ];
+
+  // const toastr = { text: 'Olá, Mundo!!!', link: '#1' };
 
   return (
     <>
+      <Toastr toastr={toastrs} />
       <Head>
         <meta
           name="description"
