@@ -5,8 +5,7 @@
     "blackSpinner": "/images/black-spinner.svg",
     "WhiteSpinner": "/images/white-spinner.svg",
     "alt": {
-      "thereIsMore": "Tem mais coisa aqui em baixo",
-      "howItIs": "Como é trabalhar na L2"
+      "thereIsMore": "Tem mais coisa aqui em baixo"
     }
   },
   "cases": {
@@ -55,7 +54,10 @@
     "requirements": "Requisitos:",
     "desirable": "Desejável estar cursando o último ano de Ciência da Computação ou equivalente ou outro curso superior na área de TI;",
     "availability": "Disponibilidade para trabalhar 30 horas semanais;",
-    "knowledge": "Conhecimentos de lógica de programação e estrutura de dados."
+    "knowledge": "Conhecimentos de lógica de programação e estrutura de dados.",
+    "whiteSpinner": "/images/Arrow-Spinner-OurCareers-White.svg",
+    "blackSpinner": "/images/Arrow-Spinner-OurCareers.svg",
+    "alt": { "howItIs": "Como é trabalhar na L2"}
   },
   "TalentsOurCareer": {
     "weEmbrace": "Abraçamos os talentos do mundo",

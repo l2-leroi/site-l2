@@ -48,12 +48,6 @@ const settings = {
         slidesToShow: 2,
       },
     },
-    // {
-    //   breakpoint: 414,
-    //   settings: {
-    //     slidesToShow: 2,
-    //   },
-    // },
   ],
 };
 

@@ -2,6 +2,10 @@ import styled, { keyframes } from 'styled-components';
 
 import { colors } from '../../../styles/colors';
 
+export const MainContainer = styled.div`
+  overflow: hidden;
+`;
+
 export const ContainerStyled = styled.section`
   display: flex;
   flex-direction: row;
@@ -16,6 +20,7 @@ export const ContainerStyled = styled.section`
     flex-direction: column;
   }
 `;
+
 export const DivImageStyled = styled.div`
   display: flex;
   flex-direction: column;
@@ -38,7 +43,6 @@ export const DivImageStyled = styled.div`
 `;
 
 export const SpinningAnimation = keyframes`
-
   0% {
     transform: rotate(0deg);
   }
@@ -49,17 +53,16 @@ export const SpinningAnimation = keyframes`
 
 export const SpinningIconStyled = styled.div`
   display: flex;
-  position: absolute;
-  margin-left: -150px;
+  margin-left: -100px;
   z-index: 1;
-  top: 115rem;
+  position: relative;
 
   @media (max-width: 1260px) {
-    top: -20rem;
     margin-left: 75%;
     position: relative;
   }
 `;
+
 export const SpinnerImage = styled.img`
   position: absolute;
   max-width: 350px;

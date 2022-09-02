@@ -88,21 +88,30 @@ const OurCareersPage: NextPage = () => {
     <Container>
       <HeaderOurCareer startDate={startDate} endDate={endDate} id={id} />
       <AboutOurCareer li={li} traineeImage={image} />
+      {/* <div id="divTopSpinner">
+        <div className="TopWhiteSpinner">
+          <StyledScrollCircle
+            isWhiteImage
+            blackImage={`${t('headerOurCareer.blackSpinner')}`}
+            whiteImage={`${t('headerOurCareer.whiteSpinner')}`}
+          />
+        </div>
+  </div> */}
       <LineAnimation
         topChildren={
           <div className="topSpinner">
             <StyledScrollCircle
               isWhiteImage
-              blackImage={`${t('images.spinner')}`}
-              whiteImage={`${t('images.whiteSpinner')}`}
+              blackImage={`${t('headerOurCareer.blackSpinner')}`}
+              whiteImage={`${t('headerOurCareer.whiteSpinner')}`}
             />
           </div>
         }
         bottomChildren={
           <div className="bottomSpinner">
             <StyledScrollCircle
-              blackImage={`${t('images.spinner')}`}
-              whiteImage={`${t('images.whiteSpinner')}`}
+              blackImage={`${t('headerOurCareer.blackSpinner')}`}
+              whiteImage={`${t('headerOurCareer.whiteSpinner')}`}
             />
           </div>
         }
@@ -111,7 +120,6 @@ const OurCareersPage: NextPage = () => {
         hasOutSourcing={false}
         hasSpinner={false}
       />
-
       <TalentsOurCareer talentsImages={images} />
       <Carousel cards={cards} />
     </Container>

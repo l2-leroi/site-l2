@@ -59,6 +59,7 @@ export default function TalentsOurCareer({
               <img src={item.src} alt={item.alt} />
             ))}
           </DivImageStyled>
+
           <Typography tag="p">{t('TalentsOurCareer.enjoyToo')}</Typography>
           <div className="line" />
           <Typography

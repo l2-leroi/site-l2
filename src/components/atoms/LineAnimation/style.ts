@@ -16,12 +16,13 @@ export const LineStyled = styled.div<Props>`
   background-color: ${(props) => props.secondaryBg};
   height: 100%;
   box-sizing: padding-box;
-  z-index: 20;
+  // z-index: 20;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  // z-index: 1;
+  z-index: 2;
 `;
 
 export const TextContainerStyled = styled.div`
@@ -41,7 +42,7 @@ export const LineContainerStyled = styled.div<Props>`
 
 export const Sup = styled.div<Props>`
   width: 100%;
-  height: 2px;
+  height: 0px;
   position: absolute;
   bottom: 0;
   background-color: ${(props) => props.lineBg};

@@ -90,7 +90,7 @@ export const StyledDate = styled.div`
   flex-direction: column;
   align-items: center;
   p {
-    margin-top: 25px;
+    margin-top: 40px;
     margin-bottom: 40px;
     width: 45%;
     @media (max-width: 600px) {
@@ -144,10 +144,11 @@ export const DivDate = styled.div`
   max-width: 60%;
 
   h1 {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     margin-top: 30px;
     @media (max-width: 600px) {
       font-size: 12px;
+      margin-bottom: 8px;
     }
   }
   h2 {
@@ -155,6 +156,11 @@ export const DivDate = styled.div`
     flex-direction: column;
     @media (max-width: 600px) {
       font-size: 20px;
+    }
+
+    &.font {
+      font-family: 'Neue Machina';
+      text-decoration-line: line-through;
     }
   }
 `;

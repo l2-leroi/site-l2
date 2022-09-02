@@ -7,6 +7,7 @@ export const ContainerStyled = styled.section`
   overflow: inherit;
   display: flex;
   padding-left: 30%;
+  justify-content: flex-end;
 `;
 
 export const DivMainTextStyled = styled.div`
@@ -75,21 +76,26 @@ export const DivImageStyled = styled.div`
   margin-bottom: 40px;
   margin-top: 40px;
   gap: 30px;
+  padding-right: 14%;
 
   img {
     min-width: 0px;
     display: flex;
-    margin-bottom: 20px;
     border-radius: 18px;
 
-    @media (max-width: 400px) {
+    @media (max-width: 700px) {
       border-radius: 10px;
     }
+  }
+
+  @media (max-width: 700px) {
+    gap: 14px;
   }
 
   @media (max-width: 400px) {
     margin-bottom: 20px;
     margin-top: 20px;
+    padding-right: 4%;
   }
 `;
 
