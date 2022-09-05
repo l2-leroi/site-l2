@@ -91,8 +91,8 @@ export const ListItemStyled = styled.li`
     z-index: 6;
     font-size: 18px;
     color: ${colors.gray};
-    font-weight: 800;
-    text-shadow: 1px 0px 0 #fff, 0px 1px 0 #fff;
+    font-weight: 900;
+    // text-shadow: 1px 0px 0 #fff, 0px 1px 0 #fff;
 
     @media (max-width: 800px) {
       top: -2px;
