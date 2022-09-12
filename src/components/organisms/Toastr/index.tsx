@@ -9,35 +9,54 @@ interface toastrList {
   link: string;
   id: string;
 }
-
 interface ToastrProps {
   toastr: toastrList[];
 }
 
 function Toastr(props: ToastrProps) {
+  const toastList = props.toastr;
+
   useEffect(() => {
-    props.toastr.map((itemToastr, index) => {
-      // add
-      localStorage.setItem(itemToastr.id, `aviso${index + 1}`);
+    toastList.forEach((itemToastr) => {
+      const myItem = localStorage.getItem(`aviso${itemToastr.id}`);
+      if (myItem == 'true' || myItem == null) {
+        localStorage.setItem(`aviso${itemToastr.id}`, 'true');
+        creatToastr(itemToastr);
+      }
     });
   }, []);
 
-  useEffect(() => {
-    props.toastr.map((itemToastr) =>
-      toast(
-        <Message
-          toastr={{
-            text: itemToastr.text,
-            link: itemToastr.link,
-            id: itemToastr.id,
-          }}
-        />,
-        {
-          toastId: itemToastr.id,
-        },
-      ),
+  function creatToastr(itemToastr) {
+    toast(
+      <Message
+        toastr={{
+          text: itemToastr.text,
+          link: itemToastr.link,
+          id: itemToastr.id,
+        }}
+      />,
+      {
+        toastId: itemToastr.id,
+      },
     );
-  }, []);
+  }
+
+  toast.onChange((payload) => {
+    if (payload.status === 'removed') {
+      const myItem = localStorage.getItem(`aviso${payload.id}`);
+      if (myItem === 'true') {
+        localStorage.setItem(`aviso${payload.id}`, 'false');
+      }
+    }
+    if (payload.status === 'updated') {
+      toastList.forEach((itemToastr) => {
+        const myItem = localStorage.getItem(`aviso${itemToastr.id}`);
+        if (myItem == 'false') {
+          toast.dismiss(itemToastr.id);
+        }
+      });
+    }
+  });
 
   return (
     <div>

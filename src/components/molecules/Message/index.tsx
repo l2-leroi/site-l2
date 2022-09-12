@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import { useRouter } from 'next/router';
@@ -20,21 +20,15 @@ function Message(props: ToastrProps) {
   const toastList = new Set();
   const maxToast = 1;
   const router = useRouter();
-  const [isVisible, setIsVisible] = useState(false);
 
   const removeAlertStorage = (event) => {
     event.preventDefault();
-    const myItem = localStorage.getItem(props.toastr.id);
-    if (myItem === `aviso${props.toastr.id}`) {
-      console.log(`isVisible t = ${isVisible}`);
-      console.log(`botão = ${props.toastr.id}`);
-      localStorage.removeItem(props.toastr.id);
-      setIsVisible(false);
-    } else {
-      console.log(`isVisible f= ${isVisible}`);
-      setIsVisible(true);
+    const myItem = localStorage.getItem(`aviso${props.toastr.id}`);
+    if (myItem === 'true') {
+      localStorage.setItem(`aviso${props.toastr.id}`, 'false');
     }
     router.push(props.toastr.link);
+    toast.update(props.toastr.id);
     return true;
   };
 
@@ -49,8 +43,8 @@ function Message(props: ToastrProps) {
     }
     return '';
   }
+
   return (
-    // isVisible && (
     <ContentStyled>
       <Typography
         tag="h1"
@@ -66,9 +60,9 @@ function Message(props: ToastrProps) {
         onClick={removeAlertStorage}
         linkBtn={props.toastr.link}
         text="SAIBA MAIS"
+        WhiteArrow
       />
     </ContentStyled>
-    // )
   );
 }
 export default Message;

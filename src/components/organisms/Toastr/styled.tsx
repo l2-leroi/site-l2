@@ -15,10 +15,13 @@ export const StyledContainer = styled(ToastContainer)`
     padding: 0px;
     width: 100%;
     margin-bottom: 0;
-    top: 101px;
-    top: 72.39px;
+    position: absolute;
+    top: 108px;
     @media (max-width: 800px) {
-      top: 65px;
+      top: 101px;
+    }
+    @media (max-width: 500px) {
+      top: 0px;
     }
   }
 

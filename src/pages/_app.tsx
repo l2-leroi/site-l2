@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const toastrs = [
     {
       text: 'Estamos com vagas abertas para Trainee.',
-      link: '/pt/cases',
+      link: 'pt/cases',
       id: '1',
     },
     {
@@ -57,8 +57,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       id: '2',
     },
   ];
-
-  // const toastr = { text: 'Olá, Mundo!!!', link: '#1' };
 
   return (
     <>
