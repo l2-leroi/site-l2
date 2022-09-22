@@ -3,7 +3,14 @@ import styled, { keyframes } from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const MainContainer = styled.div`
-  overflow: hidden;
+  .spinningIcon {
+    height: 0;
+    > div {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+  }
 `;
 
 export const ContainerStyled = styled.section`
@@ -14,7 +21,6 @@ export const ContainerStyled = styled.section`
   background-color: ${colors.black};
   padding-top: 10.5rem;
   padding-bottom: 10.5rem;
-  overflow: hidden;
 
   @media (max-width: 1260px) {
     flex-direction: column;
@@ -39,6 +45,18 @@ export const DivImageStyled = styled.div`
     @media (max-width: 600px) {
       font-size: 12px;
     }
+  }
+  .scrollCircleDiv {
+    margin-top: 72px;
+    height: 168px;
+    > div {
+      height: 3000px;
+      margin-left: -28px;
+      width: 30vw;
+    }
+    align-self: start;
+    display: flex;
+    justify-content: center;
   }
 `;
 

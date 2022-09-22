@@ -8,6 +8,7 @@ import {
 } from './styled';
 
 import { Typography } from '../../../styles/typography';
+import { StyledScrollCircle } from '../OurCareersPage/styled';
 
 interface PropsImages {
   src: string;
@@ -24,6 +25,13 @@ export default function TalentsOurCareer({
 
   return (
     <ContainerMainStyled>
+      <div className="scrollCircleDiv">
+        <StyledScrollCircle
+          isWhiteImage={false}
+          blackImage={`${t('headerOurCareer.blackSpinner')}`}
+          whiteImage={`${t('headerOurCareer.whiteSpinner')}`}
+        />
+      </div>
       <ContainerStyled>
         <DivMainTextStyled>
           <Typography

@@ -10,6 +10,7 @@ import {
 } from './styled';
 import { Typography } from '../../../styles/typography';
 import Button from '../../atoms/Button';
+import { StyledScrollCircle } from '../OurCareersPage/styled';
 
 interface PropsImage {
   src: string;
@@ -28,9 +29,13 @@ export default function AboutOurCareer({
 
   return (
     <MainContainer>
-      <SpinningIconStyled>
-        <SpinnerImage src="/images/spinner.png" />
-      </SpinningIconStyled>
+      <div className="spinningIcon">
+        <div>
+          <SpinningIconStyled>
+            <SpinnerImage src="/images/spinner.png" />
+          </SpinningIconStyled>
+        </div>
+      </div>
       <ContainerStyled className="aboutOurCareer">
         <DivImageStyled>
           {traineeImage.map((item) => (
@@ -39,6 +44,15 @@ export default function AboutOurCareer({
           <Typography tag="p" color="gray" fontFamily="font2" size="xsmall">
             {t('headerOurCareer.lastClass')}
           </Typography>
+          <div className="scrollCircleDiv">
+            <div>
+              <StyledScrollCircle
+                isWhiteImage
+                blackImage={`${t('headerOurCareer.blackSpinner')}`}
+                whiteImage={`${t('headerOurCareer.whiteSpinner')}`}
+              />
+            </div>
+          </div>
         </DivImageStyled>
 
         <DivTextStyled>

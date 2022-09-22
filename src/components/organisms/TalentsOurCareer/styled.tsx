@@ -2,12 +2,10 @@ import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const ContainerStyled = styled.section`
-  width: 100%;
+  width: 70vw;
   background-color: ${colors.gray};
   overflow: inherit;
   display: flex;
-  padding-left: 30%;
-  justify-content: flex-end;
 `;
 
 export const DivMainTextStyled = styled.div`
@@ -100,5 +98,12 @@ export const DivImageStyled = styled.div`
 `;
 
 export const ContainerMainStyled = styled.div`
+  display: flex;
+  align-items: stretch;
+  .scrollCircleDiv {
+    width: 30vw;
+    min-width: 30vw;
+    margin-top: -27vw;
+  }
   overflow: inherit;
 `;
