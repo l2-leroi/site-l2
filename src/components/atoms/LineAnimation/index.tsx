@@ -11,7 +11,23 @@ import OutSourcing from '../OutSourcing';
 
 const Spinner = '/images/spinner.png';
 
-const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner }) => {
+interface LineAnimationProps {
+  lineBg: string;
+  secondaryBg: string;
+  hasOutSourcing: boolean;
+  hasSpinner: boolean;
+  topChildren?: any;
+  bottomChildren?: any;
+}
+
+const LineAnimation = ({
+  lineBg,
+  secondaryBg,
+  hasOutSourcing,
+  hasSpinner,
+  topChildren,
+  bottomChildren,
+}: LineAnimationProps) => {
   const line = useRef();
   const text = useRef();
   const spinner = useRef();
@@ -137,10 +153,12 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner }) => {
 
   return (
     <LineContainerStyled
+      className="line-animation"
       lineBg={lineBg}
       secondaryBg={secondaryBg}
       ref={container}
     >
+      {bottomChildren}
       {hasSpinner && (
         <SpinningIconStyled className="spinner" ref={spinner}>
           <img src={Spinner} alt="L2 Code" />
@@ -153,7 +171,9 @@ const LineAnimation = ({ lineBg, secondaryBg, hasOutSourcing, hasSpinner }) => {
         </TextContainerStyled>
       )}
 
-      <LineStyled ref={line} secondaryBg={secondaryBg} />
+      <LineStyled ref={line} secondaryBg={secondaryBg}>
+        {topChildren}
+      </LineStyled>
 
       <Sup lineBg={lineBg} />
     </LineContainerStyled>
