@@ -26,11 +26,13 @@ function Footer() {
     //   link: 'https://api.whatsapp.com/send?phone=5551996939336',
     // },
     {
+      key: 'mailContact',
       title: t('footer.ourEmail'),
       contact: 'contato@l2code.com.br',
       link: 'mailto:contato@l2code.com.br',
     },
     {
+      key: 'mailTalent',
       title: t('footer.bePart'),
       contact: 'talentos@l2code.com.br',
       link: 'mailto:talentos@l2code.com.br',
@@ -38,7 +40,7 @@ function Footer() {
   ];
 
   return (
-    <FooterStyled className="footer">
+    <FooterStyled className="footer" id="footer">
       <IdSpanStyled id="contact" />
       <ContainerStyled className="containerstyled">
         <ContentStyled>
