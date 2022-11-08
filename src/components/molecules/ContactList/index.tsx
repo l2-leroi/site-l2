@@ -6,6 +6,7 @@ interface Contact {
   title: string;
   contact: string;
   link: string;
+  key: string;
 }
 
 interface ContactProps {
@@ -19,6 +20,7 @@ function ContactList(props: ContactProps) {
       action: 'Click nos links do footer',
     });
   };
+
   return (
     <ContentStyled>
       {props.contacts.map((c) => (
@@ -29,12 +31,14 @@ function ContactList(props: ContactProps) {
 
           <ContactStyled href={c.link} target="_blank" onClick={ClickHandler}>
             <Typography
+              id={c.key}
               tag="p"
               color="gray"
               size="small"
               lineHeight="line120"
               letterSpacing="space1"
               fontWeight="weight3"
+              style={{ width: 'fit-content' }}
             >
               {c.contact}
             </Typography>

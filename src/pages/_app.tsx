@@ -12,10 +12,17 @@ import { defaultLanguage, languages } from '../i18n';
 import { GlobalStyle } from '../styles/global';
 import Footer from '../components/organisms/Footer/index';
 import NavOnePage from '../components/organisms/NavOnePage';
+import { Lightning } from '../components/atoms/Lightning';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const { asPath, query } = router;
+  const [windowWidth, setWindowWidth] = useState<number>(0);
+  const isMobile: boolean = windowWidth > 992;
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
 
   // Detect current language
   const slug = asPath.split('/')[1];
@@ -75,6 +82,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       <NavOnePage />
       <Component {...pageProps} />
       <Footer />
+
+      {isMobile && <Lightning />}
     </>
   );
 }
