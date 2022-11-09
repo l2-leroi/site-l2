@@ -9,6 +9,52 @@ import {
 
 import { Typography } from '../../../styles/typography';
 import { StyledScrollCircle } from '../OurCareersPage/styled';
+import Carousel from '../../molecules/Carousel';
+
+const cards = [
+  {
+    comment: 'TalentsOurCareer.comment1',
+    authorImg: '/images/OurCareer/comment-01.png',
+    authorName: 'Renã ● Dev. FullStack',
+    id: 1,
+    author: true,
+  },
+  {
+    comment: 'TalentsOurCareer.comment2',
+    authorImg: '/images/OurCareer/comment-02.png',
+    authorName: 'Bruna ● Dev. Trainee ',
+    id: 2,
+    author: true,
+  },
+  {
+    comment: 'TalentsOurCareer.comment3',
+    authorImg: '/images/OurCareer/comment-03.png',
+    authorName: 'Guilherme ● Dev. backend',
+    id: 3,
+    author: true,
+  },
+  {
+    comment: 'TalentsOurCareer.comment4',
+    authorImg: '/images/OurCareer/comment-04.png',
+    authorName: 'Ana Julia ● Frontend',
+    id: 4,
+    author: true,
+  },
+  {
+    comment: 'TalentsOurCareer.comment5',
+    authorImg: '/images/OurCareer/comment-05.png',
+    authorName: 'Brenda ● Dev. Trainee ',
+    id: 5,
+    author: true,
+  },
+  {
+    comment: 'TalentsOurCareer.comment6',
+    authorImg: '/images/OurCareer/comment-06.png',
+    authorName: 'Vanessa ● UX / UI Designer',
+    id: 6,
+    author: true,
+  },
+];
 
 interface PropsImages {
   src: string;
@@ -86,6 +132,7 @@ export default function TalentsOurCareer({
             {t('TalentsOurCareer.whatTheySay')}
           </Typography>
         </DivMainTextStyled>
+        <Carousel cards={cards} />
       </ContainerStyled>
     </ContainerMainStyled>
   );

@@ -6,7 +6,7 @@ export const MainContainer = styled.div`
   .spinningIcon {
     height: 0;
     > div {
-      width: 100vw;
+      width: 100%;
       height: 100vh;
       overflow: hidden;
     }
@@ -48,7 +48,7 @@ export const DivImageStyled = styled.div`
   }
   .scrollCircleDiv {
     margin-top: 72px;
-    height: 168px;
+    height: 0;
     > div {
       height: 3000px;
       margin-left: -28px;

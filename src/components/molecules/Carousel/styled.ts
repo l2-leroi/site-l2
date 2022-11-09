@@ -3,7 +3,6 @@ import { colors } from '../../../styles/colors';
 
 export const DivStyled = styled.div`
   overflow: hidden;
-  padding-left: 15%; //
 
   @media (max-width: 800px) {
     width: 100%;
