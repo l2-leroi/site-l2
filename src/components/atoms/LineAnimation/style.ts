@@ -1,43 +1,39 @@
 import styled, { keyframes } from 'styled-components';
 
 interface Props {
-  lineBg?: string;
-  secondaryBg?: string;
+  bottomBgColor?: string;
+  topBgColor?: string;
 }
 
-export const LineStyled = styled.div<Props>`
-  clip-path: polygon(
-    0 -1px,
-    100% -1px,
-    100% calc(100% - 50px),
-    0 calc(100% - 50px)
-  );
-  transition: clip-path 0.5s ease;
-  background-color: ${(props) => props.secondaryBg};
-  height: 100%;
-  box-sizing: padding-box;
-  // z-index: 20;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  // z-index: 1;
-  z-index: 2;
-`;
-
 export const TextContainerStyled = styled.div`
-  position: absolute;
-  z-index: 21;
-  width: 105%;
-  top: calc(100% - 50px - 7em);
+  height: 0;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  > div {
+    position: relative;
+    overflow: hidden;
+    height: 1000px;
+    > div {
+      position: absolute;
+      z-index: 50;
+      width: 110%;
+      margin-left: -5%;
+    }
+  }
+`;
+export const LineBg = styled.div<Props>`
+  margin-top: -1px;
+  background-color: ${(props) => props.topBgColor};
 `;
 
 export const LineContainerStyled = styled.div<Props>`
-  margin-bottom: -50px;
-  background-color: ${(props) => props.lineBg};
-  border-color: ${(props) => props.secondaryBg};
+  background-color: ${(props) => props.bottomBgColor};
+  border-color: ${(props) => props.topBgColor};
   position: relative;
   overflow-x: clip;
+  background: ${(props) => props.bottomBgColor};
+  z-index: 50;
+  transition: clip-path 0.5s ease;
 `;
 
 export const Sup = styled.div<Props>`
@@ -45,7 +41,7 @@ export const Sup = styled.div<Props>`
   height: 0px;
   position: absolute;
   bottom: 0;
-  background-color: ${(props) => props.lineBg};
+  background-color: ${(props) => props.bottomBgColor};
 `;
 
 export const SpinningAnimation = keyframes`
@@ -58,28 +54,40 @@ export const SpinningAnimation = keyframes`
 `;
 
 export const SpinningIconStyled = styled.div`
-  position: absolute;
-  right: 0px;
-  z-index: 10;
-  border-radius: 50%;
-  animation: ${SpinningAnimation} 27s linear infinite;
-  max-width: 468px;
-  transition: bottom 0.5s ease;
+  height: 0;
+  position: relative;
+  z-index: 52;
+  margin-top: -100px;
+  margin-bottom: 100px;
+  > div {
+    position: relative;
+    overflow: hidden;
+    height: 1000px;
+    > div {
+      position: absolute;
+      right: 0px;
+      z-index: 10;
+      border-radius: 50%;
+      animation: ${SpinningAnimation} 27s linear infinite;
+      max-width: 468px;
+      transition: top 0.5s ease;
 
-  img {
-    ::selection {
-      background: transparent;
-    }
-    @media (max-width: 1366px) {
-      max-width: 380px;
-    }
+      img {
+        ::selection {
+          background: transparent;
+        }
+        @media (max-width: 1366px) {
+          max-width: 380px;
+        }
 
-    @media (max-width: 800px) {
-      max-width: 248px;
-    }
+        @media (max-width: 800px) {
+          max-width: 248px;
+        }
 
-    @media (max-width: 414px) {
-      max-width: 140px;
+        @media (max-width: 414px) {
+          max-width: 140px;
+        }
+      }
     }
   }
 `;

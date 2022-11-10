@@ -6,7 +6,7 @@ import AboutOurCareer from '../AboutOurCareer';
 import TalentsOurCareer from '../TalentsOurCareer';
 import { colors } from '../../../styles/colors';
 import { Container } from './styled';
-import NewLineAnimation from '../../atoms/NewLineAnimation';
+import LineAnimation from '../../atoms/LineAnimation';
 
 const OurCareersPage: NextPage = () => {
   useEffect(() => {
@@ -42,9 +42,9 @@ const OurCareersPage: NextPage = () => {
     <Container>
       <HeaderOurCareer startDate={startDate} endDate={endDate} id={id} />
       <AboutOurCareer li={li} traineeImage={image} />
-      <NewLineAnimation bottomBgColor={colors.gray} topBgColor={colors.black}>
+      <LineAnimation bottomBgColor={colors.gray} topBgColor={colors.black}>
         <TalentsOurCareer talentsImages={images} />
-      </NewLineAnimation>
+      </LineAnimation>
     </Container>
   );
 };
