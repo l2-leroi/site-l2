@@ -6,15 +6,17 @@ export const Lightning = () => {
   const [isCanvasEnabled, setCanvasEnabled] = useState(false);
   const [mouseAxis, setMouseAxis] = useState({ x: 0, y: 0 });
   const [currentHeight, setCurrentHeight] = useState(0);
-
   function createLightning(mouseAxis) {
     const talentPointX =
       (document.getElementById('mailTalent')?.offsetLeft ?? 0) +
       (document.getElementById('mailTalent')?.offsetWidth ?? 0) +
       100; // <<- MAGIC NUMBER
+    const footerOffset =
+      document.getElementById('footer').getBoundingClientRect().top +
+        window.scrollY ?? 0;
     const talentPointY =
       (document.getElementById('mailTalent')?.offsetTop ?? 0) +
-      (document.getElementById('footer')?.offsetTop ?? 0) +
+      footerOffset +
       38; // <<- MAGIC NUMBER
 
     const contactPointX =
@@ -23,7 +25,7 @@ export const Lightning = () => {
       100; // <<- MAGIC NUMBER
     const contactPointY =
       (document.getElementById('mailContact')?.offsetTop ?? 0) +
-      (document.getElementById('footer')?.offsetTop ?? 0) +
+      footerOffset +
       38; // <<- MAGIC NUMBER
 
     let endPosition = { x: 0, y: 0 };
@@ -128,8 +130,9 @@ export const Lightning = () => {
       });
 
       const footerOffset =
-        (document.getElementById('footer')?.offsetTop ?? 0) - 200; // <<- MAGIC NUMBER
-
+        document.getElementById('footer').getBoundingClientRect().top +
+        window.scrollY -
+        200; // <<- MAGIC NUMBER
       if (pageY >= footerOffset) {
         setCanvasEnabled(true);
       } else {
@@ -149,10 +152,11 @@ export const Lightning = () => {
         setCurrentHeight(document.body.offsetHeight);
       }
 
-      const footerOffset =
-        (document.getElementById('footer')?.offsetTop ?? 0) - 200; // <<- MAGIC NUMBER
       const { pageX, pageY } = el;
-
+      const footerOffset =
+        document.getElementById('footer').getBoundingClientRect().top +
+        window.scrollY -
+        200; // <<- MAGIC NUMBER
       if (pageY >= footerOffset) {
         setCanvasEnabled(true);
 
