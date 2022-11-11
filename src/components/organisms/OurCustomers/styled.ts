@@ -72,6 +72,7 @@ export const AsideStyled = styled.aside`
   line-height: 140%;
   letter-spacing: -0.02em;
   z-index: 2;
+  margin-left: -120px;
 
   @media (max-width: 800px) {
     max-width: 50px;

@@ -6,16 +6,29 @@ interface ButtonProps {
   borderColor?: string;
   backgroundColor?: string;
   text: string;
+  fill?: string;
+  fontSize?: string | number;
 }
 
-function Button({ linkBtn, borderColor, backgroundColor, text }: ButtonProps) {
+function Button({
+  linkBtn,
+  borderColor,
+  backgroundColor,
+  text,
+  fill,
+  fontSize,
+}: ButtonProps) {
   return (
     <LinkStyled href={linkBtn}>
-      <ButtonStyled bgColor={backgroundColor} borderColor={borderColor}>
+      <ButtonStyled
+        bgColor={backgroundColor}
+        borderColor={borderColor}
+        fontSize={fontSize}
+      >
         {text}
       </ButtonStyled>
       <ButtonStyled bgColor={backgroundColor} borderColor={borderColor}>
-        <ArrowIcon />
+        <ArrowIcon fill={fill} />
       </ButtonStyled>
     </LinkStyled>
   );

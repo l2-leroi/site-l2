@@ -21,7 +21,7 @@ export const ButtonStyled = styled.div<ButtonProps>`
   border-radius: 50px;
   font-family: 'Circular Air Pro', sans-serif;
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: ${(props) => (props.fontSize ? props.fontSize : '2.4rem')};
   margin-right: 8px;
   display: flex;
   justify-content: center;
@@ -29,7 +29,7 @@ export const ButtonStyled = styled.div<ButtonProps>`
   padding: 10px;
 
   @media (max-width: 800px) {
-    font-size: xx-small;
+    font-size: 6px;
     padding: 0px;
   }
 
