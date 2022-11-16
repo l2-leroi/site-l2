@@ -6,25 +6,38 @@ export const Lightning = () => {
   const [isCanvasEnabled, setCanvasEnabled] = useState(false);
   const [mouseAxis, setMouseAxis] = useState({ x: 0, y: 0 });
   const [currentHeight, setCurrentHeight] = useState(0);
+  const footerMarginTop = 10;
+  const labelMarginBottom = 19;
+  const getLeftOf = (id) => document.getElementById(id)?.offsetLeft ?? 0;
+  const getWidthOf = (id) => document.getElementById(id)?.offsetWidth ?? 0;
+  const getTopOf = (id) => document.getElementById(id)?.offsetTop ?? 0;
+  const windowWidth = window.innerWidth;
+  const containerGutter = 56;
+  const containerSize = 1500;
 
   function createLightning(mouseAxis) {
+    let totalGap = containerGutter;
+
+    if (windowWidth - containerGutter > containerSize) {
+      totalGap = (windowWidth - 1500 + containerGutter / 2) / 2;
+    }
+
     const talentPointX =
-      (document.getElementById('mailTalent')?.offsetLeft ?? 0) +
-      (document.getElementById('mailTalent')?.offsetWidth ?? 0) +
-      100; // <<- MAGIC NUMBER
+      getLeftOf('mailTalent') + getWidthOf('mailTalent') + totalGap;
     const talentPointY =
-      (document.getElementById('mailTalent')?.offsetTop ?? 0) +
-      (document.getElementById('footer')?.offsetTop ?? 0) +
-      38; // <<- MAGIC NUMBER
+      getTopOf('mailTalent') +
+      getTopOf('footer') +
+      footerMarginTop +
+      labelMarginBottom;
 
     const contactPointX =
-      (document.getElementById('mailContact')?.offsetLeft ?? 0) +
-      (document.getElementById('mailContact')?.offsetWidth ?? 0) +
-      100; // <<- MAGIC NUMBER
+      getLeftOf('mailContact') + getWidthOf('mailContact') + totalGap;
+
     const contactPointY =
-      (document.getElementById('mailContact')?.offsetTop ?? 0) +
-      (document.getElementById('footer')?.offsetTop ?? 0) +
-      38; // <<- MAGIC NUMBER
+      getTopOf('mailContact') +
+      getTopOf('footer') +
+      footerMarginTop +
+      labelMarginBottom;
 
     let endPosition = { x: 0, y: 0 };
 
