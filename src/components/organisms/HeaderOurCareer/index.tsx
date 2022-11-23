@@ -98,6 +98,7 @@ export default function HeaderOurCareer({
                   fontWeight="weight3"
                   lineHeight="line120"
                   letterSpacing="space1"
+                  className="font"
                 >
                   {startDate}
                 </Typography>
@@ -126,6 +127,7 @@ export default function HeaderOurCareer({
                   fontWeight="weight3"
                   lineHeight="line120"
                   letterSpacing="space1"
+                  className="font"
                 >
                   {endDate}
                 </Typography>

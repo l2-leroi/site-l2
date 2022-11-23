@@ -8,6 +8,8 @@ import { colors } from '../../../styles/colors';
 const AllCases: NextPage = () => {
   // make page refresh on top
   useEffect(() => {
+    const nav = document.querySelector('.nav');
+    nav?.classList.add('white');
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
     } else {
@@ -20,13 +22,9 @@ const AllCases: NextPage = () => {
   return (
     <>
       <OurCareersPage />
-      <LineAnimation
-        lineBg={colors.purple}
-        secondaryBg={colors.gray}
-        hasOutSourcing={false}
-        hasSpinner={false}
-      />
-      <Footer />
+      <LineAnimation bottomBgColor={colors.purple} topBgColor={colors.gray}>
+        <Footer />
+      </LineAnimation>
     </>
   );
 };

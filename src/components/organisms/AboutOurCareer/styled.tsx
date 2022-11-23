@@ -2,6 +2,17 @@ import styled, { keyframes } from 'styled-components';
 
 import { colors } from '../../../styles/colors';
 
+export const MainContainer = styled.div`
+  .spinningIcon {
+    height: 0;
+    > div {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+  }
+`;
+
 export const ContainerStyled = styled.section`
   display: flex;
   flex-direction: row;
@@ -10,12 +21,12 @@ export const ContainerStyled = styled.section`
   background-color: ${colors.black};
   padding-top: 10.5rem;
   padding-bottom: 10.5rem;
-  overflow: hidden;
 
   @media (max-width: 1260px) {
     flex-direction: column;
   }
 `;
+
 export const DivImageStyled = styled.div`
   display: flex;
   flex-direction: column;
@@ -35,10 +46,21 @@ export const DivImageStyled = styled.div`
       font-size: 12px;
     }
   }
+  .scrollCircleDiv {
+    margin-top: 72px;
+    height: 0;
+    > div {
+      height: 3000px;
+      margin-left: -28px;
+      width: 30vw;
+    }
+    align-self: start;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export const SpinningAnimation = keyframes`
-
   0% {
     transform: rotate(0deg);
   }
@@ -49,17 +71,16 @@ export const SpinningAnimation = keyframes`
 
 export const SpinningIconStyled = styled.div`
   display: flex;
-  position: absolute;
-  margin-left: -150px;
+  margin-left: -100px;
   z-index: 1;
-  top: 115rem;
+  position: relative;
 
   @media (max-width: 1260px) {
-    top: -20rem;
     margin-left: 75%;
     position: relative;
   }
 `;
+
 export const SpinnerImage = styled.img`
   position: absolute;
   max-width: 350px;

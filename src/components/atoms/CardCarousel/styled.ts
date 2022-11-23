@@ -7,7 +7,6 @@ export const DivStyled = styled.div`
   display: flex;
   height: auto;
   flex-direction: column;
-  margin: 0 2rem;
 `;
 
 export const TextArea = styled.div`

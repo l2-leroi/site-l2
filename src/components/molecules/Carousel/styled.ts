@@ -6,6 +6,7 @@ export const DivStyled = styled.div`
 
   @media (max-width: 800px) {
     width: 100%;
+    padding-left: 0; //
   }
   .card-fade {
     visibility: hidden;
@@ -13,7 +14,7 @@ export const DivStyled = styled.div`
     transition: visibility 0s 1s, opacity 1s linear;
   }
   .slick-slide {
-    width: auto !important;
+    // width: auto !important;
   }
   .slick-track {
     width: max-content !important;

@@ -2,11 +2,10 @@ import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const ContainerStyled = styled.section`
-  width: 100%;
   background-color: ${colors.gray};
   overflow: inherit;
   display: flex;
-  padding-left: 30%;
+  flex-direction: column;
 `;
 
 export const DivMainTextStyled = styled.div`
@@ -16,7 +15,6 @@ export const DivMainTextStyled = styled.div`
   width: 65%;
   display: flex;
   flex-direction: column;
-  padding-top: 10.5rem;
 
   @media (max-width: 400px) {
     margin-top: 40px;
@@ -75,24 +73,36 @@ export const DivImageStyled = styled.div`
   margin-bottom: 40px;
   margin-top: 40px;
   gap: 30px;
+  padding-right: 14%;
 
   img {
     min-width: 0px;
     display: flex;
-    margin-bottom: 20px;
     border-radius: 18px;
 
-    @media (max-width: 400px) {
+    @media (max-width: 700px) {
       border-radius: 10px;
     }
+  }
+
+  @media (max-width: 700px) {
+    gap: 14px;
   }
 
   @media (max-width: 400px) {
     margin-bottom: 20px;
     margin-top: 20px;
+    padding-right: 4%;
   }
 `;
 
 export const ContainerMainStyled = styled.div`
+  display: flex;
+  align-items: stretch;
+  .scrollCircleDiv {
+    width: 30vw;
+    min-width: 30vw;
+    margin-top: -60vw;
+  }
   overflow: inherit;
 `;

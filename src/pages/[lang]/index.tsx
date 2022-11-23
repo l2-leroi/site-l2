@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import Cases from '../../components/organisms/Cases';
 import OurServicesOnePage from '../../components/organisms/OurServicesOnePage';
 import OurCustomers from '../../components/organisms/OurCustomers';
-import LineAnimation from '../../components/atoms/LineAnimation';
 import { colors } from '../../styles/colors';
 import Header from '../../components/organisms/Header';
+import LineAnimation from '../../components/atoms/LineAnimation';
 import Footer from '../../components/organisms/Footer';
 
 export default function Home() {
@@ -23,24 +23,21 @@ export default function Home() {
       <Header />
       <OurServicesOnePage />
       <Cases />
+
       <LineAnimation
-        lineBg={colors.black}
-        secondaryBg={colors.gray}
-        hasOutSourcing={false}
+        bottomBgColor={colors.black}
+        topBgColor={colors.gray}
         hasSpinner
-        bottomChildren={false}
-        topChildren={false}
-      />
-      <OurCustomers />
+      >
+        <OurCustomers />
+      </LineAnimation>
       <LineAnimation
-        lineBg={colors.purple}
-        secondaryBg={colors.black}
         hasOutSourcing
-        hasSpinner={false}
-        bottomChildren={false}
-        topChildren={false}
-      />
-      <Footer />
+        bottomBgColor={colors.purple}
+        topBgColor={colors.black}
+      >
+        <Footer />
+      </LineAnimation>
     </>
   );
 }

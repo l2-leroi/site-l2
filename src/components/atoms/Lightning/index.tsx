@@ -10,11 +10,12 @@ export const Lightning = () => {
   const labelMarginBottom = 19;
   const getLeftOf = (id) => document.getElementById(id)?.offsetLeft ?? 0;
   const getWidthOf = (id) => document.getElementById(id)?.offsetWidth ?? 0;
-  const getTopOf = (id) => document.getElementById(id)?.offsetTop ?? 0;
+  const getTopOf = (id) =>
+    document.getElementById(id).getBoundingClientRect().top + window.scrollY ??
+    0;
   const windowWidth = window.innerWidth;
   const containerGutter = 56;
   const containerSize = 1500;
-
   function createLightning(mouseAxis) {
     let totalGap = containerGutter;
 
@@ -25,19 +26,13 @@ export const Lightning = () => {
     const talentPointX =
       getLeftOf('mailTalent') + getWidthOf('mailTalent') + totalGap;
     const talentPointY =
-      getTopOf('mailTalent') +
-      getTopOf('footer') +
-      footerMarginTop +
-      labelMarginBottom;
+      getTopOf('mailTalent') + footerMarginTop + labelMarginBottom;
 
     const contactPointX =
       getLeftOf('mailContact') + getWidthOf('mailContact') + totalGap;
 
     const contactPointY =
-      getTopOf('mailContact') +
-      getTopOf('footer') +
-      footerMarginTop +
-      labelMarginBottom;
+      getTopOf('mailContact') + footerMarginTop + labelMarginBottom;
 
     let endPosition = { x: 0, y: 0 };
 
@@ -141,8 +136,9 @@ export const Lightning = () => {
       });
 
       const footerOffset =
-        (document.getElementById('footer')?.offsetTop ?? 0) - 200; // <<- MAGIC NUMBER
-
+        document.getElementById('footer').getBoundingClientRect().top +
+        window.scrollY -
+        200; // <<- MAGIC NUMBER
       if (pageY >= footerOffset) {
         setCanvasEnabled(true);
       } else {
@@ -162,10 +158,11 @@ export const Lightning = () => {
         setCurrentHeight(document.body.offsetHeight);
       }
 
-      const footerOffset =
-        (document.getElementById('footer')?.offsetTop ?? 0) - 200; // <<- MAGIC NUMBER
       const { pageX, pageY } = el;
-
+      const footerOffset =
+        document.getElementById('footer').getBoundingClientRect().top +
+        window.scrollY -
+        200; // <<- MAGIC NUMBER
       if (pageY >= footerOffset) {
         setCanvasEnabled(true);
 
