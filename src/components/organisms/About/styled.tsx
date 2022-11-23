@@ -129,15 +129,17 @@ export const LanguageStyled = styled.div`
 export const SubTitleGroupStyled = styled.hgroup`
   display: flex;
   flex-direction: column;
+  margin: auto;
   margin-top: 15rem;
-  padding-left: 30%;
-  max-width: 100%;
+  max-width: 464px;
   text-align: left;
   align-self: flex-start;
   align-items: stretch;
   justify-content: flex-end;
+
   @media (max-width: 800px) {
     font-size: 12px;
+    max-width: 168px;
   }
 
   h1 {
@@ -147,10 +149,11 @@ export const SubTitleGroupStyled = styled.hgroup`
   }
 
   p {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
   h2 {
-    margin-top: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
   }
   ul li {
     margin-left: 20px;
@@ -168,28 +171,28 @@ export const SubTitleGroupStyled = styled.hgroup`
 export const SubTitleStyled = styled.div`
   max-width: 464px;
   @media (max-width: 800px) {
-    max-width: 160px;
+    max-width: 168px;
   }
 `;
 
 export const ParagraphSubTitleStyled = styled.div`
   max-width: 464px;
   @media (max-width: 800px) {
-    max-width: 160px;
+    max-width: 168px;
   }
 `;
 
 export const TextStyled = styled.div`
   max-width: 464px;
   @media (max-width: 800px) {
-    max-width: 160px;
+    max-width: 168px;
   }
 `;
 
 export const ListStyled = styled.div`
   max-width: 464px;
   @media (max-width: 800px) {
-    max-width: 160px;
+    max-width: 168px;
   }
 `;
 
