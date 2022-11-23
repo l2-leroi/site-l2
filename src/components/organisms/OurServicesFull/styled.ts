@@ -7,11 +7,11 @@ export const SectionStyled = styled.section`
   grid-template-columns: 1fr minmax(280px, 1456px) 1fr;
   color: ${colors.gray};
   width: 100%;
-  padding-top: 20.5rem;
-
+  padding-top: 24rem;
+  padding-bottom: 33.7rem;
   @media (max-width: 800px) {
     padding: 0px 12px;
-    padding-bottom: 80px;
+    // padding-bottom: 80px;
   }
 `;
 
