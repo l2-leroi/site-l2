@@ -28,7 +28,12 @@ import {
 
 export default function About() {
   const { t } = i18next;
-  const list = ['about.innovate', 'about.defend', 'about.transform'];
+  const list = [
+    'about.connect',
+    'about.innovate',
+    'about.defend',
+    'about.transform',
+  ];
   return (
     <ContainerStyledAbout>
       <SectionStyled>
