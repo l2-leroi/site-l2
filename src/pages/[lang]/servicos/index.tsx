@@ -1,11 +1,13 @@
-import type { NextPage } from 'next';
+import { NextPage } from 'next';
 import { useEffect } from 'react';
 import OurServicesFull from '../../../components/organisms/OurServicesFull';
 import Footer from '../../../components/organisms/Footer';
 
 const Services: NextPage = () => {
-  // make page refresh on top
   useEffect(() => {
+    const nav = document.querySelector('.nav');
+    nav?.classList.add('white');
+
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
     } else {
