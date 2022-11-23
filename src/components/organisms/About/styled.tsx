@@ -230,12 +230,16 @@ export const DivCardStyled = styled.div`
     z-index: 2;
     background-color: #242a33;
     width: 464px;
-    height: 361px;
+    min-height: 450px;
+    max-height: 550px;
     border-radius: 8px;
+    padding: 28px;
 
     @media (max-width: 800px) {
       width: 168px;
-      height: 233px;
+      min-height: 300px;
+      max-height: 350px;
+      padding: 16px;
     }
   }
 `;
@@ -265,15 +269,27 @@ export const StyledGroupCards = styled.hgroup`
 `;
 
 export const CardTitleStyled = styled.div`
-  max-width: 464px;
   @media (max-width: 800px) {
     max-width: 160px;
+  }
+  h1 {
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 40px;
+
+    @media (max-width: 800px) {
+      padding-bottom: 20px;
+    }
   }
 `;
 
 export const CardParagraphStyled = styled.div`
-  max-width: 464px;
+  width: 100%;
   @media (max-width: 800px) {
     max-width: 160px;
+  }
+
+  p {
+    margin: 0px;
   }
 `;
