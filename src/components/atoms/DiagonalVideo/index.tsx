@@ -139,10 +139,7 @@ function DiagonalVideo({ children }) {
     videoContainerElement.style.overflowY = 'scroll';
 
     if (innerWidth < 1000) {
-      await window.screen.orientation.lock('landscape-primary').then(
-        (success) => console.log(success),
-        (failure) => console.log(failure),
-      );
+      await window.screen.orientation.lock('landscape-primary');
     } else {
       setFullHeight();
     }

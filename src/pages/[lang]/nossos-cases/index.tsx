@@ -23,12 +23,7 @@ const AllCases: NextPage = () => {
   return (
     <>
       <AllCasesPage />
-      <LineAnimation
-        lineBg={colors.purple}
-        secondaryBg={colors.black}
-        hasOutSourcing={false}
-        hasSpinner={false}
-      />
+      <LineAnimation bottomBgColor={colors.purple} topBgColor={colors.black} />
       <Footer />
     </>
   );

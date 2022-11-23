@@ -131,12 +131,7 @@ const ToParado: NextPage = () => {
         prototypeType={prototypeType}
       />
       <AllCases />
-      <LineAnimation
-        lineBg={colors.purple}
-        secondaryBg={colors.gray}
-        hasOutSourcing={false}
-        hasSpinner={false}
-      />
+      <LineAnimation bottomBgColor={colors.purple} topBgColor={colors.gray} />
       <Footer />
     </>
   );
