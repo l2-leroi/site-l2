@@ -97,4 +97,8 @@ export const OkButton = styled.button`
   padding: 4px 15px;
   cursor: pointer;
   margin: 0px 20px;
+
+  @media (max-width: 500px) {
+    padding: 9px 18px;
+  }
 `;

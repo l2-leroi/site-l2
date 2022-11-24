@@ -32,17 +32,17 @@ export default function CookiesPopup() {
       <CookiesDescription>
         <Typography tag="p" color="gray" fontFamily="font2" size="xsmall">
           {t('cookiesPopup.description')}
-          <PrivacyLink href="#">
-            <Typography
-              tag="span"
-              color="gray"
-              fontFamily="font2"
-              size="xsmall"
-              dangerouslySetInnerHTML={{
-                __html: t('cookiesPopup.privacy'),
-              }}
-            />
-          </PrivacyLink>
+          {/* <PrivacyLink href="#"> */}
+          <Typography
+            tag="span"
+            color="gray"
+            fontFamily="font2"
+            size="xsmall"
+            dangerouslySetInnerHTML={{
+              __html: t('cookiesPopup.privacy'),
+            }}
+          />
+          {/* </PrivacyLink> */}
         </Typography>
       </CookiesDescription>
       <OkButton onClick={closePopup}>Ok</OkButton>
