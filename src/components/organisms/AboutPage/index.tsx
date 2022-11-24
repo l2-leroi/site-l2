@@ -9,30 +9,22 @@ function AboutPage() {
   return (
     <Container>
       <About />
-      <LineAnimation
-        topChildren={
-          <div className="topSpinner">
-            <StyledScrollCircle
-              isWhiteImage
-              blackImage={`${t('images.spinnerBlack')}`}
-              whiteImage={`${t('images.spinnerWhite')}`}
-            />
-          </div>
-        }
-        bottomChildren={
-          <div className="bottomSpinner">
-            <StyledScrollCircle
-              isWhiteImage={false}
-              blackImage={`${t('images.spinnerBlack')}`}
-              whiteImage={`${t('images.spinnerWhite')}`}
-            />
-          </div>
-        }
-        lineBg={colors.gray}
-        secondaryBg={colors.black}
-        hasOutSourcing={false}
-        hasSpinner={false}
-      />
+      <div className="topSpinner">
+        <StyledScrollCircle
+          isWhiteImage
+          blackImage={`${t('images.spinnerBlack')}`}
+          whiteImage={`${t('images.spinnerWhite')}`}
+        />
+      </div>
+      <LineAnimation bottomBgColor={colors.gray} topBgColor={colors.black}>
+        <div className="bottomSpinner">
+          <StyledScrollCircle
+            isWhiteImage={false}
+            blackImage={`${t('images.spinnerBlack')}`}
+            whiteImage={`${t('images.spinnerWhite')}`}
+          />
+        </div>
+      </LineAnimation>
       <Manifest />
     </Container>
   );
