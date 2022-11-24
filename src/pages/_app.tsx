@@ -51,11 +51,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       link: 'pt/cases',
       id: '1',
     },
-    {
-      text: 'Olá, Mundo2!!!',
-      link: '#2',
-      id: '2',
-    },
   ];
 
   return (

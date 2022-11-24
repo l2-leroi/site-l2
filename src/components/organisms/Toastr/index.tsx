@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { toast } from 'react-toastify';
+import { toast, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import { StyledContainer } from './styled';
 import Message from '../../molecules/Message';
@@ -67,6 +67,7 @@ function Toastr(props: ToastrProps) {
         pauseOnFocusLoss
         draggable={false}
         closeOnClick={false}
+        transition={Slide}
       />
     </div>
   );

@@ -17,6 +17,7 @@ export const StyledContainer = styled(ToastContainer)`
     margin-bottom: 0;
     position: absolute;
     top: 108px;
+    z-index: 58;
     @media (max-width: 800px) {
       top: 101px;
     }
@@ -30,6 +31,7 @@ export const StyledContainer = styled(ToastContainer)`
     border-radius: 0px;
     margin: 0;
     padding: 20px;
+    z-index: 1;
   }
 
   .Toastify__toast-theme--light {
