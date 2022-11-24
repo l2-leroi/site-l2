@@ -2,9 +2,35 @@
   "images": {
     "spinner": "/images/Arrow-Spinner.svg",
     "whiteSpinner": "/images/Arrow-Spinner-White.svg",
+    "blackSpinner": "/images/black-spinner.svg",
+    "WhiteSpinner": "/images/white-spinner.svg",
+    "spinnerBlack": "/images/Manifest/spinnerBlack.svg",
+    "spinnerWhite": "/images/Manifest/spinnerWhite.svg",
     "alt": {
-      "thereIsMore": "Tem mais coisa aqui em baixo"
+      "thereIsMore": "Tem mais coisa aqui em baixo",
+      "howItIs": "Como é trabalhar na L2",
+      "manifest": "manifesto L2code"
     }
+  },
+  "about": {
+    "title": "SOMOS A L2CODE",
+    "weCreated": "Criamos soluções tecnológicas de forma humanizada e inovadora, pois acreditamos que inovar é aprender e ensinar sem fronteiras.",
+    "whatWeAre": "O que somos",
+    "weTransform": "Transformamos ideias em soluções",
+    "are": "Somos uma empresa de consultoria especializada em Tecnologia e já conseguimos grandes feitos com a forma humanizada de lidar com clientes e colaboradores. ● A ideia é criar o senso de comunidade, assim tudo flui melhor!",
+    "ourPurpose": " Nosso propósito é:",
+    "innovate": "Inovar a organização digital de empresas;",
+    "defend": "Defender a diversidade de ideias;",
+    "transform": "E transformar estratégias digitais em resultados reais.",
+    "mission": "Missão",
+    "create": "Criar soluções tecnológicas de forma humanizada, inovadora e divertida. ● Desenvolver ideias e profissionais é o nosso horizonte, afinal, unimos pessoas através da tecnologia e a união faz a inovação!",
+    "vision": "Visão",
+    "desire": "A L2Code deseja romper barreiras, pois a disrupção nos move para criar e o nosso sonho é humanizar ainda mais soluções em tecnologia para pessoas e empresas.",
+    "values": "Valores",
+    "weBelieve": "Acreditamos em um mundo onde as pessoas tem liberdade para se manifestar e compartilhar suas ideias. Nossos valores e princípios estão manifestados no nosso",
+    "manifestL2": "manifesto L2.",
+    "superPowers": "Super poderes que fazem a diferença",
+    "weAreMade": "Somos feitos de pessoas brilhantes, magos da tecnologia, somos os Lcoders! ● Mas claro, com grandes poderes, vem grandes responsabilidades. Por isso utilizamos nossos super poderes para ajudar pessoas e melhorar o mundo. ● São eles: o poder da colaboração, pluralidade, diversão, empatia, criatividade, aprendizagem, comunicação e, como resultado, temos também o poder da evolução!"
   },
   "cases": {
     "ourCases": "NOSSOS CASES SELECIONADOS",
@@ -12,17 +38,18 @@
     "weDoWell": "Fazemos muito bem porque nos preocupamos com qualidade, estética e, acima de tudo, com resultados.",
     "weHelped": "Ajudamos start-up americana a definir seu negócio e lançamos seu produto.",
     "webApp": "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.",
+    "weHelpedThousands": "Ajudamos milhares de jovens na burocrática jornada de obtenção de crédito educacional.",
     "providers": "Prestadores de serviço crescem na vida com o app Android que criamos para Startup brasileira.",
     "educationalCredit": "Ajudamos milhares de jovens na burocrática jornada de obtenção de crédito educacional",
-      "alt":{
-        "coverMemoriesUp" : "Capa Memories Up",
-        "coverMoreAccess" : "Capa Mais Acesso",
-        "coverImStopped" : "Capa Tô Parado",
-        "coverWorkQueue" : "Capa Fila de Trabalho"
-      }
-     },
+    "alt": {
+      "coverMemoriesUp": "Capa Memories Up",
+      "coverMoreAccess": "Capa Mais Acesso",
+      "coverImStopped": "Capa Tô Parado",
+      "coverWorkQueue": "Capa Fila de Trabalho"
+    }
+  },
 
-  "footer":{
+  "footer": {
     "letsTalk": "VAMOS CONVERSAR",
     "ourWhatsapp": "nosso whatsapp",
     "ourEmail": "nosso e-mail",
@@ -37,6 +64,42 @@
     "followUs": "Siga nos",
     "weCreate": "Criamos produtos digitais e experiências online que as pessoas adoram"
   },
+
+  "headerCases": {
+    "case01": "Case 01",
+    "memoriesUp": "Memories Up",
+    "design": "Design de produto para start-up americana",
+    "atTheBeginning": "No início era apenas uma ideia:",
+    "ifTheService": "E se o serviço de núvem tivesse tanto engajamento quanto as redes sociais? ● Ajudamos essa start-up americana a definir seu negócio e lançamos seu produto.",
+    "case02": "Case 02",
+    "moreAccess": "Mais Acesso",
+    "webappDevelopment": "Desenvolvimento de WebApp para a Fundacred",
+    "helpingToStart": "Ajudando a iniciar os estudos:",
+    "aWebapp": "Um Webapp que facilita a obtenção de crédito estudantil para jovens de todo brasil.",
+    "case03": "Case 03",
+    "imStopped": "Tô Parado",
+    "navigablePrototype": "Protótipo navegável para a startup americana",
+    "connecting": "Conectando quem faz a quem precisa:",
+    "serviceProviders": "Prestadores de serviço crescem na vida e conquistam sua dignidade com o app Android que criamos para Startup brasileira.",
+    "case04": "Case 04",
+    "workQueue": "Fila de Trabalho",
+    "platformDevelopment": "Desenvolvimento de plataforma para a startup americana",
+    "theBureaucracy": "A burocracia não precisa ser chata:",
+    "weMakeCharming": "Tornamos encantadora a burocrática jornada de obtenção de crédito educacional com a plataforma Fila de Trabalho e ajudamos milhares de jovens a iniciarem seus estudos."
+
+  },
+
+  "cardText": {
+    "processesCarriedOut": "Processos Realizados",
+    "weTread": "Trilhamos uma rica jornada de design, iniciando na concepção de negócio e produto até o protótipo de alta fidelidade no celular.",
+    "ideation": "+ Ideação",
+    "wireframe": "+ Wireframe",
+    "design": "+ Design",
+    "conceptArt": "+ Concept Art",
+    "navigablePrototype": "+ Protótipo Navegável",      
+    "uxUiDesign": "+ UX/UI Design"
+  },
+
   "headerOurCareer": {
     "beTrainee": "SEJA TRAINEE NA L2CODE",
     "hereTheTrainee": "Aqui o trainee não faz café, faz a diferença. ● A cada 4 meses contratamos estudantes de graduação para iniciarem suas carreiras conosco.",
@@ -46,13 +109,16 @@
     "iWantToApply": "QUERO ME CANDIDATAR",
     "makeYourCandidacy": "Faça sua candidatura agora e receba resposta primeiro. Fique tranquila, você pode atualizar seus dados depois.",
     "waitForTheResult": "Aguarde o resultado. Iremos encaminhá-lo a você por e-mail.",
-    "lastClass": "Última turma de Trainnes chamados.",
-    "aboutTheProgram": "Sobre o programa de Trainne",
+    "lastClass": "Última turma de Trainees chamados.",
+    "aboutTheProgram": "Sobre o programa de Trainee",
     "youAreGoingTo": "Você vai trabalhar num time de TI excepcional e vai ter treinamento durante 12 meses. O foco é ampliar seus conhecimentos em diferentes tecnologias, assim você descobre o que realmente gosta e a gente direciona seu potencial para gerar o máximo de impacto. ● Somos flexíveis com horários, o que facilita para você conciliar sua rotina acadêmica.",
-    "requirements": "Requisitos",
+    "requirements": "Requisitos:",
     "desirable": "Desejável estar cursando o último ano de Ciência da Computação ou equivalente ou outro curso superior na área de TI;",
     "availability": "Disponibilidade para trabalhar 30 horas semanais;",
-    "knowledge": "Conhecimentos de lógica de programação e estrutura de dados."
+    "knowledge": "Conhecimentos de lógica de programação e estrutura de dados.",
+    "whiteSpinner": "/images/Arrow-Spinner-OurCareers-White.svg",
+    "blackSpinner": "/images/Arrow-Spinner-OurCareers.svg",
+    "alt": { "howItIs": "Como é trabalhar na L2"}
   },
   "TalentsOurCareer": {
     "weEmbrace": "Abraçamos os talentos do mundo",
@@ -106,10 +172,91 @@
       "seeOurServices": "VEJA NOSSOS SERVIÇOS"
     }
   },
-  "outSourcing": {
-    "ourServices": " Outsourcing Consultivo · Ideação · Atendimento à Startup · Consultoria em TI · Design · ",
-    "ourClients": " Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · "
+  "ourServicesFull": {
+    "ourServices": "CONHEÇA NOSSOS SERVIÇOS",
+    "paragraph": "Trabalhamos ao lado dos nossos clientes para melhorar a experiência dos produtos e serviços, trazendo resultados para o negócio.",
+    "makeItHappen": "FAÇA ACONTECER",
+    "audioText": "Leroi Oliveira ● Líder técnico",
+    "seeHowItWorks": "VEJA COMO FUNCIONA",
+    "outSourcingAdvisory": {
+      "title": "Outsourcing Consultativo",
+      "paragraph": "Aumente sua capacidade produtiva ● Com acesso a nossa equipe, você agraga ao seu time profissionais apaixonados com competências diversas.",
+      "list": {
+        "optimization": "Otimização e controle de custos",
+        "costs": "Custos fixos variáveis",
+        "flexibility": "Flexibilidade e rapidez",
+        "access": "Acesso aos recursos da L2",
+        "services": "Centro de <s>custos</s> serviços",
+        "updated": "Atualizado às mudanças do mercado"
+      }
+    },
+    "ideation": {
+      "title": "Ideação",
+      "paragraph": "Co-criação com nosso time multidisciplinar na concepção do seu produto e estratégias de negócio.",
+      "list": {
+        "scope": "Preparação do escopo",
+        "differential": "Identificação dos diferenciais",
+        "immersive": "Sessão imersiva",
+        "product": "Justificativa do produto",
+        "riskReduction": "Redução do risco",
+        "costReduction": "Redução de custos"
+      }
+    },
+    "UXUI": {
+      "title": "UX/UI Design",
+      "paragraph": "Projetamos um produto encantador e funcional para os usuários, aliado aos objetivos do seu negócio.",
+      "list": {
+        "design": "UX/UI design",
+        "research": "Pesquisa de experiência",
+        "concept": "Design concept",
+        "thinking": "Design thinking",
+        "architecture": "Arquitetura de informação",
+        "systems": "Design systems",
+        "mobile": "Responsividade e mobile-first",
+        "prototype": "Protótipos navegáveis"
+      }
+    },
+    "startupService": {
+      "title": "Atendimento à Startup",
+      "paragraph": "Nossa equipe de UX/UI e desenvolvimento irá projetar e construir seu MVP a partir do zero, “garantindo” uma entrega rápida e rentável.",
+      "list": {
+        "market": "Direcionamento de mercado",
+        "growth": "Foco no crescimento do negócio",
+        "investors": "Direcionamento do produto para investidores",
+        "pitch": "Estratégias de pitch de negócio",
+        "mvp": "Concepção de MVP",
+        "test": "Teste e lançamento"
+      }
+    },
+    "ITConsulting": {
+      "title": "Consultoria em TI",
+      "paragraph": "Nosso Tech Lead Maicon Martins irá aconselhar você sobre as melhores práticas que sua empresa pode usar na infraestrutura.",
+      "list": {
+        "requirement": "Compreensão e análise dos requisitos de TI da organização e do ambiente subjacente",
+        "advice": "Aconselhamento de soluções e serviços em TI",
+        "infrastructure": "Infraestrutura de rede",
+        "cloud": "Ambientes em nuvem",
+        "process": "Gerenciamento e supervisão do processo de implementação dos sistemas"
+      }
+    }
   },
+  "outSourcing": {
+    "ourServices": "Outsourcing Consultivo · Ideação · Atendimento à Startup · Consultoria em TI · Design · ",
+    "ourClients": "Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · Adoraríamos ter você nessa lista · ",
+    "outsourcing": "Outsourcing Consultivo",
+    "ideation": "Ideação",
+    "startupService": "Atendimento à Startup",
+    "consultingService": "Consultoria em TI",
+    "design": "Design"
+  },
+
+  "CasesDetail": {
+    "design": "Design",
+    "prototipo": "Protótipo",
+    "imagens": "Imagens",
+    "tecnologias": "Tecnologias"
+  },
+
   "scroll": {
     "home": "Home",
     "about": "Sobre",

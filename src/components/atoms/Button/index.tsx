@@ -7,8 +7,8 @@ interface ButtonProps {
   borderColor?: string;
   backgroundColor?: string;
   text: string;
-  onClick: any;
-  WhiteArrow: any;
+  fill?: string;
+  fontSize?: string | number;
 }
 
 function Button({
@@ -16,17 +16,20 @@ function Button({
   borderColor,
   backgroundColor,
   text,
-  onClick,
-  WhiteArrow,
+  fill,
+  fontSize,
 }: ButtonProps) {
   return (
-    <LinkStyled onClick={onClick} href={linkBtn}>
-      <ButtonStyled bgColor={backgroundColor} borderColor={borderColor}>
+    <LinkStyled href={linkBtn}>
+      <ButtonStyled
+        bgColor={backgroundColor}
+        borderColor={borderColor}
+        fontSize={fontSize}
+      >
         {text}
       </ButtonStyled>
       <ButtonStyled bgColor={backgroundColor} borderColor={borderColor}>
-        {!WhiteArrow && <ArrowIcon />}
-        {WhiteArrow && <WhiteArrowIcon />}
+        <ArrowIcon fill={fill} />
       </ButtonStyled>
     </LinkStyled>
   );
