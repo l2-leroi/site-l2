@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import i18next from 'i18next';
-import ScrollCircle from '../../atoms/ScrollCircle/index';
+import ScrollCircle from '../../atoms/ScrollCircle';
 import {
   HeaderStyled,
   MainContentStyled,
@@ -123,7 +123,7 @@ function Header() {
       typography.forEach((element) => {
         element.classList.add('white');
       });
-      header.classList.add('white');
+      header?.classList.add('white');
       nav?.classList.add('white');
       setWhiteCircle(true);
     }

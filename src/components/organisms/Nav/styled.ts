@@ -27,6 +27,13 @@ export const NavStyled = styled.nav`
     }
   }
 
+  &.transparentBlack {
+    background: rgba(23, 27, 33, 0.5);
+    p {
+      color: ${colors.gray};
+    }
+  }
+
   &.smallFixed {
     position: fixed;
     padding: 25px 28px;

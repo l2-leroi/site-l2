@@ -29,7 +29,7 @@ module.exports = {
     'react/no-danger': 0,
     'no-restricted-globals': 0,
     'no-unused-expressions': 0,
-    'no-unused-vars': 2,
+    'no-unused-vars': 1,
     'no-return-assign': 0,
     'react/require-default-props': 0,
     'prefer-destructuring': 0,
