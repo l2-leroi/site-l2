@@ -3,8 +3,7 @@ import { colors } from '../../../styles/colors';
 
 export const ContainerStyledManifest = styled.section`
   display: flex;
-  flex-direction: column;
-  padding-left: 30%;
+  flex-direction: row;
   max-width: 100%;
   text-align: left;
   align-self: flex-start;
@@ -14,12 +13,18 @@ export const ContainerStyledManifest = styled.section`
   width: 100%;
   padding-top: 15.5rem;
   padding-bottom: 15.5rem;
+
+  .scrollCircleDiv {
+    width: 30vw;
+    min-width: 30vw;
+    margin-top: -70vw;
+  }
 `;
 
 export const GroupStyled = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  width: 70%;
   text-align: left;
 
   h1 {

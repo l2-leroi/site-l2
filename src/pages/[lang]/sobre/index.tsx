@@ -25,8 +25,9 @@ const PageAbout: NextPage = () => {
   return (
     <>
       <AboutPage />
-      <LineAnimation bottomBgColor={colors.purple} topBgColor={colors.gray} />
-      <Footer />
+      <LineAnimation bottomBgColor={colors.purple} topBgColor={colors.gray}>
+        <Footer />
+      </LineAnimation>
     </>
   );
 };

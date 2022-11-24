@@ -125,6 +125,63 @@ export const LanguageStyled = styled.div`
     }
   }
 `;
+export const SecondTitleGroupStyled = styled.hgroup`
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 15rem;
+  text-align: left;
+  align-self: flex-start;
+  align-items: stretch;
+  justify-content: flex-end;
+  margin-left: -28px;
+
+  @media (max-width: 800px) {
+    font-size: 12px;
+    max-width: 168px;
+  }
+
+  h1 {
+    @media (max-width: 800px) {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    margin-top: 4rem;
+  }
+
+  h2 {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  ul li {
+    margin-left: 20px;
+    list-style: '+ ';
+  }
+
+  .button {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    color: ${colors.gray};
+  }
+
+  .scrollCircleDiv {
+    // margin-top: 72px;
+    margin-top: -40px;
+    height: 0;
+    > div {
+      height: 3000px;
+      // margin-left: -28px;
+      width: 30vw;
+    }
+    align-self: start;
+    display: flex;
+    justify-content: center;
+  }
+`;
 
 export const SubTitleGroupStyled = styled.hgroup`
   display: flex;
@@ -180,6 +237,10 @@ export const ParagraphSubTitleStyled = styled.div`
   @media (max-width: 800px) {
     max-width: 168px;
   }
+`;
+
+export const TextStyledSuperPowers = styled.div`
+  width: 70%;
 `;
 
 export const TextStyled = styled.div`

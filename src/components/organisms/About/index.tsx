@@ -24,7 +24,10 @@ import {
   CardParagraphStyled,
   SpinningIconStyled,
   SpinnerImage,
+  TextStyledSuperPowers,
+  SecondTitleGroupStyled,
 } from './styled';
+import { StyledScrollCircle } from '../OurCareersPage/styled';
 
 export default function About() {
   const { t } = i18next;
@@ -187,34 +190,47 @@ export default function About() {
             </div>
           </StyledGroupCards>
         </DivCardStyled>
-        <SubTitleGroupStyled>
-          <SubTitleStyled>
-            {' '}
-            <Typography
-              tag="h1"
-              size="small"
-              fontWeight="weight2"
-              letterSpacing="space1"
-              lineHeight="line90"
-              color="gray"
-            >
-              {t('about.superPowers')}
-            </Typography>
-          </SubTitleStyled>
-          <ParagraphSubTitleStyled>
-            <Typography tag="p" color="gray" fontWeight="weight2">
-              {t('about.weAreMade')}
-            </Typography>
-            <div className="button">
-              <Button
-                linkBtn="#"
-                text="CONHEÇA A NOSSA EQUIPE"
-                fill={`${colors.gray}`}
-                fontSize="large"
+        <SecondTitleGroupStyled>
+          <div className="scrollCircleDiv">
+            <div>
+              <StyledScrollCircle
+                isWhiteImage
+                blackImage={`${t('images.spinnerBlack')}`}
+                whiteImage={`${t('images.spinnerWhite')}`}
               />
             </div>
-          </ParagraphSubTitleStyled>
-        </SubTitleGroupStyled>
+          </div>
+
+          <TextStyledSuperPowers>
+            <SubTitleStyled>
+              {' '}
+              <Typography
+                tag="h1"
+                size="small"
+                fontWeight="weight2"
+                letterSpacing="space1"
+                lineHeight="line90"
+                color="gray"
+              >
+                {t('about.superPowers')}
+              </Typography>
+            </SubTitleStyled>
+
+            <ParagraphSubTitleStyled>
+              <Typography tag="p" color="gray" fontWeight="weight2">
+                {t('about.weAreMade')}
+              </Typography>
+              <div className="button">
+                <Button
+                  linkBtn="#"
+                  text="CONHEÇA A NOSSA EQUIPE"
+                  fill={`${colors.gray}`}
+                  fontSize="large"
+                />
+              </div>
+            </ParagraphSubTitleStyled>
+          </TextStyledSuperPowers>
+        </SecondTitleGroupStyled>
       </SectionStyled>
     </ContainerStyledAbout>
   );

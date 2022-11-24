@@ -1,4 +1,5 @@
 import React from 'react';
+import { t } from 'i18next';
 import {
   ContainerStyledManifest,
   GroupStyled,
@@ -8,10 +9,19 @@ import {
   ImageStyled,
 } from './styled';
 import { Typography } from '../../../styles/typography';
+import { StyledScrollCircle } from '../OurCareersPage/styled';
 
 export default function Manifest() {
   return (
     <ContainerStyledManifest>
+      <div className="scrollCircleDiv">
+        <StyledScrollCircle
+          isWhiteImage={false}
+          blackImage={`${t('images.spinnerBlack')}`}
+          whiteImage={`${t('images.spinnerWhite')}`}
+        />
+      </div>
+
       <GroupStyled>
         <TitleStyled>
           <Typography
