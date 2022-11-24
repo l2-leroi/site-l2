@@ -14,6 +14,7 @@ import {
   ImageStyled,
 } from './styled';
 import { Typography } from '../../../styles/typography';
+import CookiesPopup from '../../atoms/CookiesPopup';
 
 function Header() {
   const { t } = i18next;
@@ -341,6 +342,7 @@ function Header() {
           </SocialMediaLinkStyled>
         </SocialMediaStyled>
       </FooterContentStyled>
+      <CookiesPopup />
     </HeaderStyled>
   );
 }

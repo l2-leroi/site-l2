@@ -37,6 +37,10 @@
     "followUs": "Siga nos",
     "weCreate": "Criamos produtos digitais e experiências online que as pessoas adoram"
   },
+  "cookiesPopup": {
+    "description": "Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você aceita nossa ",
+    "privacy": "<u>Política de Privacidade</u>."
+  },
   "headerOurCareer": {
     "beTrainee": "SEJA TRAINEE NA L2CODE",
     "hereTheTrainee": "Aqui o trainee não faz café, faz a diferença. ● A cada 4 meses contratamos estudantes de graduação para iniciarem suas carreiras conosco.",
