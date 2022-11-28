@@ -1,9 +1,7 @@
-import Link from 'next/link';
 import i18next from 'i18next';
 import { parse, isBefore } from 'date-fns';
 import {
   ContainerStyled,
-  LanguageStyled,
   DivStyled,
   DateStyled,
   Div,
@@ -50,6 +48,7 @@ export default function HeaderOurCareer({
     title: t('headerOurCareer.beTrainee'),
     text: t('headerOurCareer.hereTheTrainee'),
     sideTag: t('headerOurCareer.toTheTalents'),
+    pageName: t('headerOurCareer.pageName'),
   };
   return (
     <>

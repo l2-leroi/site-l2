@@ -35,7 +35,7 @@ export const DivStyled = styled.div`
 export const TitleStyled = styled.h2`
   font-family: 'Neue Machina', sans-serif;
   font-size: 6.4rem;
-  line-height: 57.6px;
+  line-height: 64.8px;
   font-weight: 800;
   width: 686px;
   letter-spacing: -0.04em;
@@ -51,12 +51,12 @@ export const TitleStyled = styled.h2`
 
   @media (max-width: 800px) {
     width: 278px;
-    line-height: 28.8px;
+    line-height: 32px;
   }
 
   @media (max-width: 415px) {
     width: 264px;
-    line-height: 28.8px;
+    line-height: 32.4px;
   }
 `;
 
@@ -81,6 +81,7 @@ export const ParagraphStyled = styled.p`
   line-height: 22.4px;
   font-weight: 400;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 
   ::selection {
     background: ${colors.purple};

@@ -7,6 +7,7 @@
     }
   },
   "cases": {
+    "pageName": "cases",
     "ourCases": "NOSSOS CASES SELECIONADOS",
     "laCream": "LA CREAM", 
     "seeSomeCases": "VEJA ALGUNS DE NOSSOS CASES",
@@ -39,6 +40,7 @@
     "weCreate": "Criamos produtos digitais e experiências online que as pessoas adoram"
   },
   "headerOurCareer": {
+    "pageName": "nossas-carreiras",
     "beTrainee": "SEJA TRAINEE NA L2CODE",
     "hereTheTrainee": "Aqui o trainee não faz café, faz a diferença. ● A cada 4 meses contratamos estudantes de graduação para iniciarem suas carreiras conosco.",
     "toTheTalents": "AOS TALENTOS",

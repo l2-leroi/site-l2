@@ -1,4 +1,3 @@
-import i18next from 'i18next';
 import Link from 'next/link';
 import { Typography } from '../../../styles/typography';
 import {
@@ -18,6 +17,7 @@ interface Header {
   title: string;
   text: string;
   sideTag: string;
+  pageName: string;
 }
 
 interface InternalPageHeaderProps {
@@ -25,6 +25,9 @@ interface InternalPageHeaderProps {
 }
 
 function InternalPageHeader(props: InternalPageHeaderProps) {
+  const href_en = '/en/';
+  const href_pt = '/pt/';
+
   return (
     <ContainerStyled>
       <ContentStyled>
@@ -44,7 +47,11 @@ function InternalPageHeader(props: InternalPageHeaderProps) {
                   letterSpacing="space1"
                   className="typography"
                 >
-                  <Link href="/pt/cases" locale="pt" scroll={false}>
+                  <Link
+                    href={href_pt + props.internalHeader.pageName}
+                    locale="pt"
+                    scroll={false}
+                  >
                     PT
                   </Link>
                 </Typography>
@@ -54,7 +61,11 @@ function InternalPageHeader(props: InternalPageHeaderProps) {
                   letterSpacing="space1"
                   className="typography"
                 >
-                  <Link href="/en/cases" locale="en" scroll={false}>
+                  <Link
+                    href={href_en + props.internalHeader.pageName}
+                    locale="en"
+                    scroll={false}
+                  >
                     EN
                   </Link>
                 </Typography>

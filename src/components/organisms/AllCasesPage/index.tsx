@@ -1,20 +1,7 @@
 import React from 'react';
 import i18next from 'i18next';
-import Link from 'next/link';
-import {
-  AsideStyled,
-  AsideStyledbutton,
-  ContainerStyled,
-  ContentStyled,
-  DivStyled,
-  LanguageStyled,
-  MainDivStyled,
-  ParagraphStyled,
-  PhraseStyled,
-  TitleStyled,
-} from './styled';
+import { ContainerStyled, ContentStyled } from './styled';
 import AllCaseList from '../../molecules/AllCaseList';
-import { Typography } from '../../../styles/typography';
 import InternalPageHeader from '../../molecules/InternalPageHeader';
 
 function Cases() {
@@ -87,6 +74,7 @@ function Cases() {
     title: t('cases.seeSomeCases'),
     text: t('cases.weDoWell'),
     sideTag: t('cases.laCream'),
+    pageName: t('cases.pageName'),
   };
 
   return (
