@@ -58,6 +58,10 @@
     "followUs": "Follow us",
     "weCreate": "We create digital products and online experiences that people love"
   },
+  "cookiesPopup": {
+    "description": "This website uses cookies to improve your experience. By continuing to browse, you accept our ",
+    "privacy": "Privacy Policy."
+  },
 
   "headerCases": {
     "case01": "Case 01",
@@ -92,7 +96,6 @@
     "navigablePrototype": "+ Protótipo Navegável",
     "uxUiDesign": "+ UX/UI Design"
   },
-
   "headerOurCareer": {
     "beTrainee": "BE A TRAINEE AT L2CODE",
     "hereTheTrainee": "Here the trainee doesn't make coffee, it makes a difference. ● Every 4 months we hire undergraduate students to start their careers with us.",

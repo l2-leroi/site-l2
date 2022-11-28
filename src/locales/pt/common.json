@@ -66,6 +66,10 @@
     "followUs": "Siga nos",
     "weCreate": "Criamos produtos digitais e experiências online que as pessoas adoram"
   },
+  "cookiesPopup": {
+    "description": "Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você aceita nossa ",
+    "privacy": "Política de Privacidade."
+  },
 
   "headerCases": {
     "case01": "Case 01",
@@ -101,7 +105,6 @@
     "navigablePrototype": "+ Protótipo Navegável",      
     "uxUiDesign": "+ UX/UI Design"
   },
-
   "headerOurCareer": {
     "pageName": "nossas-carreiras",
     "beTrainee": "SEJA TRAINEE NA L2CODE",
