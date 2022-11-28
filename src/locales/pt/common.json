@@ -33,7 +33,9 @@
     "weAreMade": "Somos feitos de pessoas brilhantes, magos da tecnologia, somos os Lcoders! ● Mas claro, com grandes poderes, vem grandes responsabilidades. Por isso utilizamos nossos super poderes para ajudar pessoas e melhorar o mundo. ● São eles: o poder da colaboração, pluralidade, diversão, empatia, criatividade, aprendizagem, comunicação e, como resultado, temos também o poder da evolução!"
   },
   "cases": {
+    "pageName": "cases",
     "ourCases": "NOSSOS CASES SELECIONADOS",
+    "laCream": "LA CREAM", 
     "seeSomeCases": "VEJA ALGUNS DE NOSSOS CASES",
     "weDoWell": "Fazemos muito bem porque nos preocupamos com qualidade, estética e, acima de tudo, com resultados.",
     "weHelped": "Ajudamos start-up americana a definir seu negócio e lançamos seu produto.",
@@ -101,6 +103,7 @@
   },
 
   "headerOurCareer": {
+    "pageName": "nossas-carreiras",
     "beTrainee": "SEJA TRAINEE NA L2CODE",
     "hereTheTrainee": "Aqui o trainee não faz café, faz a diferença. ● A cada 4 meses contratamos estudantes de graduação para iniciarem suas carreiras conosco.",
     "toTheTalents": "AOS TALENTOS",
