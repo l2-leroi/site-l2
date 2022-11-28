@@ -44,7 +44,7 @@ export default function HeaderOurCareer({
   const isStartDateBeforeThanNow = isBefore(startDateParsed, today);
   const isEndDateBeforeThanNow = isBefore(endDateParsed, today);
 
-  const headerInternal = {
+  const deaderProps = {
     title: t('headerOurCareer.beTrainee'),
     text: t('headerOurCareer.hereTheTrainee'),
     sideTag: t('headerOurCareer.toTheTalents'),
@@ -52,7 +52,7 @@ export default function HeaderOurCareer({
   };
   return (
     <>
-      <InternalPageHeader internalHeader={headerInternal} />
+      <InternalPageHeader internalHeader={deaderProps} />
       <ContainerStyled>
         <DivStyled>
           <DateStyled key={id}>

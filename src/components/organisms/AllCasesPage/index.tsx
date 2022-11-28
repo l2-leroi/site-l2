@@ -70,7 +70,7 @@ function Cases() {
     },
   ];
 
-  const headerInternal = {
+  const deaderProps  = {
     title: t('cases.seeSomeCases'),
     text: t('cases.weDoWell'),
     sideTag: t('cases.laCream'),
@@ -79,7 +79,7 @@ function Cases() {
 
   return (
     <>
-      <InternalPageHeader internalHeader={headerInternal} />
+      <InternalPageHeader internalHeader={deaderProps} />
       <ContainerStyled id="allCases">
         <ContentStyled>
           <AllCaseList cases={allCases} />
