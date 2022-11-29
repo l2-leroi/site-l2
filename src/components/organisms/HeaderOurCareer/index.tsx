@@ -3,7 +3,6 @@ import { parse, isBefore } from 'date-fns';
 import { colors } from '../../../styles/colors';
 import {
   ContainerStyled,
-  DivStyled,
   DateStyled,
   DivDate,
   DivStyledDate,
@@ -11,7 +10,6 @@ import {
 } from './styled';
 import { Typography } from '../../../styles/typography';
 import Button from '../../atoms/Button';
-import ScrollCircle from '../../atoms/ScrollCircle';
 import InternalPageHeader from '../../molecules/InternalPageHeader';
 // import { ImageArrowSpinnerStyled } from '../../atoms/ScrollCircle/styled';
 
