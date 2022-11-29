@@ -1,4 +1,5 @@
 import { ArrowIcon } from '../../../assets/icons/arrowIcon';
+import { WhiteArrowIcon } from '../../../assets/icons/whiteArrowIcon';
 import { ButtonStyled, LinkStyled } from './styled';
 
 interface ButtonProps {
