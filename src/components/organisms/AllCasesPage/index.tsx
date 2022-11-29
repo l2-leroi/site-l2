@@ -70,7 +70,7 @@ function Cases() {
     },
   ];
 
-  const deaderProps  = {
+  const deaderProps = {
     title: t('cases.seeSomeCases'),
     text: t('cases.weDoWell'),
     sideTag: t('cases.laCream'),

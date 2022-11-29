@@ -9,7 +9,8 @@ const AllCases: NextPage = () => {
   // make page refresh on top
   useEffect(() => {
     const nav = document.querySelector('.nav');
-    nav?.classList.add('white');
+    nav?.classList.add('black');
+
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
     } else {
@@ -17,7 +18,7 @@ const AllCases: NextPage = () => {
         window.scrollTo(0, 0);
       };
     }
-  });
+  }, []);
 
   return (
     <>

@@ -20,7 +20,7 @@ const MaisAcesso: NextPage = () => {
         window.scrollTo(0, 0);
       };
     }
-  });
+  }, []);
 
   const h2Header = 'headerCases.case02';
   const h1Header = 'headerCases.moreAccess';
