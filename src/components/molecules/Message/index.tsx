@@ -60,7 +60,7 @@ function Message(props: ToastrProps) {
         onClick={removeAlertStorage}
         linkBtn={props.toastr.link}
         text="SAIBA MAIS"
-        WhiteArrow
+        fill="white"
       />
     </ContentStyled>
   );

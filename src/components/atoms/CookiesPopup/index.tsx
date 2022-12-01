@@ -6,7 +6,6 @@ import {
   CookiesIcon,
   TriangleContainer,
   OkButton,
-  PrivacyLink,
 } from './style';
 
 export default function CookiesPopup() {

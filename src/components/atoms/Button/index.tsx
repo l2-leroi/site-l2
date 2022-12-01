@@ -1,5 +1,5 @@
+/* eslint-disable no-unused-vars */
 import { ArrowIcon } from '../../../assets/icons/arrowIcon';
-import { WhiteArrowIcon } from '../../../assets/icons/whiteArrowIcon';
 import { ButtonStyled, LinkStyled } from './styled';
 
 interface ButtonProps {
@@ -9,6 +9,7 @@ interface ButtonProps {
   text: string;
   fill?: string;
   fontSize?: string | number;
+  onClick?: (any) => any;
 }
 
 function Button({
@@ -18,9 +19,10 @@ function Button({
   text,
   fill,
   fontSize,
+  onClick,
 }: ButtonProps) {
   return (
-    <LinkStyled href={linkBtn}>
+    <LinkStyled href={linkBtn} onClick={onClick}>
       <ButtonStyled
         bgColor={backgroundColor}
         borderColor={borderColor}
