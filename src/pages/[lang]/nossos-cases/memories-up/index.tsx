@@ -20,7 +20,7 @@ const MemoriesUp: NextPage = () => {
         window.scrollTo(0, 0);
       };
     }
-  });
+  }, []);
 
   const h2Header = 'headerCases.case01';
   const h1Header = 'headerCases.memoriesUp';

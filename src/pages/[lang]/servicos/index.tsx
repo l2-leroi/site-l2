@@ -6,7 +6,7 @@ import Footer from '../../../components/organisms/Footer';
 const Services: NextPage = () => {
   useEffect(() => {
     const nav = document.querySelector('.nav');
-    nav?.classList.add('white');
+    nav?.classList.add('black');
 
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
@@ -15,7 +15,7 @@ const Services: NextPage = () => {
         window.scrollTo(0, 0);
       };
     }
-  });
+  }, []);
 
   return (
     <>

@@ -1,20 +1,8 @@
 import React from 'react';
 import i18next from 'i18next';
-import Link from 'next/link';
-import {
-  AsideStyled,
-  AsideStyledbutton,
-  ContainerStyled,
-  ContentStyled,
-  DivStyled,
-  LanguageStyled,
-  MainDivStyled,
-  ParagraphStyled,
-  PhraseStyled,
-  TitleStyled,
-} from './styled';
+import { ContainerStyled, ContentStyled } from './styled';
 import AllCaseList from '../../molecules/AllCaseList';
-import { Typography } from '../../../styles/typography';
+import InternalPageHeader from '../../molecules/InternalPageHeader';
 
 function Cases() {
   const { t } = i18next;
@@ -82,45 +70,22 @@ function Cases() {
     },
   ];
 
+  const deaderProps = {
+    title: t('cases.seeSomeCases'),
+    text: t('cases.weDoWell'),
+    sideTag: t('cases.laCream'),
+    pageName: t('cases.pageName'),
+  };
+
   return (
-    <ContainerStyled id="allCases">
-      <ContentStyled>
-        <MainDivStyled>
-          <DivStyled>
-            <TitleStyled>{t('cases.seeSomeCases')}</TitleStyled>
-            <AsideStyled>
-              <ParagraphStyled>&lt;LA CREAM&gt;</ParagraphStyled>
-            </AsideStyled>
-            <AsideStyledbutton>
-              <LanguageStyled>
-                <Typography
-                  tag="button"
-                  size="xxsmall"
-                  letterSpacing="space1"
-                  className="typography"
-                >
-                  <Link href="/pt/nossos-cases" locale="pt" scroll={false}>
-                    PT
-                  </Link>
-                </Typography>
-                <Typography
-                  tag="button"
-                  size="xxsmall"
-                  letterSpacing="space1"
-                  className="typography"
-                >
-                  <Link href="/en/nossos-cases" locale="en" scroll={false}>
-                    EN
-                  </Link>
-                </Typography>
-              </LanguageStyled>
-            </AsideStyledbutton>
-          </DivStyled>
-        </MainDivStyled>
-        <PhraseStyled>{t('cases.weDoWell')}</PhraseStyled>
-        <AllCaseList cases={allCases} />
-      </ContentStyled>
-    </ContainerStyled>
+    <>
+      <InternalPageHeader internalHeader={deaderProps} />
+      <ContainerStyled id="allCases">
+        <ContentStyled>
+          <AllCaseList cases={allCases} />
+        </ContentStyled>
+      </ContainerStyled>
+    </>
   );
 }
 export default Cases;

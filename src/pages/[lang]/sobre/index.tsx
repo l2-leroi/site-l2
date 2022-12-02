@@ -7,6 +7,9 @@ import AboutPage from '../../../components/organisms/AboutPage';
 
 const PageAbout: NextPage = () => {
   useEffect(() => {
+    const nav = document.querySelector('.nav');
+    nav?.classList.add('black');
+
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
     } else {
@@ -14,19 +17,14 @@ const PageAbout: NextPage = () => {
         window.scrollTo(0, 0);
       };
     }
-  });
-
-  useEffect(() => {
-    const nav = document.querySelector('.nav');
-    nav?.classList.add('white');
-    nav?.classList.add('animate');
   }, []);
 
   return (
     <>
       <AboutPage />
-      <LineAnimation bottomBgColor={colors.purple} topBgColor={colors.gray} />
-      <Footer />
+      <LineAnimation bottomBgColor={colors.purple} topBgColor={colors.gray}>
+        <Footer />
+      </LineAnimation>
     </>
   );
 };
