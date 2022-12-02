@@ -103,9 +103,10 @@ export default function TalentsOurCareer({
             letterSpacing="space1"
             fontWeight="weight2"
             fontFamily="font2"
-          >
-            {t('TalentsOurCareer.weLove')}
-          </Typography>
+            dangerouslySetInnerHTML={{
+              __html: t('TalentsOurCareer.weLove'),
+            }}
+          />
           <Typography tag="p">{t('TalentsOurCareer.weCreate')}</Typography>
 
           <DivImageStyled>

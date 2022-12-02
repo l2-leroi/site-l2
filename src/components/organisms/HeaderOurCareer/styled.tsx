@@ -16,11 +16,11 @@ export const TextStyled = styled.div`
   margin-bottom: 30px;
 
   h1 {
-    max-width: 50%;
+    max-width: 712px;
   }
 
   h2 {
-    max-width: 50%;
+    max-width: 464px;
     margin-top: 20px;
   }
 
@@ -92,7 +92,7 @@ export const StyledDate = styled.div`
   p {
     margin-top: 40px;
     margin-bottom: 40px;
-    width: 45%;
+    max-width: 464px;
     @media (max-width: 600px) {
       font-size: 12px;
       width: 50%;

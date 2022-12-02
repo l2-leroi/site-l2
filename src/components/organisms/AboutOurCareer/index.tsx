@@ -101,6 +101,7 @@ export default function AboutOurCareer({
               backgroundColor={`${colors.green}`}
               linkBtn="#"
               text={t('headerOurCareer.iWantToApply')}
+              fill={colors.black}
             />
           </div>
         </DivTextStyled>
