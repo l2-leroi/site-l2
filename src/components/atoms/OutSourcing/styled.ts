@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const SectionOutSourcingStyled = styled.section`
-  margin-left: -50px;
+  .marquee-container {
+    overflow: hidden;
+  }
   p {
     overflow: visible;
     text-align: center;

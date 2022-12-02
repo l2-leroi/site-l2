@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import i18next from 'i18next';
-import ScrollCircle from '../../atoms/ScrollCircle/index';
+import ScrollCircle from '../../atoms/ScrollCircle';
 import {
   HeaderStyled,
   MainContentStyled,
@@ -14,6 +14,7 @@ import {
   ImageStyled,
 } from './styled';
 import { Typography } from '../../../styles/typography';
+import CookiesPopup from '../../atoms/CookiesPopup';
 
 function Header() {
   const { t } = i18next;
@@ -122,7 +123,7 @@ function Header() {
       typography.forEach((element) => {
         element.classList.add('white');
       });
-      header.classList.add('white');
+      header?.classList.add('white');
       nav?.classList.add('white');
       setWhiteCircle(true);
     }
@@ -341,6 +342,7 @@ function Header() {
           </SocialMediaLinkStyled>
         </SocialMediaStyled>
       </FooterContentStyled>
+      <CookiesPopup />
     </HeaderStyled>
   );
 }

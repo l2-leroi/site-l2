@@ -8,7 +8,7 @@ export const ContainerStyled = styled.div`
   // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   // padding: 10rem 2.8rem 48rem;
   // padding: 10rem 2.8rem 10rem;
-  padding-top: 24rem;
+  // padding-top: 24rem;
   padding-bottom: 10rem;
 
   // @media (min-width: 2560px) {

@@ -1,11 +1,16 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
+import LineAnimation from '../../../components/atoms/LineAnimation';
+import Footer from '../../../components/organisms/Footer';
+import OurCareersPage from '../../../components/organisms/OurCareersPage';
+import { colors } from '../../../styles/colors';
 
-import HeaderOurCareer from '../../../components/organisms/HeaderOurCareer';
-import TalentsOurCareer from '../../../components/organisms/TalentsOurCareer';
-
-const NossasCarreiras: NextPage = () => {
+const AllCases: NextPage = () => {
+  // make page refresh on top
   useEffect(() => {
+    const nav = document.querySelector('.nav');
+    nav?.classList.add('black');
+
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
     } else {
@@ -13,27 +18,16 @@ const NossasCarreiras: NextPage = () => {
         window.scrollTo(0, 0);
       };
     }
-  });
+  }, []);
 
-  const startDate = '20/05/2022';
-  const endDate = '24/05/2022';
-  const id = 1;
-  const li = [
-    'headerOurCareer.desirable',
-    'headerOurCareer.availability',
-    'headerOurCareer.knowledge',
-  ];
   return (
     <>
-      <HeaderOurCareer
-        startDate={startDate}
-        endDate={endDate}
-        id={id}
-        li={li}
-      />
-      <TalentsOurCareer />
+      <OurCareersPage />
+      <LineAnimation bottomBgColor={colors.purple} topBgColor={colors.gray}>
+        <Footer />
+      </LineAnimation>
     </>
   );
 };
 
-export default NossasCarreiras;
+export default AllCases;

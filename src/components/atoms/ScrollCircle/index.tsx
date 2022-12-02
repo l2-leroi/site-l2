@@ -2,16 +2,18 @@ import i18next from 'i18next';
 import { ArrowSpinnerComponentStyled, ImageArrowSpinnerStyled } from './styled';
 
 interface imageProps {
-  isWhiteImage: boolean;
+  isWhiteImage?: boolean;
   blackImage: string;
   whiteImage: string;
   hidden?: boolean;
+  className?: string;
 }
 
 function ScrollCircle(props: imageProps) {
   const { t } = i18next;
   return (
     <ArrowSpinnerComponentStyled
+      className={props.className}
       style={{ visibility: props.hidden ? 'hidden' : 'visible' }}
     >
       <ImageArrowSpinnerStyled

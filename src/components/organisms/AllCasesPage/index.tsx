@@ -1,20 +1,8 @@
 import React from 'react';
 import i18next from 'i18next';
-import Link from 'next/link';
-import {
-  AsideStyled,
-  AsideStyledbutton,
-  ContainerStyled,
-  ContentStyled,
-  DivStyled,
-  LanguageStyled,
-  MainDivStyled,
-  ParagraphStyled,
-  PhraseStyled,
-  TitleStyled,
-} from './styled';
+import { ContainerStyled, ContentStyled } from './styled';
 import AllCaseList from '../../molecules/AllCaseList';
-import { Typography } from '../../../styles/typography';
+import InternalPageHeader from '../../molecules/InternalPageHeader';
 
 function Cases() {
   const { t } = i18next;
@@ -50,7 +38,7 @@ function Cases() {
       info: t('cases.weHelped'),
       image: '/images/capa-memories-up.jpg',
       alt: t('cases.alt.coverMemoriesUp'),
-      link: '#1',
+      link: '/nossos-cases/memories-up',
       hover: memoriesUpHover,
     },
     {
@@ -59,7 +47,7 @@ function Cases() {
       info: t('cases.webApp'),
       image: '/images/capa-mais-acesso.jpg',
       alt: t('cases.alt.coverMoreAccess'),
-      link: '#2',
+      link: '/nossos-cases/mais-acesso',
       hover: maisAcessoHover,
     },
     {
@@ -68,7 +56,7 @@ function Cases() {
       info: t('cases.providers'),
       image: '/images/capa-to-parado.jpg',
       alt: t('cases.alt.coverImStopped'),
-      link: '#3',
+      link: '/nossos-cases/to-parado',
       hover: toParadoHover,
     },
     {
@@ -77,50 +65,27 @@ function Cases() {
       info: t('cases.educationalCredit'),
       image: '/images/capa-fila-de-trabalho-1.jpg',
       alt: t('cases.alt.coverWorkQueue'),
-      link: '#4',
+      link: '/nossos-cases/fila-de-trabalho',
       hover: FilaDeTrabalho,
     },
   ];
 
+  const deaderProps = {
+    title: t('cases.seeSomeCases'),
+    text: t('cases.weDoWell'),
+    sideTag: t('cases.laCream'),
+    pageName: t('cases.pageName'),
+  };
+
   return (
-    <ContainerStyled id="allCases">
-      <ContentStyled>
-        <MainDivStyled>
-          <DivStyled>
-            <TitleStyled>{t('cases.seeSomeCases')}</TitleStyled>
-            <AsideStyled>
-              <ParagraphStyled>&lt;LA CREAM&gt;</ParagraphStyled>
-            </AsideStyled>
-            <AsideStyledbutton>
-              <LanguageStyled>
-                <Typography
-                  tag="button"
-                  size="xxsmall"
-                  letterSpacing="space1"
-                  className="typography"
-                >
-                  <Link href="/pt/cases" locale="pt" scroll={false}>
-                    PT
-                  </Link>
-                </Typography>
-                <Typography
-                  tag="button"
-                  size="xxsmall"
-                  letterSpacing="space1"
-                  className="typography"
-                >
-                  <Link href="/en/cases" locale="en" scroll={false}>
-                    EN
-                  </Link>
-                </Typography>
-              </LanguageStyled>
-            </AsideStyledbutton>
-          </DivStyled>
-        </MainDivStyled>
-        <PhraseStyled>{t('cases.weDoWell')}</PhraseStyled>
-        <AllCaseList cases={allCases} />
-      </ContentStyled>
-    </ContainerStyled>
+    <>
+      <InternalPageHeader internalHeader={deaderProps} />
+      <ContainerStyled id="allCases">
+        <ContentStyled>
+          <AllCaseList cases={allCases} />
+        </ContentStyled>
+      </ContainerStyled>
+    </>
   );
 }
 export default Cases;

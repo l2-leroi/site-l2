@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import i18next from 'i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import Scroll from '../../molecules/Scroll';
+import InfiniteScroll from '../../molecules/InfiniteScroll';
 import {
   ContainerStyled,
   DivLogoStyled,
@@ -66,7 +66,7 @@ function Menu({ openMenu, closeMenu }: MenuProps) {
           </DivContactStyled>
         </DivLogoStyled>
 
-        <Scroll closeMenu={closeMenu} />
+        <InfiniteScroll closeMenu={closeMenu} />
 
         <DivMenuStyled>
           <DivTextMenuStyled>

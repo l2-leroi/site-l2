@@ -9,7 +9,7 @@ interface NavProps {
 export const NavStyled = styled.nav`
   position: absolute;
   width: 100%;
-  z-index: 60;
+  z-index: 100;
   color: ${colors.black};
   background-color: ${colors.gray};
   padding: 32px 28px;
@@ -22,6 +22,20 @@ export const NavStyled = styled.nav`
     background-color: transparent;
     color: ${colors.gray};
 
+    p {
+      color: ${colors.gray};
+    }
+  }
+
+  &.transparentBlack {
+    background: rgba(23, 27, 33, 0.5);
+    p {
+      color: ${colors.gray};
+    }
+  }
+
+  &.black {
+    background-color: ${colors.black};
     p {
       color: ${colors.gray};
     }
