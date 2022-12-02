@@ -23,7 +23,7 @@ export const DivMainTextStyled = styled.div`
   h1 {
     align-self: flex-start;
     display: flex;
-    width: 70%;
+    max-width: 712px;
     margin-bottom: 40px;
 
     @media (max-width: 400px) {
@@ -34,7 +34,7 @@ export const DivMainTextStyled = styled.div`
   p {
     align-self: flex-start;
     display: flex;
-    max-width: 47%;
+    max-width: 464px;
 
     @media (max-width: 400px) {
       max-width: 70%;
@@ -52,7 +52,7 @@ export const DivMainTextStyled = styled.div`
   }
 
   .line {
-    width: 100%;
+    width: 70vw;
     border-bottom: 1px solid #8e9195;
     margin-top: 80px;
     margin-bottom: 80px;

@@ -94,7 +94,7 @@ export const DivTextStyled = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 8%;
-  max-width: 60%;
+  max-width: 464px;
 
   @media (max-width: 1260px) {
     margin-left: 30%;
