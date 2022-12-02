@@ -19,8 +19,8 @@ const Pessoas: NextPage = () => {
     <>
       {/* <PeoplePage /> */}
       <LineAnimation
-        lineBg={colors.purple}
-        secondaryBg={colors.black}
+        topBgColor={colors.purple}
+        bottomBgColor={colors.black}
         hasOutSourcing={false}
         hasSpinner={false}
       />

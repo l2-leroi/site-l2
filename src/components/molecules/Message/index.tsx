@@ -1,5 +1,7 @@
 import React from 'react';
+// eslint-disable-next-line import/no-unresolved
 import { toast } from 'react-toastify';
+// eslint-disable-next-line import/no-unresolved
 import 'react-toastify/dist/ReactToastify.min.css';
 import { useRouter } from 'next/router';
 import Button from '../../atoms/Button';
