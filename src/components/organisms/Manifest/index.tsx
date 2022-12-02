@@ -76,7 +76,7 @@ export default function Manifest() {
           <Typography tag="p">
             Somos feitos de pessoas, trabalhamos com pessoas e criamos para
             pessoas. Cada indivíduo é único e importante para nós e deve ter seu
-            espaço.
+            espaço respeitado.
             <Typography tag="h3">
               <Typography tag="b">#pessoas #indivíduos</Typography>
             </Typography>
@@ -103,10 +103,10 @@ export default function Manifest() {
 
         <ParagraphStyled>
           <Typography tag="p">
-            Cada pessoa tem seus interesses e paixões. Quando fazemos o que
-            gostamos fazemos o melhor que podemos fazer, por isso tentamos ao
-            máximo colocar a pessoa certa no lugar certo e ajudamos cada
-            colaborador a descobrir isso.
+            Cada pessoa tem seus interesses e paixões, quando fazemos o que
+            gostamos fazemos o melhor que podemos fazer. Por isso, nos
+            preocupamos em colocar a pessoa certa no lugar certo e recompensar
+            cada passo bem sucedido.
             <Typography tag="h3">
               <Typography tag="b">#lovetocode #sintonia</Typography>
             </Typography>
@@ -127,19 +127,18 @@ export default function Manifest() {
             fontWeight="weight2"
           >
             {' '}
-            3. Nós resolvemos o problema
+            3. Não existe o que não podemos fazer, apenas o que não fizemos
+            ainda
           </Typography>
         </SubTitleStyled>
 
         <ParagraphStyled>
           <Typography tag="p">
-            Temos orientação a solução, a resolver os problemas sejam eles quais
-            forem. Fazemos isso entendendo as necessidades de nossos
-            clientes/projetos e ajudamos a criar uma solução propositiva.
+            Fazer sem medo de errar, aprender com isso e então fazer melhor.
+            Estamos em constante aprendizado, e isso nos move para novos
+            horizontes.
             <Typography tag="h3">
-              <Typography tag="b">
-                #excelência #solução #propositividade #comprometimento
-              </Typography>
+              <Typography tag="b">#aprendizado</Typography>
             </Typography>
           </Typography>
         </ParagraphStyled>
@@ -158,17 +157,19 @@ export default function Manifest() {
             fontWeight="weight2"
           >
             {' '}
-            4. Não existe o que não podemos fazer, apenas o que não fizemos
-            ainda
+            4. Nós resolvemos o problema
           </Typography>
         </SubTitleStyled>
 
         <ParagraphStyled>
           <Typography tag="p">
-            Fazer, errar, aprender e, então, fazer melhor. Estamos em constante
-            aprendizado, e isso nos move para novos horizontes.
+            Temos orientação a solução, a resolver os problemas sejam eles quais
+            forem. Fazemos isso entendendo as necessidades de nossos
+            clientes/projetos e criando uma solução propositiva.
             <Typography tag="h3">
-              <Typography tag="b">#aprendizado</Typography>
+              <Typography tag="b">
+                #excelência #solução #propositividade #comprometimento
+              </Typography>
             </Typography>
           </Typography>
         </ParagraphStyled>
@@ -193,10 +194,10 @@ export default function Manifest() {
 
         <ParagraphStyled>
           <Typography tag="p">
-            Não podemos esconder conhecimento. Temos que compartilhar o
-            conhecimento ao máximo, seja com clientes, colaboradores ou com o
-            mundo. L2 é um grande time! Cada colaborador ajuda e fortalece a
-            fraqueza dos outros.
+            Ao contrário das tradicionais hierarquias, nós não escondemos
+            conhecimento, mas sim compartilhamos ao máximo, seja com clientes,
+            colaboradores ou com o mundo. L2 é um grande time! Cada colaborador
+            ajuda e fortalece a fraqueza dos outros.
             <Typography tag="h3">
               <Typography tag="b">#compartilhar #colaborar #l2team</Typography>
             </Typography>
@@ -223,12 +224,12 @@ export default function Manifest() {
 
         <ParagraphStyled>
           <Typography tag="p">
-            Criamos um ambiente acolhedor e inclusivo para que os Lcoders possam
-            dar o seu melhor. Acreditamos que a diversidade amplia nossa maneira
-            de ver o mundo, a forma como analisamos situações e as diferentes
-            maneiras com que resolvemos problemas.
+            Acreditamos que a diversidade amplia nossa maneira de ver o mundo, a
+            forma como analisamos situações e as diferentes maneiras com que
+            resolvemos problemas. Criamos um ambiente acolhedor e inclusivo para
+            que L2team possa se desenvolver e dar o seu melhor.
             <Typography tag="h3">
-              <Typography tag="b">#respeito #diversidade #inclusão</Typography>
+              <Typography tag="b">#respeito #inclusão</Typography>
             </Typography>
           </Typography>
         </ParagraphStyled>
@@ -248,52 +249,17 @@ export default function Manifest() {
             fontWeight="weight2"
           >
             {' '}
-            7. Lazer e Criatividade
-          </Typography>
-        </SubTitleStyled>
-
-        <ParagraphStyled>
-          <Typography tag="p">
-            É preciso saber aproveitar os momentos de lazer de maneira criativa
-            e prazerosa, nada de triplicar as jornadas de trabalho! Não adianta
-            forçar o cérebro quando está cansado e saturado. O resultado será
-            medíocre e insuficiente. Ao mesmo tempo, quando estamos felizes e
-            nos sentimos estimulados mentalmente, as melhores ideias chegam até
-            nós de forma inesperada.
-            <Typography tag="h3">
-              <Typography tag="b">
-                #Lazer #Criatividade #Produtividade
-              </Typography>
-            </Typography>
-          </Typography>
-        </ParagraphStyled>
-
-        <ImageStyled>
-          <img src="/images/Manifest/manifest-image-07-01.png" alt="L2code" />
-          <img src="/images/Manifest/manifest-image-07-02.png" alt="L2code" />
-        </ImageStyled>
-        <div className="line" />
-
-        <SubTitleStyled>
-          <Typography
-            tag="h2"
-            size="small"
-            letterSpacing="space1"
-            fontWeight="weight2"
-          >
-            {' '}
-            8. Se não for divertido tem algo errado
+            7. Se não for divertido tem algo errado
           </Typography>
         </SubTitleStyled>
 
         <ParagraphStyled>
           <Typography tag="p">
             Se está chato ou desmotivador tem algo errado. Quando temos espaço
-            pra usar nossas habilidades, nos desenvolver e criar coisas
-            inovadoras sempre será motivador, divertido e empolgante.
+            para usar nossas habilidades, criar coisas novas e nos
+            desenvolvermos, sempre será motivador, divertido e empolgante.
             <Typography tag="h3">
               <Typography tag="b">
-                {' '}
                 #diversão #evolução #crescimento #inovação
               </Typography>
             </Typography>
@@ -313,45 +279,21 @@ export default function Manifest() {
             fontWeight="weight2"
           >
             {' '}
-            9. Você não precisa pisar em ovos
+            8. Ninguém tem sempre razão
           </Typography>
         </SubTitleStyled>
 
         <ParagraphStyled>
           <Typography tag="p">
-            Pode dizer as coisas de forma clara. Se algo que te incomoda ou se
-            você acha que algo pode ser melhorado, fale! Adoramos feedbacks,
-            isso nos ajuda a crescer.
+            Seja desenvolvedor, líder, gestor, cliente ou o papa. Nós acertamos
+            ou erramos como time. Se algo pode ser melhorado, você tem o direito
+            de dizer de forma clara. Adoramos a cultura de feedbacks, pois nos
+            ajuda a crescer.
             <Typography tag="h3">
-              <Typography tag="b"> #clareza #feedback</Typography>
-            </Typography>
-          </Typography>
-        </ParagraphStyled>
-
-        <ImageStyled>
-          <img src="/images/Manifest/manifest-image-09.png" alt="L2code" />
-        </ImageStyled>
-        <div className="line" />
-
-        <SubTitleStyled>
-          <Typography
-            tag="h2"
-            size="small"
-            letterSpacing="space1"
-            fontWeight="weight2"
-          >
-            {' '}
-            10. Ninguém tem sempre razão
-          </Typography>
-        </SubTitleStyled>
-
-        <ParagraphStyled>
-          <Typography tag="p">
-            Seja desenvolvedor, líder, gestor, cliente ou o papa. Acreditamos em
-            dois papéis especialistas e decisores. Os especialistas dão a
-            recomendação e o decisor toma as decisões.
-            <Typography tag="h3">
-              <Typography tag="b"> #especialista #decisor</Typography>
+              <Typography tag="b">
+                {' '}
+                #clareza #transparência #feedback
+              </Typography>
             </Typography>
           </Typography>
         </ParagraphStyled>
@@ -359,7 +301,6 @@ export default function Manifest() {
         <ImageStyled>
           <img src="/images/Manifest/manifest-image-10.png" alt="L2code" />
         </ImageStyled>
-
         <div className="line" />
 
         <SubTitleStyled>
@@ -370,19 +311,18 @@ export default function Manifest() {
             fontWeight="weight2"
           >
             {' '}
-            11. Encantamento
+            9. Não é feitiçaria, é tecnologia
           </Typography>
         </SubTitleStyled>
 
         <ParagraphStyled>
           <Typography tag="p">
-            Não é feitiçaria, é tecnologia. É tão fantástico quando as soluções
-            de tecnologia resolvem os problemas que chega a ser misterioso. Para
-            fazer isso pensamos em cada detalhe, colocamos o usuário no centro e
-            então criamos produtos digitais com uma experiência única, funcional
-            e encantadora que parece mágica.
+            Usamos todo o potencial da tecnologia para criar impacto positivo no
+            mundo, reinventando soluções e encantando as pessoas com produtos
+            digitais e experiências online que as pessoas adoram. Parece mágica,
+            mas é código. Parece super poderes, mas é design.
             <Typography tag="h3">
-              <Typography tag="b"> #encantamento #tecnologia</Typography>
+              <Typography tag="b">#encantamento #tecnologia</Typography>
             </Typography>
           </Typography>
         </ParagraphStyled>
