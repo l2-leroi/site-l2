@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import LineAnimation from '../../../components/atoms/LineAnimation';
-import PeoplePage from '../../../components/organisms/PeoplePage';
 import { colors } from '../../../styles/colors';
 
 const Pessoas: NextPage = () => {
@@ -10,7 +9,7 @@ const Pessoas: NextPage = () => {
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
     } else {
-      window.onbeforeunload = function () {
+      window.onbeforeunload = () => {
         window.scrollTo(0, 0);
       };
     }
@@ -18,7 +17,7 @@ const Pessoas: NextPage = () => {
 
   return (
     <>
-      <PeoplePage />
+      {/* <PeoplePage /> */}
       <LineAnimation
         lineBg={colors.purple}
         secondaryBg={colors.black}
