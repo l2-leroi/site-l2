@@ -49,13 +49,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   if (asPath !== '/' && asPath !== '/404') {
     i18next.changeLanguage(clientLanguage);
   }
-  const toastrs = [
-    {
-      text: 'Estamos com vagas abertas para Trainee.',
-      link: 'pt/cases',
-      id: '1',
-    },
-  ];
+  const toastrs = [];
 
   return (
     <>

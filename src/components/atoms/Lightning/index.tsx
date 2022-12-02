@@ -178,7 +178,7 @@ export const Lightning = () => {
       id="canvas"
       ref={ref}
       style={{
-        zIndex: 999999,
+        zIndex: 998,
         position: 'absolute',
         top: 0,
         left: '0',

@@ -24,8 +24,8 @@ const OurCareersPage: NextPage = () => {
     nav?.classList.add('animate');
   }, []);
 
-  const startDate = '20/08/2022';
-  const endDate = '24/08/2022';
+  const startDate = '11/11/2022';
+  const endDate = '25/11/2022';
   const id = 1;
   const li = [
     'headerOurCareer.desirable',
