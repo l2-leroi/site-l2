@@ -27,4 +27,13 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
   }
+
+  *::selection {
+    background: ${colors.purple};
+    color: ${colors.gray};
+  }
+
+  img {
+    user-select: none;
+  }
 `;

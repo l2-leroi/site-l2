@@ -20,7 +20,7 @@ const FilaDeTrabalho: NextPage = () => {
         window.scrollTo(0, 0);
       };
     }
-  });
+  }, []);
 
   const h2Header = 'headerCases.case04';
   const h1Header = 'headerCases.workQueue';

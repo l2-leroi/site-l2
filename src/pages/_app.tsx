@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { defaultLanguage, languages } from '../i18n';
 import { GlobalStyle } from '../styles/global';
+import Toastr from '../components/organisms/Toastr';
 import { Lightning } from '../components/atoms/Lightning';
 import Nav from '../components/organisms/Nav';
 
@@ -48,9 +49,17 @@ function MyApp({ Component, pageProps }: AppProps) {
   if (asPath !== '/' && asPath !== '/404') {
     i18next.changeLanguage(clientLanguage);
   }
+  const toastrs = [
+    {
+      text: 'Estamos com vagas abertas para Trainee.',
+      link: 'pt/cases',
+      id: '1',
+    },
+  ];
 
   return (
     <>
+      <Toastr toastr={toastrs} />
       <Head>
         <meta
           name="description"
