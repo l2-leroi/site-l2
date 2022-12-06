@@ -48,7 +48,7 @@ export const NavStyled = styled.nav`
   }
 
   @media (max-width: 500px) {
-    opacity: 0;
+    // opacity: 0;
 
     &.animate {
       opacity: 1;
