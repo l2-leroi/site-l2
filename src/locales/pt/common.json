@@ -12,6 +12,16 @@
       "manifest": "manifesto L2code"
     }
   },
+
+  "people":{
+    "pageName": "pessoas",
+    "ourTalents":"NOSSOS TALENTOS, OS LCODERS",
+    "weWork": "Trabalhamos de forma 100% remota abrançando os talentos do mundo",
+    "whoWeAre":"QUEM SOMOS",
+    "nobodyInnovatesAlone":"Ninguém inova sozinho",
+    "togetherWeMakeMagic": "Mas juntos fazemos mágica. ● Nossa equipe é formada por talentos de diferentes níveis e lugares, prontos para superar suas expectativas."
+  },
+
   "about": {
     "title": "SOMOS A L2CODE",
     "weCreated": "Criamos soluções tecnológicas de forma humanizada e inovadora, pois acreditamos que inovar é aprender e ensinar sem fronteiras.",
