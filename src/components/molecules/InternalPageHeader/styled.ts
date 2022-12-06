@@ -5,17 +5,22 @@ import { Typography } from '../../../styles/typography';
 export const ContainerStyled = styled.div`
   color: ${colors.gray};
   background-color: ${colors.black};
-  padding-top: 24rem;
+  padding-top: 18rem;
+  padding-bottom: 12rem;
 `;
 
 export const ContentStyled = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 1500px;
   margin: 0 auto;
-  padding-left: 2.8rem;
-  padding-right: 2.8rem;
+  padding-left: 28px;
+  padding-right: 28px;
+
+  @media (max-width: 500px) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 `;
 
 export const MainDivStyled = styled.div`
@@ -70,8 +75,11 @@ export const AsideStyled = styled.aside`
   @media (min-width: 400px) {
     margin-left: 60px;
   }
-  @media (max-width: 400px) {
-    margin-left: 19px;
+
+  //@media (max-width: 400px) {
+  @media (max-width: 290px) {
+    // margin-left: 19px;
+    margin-left: 0px;
   }
 `;
 
@@ -82,6 +90,11 @@ export const ParagraphStyled = styled.p`
   font-weight: 400;
   letter-spacing: -0.02em;
   white-space: nowrap;
+  text-align: end;
+
+  @media (max-width: 320px) {
+    white-space: break-spaces;
+  }
 
   ::selection {
     background: ${colors.purple};
@@ -93,6 +106,10 @@ export const AsideStyledbutton = styled.div`
   margin-left: 15px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 
 export const LanguageStyled = styled.div`
@@ -156,7 +173,7 @@ export const PhraseStyled = styled.p`
   font-size: 2.4rem;
   line-height: 3.36rem;
   width: 502px;
-  margin-bottom: 8rem;
+  // margin-bottom: 8rem;
   letter-spacing: -0.04em;
 
   ::selection {
