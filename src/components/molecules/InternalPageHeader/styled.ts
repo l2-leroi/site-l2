@@ -35,6 +35,7 @@ export const DivStyled = styled.div`
   display: flex;
   align-items: end;
   margin-bottom: 3.6rem;
+  justify-content: space-between;
 `;
 
 export const TitleStyled = styled.h2`
@@ -42,8 +43,11 @@ export const TitleStyled = styled.h2`
   font-size: 6.4rem;
   line-height: 64.8px;
   font-weight: 800;
-  width: 686px;
+  // width: 686px;
   letter-spacing: -0.04em;
+  width: 100%;
+  display: flex;
+  justifly-content: flex-start;
 
   ::selection {
     background: ${colors.purple};
@@ -55,7 +59,8 @@ export const TitleStyled = styled.h2`
   }
 
   @media (max-width: 800px) {
-    width: 278px;
+    width: 100%;
+    // width: 278px;
     line-height: 32px;
   }
 
@@ -67,19 +72,27 @@ export const TitleStyled = styled.h2`
 
 export const AsideStyled = styled.aside`
   margin-bottom: -8px;
-  margin-left: 25px;
+  // margin-left: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
   @media (max-width: 800px) {
-    margin-left: 5px;
+    // margin-left: 5px;
   }
+
   @media (min-width: 400px) {
-    margin-left: 60px;
+    // margin-left: 60px;
   }
 
   //@media (max-width: 400px) {
   @media (max-width: 290px) {
     // margin-left: 19px;
     margin-left: 0px;
+  }
+
+  @media (max-width: 500px) {
+    justify-content: flex-end;
   }
 `;
 
@@ -103,9 +116,11 @@ export const ParagraphStyled = styled.p`
 `;
 
 export const AsideStyledbutton = styled.div`
-  margin-left: 15px;
+  // margin-left: 15px;
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: flex-end;
 
   @media (max-width: 500px) {
     display: none;
