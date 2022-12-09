@@ -284,6 +284,7 @@ export const SpinnerImage = styled.img`
 `;
 export const DivCardStyled = styled.div`
   display: flex;
+  justify-content: center;
   margin-top: 15rem;
   overflow: hidden;
 
@@ -292,10 +293,14 @@ export const DivCardStyled = styled.div`
     background-color: #242a33;
     width: 33.33%;
     // width: 464px;
-    // min-height: 450px;
-    // max-height: 550px;
+    min-height: 450px;
+    max-height: 550px;
     border-radius: 8px;
     padding: 28px;
+
+    @media (max-width: 1150px) {
+      width: 464px;
+    }
 
     @media (max-width: 800px) {
       width: 168px;
@@ -310,8 +315,9 @@ export const StyledGroupCards = styled.hgroup`
   display: flex;
   flex-direction: row;
   width: 100%;
+  max-width: 1512px;
   justify-content: space-between;
-  gap: 20px;
+  gap: 32px;
 
   @media (max-width: 1200px) {
     display: flex;
