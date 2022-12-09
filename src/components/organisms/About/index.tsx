@@ -104,13 +104,23 @@ export default function About() {
             </Typography>
           </SubTitleStyled>
           <ParagraphSubTitleStyled>
-            <Typography tag="p" color="gray" fontWeight="weight2">
+            <Typography
+              tag="p"
+              color="gray"
+              fontWeight="weight1"
+              line-height="line140"
+            >
               {t('about.are')}
             </Typography>
           </ParagraphSubTitleStyled>
 
           <TextStyled>
-            <Typography tag="h2" color="gray">
+            <Typography
+              tag="h2"
+              color="gray"
+              fontWeight="weight2"
+              line-height="line140"
+            >
               {t('about.ourPurpose')}
             </Typography>
           </TextStyled>
@@ -122,6 +132,7 @@ export default function About() {
                   tag="li"
                   color="gray"
                   fontFamily="font2"
+                  fontWeight="weight1"
                   size="xsmall"
                   lineHeight="line140"
                 >
@@ -212,7 +223,7 @@ export default function About() {
               <Typography
                 tag="h1"
                 size="small"
-                fontWeight="weight2"
+                fontWeight="weight1"
                 letterSpacing="space1"
                 lineHeight="line120"
                 color="gray"

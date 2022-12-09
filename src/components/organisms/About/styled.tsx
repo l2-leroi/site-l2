@@ -290,9 +290,10 @@ export const DivCardStyled = styled.div`
   .cards {
     z-index: 2;
     background-color: #242a33;
-    width: 464px;
-    min-height: 450px;
-    max-height: 550px;
+    width: 33.33%;
+    // width: 464px;
+    // min-height: 450px;
+    // max-height: 550px;
     border-radius: 8px;
     padding: 28px;
 
