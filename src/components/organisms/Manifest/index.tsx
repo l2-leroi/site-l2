@@ -29,6 +29,7 @@ export default function Manifest() {
             fontFamily="font1"
             fontWeight="weight3"
             size="medium"
+            lineHeight="line90"
           >
             {' '}
             Manifesto L2code
@@ -66,6 +67,7 @@ export default function Manifest() {
             size="small"
             letterSpacing="space1"
             fontWeight="weight2"
+            lineHeight="line120"
           >
             {' '}
             1. Pessoas, pessoas e pessoas
@@ -95,6 +97,7 @@ export default function Manifest() {
             size="small"
             letterSpacing="space1"
             fontWeight="weight2"
+            lineHeight="line120"
           >
             {' '}
             2. Somos apaixonados pelo que fazemos
@@ -125,6 +128,7 @@ export default function Manifest() {
             size="small"
             letterSpacing="space1"
             fontWeight="weight2"
+            lineHeight="line120"
           >
             {' '}
             3. Não existe o que não podemos fazer, apenas o que não fizemos
@@ -155,6 +159,7 @@ export default function Manifest() {
             size="small"
             letterSpacing="space1"
             fontWeight="weight2"
+            lineHeight="line120"
           >
             {' '}
             4. Nós resolvemos o problema
@@ -186,6 +191,7 @@ export default function Manifest() {
             size="small"
             letterSpacing="space1"
             fontWeight="weight2"
+            lineHeight="line120"
           >
             {' '}
             5. Compartilhar conhecimento não é opção, é obrigação
@@ -216,6 +222,7 @@ export default function Manifest() {
             size="small"
             letterSpacing="space1"
             fontWeight="weight2"
+            lineHeight="line120"
           >
             {' '}
             6. Respeito e diversidade, quanto mais, melhor
@@ -247,6 +254,7 @@ export default function Manifest() {
             size="small"
             letterSpacing="space1"
             fontWeight="weight2"
+            lineHeight="line120"
           >
             {' '}
             7. Se não for divertido tem algo errado
@@ -277,6 +285,7 @@ export default function Manifest() {
             size="small"
             letterSpacing="space1"
             fontWeight="weight2"
+            lineHeight="line120"
           >
             {' '}
             8. Ninguém tem sempre razão
@@ -309,6 +318,7 @@ export default function Manifest() {
             size="small"
             letterSpacing="space1"
             fontWeight="weight2"
+            lineHeight="line120"
           >
             {' '}
             9. Não é feitiçaria, é tecnologia

@@ -97,7 +97,7 @@ export default function About() {
               size="small"
               fontWeight="weight2"
               letterSpacing="space1"
-              lineHeight="line90"
+              lineHeight="line120"
               color="gray"
             >
               {t('about.weTransform')}
@@ -214,7 +214,7 @@ export default function About() {
                 size="small"
                 fontWeight="weight2"
                 letterSpacing="space1"
-                lineHeight="line90"
+                lineHeight="line120"
                 color="gray"
               >
                 {t('about.superPowers')}
