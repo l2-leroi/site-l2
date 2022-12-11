@@ -8,7 +8,7 @@ export const SectionStyled = styled.section`
   color: ${colors.gray};
   width: 100%;
   padding-top: 24rem;
-  padding-bottom: 33.7rem;
+  //padding-bottom: 33.7rem;
   @media (max-width: 800px) {
     padding: 0px 12px;
     // padding-bottom: 80px;

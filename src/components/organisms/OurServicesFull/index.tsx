@@ -31,12 +31,11 @@ export default function OurServicesFull() {
       hasVideo: true,
       video: { src: '', text: 'Leroi Oliveira ● Líder técnico' },
       list: [
-        'optimization',
-        'access',
-        'costs',
-        'services',
         'flexibility',
-        'updated',
+        'security',
+        'knowledge',
+        'market',
+        'professionals',
       ],
     },
     {
@@ -46,12 +45,10 @@ export default function OurServicesFull() {
       hasVideo: false,
       video: {},
       list: [
-        'scope',
-        'product',
-        'differential',
-        'riskReduction',
-        'immersive',
-        'costReduction',
+        'mvp',
+        'validation',
+        'visions',
+        'strategic',
       ],
     },
     {
@@ -62,13 +59,9 @@ export default function OurServicesFull() {
       video: { src: '', text: null },
       list: [
         'design',
-        'architecture',
-        'research',
-        'systems',
-        'concept',
-        'mobile',
-        'thinking',
-        'prototype',
+        'empathy',
+        'specialists',
+        'lifecycle',
       ],
     },
     {
@@ -77,7 +70,7 @@ export default function OurServicesFull() {
       images: [],
       hasVideo: true,
       video: { src: '', text: 'Leroi Oliveira ● Líder técnico' },
-      list: ['market', 'pitch', 'growth', 'mvp', 'investors', 'test'],
+      list: ['process', 'pitch', 'culture', 'professionals', 'organization'],
     },
     {
       title: 'ourServicesFull.ITConsulting',
@@ -85,7 +78,7 @@ export default function OurServicesFull() {
       images: ['first-image-services.png', 'second-image-services.png'],
       hasVideo: false,
       video: {},
-      list: ['requirement', 'cloud', 'advice', 'process', 'infrastructure'],
+      list: ['requirement', 'acceleration', 'advice', 'analysis', 'supervision'],
     },
   ];
 
@@ -182,7 +175,7 @@ export default function OurServicesFull() {
           </ContentStyled>
         </OurServicesFullStyled>
       </SectionStyled>
-      <DiagonalVideo>
+      {/* <DiagonalVideo>
         <VideoTitleStyled>
           <Typography
             color="gray"
@@ -195,7 +188,7 @@ export default function OurServicesFull() {
             {t('ourServicesFull.seeHowItWorks')}&lt;&gt;
           </Typography>
         </VideoTitleStyled>
-      </DiagonalVideo>
+      </DiagonalVideo> */}
     </>
   );
 }

@@ -189,63 +189,55 @@
     "seeHowItWorks": "VEJA COMO FUNCIONA",
     "outSourcingAdvisory": {
       "title": "Outsourcing Consultativo",
-      "paragraph": "Aumente sua capacidade produtiva ● Com acesso a nossa equipe, você agraga ao seu time profissionais apaixonados com competências diversas.",
+      "paragraph": "Junto com você, analisamos os desafios da sua empresa ou projeto. A partir disso, montamos uma equipe personalizada de designers e desenvolvedores com habilidades necessárias para alcançar seus objetivos. Um gestor sênior irá acompanhar o time e ajudar a tirar um melhor resultado da equipe.",
       "list": {
-        "optimization": "Otimização e controle de custos",
-        "costs": "Custos fixos variáveis",
-        "flexibility": "Flexibilidade e rapidez",
-        "access": "Acesso aos recursos da L2",
-        "services": "Centro de <s>custos</s> serviços",
-        "updated": "Atualizado às mudanças do mercado"
+        "flexibility": "Flexibilidade e rapidez para atender as demandas necessárias",
+        "knowledge": "Conhecimento não se perde ao longo do processo",
+        "professionals": "Profissionais de todas senioridades",
+        "security": "Segurança na troca de profissionais",
+        "market": "Atualização de acordo com as mudanças do mercado"
       }
     },
     "ideation": {
       "title": "Ideação",
-      "paragraph": "Co-criação com nosso time multidisciplinar na concepção do seu produto e estratégias de negócio.",
+      "paragraph": "Te ajudamos a definir qual produto digital o mercado e sua empresa precisam! Através de uma equipe interna multidisciplinar e outros profissionais do mercado, te auxiliamos e indicamos tecnologias, visões e processos que serão necessários para definir o valor do seu produto.",
       "list": {
-        "scope": "Preparação do escopo",
-        "differential": "Identificação dos diferenciais",
-        "immersive": "Sessão imersiva",
-        "product": "Justificativa do produto",
-        "riskReduction": "Redução do risco",
-        "costReduction": "Redução de custos"
+        "mvp": "Construção de um MVP enxuto com proposta de valor real",
+        "visions": "Diferentes visões do produto e do negócio",
+        "validation": "Validação das hipóteses de negócio",
+        "strategic": "Visão estratégica alinhada com as necessidades da empresa e dos usuários"
       }
     },
     "UXUI": {
-      "title": "UX/UI Design",
-      "paragraph": "Projetamos um produto encantador e funcional para os usuários, aliado aos objetivos do seu negócio.",
+      "title": "Product Design",
+      "paragraph": "Nosso time de design apresenta soluções efetivas para atingir os objetivos de negócio da sua empresa e atender as necessidades de seus clientes. Atuamos durante todo o ciclo de vida de um produto digital, desde a concepção de uma nova experiência até a manutenção de um produto em operação, com a visão de melhoria contínua de seu produto.",
       "list": {
-        "design": "UX/UI design",
-        "research": "Pesquisa de experiência",
-        "concept": "Design concept",
-        "thinking": "Design thinking",
-        "architecture": "Arquitetura de informação",
-        "systems": "Design systems",
-        "mobile": "Responsividade e mobile-first",
-        "prototype": "Protótipos navegáveis"
+        "design": "Soluções efetivas de design",
+        "specialists": "Diferentes especialistas: UX, UI, Motion, Marketing",
+        "empathy": "Empatia com as necessidades do usuário",
+        "lifecycle": "Atuação em todo o ciclo de vida de um produto digital"
       }
     },
     "startupService": {
       "title": "Atendimento à Startup",
-      "paragraph": "Nossa equipe de UX/UI e desenvolvimento irá projetar e construir seu MVP a partir do zero, “garantindo” uma entrega rápida e rentável.",
+      "paragraph": "Nossa paixão por inovação se traduz nessa verdadeira experiência que ajuda startups a crescer e inovar em seus mercados. Te ajudamos com tecnologia, usabilidade, design, desenvolvimento de software e organização de equipe de maneira flexível e muito aderente com a necessidade de velocidade que uma startup precisa.",
       "list": {
-        "market": "Direcionamento de mercado",
-        "growth": "Foco no crescimento do negócio",
-        "investors": "Direcionamento do produto para investidores",
-        "pitch": "Estratégias de pitch de negócio",
-        "mvp": "Concepção de MVP",
-        "test": "Teste e lançamento"
+        "process": "Processo personalizado",
+        "culture": "Orientação para a criação e mudança de cultura",
+        "organization": "Organização do projeto",
+        "pitch": "Flexibilidade e rapidez para atender as demandas necessárias",
+        "professionals": "Profissionais experientes que vão rodar técnicas e tecnologias de maneira robusta em um projeto experimental"
       }
     },
     "ITConsulting": {
       "title": "Consultoria em TI",
-      "paragraph": "Nosso Tech Lead Maicon Martins irá aconselhar você sobre as melhores práticas que sua empresa pode usar na infraestrutura.",
+      "paragraph": "Nossos Consultores Sêniores irão aconselhar você sobre as melhores práticas que sua empresa pode usar na arquitetura de software. Vamos diagnosticar o problema junto com você e fazer sua área de TI funcionar de forma prática e organizada.",
       "list": {
         "requirement": "Compreensão e análise dos requisitos de TI da organização e do ambiente subjacente",
         "advice": "Aconselhamento de soluções e serviços em TI",
-        "infrastructure": "Infraestrutura de rede",
-        "cloud": "Ambientes em nuvem",
-        "process": "Gerenciamento e supervisão do processo de implementação dos sistemas"
+        "supervision": "Gerenciamento e supervisão do processo de implementação dos sistemas",
+        "acceleration": "Mitigação e aceleração do processo de resolução de problemas",
+        "analysis": "Análise de sistema"
       }
     }
   },

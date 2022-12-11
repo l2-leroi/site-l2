@@ -178,63 +178,55 @@
     "seeHowItWorks": "SEE HOW IT WORKS",
     "outSourcingAdvisory": {
       "title": "Outsourcing Advisory",
-      "paragraph": "Increase your productive capacity  ● Having our team with you, you add to your team professionals in love with work who have a diversity of skills.",
+      "paragraph": "Together with you, we analyze the challenges of your company or project. From there, we assemble a bespoke team of designers and developers with the skills needed to achieve your goals. A senior manager will follow the team and help to get a better result from the team.",
       "list": {
-        "optimization": "Optimization and cost control",
-        "costs": "Variable fixes costs",
-        "flexibility": "Flexibility and speed",
-        "access": "Access to L2 resources",
-        "services": "<s>Cost</s> Service center",
-        "updated": "Updated to market changes"
+        "flexibility": "Flexibilidade e rapidez para atender as demandas necessárias",
+        "knowledge": "Knowledge isn't lost during the process",
+        "professionals": "Professionals of all seniorities",
+        "security": "Security in the exchange of professionals",
+        "market": "Update according to market changes"
       }
     },
     "ideation": {
       "title": "Ideação",
-      "paragraph": "Co-creation with our multidisciplinary team in the design of your product and business strategies.",
+      "paragraph": "We help you define which digital product the market and your company need! Through an internal multidisciplinary team and other market professionals, we help you and indicate technologies, visions and processes that will be necessary to define the value of your product.",
       "list": {
-        "scope": "Scope preparation",
-        "differential": "Identification of differentials",
-        "immersive": "Immersive session",
-        "product": "Product justification",
-        "riskReduction": "Risk reduction",
-        "costReduction": "Cost reduction"
+        "mvp": "Building a lean MVP with a real value proposition",
+        "visions": "Different visions of the product and the business",
+        "validation": "Validation of business hypotheses",
+        "strategic": "Strategic vision aligned with the needs of the company and users"
       }
     },
     "UXUI": {
-      "title": "UX/UI Design",
-      "paragraph": "We design a gorgeous and functional products for the users, allied with the goals of your business.",
+      "title": "Product Design",
+      "paragraph": "Our design team presents effective solutions to achieve your company's business objectives and meet your customers' needs. We work throughout the entire life cycle of a digital product, from designing a new experience to maintaining a product in operation, with a view to continuous improvement of your product.",
       "list": {
-        "design": "UX/UI design",
-        "research": "Experience research",
-        "concept": "Concept design",
-        "thinking": "Thinking design",
-        "architecture": "Information Architecture",
-        "systems": "Systems design",
-        "mobile": "Responsiveness and mobile-first",
-        "prototype": "Navigable prototypes"
+        "design": "Effective design solutions",
+        "specialists": "Different specialists: UX, UI, Motion, Marketing",
+        "empathy": "Empathy with user needs",
+        "lifecycle": "Performance throughout the lifecycle of a digital product"
       }
     },
     "startupService": {
       "title": "Start-up Service",
-      "paragraph": "Our UX/UI and development team will help you to project and build your MVP from the scratch, “ensuring” a fast and profitable delivery.",
+      "paragraph": "Our passion for innovation translates into this true expertise that helps startups grow and innovate in their markets. We help you with technology, usability, design, software development and team organization in a flexible way that adheres to the need for speed that a startup needs.",
       "list": {
-        "market": "Market direction",
-        "growth": "Focus on business growth",
-        "investors": "Product targeting for investors",
+        "process": "Custom process",
+        "culture": "Guidance for creating and changing culture",
+        "organization": "Project organization",
         "pitch": "Business Pitch strategies",
-        "mvp": "MVP conception",
-        "test": "Test and release"
+        "professionals": "Experienced professionals who will run techniques and technologies robustly in an experimental project"
       }
     },
     "ITConsulting": {
       "title": "IT Consulting Service",
-      "paragraph": "Our Tech Lead Maicon Martins will advise you about the best practices that your company can use in your infrastructure.",
+      "paragraph": "Our Senior Consultants will advise you on best practices your company can use in software architecture. We will diagnose the problem together with you and make your IT area work in a practical and organized way.",
       "list": {
         "requirement": "Understanding and analyzing the organization's IT requirements and the underlying environment",
         "advice": "Advice on IT solutions and services",
-        "infrastructure": "Network infrastructure",
-        "cloud": "Cloud environments",
-        "process": "Management and supervision of the systems implementation process"
+        "supervision": "Management and supervision of the systems implementation process",
+        "acceleration": "Mitigation and acceleration of the problem resolution process",
+        "analysis": "System analysis"
       }
     }
   },

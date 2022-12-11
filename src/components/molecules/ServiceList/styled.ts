@@ -2,13 +2,6 @@ import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
 export const ListStyled = styled.div`
-  &:last-child div:last-child li:nth-of-type(4) {
-    margin-top: -35px;
-
-    @media (max-width: 800px) {
-      margin-top: 0px;
-    }
-  }
 `;
 
 export const SubtitleStyled = styled.h3`
@@ -65,14 +58,34 @@ export const AltVideoStyled = styled.span`
   justify-self: flex-end;
 `;
 
-export const AboutListStyled = styled.ul`
+export const AboutListStyled = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 40px;
   margin-bottom: 80px;
+  gap: 20px;
 
   @media (max-width: 800px) {
     grid-template-columns: 1fr;
+    gap: 0px;
+  }
+`;
+
+export const OddListStyled = styled.ul`
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 800px) {
+    grid-column: 1;
+  }
+`;
+
+export const EvenListStyled = styled.ul`
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 800px) {
+    grid-column: 1;
   }
 `;
 
