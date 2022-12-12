@@ -33,6 +33,9 @@
     "superPowers": "Super poderes que fazem a diferença",
     "weAreMade": "Somos feitos de pessoas brilhantes, magos da tecnologia, somos os Lcoders! ● Mas claro, com grandes poderes, vem grandes responsabilidades. Por isso utilizamos nossos super poderes para ajudar pessoas e melhorar o mundo. ● São eles: o poder da colaboração, pluralidade, diversão, empatia, criatividade, aprendizagem, comunicação e, como resultado, temos também o poder da evolução!"
   },
+  "manifest": {
+    
+  },
   "cases": {
     "pageName": "cases",
     "ourCases": "NOSSOS CASES SELECIONADOS",
