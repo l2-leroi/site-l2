@@ -13,28 +13,23 @@ export interface ScrollProps {
 function InfiniteScroll({ closeMenu }: ScrollProps) {
   const menuRedirect = [
     {
-      pt: 'Home',
-      en: 'Home',
+      translate: "home",
       url: '/',
     },
     {
-      pt: 'Sobre',
-      en: 'About',
+      translate: "about",
       url: '/sobre',
     },
     {
-      pt: 'Cases',
-      en: 'Cases',
+      translate: "cases",
       url: '/nossos-cases',
     },
     {
-      pt: 'Serviços',
-      en: 'Services',
+      translate: "services",
       url: '/servicos',
     },
     {
-      pt: 'Carreiras',
-      en: 'Career',
+      translate: "career",
       url: '/nossas-carreiras',
     },
   ];
@@ -44,6 +39,7 @@ function InfiniteScroll({ closeMenu }: ScrollProps) {
   const router = useRouter();
   const initialPage = router.asPath.substring(3);
   const [currentPage, setCurrentPage] = useState(initialPage);
+  const { t } = i18next;
 
   const fetchData = () => {
     setItems([...items, ...menuRedirect]);
@@ -77,9 +73,14 @@ function InfiniteScroll({ closeMenu }: ScrollProps) {
           key={`${item[language]}`}
         >
           <Link key={`${item}-${uuid()}`} href={`/${language + item.url}`}>
-            {currentPage === `${item.url}`
-              ? `< ${item[language]} >`
-              : `${item[language]}`}
+          {currentPage === `${item.url}`?
+          "<"+
+          t(`openMenu.${item.translate}`)
+          +">"
+          
+          
+          : t(`openMenu.${item.translate}`)}
+            
           </Link>
         </Typography>
       ))}

@@ -12,6 +12,13 @@
       "manifest": "manifesto L2code"
     }
   },
+  "openMenu": {
+    "home": "Home",
+    "about" : "Sobre",
+    "cases": "Cases",
+    "services": "Serviços",
+    "career": "Carreiras"
+  },
   "about": {
     "title": "SOMOS A L2CODE",
     "weCreated": "Criamos soluções tecnológicas de forma humanizada e inovadora, pois acreditamos que inovar é aprender e ensinar sem fronteiras.",
