@@ -233,7 +233,7 @@ export default function About() {
                 <Typography
                   tag="h1"
                   size="small"
-                  fontWeight="weight1"
+                  fontWeight="weight2"
                   letterSpacing="space1"
                   lineHeight="line120"
                   color="gray"
@@ -243,7 +243,13 @@ export default function About() {
               </SubTitleStyled>
 
               <ParagraphSubTitleStyled>
-                <Typography tag="p" color="gray" fontWeight="weight2">
+                <Typography
+                  tag="p"
+                  color="gray"
+                  fontWeight="weight1"
+                  letterSpacing="space2"
+                  lineHeight="line140"
+                >
                   {t('about.weAreMade')}
                 </Typography>
                 <div className="button">

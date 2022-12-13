@@ -40,15 +40,15 @@ export default function Manifest() {
           </TitleStyled>
 
           <ParagraphStyled>
-            <Typography tag="p">
+            <Typography tag="p" fontWeight="weight1" lineHeight="line140">
               {t('about.manifest.paragraph.weLive')}
-              <Typography tag="p">
+              <Typography tag="p" fontWeight="weight1" lineHeight="line140">
                 {t('about.manifest.paragraph.TodayWeAre')}
               </Typography>
-              <Typography tag="p">
+              <Typography tag="p" fontWeight="weight1" lineHeight="line140">
                 {t('about.manifest.paragraph.WeAre')}
               </Typography>
-              <Typography tag="p">
+              <Typography tag="p" fontWeight="weight1" lineHeight="line140">
                 {t('about.manifest.paragraph.WeFollow')}
               </Typography>
             </Typography>
