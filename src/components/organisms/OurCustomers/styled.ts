@@ -30,7 +30,8 @@ export const BlackLineStyled = styled.div`
 `;
 
 export const HeaderStyled = styled.hgroup`
-  max-width: 648px;
+  // max-width: 648px;
+  width: 100%;
   z-index: 50;
 
   @media (max-width: 1000px) {
@@ -38,7 +39,7 @@ export const HeaderStyled = styled.hgroup`
   }
 
   @media (max-width: 800px) {
-    max-width: 264px;
+    // max-width: 264px;
   }
   p {
     max-width: 464px;
@@ -63,6 +64,9 @@ export const HeaderStyled = styled.hgroup`
 `;
 
 export const AsideStyled = styled.aside`
+  display: flex;
+  justify-content: center;
+  width: 100%;
   text-align: right;
   align-self: center;
   font-family: 'Circular Air Pro';
@@ -72,10 +76,11 @@ export const AsideStyled = styled.aside`
   line-height: 140%;
   letter-spacing: -0.02em;
   z-index: 2;
-  margin-left: -120px;
+  // margin-left: -120px;
 
   @media (max-width: 800px) {
-    max-width: 50px;
+    // max-width: 50px;
+    justify-content: end;
   }
   p {
     ::selection {
@@ -84,6 +89,13 @@ export const AsideStyled = styled.aside`
     @media (max-width: 800px) {
       max-width: 61px;
     }
+  }
+`;
+
+export const AuxDiv = styled.div`
+  width: 100%;
+  @media (max-width: 800px) {
+    display: none;
   }
 `;
 

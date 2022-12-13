@@ -8,6 +8,7 @@ import {
   AsideStyled,
   CustomersContainer,
   IdSpanStyled,
+  AuxDiv,
 } from './styled';
 
 import CustomersList from '../../molecules/CustomersList/index';
@@ -72,6 +73,7 @@ function OurCustomers() {
               &lt;{t('clients.alt.30Clients')}&gt;
             </Typography>
           </AsideStyled>
+          <AuxDiv />
         </ContentStyled>
         <CustomersContainer className="customersList">
           <CustomersList customers={customers} />
