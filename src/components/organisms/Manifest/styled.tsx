@@ -8,24 +8,69 @@ export const ContainerStyledManifest = styled.section`
   text-align: left;
   align-self: flex-start;
   align-items: stretch;
-  justify-content: flex-end;
   background-color: ${colors.gray};
   width: 100%;
   padding-top: 15.5rem;
-  padding-bottom: 15.5rem;
+  justify-content: flex-start;
+  margin-left: 0px;
+  padding-bottom: 10700px;
+
+  @media (max-width: 800px) {
+    // padding-bottom: 5685px;
+    padding-bottom: 4485px;
+  }
 
   .scrollCircleDiv {
-    width: 30vw;
-    min-width: 30vw;
-    margin-top: -70vw;
+    margin-top: -40px;
+    height: 0;
+    justify-content: flex-start;
+
+    > div {
+      margin-top: -1200px;
+      height: 11900px; //10700px + 1200px;
+      width: 30vw;
+
+      @media (max-width: 800px) {
+        margin-top: -500px;
+        height: 4985px; // 4485px; + 500px;
+        img {
+          max-width: 72px;
+          max-height: 72px;
+        }
+      }
+
+      @media (max-width: 350px) {
+        width: 20vw;
+        img {
+          max-width: 55px;
+          max-height: 55px;
+        }
+      }
+    }
+    align-self: start;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
+export const AuxDiv = styled.div`
+  max-width: 464px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 800px) {
+    max-width: 168px;
   }
 `;
 
 export const GroupStyled = styled.div`
   display: flex;
   flex-direction: column;
-  width: 70%;
-  text-align: left;
+  left: 0px;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
 
   h1 {
     @media (max-width: 800px) {
@@ -61,7 +106,8 @@ export const GroupStyled = styled.div`
   }
 
   .line {
-    width: 100%;
+    // width: 100%;
+    width: 100vw;
     border-bottom: 1px solid #8e9195;
     @media (max-width: 400px) {
       margin-top: 40px;
@@ -71,13 +117,16 @@ export const GroupStyled = styled.div`
 `;
 
 export const TitleStyled = styled.div`
+  width: 712px;
+  // width: 100vw;
   @media (max-width: 800px) {
     max-width: 200px;
   }
 `;
 
 export const SubTitleStyled = styled.div`
-  max-width: 600px;
+  // max-width: 600px;
+  width: 712px;
   @media (max-width: 800px) {
     max-width: 250px;
   }
