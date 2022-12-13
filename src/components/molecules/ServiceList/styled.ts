@@ -56,6 +56,7 @@ export const ImageStyled = styled.img`
 export const VideoStyled = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 1000px;
 `;
 
 export const AltVideoStyled = styled.span`
@@ -70,6 +71,7 @@ export const AboutListStyled = styled.ul`
   grid-template-columns: 1fr 1fr;
   margin-top: 40px;
   margin-bottom: 80px;
+  max-width: 1000px;
 
   @media (max-width: 800px) {
     grid-template-columns: 1fr;
@@ -165,4 +167,8 @@ export const VideoIconContainer = styled.div`
 export const LineStyled = styled.hr`
   border-color: ${colors.lightGray};
   margin-bottom: 80px;
+  margin-right: -28px;
+  @media (max-width: 800px) {
+    margin-right: -12px;
+  }
 `;

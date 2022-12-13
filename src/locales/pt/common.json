@@ -214,6 +214,7 @@
     }
   },
   "ourServicesFull": {
+    "pageName":"servicos",
     "ourServices": "CONHEÇA NOSSOS SERVIÇOS",
     "paragraph": "Trabalhamos ao lado dos nossos clientes para melhorar a experiência dos produtos e serviços, trazendo resultados para o negócio.",
     "makeItHappen": "FAÇA ACONTECER",
