@@ -1,6 +1,4 @@
 import React from 'react';
-import Marquee from 'react-fast-marquee';
-import i18next, { init } from 'i18next';
 import {
   CardContainer,
   ImagesContainer,
@@ -40,25 +38,34 @@ export default function PeopleCard({ images, name, city }) {
   };
 
   const isMobile = {
-    Android: function() {
-        return navigator.userAgent.match(/Android/i);
+    Android() {
+      return navigator.userAgent.match(/Android/i);
     },
-    BlackBerry: function() {
-        return navigator.userAgent.match(/BlackBerry/i);
+    BlackBerry() {
+      return navigator.userAgent.match(/BlackBerry/i);
     },
-    iOS: function() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    iOS() {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
     },
-    Opera: function() {
-        return navigator.userAgent.match(/Opera Mini/i);
+    Opera() {
+      return navigator.userAgent.match(/Opera Mini/i);
     },
-    Windows: function() {
-        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    Windows() {
+      return (
+        navigator.userAgent.match(/IEMobile/i) ||
+        navigator.userAgent.match(/WPDesktop/i)
+      );
     },
-    any: function() {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    }
-};
+    any() {
+      return (
+        isMobile.Android() ||
+        isMobile.BlackBerry() ||
+        isMobile.iOS() ||
+        isMobile.Opera() ||
+        isMobile.Windows()
+      );
+    },
+  };
 
   React.useEffect(() => {
     setActualImage(images[0]);

@@ -1,5 +1,5 @@
 import React from 'react';
-import i18next, { t } from 'i18next';
+import { t } from 'i18next';
 import { Typography } from '../../../styles/typography';
 import InternalPageHeader from '../../molecules/InternalPageHeader';
 import { DivStyled, SectionStyled } from './styled';

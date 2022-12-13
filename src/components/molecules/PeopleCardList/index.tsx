@@ -1,11 +1,15 @@
 import React from 'react';
-import Marquee from 'react-fast-marquee';
 import i18next from 'i18next';
-import { CardListContainer, InfoPeopleDiv, Separator, CardList } from './styled';
+import {
+  CardListContainer,
+  InfoPeopleDiv,
+  Separator,
+  CardList,
+} from './styled';
 import { Typography } from '../../../styles/typography';
 import PeopleCard from '../../atoms/PeopleCard';
 
-export default function PeopleCardList({title, people, index, arrayLength}) {
+export default function PeopleCardList({ title, people, index, arrayLength }) {
   const { t } = i18next;
   return (
     <CardList>
@@ -34,11 +38,18 @@ export default function PeopleCardList({title, people, index, arrayLength}) {
       <CardListContainer>
         {people.map((item, key) => {
           return (
-            <PeopleCard images={item.images} name={item.name} city={item.city} key={key} />
+            <PeopleCard
+              images={item.images}
+              name={item.name}
+              city={item.city}
+              key={key}
+            />
           );
         })}
       </CardListContainer>
-      <Separator style={{display: index == (arrayLength -1)? 'none' : 'block'}}/>
+      <Separator
+        style={{ display: index == arrayLength - 1 ? 'none' : 'block' }}
+      />
     </CardList>
   );
 }
