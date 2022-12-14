@@ -30,10 +30,8 @@ const settings = {
   slidesToShow: 3,
   slidesToScroll: 1,
   speed: 400,
-  swipeToSlide: true,
   nextArrow: <ArrowRightStyledFunction />,
   prevArrow: <ArrowLeftStyled />,
-  className: 'Slider',
 
   responsive: [
     {

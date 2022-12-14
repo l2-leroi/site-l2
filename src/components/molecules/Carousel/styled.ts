@@ -6,7 +6,7 @@ export const DivStyled = styled.div`
 
   @media (max-width: 800px) {
     width: 100%;
-    padding-left: 0; //
+    padding-left: 0;
   }
   .card-fade {
     visibility: hidden;
@@ -14,7 +14,10 @@ export const DivStyled = styled.div`
     transition: visibility 0s 1s, opacity 1s linear;
   }
   .slick-slide {
-    // width: auto !important;
+    width: 457px !important;
+    @media (max-width: 800px) {
+      width: 220.5px !important;
+    }
   }
   .slick-track {
     width: max-content !important;
@@ -31,10 +34,14 @@ export const ArrowRightStyled = styled.div`
   ::before {
     display: none !important;
   }
-  right: -65px;
+  right: -75px;
   background-image: url('/images/white-arrow-right.png') !important;
   background-position: 3.5rem !important;
   background-repeat: no-repeat !important;
+
+  @media (max-width: 800px) {
+    right: -37.5px;
+  }
   @media (max-width: 500px) {
     display: none;
   }
