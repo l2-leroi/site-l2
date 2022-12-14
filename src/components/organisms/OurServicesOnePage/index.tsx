@@ -1,13 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import i18next from 'i18next';
-import { useRouter } from 'next/router';
 import {
   SectionOnePageStyled,
   ContentOnePageStyled,
   DivServicesStyled,
   DivServiceItemsStyled,
-  DivItemStyled,
-  ImageStyled,
   TextContainer,
 } from './styled';
 import { Typography } from '../../../styles/typography';

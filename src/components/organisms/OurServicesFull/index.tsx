@@ -3,13 +3,8 @@ import i18next from 'i18next';
 import { Typography } from '../../../styles/typography';
 import {
   SectionStyled,
-  HeaderStyled,
-  TitleStyled,
-  ParagraphStyled,
-  AsideStyled,
   ContentStyled,
   VideoTitleStyled,
-  TitleGroupStyled,
   OurServicesFullStyled,
   ArrowSpinnerComponentStyled,
   ArrowSpinnerContainerStyled,
