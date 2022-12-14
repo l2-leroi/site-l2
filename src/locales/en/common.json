@@ -6,8 +6,14 @@
       "thereIsMore": "There's more down here"
     }
   },
-
-  "about": { 
+  "openMenu": {
+    "home": "Home",
+    "about" : "About",
+    "cases": "Cases",
+    "services": "Services",
+    "career": "Career"
+  },
+  "about": {
     "pageName": "sobre",
     "title": "SOMOS A L2CODE",
     "weCreated": "Criamos soluções tecnológicas de forma humanizada e inovadora, pois acreditamos que inovar é aprender e ensinar sem fronteiras.",
