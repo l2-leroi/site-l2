@@ -13,23 +13,23 @@ export interface ScrollProps {
 function InfiniteScroll({ closeMenu }: ScrollProps) {
   const menuRedirect = [
     {
-      translate: "home",
+      translate: 'home',
       url: '/',
     },
     {
-      translate: "about",
+      translate: 'about',
       url: '/sobre',
     },
     {
-      translate: "cases",
+      translate: 'cases',
       url: '/nossos-cases',
     },
     {
-      translate: "services",
+      translate: 'services',
       url: '/servicos',
     },
     {
-      translate: "career",
+      translate: 'career',
       url: '/nossas-carreiras',
     },
   ];
@@ -73,14 +73,9 @@ function InfiniteScroll({ closeMenu }: ScrollProps) {
           key={`${item[language]}`}
         >
           <Link key={`${item}-${uuid()}`} href={`/${language + item.url}`}>
-          {currentPage === `${item.url}`?
-          "<"+
-          t(`openMenu.${item.translate}`)
-          +">"
-          
-          
-          : t(`openMenu.${item.translate}`)}
-            
+            {currentPage === `${item.url}`
+              ? `<${t(`openMenu.${item.translate}`)}>`
+              : t(`openMenu.${item.translate}`)}
           </Link>
         </Typography>
       ))}
