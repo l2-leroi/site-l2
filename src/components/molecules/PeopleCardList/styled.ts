@@ -3,6 +3,7 @@ import { colors } from '../../../styles/colors';
 
 export const CardList = styled.div`
   display: grid;
+  justify-items: center;
   grid-template-columns: 1fr minmax(100px, 464px) 1fr;
 `;
 
@@ -19,6 +20,10 @@ export const CardListContainer = styled.div`
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
   }
 
   grid-column: 1/4;
