@@ -8,7 +8,7 @@ import {
 } from './styled';
 import { Typography } from '../../../styles/typography';
 
-export default function PeopleCard({ images, name, city }) {
+export default function PeopleCard({ images, folder, name, city }) {
   const [actualImage, setActualImage] = React.useState('');
   let isMouseInside = false;
   let counterLoop = 0;
@@ -92,7 +92,7 @@ export default function PeopleCard({ images, name, city }) {
           return (
             <ImageIcon
               key={key}
-              src={`/images/PeopleCard/${image}`}
+              src={`/images/employees/${folder}/Fotos/${image}`}
               className={actualImage == image ? 'active' : ''}
               onTouchStart={(event) => {
                 event.preventDefault();

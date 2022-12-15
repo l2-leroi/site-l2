@@ -40,6 +40,7 @@ export default function PeopleCardList({ title, people, index, arrayLength }) {
           return (
             <PeopleCard
               images={item.images}
+              folder={item.folder}
               name={item.name}
               city={item.city}
               key={key}

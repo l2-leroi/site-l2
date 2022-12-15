@@ -25,7 +25,9 @@ export const ImageProtect = styled.div`
 export const ImageIcon = styled.img`
   max-width: 100%;
   border-radius: 16px;
-  min-width: 250px;
+  object-fit: cover;
+  min-width: 340px;
+  max-height: 340px;
   display: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
