@@ -13,11 +13,10 @@ export const ContainerStyledManifest = styled.section`
   padding-top: 15.5rem;
   justify-content: flex-start;
   margin-left: 0px;
-  padding-bottom: 10700px;
+  padding-bottom: 10500px;
 
   @media (max-width: 800px) {
-    // padding-bottom: 5685px;
-    padding-bottom: 4485px;
+    padding-bottom: 4400px;
   }
 
   .scrollCircleDiv {
@@ -26,13 +25,13 @@ export const ContainerStyledManifest = styled.section`
     justify-content: flex-start;
 
     > div {
-      margin-top: -1200px;
-      height: 11900px; //10700px + 1200px;
+      margin-top: -1200px; //1200px;
+      height: 11700px; //10500px + 1200px;
       width: 30vw;
 
       @media (max-width: 800px) {
         margin-top: -500px;
-        height: 4985px; // 4485px; + 500px;
+        height: 4900px; // 4400px; + 500px;
         img {
           max-width: 72px;
           max-height: 72px;
@@ -109,10 +108,10 @@ export const GroupStyled = styled.div`
     // width: 100%;
     width: 100vw;
     border-bottom: 1px solid #8e9195;
-    @media (max-width: 400px) {
-      margin-top: 40px;
-      margin-bottom: 40px;
-    }
+    // @media (max-width: 400px) {
+    //   margin-top: 40px;
+    //   margin-bottom: 40px;
+    // }
   }
 `;
 
