@@ -129,7 +129,7 @@ export const DivStyledDate = styled.div`
 
 export const DateStyled = styled.div`
   display: flex;
-  margin-top: 60px;
+  margin: 60px 0;
   @media (max-width: 1220px) {
     flex-direction: column;
     align-items: center;
