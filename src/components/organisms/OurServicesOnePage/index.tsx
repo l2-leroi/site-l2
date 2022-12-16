@@ -21,6 +21,9 @@ export default function OurServicesOnePage() {
 
   return (
     <SectionOnePageStyled id="services">
+      <TextContainer>
+        <OutSourcing color="dark_gray" texts="outSourcing.ourServices" />{' '}
+      </TextContainer>
       <ContentOnePageStyled>
         <DivServicesStyled>
           <Typography
@@ -140,10 +143,14 @@ export default function OurServicesOnePage() {
             <ImageStyled src="/images/RectangleL2.svg" alt="L2 Code" />
           </DivItemStyled> */}
         </DivServiceItemsStyled>
-        <TextContainer>
+        {/* <TextContainer>
           <OutSourcing color="dark_gray" texts="outSourcing.ourServices" />{' '}
-        </TextContainer>
+        </TextContainer> */}
       </ContentOnePageStyled>
     </SectionOnePageStyled>
   );
 }
+// position: absolute;
+// z-index: 50;
+// width: 110%;
+// margin-left: -5%;

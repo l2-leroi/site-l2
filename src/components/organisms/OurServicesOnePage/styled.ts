@@ -9,6 +9,7 @@ export const SectionOnePageStyled = styled.section`
   padding: 0px 152px;
   background-color: ${colors.gray};
   flex-direction: column;
+  position: relative;
 
   @media (max-width: 1366px) {
     padding: 0px 12px;
@@ -16,9 +17,11 @@ export const SectionOnePageStyled = styled.section`
 `;
 
 export const TextContainer = styled.section`
-  width: 100vw;
-  position: relative;
-  height: 100%;
+  position: absolute;
+  bottom: 80px;
+  @media (max-width: 900px) {
+    bottom: 40px;
+  }
 `;
 
 export const ContentOnePageStyled = styled.div`
