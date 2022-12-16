@@ -9,7 +9,6 @@ export const ContainerStyled = styled.section`
   padding-right: 28px;
   background-color: ${colors.black};
   color: ${colors.gray};
-  padding-top: 20.5rem;
 `;
 export const TextStyled = styled.div`
   margin-top: 4rem;
