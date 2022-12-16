@@ -11,7 +11,8 @@
     "about" : "About",
     "cases": "Cases",
     "services": "Services",
-    "career": "Career"
+    "career": "Career",
+    "people": "People"
   },
   "about": {
     "pageName": "sobre",
