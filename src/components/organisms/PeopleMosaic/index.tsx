@@ -56,7 +56,7 @@ export default function PeopleMosaic() {
           city: 'Camaquã',
         },
         {
-          images: ['1.jpg', '2.jpg', '3.jpg'],
+          images: ['1.jpg', '2.jpg'],
           folder: 'FelipePizzio',
           name: 'Felipe',
           city: 'Porto Alegre',
@@ -98,7 +98,7 @@ export default function PeopleMosaic() {
           city: 'São João Del Rei',
         },
         {
-          images: ['1.jpeg', '2.jpeg', '3.jpeg', '4.jpeg'],
+          images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
           folder: 'JoaoCarlotto',
           name: 'João',
           city: 'Feliz',
@@ -140,8 +140,8 @@ export default function PeopleMosaic() {
           city: 'Barra do Ribeiro',
         },
         {
-          images: ['1.JPG', '2.jpg', '3.jpg'],
-          folder: 'LucadOliveira',
+          images: ['1.jpg', '2.jpg', '3.jpg'],
+          folder: 'LucasOliveira',
           name: 'Lucas O.',
           city: 'Rio Grande',
         },
@@ -223,7 +223,7 @@ export default function PeopleMosaic() {
           city: 'Porto Alegre',
         },
         {
-          images: ['1.jpg', '2.jog', '3.jpg', '4.jpg'],
+          images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
           folder: 'LeticiaCarvalho',
           name: 'Letícia',
           city: 'Canoas',
@@ -236,7 +236,7 @@ export default function PeopleMosaic() {
         },
         {
           images: ['1.png', '2.jpg', '3.jpg'],
-          folder: 'VanessaMiller',
+          folder: 'VanessaMuller',
           name: 'Vanessa',
           city: 'Sapucaia do Sul',
         },
@@ -299,8 +299,8 @@ export default function PeopleMosaic() {
           city: 'Pelotas',
         },
         {
-          images: ['1.JPG', '2.jpg', '3.jpg'],
-          folder: 'LucadOliveira',
+          images: ['1.jpg', '2.jpg', '3.jpg'],
+          folder: 'LucasOliveira',
           name: 'Lucas O.',
           city: 'Rio Grande',
         },
