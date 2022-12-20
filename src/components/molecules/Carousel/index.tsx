@@ -27,6 +27,8 @@ function ArrowRightStyledFunction(props) {
 const settings = {
   accessibility: true,
   infinite: true,
+  centerMode: false, //
+  variableWidth: true, //
   slidesToShow: 3,
   slidesToScroll: 1,
   speed: 400,

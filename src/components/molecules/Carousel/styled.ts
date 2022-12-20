@@ -21,6 +21,7 @@ export const DivStyled = styled.div`
   }
   .slick-track {
     width: max-content !important;
+    infinite: true !important; //
   }
 `;
 
