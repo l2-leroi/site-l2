@@ -61,7 +61,7 @@ function ServiceList({ services }: ServiceProps) {
               {t(`${service.title}.paragraph`)}
             </Typography>
           </ParagraphStyled>
-
+{/* }
           {service.hasImages ? (
             <ImageContainerStyled>
               {service.images.map((image) => (
@@ -91,6 +91,7 @@ function ServiceList({ services }: ServiceProps) {
               )}
             </VideoStyled>
           ) : null}
+              */}
 
           <AboutListStyled>
             {service.list.map((text, index) => (
