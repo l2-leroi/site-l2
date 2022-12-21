@@ -9,14 +9,21 @@ import {
 import { Typography } from '../../../styles/typography';
 import PeopleCard from '../../atoms/PeopleCard';
 
-export default function PeopleCardList({ title, people, index, arrayLength }) {
+export default function PeopleCardList({
+  title,
+  people,
+  index,
+  arrayLength,
+  bgColor,
+  fontColor,
+}) {
   const { t } = i18next;
   return (
     <CardList>
       <InfoPeopleDiv>
         <Typography
           tag="h2"
-          color="gray"
+          color={fontColor}
           size="small"
           fontWeight="weight2"
           fontFamily="font2"
@@ -26,16 +33,17 @@ export default function PeopleCardList({ title, people, index, arrayLength }) {
         </Typography>
         <Typography
           tag="p"
-          color="gray"
+          color={fontColor}
           size="xsmall"
           fontWeight="weight1"
           fontFamily="font2"
+          letterSpacing="space2"
           lineHeight="line140"
         >
           {t(`people.professions.${title}.subtitle`)}
         </Typography>
       </InfoPeopleDiv>
-      <CardListContainer>
+      <CardListContainer style={{ backgroundColor: bgColor }}>
         {people.map((item, key) => {
           return (
             <PeopleCard
@@ -44,6 +52,8 @@ export default function PeopleCardList({ title, people, index, arrayLength }) {
               name={item.name}
               city={item.city}
               key={key}
+              bgColor={bgColor}
+              fontColor={fontColor}
             />
           );
         })}

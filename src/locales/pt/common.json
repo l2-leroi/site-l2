@@ -40,6 +40,10 @@
         "projectManagement": {
           "title": "Gestão de Projetos",
           "subtitle": "Os bosses, os “chefões finais”. ● Os diretores são responsáveis por organizar, planejar, orientar a aplicação dos recursos e tomar todas as decisões importantes para o bom desenvolvimento da empresa."
+        },
+        "pets": {
+          "title": "",
+          "subtitle": "Conheça também os amigos que aparecem nas reuniões e alegre-se com essas fofuras."
         }
       }
   },

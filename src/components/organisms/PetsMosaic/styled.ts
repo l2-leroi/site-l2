@@ -6,8 +6,7 @@ export const PeopleMosaicSection = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background: ${colors.black};
-  color: ${colors.gray};
+  background: ${colors.gray};
   margin: 0 auto;
   padding: 0 28px;
   overflow-x: hidden;

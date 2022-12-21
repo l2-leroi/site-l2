@@ -8,7 +8,14 @@ import {
 } from './styled';
 import { Typography } from '../../../styles/typography';
 
-export default function PeopleCard({ images, folder, name, city }) {
+export default function PeopleCard({
+  images,
+  folder,
+  name,
+  city,
+  bgColor,
+  fontColor,
+}) {
   const [actualImage, setActualImage] = React.useState('');
   let isMouseInside = false;
   let counterLoop = 0;
@@ -71,7 +78,7 @@ export default function PeopleCard({ images, folder, name, city }) {
     setActualImage(images[0]);
   }, []);
   return (
-    <CardContainer>
+    <CardContainer style={{ backgroundColor: bgColor, color: fontColor }}>
       <ImagesContainer>
         <ImageProtect
           onTouchStart={(event) => {
@@ -92,7 +99,11 @@ export default function PeopleCard({ images, folder, name, city }) {
           return (
             <ImageIcon
               key={key}
-              src={`/images/employees/${folder}/Fotos/${image}`}
+              src={
+                folder !== 'pets'
+                  ? `/images/employees/${folder}/Fotos/${image}`
+                  : `/images/pets/${image}`
+              }
               className={actualImage == image ? 'active' : ''}
               onTouchStart={(event) => {
                 event.preventDefault();
@@ -106,7 +117,7 @@ export default function PeopleCard({ images, folder, name, city }) {
       </ImagesContainer>
       <InfoContainer>
         <Typography
-          color="gray"
+          color={fontColor}
           tag="h4"
           size="small"
           letterSpacing="space1"
@@ -115,7 +126,7 @@ export default function PeopleCard({ images, folder, name, city }) {
           {name}
         </Typography>
         <Typography
-          color="gray"
+          color={fontColor}
           tag="span"
           size="xsmall"
           letterSpacing="space1"
