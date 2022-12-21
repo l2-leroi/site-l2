@@ -3,18 +3,23 @@ import i18next from 'i18next';
 import { Typography } from '../../../styles/typography';
 import {
   SectionStyled,
-  HeaderStyled,
-  TitleStyled,
-  ParagraphStyled,
-  AsideStyled,
   ContentStyled,
+
   TitleGroupStyled,
+
+  VideoTitleStyled,
+
   OurServicesFullStyled,
   ArrowSpinnerComponentStyled,
   ArrowSpinnerContainerStyled,
 } from './styled';
 import ServiceList from '../../molecules/ServiceList';
 import ScrollCircle from '../../atoms/ScrollCircle';
+
+
+import DiagonalVideo from '../../atoms/DiagonalVideo';
+import InternalPageHeader from '../../molecules/InternalPageHeader';
+
 
 export default function OurServicesFull() {
   const { t } = i18next;
@@ -116,6 +121,13 @@ export default function OurServicesFull() {
       circleElement.style.top = `${contentWithoutCircle}px`;
   };
 
+  const headerProps = {
+    title: t('ourServicesFull.ourServices'),
+    text: t('ourServicesFull.paragraph'),
+    sideTag: t('ourServicesFull.makeItHappen'),
+    pageName: t('ourServicesFull.pageName'),
+  };
+
   React.useEffect(() => {
     window.onresize = animateCircle;
     window.addEventListener('scroll', animateCircle);
@@ -130,41 +142,9 @@ export default function OurServicesFull() {
 
   return (
     <>
+      <InternalPageHeader internalHeader={headerProps} />
       <SectionStyled>
         <OurServicesFullStyled>
-          <HeaderStyled>
-            <TitleGroupStyled>
-              <TitleStyled>
-                <Typography
-                  tag="h2"
-                  color="gray"
-                  size="medium"
-                  fontWeight="weight3"
-                  fontFamily="font1"
-                  lineHeight="line90"
-                >
-                  {t('ourServicesFull.ourServices')}
-                </Typography>
-              </TitleStyled>
-              <ParagraphStyled>
-                <Typography tag="p" color="gray">
-                  {t('ourServicesFull.paragraph')}
-                </Typography>
-              </ParagraphStyled>
-            </TitleGroupStyled>
-
-            <AsideStyled>
-              <Typography
-                color="gray"
-                tag="p"
-                size="xxsmall"
-                letterSpacing="space1"
-              >
-                &lt;{t('ourServicesFull.makeItHappen')}&gt;
-              </Typography>
-            </AsideStyled>
-          </HeaderStyled>
-
           <ArrowSpinnerContainerStyled>
             <ArrowSpinnerComponentStyled ref={arrowSpinner}>
               <ScrollCircle

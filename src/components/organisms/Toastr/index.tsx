@@ -36,6 +36,7 @@ function Toastr(props: ToastrProps) {
         }}
       />,
       {
+        containerId: 'Toastr',
         toastId: itemToastr.id,
       },
     );

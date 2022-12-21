@@ -3,6 +3,7 @@ import { colors } from '../../../styles/colors';
 
 export const TriangleContainer = styled.div`
   background: #242a33;
+  z-index: 10000;
   visibility: hidden;
   display: flex;
   flex-direction: column;
@@ -11,15 +12,15 @@ export const TriangleContainer = styled.div`
   width: 800px;
   height: 400px;
   clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%);
-  gap: 20px;
-  padding: 60px 18px 28px 18px;
+  // gap: 20px;
+  // padding: 60px 18px 28px 18px;
+  padding: 60px 29px 28px 29px;
   position: fixed;
   bottom: -3px;
   right: -3px;
   transition: all 0.9s;
   opacity: 0;
   overflow-y: hidden;
-
   margin-right: -2000px;
   margin-bottom: -2000px;
 
@@ -36,6 +37,7 @@ export const TriangleContainer = styled.div`
   }
 
   @media (max-width: 800px) {
+    padding: 60px 29px 28px 29px;
     width: 380px;
     height: 350px;
   }
@@ -58,27 +60,38 @@ export const TriangleContainer = styled.div`
 `;
 
 export const CookiesIcon = styled.img`
-max-width: 112px;
-max height: 86px;
+  width: 30%;
+  max-width: 112px;
+  max-height: 86px;
 
-@media (max-width: 500px) {
-  padding-left: 5px;
-  max-width: 70px;
-}
+  @media (max-width: 500px) {
+    padding-left: 5px;
+    max-width: 70px;
+  }
 `;
 
 export const CookiesDescription = styled.div`
   font-family: 'Circular Air Pro', 'sans serif';
   font-weight: 400;
-  font-size: 2.4rem;
+  // font-size: 2.4rem;
   line-height: 3.36rem;
   color: ${colors.gray};
+  // width: 50%;
   max-width: 350px;
   text-align: right;
-  margin: 0px 20px;
+  // margin: 0px 20px;
+  margin-top: 26px;
+  margin-bottom: 16px;
+
+  p {
+    font-size: 2rem;
+  }
 
   @media (max-width: 800px) {
     max-width: 200px;
+    p {
+      font-size: 2.4rem;
+    }
   }
 `;
 
@@ -96,7 +109,7 @@ export const OkButton = styled.button`
   border-radius: 20px;
   padding: 4px 15px;
   cursor: pointer;
-  margin: 0px 20px;
+  // margin: 0px 20px;
 
   @media (max-width: 500px) {
     padding: 9px 18px;

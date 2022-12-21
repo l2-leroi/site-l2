@@ -5,17 +5,22 @@ import { Typography } from '../../../styles/typography';
 export const ContainerStyled = styled.div`
   color: ${colors.gray};
   background-color: ${colors.black};
-  padding-top: 24rem;
+  padding-top: 18rem;
+  padding-bottom: 12rem;
 `;
 
 export const ContentStyled = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 1500px;
   margin: 0 auto;
-  padding-left: 2.8rem;
-  padding-right: 2.8rem;
+  padding-left: 28px;
+  padding-right: 28px;
+
+  @media (max-width: 500px) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 `;
 
 export const MainDivStyled = styled.div`
@@ -30,6 +35,7 @@ export const DivStyled = styled.div`
   display: flex;
   align-items: end;
   margin-bottom: 3.6rem;
+  justify-content: space-between;
 `;
 
 export const TitleStyled = styled.h2`
@@ -37,8 +43,11 @@ export const TitleStyled = styled.h2`
   font-size: 6.4rem;
   line-height: 64.8px;
   font-weight: 800;
-  width: 686px;
+  max-width: 712px;
   letter-spacing: -0.04em;
+  width: 100%;
+  display: flex;
+  justifly-content: flex-start;
 
   ::selection {
     background: ${colors.purple};
@@ -50,7 +59,8 @@ export const TitleStyled = styled.h2`
   }
 
   @media (max-width: 800px) {
-    width: 278px;
+    width: 100%;
+    // width: 278px;
     line-height: 32px;
   }
 
@@ -62,16 +72,26 @@ export const TitleStyled = styled.h2`
 
 export const AsideStyled = styled.aside`
   margin-bottom: -8px;
-  margin-left: 25px;
+  // margin-left: 25px;
+  display: flex;
+  justify-content: center;
 
   @media (max-width: 800px) {
-    margin-left: 5px;
+    // margin-left: 5px;
   }
+
   @media (min-width: 400px) {
-    margin-left: 60px;
+    // margin-left: 60px;
   }
-  @media (max-width: 400px) {
-    margin-left: 19px;
+
+  //@media (max-width: 400px) {
+  @media (max-width: 290px) {
+    // margin-left: 19px;
+    margin-left: 0px;
+  }
+
+  @media (max-width: 500px) {
+    justify-content: flex-end;
   }
 `;
 
@@ -82,6 +102,11 @@ export const ParagraphStyled = styled.p`
   font-weight: 400;
   letter-spacing: -0.02em;
   white-space: nowrap;
+  text-align: end;
+
+  @media (max-width: 320px) {
+    white-space: break-spaces;
+  }
 
   ::selection {
     background: ${colors.purple};
@@ -90,9 +115,15 @@ export const ParagraphStyled = styled.p`
 `;
 
 export const AsideStyledbutton = styled.div`
-  margin-left: 15px;
+  // margin-left: 15px;
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 
 export const LanguageStyled = styled.div`
@@ -156,8 +187,9 @@ export const PhraseStyled = styled.p`
   font-size: 2.4rem;
   line-height: 3.36rem;
   width: 502px;
-  margin-bottom: 8rem;
+  // margin-bottom: 8rem;
   letter-spacing: -0.04em;
+  max-width: 464px;
 
   ::selection {
     background: ${colors.purple};
