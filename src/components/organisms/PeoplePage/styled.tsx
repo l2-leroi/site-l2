@@ -14,6 +14,7 @@ export const DivStyled = styled.div`
   display: flex;
   width: 50%;
   flex-direction: column;
+  max-width: 464px;
   gap: 88px;
 
   @media (max-width: 800px) {
