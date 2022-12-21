@@ -8,7 +8,6 @@ import {
   ParagraphStyled,
   AsideStyled,
   ContentStyled,
-  VideoTitleStyled,
   TitleGroupStyled,
   OurServicesFullStyled,
   ArrowSpinnerComponentStyled,
@@ -16,7 +15,6 @@ import {
 } from './styled';
 import ServiceList from '../../molecules/ServiceList';
 import ScrollCircle from '../../atoms/ScrollCircle';
-import DiagonalVideo from '../../atoms/DiagonalVideo';
 
 export default function OurServicesFull() {
   const { t } = i18next;
