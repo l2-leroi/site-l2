@@ -1,14 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-vars */
 import React, { useRef } from 'react';
 import i18next from 'i18next';
 import { Typography } from '../../../styles/typography';
 import {
   SectionStyled,
   ContentStyled,
-
   TitleGroupStyled,
-
   VideoTitleStyled,
-
   OurServicesFullStyled,
   ArrowSpinnerComponentStyled,
   ArrowSpinnerContainerStyled,
@@ -16,10 +15,8 @@ import {
 import ServiceList from '../../molecules/ServiceList';
 import ScrollCircle from '../../atoms/ScrollCircle';
 
-
 import DiagonalVideo from '../../atoms/DiagonalVideo';
 import InternalPageHeader from '../../molecules/InternalPageHeader';
-
 
 export default function OurServicesFull() {
   const { t } = i18next;
