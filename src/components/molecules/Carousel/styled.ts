@@ -3,25 +3,48 @@ import { colors } from '../../../styles/colors';
 
 export const DivStyled = styled.div`
   overflow: hidden;
+  display: flex; //
+  justify-content: flex-end; //
 
   @media (max-width: 800px) {
     width: 100%;
     padding-left: 0;
   }
+
+  .slick-slider {
+    width: 85vw;
+  }
+
+  .first-card {
+    visibility: hidden;
+    opacity: 0;
+    // transition: visibility 0s 1s, opacity 1s linear;
+  }
+
   .card-fade {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 1s, opacity 1s linear;
   }
+
   .slick-slide {
     width: 457px !important;
     @media (max-width: 800px) {
       width: 220.5px !important;
     }
   }
+
   .slick-track {
     width: max-content !important;
     infinite: true !important; //
+    transition: fade 400ms ease 1s !important;
+  }
+
+  // último card
+  .slick-slide[aria-hidden='true'] + .slick-cloned[aria-hidden='true'] {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear !important;
   }
 `;
 

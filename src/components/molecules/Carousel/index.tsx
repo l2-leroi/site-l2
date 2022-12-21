@@ -68,7 +68,12 @@ function FindBound() {
 function FindCard() {
   const card = document.getElementsByClassName('Card');
   const cardBound = FindBound();
+
+  const firstCard = document.querySelector(`[data-index="0"]`);
+  firstCard.classList.add('first-card');
+
   for (let i = 0; i < card.length; i++) {
+    firstCard.classList.add('first-card');
     const cardLeft = card[i].getBoundingClientRect().left;
     if (cardLeft <= cardBound) {
       card[i].classList.add('card-fade');
