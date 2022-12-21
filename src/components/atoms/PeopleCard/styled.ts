@@ -5,7 +5,6 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: fit-content;
-  background-color: ${colors.black};
   gap: 20px;
 `;
 

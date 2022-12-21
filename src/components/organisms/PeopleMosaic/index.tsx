@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PeopleMosaicSection } from './styled';
 import PeopleCardList from '../../molecules/PeopleCardList';
+import { colors } from '../../../styles/colors';
 
 export default function PeopleMosaic() {
-  const array = [
+  const [array, setArray] = useState([]);
+  const people = [
     {
       title: 'developers',
       people: [
@@ -335,6 +337,18 @@ export default function PeopleMosaic() {
       ],
     }, */
   ];
+  React.useEffect(() => {
+    const peopleArray = people.map((item) => {
+      const itemCopy = item;
+      itemCopy.people = itemCopy.people.sort((x, y) => {
+        const a = x.name.toUpperCase();
+        const b = y.name.toUpperCase();
+        return a == b ? 0 : a > b ? 1 : -1;
+      });
+      return itemCopy;
+    });
+    setArray(peopleArray);
+  }, []);
   return (
     <PeopleMosaicSection>
       {array.map((item, key) => {
@@ -345,6 +359,8 @@ export default function PeopleMosaic() {
             key={key}
             index={key}
             arrayLength={array.length}
+            bgColor={colors.black}
+            fontColor={colors.gray}
           />
         );
       })}

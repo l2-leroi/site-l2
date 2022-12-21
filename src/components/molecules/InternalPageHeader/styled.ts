@@ -43,7 +43,7 @@ export const TitleStyled = styled.h2`
   font-size: 6.4rem;
   line-height: 64.8px;
   font-weight: 800;
-  // width: 686px;
+  max-width: 712px;
   letter-spacing: -0.04em;
   width: 100%;
   display: flex;
@@ -73,7 +73,6 @@ export const TitleStyled = styled.h2`
 export const AsideStyled = styled.aside`
   margin-bottom: -8px;
   // margin-left: 25px;
-  width: 100%;
   display: flex;
   justify-content: center;
 
@@ -190,6 +189,7 @@ export const PhraseStyled = styled.p`
   width: 502px;
   // margin-bottom: 8rem;
   letter-spacing: -0.04em;
+  max-width: 464px;
 
   ::selection {
     background: ${colors.purple};
