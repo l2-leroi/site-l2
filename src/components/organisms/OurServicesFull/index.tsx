@@ -153,6 +153,7 @@ export default function OurServicesFull() {
           </ContentStyled>
         </OurServicesFullStyled>
       </SectionStyled>
+      {/* }
       <DiagonalVideo>
         <VideoTitleStyled>
           <Typography
@@ -167,6 +168,7 @@ export default function OurServicesFull() {
           </Typography>
         </VideoTitleStyled>
       </DiagonalVideo>
+  */}
     </>
   );
 }
