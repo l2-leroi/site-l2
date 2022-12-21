@@ -16,6 +16,10 @@ export const DivMainTextStyled = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 800px) {
+    width: 70vw;
+  }
+
   @media (max-width: 400px) {
     margin-top: 40px;
   }
@@ -99,10 +103,19 @@ export const DivImageStyled = styled.div`
 export const ContainerMainStyled = styled.div`
   display: flex;
   align-items: stretch;
+  overflow: inherit;
+
   .scrollCircleDiv {
     width: 30vw;
     min-width: 30vw;
     margin-top: -60vw;
+    margin-bottom: -387px;
+
+    @media (max-width: 800px) {
+      margin-bottom: -230.5px;
+    }
+    > div {
+      z-index: 1;
+    }
   }
-  overflow: inherit;
 `;

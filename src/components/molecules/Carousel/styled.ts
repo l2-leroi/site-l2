@@ -3,21 +3,48 @@ import { colors } from '../../../styles/colors';
 
 export const DivStyled = styled.div`
   overflow: hidden;
+  display: flex; //
+  justify-content: flex-end; //
 
   @media (max-width: 800px) {
     width: 100%;
-    padding-left: 0; //
+    padding-left: 0;
   }
+
+  .slick-slider {
+    width: 85vw;
+  }
+
+  .first-card {
+    visibility: hidden;
+    opacity: 0;
+    // transition: visibility 0s 1s, opacity 1s linear;
+  }
+
   .card-fade {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 1s, opacity 1s linear;
   }
+
   .slick-slide {
-    // width: auto !important;
+    width: 457px !important;
+    @media (max-width: 800px) {
+      width: 220.5px !important;
+    }
   }
+
   .slick-track {
     width: max-content !important;
+    infinite: true !important; //
+    transition: fade 400ms ease 1s !important;
+  }
+
+  // último card
+  .slick-slide[aria-hidden='true'] + .slick-cloned[aria-hidden='true'] {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear !important;
   }
 `;
 
@@ -31,10 +58,14 @@ export const ArrowRightStyled = styled.div`
   ::before {
     display: none !important;
   }
-  right: -65px;
+  right: -75px;
   background-image: url('/images/white-arrow-right.png') !important;
   background-position: 3.5rem !important;
   background-repeat: no-repeat !important;
+
+  @media (max-width: 800px) {
+    right: -37.5px;
+  }
   @media (max-width: 500px) {
     display: none;
   }
