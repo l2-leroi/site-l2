@@ -4,15 +4,22 @@ import { Typography } from '../../../styles/typography';
 import {
   SectionStyled,
   ContentStyled,
+
+  TitleGroupStyled,
+
   VideoTitleStyled,
+
   OurServicesFullStyled,
   ArrowSpinnerComponentStyled,
   ArrowSpinnerContainerStyled,
 } from './styled';
 import ServiceList from '../../molecules/ServiceList';
 import ScrollCircle from '../../atoms/ScrollCircle';
+
+
 import DiagonalVideo from '../../atoms/DiagonalVideo';
 import InternalPageHeader from '../../molecules/InternalPageHeader';
+
 
 export default function OurServicesFull() {
   const { t } = i18next;
