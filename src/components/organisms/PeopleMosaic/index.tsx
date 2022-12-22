@@ -295,7 +295,7 @@ export default function PeopleMosaic() {
           city: 'Rio Grande',
         },
         {
-          images: ['1.jpg', '2.jpg', '3.jpg'],
+          images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'],
           folder: 'LeroiOliveira',
           name: 'Leroi',
           city: 'Pelotas',
