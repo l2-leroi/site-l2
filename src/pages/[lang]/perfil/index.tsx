@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import LineAnimation from '../../../components/atoms/LineAnimation';
@@ -20,9 +21,26 @@ const Perfil: NextPage = () => {
     }
   }, []);
 
+  // const FundacredLogo = '/images/OurCustomers/fundacred-logo.svg';
+  // const customers = [
+  //   { alt: 'Tô Parado Logo', src: ToParadoLogo },
+
+  const FotoPerfil = '/images/profile/vanessa.jpg';
+
+  // const icones = [{ alt: 'Tô Parado Logo', src: ToParadoLogo }];
+
+  const deaderProps = {
+    nome: 'Vanessa Müller Mattos',
+    cargo: 'UX / UI Designer',
+    apelido: 'Saki',
+    email: 'vanessa.mattos@l2code.com.br',
+    pageName: t('cases.pageName'),
+    fotoPerfil: FotoPerfil,
+  };
+
   return (
     <>
-      <Profile />
+      <Profile headerProfile={deaderProps} />
       <LineAnimation bottomBgColor={colors.purple} topBgColor={colors.gray}>
         <Footer />
       </LineAnimation>

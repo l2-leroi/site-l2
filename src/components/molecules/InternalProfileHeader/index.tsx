@@ -22,11 +22,12 @@ interface Header {
   apelido: string;
   email: string;
   pageName: string;
+  fotoPerfil: string;
 }
-
 interface InternalPageHeaderProps {
   internalHeader: Header;
 }
+
 function InternalProfileHeader(props: InternalPageHeaderProps) {
   const href_en = '/en/';
   const href_pt = '/pt/';
@@ -34,7 +35,11 @@ function InternalProfileHeader(props: InternalPageHeaderProps) {
   return (
     <ContainerStyled>
       <div style={{ width: '33.33%' }}>
-        <ImageStyled src="/images/profile\vanessa.jpg" alt="Foto de perfil" />
+        {/* <ImageStyled src="/images/profile\vanessa.jpg" alt="Foto de perfil" /> */}
+        <ImageStyled
+          src={props.internalHeader.fotoPerfil}
+          alt="Foto de perfil"
+        />
       </div>
       <ContentStyled>
         <DivStyled>
