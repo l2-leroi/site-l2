@@ -13,6 +13,9 @@ export const TextContainerStyled = styled.div`
     position: relative;
     overflow: hidden;
     height: 1000px;
+    @media (max-width: 800px) {
+      height: 600px;
+    }
     > div {
       position: absolute;
       z-index: 50;
