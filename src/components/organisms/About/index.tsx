@@ -227,7 +227,7 @@ export default function About() {
               </Typography>
               <div className="button">
                 <Button
-                  linkBtn="#"
+                  linkBtn="pessoas"
                   text="CONHEÇA A NOSSA EQUIPE"
                   fill={`${colors.gray}`}
                   fontSize="large"
