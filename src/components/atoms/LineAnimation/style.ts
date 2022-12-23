@@ -22,7 +22,8 @@ export const TextContainerStyled = styled.div`
   }
 `;
 export const LineBg = styled.div<Props>`
-  margin-top: -1px;
+  margin-top: -2px;
+  margin-bottom: -2px;
   background-color: ${(props) => props.topBgColor};
 `;
 
