@@ -7,6 +7,7 @@ export const InfiniteScrollContainerStyled = styled(InfiniteScroll)`
   display: flex;
   flex-direction: column;
   overflow-x: none;
+  scrollbar-width: none;
 
   ::-webkit-scrollbar {
     display: none;
