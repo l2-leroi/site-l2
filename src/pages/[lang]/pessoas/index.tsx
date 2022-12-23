@@ -4,8 +4,10 @@ import LineAnimation from '../../../components/atoms/LineAnimation';
 import { colors } from '../../../styles/colors';
 
 const Pessoas: NextPage = () => {
-  // make page refresh on top
   useEffect(() => {
+    const nav = document.querySelector('.nav');
+    nav?.classList.add('black');
+
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
     } else {
@@ -13,7 +15,7 @@ const Pessoas: NextPage = () => {
         window.scrollTo(0, 0);
       };
     }
-  });
+  }, []);
 
   return (
     <>
