@@ -25,13 +25,21 @@
           "title": "Desenvolvedores",
           "subtitle": "Os hackers da computação! ● Nossos devs são especialistas em códigos, responsáveis pelo desenvolvimento de softwares."
         },
+        "qa": {
+          "title": "Quality Assurance (QA)",
+          "subtitle": ""
+        },
         "uxui": {
-          "title": "UX / UI Designers",
+          "title": "Product Designers",
           "subtitle": "A equipe criativa da L2! ● Nossos designers são responsáveis por criar interfaces pensando na melhor experiência para seus usuários."
         },
         "humanResources": {
           "title": "Administração / RH",
           "subtitle": "Os Adms tem a missão de gerenciar recursos materiais, financeiros e humanos. ● Essa equipe lida com a gestão em suas mais variadas formas."
+        },
+        "peopleAndCulture": {
+          "title": "Pessoas e Cultura",
+          "subtitle": ""
         },
         "managers": {
           "title": "Diretoria",
@@ -39,7 +47,7 @@
         },
         "projectManagement": {
           "title": "Gestão de Projetos",
-          "subtitle": "Os bosses, os “chefões finais”. ● Os diretores são responsáveis por organizar, planejar, orientar a aplicação dos recursos e tomar todas as decisões importantes para o bom desenvolvimento da empresa."
+          "subtitle": ""
         },
         "pets": {
           "title": "",

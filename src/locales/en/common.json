@@ -6,6 +6,48 @@
       "thereIsMore": "There's more down here"
     }
   },
+  "people":{
+    "pageName": "pessoas",
+    "ourTalents":"OUR TALENTS, THE LCODERS",
+    "weWork": "We work 100% remotely, embracing the talents of the world",
+    "whoWeAre":"WHO WE ARE",
+    "nobodyInnovatesAlone":"Nobody innovates alone",
+    "togetherWeMakeMagic": "But together we make magic. ● Our team is made up of talents from different levels and places, ready to exceed your expectations.",
+      "professions": {
+        "developers": {
+          "title": "Developers",
+          "subtitle": "Computer hackers! ● Our devs are code experts, responsible for software development."
+        },
+        "qa": {
+          "title": "Quality Assurance (QA)",
+          "subtitle": ""
+        },
+        "uxui": {
+          "title": "Product Designers",
+          "subtitle": "The creative team at L2! ● Our designers are responsible for creating interfaces thinking about the best experience for their users."
+        },
+        "humanResources": {
+          "title": "Administration / HR",
+          "subtitle": "Adms have the mission of managing material, financial and human resources. ● This team deals with management in its most varied forms."
+        },
+        "peopleAndCulture": {
+          "title": "People and Culture",
+          "subtitle": ""
+        },
+        "managers": {
+          "title": "Directors",
+          "subtitle": "The bosses, the “final bosses”. ● Directors are responsible for organizing, planning, guiding the application of resources and taking all important decisions for the good development of the company."
+        },
+        "projectManagement": {
+          "title": "Project management",
+          "subtitle": ""
+        },
+        "pets": {
+          "title": "",
+          "subtitle": "Also meet the friends who show up at the meetings and rejoice with these cuties."
+        }
+      }
+  },
   "openMenu": {
     "home": "Home",
     "about" : "About",
