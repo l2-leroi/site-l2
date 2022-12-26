@@ -63,7 +63,8 @@ export const AsideStyled = styled.aside`
     margin-left: 5px;
   }
   @media (min-width: 400px) {
-    margin-left: 60px;
+    // margin-left: 60px;
+    margin-left: 43px;
   }
   @media (max-width: 400px) {
     margin-left: 19px;
