@@ -58,13 +58,13 @@ export const DivStyled = styled.div`
 export const AsideStyled = styled.aside`
   margin-bottom: -8px;
   margin-left: 25px;
+  white-space: nowrap;
 
   @media (max-width: 800px) {
     margin-left: 5px;
   }
   @media (min-width: 400px) {
-    // margin-left: 60px;
-    margin-left: 43px;
+    margin-left: 60px;
   }
   @media (max-width: 400px) {
     margin-left: 19px;
