@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-vars */
 import i18next from 'i18next';
 import dynamic from 'next/dynamic';
 import { useRef } from 'react';
@@ -61,7 +63,7 @@ function ServiceList({ services }: ServiceProps) {
               {t(`${service.title}.paragraph`)}
             </Typography>
           </ParagraphStyled>
-
+          {/* }
           {service.hasImages ? (
             <ImageContainerStyled>
               {service.images.map((image) => (
@@ -91,6 +93,7 @@ function ServiceList({ services }: ServiceProps) {
               )}
             </VideoStyled>
           ) : null}
+              */}
 
           <AboutListStyled>
             {service.list.map((text, index) => (

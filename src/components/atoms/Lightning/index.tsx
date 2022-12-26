@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
 import { colors } from '../../../styles/colors';
 
 export const Lightning = () => {
@@ -16,6 +17,8 @@ export const Lightning = () => {
   const windowWidth = window.innerWidth;
   const containerGutter = 56;
   const containerSize = 1500;
+  const [labelSelected, setLabelSelected] = useState<any>('');
+
   function createLightning(mouseAxis) {
     let totalGap = containerGutter;
 
@@ -38,8 +41,10 @@ export const Lightning = () => {
 
     if (mouseAxis.y <= contactPointY) {
       endPosition = { x: contactPointX, y: contactPointY };
+      setLabelSelected(document.getElementById('mailContact').innerText);
     } else {
       endPosition = { x: talentPointX, y: talentPointY };
+      setLabelSelected(document.getElementById('mailTalent').innerText);
     }
 
     const sizeX = (mouseAxis.x - endPosition.x) ** 2;
@@ -173,20 +178,57 @@ export const Lightning = () => {
     });
   }, []);
 
+  useEffect(() => {
+    const handleClick = () => {
+      if (!navigator.clipboard) return;
+
+      navigator.clipboard.writeText(labelSelected);
+
+      toast('Copiado para a área de transferência!', {
+        containerId: 'Lightning',
+      });
+    };
+
+    if (isCanvasEnabled) {
+      window.addEventListener('click', handleClick);
+    } else {
+      window.removeEventListener('click', handleClick);
+    }
+
+    return () => window.removeEventListener('click', handleClick);
+  }, [labelSelected, isCanvasEnabled]);
+
   return (
-    <canvas
-      id="canvas"
-      ref={ref}
-      style={{
-        zIndex: 998,
-        position: 'absolute',
-        top: 0,
-        left: '0',
-        width: '100%',
-        height: currentHeight,
-        opacity: isCanvasEnabled ? 1 : 0,
-        visibility: isCanvasEnabled ? 'visible' : 'hidden',
-      }}
-    />
+    <>
+      <canvas
+        id="canvas"
+        ref={ref}
+        style={{
+          zIndex: 998,
+          position: 'absolute',
+          top: 0,
+          left: '0',
+          width: '100%',
+          height: currentHeight,
+          opacity: isCanvasEnabled ? 1 : 0,
+          visibility: isCanvasEnabled ? 'visible' : 'hidden',
+        }}
+      />
+      {isCanvasEnabled && (
+        <ToastContainer
+          enableMultiContainer
+          containerId="Lightning"
+          style={{ fontSize: 14 }}
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnHover
+          theme="dark"
+        />
+      )}
+    </>
   );
 };

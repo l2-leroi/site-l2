@@ -4,7 +4,10 @@ import { colors } from '../../../styles/colors';
 
 export const Message = styled.span``;
 
-export const StyledContainer = styled(ToastContainer)`
+export const StyledContainer = styled(ToastContainer).attrs({
+  enableMultiContainer: true,
+  containerId: 'Toastr',
+})`
   .Toastify__toast-body > div:last-child {
     display: flex;
     flex: 1 1;

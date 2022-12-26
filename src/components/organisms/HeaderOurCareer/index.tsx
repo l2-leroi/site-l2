@@ -106,6 +106,7 @@ export default function HeaderOurCareer({
                 )}
               </DivDate>
             </DateStyled>
+            {/*
             <div className="button">
               {!isStartDateBeforeThanNow && (
                 <Button
@@ -115,6 +116,7 @@ export default function HeaderOurCareer({
                 />
               )}
             </div>
+              */}
           </DivStyledDate>
           {isStartDateBeforeThanNow ? (
             <Typography tag="p" color="gray" fontFamily="font2" size="xsmall">

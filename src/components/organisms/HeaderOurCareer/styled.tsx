@@ -9,7 +9,6 @@ export const ContainerStyled = styled.section`
   padding-right: 28px;
   background-color: ${colors.black};
   color: ${colors.gray};
-  padding-top: 20.5rem;
 `;
 export const TextStyled = styled.div`
   margin-top: 4rem;
@@ -129,7 +128,7 @@ export const DivStyledDate = styled.div`
 
 export const DateStyled = styled.div`
   display: flex;
-  margin-top: 60px;
+  margin: 60px 0;
   @media (max-width: 1220px) {
     flex-direction: column;
     align-items: center;
