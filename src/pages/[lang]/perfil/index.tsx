@@ -26,9 +26,14 @@ const Perfil: NextPage = () => {
   //   { alt: 'Tô Parado Logo', src: ToParadoLogo },
 
   const FotoPerfil = '/images/profile/vanessa.jpg';
+  const feminino = '/images/ProfileIcons/feminino.svg';
+  const bandeira = '/images/ProfileIcons/bandeira-demi.svg';
 
-  // const icones = [{ alt: 'Tô Parado Logo', src: ToParadoLogo }];
-
+  const icons = [
+    { alt: 'icon', src: bandeira },
+    { alt: 'icon', src: feminino },
+  ];
+  // ProfileIcons
   const deaderProps = {
     nome: 'Vanessa Müller Mattos',
     cargo: 'UX / UI Designer',
@@ -36,6 +41,7 @@ const Perfil: NextPage = () => {
     email: 'vanessa.mattos@l2code.com.br',
     pageName: t('cases.pageName'),
     fotoPerfil: FotoPerfil,
+    ProfileIcons: icons,
   };
 
   return (

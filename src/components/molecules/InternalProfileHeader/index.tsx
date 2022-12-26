@@ -23,6 +23,11 @@ interface Header {
   email: string;
   pageName: string;
   fotoPerfil: string;
+  ProfileIcons: Icons[];
+}
+interface Icons {
+  alt: string;
+  src: string;
 }
 interface InternalPageHeaderProps {
   internalHeader: Header;
@@ -32,6 +37,13 @@ function InternalProfileHeader(props: InternalPageHeaderProps) {
   const href_en = '/en/';
   const href_pt = '/pt/';
 
+  const icon = props.internalHeader.ProfileIcons.map((itemCase) => (
+    <>
+      {/* <img>{itemCase.src}</img> */}
+      <div>{itemCase.src}</div>
+      <div>{itemCase.alt}</div>
+    </>
+  ));
   return (
     <ContainerStyled>
       <div style={{ width: '33.33%' }}>
@@ -59,6 +71,9 @@ function InternalProfileHeader(props: InternalPageHeaderProps) {
         </DivStyled>
         <PhraseStyled>{props.internalHeader.cargo}</PhraseStyled>
         <PhraseStyled>Apelido: {props.internalHeader.apelido}</PhraseStyled>
+        <div>{icon}</div>
+        {/* <CaseStyled key={itemCase.title} data-anime="animate"></CaseStyled> */}
+        {/* {props.internalHeader.ProfileIcons} */}
       </ContentStyled>
       <AsideStyledbutton>
         <LanguageStyled>

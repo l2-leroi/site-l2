@@ -3,6 +3,15 @@ import { Typography } from '../../../styles/typography';
 import InternalPageHeader from '../../molecules/InternalPageHeader';
 import InternalProfileHeader from '../../molecules/InternalProfileHeader';
 
+// interface Case {
+//   number: string;
+//   title: string;
+//   info: string;
+//   image: string;
+//   alt: string;
+//   link: string;
+//   hover: string[];
+// }
 interface Header {
   nome: string;
   cargo: string;
@@ -10,6 +19,11 @@ interface Header {
   email: string;
   pageName: string;
   fotoPerfil: string;
+  ProfileIcons: Icons[];
+}
+interface Icons {
+  alt: string;
+  src: string;
 }
 interface HeaderProfile {
   headerProfile: Header;
