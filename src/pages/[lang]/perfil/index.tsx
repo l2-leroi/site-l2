@@ -19,15 +19,15 @@ const Perfil: NextPage = () => {
   }, []);
 
   const FotoPerfil = '/images/ProfileIcons/vanessa.jpg';
-  const feminino = '/images/ProfileIcons/genero/feminino.svg';
-  const bandeira = '/images/ProfileIcons/bandeiras/Demi.svg';
-  const Insignia1 = '/images/ProfileIcons/InsigniasL2/Insignia3.svg';
-  const Insignia2 = '/images/ProfileIcons/InsigniasL2/Insignia2.svg';
-  const Insignia3 = '/images/ProfileIcons/InsigniasL2/Insignia3.svg';
-  const css = '/images/ProfileIcons/Tecnologias/css.svg';
-  const java = '/images/ProfileIcons/Tecnologias/java.svg';
-  const html = '/images/ProfileIcons/Tecnologias/html.svg';
-  const pwa = '/images/ProfileIcons/Tecnologias/pwa.svg';
+  const feminino = '/assets/icons/gender/feminino.svg';
+  const bandeira = '/assets/icons/flags/Demi.svg';
+  const Insignia1 = '/assets/icons/badges/10projetos.svg';
+  const Insignia2 = '/assets/icons/badges/10projetos.svg';
+  const Insignia3 = '/assets/icons/badges/10projetos.svg';
+  const css = '/assets/icons/technologies/css.svg';
+  const java = '/assets/icons/technologies/java.svg';
+  const html = '/assets/icons/technologies/html.svg';
+  const pwa = '/assets/icons/technologies/pwa.svg';
 
   // Technologies
   const Technologies = [
