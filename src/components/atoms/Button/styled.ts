@@ -27,9 +27,10 @@ export const ButtonStyled = styled.div<ButtonProps>`
   justify-content: center;
   align-items: center;
   padding: 10px;
+  white-space: nowrap;
 
   @media (max-width: 800px) {
-    font-size: 6px;
+    font-size: 16px;
     padding: 0px;
   }
 
@@ -40,8 +41,8 @@ export const ButtonStyled = styled.div<ButtonProps>`
 
   @media (max-width: 800px) {
     svg {
-      height: 16px;
-      width: 20px;
+      height: 30px;
+      width: 30px;
     }
   }
 

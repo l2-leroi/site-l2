@@ -210,6 +210,16 @@ export const ContentStyledPrototype = styled.div<DesignPrototypeImage>`
     );
     height: var(--calc-height);
 
+    @media (max-width: 450px) {
+      width: 90vw;
+      --calc-height: calc(
+        (
+            (90vw * ${(props) => props.heightImage}) /
+              ${(props) => props.widthImage}
+          ) - 24px
+      );
+    }
+
     @media ${device.xs} {
       width: 40vw;
       --calc-height: calc(
