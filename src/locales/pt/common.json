@@ -265,8 +265,12 @@
     "imagens": "Imagens",
     "tecnologias": "Tecnologias"
   },
+  
   "Profile": {
-    "socialNetwork": "Redes Sociais"
+    "socialNetwork": "Redes Sociais",
+    "technologies": "Tecnologias",
+    "personal": "Pessoal",
+    "insignia" : "Insígnias L2"
   },
 
   "scroll": {

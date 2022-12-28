@@ -247,14 +247,19 @@
     "consultingService": "IT Consulting Service",
     "design": "Design"
   },
+  
   "CasesDetail": {
     "design": "Design",
     "prototipo": "Protótipo",
     "imagens": "Imagens",
     "tecnologias": "Tecnologias"
   },
+
   "Profile": {
-    "socialNetwork": "Social Network"
+    "socialNetwork": "Social Network",
+    "technologies": "Technologies",
+    "personal": "Personal",
+    "insignia" : "Insignia L2"
   },
 
   "scroll": {

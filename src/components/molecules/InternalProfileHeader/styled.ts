@@ -3,59 +3,59 @@ import { colors } from '../../../styles/colors';
 import { Typography } from '../../../styles/typography';
 
 export const ContainerStyled = styled.div`
-  color: ${colors.gray};
   background-color: ${colors.black};
-  padding-top: 19rem;
+  padding-top: 18rem;
   display: flex;
   flex-direction: row;
   padding-left: 28px;
   padding-right: 28px;
   gap: 32px;
+  // margin-bottom: -100px;
+  @media (max-width: 800px) {
+    gap: 16px;
+  }
+`;
+
+export const ContainerImageStyled = styled.div`
+  width: 30%;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 800px) {
+    width: 50%;
+  }
 `;
 
 export const ImageStyled = styled.img`
   // 340 x 340
-  border-radius: 100%;
-  border: 8px solid ${colors.green};
+  // 464 x 464
+  z-index: 90;
+  border-radius: 714px 140px 32px;
   width: 100%;
-  // width: 464px;
-  // max-width: 100%;
-  // height: 464px;
   object-fit: cover;
 
   // --calc-height: calc(((100% * 360) / 360));
-  --calc-height: calc(((100% * 340) / 340)- 24px);
+  --calc-height: calc(((100% * 464) / 464)- 24px);
   height: var(--calc-height);
 `;
 
 export const ContentStyled = styled.section`
-  width: 33.33%;
+  width: 30%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-self: center;
   justify-content: center;
   margin: 0 auto;
-  gap: 20px;
-  // padding-left: 2.8rem;
-  // padding-right: 2.8rem;
-  // width: 100%;
-  // max-width: 1500px;
+  gap: 24px;
+
+  @media (max-width: 800px) {
+    gap: 8px;
+    width: 50%;
+  }
 `;
 
-export const MainDivStyled = styled.div`
-  width: 100%;
-  align-self: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-`;
-
-export const DivStyled = styled.div`
-  // display: flex;
-  // align-items: end;
-  // margin-bottom: 3.6rem;
-`;
+export const DivStyled = styled.div``;
 
 export const TitleStyled = styled.h1`
   font-size: 6.4rem;
@@ -69,58 +69,24 @@ export const TitleStyled = styled.h1`
     background: ${colors.purple};
     color: ${colors.gray};
   }
-
-  // @media (max-width: 930px) {
-  //   width: 500px;
-  // }
-
-  // @media (max-width: 800px) {
-  //   width: 278px;
-  //   line-height: 32px;
-  // }
-
-  // @media (max-width: 415px) {
-  //   width: 264px;
-  //   line-height: 32.4px;
-  // }
-`;
-
-export const AsideStyled = styled.aside`
-  margin-bottom: -8px;
-  margin-left: 25px;
-
+  @media (max-width: 1200px) {
+    font-size: 4rem;
+  }
   @media (max-width: 800px) {
-    margin-left: 5px;
-  }
-  @media (min-width: 400px) {
-    margin-left: 60px;
-  }
-  @media (max-width: 400px) {
-    margin-left: 19px;
-  }
-`;
-
-export const ParagraphStyled = styled.p`
-  font-family: 'Circular Air Pro', sans-serif;
-  font-size: 1.6rem;
-  line-height: 22.4px;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-
-  ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
+    font-size: 4rem;
   }
 `;
 
 export const AsideStyledbutton = styled.div`
-  width: 33.33%;
-  // margin-left: 15px;
+  width: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const LanguageStyled = styled.div`
@@ -128,7 +94,6 @@ export const LanguageStyled = styled.div`
   width: 100%;
   flex-direction: column;
   list-style: none;
-  // position: absolute;
   right: 28px;
 
   @media (max-width: 800px) {
@@ -139,7 +104,6 @@ export const LanguageStyled = styled.div`
     opacity: 0;
     gap: 9px;
   }
-
   &.animate {
     opacity: 1;
     transition: opacity 0.8s;
@@ -178,20 +142,23 @@ export const LanguageStyled = styled.div`
     }
   }
 `;
-export const EmailStyled = styled.div`
+
+export const ContactStyled = styled.div`
   width: 100%;
   display: flex;
-  align-items: flex-end;
   flex-direction: column;
+  gap: 8px;
+`;
+
+export const PhraseStyled = styled.div`
+  width: 100%;
+  text-align: left;
   color: ${colors.gray};
-  font-family: 'Circular Air Pro', sans-serif;
+  font-family: 'Circular Air Pro';
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 140%;
   letter-spacing: -0.04em;
-  // padding-right: 25px;
-  // max-width: 300px;
-  // text-align: right;
 
   ::selection {
     background: ${colors.purple};
@@ -199,29 +166,48 @@ export const EmailStyled = styled.div`
   }
 `;
 
-export const PhraseStyled = styled.div`
+export const IconsStyled = styled.img`
+  // height: 20px;
+
+  @media (max-width: 900px) {
+    height: 20px;
+  }
+`;
+
+export const IconsContent = styled.div`
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+`;
+
+export const DivIcons = styled.div`
+  display: flex;
+  gap: 20px;
+`;
+
+export const PersonalIcons = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
+
+export const SubtitleStyle = styled.div`
+  white-space: nowrap;
   width: 100%;
   text-align: left;
   color: ${colors.gray};
-  font-family: 'Circular Air Pro', sans-serif;
+  font-family: 'Circular Air Pro';
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 140%;
-  letter-spacing: -0.04em;
-  // width: 502px;
-  // margin-bottom: 8rem;
-
-  &.email {
-    // padding-right: 25px;
-    max-width: 300px;
-  }
+  letter-spacing: -0.02em;
 
   ::selection {
     background: ${colors.purple};
     color: ${colors.gray};
   }
-
-  // @media (max-width: 800px) {
-  //   width: 175px;
-  // }
 `;

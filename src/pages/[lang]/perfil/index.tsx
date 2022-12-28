@@ -1,11 +1,7 @@
 import { t } from 'i18next';
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
-import LineAnimation from '../../../components/atoms/LineAnimation';
-import Footer from '../../../components/organisms/Footer';
 import Profile from '../../../components/organisms/Profile';
-import ProfileSocialNetwork from '../../../components/organisms/ProfileSocialNetwork';
-import { colors } from '../../../styles/colors';
 
 const Perfil: NextPage = () => {
   // make page refresh on top
@@ -22,45 +18,51 @@ const Perfil: NextPage = () => {
     }
   }, []);
 
-  // const FundacredLogo = '/images/OurCustomers/fundacred-logo.svg';
-  // const customers = [
-  //   { alt: 'Tô Parado Logo', src: ToParadoLogo },
+  const FotoPerfil = '/images/ProfileIcons/vanessa.jpg';
+  const feminino = '/images/ProfileIcons/genero/feminino.svg';
+  const bandeira = '/images/ProfileIcons/bandeiras/Demi.svg';
+  const Insignia1 = '/images/ProfileIcons/InsigniasL2/Insignia3.svg';
+  const Insignia2 = '/images/ProfileIcons/InsigniasL2/Insignia2.svg';
+  const Insignia3 = '/images/ProfileIcons/InsigniasL2/Insignia3.svg';
+  const css = '/images/ProfileIcons/Tecnologias/css.svg';
+  const java = '/images/ProfileIcons/Tecnologias/java.svg';
+  const html = '/images/ProfileIcons/Tecnologias/html.svg';
+  const pwa = '/images/ProfileIcons/Tecnologias/pwa.svg';
 
-  const FotoPerfil = '/images/profile/vanessa.jpg';
-  const feminino = '/images/ProfileIcons/feminino.svg';
-  const bandeira = '/images/ProfileIcons/bandeira-demi.svg';
-
-  const icons = [
-    { alt: 'icon', src: bandeira },
-    { alt: 'icon', src: feminino },
+  // Technologies
+  const Technologies = [
+    { alt: 'CSS', src: css },
+    { alt: 'Java', src: java },
+    { alt: 'HTML', src: html },
+    { alt: 'PWA', src: pwa },
+    { alt: 'CSS', src: css },
+    { alt: 'Java', src: java },
+    { alt: 'HTML', src: html },
+    { alt: 'PWA', src: pwa },
   ];
-  // ProfileIcons
+
+  const PersonalIcons = [
+    { alt: 'icon', src: feminino },
+    { alt: 'icon', src: bandeira },
+  ];
+
+  const InsigniasL2 = [
+    { alt: 'icon', src: Insignia1 },
+    { alt: 'icon', src: Insignia2 },
+    { alt: 'icon', src: Insignia3 },
+  ];
+
   const deaderProps = {
-    nome: 'Vanessa Müller Mattos',
+    nome: 'Vanessa Mattos (Saki)',
     cargo: 'UX / UI Designer',
-    apelido: 'Saki',
     email: 'vanessa.mattos@l2code.com.br',
-    pageName: t('cases.pageName'),
     fotoPerfil: FotoPerfil,
-    ProfileIcons: icons,
+    profileIcons: PersonalIcons,
+    insigniasL2: InsigniasL2,
+    technologies: Technologies,
   };
 
-  return (
-    <>
-      <Profile headerProfile={deaderProps} />
-      <ProfileSocialNetwork
-        socialNetwork={[
-          { name: 'facebook', link: 'https://facebook.com' },
-          { name: 'instagram', link: 'https://instagram.com' },
-          { name: 'linkedin', link: 'https://linkedin.com' },
-          { name: 'twitter', link: 'https://twitter.com' },
-        ]}
-      />
-      <LineAnimation bottomBgColor={colors.purple} topBgColor={colors.gray}>
-        <Footer />
-      </LineAnimation>
-    </>
-  );
+  return <Profile headerProfile={deaderProps} />;
 };
 
 export default Perfil;
