@@ -1,7 +1,7 @@
 import { t } from 'i18next';
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
-import Profile from '../../../components/organisms/Profile';
+import Profile from '../../../../components/organisms/Profile';
 
 const Perfil: NextPage = () => {
   // make page refresh on top

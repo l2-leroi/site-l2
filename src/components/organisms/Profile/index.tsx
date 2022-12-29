@@ -39,6 +39,7 @@ export default function Profile(props: HeaderProfile) {
   return (
     <>
       <InternalProfileHeader internalHeader={props.headerProfile} />
+      {/* profileData */}
       <LineAnimation bottomBgColor={colors.gray} topBgColor={colors.black}>
         <ProfileSocialNetwork
           socialNetwork={[

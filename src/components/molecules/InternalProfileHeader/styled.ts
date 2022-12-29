@@ -167,7 +167,7 @@ export const PhraseStyled = styled.div`
 `;
 
 export const IconsStyled = styled.img`
-  // height: 20px;
+  height: 40px;
 
   @media (max-width: 900px) {
     height: 20px;
