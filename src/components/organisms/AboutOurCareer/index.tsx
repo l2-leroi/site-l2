@@ -96,14 +96,15 @@ export default function AboutOurCareer({
             ))}
           </ul>
 
-          <div className="button">
+          {/* Botão "Quero me candidatar" */}
+          {/* <div className="button">
             <Button
               backgroundColor={`${colors.green}`}
               linkBtn="#"
               text={t('headerOurCareer.iWantToApply')}
               fill={colors.black}
             />
-          </div>
+          </div> */}
         </DivTextStyled>
       </ContainerStyled>
     </MainContainer>

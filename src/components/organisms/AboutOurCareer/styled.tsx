@@ -50,7 +50,7 @@ export const DivImageStyled = styled.div`
     margin-top: 72px;
     height: 0;
     > div {
-      height: 3000px;
+      height: 2000px;
       margin-left: -28px;
       width: 30vw;
     }
