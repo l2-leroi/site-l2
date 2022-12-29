@@ -51,7 +51,6 @@ export const ButtonStyled = styled.div<ButtonProps>`
     svg {
       height: 20px;
       width: 20px;
-
     }
   }
 

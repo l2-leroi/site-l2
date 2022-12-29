@@ -21,7 +21,6 @@ export const ContentStyled = styled.section`
     padding-left: 12px;
     padding-right: 12px;
   }
-
 `;
 
 export const MainDivStyled = styled.div`

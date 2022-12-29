@@ -1,6 +1,3 @@
-import i18next, { t } from 'i18next';
-import { Typography } from '../../../styles/typography';
-import InternalPageHeader from '../../molecules/InternalPageHeader';
 import InternalProfileHeader from '../../molecules/InternalProfileHeader';
 
 // interface Case {

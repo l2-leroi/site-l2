@@ -1,8 +1,6 @@
 import Link from 'next/link';
-import { colors } from '../../../styles/colors';
 import { Typography } from '../../../styles/typography';
 import {
-  AsideStyled,
   AsideStyledbutton,
   ContainerStyled,
   ContentStyled,
@@ -10,8 +8,6 @@ import {
   EmailStyled,
   ImageStyled,
   LanguageStyled,
-  MainDivStyled,
-  ParagraphStyled,
   PhraseStyled,
   TitleStyled,
 } from './styled';
