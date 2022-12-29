@@ -1,5 +1,4 @@
 import i18next from 'i18next';
-import { colors } from '../../../styles/colors';
 import {
   ContainerStyled,
   DivImageStyled,
@@ -9,7 +8,6 @@ import {
   MainContainer,
 } from './styled';
 import { Typography } from '../../../styles/typography';
-import Button from '../../atoms/Button';
 import { StyledScrollCircle } from '../OurCareersPage/styled';
 
 interface PropsImage {
@@ -96,14 +94,15 @@ export default function AboutOurCareer({
             ))}
           </ul>
 
-          <div className="button">
+          {/* Botão "Quero me candidatar" */}
+          {/* <div className="button">
             <Button
               backgroundColor={`${colors.green}`}
               linkBtn="#"
               text={t('headerOurCareer.iWantToApply')}
               fill={colors.black}
             />
-          </div>
+          </div> */}
         </DivTextStyled>
       </ContainerStyled>
     </MainContainer>

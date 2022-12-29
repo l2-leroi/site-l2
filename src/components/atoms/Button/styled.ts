@@ -27,22 +27,36 @@ export const ButtonStyled = styled.div<ButtonProps>`
   justify-content: center;
   align-items: center;
   padding: 10px;
+  white-space: nowrap;
 
   @media (max-width: 800px) {
-    font-size: 6px;
+    font-size: 16px;
     padding: 0px;
+
+    svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    font-size: 12px;
+    padding: 0px;
+  }
+
+  @media (max-width: 369px) {
+    font-size: 8px;
+    padding: 5px 6px !important;
+
+    svg {
+      height: 20px;
+      width: 20px;
+    }
   }
 
   &:first-child {
     width: auto;
     padding: 7.5px 16px;
-  }
-
-  @media (max-width: 800px) {
-    svg {
-      height: 16px;
-      width: 20px;
-    }
   }
 
   &:hover {

@@ -6,13 +6,65 @@
       "thereIsMore": "There's more down here"
     }
   },
+  "people":{
+    "pageName": "pessoas",
+    "ourTalents":"OUR TALENTS, THE LCODERS",
+    "weWork": "We work 100% remotely, embracing the talents of the world",
+    "whoWeAre":"WHO WE ARE",
+    "nobodyInnovatesAlone":"Nobody innovates alone",
+    "togetherWeMakeMagic": "But together we make magic. ● Our team is made up of talents from different levels and places, ready to exceed your expectations.",
+      "professions": {
+        "developers": {
+          "title": "Developers",
+          "subtitle": "Computer hackers! ● Our devs are code experts, responsible for software development."
+        },
+        "qa": {
+          "title": "Quality Assurance (QA)",
+          "subtitle": ""
+        },
+        "uxui": {
+          "title": "Product Designers",
+          "subtitle": "The creative team at L2! ● Our designers are responsible for creating interfaces thinking about the best experience for their users."
+        },
+        "humanResources": {
+          "title": "Administration / HR",
+          "subtitle": "Adms have the mission of managing material, financial and human resources. ● This team deals with management in its most varied forms."
+        },
+        "peopleAndCulture": {
+          "title": "People and Culture",
+          "subtitle": ""
+        },
+        "managers": {
+          "title": "Directors",
+          "subtitle": "The bosses, the “final bosses”. ● Directors are responsible for organizing, planning, guiding the application of resources and taking all important decisions for the good development of the company."
+        },
+        "projectManagement": {
+          "title": "Project management",
+          "subtitle": ""
+        },
+        "pets": {
+          "title": "",
+          "subtitle": "Also meet the friends who show up at the meetings and rejoice with these cuties."
+        }
+      }
+  },
+  "openMenu": {
+    "home": "Home",
+    "about" : "About",
+    "cases": "Cases",
+    "services": "Services",
+    "career": "Career",
+    "people": "People"
+  },
   "about": {
+    "pageName": "sobre",
     "title": "SOMOS A L2CODE",
     "weCreated": "Criamos soluções tecnológicas de forma humanizada e inovadora, pois acreditamos que inovar é aprender e ensinar sem fronteiras.",
-    "whatWeAre": "O que somos",
+    "whatWeAre": "O QUE SOMOS",
     "weTransform": "Transformamos ideias em soluções",
     "are": "Somos uma empresa de consultoria especializada em Tecnologia e já conseguimos grandes feitos com a forma humanizada de lidar com clientes e colaboradores. ● A ideia é criar o senso de comunidade, assim tudo flui melhor!",
-    "ourPurpose": " Nosso propósito é:",
+    "ourPurpose": "Nosso propósito é:",
+    "connect": "Conectar e desenvolver pessoas;",
     "innovate": "Inovar a organização digital de empresas;",
     "defend": "Defender a diversidade de ideias;",
     "transform": "E transformar estratégias digitais em resultados reais.",
@@ -24,8 +76,54 @@
     "weBelieve": "Acreditamos em um mundo onde as pessoas tem liberdade para se manifestar e compartilhar suas ideias. Nossos valores e princípios estão manifestados no nosso",
     "manifestL2": "manifesto L2.",
     "superPowers": "Super poderes que fazem a diferença",
-    "weAreMade": "Somos feitos de pessoas brilhantes, magos da tecnologia, somos os Lcoders! ● Mas claro, com grandes poderes, vem grandes responsabilidades. Por isso utilizamos nossos super poderes para ajudar pessoas e melhorar o mundo. ● São eles: o poder da colaboração, pluralidade, diversão, empatia, criatividade, aprendizagem, comunicação e, como resultado, temos também o poder da evolução!"
+    "weAreMade": "Somos feitos de pessoas brilhantes, magos da tecnologia, somos os Lcoders! ● Mas claro, com grandes poderes, vem grandes responsabilidades. Por isso utilizamos nossos super poderes para ajudar pessoas e melhorar o mundo. ● São eles: o poder da colaboração, pluralidade, diversão, empatia, criatividade, aprendizagem, comunicação e, como resultado, temos também o poder da evolução!",
+    "manifest": {
+      "title": "Manifesto L2code",
+      "paragraph": {
+        "weLive": "Vivemos em um universo de inovações onde, em cada fragmento de tempo, algo novo é lançado. Por isso somos defensores da diversidade de ideias e apoiadores da criatividade sem limites! ● Defendemos que a construção do trabalho em equipe fortalece fraquezas e engrandece a entrega e as relações humanas. ● A união faz a inovação aqui na L2!",
+        "TodayWeAre": "Hoje nós somos dados, somos desenvolvimento, somos especialistas, somos apaixonados por código, somos pessoas!",
+        "WeAre": "Somos sonhadores, somos movidos por disrupções, afinal acreditamos que a tecnologia pode aproximar e humanizar relações entre pessoas, empresas e  universos.",
+        "WeFollow": "Nós seguimos os seguintes princípios:"
+      },
+    
+      "principleOneTitle": "1. Pessoas, pessoas e pessoas",
+      "principleOneParagraph":"Somos feitos de pessoas, trabalhamos com pessoas e criamos para pessoas. Cada indivíduo é único e importante para nós e deve ter seu espaço respeitado.",
+      "principleOneTag": "#pessoas #indivíduos",
+
+      "principleTwoTitle": "2. Somos apaixonados pelo que fazemos",
+      "principleTwoParagraph": "Cada pessoa tem seus interesses e paixões, quando fazemos o que gostamos fazemos o melhor que podemos fazer. Por isso, nos preocupamos em colocar a pessoa certa no lugar certo e recompensar cada passo bem sucedido.",
+      "principleTwoTag": "#lovetocode #sintonia",
+
+      "principleThreeTitle": "3. Não existe o que não podemos fazer, apenas o que não fizemos ainda",
+      "principleThreeParagraph": "Fazer sem medo de errar, aprender com isso e então fazer melhor. Estamos em constante aprendizado, e isso nos move para novos horizontes.",
+      "principleThreeTag": "#aprendizado",
+
+      "principleFourTitle": "4. Nós resolvemos o problema",
+      "principleFourParagraph": "Temos orientação a solução, a resolver os problemas sejam eles quais forem. Fazemos isso entendendo as necessidades de nossos clientes/projetos e criando uma solução propositiva.",
+      "principleFourTag": "#excelência #solução #propositividade #comprometimento",
+      
+      "principleFiveTitle": "5. Compartilhar conhecimento não é opção, é obrigação",
+      "principleFiveParagraph": "Ao contrário das tradicionais hierarquias, nós não escondemos conhecimento, mas sim compartilhamos ao máximo, seja com clientes, colaboradores ou com o mundo. L2 é um grande time! Cada colaborador ajuda e fortalece a fraqueza dos outros.",
+      "principleFiveTag": "#compartilhar #colaborar #l2team",
+
+      "beginningSixTitle": "6. Respeito e diversidade, quanto mais, melhor",
+      "beginningSixParagraph": "Acreditamos que a diversidade amplia nossa maneira de ver o mundo, a forma como analisamos situações e as diferentes maneiras com que resolvemos problemas. Criamos um ambiente acolhedor e inclusivo para que L2team possa se desenvolver e dar o seu melhor.",
+      "beginningSixTag": " #respeito #inclusão",
+
+      "principleSevenTitle": "7. Se não for divertido tem algo errado",
+      "principleSevenParagraph": "Se está chato ou desmotivador tem algo errado. Quando temos espaço para usar nossas habilidades, criar coisas novas e nos desenvolvermos, sempre será motivador, divertido e empolgante.",
+      "principleSevenTag": "#diversão #evolução #crescimento #inovação",
+
+      "principleEightTitle": "8. Ninguém tem sempre razão",
+      "principleEightParagraph": "Seja desenvolvedor, líder, gestor, cliente ou o papa. Nós acertamos ou erramos como time. Se algo pode ser melhorado, você tem o direito de dizer de forma clara. Adoramos a cultura de feedbacks, pois nos ajuda a crescer.",
+      "principleEightTag": "#clareza #transparência #feedback",
+
+      "beginningNineTitle": "9. Não é feitiçaria, é tecnologia",
+      "beginningNineParagraph": "Usamos todo o potencial da tecnologia para criar impacto positivo no mundo, reinventando soluções e encantando as pessoas com produtos digitais e experiências online que as pessoas adoram. Parece mágica, mas é código. Parece super poderes, mas é design.",
+      "beginningNineTag": "#encantamento #tecnologia"
+    }
   },
+
   "cases": {
     "ourCases": "OUR SELECTED CASES",
     "laCream": "LA CREAM",
@@ -252,6 +350,9 @@
     "prototipo": "Protótipo",
     "imagens": "Imagens",
     "tecnologias": "Tecnologias"
+  },
+  "Profile": {
+    "socialNetwork": "Social Network"
   },
 
   "scroll": {

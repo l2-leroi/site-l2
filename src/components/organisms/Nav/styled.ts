@@ -9,7 +9,7 @@ interface NavProps {
 export const NavStyled = styled.nav`
   position: absolute;
   width: 100%;
-  z-index: 100;
+  z-index: 999; //100;
   color: ${colors.black};
   background-color: ${colors.gray};
   padding: 32px 28px;
@@ -48,7 +48,7 @@ export const NavStyled = styled.nav`
   }
 
   @media (max-width: 500px) {
-    opacity: 0;
+    // opacity: 0;
 
     &.animate {
       opacity: 1;
@@ -101,6 +101,7 @@ export const DivTextStyled = styled.div`
 
 export const ImageStyled = styled.img`
   user-select: none;
+  cursor: pointer;
 
   @media (max-width: 800px) {
     width: 40px;
