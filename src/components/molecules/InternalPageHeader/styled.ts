@@ -14,8 +14,8 @@ export const ContentStyled = styled.section`
   flex-direction: column;
   max-width: 1500px;
   margin: 0 auto;
-  padding-left: 2.8rem;
-  padding-right: 2.8rem;
+  padding-left: 28px;
+  padding-right: 28px;
 `;
 
 export const MainDivStyled = styled.div`
@@ -87,6 +87,12 @@ export const ParagraphStyled = styled.p`
     background: ${colors.purple};
     color: ${colors.gray};
   }
+
+  @media (max-width: 500px) {
+    text-align: center;
+    word-break: normal;
+    white-space: pre-wrap;
+  }
 `;
 
 export const AsideStyledbutton = styled.div`
@@ -109,6 +115,7 @@ export const LanguageStyled = styled.div`
   @media (max-width: 500px) {
     opacity: 0;
     gap: 9px;
+    display: none;
   }
 
   &.animate {
