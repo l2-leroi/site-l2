@@ -11,6 +11,7 @@ import {
   DivItemSTextStyled,
   DivImageStyled,
   ContainerImageStyled,
+  DivParagraph,
 } from './styled';
 
 interface HeaderCasesProps {
@@ -116,9 +117,11 @@ export default function HeaderCases({
             >
               {t(h1Second)}
             </Typography>
-            <Typography tag="p" color="gray" fontFamily="font2">
-              {t(pSecond)}
-            </Typography>
+            <DivParagraph>
+              <Typography tag="p" color="gray" fontFamily="font2">
+                {t(pSecond)}
+              </Typography>
+            </DivParagraph>
           </DivItemSTextStyled>
         </DivTextStyled>
       </SectionOnePageStyled>

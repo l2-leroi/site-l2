@@ -269,6 +269,12 @@ export const DivTextStyled = styled.div`
   margin-bottom: 6rem;
 `;
 
+export const DivParagraph = styled.div`
+  @media (max-width: 800px) {
+    width: 75%;
+  }
+`;
+
 export const DivItemSTextStyled = styled.div`
   max-width: 464px;
   height: auto;
