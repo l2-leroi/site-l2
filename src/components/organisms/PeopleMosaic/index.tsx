@@ -58,12 +58,6 @@ export default function PeopleMosaic() {
           city: 'Camaquã',
         },
         {
-          images: ['1.jpg', '2.jpg'],
-          folder: 'FelipePizzio',
-          name: 'Felipe',
-          city: 'Porto Alegre',
-        },
-        {
           images: ['1.jpeg', '2.jpeg', '3.jpeg'],
           folder: 'GabrieleLucas',
           name: 'Gabriele',
@@ -131,7 +125,7 @@ export default function PeopleMosaic() {
         },
         {
           images: ['1.jpg', '2.jpg'],
-          folder: 'LeticiaCarvalho',
+          folder: 'LeticiaSampaio',
           name: 'Letícia',
           city: 'Porto Alegre',
         },
@@ -142,7 +136,7 @@ export default function PeopleMosaic() {
           city: 'Barra do Ribeiro',
         },
         {
-          images: ['1.jpg', '2.jpg', '3.jpg'],
+          images: ['1.JPG', '2.jpg', '3.jpg'],
           folder: 'LucasOliveira',
           name: 'Lucas O.',
           city: 'Rio Grande',
@@ -150,7 +144,7 @@ export default function PeopleMosaic() {
         {
           images: ['1.jpg', '2.jpg'],
           folder: 'LuizFelipe',
-          name: 'Luiz',
+          name: 'Luiz Felipe',
           city: 'São Leopoldo',
         },
         {
@@ -186,7 +180,7 @@ export default function PeopleMosaic() {
         {
           images: ['1.jpg', '2.jpg'],
           folder: 'ValdenioMelo',
-          name: 'Valdenio',
+          name: 'Valdênio',
           city: 'Santo André',
         },
         {
@@ -212,6 +206,23 @@ export default function PeopleMosaic() {
           folder: 'WilliamKolodziejski',
           name: 'William',
           city: 'Pelotas',
+        },
+      ],
+    },
+    {
+      title: 'qa',
+      people: [
+        {
+          images: ['1.jpeg', '2.jpeg', '3.jpeg'],
+          folder: 'GabrieleLucas',
+          name: 'Gabriele',
+          city: 'Pelotas',
+        },
+        {
+          images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
+          folder: 'IaraRodrigues',
+          name: 'Iara',
+          city: 'São João Del Rei',
         },
       ],
     },
@@ -248,22 +259,10 @@ export default function PeopleMosaic() {
       title: 'humanResources',
       people: [
         {
-          images: ['1.jpeg', '2.jpeg'],
-          folder: 'DeboraSoares',
-          name: 'Débora',
-          city: 'Valparaíso de Goiás',
-        },
-        {
           images: ['1.jpg', '2.jpg', '3.jpg', '4.jpeg', '5.jpeg'],
           folder: 'JessicaScotta',
           name: 'Jéssica',
           city: 'Rio Grande',
-        },
-        {
-          images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
-          folder: 'MaiconMartins',
-          name: 'Maicon',
-          city: 'Porto Alegre',
         },
         {
           images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'],
@@ -280,11 +279,29 @@ export default function PeopleMosaic() {
         {
           images: ['1.jpeg', '2.jpeg'],
           folder: 'TamirysFrança',
-          name: 'Tamirys',
+          name: 'Tamyres',
           city: 'Olinda',
         },
       ],
     },
+    {
+      title: 'peopleAndCulture',
+      people: [
+        {
+          images: ['1.jpg', '2.jpeg'],
+          folder: 'AlexandreScotta',
+          name: 'Alexandre',
+          city: 'Rio Grande',
+        },
+        {
+          images: ['1.jpeg', '2.jpeg'],
+          folder: 'DeboraSoares',
+          name: 'Débora',
+          city: 'Valparaíso de Goiás',
+        },
+      ],
+    },
+
     {
       title: 'managers',
       people: [
@@ -301,7 +318,7 @@ export default function PeopleMosaic() {
           city: 'Pelotas',
         },
         {
-          images: ['1.jpg', '2.jpg', '3.jpg'],
+          images: ['1.JPG', '2.jpg', '3.jpg'],
           folder: 'LucasOliveira',
           name: 'Lucas O.',
           city: 'Rio Grande',
@@ -320,22 +337,17 @@ export default function PeopleMosaic() {
         },
       ],
     },
-    /*
     {
       title: 'projectManagement',
       people: [
         {
-          images: ['BrunoPhoto.png', 'ClausPhoto.png', 'FelipePhoto.png'],
-          name: 'Bruno',
-          city: 'São Paulo',
-        },
-        {
-          images: ['BrunoPhoto.png', 'ClausPhoto.png', 'FelipePhoto.png'],
-          name: 'Felipe',
-          city: 'Rio Grande do Sul',
+          images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
+          folder: 'MaiconMartins',
+          name: 'Maicon',
+          city: 'Porto Alegre',
         },
       ],
-    }, */
+    },
   ];
   React.useEffect(() => {
     const peopleArray = people.map((item) => {

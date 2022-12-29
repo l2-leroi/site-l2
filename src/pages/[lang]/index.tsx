@@ -10,6 +10,9 @@ import Footer from '../../components/organisms/Footer';
 export default function Home() {
   // make page refresh on top
   useEffect(() => {
+    const nav = document.querySelector('.nav');
+    nav?.classList.remove('black');
+
     if (history.scrollRestoration) {
       history.scrollRestoration = 'manual';
     } else {
@@ -17,7 +20,8 @@ export default function Home() {
         window.scrollTo(0, 0);
       };
     }
-  });
+  }, []);
+
   return (
     <>
       <Header />
