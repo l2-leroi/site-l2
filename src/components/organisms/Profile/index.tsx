@@ -7,6 +7,7 @@ import { colors } from '../../../styles/colors';
 import ProfileSocialNetwork from '../ProfileSocialNetwork';
 import Footer from '../Footer';
 import ProfileTechnologies from '../ProfileTechnologies';
+import ProfileData from '../ProfileData';
 
 interface Header {
   nome: string;
@@ -16,6 +17,9 @@ interface Header {
   profileIcons: Icons[];
   insigniasL2: IconsInsigniasL2[];
   technologies: IconsTechnologies[];
+  tweet: string;
+  resumo: string;
+  softSkills: string;
 }
 interface Icons {
   alt: string;
@@ -39,18 +43,11 @@ export default function Profile(props: HeaderProfile) {
   return (
     <>
       <InternalProfileHeader internalHeader={props.headerProfile} />
-      {/* profileData */}
+
       <LineAnimation bottomBgColor={colors.gray} topBgColor={colors.black}>
-        <ProfileSocialNetwork
-          socialNetwork={[
-            { name: 'facebook', link: 'https://facebook.com' },
-            { name: 'instagram', link: 'https://instagram.com' },
-            { name: 'linkedin', link: 'https://linkedin.com' },
-            { name: 'twitter', link: 'https://twitter.com' },
-          ]}
-        />
+        <ProfileData data={props.headerProfile} />
       </LineAnimation>
-      <ProfileTechnologies technologies={props.headerProfile.technologies} />
+
       <LineAnimation bottomBgColor={colors.purple} topBgColor={colors.gray}>
         <Footer />
       </LineAnimation>

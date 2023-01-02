@@ -268,9 +268,13 @@
   
   "Profile": {
     "socialNetwork": "Redes Sociais",
-    "technologies": "Tecnologias",
+    "technologies": "Tecnologias/Softwares",
     "personal": "Pessoal",
-    "insignia" : "Insígnias L2"
+    "insignia" : "Insígnias L2", 
+    "tweet": "Um tweet sobre mim:",
+    "photos": "Fotos",
+    "resume": "Resumo profissional",
+    "softSkills": "Soft Skills"
   },
 
   "scroll": {

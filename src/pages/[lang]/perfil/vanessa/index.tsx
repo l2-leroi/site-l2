@@ -39,6 +39,22 @@ const Perfil: NextPage = () => {
     { alt: 'Java', src: java },
     { alt: 'HTML', src: html },
     { alt: 'PWA', src: pwa },
+    { alt: 'CSS', src: css },
+    { alt: 'Java', src: java },
+    { alt: 'HTML', src: html },
+    { alt: 'PWA', src: pwa },
+    { alt: 'CSS', src: css },
+    { alt: 'Java', src: java },
+    { alt: 'HTML', src: html },
+    { alt: 'PWA', src: pwa },
+    { alt: 'CSS', src: css },
+    { alt: 'Java', src: java },
+    { alt: 'HTML', src: html },
+    { alt: 'PWA', src: pwa },
+    { alt: 'CSS', src: css },
+    { alt: 'Java', src: java },
+    { alt: 'HTML', src: html },
+    { alt: 'PWA', src: pwa },
   ];
 
   const PersonalIcons = [
@@ -60,6 +76,14 @@ const Perfil: NextPage = () => {
     profileIcons: PersonalIcons,
     insigniasL2: InsigniasL2,
     technologies: Technologies,
+    tweet:
+      // eslint-disable-next-line max-len
+      'No tempo livre eu jogo, assisto animes, séries e filmes, e faço ilustração digital (inclusive meu apelido é também meu nome artístico, Saki Myuuraa). Gosto de animais, tenho 3 cachorras e uma calopsita. Sedentária, não costumo sair muito, mas gosto de ir a eventos de anime com os amigos.',
+    resumo:
+      // eslint-disable-next-line max-len
+      'Fascinada pelas áreas de criação, é tecnóloga em design gráfico e bacharela em moda, ambos formada pela Universidade Feevale, e em UX, UI e Product Design pelo programa UX Unicórnio. ● Já trabalhou como designer gráfico, designer de superfície, ilustradora freelancer, e hoje atua na área de UX / UI.',
+    softSkills:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet finibus libero, ac imperdiet ex vulputate sed.',
   };
 
   return <Profile headerProfile={deaderProps} />;
