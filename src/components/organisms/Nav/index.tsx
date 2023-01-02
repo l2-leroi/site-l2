@@ -26,6 +26,7 @@ export default function Nav() {
     if (
       mutation[0].target.classList.contains('white') ||
       mutation[0].target.classList.contains('black') ||
+      mutation[0].target.classList.contains('blackMenu') ||
       mutation[0].target.classList.contains('transparentBlack')
     ) {
       setIsWhiteLogo(true);
@@ -62,6 +63,7 @@ export default function Nav() {
 
     if (
       nav.classList.contains('black') ||
+      nav.classList.contains('blackMenu') ||
       nav.classList.contains('transparentBlack')
     ) {
       handleScrollPages();
