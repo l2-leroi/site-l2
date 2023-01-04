@@ -28,6 +28,10 @@ const Perfil: NextPage = () => {
   const java = '/assets/icons/technologies/java.svg';
   const html = '/assets/icons/technologies/html.svg';
   const pwa = '/assets/icons/technologies/pwa.svg';
+  const img1 = '/images/ProfileIcons/img1.jpg';
+  const img2 = '/images/ProfileIcons/img2.jpg';
+  const img3 = '/images/ProfileIcons/img3.jpg';
+  const img4 = '/images/ProfileIcons/img4.jpg';
 
   // Technologies
   const Technologies = [
@@ -68,6 +72,13 @@ const Perfil: NextPage = () => {
     { alt: 'icon', src: Insignia3 },
   ];
 
+  const photoCarousel = [
+    { alt: 'img1', src: img1 },
+    { alt: 'img2', src: img2 },
+    { alt: 'img3', src: img3 },
+    { alt: 'img4', src: img4 },
+  ];
+
   const deaderProps = {
     nome: 'Vanessa Mattos (Saki)',
     cargo: 'UX / UI Designer',
@@ -84,6 +95,7 @@ const Perfil: NextPage = () => {
       'Fascinada pelas áreas de criação, é tecnóloga em design gráfico e bacharela em moda, ambos formada pela Universidade Feevale, e em UX, UI e Product Design pelo programa UX Unicórnio. ● Já trabalhou como designer gráfico, designer de superfície, ilustradora freelancer, e hoje atua na área de UX / UI.',
     softSkills:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet finibus libero, ac imperdiet ex vulputate sed.',
+    carousel: photoCarousel,
   };
 
   return <Profile headerProfile={deaderProps} />;

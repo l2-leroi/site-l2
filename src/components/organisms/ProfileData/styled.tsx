@@ -23,6 +23,10 @@ export const SectionStyled = styled.div`
   .scrollCircleDiv {
     margin-top: -40px;
     height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
     > div {
       // height: 1000px;
       width: 30vw;
@@ -57,7 +61,7 @@ export const SectionStyledProfileData = styled.div`
   align-items: center;
   // width: 70%;
   width: 100%;
-  text-align: left;
+  // text-align: left;
   background-color: ${colors.gray};
 
   .line {

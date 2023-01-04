@@ -1,12 +1,7 @@
-import i18next, { t } from 'i18next';
-import { Typography } from '../../../styles/typography';
-import InternalPageHeader from '../../molecules/InternalPageHeader';
 import InternalProfileHeader from '../../molecules/InternalProfileHeader';
 import LineAnimation from '../../atoms/LineAnimation';
 import { colors } from '../../../styles/colors';
-import ProfileSocialNetwork from '../ProfileSocialNetwork';
 import Footer from '../Footer';
-import ProfileTechnologies from '../ProfileTechnologies';
 import ProfileData from '../ProfileData';
 
 interface Header {
@@ -20,6 +15,7 @@ interface Header {
   tweet: string;
   resumo: string;
   softSkills: string;
+  carousel: photoCarousel[];
 }
 interface Icons {
   alt: string;
@@ -35,10 +31,14 @@ interface IconsTechnologies {
   src: string;
 }
 
+interface photoCarousel {
+  alt: string;
+  src: string;
+}
+
 interface HeaderProfile {
   headerProfile: Header;
 }
-// ProfileTechnologies
 export default function Profile(props: HeaderProfile) {
   return (
     <>

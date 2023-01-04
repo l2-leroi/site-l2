@@ -1,17 +1,11 @@
-/* eslint-disable no-plusplus */
 import Slider from 'react-slick';
-import i18next from 'i18next';
-import { DivStyled, ArrowRightStyled, ArrowLeftStyled, Card } from './styled';
-import CardCarroussel from '../../atoms/CardCarousel';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { DivStyled, ArrowRightStyled, ArrowLeftStyled, Card } from './styled';
 
 interface Card {
-  comment: string;
-  authorImg: string;
-  authorName: string;
-  id: number;
-  author: boolean;
+  alt: string;
+  src: string;
 }
 
 interface Cards {
@@ -51,52 +45,17 @@ const settings = {
   ],
 };
 
-function FindBound() {
-  const width = window.innerWidth;
-
-  if (width <= 1024) {
-    return 20;
-  }
-
-  if (width < 500) {
-    return 5;
-  }
-
-  return 300;
-}
-
-function FindCard() {
-  const card = document.getElementsByClassName('Card');
-  const cardBound = FindBound();
-  for (let i = 0; i < card.length; i++) {
-    const cardLeft = card[i].getBoundingClientRect().left;
-    if (cardLeft <= cardBound) {
-      card[i].classList.add('card-fade');
-    } else {
-      card[i].classList.remove('card-fade');
-    }
-  }
-}
-
 const Carousel = ({ cards }: Cards) => {
-  const { t } = i18next;
   return (
-    <DivStyled className="SliderContainer">
-      <Slider {...settings} afterChange={FindCard} onInit={FindCard}>
-        {cards.map((c) => (
-          <Card> </Card>
-          // <Card />
-          // <CardCarroussel
-          //   className="Card"
-          //   key={c.id}
-          //   author={c.author}
-          //   authorImg={c.authorImg}
-          //   authorName={c.authorName}
-          //   comment={t(c.comment)}
-          // />
-        ))}
-      </Slider>
-    </DivStyled>
+    <div>
+      <DivStyled className="SliderContainer">
+        <Slider {...settings}>
+          {cards.map((c) => (
+            <Card src={c.src} alt={c.alt} />
+          ))}
+        </Slider>
+      </DivStyled>
+    </div>
   );
 };
 export default Carousel;

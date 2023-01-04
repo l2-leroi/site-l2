@@ -3,6 +3,7 @@ import { Typography } from '../../../styles/typography';
 import { StyledScrollCircle } from '../OurCareersPage/styled';
 import ProfileSocialNetwork from '../ProfileSocialNetwork';
 import ProfileTechnologies from '../ProfileTechnologies';
+import ProfileCarousel from '../../molecules/ProfileCarousel';
 import {
   ArrowSpinnerComponentStyled,
   ArrowSpinnerContainerStyled,
@@ -20,6 +21,7 @@ interface Data {
   resumo: string;
   softSkills: string;
   technologies: IconsTechnologies[];
+  carousel: photoCarousel[];
 }
 interface ProfileData {
   data: Data;
@@ -29,20 +31,24 @@ interface IconsTechnologies {
   src: string;
 }
 
+interface photoCarousel {
+  alt: string;
+  src: string;
+}
+
 export default function ProfileData(props: ProfileData) {
   return (
     <SectionStyled>
-      {/* <div>
+      <div>
         <div className="scrollCircleDiv">
           <div>
             <StyledScrollCircle
-              // isWhiteImage
               blackImage={`${t('images.spinnerBlack')}`}
               whiteImage={`${t('images.spinnerWhite')}`}
             />
           </div>
         </div>
-      </div> */}
+      </div>
       <SectionStyledProfileData>
         <ContainerStyledProfileData>
           <TitleStyled>
@@ -86,7 +92,7 @@ export default function ProfileData(props: ProfileData) {
             </Typography>
           </TitleStyled>
 
-          {/* ProfileCarousel */}
+          <ProfileCarousel cards={props.data.carousel} />
 
           <div className="line" />
           <TitleStyled>

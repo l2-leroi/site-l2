@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
-export const Card = styled.div``;
+export const Card = styled.img``;
 
 export const DivStyled = styled.div`
   overflow: hidden;
@@ -40,22 +40,6 @@ export const ArrowRightStyled = styled.div`
   @media (max-width: 500px) {
     display: none;
   }
-`;
-
-export const FadeOutDiv = styled.div`
-  height: 25.1rem;
-  width: 60rem;
-  position: absolute;
-  z-index: 2;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    270deg,
-    rgba(2, 0, 36, 0) 0%,
-    rgba(242, 243, 244, 0) 0%,
-    rgba(242, 243, 244, 0.8068977591036415) 33%,
-    rgba(242, 243, 244, 0.9077380952380952) 60%,
-    rgba(242, 243, 244, 1) 86%
-  );
 `;
 
 export const ArrowLeftStyled = styled.div`
