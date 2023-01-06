@@ -21,6 +21,7 @@ export const SectionStyled = styled.div`
   padding: 0px 28px;
   gap: 30px;
   @media (max-width: 800px) {
+    padding: 0px;
     margin-top: 138px;
   }
 `;
@@ -41,7 +42,6 @@ export const TitleGroupStyled = styled.hgroup`
 
   h1 {
     margin-top: 8rem;
-    width: 60%;
     @media (max-width: 800px) {
       font-size: 36px;
     }
@@ -56,8 +56,9 @@ export const TitleGroupStyled = styled.hgroup`
 
 export const TitleStyled = styled.div`
   margin-bottom: 40px;
+  max-width: 600px;
   @media (max-width: 800px) {
-    max-width: 400px;
+    max-width: 420px;
   }
 `;
 
@@ -118,7 +119,6 @@ export const LanguageStyled = styled.div`
       }
     }
     @media (max-width: 800px) {
-      font-size: 10px;
       &:first-child {
         margin-bottom: 0px;
       }
@@ -138,7 +138,6 @@ export const SecondTitleGroupStyled = styled.hgroup`
 
   @media (max-width: 800px) {
     font-size: 12px;
-    max-width: 168px;
   }
 
   h1 {
@@ -196,7 +195,13 @@ export const SubTitleGroupStyled = styled.hgroup`
 
   @media (max-width: 800px) {
     font-size: 12px;
-    max-width: 168px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 30vw 1fr;
+
+    * {
+      grid-column: 2;
+    }
   }
 
   h1 {
@@ -228,32 +233,36 @@ export const SubTitleGroupStyled = styled.hgroup`
 export const SubTitleStyled = styled.div`
   max-width: 464px;
   @media (max-width: 800px) {
-    max-width: 168px;
+    max-width: 160px;
   }
 `;
 
 export const ParagraphSubTitleStyled = styled.div`
   max-width: 464px;
-  @media (max-width: 800px) {
-    max-width: 168px;
+
+  p {
+    @media (max-width: 800px) {
+      max-width: 160px;
+    }
   }
 `;
 
 export const TextStyledSuperPowers = styled.div`
   width: 70%;
+  padding-left: 20px;
 `;
 
 export const TextStyled = styled.div`
   max-width: 464px;
   @media (max-width: 800px) {
-    max-width: 168px;
+    max-width: 160px;
   }
 `;
 
 export const ListStyled = styled.div`
   max-width: 464px;
   @media (max-width: 800px) {
-    max-width: 168px;
+    max-width: 160px;
   }
 `;
 
@@ -291,16 +300,33 @@ export const DivCardStyled = styled.div`
     z-index: 2;
     background-color: #242a33;
     width: 464px;
-    min-height: 450px;
+    // min-height: 450px;
     max-height: 550px;
     border-radius: 8px;
     padding: 28px;
 
     @media (max-width: 800px) {
-      width: 168px;
-      min-height: 300px;
+      max-width: 160px;
+      width: fit-content;
+      // height: fit-content;
+      min-height: 220px;
       max-height: 350px;
       padding: 16px;
+      margin-right: auto;
+
+      &:first-of-type {
+        margin-left: auto;
+        margin-right: 0px;
+      }
+
+      &:last-of-type {
+        margin: 0 auto;
+        grid-column: 1/-1;
+      }
+    }
+
+    @media (max-width: 310px) {
+      margin: 0 auto !important;
     }
   }
 `;
@@ -313,9 +339,19 @@ export const StyledGroupCards = styled.hgroup`
   gap: 20px;
 
   @media (max-width: 1200px) {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
+    align-items: stretch;
+
+    &:last-of-type {
+      margin: 0 auto;
+      grid-column: 1/4;
+    }
+  }
+
+  @media (max-width: 310px) {
+    grid-template-columns: 1fr;
   }
 
   h1 {

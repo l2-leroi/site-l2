@@ -267,7 +267,7 @@ export default function Manifest() {
         </ParagraphStyled>
 
         <ImageStyled>
-          <img src="/images/Manifest/manifest-image-08.png" alt="L2code" />
+          <img src="/images/Manifest/manifest-image-08.gif" alt="L2code" />
         </ImageStyled>
         <div className="line" />
 
