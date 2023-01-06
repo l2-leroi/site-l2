@@ -2,6 +2,8 @@ import { NextPage } from 'next';
 import { useEffect } from 'react';
 import OurServicesFull from '../../../components/organisms/OurServicesFull';
 import Footer from '../../../components/organisms/Footer';
+import LineAnimation from '../../../components/atoms/LineAnimation';
+import { colors } from '../../../styles/colors';
 
 const Services: NextPage = () => {
   useEffect(() => {
@@ -20,7 +22,10 @@ const Services: NextPage = () => {
   return (
     <>
       <OurServicesFull />
-      <Footer />
+
+      <LineAnimation topBgColor={colors.black} bottomBgColor={colors.purple}>
+        <Footer />
+      </LineAnimation>
     </>
   );
 };
