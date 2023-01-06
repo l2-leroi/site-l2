@@ -263,7 +263,11 @@
     "tweet": "Um tweet sobre mim:",
     "photos": "Fotos",
     "resume": "Resumo profissional",
-    "softSkills": "Soft Skills"
+    "softSkills": "Soft Skills",
+    "preferences": "'s preferences for...",
+    "characters": "Characters",
+    "movies": "Movies",
+    "games": "Games"
   },
 
   "scroll": {

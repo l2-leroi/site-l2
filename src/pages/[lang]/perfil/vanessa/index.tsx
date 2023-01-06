@@ -1,4 +1,3 @@
-import { t } from 'i18next';
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import Profile from '../../../../components/organisms/Profile';
@@ -79,6 +78,35 @@ const Perfil: NextPage = () => {
     { alt: 'img4', src: img4 },
   ];
 
+  const characters = [
+    { name: 'Ravena', where: 'Os jovens titãs' },
+    { name: 'Sebastian', where: 'Kuroshitsuji' },
+    { name: 'Rikka', where: 'Chuunibyou' },
+    { name: 'Miko', where: 'Mieruko-chan' },
+    { name: 'Hanajima', where: 'Fruits Basket' },
+    { name: 'Alucard', where: 'Castlevania e tbm de Helsing' },
+    { name: 'Ryuk', where: 'Death Note' },
+    { name: 'Ulquiorra', where: 'Bleach' },
+    { name: 'e outros.', where: '' },
+  ];
+
+  const movies = [
+    { name: 'Marvel e DC' },
+    { name: 'animes' },
+    { name: 'filmes de terror' },
+    { name: 'suspense' },
+    { name: 'fantasia' },
+    { name: 'e alguns de comédia e drama também.' },
+  ];
+
+  const games = [
+    { name: 'League of Legends' },
+    { name: 'New World' },
+    { name: 'Lost Ark' },
+    { name: 'Genshin Impact' },
+    { name: 'Dungeons and Dragons 5e' },
+  ];
+
   const deaderProps = {
     nome: 'Vanessa Mattos (Saki)',
     cargo: 'UX / UI Designer',
@@ -87,6 +115,9 @@ const Perfil: NextPage = () => {
     profileIcons: PersonalIcons,
     insigniasL2: InsigniasL2,
     technologies: Technologies,
+    personagens: characters,
+    filmes: movies,
+    jogos: games,
     tweet:
       // eslint-disable-next-line max-len
       'No tempo livre eu jogo, assisto animes, séries e filmes, e faço ilustração digital (inclusive meu apelido é também meu nome artístico, Saki Myuuraa). Gosto de animais, tenho 3 cachorras e uma calopsita. Sedentária, não costumo sair muito, mas gosto de ir a eventos de anime com os amigos.',

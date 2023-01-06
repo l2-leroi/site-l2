@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { colors } from '../../../styles/colors';
 
-export const SectionStyled = styled.div`
+export const SectionStyled = styled.div``;
+
+export const DivStyled = styled.div`
   display: flex;
   flex-direction: row;
   max-width: 100%;
@@ -12,7 +14,6 @@ export const SectionStyled = styled.div`
   background-color: ${colors.gray};
   width: 100%;
   padding-top: 15.5rem;
-  padding-bottom: 15.5rem;
 
   // .scrollCircleDiv {
   //   width: 30vw;
@@ -110,4 +111,8 @@ export const ParagraphStyled = styled.div`
 export const IconContainerStyled = styled.div`
   display: flex;
   width: 100vw;
+`;
+
+export const PreferencesContainerStyled = styled.div`
+  display: flex;
 `;
