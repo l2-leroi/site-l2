@@ -15,5 +15,6 @@ export const PeopleMosaicSection = styled.section`
 
   @media (max-width: 600px) {
     padding-bottom: 100px;
+    padding: 0 12px;
   }
 `;

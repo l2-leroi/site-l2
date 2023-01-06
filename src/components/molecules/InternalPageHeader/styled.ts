@@ -35,53 +35,36 @@ export const DivStyled = styled.div`
   display: flex;
   align-items: end;
   margin-bottom: 3.6rem;
-  justify-content: space-between;
+
+  @media (max-width: 500px) {
+    justify-content: space-between;
+  }
 `;
 
-export const TitleStyled = styled.h2`
-  font-family: 'Neue Machina', sans-serif;
-  font-size: 6.4rem;
-  line-height: 64.8px;
-  font-weight: 800;
-  max-width: 712px;
-  letter-spacing: -0.04em;
-  width: 100%;
-  display: flex;
-  justifly-content: flex-start;
-
-  ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
-  }
-
-  @media (max-width: 930px) {
-    width: 500px;
-  }
+export const TitleStyled = styled.div`
+  max-width: 680px;
 
   @media (max-width: 800px) {
-    width: 100%;
-    // width: 278px;
-    line-height: 32px;
-  }
-
-  @media (max-width: 415px) {
-    width: 264px;
-    line-height: 32.4px;
+    max-width: 220px;
   }
 `;
 
 export const AsideStyled = styled.aside`
   margin-bottom: -8px;
-  // margin-left: 25px;
+  margin-left: -40px;
   display: flex;
   justify-content: center;
 
   @media (max-width: 800px) {
-    // margin-left: 5px;
+    margin-left: 40px;
+    max-width: 40px;
   }
 
-  @media (min-width: 400px) {
-    // margin-left: 60px;
+  @media (max-width: 500px) {
+    p {
+      text-align: right;
+    }
+    margin-left: auto;
   }
 
   //@media (max-width: 400px) {
@@ -95,7 +78,7 @@ export const AsideStyled = styled.aside`
   }
 `;
 
-export const ParagraphStyled = styled.p`
+export const ParagraphStyled = styled.div`
   font-family: 'Circular Air Pro', sans-serif;
   font-size: 1.6rem;
   line-height: 22.4px;
@@ -121,7 +104,8 @@ export const ParagraphStyled = styled.p`
 `;
 
 export const AsideStyledbutton = styled.div`
-  // margin-left: 15px;
+  position: fixed;
+  right: 10px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -188,13 +172,8 @@ export const LanguageStyled = styled.div`
   }
 `;
 
-export const PhraseStyled = styled.p`
-  font-family: 'Circular Air Pro', sans-serif;
-  font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 3.36rem;
+export const PhraseStyled = styled.div`
   width: 502px;
-  // margin-bottom: 8rem;
   letter-spacing: -0.04em;
   max-width: 464px;
 

@@ -33,10 +33,32 @@ function InternalPageHeader(props: InternalPageHeaderProps) {
       <ContentStyled>
         <MainDivStyled>
           <DivStyled>
-            <TitleStyled>{props.internalHeader.title}</TitleStyled>
+            <TitleStyled>
+              <Typography
+                tag="h1"
+                size="large"
+                letterSpacing="space2"
+                className="typography"
+                lineHeight="line90"
+                fontWeight="weight3"
+                color="gray"
+              >
+                {props.internalHeader.title}
+              </Typography>
+            </TitleStyled>
             <AsideStyled>
               <ParagraphStyled>
-                &lt;{props.internalHeader.sideTag}&gt;
+                <Typography
+                  tag="p"
+                  size="xxsmall"
+                  letterSpacing="space1"
+                  className="typography"
+                  lineHeight="line140"
+                  fontWeight="weight1"
+                  color="gray"
+                >
+                  &lt;{props.internalHeader.sideTag}&gt;
+                </Typography>
               </ParagraphStyled>
             </AsideStyled>
             <AsideStyledbutton>
@@ -73,7 +95,19 @@ function InternalPageHeader(props: InternalPageHeaderProps) {
             </AsideStyledbutton>
           </DivStyled>
         </MainDivStyled>
-        <PhraseStyled>{props.internalHeader.text}</PhraseStyled>
+        <PhraseStyled>
+          <Typography
+            tag="h2"
+            size="xsmall"
+            letterSpacing="space2"
+            className="typography"
+            lineHeight="line140"
+            fontWeight="weight1"
+            color="gray"
+          >
+            {props.internalHeader.text}
+          </Typography>
+        </PhraseStyled>
       </ContentStyled>
     </ContainerStyled>
   );

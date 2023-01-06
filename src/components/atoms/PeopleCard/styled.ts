@@ -39,17 +39,17 @@ export const ImagesContainer = styled.div`
     }
 
     @media (max-width: 480px) {
-      min-width: 320px;
-      max-height: 320px;
-      height: 320px;
-      width: 320px;
+      height: 160px;
+      width: 160px;
+      min-width: 160px;
+      max-height: 160px;
     }
 
-    @media (max-width: 375px) {
-      height: 200px;
-      width: 200px;
-      min-width: 200px;
-      max-height: 200px;
+    @media (max-width: 350px) {
+      height: 120px;
+      width: 120px;
+      min-width: 120px;
+      max-height: 120px;
     }
   }
 `;

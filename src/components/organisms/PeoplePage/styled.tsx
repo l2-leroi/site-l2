@@ -21,6 +21,10 @@ export const DivStyled = styled.div`
     gap: 20px;
   }
   @media (max-width: 500px) {
-    width: 60%;
+    max-width: 60%;
+
+    p {
+      max-width: 160px;
+    }
   }
 `;

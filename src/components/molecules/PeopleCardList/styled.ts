@@ -20,10 +20,11 @@ export const CardListContainer = styled.div`
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr 1fr;
+    gap: 16px;
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   grid-column: 1/4;
