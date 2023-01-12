@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-vars */
 import i18next from 'i18next';
 import dynamic from 'next/dynamic';
 import { useRef } from 'react';

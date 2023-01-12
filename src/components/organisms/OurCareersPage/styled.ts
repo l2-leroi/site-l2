@@ -22,5 +22,5 @@ export const Container = styled.div`
 `;
 
 export const StyledScrollCircle = styled(ScrollCircle)`
-  top: 300px;
+  top: 35vh;
 `;

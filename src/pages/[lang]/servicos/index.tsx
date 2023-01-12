@@ -22,10 +22,13 @@ const Services: NextPage = () => {
   return (
     <>
       <OurServicesFull />
-
-      <LineAnimation topBgColor={colors.black} bottomBgColor={colors.purple}>
-        <Footer />
-      </LineAnimation>
+      <LineAnimation
+        topBgColor={colors.black}
+        bottomBgColor={colors.purple}
+        hasOutSourcing={false}
+        hasSpinner={false}
+      />
+      <Footer />
     </>
   );
 };

@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const { asPath, query } = router;
   const [windowWidth, setWindowWidth] = useState<number>(0);
-  const isMobile: boolean = windowWidth > 992;
+  const isDesktop: boolean = windowWidth > 992;
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -82,7 +82,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Nav />
       <Component {...pageProps} />
 
-      {isMobile && <Lightning />}
+      {isDesktop && <Lightning />}
     </>
   );
 }
