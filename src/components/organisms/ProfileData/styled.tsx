@@ -79,11 +79,6 @@ export const SectionStyledProfileData = styled.div`
 `;
 
 export const ContainerStyledProfileData = styled.div`
-  // width: 70vw;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-
   max-width: 464px;
   display: flex;
   flex-direction: column;
@@ -110,7 +105,7 @@ export const ParagraphStyled = styled.div`
 
 export const IconContainerStyled = styled.div`
   display: flex;
-  width: 100vw;
+  width: 70vw;
 `;
 
 export const PreferencesContainerStyled = styled.div`

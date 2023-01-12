@@ -32,20 +32,7 @@ const Perfil: NextPage = () => {
   const img3 = '/images/ProfileIcons/img3.jpg';
   const img4 = '/images/ProfileIcons/img4.jpg';
 
-  // Technologies
   const Technologies = [
-    { alt: 'CSS', src: css },
-    { alt: 'Java', src: java },
-    { alt: 'HTML', src: html },
-    { alt: 'PWA', src: pwa },
-    { alt: 'CSS', src: css },
-    { alt: 'Java', src: java },
-    { alt: 'HTML', src: html },
-    { alt: 'PWA', src: pwa },
-    { alt: 'CSS', src: css },
-    { alt: 'Java', src: java },
-    { alt: 'HTML', src: html },
-    { alt: 'PWA', src: pwa },
     { alt: 'CSS', src: css },
     { alt: 'Java', src: java },
     { alt: 'HTML', src: html },

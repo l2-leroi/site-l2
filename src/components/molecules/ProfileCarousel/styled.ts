@@ -5,10 +5,13 @@ export const Card = styled.img``;
 
 export const DivStyled = styled.div`
   overflow: hidden;
+  --calc-width: calc(70vw - (50vw - (232px + 30vw)));
+  width: var(--calc-width);
 
   @media (max-width: 800px) {
-    width: 100%;
     padding-left: 0; //
+    --calc-width: calc(70vw - (50vw - (84px + 30vw)));
+    width: var(--calc-width);
   }
   .card-fade {
     visibility: hidden;
@@ -37,6 +40,9 @@ export const ArrowRightStyled = styled.div`
   background-image: url('/images/white-arrow-right.png') !important;
   background-position: 3.5rem !important;
   background-repeat: no-repeat !important;
+  @media (max-width: 800px) {
+    right: -25px;
+  }
   @media (max-width: 500px) {
     display: none;
   }

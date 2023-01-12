@@ -6,6 +6,7 @@ import ProfilePreferences from '../ProfilePreferences';
 import ProfileSocialNetwork from '../ProfileSocialNetwork';
 import ProfileTechnologies from '../ProfileTechnologies';
 import ProfileCarousel from '../../molecules/ProfileCarousel';
+
 import {
   ArrowSpinnerComponentStyled,
   ArrowSpinnerContainerStyled,

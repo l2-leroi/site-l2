@@ -6,7 +6,6 @@ import { colors } from '../../../styles/colors';
 import Footer from '../Footer';
 import ProfileData from '../ProfileData';
 import ProfilePreferences from '../ProfilePreferences';
-import { Typography } from '../../../styles/typography';
 
 interface Header {
   nome: string;
@@ -60,13 +59,13 @@ interface HeaderProfile {
   headerProfile: Header;
 }
 export default function Profile(props: HeaderProfile) {
-  const { t } = i18next;
-  const language = i18next.language.substring(0, 2);
-  const [name, setName] = useState('');
+  // const { t } = i18next;
+  // const language = i18next.language.substring(0, 2);
+  // const [name, setName] = useState('');
 
   useEffect(() => {
     const fullName = props.headerProfile.nome.split(' ');
-    setName(fullName[0]);
+    // setName(fullName[0]);
   }, []);
   return (
     <>
