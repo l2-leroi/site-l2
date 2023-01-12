@@ -4,31 +4,44 @@ import { colors } from '../../../styles/colors';
 export const SectionOnePageStyled = styled.section`
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 80px;
   padding: 0px 152px;
   background-color: ${colors.gray};
+  flex-direction: column;
+  position: relative;
 
   @media (max-width: 1366px) {
     padding: 0px 12px;
   }
 `;
 
+export const TextContainer = styled.section`
+  position: absolute;
+  bottom: 80px;
+  @media (max-width: 900px) {
+    bottom: 40px;
+  }
+`;
+
 export const ContentOnePageStyled = styled.div`
   background: ${colors.black};
-  padding: 124px 90px;
-  border-radius: 8px;
-  width: 100%;
   display: flex;
+  padding: 80px 0px;
+  border-radius: 8px;
+  width: 90%;
   flex-direction: column;
   align-items: center;
   margin-top: 52px;
 
   @media (max-width: 900px) {
-    padding: 40px 16px;
+    padding: 40px 0px;
   }
 
   @media (max-width: 800px) {
     margin-top: 80px;
+    width: 100%;
+    padding: 40px 12px;
   }
 `;
 
@@ -36,7 +49,6 @@ export const DivServicesStyled = styled.div`
   display: flex;
   text-align: center;
   flex-direction: column;
-  margin-bottom: 8rem;
   align-items: center;
   h2 {
     ::selection {
@@ -73,8 +85,12 @@ export const DivServiceItemsStyled = styled.div`
   max-width: 1018px;
   margin: 0 auto;
 
+  margin-top: 40px;
+  margin-bottom: 80px;
+
   @media (max-width: 800px) {
     max-width: 1018px;
+    margin-bottom: 40px;
   }
 
   @media (max-width: 576px) {

@@ -34,5 +34,11 @@ export const ImageArrowSpinnerStyled = styled.img`
       width: 12px;
       height: 12px;
     }
+    @media (max-width: 500px) {
+      &:first-child {
+        width: 72px;
+        height: 72px;
+      }
+    }
   }
 `;

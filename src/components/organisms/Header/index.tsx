@@ -173,177 +173,180 @@ function Header() {
   }, [isTouchActive.current, counterLoop]);
 
   return (
-    <HeaderStyled
-      height={viewHeight}
-      className="header"
-      onTouchStart={() => {
-        if (!splashPage && !isFirstTouch) {
-          setIsFirstTouch(true);
-          isTouchActive.current = true;
-          setIsInitInterval(true);
-        }
-      }}
-      onTouchEnd={() => {
-        if (!splashPage) {
-          setIsInitInterval(false);
-          isTouchActive.current = false;
-        }
-      }}
-    >
-      {backgroundList.map((background) => (
-        <ImageStyled
-          key={background.image}
-          src={background.image}
-          alt={background.text}
-          className={
-            actualImage === background.image ? 'activeImage' : 'noneImage'
+    <>
+      <HeaderStyled
+        height={viewHeight}
+        className="header"
+        onTouchStart={() => {
+          if (!splashPage && !isFirstTouch) {
+            setIsFirstTouch(true);
+            isTouchActive.current = true;
+            setIsInitInterval(true);
           }
-        />
-      ))}
-
-      <MainContentStyled>
-        <MainTextStyled>
-          <Typography
-            className="typography"
-            tag="h2"
-            size="small"
-            lineHeight="line120"
-            fontWeight="weight3"
-            fontFamily="font1"
-            letterSpacing="space1"
-          >
-            Love to
-          </Typography>
-
-          <Typography
-            tag="h1"
-            fontFamily="font1"
-            fontWeight="weight3"
-            size="xxlarge"
-            lineHeight="line100"
+        }}
+        onTouchEnd={() => {
+          if (!splashPage) {
+            setIsInitInterval(false);
+            isTouchActive.current = false;
+          }
+        }}
+      >
+        {backgroundList.map((background) => (
+          <ImageStyled
+            key={background.image}
+            src={background.image}
+            alt={background.text}
             className={
-              actualText.length > 7
-                ? 'textWrap typography title'
-                : ' typography title'
+              actualImage === background.image ? 'activeImage' : 'noneImage'
             }
-            onMouseEnter={() => {
-              if (window.innerWidth > 500 && window.innerHeight > 414) {
-                setIsInitInterval(true);
+          />
+        ))}
+
+        <MainContentStyled>
+          <MainTextStyled>
+            <Typography
+              className="typography"
+              tag="h2"
+              size="small"
+              lineHeight="line120"
+              fontWeight="weight3"
+              fontFamily="font1"
+              letterSpacing="space1"
+            >
+              Love to
+            </Typography>
+
+            <Typography
+              tag="h1"
+              fontFamily="font1"
+              fontWeight="weight3"
+              size="xxlarge"
+              lineHeight="line100"
+              className={
+                actualText.length > 7
+                  ? 'textWrap typography title'
+                  : ' typography title'
               }
-            }}
-            onTouchStart={() => {
-              if (splashPage && !isAnimating) {
-                setIsAnimating(true);
-                isTouchActive.current = true;
-                setIsInitInterval(true);
-              }
-            }}
-            onMouseLeave={() => {
-              if (window.innerWidth > 500 && window.innerHeight > 414) {
-                exitInterval(backgroundList);
-              }
-              setIsInitInterval(false);
-            }}
-            onTouchEnd={() => {
-              if (splashPage) {
-                isTouchActive.current = false;
+              onMouseEnter={() => {
+                if (window.innerWidth > 500 && window.innerHeight > 414) {
+                  setIsInitInterval(true);
+                }
+              }}
+              onTouchStart={() => {
+                if (splashPage && !isAnimating) {
+                  setIsAnimating(true);
+                  isTouchActive.current = true;
+                  setIsInitInterval(true);
+                }
+              }}
+              onMouseLeave={() => {
+                if (window.innerWidth > 500 && window.innerHeight > 414) {
+                  exitInterval(backgroundList);
+                }
                 setIsInitInterval(false);
-              }
-            }}
-          >
-            {actualText}
-          </Typography>
-          <Typography className="bannerText typography" tag="p">
-            {t('header.weCreate')}
-          </Typography>
-        </MainTextStyled>
+              }}
+              onTouchEnd={() => {
+                if (splashPage) {
+                  isTouchActive.current = false;
+                  setIsInitInterval(false);
+                }
+              }}
+            >
+              {actualText}
+            </Typography>
+            <Typography className="bannerText typography" tag="p">
+              {t('header.weCreate')}
+            </Typography>
+          </MainTextStyled>
 
-        <LanguageStyled className="anime">
-          <Typography
-            tag="button"
-            size="xxsmall"
-            letterSpacing="space1"
-            className="typography"
-          >
-            <Link href="/pt" locale="pt" scroll={false}>
-              PT
-            </Link>
-          </Typography>
-          <Typography
-            tag="button"
-            size="xxsmall"
-            letterSpacing="space1"
-            className="typography"
-          >
-            <Link href="/en" locale="en" scroll={false}>
-              EN
-            </Link>
-          </Typography>
-        </LanguageStyled>
-      </MainContentStyled>
-      <ArrowSpinnerContainerStyled className="anime">
-        <ScrollCircle
-          isWhiteImage={false}
-          blackImage={`${t('images.spinner')}`}
-          whiteImage={`${t('images.whiteSpinner')}`}
-        />
-      </ArrowSpinnerContainerStyled>
-
-      <div className="whiteSpinner">
+          <LanguageStyled className="anime">
+            <Typography
+              tag="button"
+              size="xxsmall"
+              letterSpacing="space1"
+              className="typography"
+            >
+              <Link href="/pt" locale="pt" scroll={false}>
+                PT
+              </Link>
+            </Typography>
+            <Typography
+              tag="button"
+              size="xxsmall"
+              letterSpacing="space1"
+              className="typography"
+            >
+              <Link href="/en" locale="en" scroll={false}>
+                EN
+              </Link>
+            </Typography>
+          </LanguageStyled>
+        </MainContentStyled>
         <ArrowSpinnerContainerStyled className="anime">
           <ScrollCircle
-            hidden={!whiteCircle}
-            isWhiteImage
+            isWhiteImage={false}
             blackImage={`${t('images.spinner')}`}
             whiteImage={`${t('images.whiteSpinner')}`}
           />
         </ArrowSpinnerContainerStyled>
-      </div>
 
-      <FooterContentStyled>
-        <SocialMediaStyled className="anime">
-          <Typography
-            className="typography"
-            tag="span"
-            size="xxsmall"
-            letterSpacing="space1"
-          >
-            {t('header.followUs')}
-          </Typography>
+        <div className="whiteSpinner">
+          <ArrowSpinnerContainerStyled className="anime">
+            <ScrollCircle
+              hidden={!whiteCircle}
+              isWhiteImage
+              blackImage={`${t('images.spinner')}`}
+              whiteImage={`${t('images.whiteSpinner')}`}
+            />
+          </ArrowSpinnerContainerStyled>
+        </div>
 
-          <SocialMediaLinkStyled
-            href="https://www.linkedin.com/company/l2code-dev/"
-            target="_blank"
-          >
+        <FooterContentStyled>
+          <SocialMediaStyled className="anime">
             <Typography
               className="typography"
-              tag="button"
-              fontWeight="weight2"
+              tag="span"
               size="xxsmall"
               letterSpacing="space1"
             >
-              In
+              {t('header.followUs')}
             </Typography>
-          </SocialMediaLinkStyled>
 
-          <SocialMediaLinkStyled
-            href="https://www.instagram.com/l2code.com.br/"
-            target="_blank"
-          >
-            <Typography
-              className="typography"
-              tag="button"
-              fontWeight="weight2"
-              size="xxsmall"
-              letterSpacing="space1"
+            <SocialMediaLinkStyled
+              href="https://www.linkedin.com/company/l2code-dev/"
+              target="_blank"
             >
-              IG
-            </Typography>
-          </SocialMediaLinkStyled>
-        </SocialMediaStyled>
-      </FooterContentStyled>
+              <Typography
+                className="typography"
+                tag="button"
+                fontWeight="weight2"
+                size="xxsmall"
+                letterSpacing="space1"
+              >
+                In
+              </Typography>
+            </SocialMediaLinkStyled>
+
+            <SocialMediaLinkStyled
+              href="https://www.instagram.com/l2code.com.br/"
+              target="_blank"
+            >
+              <Typography
+                className="typography"
+                tag="button"
+                fontWeight="weight2"
+                size="xxsmall"
+                letterSpacing="space1"
+              >
+                IG
+              </Typography>
+            </SocialMediaLinkStyled>
+          </SocialMediaStyled>
+        </FooterContentStyled>
+        {/* <CookiesPopup /> */}
+      </HeaderStyled>
       <CookiesPopup />
-    </HeaderStyled>
+    </>
   );
 }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import i18next from 'i18next';
 import Button from '../../atoms/Button';
 import { colors } from '../../../styles/colors';
@@ -7,16 +6,10 @@ import { Typography } from '../../../styles/typography';
 import {
   ContainerStyledAbout,
   SectionStyled,
-  HeaderStyled,
-  TitleGroupStyled,
-  TitleStyled,
-  ParagraphStyled,
-  AsideStyled,
   SubTitleGroupStyled,
   ParagraphSubTitleStyled,
   TextStyled,
   ListStyled,
-  LanguageStyled,
   SubTitleStyled,
   DivCardStyled,
   StyledGroupCards,
@@ -28,6 +21,7 @@ import {
   SecondTitleGroupStyled,
 } from './styled';
 import { StyledScrollCircle } from '../OurCareersPage/styled';
+import InternalPageHeader from '../../molecules/InternalPageHeader';
 
 export default function About() {
   const { t } = i18next;
@@ -37,10 +31,18 @@ export default function About() {
     'about.defend',
     'about.transform',
   ];
+  const headerProps = {
+    title: t('about.title'),
+    text: t('about.weCreated'),
+    sideTag: t('about.whatWeAre'),
+    pageName: t('about.pageName'),
+  };
   return (
-    <ContainerStyledAbout>
-      <SectionStyled>
-        <HeaderStyled>
+    <>
+      <InternalPageHeader internalHeader={headerProps} />
+      <ContainerStyledAbout>
+        <SectionStyled>
+          {/* <HeaderStyled>
           <TitleGroupStyled>
             <TitleStyled>
               <Typography
@@ -88,7 +90,7 @@ export default function About() {
               </Link>
             </Typography>
           </LanguageStyled>
-        </HeaderStyled>
+        </HeaderStyled> */}
 
         <SubTitleGroupStyled>
           <SubTitleStyled>
@@ -109,79 +111,133 @@ export default function About() {
             </Typography>
           </ParagraphSubTitleStyled>
 
-          <TextStyled>
-            <Typography tag="h2" color="gray">
-              {t('about.ourPurpose')}
-            </Typography>
-          </TextStyled>
+            <TextStyled>
+              <Typography
+                tag="h2"
+                color="gray"
+                fontWeight="weight2"
+                line-height="line140"
+              >
+                {t('about.ourPurpose')}
+              </Typography>
+            </TextStyled>
 
-          <ListStyled>
-            <Typography tag="ul" color="gray">
-              {list.map((item) => (
+            <ListStyled>
+              <Typography tag="ul" color="gray">
+                {list.map((item) => (
+                  <Typography
+                    tag="li"
+                    color="gray"
+                    fontFamily="font2"
+                    fontWeight="weight1"
+                    size="xsmall"
+                    lineHeight="line140"
+                  >
+                    {t(item)}
+                  </Typography>
+                ))}
+              </Typography>
+            </ListStyled>
+          </SubTitleGroupStyled>
+          <DivCardStyled>
+            <SpinningIconStyled>
+              <SpinnerImage src="/images/spinner.png" />
+            </SpinningIconStyled>
+
+            <StyledGroupCards>
+              <div className="cards">
+                <CardTitleStyled>
+                  <Typography
+                    tag="h1"
+                    color="gray"
+                    size="small"
+                    letterSpacing="space1"
+                  >
+                    {t('about.mission')}
+                  </Typography>
+                </CardTitleStyled>
+
+                <CardParagraphStyled>
+                  <Typography tag="p" color="gray">
+                    {t('about.create')}
+                  </Typography>
+                </CardParagraphStyled>
+              </div>
+
+              <div className="cards">
+                <CardTitleStyled>
+                  <Typography
+                    tag="h1"
+                    color="gray"
+                    size="small"
+                    letterSpacing="space1"
+                  >
+                    {t('about.vision')}
+                  </Typography>
+                </CardTitleStyled>
+                <CardParagraphStyled>
+                  <Typography tag="p" color="gray">
+                    {t('about.desire')}
+                  </Typography>
+                </CardParagraphStyled>
+              </div>
+              <div className="cards">
+                <CardTitleStyled>
+                  <Typography
+                    tag="h1"
+                    color="gray"
+                    size="small"
+                    letterSpacing="space1"
+                  >
+                    {t('about.values')}
+                  </Typography>
+                </CardTitleStyled>
+                <CardParagraphStyled>
+                  <Typography tag="p" color="gray">
+                    {t('about.weBelieve')}{' '}
+                    <Typography tag="a" color="green">
+                      {t('about.manifestL2')}
+                    </Typography>
+                  </Typography>
+                </CardParagraphStyled>
+              </div>
+            </StyledGroupCards>
+          </DivCardStyled>
+          <SecondTitleGroupStyled>
+            <div className="scrollCircleDiv">
+              <div>
+                <StyledScrollCircle
+                  isWhiteImage
+                  blackImage={`${t('images.spinnerBlack')}`}
+                  whiteImage={`${t('images.spinnerWhite')}`}
+                />
+              </div>
+            </div>
+
+            <TextStyledSuperPowers>
+              <SubTitleStyled>
+                {' '}
                 <Typography
-                  tag="li"
+                  tag="h1"
+                  size="small"
+                  fontWeight="weight2"
+                  letterSpacing="space1"
+                  lineHeight="line120"
                   color="gray"
-                  fontFamily="font2"
-                  size="xsmall"
+                >
+                  {t('about.superPowers')}
+                </Typography>
+              </SubTitleStyled>
+
+              <ParagraphSubTitleStyled>
+                <Typography
+                  tag="p"
+                  color="gray"
+                  fontWeight="weight1"
+                  letterSpacing="space2"
                   lineHeight="line140"
                 >
-                  {t(item)}
-                </Typography>
-              ))}
-            </Typography>
-          </ListStyled>
-        </SubTitleGroupStyled>
-        <DivCardStyled>
-          <SpinningIconStyled>
-            <SpinnerImage src="/images/spinner.png" />
-          </SpinningIconStyled>
-
-          <StyledGroupCards>
-            <div className="cards">
-              <CardTitleStyled>
-                <Typography
-                  tag="h1"
-                  color="gray"
-                  size="small"
-                  letterSpacing="space1"
-                >
-                  {t('about.mission')}
-                </Typography>
-              </CardTitleStyled>
-
-              <CardParagraphStyled>
-                <Typography tag="p" color="gray">
-                  {t('about.create')}
-                </Typography>
-              </CardParagraphStyled>
-            </div>
-
-            <div className="cards">
-              <CardTitleStyled>
-                <Typography
-                  tag="h1"
-                  color="gray"
-                  size="small"
-                  letterSpacing="space1"
-                >
-                  {t('about.vision')}
-                </Typography>
-              </CardTitleStyled>
-              <CardParagraphStyled>
-                <Typography tag="p" color="gray">
-                  {t('about.desire')}
-                </Typography>
-              </CardParagraphStyled>
-            </div>
-            <div className="cards">
-              <CardTitleStyled>
-                <Typography
-                  tag="h1"
-                  color="gray"
-                  size="small"
-                  letterSpacing="space1"
-                >
-                  {t('about.values')}
+                  {t('about.weAreMade')}
                 </Typography>
               </CardTitleStyled>
               <CardParagraphStyled>

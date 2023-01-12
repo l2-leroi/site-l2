@@ -8,7 +8,6 @@ export const ContainerStyledAbout = styled.section`
   width: 100%;
   background-color: ${colors.black};
   color: ${colors.gray};
-  padding-top: 15.5rem;
   padding-bottom: 15.5rem;
 
   @media (max-width: 800px) {
@@ -20,6 +19,7 @@ export const ContainerStyledAbout = styled.section`
 export const SectionStyled = styled.div`
   padding: 0px 28px;
   gap: 30px;
+
   @media (max-width: 800px) {
     padding: 0px;
     margin-top: 138px;
@@ -133,11 +133,20 @@ export const SecondTitleGroupStyled = styled.hgroup`
   text-align: left;
   align-self: flex-start;
   align-items: stretch;
-  justify-content: flex-end;
-  margin-left: -28px;
+  //justify-content: flex-end;
+  //margin-left: -28px;
+
+  //NOVO
+  justify-content: flex-start;
+  padding-bottom: 688px;
+  margin-left: 0px;
 
   @media (max-width: 800px) {
     font-size: 12px;
+    max-width: 168px;
+
+    //NOVO
+    padding-bottom: 500px;
   }
 
   h1 {
@@ -168,13 +177,31 @@ export const SecondTitleGroupStyled = styled.hgroup`
   }
 
   .scrollCircleDiv {
-    // margin-top: 72px;
     margin-top: -40px;
     height: 0;
+
+    //NOVO
+    margin-left: -28px;
+    justify-content: flex-start;
+
     > div {
       height: 3000px;
-      // margin-left: -28px;
       width: 30vw;
+
+      @media (max-width: 800px) {
+        margin-left: -12px;
+        img {
+          max-width: 72px;
+          max-height: 72px;
+        }
+      }
+      @media (max-width: 350px) {
+        width: 20vw;
+        img {
+          max-width: 55px;
+          max-height: 55px;
+        }
+      }
     }
     align-self: start;
     display: flex;
@@ -246,10 +273,22 @@ export const ParagraphSubTitleStyled = styled.div`
     }
   }
 `;
+export const AuxDiv = styled.div`
+  width: 100%;
+`;
 
 export const TextStyledSuperPowers = styled.div`
   width: 70%;
   padding-left: 20px;
+
+  //NOVO
+  left: 0px;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const TextStyled = styled.div`
@@ -293,6 +332,7 @@ export const SpinnerImage = styled.img`
 `;
 export const DivCardStyled = styled.div`
   display: flex;
+  justify-content: center;
   margin-top: 15rem;
   overflow: hidden;
 
@@ -304,6 +344,10 @@ export const DivCardStyled = styled.div`
     max-height: 550px;
     border-radius: 8px;
     padding: 28px;
+
+    @media (max-width: 1150px) {
+      width: 464px;
+    }
 
     @media (max-width: 800px) {
       max-width: 160px;
@@ -335,8 +379,9 @@ export const StyledGroupCards = styled.hgroup`
   display: flex;
   flex-direction: row;
   width: 100%;
+  max-width: 1512px;
   justify-content: space-between;
-  gap: 20px;
+  gap: 32px;
 
   @media (max-width: 1200px) {
     display: grid;

@@ -1,6 +1,5 @@
 import i18next from 'i18next';
 import { parse, isBefore } from 'date-fns';
-import { colors } from '../../../styles/colors';
 import {
   ContainerStyled,
   DateStyled,
@@ -9,7 +8,6 @@ import {
   StyledDate,
 } from './styled';
 import { Typography } from '../../../styles/typography';
-import Button from '../../atoms/Button';
 import InternalPageHeader from '../../molecules/InternalPageHeader';
 // import { ImageArrowSpinnerStyled } from '../../atoms/ScrollCircle/styled';
 
@@ -106,6 +104,7 @@ export default function HeaderOurCareer({
                 )}
               </DivDate>
             </DateStyled>
+            {/*
             <div className="button">
               {!isStartDateBeforeThanNow && (
                 <Button
@@ -115,6 +114,7 @@ export default function HeaderOurCareer({
                 />
               )}
             </div>
+              */}
           </DivStyledDate>
           {isStartDateBeforeThanNow ? (
             <Typography tag="p" color="gray" fontFamily="font2" size="xsmall">

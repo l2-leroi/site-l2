@@ -13,7 +13,17 @@ L2 Code - is a technology company specialized in Web and Mobile software develop
 ## ⚙️ Branches
 👉 develop: is the development branch, where all others are merged when approved
 
-📌 The name pattern used is based on the created issue. For each task to be developed, an issue is created describing what will be done, and a branch is created based on this issue.
+📌 The name pattern used is based on the created issue and your purpose. For each task to be developed, an issue is created describing what will be done, and a branch is created based on this issue, so we should put the issue id in the branch name.
+
+<b>You can use the following prefixes to identify the purpose:</b>
+
+● feature: development of a new feature
+● bug: non-urgent bug fix
+● hotfix: urgent bug fix happening in production
+
+<b>Examples of how it would look:</b>
+feature/289 (this number is the issue id)
+bug/254
 
 ---
 
@@ -66,3 +76,31 @@ In the project, ESLint and Prettier tools were used. The installation and config
 
 ### Install and configure Prettier
 1. Install the [Prettier extension in VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
+
+
+---
+
+## 🎨 Branch Creation
+
+When you need to create a branch to develop an issue, create it based on the master branch and when you're done, open a pull request to the develop branch.
+
+<b>start an issue</b>
+master -> new-branch
+     (based)
+
+<b>finish an issue</b>
+new-branch -> develop
+   (pull request)
+   
+---
+
+## ✒️ Commit Pattern
+
+To keep the project organized, we suggest a commit pattern based on the issue id and the description of what was done. By the way, you can write this in Portuguese!
+
+<b>Pattern</b>
+[issue id] - description
+
+<b>Examples<b>
+[258] - styling the header
+[254] - fixing the menu bug
