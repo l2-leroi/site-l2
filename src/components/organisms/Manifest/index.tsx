@@ -253,17 +253,17 @@ export default function Manifest() {
           </ParagraphStyled>
 
           <ImageStyled>
-            <img src="/images/Manifest/manifest-image-08.png" alt="L2code" />
+            <img src="/images/Manifest/manifest-image-08.gif" alt="L2code" />
           </ImageStyled>
           <div className="line" />
 
           <SubTitleStyled>
             <Typography
-              tag="h2"
-              size="small"
-              letterSpacing="space1"
-              fontWeight="weight2"
-              lineHeight="line120"
+            tag="h2"
+            size="small"
+            letterSpacing="space1"
+            fontWeight="weight2"
+          >
             >
               {t('about.manifest.principleEightTitle')}
             </Typography>

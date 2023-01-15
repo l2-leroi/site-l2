@@ -128,6 +128,9 @@ export const SubTitleStyled = styled.div`
   width: 712px;
   @media (max-width: 800px) {
     max-width: 250px;
+    h2 {
+      font-size: 20px;
+    }
   }
 `;
 

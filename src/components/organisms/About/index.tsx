@@ -57,7 +57,7 @@ export default function About() {
               </Typography>
             </TitleStyled>
             <ParagraphStyled>
-              <Typography tag="h2" color="gray">
+              <Typography tag="h2" color="gray" lineHeight="line140">
                 {t('about.weCreated')}
               </Typography>
             </ParagraphStyled>
@@ -92,29 +92,24 @@ export default function About() {
           </LanguageStyled>
         </HeaderStyled> */}
 
-          <SubTitleGroupStyled>
-            <SubTitleStyled>
-              <Typography
-                tag="h1"
-                size="small"
-                fontWeight="weight2"
-                letterSpacing="space1"
-                lineHeight="line120"
-                color="gray"
-              >
-                {t('about.weTransform')}
-              </Typography>
-            </SubTitleStyled>
-            <ParagraphSubTitleStyled>
-              <Typography
-                tag="p"
-                color="gray"
-                fontWeight="weight1"
-                line-height="line140"
-              >
-                {t('about.are')}
-              </Typography>
-            </ParagraphSubTitleStyled>
+        <SubTitleGroupStyled>
+          <SubTitleStyled>
+            <Typography
+              tag="h1"
+              size="small"
+              fontWeight="weight2"
+              letterSpacing="space1"
+              lineHeight="line90"
+              color="gray"
+            >
+              {t('about.weTransform')}
+            </Typography>
+          </SubTitleStyled>
+          <ParagraphSubTitleStyled>
+            <Typography tag="p" color="gray" fontWeight="weight1">
+              {t('about.are')}
+            </Typography>
+          </ParagraphSubTitleStyled>
 
             <TextStyled>
               <Typography
@@ -244,19 +239,60 @@ export default function About() {
                 >
                   {t('about.weAreMade')}
                 </Typography>
-                <div className="button">
-                  <Button
-                    linkBtn="pessoas"
-                    text="CONHEÇA A NOSSA EQUIPE"
-                    fill={`${colors.gray}`}
-                    fontSize="large"
-                  />
-                </div>
-              </ParagraphSubTitleStyled>
-            </TextStyledSuperPowers>
-          </SecondTitleGroupStyled>
-        </SectionStyled>
-      </ContainerStyledAbout>
-    </>
+              </CardTitleStyled>
+              <CardParagraphStyled>
+                <Typography tag="p" color="gray">
+                  {t('about.weBelieve')}{' '}
+                  <Typography tag="a" color="green">
+                    {t('about.manifestL2')}
+                  </Typography>
+                </Typography>
+              </CardParagraphStyled>
+            </div>
+          </StyledGroupCards>
+        </DivCardStyled>
+        <SecondTitleGroupStyled>
+          <div className="scrollCircleDiv">
+            <div>
+              <StyledScrollCircle
+                isWhiteImage
+                blackImage={`${t('images.spinnerBlack')}`}
+                whiteImage={`${t('images.spinnerWhite')}`}
+              />
+            </div>
+          </div>
+
+          <TextStyledSuperPowers>
+            <SubTitleStyled>
+              {' '}
+              <Typography
+                tag="h1"
+                size="small"
+                fontWeight="weight2"
+                letterSpacing="space1"
+                lineHeight="line90"
+                color="gray"
+              >
+                {t('about.superPowers')}
+              </Typography>
+            </SubTitleStyled>
+
+            <ParagraphSubTitleStyled>
+              <Typography tag="p" color="gray" fontWeight="weight2">
+                {t('about.weAreMade')}
+              </Typography>
+              <div className="button">
+                <Button
+                  linkBtn="#"
+                  text="CONHEÇA A NOSSA EQUIPE"
+                  fill={`${colors.green}`}
+                  fontSize="large"
+                />
+              </div>
+            </ParagraphSubTitleStyled>
+          </TextStyledSuperPowers>
+        </SecondTitleGroupStyled>
+      </SectionStyled>
+    </ContainerStyledAbout>
   );
 }
