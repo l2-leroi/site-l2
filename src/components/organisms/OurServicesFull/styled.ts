@@ -125,6 +125,10 @@ export const ArrowSpinnerContainerStyled = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 800px) {
+    margin-top: 100px;
+  }
 `;
 
 export const ArrowSpinnerComponentStyled = styled.div`
@@ -148,6 +152,10 @@ export const ArrowSpinnerComponentStyled = styled.div`
 export const ContentStyled = styled.div`
   margin-top: 150px;
   grid-column: 2/3;
+
+  @media (max-width: 800px) {
+    margin-top: 100px;
+  }
 `;
 
 export const VideoTitleStyled = styled.div`
