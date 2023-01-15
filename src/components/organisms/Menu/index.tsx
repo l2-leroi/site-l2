@@ -30,9 +30,14 @@ function Menu({ openMenu, closeMenu }: MenuProps) {
   const previousPage = useRef('');
 
   useEffect(() => {
-    openMenu
-      ? (document.body.style.overflow = 'hidden')
-      : (document.body.style.overflow = null);
+    const nav = document.querySelector('.nav');
+    if (openMenu) {
+      document.body.style.overflow = 'hidden';
+      nav?.classList.add('blackMenu');
+    } else {
+      document.body.style.overflow = null;
+      nav?.classList.remove('blackMenu');
+    }
   }, [openMenu]);
 
   useEffect(() => {
