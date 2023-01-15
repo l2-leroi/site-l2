@@ -29,6 +29,7 @@ export default function PeoplePage() {
           </Typography>
 
           <Typography
+            tag="p"
             color="gray"
             size="xsmall"
             fontWeight="weight1"
