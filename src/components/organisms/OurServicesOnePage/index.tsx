@@ -147,7 +147,3 @@ export default function OurServicesOnePage() {
     </SectionOnePageStyled>
   );
 }
-// position: absolute;
-// z-index: 50;
-// width: 110%;
-// margin-left: -5%;
