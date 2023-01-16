@@ -259,11 +259,10 @@ export default function Manifest() {
 
           <SubTitleStyled>
             <Typography
-            tag="h2"
-            size="small"
-            letterSpacing="space1"
-            fontWeight="weight2"
-          >
+              tag="h2"
+              size="small"
+              letterSpacing="space1"
+              fontWeight="weight2"
             >
               {t('about.manifest.principleEightTitle')}
             </Typography>
