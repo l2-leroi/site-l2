@@ -27,13 +27,13 @@ function ArrowRightStyledFunction(props) {
 const settings = {
   accessibility: true,
   infinite: true,
+  centerMode: false, //
+  variableWidth: true, //
   slidesToShow: 3,
   slidesToScroll: 1,
   speed: 400,
-  swipeToSlide: true,
   nextArrow: <ArrowRightStyledFunction />,
   prevArrow: <ArrowLeftStyled />,
-  className: 'Slider',
 
   responsive: [
     {
@@ -68,7 +68,12 @@ function FindBound() {
 function FindCard() {
   const card = document.getElementsByClassName('Card');
   const cardBound = FindBound();
+
+  const firstCard = document.querySelector(`[data-index="0"]`);
+  firstCard.classList.add('first-card');
+
   for (let i = 0; i < card.length; i++) {
+    firstCard.classList.add('first-card');
     const cardLeft = card[i].getBoundingClientRect().left;
     if (cardLeft <= cardBound) {
       card[i].classList.add('card-fade');

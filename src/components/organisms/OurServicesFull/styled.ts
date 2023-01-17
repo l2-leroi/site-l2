@@ -4,19 +4,15 @@ import { colors } from '../../../styles/colors';
 export const SectionStyled = styled.section`
   background-color: ${colors.black};
   display: grid;
-  grid-template-columns: 1fr minmax(280px, 1456px) 1fr;
+  // grid-template-columns: 1fr minmax(280px, 1456px) 1fr;
   color: ${colors.gray};
   width: 100%;
-  padding-top: 24rem;
+  // padding-top: 24rem;
   padding-bottom: 33.7rem;
-  @media (max-width: 800px) {
-    padding: 0px 12px;
-    // padding-bottom: 80px;
-  }
 `;
 
 export const OurServicesFullStyled = styled.div`
-  grid-column: 2/3;
+  // grid-column: 2/3;
   display: grid;
   grid-template-columns: 1fr 2fr;
   box-sizing: border-box;
@@ -25,6 +21,7 @@ export const OurServicesFullStyled = styled.div`
 
   @media (max-width: 800px) {
     margin-top: 138px;
+    padding: 0px 12px;
   }
 `;
 
@@ -128,6 +125,10 @@ export const ArrowSpinnerContainerStyled = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 800px) {
+    margin-top: 100px;
+  }
 `;
 
 export const ArrowSpinnerComponentStyled = styled.div`
@@ -151,6 +152,10 @@ export const ArrowSpinnerComponentStyled = styled.div`
 export const ContentStyled = styled.div`
   margin-top: 150px;
   grid-column: 2/3;
+
+  @media (max-width: 800px) {
+    margin-top: 100px;
+  }
 `;
 
 export const VideoTitleStyled = styled.div`

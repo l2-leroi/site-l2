@@ -12,7 +12,7 @@ import Menu from '../Menu/index';
 import { Typography } from '../../../styles/typography';
 
 export default function Nav() {
-  const [MenuClick, setClick] = useState(false);
+  const [menuClick, setMenuClick] = useState(false);
   const [isWhiteLogo, setIsWhiteLogo] = useState(false);
 
   const handleWhite = () => {
@@ -26,6 +26,7 @@ export default function Nav() {
     if (
       mutation[0].target.classList.contains('white') ||
       mutation[0].target.classList.contains('black') ||
+      mutation[0].target.classList.contains('blackMenu') ||
       mutation[0].target.classList.contains('transparentBlack')
     ) {
       setIsWhiteLogo(true);
@@ -62,6 +63,7 @@ export default function Nav() {
 
     if (
       nav.classList.contains('black') ||
+      nav.classList.contains('blackMenu') ||
       nav.classList.contains('transparentBlack')
     ) {
       handleScrollPages();
@@ -78,7 +80,7 @@ export default function Nav() {
 
   return (
     <>
-      <Menu openMenu={MenuClick} closeMenu={() => setClick(!MenuClick)} />
+      <Menu openMenu={menuClick} closeMenu={() => setMenuClick(!menuClick)} />
       <NavStyled className="nav anime">
         <NavItemStyled>
           <Link href="/">
@@ -111,7 +113,7 @@ export default function Nav() {
         </NavItemStyled>
 
         <NavItemStyled>
-          <NavButtonStyled onClick={() => setClick(true)}>
+          <NavButtonStyled onClick={() => setMenuClick(!menuClick)}>
             <SandwichMenuStyled borderWhite={isWhiteLogo} />
             <DivTextStyled>
               <Typography

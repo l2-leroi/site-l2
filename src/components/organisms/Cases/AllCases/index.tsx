@@ -1,5 +1,7 @@
 import React from 'react';
 import i18next from 'i18next';
+import { useRouter } from 'next/router';
+import { defaultLanguage, languages } from '../../../../i18n';
 import {
   ContainerStyled,
   ContentStyled,
@@ -9,6 +11,7 @@ import {
 import CaseList from '../../../molecules/CaseList';
 
 import Button from '../../../atoms/Button';
+import { colors } from '../../../../styles/colors';
 
 function AllCases() {
   const { t } = i18next;
@@ -61,6 +64,11 @@ function AllCases() {
       hover: filaDeTrabalhoHover,
     },
   ];
+  const router = useRouter();
+  const { asPath, query } = router;
+  const slug = asPath.split('/')[1];
+  const langSlug = languages.includes(slug) && slug;
+  const language = query.lang || langSlug || defaultLanguage;
 
   return (
     <ContainerStyled id="cases">
@@ -70,7 +78,12 @@ function AllCases() {
         </DivStyled>
         <CaseList cases={cases} />
       </ContentStyled>
-      <Button linkBtn={t('cases.seeAllCases')} text="VEJA TODOS OS CASES" />
+      <Button
+        linkBtn={`/${language}/${t('cases.pageName')}`}
+        text="VEJA TODOS OS CASES"
+        fill={`${colors.black}`}
+        fontSize="large"
+      />
     </ContainerStyled>
   );
 }

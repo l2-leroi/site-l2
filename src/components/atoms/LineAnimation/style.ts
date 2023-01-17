@@ -13,6 +13,9 @@ export const TextContainerStyled = styled.div`
     position: relative;
     overflow: hidden;
     height: 1000px;
+    @media (max-width: 800px) {
+      height: 600px;
+    }
     > div {
       position: absolute;
       z-index: 50;
@@ -22,7 +25,8 @@ export const TextContainerStyled = styled.div`
   }
 `;
 export const LineBg = styled.div<Props>`
-  margin-top: -1px;
+  margin-top: -2px;
+  margin-bottom: -2px;
   background-color: ${(props) => props.topBgColor};
 `;
 

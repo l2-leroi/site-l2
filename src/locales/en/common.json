@@ -6,13 +6,65 @@
       "thereIsMore": "There's more down here"
     }
   },
+  "people":{
+    "pageName": "pessoas",
+    "ourTalents":"OUR TALENTS, THE LCODERS",
+    "weWork": "We work 100% remotely, embracing the talents of the world",
+    "whoWeAre":"WHO WE ARE",
+    "nobodyInnovatesAlone":"Nobody innovates alone",
+    "togetherWeMakeMagic": "But together we make magic. ● Our team is made up of talents from different levels and places, ready to exceed your expectations.",
+      "professions": {
+        "developers": {
+          "title": "Developers",
+          "subtitle": "Computer hackers! ● Our devs are code experts, responsible for software development."
+        },
+        "qa": {
+          "title": "Quality Assurance (QA)",
+          "subtitle": ""
+        },
+        "uxui": {
+          "title": "Product Designers",
+          "subtitle": "The creative team at L2! ● Our designers are responsible for creating interfaces thinking about the best experience for their users."
+        },
+        "humanResources": {
+          "title": "Administration / HR",
+          "subtitle": "Adms have the mission of managing material, financial and human resources. ● This team deals with management in its most varied forms."
+        },
+        "peopleAndCulture": {
+          "title": "People and Culture",
+          "subtitle": ""
+        },
+        "managers": {
+          "title": "Directors",
+          "subtitle": "The bosses, the “final bosses”. ● Directors are responsible for organizing, planning, guiding the application of resources and taking all important decisions for the good development of the company."
+        },
+        "projectManagement": {
+          "title": "Project management",
+          "subtitle": ""
+        },
+        "pets": {
+          "title": "",
+          "subtitle": "Also meet the friends who show up at the meetings and rejoice with these cuties."
+        }
+      }
+  },
+  "openMenu": {
+    "home": "Home",
+    "about" : "About",
+    "cases": "Cases",
+    "services": "Services",
+    "career": "Career",
+    "people": "People"
+  },
   "about": {
+    "pageName": "sobre",
     "title": "SOMOS A L2CODE",
     "weCreated": "Criamos soluções tecnológicas de forma humanizada e inovadora, pois acreditamos que inovar é aprender e ensinar sem fronteiras.",
-    "whatWeAre": "O que somos",
+    "whatWeAre": "O QUE SOMOS",
     "weTransform": "Transformamos ideias em soluções",
     "are": "Somos uma empresa de consultoria especializada em Tecnologia e já conseguimos grandes feitos com a forma humanizada de lidar com clientes e colaboradores. ● A ideia é criar o senso de comunidade, assim tudo flui melhor!",
-    "ourPurpose": " Nosso propósito é:",
+    "ourPurpose": "Nosso propósito é:",
+    "connect": "Conectar e desenvolver pessoas;",
     "innovate": "Inovar a organização digital de empresas;",
     "defend": "Defender a diversidade de ideias;",
     "transform": "E transformar estratégias digitais em resultados reais.",
@@ -24,8 +76,54 @@
     "weBelieve": "Acreditamos em um mundo onde as pessoas tem liberdade para se manifestar e compartilhar suas ideias. Nossos valores e princípios estão manifestados no nosso",
     "manifestL2": "manifesto L2.",
     "superPowers": "Super poderes que fazem a diferença",
-    "weAreMade": "Somos feitos de pessoas brilhantes, magos da tecnologia, somos os Lcoders! ● Mas claro, com grandes poderes, vem grandes responsabilidades. Por isso utilizamos nossos super poderes para ajudar pessoas e melhorar o mundo. ● São eles: o poder da colaboração, pluralidade, diversão, empatia, criatividade, aprendizagem, comunicação e, como resultado, temos também o poder da evolução!"
+    "weAreMade": "Somos feitos de pessoas brilhantes, magos da tecnologia, somos os Lcoders! ● Mas claro, com grandes poderes, vem grandes responsabilidades. Por isso utilizamos nossos super poderes para ajudar pessoas e melhorar o mundo. ● São eles: o poder da colaboração, pluralidade, diversão, empatia, criatividade, aprendizagem, comunicação e, como resultado, temos também o poder da evolução!",
+    "manifest": {
+      "title": "Manifesto L2code",
+      "paragraph": {
+        "weLive": "Vivemos em um universo de inovações onde, em cada fragmento de tempo, algo novo é lançado. Por isso somos defensores da diversidade de ideias e apoiadores da criatividade sem limites! ● Defendemos que a construção do trabalho em equipe fortalece fraquezas e engrandece a entrega e as relações humanas. ● A união faz a inovação aqui na L2!",
+        "TodayWeAre": "Hoje nós somos dados, somos desenvolvimento, somos especialistas, somos apaixonados por código, somos pessoas!",
+        "WeAre": "Somos sonhadores, somos movidos por disrupções, afinal acreditamos que a tecnologia pode aproximar e humanizar relações entre pessoas, empresas e  universos.",
+        "WeFollow": "Nós seguimos os seguintes princípios:"
+      },
+    
+      "principleOneTitle": "1. Pessoas, pessoas e pessoas",
+      "principleOneParagraph":"Somos feitos de pessoas, trabalhamos com pessoas e criamos para pessoas. Cada indivíduo é único e importante para nós e deve ter seu espaço respeitado.",
+      "principleOneTag": "#pessoas #indivíduos",
+
+      "principleTwoTitle": "2. Somos apaixonados pelo que fazemos",
+      "principleTwoParagraph": "Cada pessoa tem seus interesses e paixões, quando fazemos o que gostamos fazemos o melhor que podemos fazer. Por isso, nos preocupamos em colocar a pessoa certa no lugar certo e recompensar cada passo bem sucedido.",
+      "principleTwoTag": "#lovetocode #sintonia",
+
+      "principleThreeTitle": "3. Não existe o que não podemos fazer, apenas o que não fizemos ainda",
+      "principleThreeParagraph": "Fazer sem medo de errar, aprender com isso e então fazer melhor. Estamos em constante aprendizado, e isso nos move para novos horizontes.",
+      "principleThreeTag": "#aprendizado",
+
+      "principleFourTitle": "4. Nós resolvemos o problema",
+      "principleFourParagraph": "Temos orientação a solução, a resolver os problemas sejam eles quais forem. Fazemos isso entendendo as necessidades de nossos clientes/projetos e criando uma solução propositiva.",
+      "principleFourTag": "#excelência #solução #propositividade #comprometimento",
+      
+      "principleFiveTitle": "5. Compartilhar conhecimento não é opção, é obrigação",
+      "principleFiveParagraph": "Ao contrário das tradicionais hierarquias, nós não escondemos conhecimento, mas sim compartilhamos ao máximo, seja com clientes, colaboradores ou com o mundo. L2 é um grande time! Cada colaborador ajuda e fortalece a fraqueza dos outros.",
+      "principleFiveTag": "#compartilhar #colaborar #l2team",
+
+      "beginningSixTitle": "6. Respeito e diversidade, quanto mais, melhor",
+      "beginningSixParagraph": "Acreditamos que a diversidade amplia nossa maneira de ver o mundo, a forma como analisamos situações e as diferentes maneiras com que resolvemos problemas. Criamos um ambiente acolhedor e inclusivo para que L2team possa se desenvolver e dar o seu melhor.",
+      "beginningSixTag": " #respeito #inclusão",
+
+      "principleSevenTitle": "7. Se não for divertido tem algo errado",
+      "principleSevenParagraph": "Se está chato ou desmotivador tem algo errado. Quando temos espaço para usar nossas habilidades, criar coisas novas e nos desenvolvermos, sempre será motivador, divertido e empolgante.",
+      "principleSevenTag": "#diversão #evolução #crescimento #inovação",
+
+      "principleEightTitle": "8. Ninguém tem sempre razão",
+      "principleEightParagraph": "Seja desenvolvedor, líder, gestor, cliente ou o papa. Nós acertamos ou erramos como time. Se algo pode ser melhorado, você tem o direito de dizer de forma clara. Adoramos a cultura de feedbacks, pois nos ajuda a crescer.",
+      "principleEightTag": "#clareza #transparência #feedback",
+
+      "beginningNineTitle": "9. Não é feitiçaria, é tecnologia",
+      "beginningNineParagraph": "Usamos todo o potencial da tecnologia para criar impacto positivo no mundo, reinventando soluções e encantando as pessoas com produtos digitais e experiências online que as pessoas adoram. Parece mágica, mas é código. Parece super poderes, mas é design.",
+      "beginningNineTag": "#encantamento #tecnologia"
+    }
   },
+
   "cases": {
     "ourCases": "OUR SELECTED CASES",
     "laCream": "LA CREAM",
@@ -278,5 +376,133 @@
     "people": "People",
     "career": "Career",
     "contact": "Contact"
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "generalInfo": {
+      "title": "Informações Gerais",
+      "weL2": "Nós, da empresa ALL SOLUÇÕES DIGITAIS LTDA - ME, sociedade empresarial com endereço na Av. Três de Maio 1005, Centro - Pelotas/RS, inscrita no CNPJ sob n° 27.221.521/0001-25, e da empresa L2 DESIGN DE PRODUTOS DIGITAIS LTDA, sociedade empresarial com endereço na Av. Pinheiro Machado, nº 1412, Casa 46, Bairro Fragata, Pelotas/RS, inscrita no CNPJ sob o nº 46.594.754/0001-18, doravante denominadas simplesmente L2, estamos comprometidos em resguardar sua privacidade.<br><br>",
+      "currentPolicy": "A presente Política contém informações sobre coleta, uso, armazenamento, tratamento e proteção dos dados pessoais dos usuários e visitantes do nosso site https://l2code.com.br e respectivos serviços.<br><br>",
+      "weWillTreat": "Trataremos de que forma esses dados serão utilizados, agindo com absoluta transparência quanto ao assunto, esclarecendo a todos os interessados sobre os tipos de dados que são coletados, os motivos da coleta, bem como a segurança e utilização dos mesmos.<br><br>",
+      "itWasElaborated": "O presente documento foi elaborado em conformidade com:<br><br>",
+      "law": "Lei Geral de Proteção de Dados Pessoais – Lei 13.709/18 <a href='http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm' target='_blank'>http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm</a>.<br><br>",
+      "civilMilestone": "Marco Civil da Internet – Lei 12.965/14 <a href='https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm' target='_blank'>http://www.planalto.gov.br/ccivil_03/ato2011-2014/2014/lei/l12965.htm</a>;<br><br>",
+      "regulation": "Regulamento da UE n. 2016/6790.<br><br>",
+      "theDocument": "Ainda, o documento poderá ser atualizado em decorrência de eventual atualização normativa, ou de procedimentos internos, razão pela qual se convida o usuário e/ou visitante a consulta-lo periodicamente."
+    },
+    "infoCollected": {
+      "title": "Informações Coletadas",
+      "considering": "Considerando a natureza e finalidade da L2, poderemos coletar e tratar os seguintes dados e informações disponibilizadas voluntariamente por você, no momento do seu cadastro e/ou durante a participação em processos de recrutamento e seleção e/ou admissionais:<br><br>",
+      "recruitmentList": {
+        "generalData": "Nome completo, fotografia, data de nascimento, idade, sexo, telefone de contato, profissão, estado civil, e-mail e endereço completo;",
+        "contactData": "Número de CPF, endereço de e-mail e preferências de contato, número de RG (órgão emissor, estado e data de emissão), nacionalidade, naturalidade, país, estado e cidade de nascimento;",
+        "educationData": "Grau de escolaridade, instituição de ensino e cursos realizados, data de início e conclusão de cursos, experiência profissional, idiomas, qualificações, competências, habilidades, atividades extracurriculares e nome de usuário em redes sociais (LinkedIn, Facebook, Twitter, Google+ e Skype), remuneração auferida e pretensão salarial;",
+        "statement": "Declaração de origem étnica e declaração de pessoa com deficiência; que serão coletados e tratados exclusivamente para fins de programas de diversidade e inclusão;",
+        "languages": "Resultados de testes e provas de língua portuguesa, idiomas, raciocínio lógico e de conhecimentos específicos; resultados de testes diversos destinados a avaliar seus conhecimentos, competências e aptidões;",
+        "media": "Vídeos, imagens, sons e voz decorrentes de entrevistas realizadas online ou carregadas nas plataformas por você.",
+        "otherData": "Alguns outros dados poderão ser solicitados para diligências preliminares e regulares quando de sua contratação, tais como número da carteira de motorista, número de certidão de reservista (certificado de dispensa de incorporação); dados do título de eleitor; número PIS/PASEP e data de emissão, dados dos pais e dependentes;"
+      },
+      "otherInfo": "<br>Serão ainda coletados e armazenados os seguintes dados e informações:<br><br>",
+      "infoList": {
+        "systemInfo": "Informações do Sistema: páginas acessadas, interações e consultas realizadas, número de visualizações, registros data, acesso e horários de acesso e saída, permanência e saída do sistema;",
+        "deviceInfo": "Informações do Dispositivo de Acesso: endereço de IP, dispositivo utilizado, ID do dispositivo, tipo de navegador, conexão de rede, sistema operacional e informações dos sensores, tais como, mas não se limitando, a localização do dispositivo."
+      },
+      "weValuePrivacy": "<br>A L2 preza pela sua privacidade e intimidade e não recolhe informações sensíveis, tais como informações relativas à sua saúde, convicções filosóficas ou políticas, filiação partidária ou sindical, fé religiosa, vida sexual, etc. Contudo, caso, especificamente, venhamos a coletar/acessar informações e dados relacionados aos mencionados acima (dados sensíveis), principalmente com o fim de promover a diversidade e inclusão de pessoas ou devido a obrigações legais, procederemos tal coleta, armazenamento, tratamento e utilização de forma legal e legitimada, de acordo com este Aviso de Privacidade e com a legislação aplicável."
+    },
+    "purposesOfUse": {
+      "title": "Finalidades de Utilização dos Dados Pessoais dos Usuários",
+      "curriculum": "currículos, como também não cobra nenhuma quantia quando do êxito de algum processo seletivo.<br><br>",
+      "theCollectedData": "Os dados coletados servem para cumprir as seguintes finalidades:<br><br>",
+      "useList": {
+        "professionalParticipation": "Permitir a participação do profissional nos processos seletivos já existentes e divulgados pela L2;",
+        "professionalRegistration": "Permitir o cadastro do profissional para concorrer a vagas futuras;",
+        "activeSearch": "Permitir que nossa equipe de recrutamento e seleção possa realizar uma busca ativa por candidatos para preenchimento de vagas já disponíveis e solicitadas por clientes da L2.",
+        "sendingEmails": "Envio de e-mails, alertas, notificações e mensagens que sejam do seu interesse sobre a confirmação de seu cadastro, confirmação de participação em processo seletivo e/ou sobre o agendamento de datas para a realização de testes, assim como sua conclusão.",
+        "legalNorms": "Cumprimento de normas legais e determinações judiciais ou de entidades públicas;"
+      },
+      "l2Acts": "<br>A L2 age firmado:<br><br>",
+      "actionsList": {
+        "fulfillment": "Para o cumprimento de obrigações legais ou regulatórias a que estamos sujeitos, incluindo a conformidade legal;",
+        "consent": "Com base em seu consentimento, quando necessário, que será obtido por meio de uma declaração de consentimento própria;",
+        "security": "Para zelar pela sua segurança e evitar fraudes;",
+        "rights": "Permitir que a L2 exerça seus direitos; e",
+        "interests": "Para cumprir interesses legítimos."
+      }
+    },
+    "storageTime": {
+      "title": "Tempo de Armazenamento dos Dados Pessoais",
+      "personalData": "Os dados pessoais do usuário e visitante são armazenados pela plataforma durante o período necessário para a prestação do serviço ou o cumprimento das finalidades previstas no presente documento, conforme o disposto no inciso I do artigo 15 da Lei 13.709/18, não ultrapassando o prazo máximo de 20 anos.<br><br>",
+      "removed": "Os dados podem ser removidos ou anonimizados a pedido do usuário, excetuando os casos em que a lei oferecer outra base legal para a realização do tratamento.<br><br>",
+      "hypotheses": "Ainda, os dados pessoais dos usuários apenas podem ser conservados após o término de seu tratamento nas seguintes hipóteses previstas no artigo 16 da referida lei:<br><br>",
+      "cardinalList": {
+        "legalObligation": "I – Cumprimento de obrigação legal ou regulatória pelo controlador;",
+        "researchBody": "II – Estudo por órgão de pesquisa, garantida, sempre que possível, a anonimização dos dados pessoais;",
+        "transfer": "III – Transferência a terceiro, desde que respeitados os requisitos de tratamento de dados dispostos nesta Lei;",
+        "exclusiveUse": "IV – Uso exclusivo do controlador, vedado seu acesso por terceiro, e desde que anonimizados os dados."
+      }
+    },
+    "dataSecurity": {
+      "title": "Segurança dos Dados Pessoais Armazenados",
+      "ourSite": "Nosso site se compromete a aplicar as medidas técnicas aptas a proteger os dados pessoais de acessos não autorizados e de situações de destruição, perda, alteração, comunicação ou difusão de tais dados. Nos comprometemos a comunicar o usuário em caso de alguma violação de segurança dos seus dados pessoais.<br><br>",
+      "confidentiality": "Os dados pessoais armazenados são tratados com confidencialidade, dentro dos limites legais. No entanto, além das informações de transmissão aqui previstas, podemos divulgar suas informações pessoais caso sejamos obrigados pela lei para fazê-lo.<br><br>",
+      "theContent": "O conteúdo do site é protegido pelas leis e normas que regulamentam os direitos autorais.<br><br>",
+      "theUser": "O usuário está autorizado unicamente a fazer uso do conteúdo do site para fins estritamente pessoais/profissionais, sendo-lhe expressamente proibido publicar, reproduzir, difundir, distribuir ou, por qualquer forma, tornar os conteúdos acessíveis a terceiros, a não ser para divulgação dos serviços do L2.<br><br>",
+      "changeTheContent": "Ao usuário é vedado alterar ou tentar alterar, por qualquer meio, o conteúdo do site, ou introduzir no mesmo, quaisquer tipos de vírus ou programas que o danifiquem ou o contaminem.<br>",
+      "violation": "Entendemos, ainda, como violação à nossa política de privacidade:<br><br>",
+      "violationList": {
+        "illegalPurposes": "Usar o sistema com propósitos ilegais;",
+        "forge": "Forjar endereços de máquinas, de rede ou de correio eletrônico, na tentativa de responsabilizar terceiros ou ocultar a identidade ou autoria;",
+        "violateCopyright": "Violar copyright ou direito autoral alheio reproduzindo material sem prévia autorização."
+      },
+      "invasionAttempts": "As tentativas de invasão ao site serão tratadas conforme prescrição legal e terão a tipificação penal correspondente às consequências legalmente tipificadas.<br><br>",
+      "providedByClients": "O conteúdo deste site, incluindo designadamente os textos, imagens e sons, é de propriedade da L2, com exceção dos conteúdos fornecidos por clientes ou parceiros comerciais que se encontrem identificados como tal, tendo apenas fins informativos."
+    },
+    "personalDataTransfer": {
+      "title": "Transferência de Dados Pessoais",
+      "thePersonalData": "Os dados pessoais podem ser compartilhados com terceiros, parceiros ou clientes da L2 com o intuito de realizar a prestação de serviços em recursos humanos.<br><br>",
+      "providers": "Com relação aos fornecedores de serviços terceirizados, informamos que cada qual tem sua própria política de privacidade. Desse modo, recomendamos a leitura das suas políticas de privacidade para compreensão de quais informações pessoais serão usadas por esses fornecedores:<br><br>",
+      "toolsList": {
+        "monday": "Monday: Plataforma de gestão, usada na L2 para armazenamento de listas de informação e controles. <a href='https://monday.com/l/pt/privacidade-pt/privacy-policy/' target='_blank'>**https://monday.com/l/pt/privacidade-pt/privacy-policy/**</a>",
+        "clockify": "Clockify: Plataforma para o lançamento de horas. <a href='https://clockify.me/privacy' target='_blank'>**https://clockify.me/privacy**</a>",
+        "notion": "Notion: Plataforma para gerenciamento de documentos e notas. <a href='https://www.notion.so/Terms-and-Privacy-28ffdd083dc3473e9c2da6ec011b58ac' target='_blank'>https://www.notion.so/Terms-and-Privacy-28ffdd083dc3473e9c2da6ec011b58ac<a/>",
+        "googleDrive": "Google Drive / Google Forms: Ferramenta utiliza para o armazenamento de arquivos e documentos online, assim como arquivar as respostas de formulário em planilhas. <a href='https://policies.google.com/privacy?hl=pt-BR' target='_blank'>**https://policies.google.com/privacy?hl=pt-BR**</a>"
+      },
+      "theyReceive": "<br>Os terceiros indicados recebem os dados na medida do necessário para permitir que eles realizem os serviços contratados.<br><br>",
+      "whenBeingRedirected": "Ao ser redirecionado para um aplicativo ou site de terceiros, você não será mais regido exclusivamente por essa Política de Privacidade e demais políticas da nossa plataforma. Desta forma, lhe incentivamos a ler tais declarações de privacidade."
+    },
+    "cookies": {
+      "title": "Cookies ou Dados de Navegação",
+      "theCookies": "Os cookies referem-se a arquivos de texto enviados pela plataforma ao computador do usuário e visitante e que nele ficam armazenados, com informações relacionadas à navegação no site. Tais informações são relacionadas aos dados de acesso como local e horário de acesso e são armazenadas pelo navegador do usuário e visitante para que o servidor da plataforma possa lê-las posteriormente a fim de personalizar os serviços da plataforma.<br><br>",
+      "whatAreCookies": "O QUE SÃO COOKIES?<br><br>",
+      "areInfo": "Os cookies são informações geradas quando você acessa um site. Estas informações são armazenadas em seu navegador, possibilitando a transmissão ao operador do site de informações como: o idioma escolhido, as preferências de pesquisa, seu uso no site e outras.<br><br>",
+      "whatTypes": "QUAIS OS TIPOS DE COOKIES E SUAS FINALIDADES?<br><br>",
+      "first": "Primeiramente, temos que diferenciar os cookies permanentes, dos cookies de sessão.<br><br>",
+      "cookieList": {
+        "permanentCookies": "COOKIES PERMANENTES: São aqueles que ficam armazenados no seu navegador, ainda após você ter finalizado o acesso ao site.",
+        "temporaryCookies": "COOKIES TEMPORÁRIOS: São aqueles que somente são coletados enquanto você acessa o site. Após encerrar a sessão eles não são armazenados.\nExistem ainda diferentes tipos de cookies, sendo que cada tem uma finalidade específica:",
+        "necessaryCookies": "COOKIES NECESSÁRIOS: Conforme o próprio nome já diz, estes cookies são necessários para permitir determinadas funcionalidades do site e a utilização de nossos serviços.",
+        "analyticalCookies": "COOKIES ANALÍTICOS: Os cookies analíticos são aqueles que possibilitam a coleta e análise de dados estatísticos, permitindo verificar quais páginas você acessou, quantas vezes foram acessadas estas páginas, que visam melhorar o desempenho e funcionamento do site.",
+        "functionalityCookies": "COOKIES DE FUNCIONALIDADE: Estes cookies são responsáveis por guardar as preferências da sua utilização em nosso site, fazendo com que você não precise selecioná-las novamente.",
+        "advertisingCookies": "COOKIES DE PUBLICIDADE: Estes tipos de cookies são aqueles destinados a coletar informações para possibilitar anúncios e personalizar a publicação."
+      },
+      "whichCookies": "<br>QUAIS COOKIES UTILIZAMOS?<br><br>",
+      "weUse": "Utilizamos cookies do Google Analytics (<a href='https://policies.google.com/privacy?hl=pt-BR' target='_blank'>**https://policies.google.com/privacy?hl=pt-BR**</a>) e Hotjar (<a href='https://www.hotjar.com/legal/policies/privacy/' target='_blank'>**https://www.hotjar.com/legal/policies/privacy/**</a>). Duas ferramentas analíticas que nos ajudam a entender o comportamento dos usuários na navegação com o objetivo de nos auxiliar a oferecer uma experiência melhor durante o acesso.<br><br>",
+      "language": "Além deles temos um cookie para armazenar o idioma do usuário e carregar o site no idioma correto em acessos futuros.<br><br>",
+      "canIDisable": "POSSO DESATIVAR ESTES COOKIES? Nenhum dos cookies que utilizamos é obrigatório para o funcionamento do site. A função dos cookies utilizados é apenas analisar o comportamento dos usuários e nos permitir aprimorar a experiência de acesso então sugerimos que autorize todos os cookies.<br><br>",
+      "howToDisable": "COMO DESATIVÁ-LOS? A maioria dos navegadores de Internet já possuem configurações para aceitar automaticamente os cookies. O portal coleta cookies automaticamente mas é possível desativá-los nas configurações de cada navegador."
+    },
+    "consent": {
+      "title": "Consentimento",
+      "whenUsing": "Ao utilizar os serviços e fornecer as informações pessoais na plataforma, o usuário está consentindo com a presente Política de Privacidade.<br><br>",
+      "theUser": "O usuário, ao cadastrar-se, manifesta conhecer e pode exercitar seus direitos de cancelar seu cadastro, e garante a veracidade das informações por ele disponibilizadas.<br><br>",
+      "removeConsent": "O usuário tem direito de retirar o seu consentimento a qualquer tempo e, para tanto, deve entrar em contato com o DPO da L2, através do e-mail: dpo@l2code.com.br."
+    },
+    "changes": {
+      "title": "Alterações para essa Política de Privacidade",
+      "chagePolicy": "A L2 reserva-se o direito de alterar todas as suas políticas estabelecidas, para adaptá-las a alterações legislativas, normas relativas à utilização de novas tecnologias, ou ainda, sempre que julgar necessário.<br><br>",
+      "solution": "Para a solução de controvérsias decorrentes do presente instrumento será aplicado integralmente o Direito brasileiro.<br><br>",
+      "doubts": "DÚVIDAS: Eventuais dúvidas quanto à nossa política podem ser encaminhadas através do e-mail: dpo@l2code.com.br"
+    }
   }
 }
+

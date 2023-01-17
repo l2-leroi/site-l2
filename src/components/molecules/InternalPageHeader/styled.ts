@@ -5,17 +5,22 @@ import { Typography } from '../../../styles/typography';
 export const ContainerStyled = styled.div`
   color: ${colors.gray};
   background-color: ${colors.black};
-  padding-top: 24rem;
+  padding-top: 18rem;
+  padding-bottom: 12rem;
 `;
 
 export const ContentStyled = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 1500px;
   margin: 0 auto;
-  padding-left: 2.8rem;
-  padding-right: 2.8rem;
+  padding-left: 28px;
+  padding-right: 28px;
+
+  @media (max-width: 500px) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 `;
 
 export const MainDivStyled = styled.div`
@@ -30,69 +35,85 @@ export const DivStyled = styled.div`
   display: flex;
   align-items: end;
   margin-bottom: 3.6rem;
+
+  @media (max-width: 500px) {
+    justify-content: space-between;
+  }
 `;
 
-export const TitleStyled = styled.h2`
-  font-family: 'Neue Machina', sans-serif;
-  font-size: 6.4rem;
-  line-height: 64.8px;
-  font-weight: 800;
-  width: 686px;
-  letter-spacing: -0.04em;
-
-  ::selection {
-    background: ${colors.purple};
-    color: ${colors.gray};
-  }
-
-  @media (max-width: 930px) {
-    width: 500px;
-  }
+export const TitleStyled = styled.div`
+  max-width: 680px;
 
   @media (max-width: 800px) {
-    width: 278px;
-    line-height: 32px;
-  }
-
-  @media (max-width: 415px) {
-    width: 264px;
-    line-height: 32.4px;
+    max-width: 220px;
   }
 `;
 
 export const AsideStyled = styled.aside`
   margin-bottom: -8px;
-  margin-left: 25px;
+  margin-left: -40px;
+  display: flex;
+  justify-content: center;
 
   @media (max-width: 800px) {
-    margin-left: 5px;
+    margin-left: 40px;
+    max-width: 40px;
   }
-  @media (min-width: 400px) {
-    margin-left: 60px;
+
+  @media (max-width: 500px) {
+    p {
+      text-align: right;
+    }
+    margin-left: auto;
   }
-  @media (max-width: 400px) {
-    margin-left: 19px;
+
+  //@media (max-width: 400px) {
+  @media (max-width: 290px) {
+    // margin-left: 19px;
+    margin-left: 0px;
+  }
+
+  @media (max-width: 500px) {
+    justify-content: flex-end;
   }
 `;
 
-export const ParagraphStyled = styled.p`
+export const ParagraphStyled = styled.div`
   font-family: 'Circular Air Pro', sans-serif;
   font-size: 1.6rem;
   line-height: 22.4px;
   font-weight: 400;
   letter-spacing: -0.02em;
   white-space: nowrap;
+  text-align: end;
+
+  @media (max-width: 320px) {
+    white-space: break-spaces;
+  }
 
   ::selection {
     background: ${colors.purple};
     color: ${colors.gray};
   }
+
+  @media (max-width: 500px) {
+    text-align: center;
+    word-break: normal;
+    white-space: pre-wrap;
+  }
 `;
 
 export const AsideStyledbutton = styled.div`
-  margin-left: 15px;
+  position: fixed;
+  right: 10px;
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 
 export const LanguageStyled = styled.div`
@@ -109,6 +130,7 @@ export const LanguageStyled = styled.div`
   @media (max-width: 500px) {
     opacity: 0;
     gap: 9px;
+    display: none;
   }
 
   &.animate {
@@ -150,14 +172,10 @@ export const LanguageStyled = styled.div`
   }
 `;
 
-export const PhraseStyled = styled.p`
-  font-family: 'Circular Air Pro', sans-serif;
-  font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 3.36rem;
+export const PhraseStyled = styled.div`
   width: 502px;
-  margin-bottom: 8rem;
   letter-spacing: -0.04em;
+  max-width: 464px;
 
   ::selection {
     background: ${colors.purple};
