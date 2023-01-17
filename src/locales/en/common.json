@@ -345,14 +345,27 @@
     "consultingService": "IT Consulting Service",
     "design": "Design"
   },
+  
   "CasesDetail": {
     "design": "Design",
     "prototipo": "Protótipo",
     "imagens": "Imagens",
     "tecnologias": "Tecnologias"
   },
+
   "Profile": {
-    "socialNetwork": "Social Network"
+    "socialNetwork": "Social Network",
+    "technologies": "Technologies/Softwares",
+    "personal": "Personal",
+    "insignia" : "Insignia L2",
+    "tweet": "Um tweet sobre mim:",
+    "photos": "Fotos",
+    "resume": "Resumo profissional",
+    "softSkills": "Soft Skills",
+    "preferences": "'s preferences for...",
+    "characters": "Characters",
+    "movies": "Movies",
+    "games": "Games"
   },
 
   "scroll": {

@@ -7,10 +7,11 @@ export const ContainerStyled = styled.section`
   display: flex;
   flex-direction: column;
   width: 35vw;
-  padding-right: 30px;
+  padding-right: 28px;
+}
 `;
 
-export const SocialNetworkContainerStyled = styled.div`
+export const TechnologyContainerStyled = styled.div`
   display: flex;
   gap: 25px;
   padding-top: 40px;
@@ -21,8 +22,4 @@ export const SocialNetworkContainerStyled = styled.div`
   }
 `;
 
-export const SocialMediaLinkStyled = styled.a`
-  cursor: pointer;
-`;
-
-export const SocialNetworkIconStyled = styled.img``;
+export const TechnologyIcon = styled.img``;

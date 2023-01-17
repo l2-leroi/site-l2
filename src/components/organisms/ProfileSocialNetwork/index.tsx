@@ -21,13 +21,13 @@ export default function ProfileSocialNetwork({ socialNetwork }) {
   return (
     <ContainerStyled>
       <Typography
-        fontWeight="weight2"
-        color="black"
-        letterSpacing="space1"
-        size="small"
-        lineHeight="line120"
+        tag="h1"
+        size="xsmall"
+        className="typography"
         fontFamily="font2"
-        tag="h3"
+        letterSpacing="space1"
+        fontWeight="weight2"
+        lineHeight="line120"
       >
         {t('Profile.socialNetwork')}
       </Typography>
