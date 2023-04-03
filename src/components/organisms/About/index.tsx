@@ -57,7 +57,7 @@ export default function About() {
               </Typography>
             </TitleStyled>
             <ParagraphStyled>
-              <Typography tag="h2" color="gray">
+              <Typography tag="h2" color="gray" lineHeight="line140">
                 {t('about.weCreated')}
               </Typography>
             </ParagraphStyled>
@@ -99,19 +99,14 @@ export default function About() {
                 size="small"
                 fontWeight="weight2"
                 letterSpacing="space1"
-                lineHeight="line120"
+                lineHeight="line90"
                 color="gray"
               >
                 {t('about.weTransform')}
               </Typography>
             </SubTitleStyled>
             <ParagraphSubTitleStyled>
-              <Typography
-                tag="p"
-                color="gray"
-                fontWeight="weight1"
-                line-height="line140"
-              >
+              <Typography tag="p" color="gray" fontWeight="weight1">
                 {t('about.are')}
               </Typography>
             </ParagraphSubTitleStyled>
@@ -246,9 +241,9 @@ export default function About() {
                 </Typography>
                 <div className="button">
                   <Button
-                    linkBtn="pessoas"
+                    linkBtn="#"
                     text="CONHEÇA A NOSSA EQUIPE"
-                    fill={`${colors.gray}`}
+                    fill={`${colors.green}`}
                     fontSize="large"
                   />
                 </div>

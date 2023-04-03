@@ -129,11 +129,13 @@ export default function OurServicesFull() {
     window.onresize = animateCircle;
     window.addEventListener('scroll', animateCircle);
     window.addEventListener('resize', animateCircle);
-    screen.orientation.addEventListener('change', animateCircle);
+    if (screen.orientation)
+      screen.orientation.addEventListener('change', animateCircle);
     return () => {
       window.removeEventListener('scroll', animateCircle);
       window.removeEventListener('resize', animateCircle);
-      screen.orientation.removeEventListener('change', animateCircle);
+      if (screen.orientation)
+        screen.orientation.removeEventListener('change', animateCircle);
     };
   }, []);
 
@@ -157,8 +159,7 @@ export default function OurServicesFull() {
           </ContentStyled>
         </OurServicesFullStyled>
       </SectionStyled>
-      {/* }
-      <DiagonalVideo>
+      {/* <DiagonalVideo>
         <VideoTitleStyled>
           <Typography
             color="gray"
@@ -171,8 +172,7 @@ export default function OurServicesFull() {
             {t('ourServicesFull.seeHowItWorks')}&lt;&gt;
           </Typography>
         </VideoTitleStyled>
-      </DiagonalVideo>
-  */}
+      </DiagonalVideo> */}
     </>
   );
 }

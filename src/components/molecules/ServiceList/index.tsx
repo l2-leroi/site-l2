@@ -63,16 +63,16 @@ function ServiceList({ services }: ServiceProps) {
               {t(`${service.title}.paragraph`)}
             </Typography>
           </ParagraphStyled>
-          {/* }
-          {service.hasImages ? (
+
+          {/* {service.hasImages ? (
             <ImageContainerStyled>
               {service.images.map((image) => (
                 <ImageStyled src={`/images/${image}`} />
               ))}
             </ImageContainerStyled>
-          ) : null}
+          ) : null} */}
 
-          {service.hasVideo ? (
+          {/* {service.hasVideo ? (
             <VideoStyled>
               {service.video.text !== null ? (
                 <>
@@ -92,8 +92,7 @@ function ServiceList({ services }: ServiceProps) {
                 </VideoIconContainer>
               )}
             </VideoStyled>
-          ) : null}
-              */}
+          ) : null} */}
 
           <AboutListStyled>
             {service.list.map((text, index) => (

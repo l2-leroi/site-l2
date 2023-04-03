@@ -30,7 +30,7 @@ export const ButtonStyled = styled.div<ButtonProps>`
   white-space: nowrap;
 
   @media (max-width: 800px) {
-    font-size: 16px;
+    font-size: 12px;
     padding: 0px;
 
     svg {

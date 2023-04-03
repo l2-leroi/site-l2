@@ -54,8 +54,9 @@ export const TitleStyled = styled.h2`
     color: ${colors.gray};
   }
 
-  @media (max-width: 930px) {
+  @media (max-width: 500px) {
     width: 500px;
+    justify-content: space-between;
   }
 
   @media (max-width: 800px) {
@@ -70,16 +71,20 @@ export const TitleStyled = styled.h2`
 
 export const AsideStyled = styled.aside`
   margin-bottom: -8px;
-  // margin-left: 25px;
+  margin-left: -40px;
   display: flex;
   justify-content: center;
 
   @media (max-width: 800px) {
-    // margin-left: 5px;
+    margin-left: 40px;
+    max-width: 40px;
   }
 
-  @media (min-width: 400px) {
-    // margin-left: 60px;
+  @media (max-width: 500px) {
+    p {
+      text-align: right;
+    }
+    margin-left: auto;
   }
 
   //@media (max-width: 400px) {
@@ -93,7 +98,7 @@ export const AsideStyled = styled.aside`
   }
 `;
 
-export const ParagraphStyled = styled.p`
+export const ParagraphStyled = styled.div`
   font-family: 'Circular Air Pro', sans-serif;
   font-size: 1.6rem;
   line-height: 22.4px;
@@ -119,7 +124,8 @@ export const ParagraphStyled = styled.p`
 `;
 
 export const AsideStyledbutton = styled.div`
-  // margin-left: 15px;
+  position: fixed;
+  right: 10px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -186,13 +192,8 @@ export const LanguageStyled = styled.div`
   }
 `;
 
-export const PhraseStyled = styled.p`
-  font-family: 'Circular Air Pro', sans-serif;
-  font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 3.36rem;
+export const PhraseStyled = styled.div`
   width: 502px;
-  // margin-bottom: 8rem;
   letter-spacing: -0.04em;
   max-width: 464px;
 

@@ -13,10 +13,10 @@ export const ContainerStyledManifest = styled.section`
   padding-top: 15.5rem;
   justify-content: flex-start;
   margin-left: 0px;
-  padding-bottom: 10500px;
+  padding-bottom: 8300px;
 
   @media (max-width: 800px) {
-    padding-bottom: 4400px;
+    padding-bottom: 4200px;
   }
 
   .scrollCircleDiv {
@@ -26,12 +26,12 @@ export const ContainerStyledManifest = styled.section`
 
     > div {
       margin-top: -1200px; //1200px;
-      height: 11700px; //10500px + 1200px;
+      height: 9500px; //8300px + 1200px;
       width: 30vw;
 
       @media (max-width: 800px) {
         margin-top: -500px;
-        height: 4900px; // 4400px; + 500px;
+        height: 4700px; // 4200px; + 500px;
         img {
           max-width: 72px;
           max-height: 72px;
@@ -128,6 +128,9 @@ export const SubTitleStyled = styled.div`
   width: 712px;
   @media (max-width: 800px) {
     max-width: 250px;
+    h2 {
+      font-size: 20px;
+    }
   }
 `;
 
