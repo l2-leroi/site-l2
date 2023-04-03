@@ -41,7 +41,7 @@ export const DivStyled = styled.div`
 export const TitleStyled = styled.h2`
   font-family: 'Neue Machina', sans-serif;
   font-size: 6.4rem;
-  line-height: 64.8px;
+  line-height: 100%;
   font-weight: 800;
   max-width: 712px;
   letter-spacing: -0.04em;
@@ -61,12 +61,10 @@ export const TitleStyled = styled.h2`
   @media (max-width: 800px) {
     width: 100%;
     // width: 278px;
-    line-height: 32px;
   }
 
   @media (max-width: 415px) {
     width: 264px;
-    line-height: 32.4px;
   }
 `;
 
