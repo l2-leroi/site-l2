@@ -73,7 +73,7 @@ export default function NavOnePage() {
             <ImageStyled
               hidden={isWhiteLogo}
               className="navImage"
-              src="/images/L2Code-Logo.svg"
+              src="/images/Logo-Small.svg"
               alt="L2 Code"
             />
           </Link>

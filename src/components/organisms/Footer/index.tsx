@@ -88,7 +88,7 @@ function Footer() {
             </Typography>
           </InfoStyled>
           <InfoStyled className="desktop">
-            <ImageStyled src="/images/Logo-Small.svg" alt="L2 Code" />
+            <ImageStyled src="/images/L2Code-Logo-White.svg" alt="L2 Code" />
           </InfoStyled>
           <InfoStyled className="align-end">
             <Typography
@@ -115,7 +115,7 @@ function Footer() {
           </InfoStyled>
         </CopyrightStyled>
         <InfoStyled className="mobile">
-          <ImageStyled src="/images/Logo-Small.svg" alt="L2 Code" />
+          <ImageStyled src="/images/L2Code-Logo-White.svg" alt="L2 Code" />
         </InfoStyled>
       </ContainerStyled>
     </FooterStyled>

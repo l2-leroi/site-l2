@@ -160,7 +160,7 @@ export const Lightning = () => {
         ref.current.width = window.innerWidth;
         ref.current.height = document.body.offsetHeight;
 
-        setCurrentHeight(document.body.offsetHeight);
+        setCurrentHeight(document.body.offsetHeight - 1);
       }
 
       const { pageX, pageY } = el;
