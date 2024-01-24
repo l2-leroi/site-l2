@@ -35,44 +35,34 @@ export const DivStyled = styled.div`
   display: flex;
   align-items: end;
   margin-bottom: 3.6rem;
-
-  @media (max-width: 500px) {
-    justify-content: space-between;
-  }
+  justify-content: space-between;
 `;
 
 export const TitleStyled = styled.div`
-  max-width: 680px;
+  width: 100%;
+  display: flex;
+  justifly-content: flex-start;
+
+  @media (max-width: 930px) {
+    width: 500px;
+  }
 
   @media (max-width: 800px) {
-    max-width: 220px;
+    width: 100%;
+  }
+
+  @media (max-width: 415px) {
+    width: 264px;
   }
 `;
 
 export const AsideStyled = styled.aside`
   margin-bottom: -8px;
-  margin-left: -40px;
   display: flex;
   justify-content: center;
-
-  @media (max-width: 800px) {
-    margin-left: 40px;
-    max-width: 40px;
-  }
-
-  @media (max-width: 500px) {
-    p {
-      text-align: right;
-    }
-    margin-left: auto;
-  }
-
-  //@media (max-width: 400px) {
   @media (max-width: 290px) {
-    // margin-left: 19px;
     margin-left: 0px;
   }
-
   @media (max-width: 500px) {
     justify-content: flex-end;
   }
@@ -104,13 +94,10 @@ export const ParagraphStyled = styled.div`
 `;
 
 export const AsideStyledbutton = styled.div`
-  position: fixed;
-  right: 10px;
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: flex-end;
-
   @media (max-width: 500px) {
     display: none;
   }
@@ -173,15 +160,17 @@ export const LanguageStyled = styled.div`
 `;
 
 export const PhraseStyled = styled.div`
+  font-family: 'Circular Air Pro', sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.36rem;
   width: 502px;
   letter-spacing: -0.04em;
   max-width: 464px;
-
   ::selection {
     background: ${colors.purple};
     color: ${colors.gray};
   }
-
   @media (max-width: 800px) {
     width: 175px;
   }

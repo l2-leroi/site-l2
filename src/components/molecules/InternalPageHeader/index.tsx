@@ -39,7 +39,7 @@ function InternalPageHeader(props: InternalPageHeaderProps) {
                 size="large"
                 letterSpacing="space2"
                 className="typography"
-                lineHeight="line90"
+                lineHeight="line100"
                 fontWeight="weight3"
                 color="gray"
               >
