@@ -48,7 +48,6 @@ export const TitleStyled = styled.div`
   }
 
   @media (max-width: 800px) {
-    // max-width: 220px;
     width: 100%;
   }
 
@@ -59,18 +58,9 @@ export const TitleStyled = styled.div`
 
 export const AsideStyled = styled.aside`
   margin-bottom: -8px;
-  // margin-left: 25px;
   display: flex;
   justify-content: center;
-  @media (max-width: 800px) {
-    // margin-left: 5px;
-  }
-  @media (min-width: 400px) {
-    // margin-left: 60px;
-  }
-  //@media (max-width: 400px) {
   @media (max-width: 290px) {
-    // margin-left: 19px;
     margin-left: 0px;
   }
   @media (max-width: 500px) {
@@ -104,7 +94,6 @@ export const ParagraphStyled = styled.div`
 `;
 
 export const AsideStyledbutton = styled.div`
-  // margin-left: 15px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -176,7 +165,6 @@ export const PhraseStyled = styled.div`
   font-size: 2.4rem;
   line-height: 3.36rem;
   width: 502px;
-  // margin-bottom: 8rem;
   letter-spacing: -0.04em;
   max-width: 464px;
   ::selection {
