@@ -9,7 +9,7 @@
     "alt": {
       "thereIsMore": "Tem mais coisa aqui em baixo",
       "howItIs": "Como é trabalhar na L2",
-      "manifest": "manifesto L2code"
+      "manifest": "manifesto L2"
     }
   },
 
@@ -66,7 +66,7 @@
   },
   "about": {
     "pageName": "sobre",
-    "title": "SOMOS A L2CODE",
+    "title": "SOMOS A L2",
     "weCreated": "Criamos soluções tecnológicas de forma humanizada e inovadora, pois acreditamos que inovar é aprender e ensinar sem fronteiras.",
     "whatWeAre": "O QUE SOMOS",
     "weTransform": "Transformamos ideias em soluções",
@@ -79,21 +79,21 @@
     "mission": "Missão",
     "create": "Criar soluções tecnológicas de forma humanizada, inovadora e divertida. ● Desenvolver ideias e profissionais é o nosso horizonte, afinal, unimos pessoas através da tecnologia e a união faz a inovação!",
     "vision": "Visão",
-    "desire": "A L2Code deseja romper barreiras, pois a disrupção nos move para criar e o nosso sonho é humanizar ainda mais soluções em tecnologia para pessoas e empresas.",
+    "desire": "A L2 deseja romper barreiras, pois a disrupção nos move para criar e o nosso sonho é humanizar ainda mais soluções em tecnologia para pessoas e empresas.",
     "values": "Valores",
     "weBelieve": "Acreditamos em um mundo onde as pessoas tem liberdade para se manifestar e compartilhar suas ideias. Nossos valores e princípios estão manifestados no nosso",
     "manifestL2": "manifesto L2.",
     "superPowers": "Super poderes que fazem a diferença",
     "weAreMade": "Somos feitos de pessoas brilhantes, magos da tecnologia, somos os Lcoders! ● Mas claro, com grandes poderes, vem grandes responsabilidades. Por isso utilizamos nossos super poderes para ajudar pessoas e melhorar o mundo. ● São eles: o poder da colaboração, pluralidade, diversão, empatia, criatividade, aprendizagem, comunicação e, como resultado, temos também o poder da evolução!",
     "manifest": {
-      "title": "Manifesto L2code",
+      "title": "Manifesto L2",
       "paragraph": {
         "weLive": "Vivemos em um universo de inovações onde, em cada fragmento de tempo, algo novo é lançado. Por isso somos defensores da diversidade de ideias e apoiadores da criatividade sem limites! ● Defendemos que a construção do trabalho em equipe fortalece fraquezas e engrandece a entrega e as relações humanas. ● A união faz a inovação aqui na L2!",
         "TodayWeAre": "Hoje nós somos dados, somos desenvolvimento, somos especialistas, somos apaixonados por código, somos pessoas!",
         "WeAre": "Somos sonhadores, somos movidos por disrupções, afinal acreditamos que a tecnologia pode aproximar e humanizar relações entre pessoas, empresas e  universos.",
         "WeFollow": "Nós seguimos os seguintes princípios:"
       },
-     
+
       "principleOneTitle": "1. Pessoas, pessoas e pessoas",
       "principleOneParagraph":"Somos feitos de pessoas, trabalhamos com pessoas e criamos para pessoas. Cada indivíduo é único e importante para nós e deve ter seu espaço respeitado.",
       "principleOneTag": "#pessoas #indivíduos",
@@ -109,7 +109,7 @@
       "principleFourTitle": "4. Nós resolvemos o problema",
       "principleFourParagraph": "Temos orientação a solução, a resolver os problemas sejam eles quais forem. Fazemos isso entendendo as necessidades de nossos clientes/projetos e criando uma solução propositiva.",
       "principleFourTag": "#excelência #solução #propositividade #comprometimento",
-      
+
       "principleFiveTitle": "5. Compartilhar conhecimento não é opção, é obrigação",
       "principleFiveParagraph": "Ao contrário das tradicionais hierarquias, nós não escondemos conhecimento, mas sim compartilhamos ao máximo, seja com clientes, colaboradores ou com o mundo. L2 é um grande time! Cada colaborador ajuda e fortalece a fraqueza dos outros.",
       "principleFiveTag": "#compartilhar #colaborar #l2team",
@@ -135,7 +135,7 @@
   "cases": {
     "pageName": "cases",
     "ourCases": "NOSSOS CASES SELECIONADOS",
-    "laCream": "LA CREAM", 
+    "laCream": "LA CREAM",
     "seeSomeCases": "VEJA ALGUNS DE NOSSOS CASES",
     "weDoWell": "Fazemos muito bem porque nos preocupamos com qualidade, estética e, acima de tudo, com resultados.",
     "weHelped": "Ajudamos start-up americana a definir seu negócio e lançamos seu produto.",
@@ -202,12 +202,12 @@
     "wireframe": "+ Wireframe",
     "design": "+ Design",
     "conceptArt": "+ Concept Art",
-    "navigablePrototype": "+ Protótipo Navegável",      
+    "navigablePrototype": "+ Protótipo Navegável",
     "uxUiDesign": "+ UX/UI Design"
   },
   "headerOurCareer": {
     "pageName": "nossas-carreiras",
-    "beTrainee": "SEJA TRAINEE NA L2CODE",
+    "beTrainee": "SEJA TRAINEE NA L2",
     "hereTheTrainee": "Aqui o trainee não faz café, faz a diferença. ● A cada 4 meses contratamos estudantes de graduação para iniciarem suas carreiras conosco.",
     "toTheTalents": "AOS TALENTOS",
     "registrationUntil": "Incrições até:",
@@ -365,12 +365,12 @@
     "imagens": "Imagens",
     "tecnologias": "Tecnologias"
   },
-  
+
   "Profile": {
     "socialNetwork": "Redes Sociais",
     "technologies": "Tecnologias/Softwares",
     "personal": "Pessoal",
-    "insignia" : "Insígnias L2", 
+    "insignia" : "Insígnias L2",
     "tweet": "Um tweet sobre mim:",
     "photos": "Fotos",
     "resume": "Resumo profissional",
