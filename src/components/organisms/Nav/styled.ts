@@ -110,6 +110,10 @@ export const ImageStyled = styled.img`
   user-select: none;
   cursor: pointer;
 
+  &.navImage {
+    max-width: 50px;
+  }
+
   @media (max-width: 800px) {
     width: 40px;
   }

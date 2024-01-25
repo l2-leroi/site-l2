@@ -96,7 +96,7 @@ export default function Nav() {
               hidden={isWhiteLogo}
               className="navImage"
               alt="L2 Code"
-              src="/images/L2Code-Logo.svg"
+              src="/images/Logo-Small.svg"
             />
           </Link>
         </NavItemStyled>

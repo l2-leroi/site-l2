@@ -49,7 +49,6 @@ function Menu({ openMenu, closeMenu }: MenuProps) {
     <MenuStyled style={{ display: openMenu ? 'block' : 'none' }}>
       <ContainerStyled>
         <DivLogoStyled>
-          <ImageStyled src="/images/L2Code-Logo-White.svg" alt="L2 Code" />
           <DivContactStyled className="first">
             <Typography
               tag="p"

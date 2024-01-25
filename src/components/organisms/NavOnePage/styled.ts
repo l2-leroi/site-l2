@@ -105,4 +105,8 @@ export const NavLinkListStyled = styled.ul`
 export const ImageStyled = styled.img`
   user-select: none;
   cursor: pointer;
+
+  &.navImage {
+    max-width: 50px;
+  }
 `;

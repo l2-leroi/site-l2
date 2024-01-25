@@ -102,7 +102,7 @@ export const CopyrightStyled = styled.div`
 export const InfoStyled = styled.div`
   &:first-child {
     text-align: start;
-    width: 339px;
+    width: 45%;
 
     @media (max-width: 800px) {
       width: 160px;
@@ -111,11 +111,17 @@ export const InfoStyled = styled.div`
 
   &.align-end {
     text-align: end;
-    width: 339px;
+    width: 45%;
 
     @media (max-width: 800px) {
       width: 160px;
     }
+  }
+
+  &.desktop {
+    display: flex;
+    width: 10%;
+    margin: auto 0;
   }
 
   &.mobile {
@@ -161,6 +167,9 @@ export const ImageStyled = styled.img`
   ::selection {
     background-color: transparent;
   }
+
+  width: 100%;
+  max-width: 100px;
 
   @media (max-width: 800px) {
     width: 58px;
