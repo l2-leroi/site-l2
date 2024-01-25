@@ -102,7 +102,7 @@ function Footer() {
                 {' '}
                 <HeartIcon />{' '}
               </IconStyled>{' '}
-              L2code
+              L2
             </Typography>
             <Typography
               tag="p"
