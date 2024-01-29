@@ -15,7 +15,7 @@ import { StyledScrollCircle } from '../OurCareersPage/styled';
 export default function Manifest() {
   return (
     <ContainerStyledManifest>
-      <div className="scrollCircleDiv">
+      <div className="scrollCircleDiv" id="manifest">
         <div>
           <StyledScrollCircle
             isWhiteImage={false}

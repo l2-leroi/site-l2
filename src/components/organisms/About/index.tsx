@@ -1,5 +1,6 @@
 import React from 'react';
 import i18next from 'i18next';
+import Link from 'next/link';
 import Button from '../../atoms/Button';
 import { colors } from '../../../styles/colors';
 import { Typography } from '../../../styles/typography';
@@ -196,7 +197,13 @@ export default function About() {
                   <Typography tag="p" color="gray">
                     {t('about.weBelieve')}{' '}
                     <Typography tag="a" color="green">
-                      {t('about.manifestL2')}
+                      <Link
+                        className="linkmanifest"
+                        href="#manifest"
+                        style={{ cursor: 'pointer' }}
+                      >
+                        {t('about.manifestL2')}
+                      </Link>
                     </Typography>
                   </Typography>
                 </CardParagraphStyled>

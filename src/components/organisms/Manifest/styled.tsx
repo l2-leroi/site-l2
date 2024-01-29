@@ -23,6 +23,10 @@ export const ContainerStyledManifest = styled.section`
     margin-top: -40px;
     height: 0;
     justify-content: flex-start;
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
 
     > div {
       margin-top: -1200px; //1200px;
