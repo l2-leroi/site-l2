@@ -54,7 +54,7 @@ export const TriangleContainer = styled.div`
       margin-right: -5px;
       margin-bottom: 0px;
       padding: 60px 18px 28px 18px;
-      
+
     }
   }
 `;
@@ -95,7 +95,9 @@ export const CookiesDescription = styled.div`
   }
 `;
 
-export const PrivacyLink = styled.a``;
+export const PrivacyLink = styled.a`
+  text-decoration: underline;
+`;
 
 export const OkButton = styled.button`
   font-family: 'Circular Air Pro', 'sans serif';
