@@ -126,6 +126,7 @@ function CaseList(props: CaseProps) {
               <Typography tag="p">{itemCase.info}</Typography>
 
               <LinkStyled
+                href={itemCase.link}
                 className="images"
                 onMouseEnter={() => {
                   if (window.innerWidth > 800) {
