@@ -26,7 +26,7 @@ export const ButtonStyled = styled.div<ButtonProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 0 2px;
   white-space: nowrap;
 
   @media (max-width: 800px) {
