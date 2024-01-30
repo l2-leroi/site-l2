@@ -10,7 +10,7 @@ import { Typography } from '../../../styles/typography';
 import PeopleCard from '../../atoms/PeopleCard';
 
 export default function PeopleCardList({
-  title,
+  position,
   people,
   index,
   arrayLength,
@@ -29,7 +29,7 @@ export default function PeopleCardList({
           fontFamily="font2"
           lineHeight="line120"
         >
-          {t(`people.professions.${title}.title`)}
+          {t(`people.positions.${position}.title`)}
         </Typography>
         <Typography
           tag="p"
@@ -40,7 +40,7 @@ export default function PeopleCardList({
           letterSpacing="space2"
           lineHeight="line140"
         >
-          {t(`people.professions.${title}.subtitle`)}
+          {t(`people.positions.${position}.subtitle`)}
         </Typography>
       </InfoPeopleDiv>
       <CardListContainer style={{ backgroundColor: bgColor }}>
@@ -49,8 +49,8 @@ export default function PeopleCardList({
             <PeopleCard
               images={item.images}
               folder={item.folder}
-              name={item.name}
-              city={item.city}
+              firstName={item.firstName}
+              location={item.location}
               key={key}
               bgColor={bgColor}
               fontColor={fontColor}

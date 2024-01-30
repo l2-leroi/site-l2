@@ -9,152 +9,134 @@ export default function PetsMosaic() {
     {
       images: ['Luna.png'],
       folder: 'pets',
-      name: 'Luna',
+      firstName: 'Luna',
       city: 'Madame arteira',
     },
     {
       images: ['Sofia.png'],
       folder: 'pets',
-      name: 'Sofia',
+      firstName: 'Sofia',
       city: 'Sorriso resplandecente',
     },
     {
       images: ['Laica.png'],
       folder: 'pets',
-      name: 'Laica',
+      firstName: 'Laica',
       city: 'Muito nenê',
     },
     {
       images: ['Tom_Bud.png'],
       folder: 'pets',
-      name: 'Bruna',
+      firstName: 'Bruna',
       city: 'Estão sempre a mimir',
     },
     {
       images: ['Batman.png'],
       folder: 'pets',
-      name: 'Batman',
+      firstName: 'Batman',
       city: 'Vigilante da madrugada',
     },
     {
       images: ['Cheddar.png'],
       folder: 'pets',
-      name: 'Cheddar',
+      firstName: 'Cheddar',
       city: 'Ligado no 220V',
     },
     {
       images: ['Oliver.png'],
       folder: 'pets',
-      name: 'Oliver',
+      firstName: 'Oliver',
       city: 'O preguiçoso',
     },
     {
       images: ['Jaspion.png'],
       folder: 'pets',
-      name: 'Jaspion',
+      firstName: 'Jaspion',
       city: 'O caçador',
-    },
-    {
-      images: ['Pretinha_Gil.png'],
-      folder: 'pets',
-      name: 'Pretinha Gil',
-      city: 'Ama um pregador',
-    },
-    {
-      images: ['Emy_Duncan.png'],
-      folder: 'pets',
-      name: 'Emy Duncan',
-      city: 'É a cachorrinha chupando manga',
     },
     {
       images: ['Azir_Akali_Kayo_Evelynn.png'],
       folder: 'pets',
-      name: 'Azir, Akali, KAY/O e Evelynn',
+      firstName: 'Azir, Akali, KAY/O e Evelynn',
       city: 'Sorriem e acenem, rapazes',
     },
     {
       images: ['Cacau.png'],
       folder: 'pets',
-      name: 'Cacau',
+      firstName: 'Cacau',
       city: 'A fofinha',
     },
     {
       images: ['Pretinho.png'],
       folder: 'pets',
-      name: 'Pretinho',
+      firstName: 'Pretinho',
       city: 'Ama uma bagunça',
     },
     {
       images: ['Tofu.png'],
       folder: 'pets',
-      name: 'Tofu',
+      firstName: 'Tofu',
       city: 'O mimadinho',
     },
     {
       images: ['Feijao.png'],
       folder: 'pets',
-      name: 'Feijão',
+      firstName: 'Feijão',
       city: 'Adora roer um fio',
     },
     {
       images: ['Gata.png'],
       folder: 'pets',
-      name: 'Gata',
+      firstName: 'Gata',
       city: 'Adora dormir em cima do computador e desligar ele 😅',
     },
     {
       images: ['Petit.png'],
       folder: 'pets',
-      name: 'Petit',
+      firstName: 'Petit',
       city: 'Caça rato',
     },
     {
       images: ['Rebeca.png'],
       folder: 'pets',
-      name: 'Rebeca',
+      firstName: 'Rebeca',
       city: 'Ciumenta que dói',
     },
     {
       images: ['Boby.png'],
       folder: 'pets',
-      name: 'Boby',
+      firstName: 'Boby',
       city: 'Completamente maluco',
-    },
-    {
-      images: ['Nick.png'],
-      folder: 'pets',
-      name: 'Nick',
-      city: 'O dorminhoco',
     },
     {
       images: ['Charlotte.png'],
       folder: 'pets',
-      name: 'Charlotte',
+      firstName: 'Charlotte',
       city: 'Uma lady',
     },
     {
       images: ['Apolo.png'],
       folder: 'pets',
-      name: 'Apolo',
+      firstName: 'Apolo',
       city: 'Sempre gerando encrenca',
     },
     {
       images: ['Alice.png'],
       folder: 'pets',
-      name: 'Alice',
+      firstName: 'Alice',
       city: 'Adora ficar na volta de quem está trabalhando',
     },
     {
       images: ['Peri.png'],
       folder: 'pets',
-      name: 'Peri',
+      firstName: 'Peri',
       city: 'O escandaloso',
     },
   ];
   React.useEffect(() => {
     const petsSort = petsArray.sort((x, y) => {
-      const a = x.name.toUpperCase();
-      const b = y.name.toUpperCase();
+      const a = x.firstName.toUpperCase();
+      const b = y.firstName.toUpperCase();
       return a == b ? 0 : a > b ? 1 : -1;
     });
     setPets(petsSort);
@@ -162,7 +144,7 @@ export default function PetsMosaic() {
   return (
     <PeopleMosaicSection>
       <PeopleCardList
-        title="pets"
+        position="pets"
         people={pets}
         index={pets.length - 1}
         arrayLength={pets.length}

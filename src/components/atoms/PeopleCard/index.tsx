@@ -11,8 +11,8 @@ import { Typography } from '../../../styles/typography';
 export default function PeopleCard({
   images,
   folder,
-  name,
-  city,
+  firstName,
+  location,
   bgColor,
   fontColor,
 }) {
@@ -123,7 +123,7 @@ export default function PeopleCard({
           letterSpacing="space1"
           fontWeight="weight2"
         >
-          {name}
+          {firstName}
         </Typography>
         <Typography
           color={fontColor}
@@ -131,7 +131,7 @@ export default function PeopleCard({
           size="xsmall"
           letterSpacing="space1"
         >
-          {city}
+          {location}
         </Typography>
       </InfoContainer>
     </CardContainer>
