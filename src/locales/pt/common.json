@@ -20,7 +20,7 @@
     "whoWeAre":"QUEM SOMOS",
     "nobodyInnovatesAlone":"Ninguém inova sozinho",
     "togetherWeMakeMagic": "Mas juntos fazemos mágica. ● Nossa equipe é formada por talentos de diferentes níveis e lugares, prontos para superar suas expectativas.",
-      "professions": {
+      "positions": {
         "developers": {
           "title": "Desenvolvedores",
           "subtitle": "Os hackers da computação! ● Nossos devs são especialistas em códigos, responsáveis pelo desenvolvimento de softwares."
@@ -30,7 +30,7 @@
           "subtitle": ""
         },
         "uxui": {
-          "title": "Product Designers",
+          "title": "UX/UI",
           "subtitle": "A equipe criativa da L2! ● Nossos designers são responsáveis por criar interfaces pensando na melhor experiência para seus usuários."
         },
         "humanResources": {
@@ -41,12 +41,20 @@
           "title": "Pessoas e Cultura",
           "subtitle": ""
         },
-        "managers": {
-          "title": "Diretoria",
-          "subtitle": "Os bosses, os “chefões finais”. ● Os diretores são responsáveis por organizar, planejar, orientar a aplicação dos recursos e tomar todas as decisões importantes para o bom desenvolvimento da empresa."
+        "newBusinesses": {
+          "title": "Novos Negócios",
+          "subtitle": ""
         },
-        "projectManagement": {
-          "title": "Gestão de Projetos",
+        "dataOffice": {
+          "title": "Data Office",
+          "subtitle": ""
+        },
+        "coo": {
+          "title": "COO",
+          "subtitle": ""
+        },
+        "ceo": {
+          "title": "CEO",
           "subtitle": ""
         },
         "pets": {
