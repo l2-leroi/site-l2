@@ -103,7 +103,7 @@ export const MainTextStyled = styled.hgroup`
 
     @media (max-width: 500px) {
       &.textWrap {
-        max-width: 220px;
+        max-width: 90%;
         overflow-wrap: break-word;
       }
     }
