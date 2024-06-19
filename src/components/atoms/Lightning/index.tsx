@@ -142,8 +142,7 @@ export const Lightning = () => {
       });
 
       const footerOffset =
-        // eslint-disable-next-line no-unsafe-optional-chaining
-        document.getElementById('footer')?.getBoundingClientRect()?.top +
+        (document.getElementById('footer')?.getBoundingClientRect().top ?? 0) +
         window.scrollY -
         200; // <<- MAGIC NUMBER
       if (pageY >= footerOffset) {
@@ -167,8 +166,7 @@ export const Lightning = () => {
 
       const { pageX, pageY } = el;
       const footerOffset =
-        // eslint-disable-next-line no-unsafe-optional-chaining
-        document.getElementById('footer')?.getBoundingClientRect()?.top +
+        (document.getElementById('footer')?.getBoundingClientRect().top ?? 0) +
         window.scrollY -
         200; // <<- MAGIC NUMBER
       if (pageY >= footerOffset) {

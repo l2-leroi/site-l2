@@ -65,18 +65,21 @@ function InfiniteScroll({ closeMenu }: ScrollProps) {
       loader={null}
       height="100vh"
     >
-      {items.map((item) => (
+      {items.map((item, index) => (
         <Typography
+          key={index}
           tag="div"
           fontWeight="weight3"
           lineHeight="line100"
           letterSpacing="space3"
           fontFamily="font1"
           color={currentPage === `${item.url}` ? 'green' : 'gray'}
-          onClick={() => closeMenu()}
-          key={`${item[language]}`}
+          onClick={closeMenu}
         >
-          <Link key={`${item}-${uuid()}`} href={`/${language + item.url}`}>
+          <Link
+            key={`${item.translate}-${uuid()}`}
+            href={`/${language + item.url}`}
+          >
             {currentPage === `${item.url}`
               ? `<${t(`openMenu.${item.translate}`)}>`
               : t(`openMenu.${item.translate}`)}

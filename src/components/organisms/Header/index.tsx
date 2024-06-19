@@ -224,11 +224,7 @@ function Header() {
               fontWeight="weight3"
               size="xxlarge"
               lineHeight="line100"
-              className={
-                actualText.length > 7
-                  ? 'textWrap typography title'
-                  : ' typography title'
-              }
+              className="textWrap typography title"
               onMouseEnter={() => {
                 if (window.innerWidth > 500 && window.innerHeight > 414) {
                   setIsInitInterval(true);
