@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import i18next from 'i18next';
+import ReactGA from 'react-ga4';
 import {
   LPage,
   NavWrapper,
@@ -53,6 +54,12 @@ import {
 import ServiceComponent, { ServiceComponentProps } from './servicecomponent';
 
 const AssigmentLP: NextPage = () => {
+  ReactGA.send({
+    hitType: '',
+    page: '/alocacao',
+    title: 'LP Alocacao',
+  });
+
   const language = i18next.language.substring(0, 2);
 
   const areaValues = [
@@ -287,6 +294,14 @@ const AssigmentLP: NextPage = () => {
     }
   }
 
+  function eventTriggerGA(action: string) {
+    console.log({ action });
+    ReactGA.event({
+      category: 'click',
+      action,
+    });
+  }
+
   useEffect(() => {
     const changeHeaderData = setTimeout(() => {
       setRandomArea();
@@ -329,14 +344,23 @@ const AssigmentLP: NextPage = () => {
       <MarginBlock>
         {/* HEADER */}
         <NavWrapper>
-          <SocialLink href={`/${language}`}>
+          <SocialLink
+            onClick={() => eventTriggerGA('alocacao-logo-header')}
+            href={`/${language}`}
+          >
             <NavLogo src="/images/Logo-Small.svg" />
           </SocialLink>
           <SocialWrapper>
-            <SocialLink href="https://www.instagram.com/l2code.com.br">
+            <SocialLink
+              onClick={() => eventTriggerGA('alocacao-instagram')}
+              href="https://www.instagram.com/l2code.com.br"
+            >
               INSTAGRAM
             </SocialLink>
-            <SocialLink href="https://br.linkedin.com/company/l2code-dev">
+            <SocialLink
+              onClick={() => eventTriggerGA('alocacao-linkedin')}
+              href="https://br.linkedin.com/company/l2code-dev"
+            >
               LINKEDIN
             </SocialLink>
           </SocialWrapper>
@@ -364,10 +388,16 @@ const AssigmentLP: NextPage = () => {
           <ContactBarText color="">Fale com nossa comercial</ContactBarText>
           <ContactButtonsWrapper>
             <QRCodeButton
-              onClick={() => setOpenModal(true)}
+              onClick={() => {
+                setOpenModal(true);
+                eventTriggerGA('alocacao-qrcode-header');
+              }}
               src="/images/AssignmentsLP/qrcode-contactbar.png"
             />
-            <WhatsappButton href="https://wa.me/5553991583941?text=Olá pessoal da L2, entro em contato para...">
+            <WhatsappButton
+              onClick={() => eventTriggerGA('alocacao-whats-header')}
+              href="https://wa.me/5518991745920?text=Olá! Gostaria de mais informações sobre alocações da L2!"
+            >
               <WhatsappIcon src="/images/AssignmentsLP/wpp-icon.svg" />
               Iniciar chat
             </WhatsappButton>
@@ -375,7 +405,10 @@ const AssigmentLP: NextPage = () => {
         </ContactBar>
         <SecondaryContactBar backgroundColor="black">
           Fale com a nossa comercial
-          <SecondaryWhatsappButton href="https://wa.me/5553991583941?text=Olá pessoal da L2, entro em contato para...">
+          <SecondaryWhatsappButton
+            onClick={() => eventTriggerGA('alocacao-whats-header')}
+            href="https://wa.me/5518991745920?text=Olá! Gostaria de mais informações sobre alocações da L2!"
+          >
             <WhatsappIcon src="/images/AssignmentsLP/wpp-icon.svg" />
             Iniciar chat
           </SecondaryWhatsappButton>
@@ -445,10 +478,16 @@ const AssigmentLP: NextPage = () => {
           <ContactBarText color="">Fale com nossa comercial</ContactBarText>
           <ContactButtonsWrapper>
             <QRCodeButton
-              onClick={() => setOpenModal(true)}
+              onClick={() => {
+                setOpenModal(true);
+                eventTriggerGA('alocacao-qrcode-footer1');
+              }}
               src="/images/AssignmentsLP/qrcode-contactbar.png"
             />
-            <WhatsappButton href="https://wa.me/5553991583941?text=Olá pessoal da L2, entro em contato para...">
+            <WhatsappButton
+              onClick={() => eventTriggerGA('alocacao-whats-footer1')}
+              href="https://wa.me/5518991745920?text=Olá! Gostaria de mais informações sobre alocações da L2!"
+            >
               <WhatsappIcon src="/images/AssignmentsLP/wpp-icon.svg" />
               Iniciar chat
             </WhatsappButton>
@@ -457,7 +496,10 @@ const AssigmentLP: NextPage = () => {
         <SecondaryContactBar backgroundColor="black">
           Agregue uma pessoa ou um time inteiro à sua estrutura pelo período
           mínimo de 1 mês
-          <SecondaryWhatsappButton href="https://wa.me/5553991583941?text=Olá pessoal da L2, entro em contato para...">
+          <SecondaryWhatsappButton
+            onClick={() => eventTriggerGA('alocacao-whats-footer1')}
+            href="https://wa.me/5518991745920?text=Olá! Gostaria de mais informações sobre alocações da L2!"
+          >
             <WhatsappIcon src="/images/AssignmentsLP/wpp-icon.svg" />
             Iniciar chat
           </SecondaryWhatsappButton>
@@ -534,10 +576,16 @@ const AssigmentLP: NextPage = () => {
           </ContactBarText>
           <ContactButtonsWrapper>
             <QRCodeButton
-              onClick={() => setOpenModal(true)}
+              onClick={() => {
+                setOpenModal(true);
+                eventTriggerGA('alocacao-qrcode-footer2');
+              }}
               src="/images/AssignmentsLP/qrcode-contactbar-white.png"
             />
-            <WhatsappButton href="https://wa.me/5553991583941?text=Olá pessoal da L2, entro em contato para...">
+            <WhatsappButton
+              onClick={() => eventTriggerGA('alocacao-whats-footer2')}
+              href="https://wa.me/5518991745920?text=Olá! Gostaria de mais informações sobre alocações da L2!"
+            >
               <WhatsappIcon src="/images/AssignmentsLP/wpp-icon.svg" />
               Iniciar chat
             </WhatsappButton>
@@ -546,7 +594,10 @@ const AssigmentLP: NextPage = () => {
         <SecondaryContactBar backgroundColor="white">
           Profissionais especializados <BreakLine screen="mobile" /> a partir de
           R$ 74,80 / hora
-          <SecondaryWhatsappButton href="https://wa.me/5553991583941?text=Olá pessoal da L2, entro em contato para...">
+          <SecondaryWhatsappButton
+            onClick={() => eventTriggerGA('alocacao-whats-footer2')}
+            href="https://wa.me/5518991745920?text=Olá! Gostaria de mais informações sobre alocações da L2!"
+          >
             <WhatsappIcon src="/images/AssignmentsLP/wpp-icon.svg" />
             Iniciar chat
           </SecondaryWhatsappButton>
