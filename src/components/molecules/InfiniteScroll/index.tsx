@@ -32,10 +32,6 @@ function InfiniteScroll({ closeMenu }: ScrollProps) {
       translate: 'career',
       url: '/nossas-carreiras',
     },
-    {
-      translate: 'people',
-      url: '/pessoas',
-    },
   ];
 
   const language = i18next.language.substring(0, 2);
