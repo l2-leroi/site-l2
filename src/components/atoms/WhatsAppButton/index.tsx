@@ -4,8 +4,9 @@ function WhatsAppButton() {
   return (
     <FloatingButtonWPP>
       <a
-        target="blank"
-        href="https://wa.me/5553991583941?text=Olá pessoal da L2, entro em contato para..."
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://wa.me/message/F4CPD2DMTREDG1"
       >
         <img alt="manda um zap" src="/images/manda_um_zap.svg" />
       </a>
