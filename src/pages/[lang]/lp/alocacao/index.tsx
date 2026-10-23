@@ -396,7 +396,7 @@ const AssigmentLP: NextPage = () => {
             />
             <WhatsappButton
               onClick={() => eventTriggerGA('alocacao-whats-header')}
-              href="https://wa.me/5518991745920?text=Olá! Gostaria de mais informações sobre alocações da L2!"
+              href="https://wa.me/message/F4CPD2DMTREDG1"
             >
               <WhatsappIcon src="/images/AssignmentsLP/wpp-icon.svg" />
               Iniciar chat
@@ -407,7 +407,7 @@ const AssigmentLP: NextPage = () => {
           Fale com a nossa comercial
           <SecondaryWhatsappButton
             onClick={() => eventTriggerGA('alocacao-whats-header')}
-            href="https://wa.me/5518991745920?text=Olá! Gostaria de mais informações sobre alocações da L2!"
+            href="https://wa.me/message/F4CPD2DMTREDG1"
           >
             <WhatsappIcon src="/images/AssignmentsLP/wpp-icon.svg" />
             Iniciar chat
@@ -486,7 +486,7 @@ const AssigmentLP: NextPage = () => {
             />
             <WhatsappButton
               onClick={() => eventTriggerGA('alocacao-whats-footer1')}
-              href="https://wa.me/5518991745920?text=Olá! Gostaria de mais informações sobre alocações da L2!"
+              href="https://wa.me/message/F4CPD2DMTREDG1"
             >
               <WhatsappIcon src="/images/AssignmentsLP/wpp-icon.svg" />
               Iniciar chat
@@ -498,7 +498,7 @@ const AssigmentLP: NextPage = () => {
           mínimo de 1 mês
           <SecondaryWhatsappButton
             onClick={() => eventTriggerGA('alocacao-whats-footer1')}
-            href="https://wa.me/5518991745920?text=Olá! Gostaria de mais informações sobre alocações da L2!"
+            href="https://wa.me/message/F4CPD2DMTREDG1"
           >
             <WhatsappIcon src="/images/AssignmentsLP/wpp-icon.svg" />
             Iniciar chat
@@ -584,7 +584,7 @@ const AssigmentLP: NextPage = () => {
             />
             <WhatsappButton
               onClick={() => eventTriggerGA('alocacao-whats-footer2')}
-              href="https://wa.me/5518991745920?text=Olá! Gostaria de mais informações sobre alocações da L2!"
+              href="https://wa.me/message/F4CPD2DMTREDG1"
             >
               <WhatsappIcon src="/images/AssignmentsLP/wpp-icon.svg" />
               Iniciar chat
@@ -596,7 +596,7 @@ const AssigmentLP: NextPage = () => {
           R$ 74,80 / hora
           <SecondaryWhatsappButton
             onClick={() => eventTriggerGA('alocacao-whats-footer2')}
-            href="https://wa.me/5518991745920?text=Olá! Gostaria de mais informações sobre alocações da L2!"
+            href="https://wa.me/message/F4CPD2DMTREDG1"
           >
             <WhatsappIcon src="/images/AssignmentsLP/wpp-icon.svg" />
             Iniciar chat
